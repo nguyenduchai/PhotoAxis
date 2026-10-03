@@ -53,6 +53,16 @@ import PhotoAxisCore
         for invalid in ["0","101","NaN","90.5",""] { settings.jpegQuality.stringValue = invalid; settings.changeFiles(); XCTAssertEqual(preferences.files,accepted); XCTAssertFalse(settings.fileValidation.isHidden) }
         XCTAssertEqual(coordinator.active!.model,snapshot.model)
     }
+    func testInvalidJPEGQualityDoesNotBlockIndependentValidFilePreferences() {
+        let (preferences,defaults,name) = fixture(); defer { defaults.removePersistentDomain(forName:name) }
+        let settings = SettingsWindowController(preferences:preferences,localization:L10n(choice:.english)); defer { settings.close() }
+        settings.jpegQuality.stringValue = "NaN"
+        settings.recoveryInterval.selectItem(at:1); settings.exportFormat.selectItem(at:1); settings.exportLinked.state = .off
+        settings.changeFiles()
+        XCTAssertEqual(preferences.files.recoverySeconds,30); XCTAssertTrue(preferences.files.exportJPEG)
+        XCTAssertFalse(preferences.files.linkExportDimensions); XCTAssertEqual(preferences.files.jpegQuality,90)
+        XCTAssertFalse(settings.fileValidation.isHidden)
+    }
     func testCorruptPreferenceFallbackAndResetsAreScoped() {
         let (preferences,defaults,name) = fixture(); defer { defaults.removePersistentDomain(forName:name) }
         defaults.set("unknown",forKey:WorkspacePreferences.themeKey); defaults.set(Data("{}".utf8),forKey:WorkspacePreferences.filesKey)

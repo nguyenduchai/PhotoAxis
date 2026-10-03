@@ -202,12 +202,14 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     }
     @objc func changeBrushOutline() { preferences.showsBrushOutline = brushOutline.state == .on; layoutChanged?() }
     @objc func changeFiles() {
-        guard let quality = Int(jpegQuality.stringValue), (1...100).contains(quality) else { fileValidation.isHidden = false; return }
         var files = preferences.files
+        if let quality = Int(jpegQuality.stringValue), (1...100).contains(quality) {
+            files.jpegQuality = quality; fileValidation.isHidden = true
+        } else { fileValidation.isHidden = false }
         if [10,30,60].indices.contains(recoveryInterval.indexOfSelectedItem) { files.recoverySeconds = [10,30,60][recoveryInterval.indexOfSelectedItem] }
-        files.exportJPEG = exportFormat.indexOfSelectedItem == 1; files.jpegQuality = quality
+        files.exportJPEG = exportFormat.indexOfSelectedItem == 1
         files.linkExportDimensions = exportLinked.state == .on
-        preferences.files = files; fileValidation.isHidden = true
+        preferences.files = files
     }
     @objc func changeLanguage() {
         guard InterfaceLanguage.allCases.indices.contains(languagePopup.indexOfSelectedItem) else { return }
