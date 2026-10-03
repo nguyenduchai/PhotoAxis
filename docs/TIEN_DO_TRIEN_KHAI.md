@@ -7,7 +7,7 @@
 
 - Full suite cuối **191ca:187PASS/1FAILTelex đã biết/3SKIPbenchmark**; **7ca mới PASS**. Release/ad-hoc,527khóaVIEN/431references, inventory/16policy/12websitepages PASS. NativeVI/EN thước/Cài đặt/bốn trang, bảngEN260pt/cọ90px/khởi động lại đã kiểm. Hồ sơ tổng hợp14event và PNG1600×640:148200pixel che đen đục,875800pixel ngoài vùng bằng nguồn; byte/model/archive không đổi.
 - Native resize Cài đặt bằng CUA chưa thành công; min680×560 kiểm hosted. Không nhận đã chạy lại OCR/video/đo native hoặc full A01–A43. `releaseReady=false`, **19/43 thuộc build3 lịch sử**; IME/máy đích/hiệu năng/full quota/DeveloperID/notary/cài sạch tiếp tục mở.
-- [Báo cáo](bao-cao/WORKSPACE_UI_2026-10-03.md), [Cài đặt](HUONG_DAN_CAI_DAT.md), [hướng dẫn điều tra](HUONG_DAN_DIEU_TRA.md). DMG/CI/Pages receipt sẽ được chốt trước bàn giao build7.
+- [Báo cáo](bao-cao/WORKSPACE_UI_2026-10-03.md), [Cài đặt](HUONG_DAN_CAI_DAT.md), [hướng dẫn điều tra](HUONG_DAN_DIEU_TRA.md). DMGbuild7 source sạch8c39847 mount/tree/codesign/GPL/hashPASS, SHA256`c5cc4f08c9b9e09595686dc84700966e47be04d22e621209d3172849089905fd`. Pages27fileHTTPS/hash/commitPASS. GitHubCI macOS15.7.9/Xcode16.4: **186PASS/0FAIL/5SKIP**,191total,7ca mớiPASS,Debug/test/ReleasePASS. [CI](bao-cao/bang-chung/WORKSPACE-UI-20261003/ci-summary.json), [receipt](bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json).
 
 
 ## Brush, Clone Stamp và preview tự động — build 6, 03/10/2026

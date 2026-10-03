@@ -1,4 +1,24 @@
-# DMG local hiện hành — build 6 Brush/Clone/live preview, 03/10/2026
+# DMG local hiện hành — build7 thước/Cài đặt/workspace, 03/10/2026
+
+PhotoAxis **1.0.0 (7)**, GPL-3.0-only. Checkout sạch `8c39847bb7aea49f5c3766066484d3fe681191c1`; mã sản phẩm đã kiểm `339ddec3ddd4f6e8dc9faf3981732686087423b7`. UUID **7D902A76-2780-35F8-A59E-9B500547FEC2**, executable SHA256 `af1b02ffe14e75682ff33d19bce6c64545bb19bf991c9c238db0c5f50df13f44`, Core SHA256 `b760e6e87efc9b7d0a17766c14b0867fc17211058713d03b5d8c0e439ad81860`.
+
+| Trường | Giá trị |
+| --- | --- |
+| Artifact | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA256 | `c5cc4f08c9b9e09595686dc84700966e47be04d22e621209d3172849089905fd` |
+| Byte | 2561655 |
+| App tree SHA256 | `cb776417800cfb74ad1040d3fa1050b0ca5bd02e7797c873328839e806a37af3` |
+| Source fingerprint | `0de6572d49cd646f3e254703f626c9adb741d5b3afa9441ab81d5747a53876d0` |
+| Bản giao | `$BUILD_ROOT/Deliverables/2026-10-03-build7-workspace-ui` ngoài Git |
+| Source dirty | false |
+| Kiểm payload | mount read-only/tree/codesign/build7/arm64/minOS14/GPL/SOURCE/detach/copyhash PASS |
+| Ký và public | ad-hoc local; chưa Developer ID/notary/cài sạch; publicReady=false |
+
+[Build manifest](bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json), [distribution](bao-cao/bang-chung/WORKSPACE-UI-20261003/distribution-manifest.json), [log](bao-cao/bang-chung/WORKSPACE-UI-20261003/packaging.log), [checksum](bao-cao/bang-chung/WORKSPACE-UI-20261003/SHA256SUMS.txt), [receipt](bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json), [báo cáo](bao-cao/WORKSPACE_UI_2026-10-03.md). Stable sau ký/staple cần manifest/checksum riêng. Các artifact sau giữ làm lịch sử.
+
+---
+
+# DMG local build6 Brush/Clone/live preview — lịch sử, 03/10/2026
 
 PhotoAxis **1.0.0 (6)**, GPL-3.0-only. Đóng gói từ checkout sạch `7312eb1e7101c63bcc1d554d6c8416baa2f68bdd`; mã sản phẩm đã kiểm `bf0f303dce34502aef3cc98634076d1be8bc3ee3`. UUID **0EF4C93F-3295-351D-B159-6863C6DE200E**, executable SHA256 `51656e55f862e2329967974c4106e60546f5235d18ae0648860a43a1bb960885`, Core SHA256 `745d9e4cfdc8ca41c0bf78b4d0b391dfbc5b4643adbdd1413c7636c5463215d2`.
 

@@ -28,9 +28,10 @@
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/ci-summary.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/ci-summary.json"
     ],
-    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build7 acceptance. Build7 local191total187PASS/1knownTelexFAIL/3opt-inbenchmarkSKIP;7new ruler/Settings/navigation testsPASS. Scoped nativeVIEN Settings/rulers/page navigation and VI synthetic-case sharing PNG independently checked. Minimum Settings geometry hosted, native pointer resize was not successful. CI build7 pending; skip scopes and remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realcamera-video-measurement/Scan50/Paint performance qualification remain open."
+    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build7 acceptance. Build7 local191total187PASS/1knownTelexFAIL/3opt-inbenchmarkSKIP;7new ruler/Settings/navigation testsPASS. Scoped nativeVIEN Settings/rulers/page navigation and VI synthetic-case sharing PNG independently checked. Minimum Settings geometry hosted, native pointer resize was not successful. GitHub CI8c39847 on macOS15.7.9/Xcode16.4:191total186PASS/0FAIL/5SKIP,7newPASS,Debug/test/ReleasePASS; skip scopes and remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realcamera-video-measurement/Scan50/Paint performance qualification remain open."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -78,9 +79,11 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/distribution-manifest.json",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/delivery-receipt.json",
-      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
+      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/distribution-manifest.json",
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json"
     ],
-    "reason": "Build7 DMG pending current packaging. Historical build6 local DMG clean7312eb1 was verified. Final DeveloperID/notarization/cleanGatekeeper installation missing."
+    "reason": "Build7 local DMG source-clean8c39847 SHAc5cc4f08c9b9e09595686dc84700966e47be04d22e621209d3172849089905fd;mount/tree/codesign/GPL/source notice/detach/copyhashPASS;binary/Core match tested Release. Final DeveloperID/notarization/cleanGatekeeper installation missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",
@@ -109,7 +112,7 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
     ],
-    "reason": "Build7 bilingual rulers/Settings/investigation navigation guide prepared; current deployment verification pending. Source/GPLv3/Issues already public. Signed installer/legal publisher gate remains open; stable download disabled."
+    "reason": "Public bilingual source/GPLv3/Issues and build7 readable rulers/Settings/four workspace pages introduction and guides deployed;27HTTPS files/hash/commit8c39847 PASS. Signed installer/legal publisher gate remains open;stable download disabled."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
@@ -118,9 +121,10 @@
       "docs/bao-cao/bang-chung/WORKSPACE-20261003/pages-https.json",
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/pages-https.json",
-      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
+      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/pages-https.json"
     ],
-    "reason": "Build7 HTTPS commit/hash verification pending;previous build6 proof retained. Signed installer HTTP download/clean installation missing."
+    "reason": "Build7 anonymousHTTPS27files/hash/commit8c39847 PASS on GitHub runner. Signed installer HTTP download/clean installation missing."
   },
   "R11": {
     "status": "CHUA_KIEM_CHUNG",
@@ -129,7 +133,7 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
     ],
-    "reason": "Build7 tested product source339ddec and Release/QA UUID/Core verified;current clean DMG/CI/Pages checkout pending. Final signed artifact/tag/source acceptance remains missing."
+    "reason": "Build7 clean DMG8c39847 and binary/Core/UUID match tested source fingerprint339ddec;Pages27files/hash/commit same checkout PASS. NativeCI same checkout PASS191total186PASS/0FAIL/5SKIP. Final signed artifact/tag/source acceptance remains missing."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",
