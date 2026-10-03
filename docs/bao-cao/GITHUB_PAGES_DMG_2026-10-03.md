@@ -10,6 +10,8 @@ Repo public chứa ứng dụng, tests, fixture tự tạo, tài liệu và webs
 
 GitHub Pages chạy bằng Actions, HTTPS enforced, các action ghim SHA. Payload chỉ chứa HTML/CSS/ảnh và metadata phân phối website, không chứa source, tests, hồ sơ hoặc DMG. `deployment-manifest.json` ghi commit và hash từng file. `.nojekyll` là control file trong artifact; GitHub không phục vụ URL dotfile này. Các link/ảnh dùng đúng project path `/PhotoAxis/`. GitHub Issues là kênh báo lỗi; Privacy có chính sách GitHub. Website không có tracker, form tài khoản, backend hoặc CDN font.
 
+Workflow có thêm job `verify` sau deploy: lấy 27 file qua HTTPS ẩn danh, kiểm certificate bình thường, hash và commit, lưu artifact `pages-https-proof` trong 30 ngày. Receipt cuối được tải về thư mục DMG. Hậu kiểm trên máy đã phát hiện AdGuard chèn hai script vào HTML tiếng Anh, làm bytes nhận tại máy khác file gốc; vì vậy lần kiểm cuối dùng runner GitHub để có bằng chứng độc lập với bộ lọc này. Không tắt xác minh TLS, không bỏ kiểm hash và không sửa thiết lập AdGuard.
+
 ## DMG cuối
 
 | Mục | Kết quả |
@@ -41,7 +43,7 @@ GitHub Pages chạy bằng Actions, HTTPS enforced, các action ghim SHA. Payloa
 | Local HDR/layout sau chỉnh điều kiện test | 2 PASS / 0 FAIL / 0 SKIP |
 | GitHub CI | 143 PASS / 0 FAIL / 5 SKIP; Debug/test và Release PASS trên arm64, macOS 15.7.9, Xcode 16.4 |
 
-[CI cuối 37087879643](https://github.com/nguyenduchai/PhotoAxis/actions/runs/37087879643) chạy ở source 78adb1b. Native Sources/Config/project ở commit này khớp source của DMG 43a5b93; chỉ tests khác. Năm ca SKIP gồm ba benchmark opt-in, Telex context không khả dụng và màn hình runner không đủ 1440×900. Không suy nghiệm thu IME/layout lớn/benchmark từ CI xanh. [CI summary](bang-chung/GITHUB-PAGES-20261003/ci-final-summary.json), [local full suite](bang-chung/GITHUB-PAGES-20261003/native-local-test-summary.json), [HDR/layout](bang-chung/GITHUB-PAGES-20261003/native-hdr-layout-summary.json), [browser](bang-chung/GITHUB-PAGES-20261003/browser-checks.json), [HTTPS](bang-chung/GITHUB-PAGES-20261003/https-second-deployment.json).
+[CI cuối 37087879643](https://github.com/nguyenduchai/PhotoAxis/actions/runs/37087879643) chạy ở source 78adb1b. Native Sources/Config/project ở commit này khớp source của DMG 43a5b93; chỉ tests khác. Năm ca SKIP gồm ba benchmark opt-in, Telex context không khả dụng và màn hình runner không đủ 1440×900. Không suy nghiệm thu IME/layout lớn/benchmark từ CI xanh. [CI summary](bang-chung/GITHUB-PAGES-20261003/ci-final-summary.json), [local full suite](bang-chung/GITHUB-PAGES-20261003/native-local-test-summary.json), [HDR/layout](bang-chung/GITHUB-PAGES-20261003/native-hdr-layout-summary.json), [browser](bang-chung/GITHUB-PAGES-20261003/browser-checks.json), [HTTPS deployment đầu](bang-chung/GITHUB-PAGES-20261003/https-first-deployment.json), [workflow Pages và receipt của deployment mới nhất](https://github.com/nguyenduchai/PhotoAxis/actions/workflows/pages.yml).
 
 CI thực đã tìm ra hai điểm tương thích SDK: UndoManager callback cần kiểm MainActor đồng bộ ở SDK cũ; một metric HDR chỉ có trong SDK macOS 26. Đã sửa ở b267165/0ea4029. macOS 15 còn trả headroom metadata khác cho fixture được encode bằng Image I/O mới; tests giữ kiểm nguồn/gain map/byte/pixel/SDR/metadata và chỉ chứng nhận metric mới trên OS có căn cứ. Khi window server giới hạn kích thước, test bố cục ghi SKIP rõ ràng. Local HDR/layout kiểm đủ vẫn PASS. Chỉ sửa một callback native; không thay thuật toán hình học, OCR/video/đo hay persistence.
 

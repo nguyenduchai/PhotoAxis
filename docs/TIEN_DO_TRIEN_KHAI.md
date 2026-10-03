@@ -10,6 +10,8 @@
 
 [Báo cáo và các bằng chứng](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md), [receipt DMG](bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json), [CI](bao-cao/bang-chung/GITHUB-PAGES-20261003/ci-final-summary.json), [readiness](READINESS_PUBLIC.json).
 
+Workflow Pages có job hậu kiểm HTTPS/hash/commit sau mỗi deploy, lưu receipt `pages-https-proof` 30 ngày; bản receipt bàn giao được giữ cùng DMG. Kiểm trên runner GitHub độc lập với AdGuard đang chèn script vào HTML nhận tại máy. [Workflow và kết quả mới nhất](https://github.com/nguyenduchai/PhotoAxis/actions/workflows/pages.yml).
+
 ## Nghiệm thu native trước công khai — build 3, 03/10/2026
 
 **Đã chốt thêm A04/A07/A26 qua native Tiếng Việt và English; tổng 19/43 PASS, 24 ca chưa đóng.** Tạo/lưu đủ4preset và custom, validation/nền/PPI,5tab/giới hạn thứ6, phiên chữ/Undo riêng từng tab, History branch và Saved marker đều đã kiểm. Audit độc lập ZIP/model/preview/AX/samples PASS, nguồn sản phẩm/binary không đổi. [Báo cáo](bao-cao/P12-native2.md), [bằng chứng](bao-cao/bang-chung/P12-native2/manifest.json).

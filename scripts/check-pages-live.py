@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify an anonymous HTTPS Pages deployment against its commit and file hashes."""
-import argparse, concurrent.futures, hashlib, json, subprocess
+import argparse, concurrent.futures, hashlib, json, re, subprocess, tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -12,6 +12,8 @@ parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args()
 if urlsplit(args.url).scheme != 'https':
     parser.error('HTTPS is required')
+if not re.fullmatch('[a-f0-9]{40}', args.commit):
+    parser.error('A complete source commit SHA is required')
 base = args.url.rstrip('/') + '/'
 
 def fetch(path):
@@ -19,16 +21,21 @@ def fetch(path):
         raise ValueError('Invalid site path: ' + path)
     # Use the platform curl trust store with normal certificate verification.
     # No credentials/cookies, insecure options or HTTP redirect downgrades.
-    result = subprocess.run([
-        'curl', '--fail', '--silent', '--show-error', '--location',
-        '--proto', '=https', '--proto-redir', '=https', '--max-time', '30',
-        '--max-filesize', str(20 * 1024 * 1024), '--retry', '2',
-        '--user-agent', 'PhotoAxis-Deployment-Check/1',
-        '--header', 'Cache-Control: no-cache', '--write-out',
-        '\nPHOTOAXIS_HTTP:%{http_code} TLS:%{ssl_verify_result} URL:%{url_effective}',
-        urljoin(base, path),
-    ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-    data, metadata = result.stdout.rsplit(b'\nPHOTOAXIS_HTTP:', 1)
+    # A regular output file lets curl discard a partial body on retry; stdout
+    # output can concatenate partial attempts and produce a false hash mismatch.
+    with tempfile.TemporaryDirectory(prefix='photoaxis-pages-check-') as temporary:
+        body = Path(temporary) / 'body'
+        result = subprocess.run([
+            'curl', '--disable', '--fail', '--silent', '--show-error', '--location',
+            '--proto', '=https', '--proto-redir', '=https', '--max-time', '30',
+            '--max-filesize', str(20 * 1024 * 1024), '--retry', '2',
+            '--user-agent', 'PhotoAxis-Deployment-Check/1',
+            '--header', 'Cache-Control: no-cache', '--output', str(body),
+            '--write-out', '%{http_code} TLS:%{ssl_verify_result} URL:%{url_effective}',
+            urljoin(base, path) + '?photoaxis_commit=' + args.commit,
+        ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        data = body.read_bytes()
+    metadata = result.stdout
     status, tls, final_url = metadata.decode().split(' ', 2)
     if status != '200' or tls != 'TLS:0' or len(data) > 20 * 1024 * 1024:
         raise ValueError('Invalid HTTP/TLS status or oversized file: ' + path)
