@@ -1,0 +1,24 @@
+Window: "Kích thước ảnh…", App: PhotoAxis Paint6 Final vi.
+0 tờ Secondary Actions: Raise
+	1 text Chiều rộng (px)
+	2 trường văn bản (settable) Description: Chiều rộng (px), Value: 600
+	3 text Chiều cao (px)
+	4 trường văn bản (settable) Description: Chiều cao (px), Value: 450
+	5 text Mật độ (PPI)
+	6 trường văn bản (settable) Description: Mật độ (PPI), Value: 72
+	7 hộp kiểm Giữ tỷ lệ, Value: 1
+	8 text Co giãn toàn bộ lớp cùng canvas. Chỉ đổi PPI thì thay metadata, không đổi kích thước pixel.
+	9 nút Hủy
+	10 nút Áp dụng
+11 menu bar
+	12 PhotoAxis Paint6 Final vi
+	13 Tệp
+	14 Chỉnh sửa
+	15 Ảnh
+	16 Lớp
+	17 Văn bản
+	18 Xem
+	19 Cửa sổ
+	20 Trợ giúp
+
+The focused UI element is 2 trường văn bản (settable) Description: Chiều rộng (px), Value: 600

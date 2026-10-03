@@ -1,0 +1,92 @@
+Window: "paint-fixture.png — PhotoAxis", App: PhotoAxis Paint6 Final en.
+0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Brush Size
+	2 trường văn bản (settable) Description: Size, Value: 40, ID: paint.size
+	3 thanh trượt (settable, float) Description: Size, Value: 40, ID: paint.size.slider
+		4 chỉ báo giá trị (settable, float) 40
+	5 text px Hard
+	6 trường văn bản (settable) Description: Hard, Value: 80, ID: paint.hardness
+	7 thanh trượt (settable, float) Description: Hard, Value: 80, ID: paint.hardness.slider
+		8 chỉ báo giá trị (settable, float) 80
+	9 text % Opacity
+	10 trường văn bản (settable) Description: Opacity, Value: 100, ID: paint.opacity
+	11 thanh trượt (settable, float) Description: Opacity, Value: 100, ID: paint.opacity.slider
+		12 chỉ báo giá trị (settable, float) 100
+	13 text % Drag to paint on a separate stroke layer; release for one Undo. Escape cancels the active stroke. [ and ] resize the brush.
+	14 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	15 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	16 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	17 nút Description: Move (V), ID: tool.move
+	18 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	19 nút Description: Brush (B), ID: tool.brush
+	20 nút Description: Clone Stamp (S), ID: tool.cloneStamp
+	21 nút Description: Eyedropper (I), ID: tool.eyedropper
+	22 nút Description: Type (T), ID: tool.type
+	23 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	24 nút Description: Hand (H), ID: tool.hand
+	25 nút Description: Zoom (Z), ID: tool.zoom
+	26 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	27 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	28 nút chuyển đổi paint-fixture.png •, Value: on
+	29 nút Close tab
+	30 trường văn bản (settable) Description: Zoom, Value: 136 %
+	31 text Value: 1.200 × 900 px · 72,00 PPI · Unsaved sRGB, ID: workspace.taskStatus
+	32 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	33 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	34 trường văn bản (settable) Description: HEX, Value: #000000
+	35 trường văn bản (settable) Description: Alpha %, Value: 100
+	36 trường văn bản (settable) Description: Red, Value: 0
+	37 trường văn bản (settable) Description: Green, Value: 0
+	38 trường văn bản (settable) Description: Blue, Value: 0
+	39 text Foreground Color Background Color HEX Alpha % R G B Color
+	40 nút Description: Collapse Panels, ID: sidebar.collapse
+	41 Description: Properties and History, ID: sidebar.inspectorTabs
+		42 nút radio Description: Properties, Value: 1
+		43 nút radio Description: History, Value: 0
+	44 text 1.200 × 900 px
+72,00 PPI · sRGB
+Layers: 2 Layers
+	45 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		46 bảng
+			47 row (selected)
+				48 ô (selected)
+					49 nút Description: Toggle Visibility: Nét vẽ / sao chép, Help: Toggle Visibility
+					50 hình ảnh
+					51 text Help: Nét vẽ / sao chép, Value: Nét vẽ / sao chép Paint
+					52 nút Description: Toggle Lock: Nét vẽ / sao chép, Help: Toggle Lock
+			53 row (selectable)
+				54 ô
+					55 nút Description: Toggle Visibility: paint-fixture.png, Help: Toggle Visibility
+					56 hình ảnh
+					57 text Help: paint-fixture.png, Value: paint-fixture.png Image
+					58 nút Description: Toggle Lock: paint-fixture.png, Help: Toggle Lock
+		59 thanh cuộn (disabled, settable, float) 0
+	60 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	61 text Opacity
+	62 trường văn bản (settable) Description: Opacity, Value: 100 %
+	63 thanh trượt (settable, float) Description: Opacity, Value: 100
+		64 chỉ báo giá trị (settable, float) 100
+	65 nút Add Layer
+	66 nút Rename Layer
+	67 nút Move Layer Up
+	68 nút Move Layer Down
+	69 nút Duplicate Layer
+	70 nút Delete Layer
+	71 nút bật lên Value: Edit, ID: workspace.panelPage
+	72 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	73 nút đóng
+	74 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	75 nút thu nhỏ
+	76 text paint-fixture.png — PhotoAxis
+77 menu bar
+	78 PhotoAxis Paint6 Final en
+	79 File
+	80 Edit
+	81 Image
+	82 Layer
+	83 Type
+	84 View
+	85 Window
+	86 Help
+
+The focused UI element is 0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": "5",
+  "build": "6",
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
@@ -23,9 +23,11 @@
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
       "docs/bao-cao/SCAN_2026-10-03.md",
       "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-20261003/ci-summary.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-20261003/ci-summary.json",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
+      "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json"
     ],
-    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately. Final GitHub CI78adb1b on macOS15.7.9/Xcode16.4:143PASS/0FAIL/5SKIP, Debug/test/Release success; skipped benchmark/Telex/large-layout do not close those gates. Local targeted HDR/layout2PASS/0FAIL/0SKIP. Current build4 Scan1: local159tests155PASS/1knownTelexFAIL/3benchmarkSKIP, all11newScan testsPASS. Real paper/book and50page fullquota remain unqualified; build3 acceptance19/43 is historical, not a full build4 rerun. GitHub build4CI d8cb1d0 macOS15.7.9/Xcode16.4:154PASS/0FAIL/5SKIP, Debug/test/ReleasePASS; skipped gates remain open. Current build5 integrates investigation into one native workspace:168tests164PASS/1knownTelexFAIL/3benchmarkSKIP;9newtestsPASS. Scoped final VI/EN OCR/review/measurement/comparison/PNG verified; not full A01-A43 acceptance. Native cold OCR still slow and requires qualification. Build5 GitHub CI9333cff macOS15.7.9/Xcode16.4:163PASS/0FAIL/5SKIP, Debug/test/ReleasePASS. Skip scopes remain open."
+    "reason": "19/43 baseline acceptance PASS belongs to build3;24 remain open, not full build6 acceptance. Build6 local184tests180PASS/1knownTelexFAIL/3opt-inbenchmarkSKIP; all16new Paint/live testsPASS. Scoped final nativeVIEN Brush/Clone/save/reopen/PNG/UndoRedo and VI Scan3deg/ImageSize/Perspective automatic previews independently checked; not full acceptance. CI pending. Remaining IME/VNI/native/layout/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realcamera-video-calibrated-geometry/Scan50pages/Paint performance qualification stays open."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -37,9 +39,11 @@
       "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json",
       "docs/bao-cao/bang-chung/SCAN-20261003/build-manifest.json",
       "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-20261003/build-manifest.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-20261003/build-manifest.json",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
+      "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json"
     ],
-    "reason": "Current local build5 Release verified: UUIDE9797D10-3807-344C-AE33-A172F11B04A5, ad-hoc arm64/minOS14. Final Developer ID artifact and full release acceptance missing."
+    "reason": "Current local build6 Release verified:UUID0EF4C93F-3295-351D-B159-6863C6DE200E,ad-hoc arm64/minOS14; QA copies match Release UUID/Core. Final Developer ID artifact/full acceptance remain missing."
   },
   "R04": {
     "status": "BLOCKED_EXTERNAL",
@@ -65,9 +69,10 @@
       "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json",
       "docs/bao-cao/bang-chung/SCAN-20261003/distribution-manifest.json",
       "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-20261003/delivery-receipt.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-20261003/delivery-receipt.json",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md"
     ],
-    "reason": "Current build5 local DMG source-clean9333cff SHA32a7fad3139708906dcd445c76af6e18f092f8f0b201eb98cdf1ee31d1230802; mount/tree/codesign/GPL/source notice/detach/copyhash PASS. Final Developer ID/notarization/clean Gatekeeper installation missing."
+    "reason": "Build6 local DMG packaging pending; final DeveloperID/notary/cleanGatekeeper installation remain missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",
@@ -92,24 +97,27 @@
       "docs/RELEASE_NOTES.md",
       "docs/bao-cao/MO_RONG_DIEU_TRA.md",
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
-      "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md"
+      "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md"
     ],
-    "reason": "Public bilingual GitHub Pages introduction/source/Issues/GPLv3/hosting privacy and build3 OCR/measurement gallery verified. Signed-installer acceptance/URLs/checksums and final legal publisher remain pending; installer download disabled/noindex. Build4 bilingual Scan introduction/workflow added; pages deployment receipt accompanies delivery. Build5 bilingual integrated Sources/Analysis/Output guidance added; signed installer gate remains open."
+    "reason": "Public bilingual source/website/GPLv3/Issues established. Build6 Paint and automatic preview introduction/guide/release notes validated locally; deployment postcheck pending. Signed installer/legal publisher gate remains open; download disabled."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
     "evidence": [
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-20261003/pages-https.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-20261003/pages-https.json",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md"
     ],
-    "reason": "Build5 public HTTPS introduction website9333cff verified anonymously:27HTTPfiles/checksums/commit. Signed installer HTTP download and clean installation still missing."
+    "reason": "Historical build5 anonymous HTTPS27files/hash/commit PASS. Build6 postcheck pending; signed installer download/clean installation remain missing."
   },
   "R11": {
     "status": "CHUA_KIEM_CHUNG",
     "evidence": [
-      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
+      "docs/bao-cao/PAINT_LIVE_2026-10-03.md"
     ],
-    "reason": "Initial public source/website commit08a68a2/Pages manifest cross-check PASS. Compatibility fixes pushed and new build3 local binary verified; final signed artifact/tag/source cross-check pending."
+    "reason": "Build6 source fingerprint/binary UUID/Core/nativeQA match checked locally; Pages/source/DMG cross-check pending. Final signed artifact/tag/source acceptance remains missing."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

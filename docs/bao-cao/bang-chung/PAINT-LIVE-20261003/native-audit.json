@@ -1,0 +1,167 @@
+{
+  "createdAt": "2026-10-03T19:32:10.211468+07:00",
+  "scope": "Final build6 scoped native VI/EN synthetic mouse/keyboard QA; not full baseline acceptance or performance qualification",
+  "projects": [
+    {
+      "language": "vi",
+      "formatVersion": 4,
+      "strokes": 5,
+      "sourceCount": 3,
+      "assetHashesValid": true,
+      "originalBytesUnchanged": true,
+      "archiveSHA256": "69759d25dbc7d139f43d8a700f53e72c957f5279108c0458b79246053482f419"
+    },
+    {
+      "language": "en",
+      "formatVersion": 4,
+      "strokes": 7,
+      "sourceCount": 4,
+      "assetHashesValid": true,
+      "originalBytesUnchanged": true,
+      "archiveSHA256": "d69a826f611d54196e1e8fafa699e2164814dbcc1f31849abfc7d7b3f591417f"
+    }
+  ],
+  "export": {
+    "width": 1200,
+    "height": 900,
+    "sha256": "12563f6369a51345e4ba2b9cf9f30bc7d0e5a180c94769d1ae18a3fbb5ea7786",
+    "pixelSamples": [
+      {
+        "stroke": 0,
+        "kind": "brush",
+        "point": [
+          204,
+          493
+        ],
+        "rgba": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "passBlackOpaque": true
+      },
+      {
+        "stroke": 1,
+        "kind": "brush",
+        "point": [
+          200,
+          201
+        ],
+        "rgba": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "passBlackOpaque": true
+      },
+      {
+        "stroke": 3,
+        "kind": "brush",
+        "point": [
+          204,
+          750
+        ],
+        "rgba": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "passBlackOpaque": true
+      },
+      {
+        "stroke": 5,
+        "kind": "brush",
+        "point": [
+          976,
+          419
+        ],
+        "rgba": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "passBlackOpaque": true
+      },
+      {
+        "stroke": 4,
+        "kind": "clone",
+        "point": [
+          718,
+          750
+        ],
+        "sourcePoint": [
+          498,
+          199
+        ],
+        "rgba": [
+          0,
+          176,
+          80,
+          255
+        ],
+        "expectedRGBA": [
+          0,
+          176,
+          80,
+          255
+        ],
+        "passFrozenSourceMatch": true
+      },
+      {
+        "stroke": 6,
+        "kind": "clone",
+        "point": [
+          983,
+          603
+        ],
+        "sourcePoint": [
+          792,
+          199
+        ],
+        "rgba": [
+          0,
+          80,
+          255,
+          255
+        ],
+        "expectedRGBA": [
+          0,
+          80,
+          255,
+          255
+        ],
+        "passFrozenSourceMatch": true
+      }
+    ],
+    "untouchedSamples": [
+      [
+        20,
+        20
+      ],
+      [
+        50,
+        800
+      ],
+      [
+        1100,
+        50
+      ]
+    ]
+  },
+  "sourceFixtureSHA256": "957d8c21648846babfb1181970892142cc97c1c462c7a13a262ea82c395a41dc",
+  "undoRedoSavedMarker": true,
+  "reopenSchema4": true,
+  "nativeSourcePick": "click then Option-Return; Option-click covered by hosted native NSEvent test",
+  "livePreview": {
+    "scan": "VI rotation3deg ->1246x962, no Preview button, transparent paint ROI black-bar regression visually absent",
+    "imageSize": "VI width600->height450 automatic; Cancel restored1200x900",
+    "perspective": "VI956x699 automatic inset with full-preview checkbox off; Cancel restored saved state",
+    "crop": "hosted native test",
+    "performance": "not measured"
+  },
+  "status": "PASS"
+}

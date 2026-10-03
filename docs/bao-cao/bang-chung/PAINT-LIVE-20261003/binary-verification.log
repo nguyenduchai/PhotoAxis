@@ -1,0 +1,44 @@
+$ codesign --verify --deep --strict $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+$ codesign -dv --verbose=4 $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+Executable=$BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+Identifier=local.photoaxis.development
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=6196 flags=0x2(adhoc) hashes=183+7 location=embedded
+VersionPlatform=1
+VersionMin=917504
+VersionSDK=1769472
+Hash type=sha256 size=32
+CandidateCDHash sha256=67a7d2b89290d245bc2a9314856dac4ae359f1ea
+CandidateCDHashFull sha256=67a7d2b89290d245bc2a9314856dac4ae359f1eaeda2aea0af488d83a5c20452
+Hash choices=sha256
+CMSDigest=67a7d2b89290d245bc2a9314856dac4ae359f1eaeda2aea0af488d83a5c20452
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=1687552
+Executable Segment flags=0x1
+Page size=16384
+CDHash=67a7d2b89290d245bc2a9314856dac4ae359f1ea
+Signature=adhoc
+Info.plist entries=25
+TeamIdentifier=not set
+Sealed Resources version=2 rules=13 files=5
+Internal requirements count=0 size=12
+Total signatures=1
+Chosen signature=1
+$ file $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+$BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis: Mach-O 64-bit executable arm64
+$ xcrun vtool -show-build $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+$BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis:
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 14.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+$ xcrun dwarfdump --uuid $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+UUID: 0EF4C93F-3295-351D-B159-6863C6DE200E (arm64) $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+$ codesign --verify --deep --strict $BUILD_ROOT/QA/PAINT6-Final/PhotoAxis Paint6 Final vi.app
+$ codesign --verify --deep --strict $BUILD_ROOT/QA/PAINT6-Final/PhotoAxis Paint6 Final en.app

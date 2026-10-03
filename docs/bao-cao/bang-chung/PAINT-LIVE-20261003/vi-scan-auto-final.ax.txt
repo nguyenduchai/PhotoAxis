@@ -1,0 +1,63 @@
+Window: "Xử lý bản scan…", App: PhotoAxis Paint6 Final vi.
+0 tờ Secondary Actions: Raise
+	1 text Trước xử lý · vùng cam là trang được nhận diện Sau xử lý · kiểm tra chữ và mép trang trước khi áp dụng
+	2 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		3 hộp kiểm Bật làm sạch ảnh, Value: 1
+		4 text Chế độ bản scan
+		5 nút bật lên Description: Chế độ bản scan, Value: Giữ màu
+		6 text Làm trắng nền / giảm bóng
+		7 thanh trượt (settable, float) Description: Làm trắng nền / giảm bóng, Value: 0.8
+			8 chỉ báo giá trị (settable, float) 0.8
+		9 text Giảm nhiễu
+		10 thanh trượt (settable, float) Description: Giảm nhiễu, Value: 0.1
+			11 chỉ báo giá trị (settable, float) 0.1
+		12 text Làm rõ chữ
+		13 thanh trượt (settable, float) Description: Làm rõ chữ, Value: 0.3
+			14 chỉ báo giá trị (settable, float) 0.3
+		15 text Ngưỡng trắng/đen · tăng để giữ nét mảnh
+		16 thanh trượt (settable, float) Description: Ngưỡng trắng/đen · tăng để giữ nét mảnh, Value: 0.08
+			17 chỉ báo giá trị (settable, float) 0.08
+		18 text Vùng ước lượng nền giấy
+		19 thanh trượt (settable, float) Description: Vùng ước lượng nền giấy, Value: 0.025
+			20 chỉ báo giá trị (settable, float) 0.025
+		21 text Hiệu chỉnh cong ngang · kéo và xem trước
+		22 thanh trượt (settable, float) Description: Hiệu chỉnh cong ngang · kéo và xem trước, Value: 0
+			23 chỉ báo giá trị (settable, float) 0
+		24 text Hiệu chỉnh cong dọc · kéo và xem trước
+		25 thanh trượt (settable, float) Description: Hiệu chỉnh cong dọc · kéo và xem trước, Value: 0
+			26 chỉ báo giá trị (settable, float) 0
+		27 nút Nhận diện mép trang
+		28 nút Tự chỉnh nghiêng theo dòng chữ
+		29 nút Bỏ vùng nhận diện và góc xoay
+		30 text Góc chỉnh nghiêng (−15…15°)
+		31 trường văn bản (settable) Description: Góc chỉnh nghiêng (−15…15°), Value: 3
+		32 text Chuẩn hóa kích thước · giữ tỷ lệ, căn giữa
+		33 nút bật lên Description: Chuẩn hóa kích thước · giữ tỷ lệ, căn giữa, Value: Giữ kích thước sau nắn
+		34 text Chiều rộng (px)
+		35 trường văn bản (disabled) Description: Chiều rộng (px), Value: 1200
+		36 text Chiều cao (px)
+		37 trường văn bản (disabled) Description: Chiều cao (px), Value: 900
+		38 text Mật độ (PPI)
+		39 trường văn bản (settable) Description: Mật độ (PPI), Value: 300
+		40 text Nguồn giữ nguyên. Góc và nền là ước lượng: kiểm tra dấu, chữ ký và nét mảnh. Cong dùng mô hình hai chiều có giới hạn, không phục hồi nội dung bị che. Viền thêm trong dự án trong suốt; xuất hàng loạt có nền trắng. Preview hàng loạt chỉ đại diện trang đầu; rà soát từng trang và manifest sau xuất.
+		41 thanh cuộn (settable, float) 1
+			42 chỉ báo giá trị (settable, float) 1
+			43 nút mũi tên tăng dần
+			44 nút mũi tên giảm dần
+			45 nút trang tăng dần
+			46 nút trang giảm dần
+	47 text Đầu ra 1246 × 962 px, 300 PPI. Kiểm tra preview trước khi áp dụng; nguồn không bị ghi đè.
+	48 nút Hủy
+	49 nút Áp dụng
+50 menu bar
+	51 PhotoAxis Paint6 Final vi
+	52 Tệp
+	53 Chỉnh sửa
+	54 Ảnh
+	55 Lớp
+	56 Văn bản
+	57 Xem
+	58 Cửa sổ
+	59 Trợ giúp
+
+The focused UI element is 31 trường văn bản (settable) Description: Góc chỉnh nghiêng (−15…15°), Value: 3
