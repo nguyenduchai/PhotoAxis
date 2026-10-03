@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "build": "7",
+  "build": "8",
   "specification": "1.0-draft.3",
   "schemaVersion": 1,
-  "sourceCommit": "339ddec3ddd4f6e8dc9faf3981732686087423b7",
-  "sourceFingerprintSHA256": "0de6572d49cd646f3e254703f626c9adb741d5b3afa9441ab81d5747a53876d0",
-  "releaseBinaryUUID": "7D902A76-2780-35F8-A59E-9B500547FEC2",
-  "binarySHA256": "af1b02ffe14e75682ff33d19bce6c64545bb19bf991c9c238db0c5f50df13f44",
-  "coreFrameworkSHA256": "b760e6e87efc9b7d0a17766c14b0867fc17211058713d03b5d8c0e439ad81860",
+  "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
+  "sourceFingerprintSHA256": "98ef8ee6522f2a0f29c81945a310536a2ed50c59e7950ab4ab218f2728897bc0",
+  "releaseBinaryUUID": "43209510-3056-3E94-AF2B-25E5AAB23E0D",
+  "binarySHA256": "67c4067068eb20df7beb93e12cf89da523b6bfc59c50f085aa2a01d9f282c76b",
+  "coreFrameworkSHA256": "17cb7225890bff1a800526efcd1ded903850143b818f408b4e920b120920f593",
   "architecture": "arm64",
   "minimumOS": "14.0",
   "signing": "local-ad-hoc",
@@ -28,7 +28,7 @@
     "Scan real camera/book/thin-stroke and maximum50page batch/supported-target qualification",
     "Paint full-quota and input-to-present performance on supported target systems"
   ],
-  "evidence": "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
+  "evidence": "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
   "investigationSpecification": "Investigation 2 (includes Investigation 1)",
   "investigationProjectSchemaVersion": 2,
   "caseSchemaVersion": 2,
@@ -38,8 +38,8 @@
   "acceptanceOpen": 24,
   "benchmarkEvidence": "docs/bao-cao/bang-chung/P12-native2/manifest.json",
   "latestLocalFullSuite": {
-    "total": 191,
-    "passed": 187,
+    "total": 201,
+    "passed": 197,
     "failed": 1,
     "skipped": 3
   },
@@ -51,7 +51,7 @@
   "scanSpecification": "Scan 1",
   "scanProjectSchemaVersion": 3,
   "scanEvidence": "docs/bao-cao/SCAN_2026-10-03.md",
-  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build7",
+  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build8",
   "previousCandidateBuild4": {
     "sourceCommit": "4947ff7f821929a4982085a5611442f3ccfe20e8",
     "releaseBinaryUUID": "8A2E6A7C-4058-391B-A8F6-24F1BB32D380",
@@ -60,14 +60,14 @@
   "workspaceIntegrationEvidence": "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
   "latestNativeCI": {
     "status": "PASS",
-    "sourceCommit": "8c39847bb7aea49f5c3766066484d3fe681191c1",
-    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37137613382",
+    "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37142191499",
     "counts": {
-      "passed": 186,
+      "passed": 196,
       "failed": 0,
       "skipped": 5
     },
-    "total": 191,
+    "total": 201,
     "os": "15.7.9",
     "xcode": "16.4",
     "debugTest": "PASS",
@@ -78,8 +78,8 @@
       "largeworkspacefixture"
     ],
     "qualificationGatesUnchanged": true,
-    "newWorkspaceRefinementTestsPassed": 7,
-    "countDerivation": "23CoreXCTest+33SwiftTesting+135AppXCTest;5AppSKIP,0FAIL"
+    "newOpenImageCursorTestsPassed": 10,
+    "countDerivation": "23CoreXCTest+33SwiftTesting+145AppXCTest;5AppSKIP,0FAIL"
   },
   "previousCandidateBuild5": {
     "sourceCommit": "218b788d04fb0bb6abd8bf3516e49409265eb435",
@@ -159,5 +159,34 @@
     "newPaintLiveTestsPassed": 16,
     "countDerivation": "23CoreXCTest+33SwiftTesting+128AppXCTest;5AppSKIP,0FAIL"
   },
-  "workspaceRefinementEvidence": "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
+  "workspaceRefinementEvidence": "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
+  "previousCandidateBuild7": {
+    "sourceCommit": "339ddec3ddd4f6e8dc9faf3981732686087423b7",
+    "releaseBinaryUUID": "7D902A76-2780-35F8-A59E-9B500547FEC2",
+    "evidence": "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json"
+  },
+  "previousNativeCIBuild7": {
+    "status": "PASS",
+    "sourceCommit": "8c39847bb7aea49f5c3766066484d3fe681191c1",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37137613382",
+    "counts": {
+      "passed": 186,
+      "failed": 0,
+      "skipped": 5
+    },
+    "total": 191,
+    "os": "15.7.9",
+    "xcode": "16.4",
+    "debugTest": "PASS",
+    "releaseBuild": "PASS",
+    "skipScope": [
+      "3opt-inbenchmarks",
+      "realVietnameseinputcontext",
+      "largeworkspacefixture"
+    ],
+    "qualificationGatesUnchanged": true,
+    "newWorkspaceRefinementTestsPassed": 7,
+    "countDerivation": "23CoreXCTest+33SwiftTesting+135AppXCTest;5AppSKIP,0FAIL"
+  },
+  "openImageCursorEvidence": "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
 }

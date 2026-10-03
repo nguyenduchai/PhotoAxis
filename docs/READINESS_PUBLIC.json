@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": "7",
+  "build": "8",
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
@@ -29,9 +29,12 @@
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/ci-summary.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
-      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/ci-summary.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/ci-summary.json",
+      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json"
     ],
-    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build7 acceptance. Build7 local191total187PASS/1knownTelexFAIL/3opt-inbenchmarkSKIP;7new ruler/Settings/navigation testsPASS. Scoped nativeVIEN Settings/rulers/page navigation and VI synthetic-case sharing PNG independently checked. Minimum Settings geometry hosted, native pointer resize was not successful. GitHub CI8c39847 on macOS15.7.9/Xcode16.4:191total186PASS/0FAIL/5SKIP,7newPASS,Debug/test/ReleasePASS; skip scopes and remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realcamera-video-measurement/Scan50/Paint performance qualification remain open."
+    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build8 acceptance. Build8 local201total197PASS/1knownTelexFAIL/3benchmarkSKIP;10new active-canvas/cursor testsPASS. GitHubCI831ef1a macOS15.7.9/Xcode16.4:201total196PASS/0FAIL/5SKIP,10newPASS,Debug/test/ReleasePASS. Scoped final nativeVI open normal image/contrast20/Save paxis/active-analysis banner checked; OCR cold and native save/reopen verification in progress. Remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realdata/Scan/Paint qualification remains open."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -47,9 +50,10 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json"
     ],
-    "reason": "Local build7 Release UUID7D902A76-2780-35F8-A59E-9B500547FEC2,ad-hoc arm64/minOS14 verified;QA copies match Release UUID/Core. Final DeveloperID artifact/full acceptance remain missing."
+    "reason": "Local build8 Release UUID43209510-3056-3E94-AF2B-25E5AAB23E0D,ad-hoc arm64/minOS14 verified;QA copies match Release UUID/Core. Final DeveloperID/full acceptance missing."
   },
   "R04": {
     "status": "BLOCKED_EXTERNAL",
@@ -110,9 +114,10 @@
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
       "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
-      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
+      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
+      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
     ],
-    "reason": "Public bilingual source/GPLv3/Issues and build7 readable rulers/Settings/four workspace pages introduction and guides deployed;27HTTPS files/hash/commit8c39847 PASS. Signed installer/legal publisher gate remains open;stable download disabled."
+    "reason": "Public VIEN source/GPLv3/Issues and build8 active-canvas investigation/native-cursor guides deployed at831ef1a;27HTTPS files/hash/commitPASS. Signed installer/legal publisher gate remains open;stable download disabled."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
@@ -122,18 +127,20 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/pages-https.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
-      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/pages-https.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/pages-https.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json"
     ],
-    "reason": "Build7 anonymousHTTPS27files/hash/commit8c39847 PASS on GitHub runner. Signed installer HTTP download/clean installation missing."
+    "reason": "Build8 anonymousHTTPS27files/hash/commit831ef1a PASS on GitHub runner. Signed installer HTTP download/clean installation missing."
   },
   "R11": {
     "status": "CHUA_KIEM_CHUNG",
     "evidence": [
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
-      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md"
+      "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
+      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
     ],
-    "reason": "Build7 clean DMG8c39847 and binary/Core/UUID match tested source fingerprint339ddec;Pages27files/hash/commit same checkout PASS. NativeCI same checkout PASS191total186PASS/0FAIL/5SKIP. Final signed artifact/tag/source acceptance remains missing."
+    "reason": "Build8 tested source831ef1a/fingerprint98ef8ee6522f2a0f29c81945a310536a2ed50c59e7950ab4ab218f2728897bc0;CI201total196PASS/0FAIL/5SKIP,10newPASS;Pages27files/hash/commit831ef1aPASS. Current DMG/native receipts in progress. Final signed artifact/tag/full acceptance missing."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

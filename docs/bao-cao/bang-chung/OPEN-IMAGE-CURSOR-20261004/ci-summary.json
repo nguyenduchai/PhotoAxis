@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
+  "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37142191499",
+  "counts": {
+    "passed": 196,
+    "failed": 0,
+    "skipped": 5
+  },
+  "total": 201,
+  "os": "15.7.9",
+  "xcode": "16.4",
+  "debugTest": "PASS",
+  "releaseBuild": "PASS",
+  "skipScope": [
+    "3opt-inbenchmarks",
+    "realVietnameseinputcontext",
+    "largeworkspacefixture"
+  ],
+  "qualificationGatesUnchanged": true,
+  "newOpenImageCursorTestsPassed": 10,
+  "countDerivation": "23CoreXCTest+33SwiftTesting+145AppXCTest;5AppSKIP,0FAIL"
+}
