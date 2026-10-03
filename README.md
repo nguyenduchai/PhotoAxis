@@ -8,7 +8,7 @@
 
 Repo public bắt đầu từ snapshot source build 3; lịch sử triển khai trước khi công khai giữ local trên nhánh `local/implementation-history`. Mã commit cũ trong bằng chứng là provenance lịch sử, không phải commit của nhánh public. Ảnh Adobe nội bộ không được đưa vào snapshot public.
 
-**Kiểm tra source khi công khai:** đã sửa tương thích UndoManager với Xcode16.4 và điều kiện API HDR SDK26. Local fullsuite mới144PASS/1FAILTelex/3SKIP; Release mới build/codesignPASS, CI đang kiểm lại. Đây vẫn là bản phát triển; xem báo cáo để phân biệt evidence lịch sử và binary cuối.
+**Kiểm tra source khi công khai:** đã sửa tương thích UndoManager với Xcode16.4 và điều kiện API HDR SDK26. Local fullsuite mới144PASS/1FAILTelex/3SKIP; Release mới build/codesignPASS, CI GitHub Xcode16.4/macOS15.7.9:143PASS/0FAIL/5SKIP, Debug/test và ReleasePASS. HDR/bố cục riêng trênMaclocal2PASS/0FAIL/0SKIP. CIskip3benchmark/IME/màn hình lớn không thay các gate này. Đây vẫn là bản phát triển; xem báo cáo để phân biệt evidence lịch sử và binary cuối.
 
 **Phân phối hiện tại:** website và mã nguồn công khai; bản DMG build 3 đã xuất để kiểm thử local, chưa Developer ID/notarized. Nút tải bộ cài public còn tắt. [Báo cáo Pages và DMG](docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md).
 

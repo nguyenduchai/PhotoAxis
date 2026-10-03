@@ -3,10 +3,10 @@
   "build": "3",
   "specification": "1.0-draft.3",
   "schemaVersion": 1,
-  "sourceCommit": "0169bf52cd0d3793c0027a82888833c8a58f4f78",
-  "sourceFingerprintSHA256": "317d062da381ee744dc7b680a3b5dd40d23525e9536da30c9cb63c67fa0e9d02",
-  "releaseBinaryUUID": "4EFA7887-E96F-3149-B6F5-68BE3475F219",
-  "binarySHA256": "faa4d7264d3d92dc12ff6774ae5a5561b06ea09abb12acfbe8f5c1f1d620128c",
+  "sourceCommit": "43a5b9334704f0d957946202ebd8f45b2c553c2f",
+  "sourceFingerprintSHA256": "3ee2685aa34fa10abc728b8d3e10288920868d1ec7f10749928b7863462cff35",
+  "releaseBinaryUUID": "741E1DF7-BF33-3A1D-9697-90ADCE9DF40E",
+  "binarySHA256": "934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d",
   "coreFrameworkSHA256": "8ae55ed513e8d34db8ee6dae8ed59e1128a0bd1cd5abfe9ced58ea1963373058",
   "architecture": "arm64",
   "minimumOS": "14.0",
@@ -24,9 +24,9 @@
     "investigation full-quota and supported-target runtime/performance qualification",
     "runtime Vietnamese OCR availability and cold/warm behavior on supported macOS targets",
     "real permitted camera/video data, supported codecs/long clips and calibrated geometry qualification",
-    "final Developer ID/notarized installer, clean Gatekeeper/offline installation and confirmed public targets"
+    "final Developer ID/notarized installer, clean Gatekeeper/offline installation"
   ],
-  "evidence": "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
+  "evidence": "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json",
   "investigationSpecification": "Investigation 2 (includes Investigation 1)",
   "investigationProjectSchemaVersion": 2,
   "caseSchemaVersion": 2,
@@ -34,5 +34,10 @@
   "nativeAcceptanceEvidence": "docs/bao-cao/P12-native2.md",
   "acceptancePassed": 19,
   "acceptanceOpen": 24,
-  "benchmarkEvidence": "docs/bao-cao/bang-chung/P12-native2/manifest.json"
+  "benchmarkEvidence": "docs/bao-cao/bang-chung/P12-native2/manifest.json",
+  "latestLocalFullSuite": {
+    "passed": 144,
+    "failed": 1,
+    "skipped": 3
+  }
 }

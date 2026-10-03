@@ -1,3 +1,7 @@
+# DMGlocal hiện hành03/10/2026
+
+PhotoAxis1.0.0(3)GPL-3.0-only, packagingcommit43a5b93 sạch, binaryUUID741E1DF7-BF33-3A1D-9697-90ADCE9DF40E/SHA934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d. DMGSHA447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db,2.318.267byte,4payloadentries kèm LICENSE/SOURCE. Mount/tree/codesign/notice/hashPASS; bản giao `$BUILD_ROOT/Deliverables/2026-10-03-build3-final`. [Manifest](bao-cao/bang-chung/GITHUB-PAGES-20261003/distribution-manifest.json), [receipt](bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json), [báo cáo](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md). Localad-hoc, chưaDeveloperID/notarize/cài sạch; `publicReady=false`. Artifact/galleries bên dưới là lịch sử, không thay binary/DMG mới.
+
 # PhotoAxis 1.0.0 — hồ sơ artifact, 02/10/2026
 
 **Chưa có artifact public signed/notarized.** Tên public dự kiến `PhotoAxis-1.0.0-arm64.dmg`; chưa có checksum/notary ID cho file public này. Checksum local build3 dưới đây áp dụng bộ cài phát triển có cả hai gói điều tra; không dùng làm checksum bộ cài public sau ký/staple. Các artifact D54/build1 và build2 giữ vai trò lịch sử.

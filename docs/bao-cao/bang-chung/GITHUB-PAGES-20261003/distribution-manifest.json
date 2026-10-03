@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_UNSIGNED",
+  "publicReady": false,
+  "sourceCommit": "43a5b9334704f0d957946202ebd8f45b2c553c2f",
+  "sourceDirty": false,
+  "version": "1.0.0",
+  "build": "3",
+  "appBundleID": "local.photoaxis.development",
+  "appTreeSHA256": "b28a6bacc3089ac453cce7b347dd32f524527ce922662f8045572a1f7e424737",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "sha256": "447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db",
+  "architecture": "arm64",
+  "minimumOS": "14.0",
+  "notarization": {},
+  "teamID": null,
+  "developerIDIdentity": null,
+  "candidateCommit": null,
+  "cleanInstallVerified": false,
+  "offlineWorkflowVerified": false,
+  "toolchain": "Xcode 27.0\nBuild version 27A266a"
+}

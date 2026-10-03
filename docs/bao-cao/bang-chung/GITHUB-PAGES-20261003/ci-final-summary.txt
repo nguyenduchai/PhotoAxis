@@ -1,0 +1,14 @@
+build-test	Record and validate toolchain	2026-10-03T01:54:52.7710620Z Xcode 16.4
+build-test	Record and validate toolchain	2026-10-03T01:54:54.1420240Z ProductVersion:		15.7.9
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:41.6387710Z 	 Executed 15 tests, with 0 failures (0 unexpected) in 0.032 (0.046) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:41.6388580Z 	 Executed 15 tests, with 0 failures (0 unexpected) in 0.032 (0.047) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:41.6833860Z ✔ Test run with 33 tests passed after 0.034 seconds.
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:44.2371960Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:44.3401560Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:44.4457040Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T01:55:45.2361780Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/ContentEditingTests.swift:173: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : Test skipped - The native context cannot activate Telex; manual IME acceptance remains required
+build-test	Model and geometry tests; Debug build	2026-10-03T01:56:11.0265380Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/WorkspaceTests.swift:225: -[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages] : Test skipped - Window server constrained 1440x900 to (1440.0, 700.0); full native layout acceptance requires a sufficiently large desktop
+build-test	Model and geometry tests; Debug build	2026-10-03T01:56:11.5874080Z 	 Executed 100 tests, with 5 tests skipped and 0 failures (0 unexpected) in 27.800 (27.822) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T01:56:11.6068930Z 	 Executed 100 tests, with 5 tests skipped and 0 failures (0 unexpected) in 27.800 (27.823) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T01:56:12.0068790Z ** TEST SUCCEEDED **
+build-test	Release build with local ad-hoc signing	2026-10-03T01:56:51.7685090Z ** BUILD SUCCEEDED **

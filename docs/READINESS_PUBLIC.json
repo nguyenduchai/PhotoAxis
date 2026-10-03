@@ -22,7 +22,7 @@
       "docs/bao-cao/bang-chung/P12-native2/manifest.json",
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately."
+    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately. Final GitHub CI78adb1b on macOS15.7.9/Xcode16.4:143PASS/0FAIL/5SKIP, Debug/test/Release success; skipped benchmark/Telex/large-layout do not close those gates. Local targeted HDR/layout2PASS/0FAIL/0SKIP."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -30,9 +30,10 @@
       "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/binary-verification.log",
-      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
+      "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json"
     ],
-    "reason": "Build3 Release arm64/minOS14 local ad-hoc verified; current source/UUID/binary/Core and clean-source local DMG provenance recorded. Final Developer ID artifact and release acceptance missing; historical build1/build2 evidence is not substituted."
+    "reason": "Release build3 after synchronous Undo actor SDK compatibility fix verified: UUID741E1DF7/BinarySHA934e24a8/CoreSHA8ae55ed5, local ad-hoc arm64/minOS14. Source-clean GPL installer43a5b93 recorded. Final Developer ID artifact and full release acceptance missing."
   },
   "R04": {
     "status": "BLOCKED_EXTERNAL",
@@ -54,9 +55,10 @@
       "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/packaging.log",
       "docs/bao-cao/bang-chung/INVESTIGATION2/SHA256SUMS.txt",
-      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
+      "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json"
     ],
-    "reason": "Current build3 local unsigned DMG mounted read-only, copied/tree-compared, codesign verified and detached; checksum/sourceDirty=false recorded. Final Developer ID/notarized public DMG and clean installation are missing."
+    "reason": "Latest GPLv3 local DMG SHA447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db mounted read-only; expected4payload entries, LICENSE/SOURCE bytes, app-tree/codesign/detach/copy checksum PASS. Source43a5b93/sourceDirty=false. Final Developer ID/notarization/clean Gatekeeper installation missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",

@@ -1,10 +1,16 @@
 # PhotoAxis — Tiến độ thực hiện
 
-## Website/mã nguồn GitHub và DMG —03/10/2026
+## Website, mã nguồn GitHub và DMG — 03/10/2026
 
-Theo yêu cầu mới: cùng một repo public `nguyenduchai/PhotoAxis` chứa source và website; giấy phép **GPL-3.0-only**. Repo/Pages Actions/HTTPS đã cấu hình,12trang Việt/Anh đã cập nhật build3/OCR/đo/source/Issues/Privacy/buildguide; kiểm local và16policytestsPASS. Deployment livePASS,27fileHTTPS/hashPASS, desktop/mobileVIENPASS. CI phát hiện và đã sửa2điểm tương thíchXcode16.4, đang chạy lại; localfullsuite144PASS/1FAILTelex/3SKIP, HDRriêngPASS. Release mới đãbuild/codesignPASS, DMGkèmGPL đangexport lại theo source cuối; xem [báo cáo](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md). Bộ cài vẫn `publicReady=false`, nghiệm thu19/43 và thiếu ký/notary/cài sạch không đổi. Snapshot public bỏ ảnhAdobe nội bộ, lịch sử triển khai cũ giữ trên nhánhlocal.
+**Đã hoàn thành yêu cầu website GitHub Pages, công khai source và xuất DMG local.** [Một repo ứng dụng/website](https://github.com/nguyenduchai/PhotoAxis), [website Việt/Anh](https://nguyenduchai.github.io/PhotoAxis/), giấy phép **GPL-3.0-only**, hỗ trợ GitHub Issues. 12 trang đã cập nhật hướng dẫn tự build, Privacy GitHub và ảnh OCR/đo build 3; 27 file HTTPS/hash/manifest cùng browser desktop/mobile VI/EN PASS.
 
-## Bàn giao hiện hành — nghiệm thu native build 3, 03/10/2026
+- DMG build 3 từ source sạch 43a5b93, binary UUID741E1DF7, SHA256 `447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db`; mount/tree/codesign/hash/LICENSE/SOURCE/detach và bản sao giao PASS. Có sửa callback Undo đồng bộ để tương thích Xcode16.4.
+- CI GitHub Xcode16.4/macOS15.7.9: **143 PASS/0 FAIL/5 SKIP**, Debug/test và Release PASS. SKIP benchmark/IME/màn hình lớn không đóng các nghiệm thu này. Local full suite **144 PASS/1 FAIL Telex/3 SKIP**; HDR/layout riêng **2 PASS/0 FAIL/0 SKIP**. 16 policy tests, inventory và 404 khóa VI/EN PASS.
+- Source/website đã public; **bộ cài stable public vẫn chưa đủ**: 19/43 ca nghiệm thu PASS, thiếu Developer ID/notary/cài sạch và các qualification đang ghi. `releaseReady=false`, installer download disabled. Snapshot source public loại ảnh Adobe nội bộ; lịch sử cũ giữ local.
+
+[Báo cáo và các bằng chứng](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md), [receipt DMG](bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json), [CI](bao-cao/bang-chung/GITHUB-PAGES-20261003/ci-final-summary.json), [readiness](READINESS_PUBLIC.json).
+
+## Nghiệm thu native trước công khai — build 3, 03/10/2026
 
 **Đã chốt thêm A04/A07/A26 qua native Tiếng Việt và English; tổng 19/43 PASS, 24 ca chưa đóng.** Tạo/lưu đủ4preset và custom, validation/nền/PPI,5tab/giới hạn thứ6, phiên chữ/Undo riêng từng tab, History branch và Saved marker đều đã kiểm. Audit độc lập ZIP/model/preview/AX/samples PASS, nguồn sản phẩm/binary không đổi. [Báo cáo](bao-cao/P12-native2.md), [bằng chứng](bao-cao/bang-chung/P12-native2/manifest.json).
 
@@ -70,8 +76,8 @@ Repo có tài liệu và Git trên nhánh `main`, chưa có commit và chưa c�
 | P11 | Recovery, vòng đời tài liệu, hoàn thiện ngôn ngữ/focus | BLOCKED_EXTERNAL | [P11](bao-cao/P11.md): P15-native startup VI/EN/SaveAs/quit2tab/Cancel/DontSave/restart PASS; IME/native tổng thể còn thiếu |
 | P12 | Nghiệm thu A01–A43, hiệu năng, Release Candidate | BLOCKED_EXTERNAL | [P12-native2](bao-cao/P12-native2.md): build3 native A04/A07/A26 vi/en,19/43PASS; benchmark mới3PASS;144suitePASS cùng code ở lượt trước; native tổng thể/IME/thiết bị/performance còn thiếu |
 | P13 | Ký, notarization, DMG, kiểm tra phân phối | BLOCKED_EXTERNAL | [P13](bao-cao/P13.md): icon/config/script/8policyPASS/localDMGverified; thiếu DeveloperID/R02/notary/clean install |
-| P14 | Trang giới thiệu/tải, hướng dẫn, hồ sơ public | BLOCKED_EXTERNAL | [P14](bao-cao/P14.md):12 trang VI/EN/desktop-mobile/provenance/docs PASS; ảnh Perspective và startup Recovery VI/EN D54 đã có; target/terms/installer còn chờ |
-| P15 | Public và kiểm tra đường tải thực | BLOCKED_EXTERNAL | [P15](bao-cao/P15.md):preflightR01–R12 blocked/15policyPASS/HTTP-hash-signature tooling; chưa target/gates nên chưapublic |
+| P14 | Trang giới thiệu/tải, hướng dẫn, hồ sơ public | BLOCKED_EXTERNAL | [P14](bao-cao/P14.md):GitHub Pages public12trang VI/EN/desktop-mobile/27HTTPS-hash/sourceGPLv3/Issues PASS; gallery D54build1 và4EFAbuild3 cóprovenance; bộcàisigned/acceptance còn chờ |
+| P15 | Public và kiểm tra đường tải thực | BLOCKED_EXTERNAL | [P15](bao-cao/P15.md):Source/websiteGitHub public vàPagesHTTPS đãkiểmPASS theo yêu cầu03/10;16policyPASS; bộcàisigned/cleaninstall/tag vẫnchưađủgates |
 | P16 | Bảo trì/bản vá sau public | KHI CẦN | Không phải điều kiện chặn 1.0.0 |
 
 ## Bàn giao baseline build1 trước gói điều tra (lịch sử)

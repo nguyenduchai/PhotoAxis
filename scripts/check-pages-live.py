@@ -1,16 +1,9 @@
 #!/usr/bin/env python3
 """Verify an anonymous HTTPS Pages deployment against its commit and file hashes."""
-import argparse, concurrent.futures, hashlib, json, ssl
+import argparse, concurrent.futures, hashlib, json, subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
-from urllib.request import Request, HTTPSHandler, HTTPRedirectHandler, build_opener
-
-class HTTPSRedirect(HTTPRedirectHandler):
-    def redirect_request(self, request, fp, code, message, headers, url):
-        if urlsplit(url).scheme != 'https':
-            raise ValueError('Refusing HTTPS downgrade')
-        return super().redirect_request(request, fp, code, message, headers, url)
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--url', required=True)
@@ -24,16 +17,24 @@ base = args.url.rstrip('/') + '/'
 def fetch(path):
     if path.startswith('/') or '..' in Path(path).parts or urlsplit(path).scheme:
         raise ValueError('Invalid site path: ' + path)
-    # No credentials or cookies; normal certificate verification, HTTPS redirects only.
-    opener = build_opener(HTTPSHandler(context=ssl.create_default_context()), HTTPSRedirect())
-    request = Request(urljoin(base, path), headers={'User-Agent': 'PhotoAxis-Deployment-Check/1', 'Cache-Control': 'no-cache'})
-    with opener.open(request, timeout=30) as response:
-        data = response.read(20 * 1024 * 1024 + 1)
-        if response.status != 200 or len(data) > 20 * 1024 * 1024:
-            raise ValueError('Invalid HTTP status or oversized file: ' + path)
-        if urlsplit(response.url).scheme != 'https':
-            raise ValueError('Non-HTTPS final URL')
-        return data
+    # Use the platform curl trust store with normal certificate verification.
+    # No credentials/cookies, insecure options or HTTP redirect downgrades.
+    result = subprocess.run([
+        'curl', '--fail', '--silent', '--show-error', '--location',
+        '--proto', '=https', '--proto-redir', '=https', '--max-time', '30',
+        '--max-filesize', str(20 * 1024 * 1024), '--retry', '2',
+        '--user-agent', 'PhotoAxis-Deployment-Check/1',
+        '--header', 'Cache-Control: no-cache', '--write-out',
+        '\nPHOTOAXIS_HTTP:%{http_code} TLS:%{ssl_verify_result} URL:%{url_effective}',
+        urljoin(base, path),
+    ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    data, metadata = result.stdout.rsplit(b'\nPHOTOAXIS_HTTP:', 1)
+    status, tls, final_url = metadata.decode().split(' ', 2)
+    if status != '200' or tls != 'TLS:0' or len(data) > 20 * 1024 * 1024:
+        raise ValueError('Invalid HTTP/TLS status or oversized file: ' + path)
+    if urlsplit(final_url.removeprefix('URL:')).scheme != 'https':
+        raise ValueError('Non-HTTPS final URL')
+    return data
 
 manifest = json.loads(fetch('deployment-manifest.json'))
 if manifest['sourceCommit'] != args.commit:
@@ -63,6 +64,7 @@ status = json.loads(fetch('release-status.json'))
 assert status['publicReady'] is False and status['sourceLicense'] == 'GPL-3.0-only'
 result = {'status': 'PASS', 'checkedAt': datetime.now(timezone.utc).isoformat(),
           'websiteURL': base, 'sourceCommit': args.commit, 'anonymousHTTPS': True,
+          'tlsVerification': 'platform curl normal trust verification; ssl_verify_result=0 for every URL',
           'installerPublicReady': False, 'artifactControlFilesNotHTTPResources': control_files,
           'files': files}
 args.output.parent.mkdir(parents=True, exist_ok=True)

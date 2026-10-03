@@ -1,0 +1,19 @@
+{
+  "status": "PASS_CI_SCOPED",
+  "sourceCommit": "78adb1bd5fc5ce712fd0fc2bce2b479676f7cd87",
+  "workflowURL": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37087879643",
+  "toolchain": "Xcode16.4 / macOS15.7.9 / arm64",
+  "passed": 143,
+  "failed": 0,
+  "skipped": 5,
+  "total": 148,
+  "skipReasons": [
+    "3 opt-in Release benchmarks",
+    "Telex input context unavailable",
+    "1440x900 window constrained to700pt on CI display"
+  ],
+  "debugTest": "PASS",
+  "releaseBuild": "PASS",
+  "sameNativeSourceAsDMGPackaging43a5b93": true,
+  "doesNotCloseIMEOrLargeNativeLayoutOrPublicInstallerAcceptance": true
+}

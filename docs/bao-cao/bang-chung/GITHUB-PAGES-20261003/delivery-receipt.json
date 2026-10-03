@@ -1,0 +1,31 @@
+{
+  "status": "PASS_LOCAL_ONLY",
+  "artifactDirectory": "/Users/admin/Library/Developer/PhotoAxisBuilds/83990cd22abb/Deliverables/2026-10-03-build3-final",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "artifactSHA256": "447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db",
+  "bytes": 2318267,
+  "packagingCommit": "43a5b9334704f0d957946202ebd8f45b2c553c2f",
+  "sourceDirty": false,
+  "sourceURL": "https://github.com/nguyenduchai/PhotoAxis/tree/43a5b9334704f0d957946202ebd8f45b2c553c2f",
+  "releaseBinaryUUID": "741E1DF7-BF33-3A1D-9697-90ADCE9DF40E",
+  "binarySHA256": "934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d",
+  "coreFrameworkSHA256": "8ae55ed513e8d34db8ee6dae8ed59e1128a0bd1cd5abfe9ced58ea1963373058",
+  "license": "GPL-3.0-only",
+  "DMGContents": [
+    "Applications symlink -> /Applications",
+    "PhotoAxis.app",
+    "LICENSE.txt",
+    "SOURCE.txt"
+  ],
+  "mountReadonlyPayloadLicenseSourceNoticeTreeCodesignDetach": "PASS",
+  "installerPublicReady": false,
+  "signedDeveloperID": false,
+  "notarized": false,
+  "localFullSuite": {
+    "codeCommit": "b2671654f318f8dc49ca0bd570175682e15d7a12",
+    "passed": 144,
+    "failed": 1,
+    "skipped": 3,
+    "failure": "Synthetic Telex key-event conversion; IME qualification remains open"
+  }
+}
