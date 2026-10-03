@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "desktopCheck": {
+    "downloadDisabled": true,
+    "heading": "Chỉnh ảnh. Giữ layer để sửa tiếp.",
+    "height": 900,
+    "overflow": false,
+    "url": "https://nguyenduchai.github.io/PhotoAxis/",
+    "width": 1280
+  },
+  "mobileCheckVI": {
+    "gridColumns": "331.25px",
+    "overflow": false,
+    "url": "https://nguyenduchai.github.io/PhotoAxis/",
+    "width": 390
+  },
+  "mobileCheckEN": {
+    "downloadDisabled": true,
+    "lang": "en",
+    "overflow": false,
+    "url": "https://nguyenduchai.github.io/PhotoAxis/en/index.html",
+    "width": 390
+  },
+  "scope": "Native in-app browser live HTTPS views; no installer acceptance"
+}

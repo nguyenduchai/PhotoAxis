@@ -1,0 +1,2 @@
+build-test	Model and geometry tests; Debug build	2026-10-03T01:44:24.4506760Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/ExportTests.swift:111:67: error: value of type 'CGImage' has no member 'calculatedContentHeadroom'
+build-test	Model and geometry tests; Debug build	2026-10-03T01:44:24.5166370Z Testing failed:

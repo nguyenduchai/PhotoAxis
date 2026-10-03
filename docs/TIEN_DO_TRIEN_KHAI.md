@@ -2,7 +2,7 @@
 
 ## Website/mã nguồn GitHub và DMG —03/10/2026
 
-Theo yêu cầu mới: cùng một repo public `nguyenduchai/PhotoAxis` chứa source và website; giấy phép **GPL-3.0-only**. Repo/Pages Actions/HTTPS đã cấu hình,12trang Việt/Anh đã cập nhật build3/OCR/đo/source/Issues/Privacy/buildguide; kiểm local và16policytestsPASS. Deployment live và DMG kèmGPL đang hậu kiểm; xem [báo cáo](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md). Bộ cài vẫn `publicReady=false`, nghiệm thu19/43 và thiếu ký/notary/cài sạch không đổi. Snapshot public bỏ ảnhAdobe nội bộ, lịch sử triển khai cũ giữ trên nhánhlocal.
+Theo yêu cầu mới: cùng một repo public `nguyenduchai/PhotoAxis` chứa source và website; giấy phép **GPL-3.0-only**. Repo/Pages Actions/HTTPS đã cấu hình,12trang Việt/Anh đã cập nhật build3/OCR/đo/source/Issues/Privacy/buildguide; kiểm local và16policytestsPASS. Deployment livePASS,27fileHTTPS/hashPASS, desktop/mobileVIENPASS. CI phát hiện và đã sửa2điểm tương thíchXcode16.4, đang chạy lại; localfullsuite144PASS/1FAILTelex/3SKIP, HDRriêngPASS. Release mới đãbuild/codesignPASS, DMGkèmGPL đangexport lại theo source cuối; xem [báo cáo](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md). Bộ cài vẫn `publicReady=false`, nghiệm thu19/43 và thiếu ký/notary/cài sạch không đổi. Snapshot public bỏ ảnhAdobe nội bộ, lịch sử triển khai cũ giữ trên nhánhlocal.
 
 ## Bàn giao hiện hành — nghiệm thu native build 3, 03/10/2026
 

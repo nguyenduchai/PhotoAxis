@@ -1,0 +1,24 @@
+{
+  "status": "PASS_LOCAL_ONLY",
+  "artifactDirectory": "/Users/admin/Library/Developer/PhotoAxisBuilds/83990cd22abb/Deliverables/2026-10-03-build3",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "artifactSHA256": "ee0138a982fcf089facc31f771fe145cb4185d68736bdc26ae217db4515524d2",
+  "bytes": 2316060,
+  "packagingCommit": "08a68a2efe86b87f6a8b36916e97907b6bfc0ed3",
+  "sourceDirty": false,
+  "productNativeCodeBaseline": "0169bf52cd0d3793c0027a82888833c8a58f4f78",
+  "unchangedNativeTreePublicSnapshot": true,
+  "releaseBinaryUUID": "4EFA7887-E96F-3149-B6F5-68BE3475F219",
+  "binarySHA256": "faa4d7264d3d92dc12ff6774ae5a5561b06ea09abb12acfbe8f5c1f1d620128c",
+  "license": "GPL-3.0-only",
+  "DMGContents": [
+    "Applications symlink -> /Applications",
+    "PhotoAxis.app",
+    "LICENSE.txt",
+    "SOURCE.txt"
+  ],
+  "mountReadonlyPayloadLicenseSourceNoticeTreeCodesignDetach": "PASS",
+  "installerPublicReady": false,
+  "signedDeveloperID": false,
+  "notarized": false
+}

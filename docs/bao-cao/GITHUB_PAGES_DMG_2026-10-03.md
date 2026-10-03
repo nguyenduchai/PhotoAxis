@@ -1,6 +1,6 @@
 # PhotoAxis — GitHub Pages, mã nguồn GPLv3 và DMG,03/10/2026
 
-Chủ dự án yêu cầu website GitHub Pages và xuất DMG; sau đó xác nhận cùng một repo public chứa mã nguồn và website, giấy phép GPLv3. Target [nguyenduchai/PhotoAxis](https://github.com/nguyenduchai/PhotoAxis), website https://nguyenduchai.github.io/PhotoAxis/ . Repo và Pages workflow đã được cấu hình; hậu kiểm deployment/HTTPS đang thực hiện, chưa ghi PASS live ở snapshot này.
+Chủ dự án yêu cầu website GitHub Pages và xuất DMG; sau đó xác nhận cùng một repo public chứa mã nguồn và website, giấy phép GPLv3. Target [nguyenduchai/PhotoAxis](https://github.com/nguyenduchai/PhotoAxis), website https://nguyenduchai.github.io/PhotoAxis/ . Repo public, GPLv3 và Pages Actions/HTTPS đã hoạt động. Deployment ban đầu source08a68a2 PASS; đối chiếu27file công khai qua HTTPS ẩn danh/hashPASS. [Workflow](https://github.com/nguyenduchai/PhotoAxis/actions/runs/37086761276), [HTTPS](bang-chung/GITHUB-PAGES-20261003/https-first-deployment.json).
 
 ## Phạm vi
 
@@ -13,7 +13,8 @@ Chủ dự án yêu cầu website GitHub Pages và xuất DMG; sau đó xác nh�
 -12trang, links/anchor/metadata/alt/download disabled/provenance/checksum tài nguyên PASS.
 -16release policytests PASS, không nới gate signed/public release.
 -Patternscan1276blob trong lịch sử:0mẫu credential/0trackedsecret/0blob>40MB. Không phải chứng nhận security toàn diện. [Audit](bang-chung/GITHUB-PAGES-20261003/source-publication-audit.json).
--Cấu hình GitHub Pages dùng Actions, HTTPS enforced, payload chỉ website; build/deploy manifest tách bộ cài. Hậu kiểm live/CI/DMG GPL cuối đang thực hiện.
+-GitHub Pages Actions/HTTPS enforced PASS.27file HTTP200/hash và commit deployment đúng; `.nojekyll` là controlfile artifact, GitHub không phục vụ URL dotfile, không tính HTTPresource. Desktop1280×900CSS và mobile390px Việt/Anh không tràn ngang, chuyển ngôn ngữ/nút tải disabled đúng. [Browserchecks](bang-chung/GITHUB-PAGES-20261003/browser-checks.json).
+-CI Xcode16.4 lần đầu fail callbackUndo actor, lần hai fail phép đo test chỉ có SDK26; đã sửa ởb267165/0ea4029 và đang chạy lại. Fullsuite localb267165 **144PASS/1FAIL/3SKIP**, caTelexNSEvent mô phỏng không chuyển chữ; HDR riêngPASS. ReleaseUUID741E1DF7-BF33-3A1D-9697-90ADCE9DF40E/binarySHA934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d, codesignPASS. Bộ cài trước sửaCI được giữ làm lịch sử; đang export lại từ checkout sạch cuối.
 
 ## Trạng thái phát hành ứng dụng
 

@@ -1,3 +1,11 @@
+# Cập nhật GitHub/Pages03/10/2026
+
+Repo và website đã public cùng target `nguyenduchai/PhotoAxis`, GPL-3.0-only, hỗ trợ GitHub Issues. Target/source visibility/hosting/license/Issues không còn chưa chốt; phần publisher pháp lý/Team/namespace/notary/cài sạch vẫn thiếu.
+
+- CI Xcode16.4 phát hiện UndoManager callback thiếu ngữ cảnh MainActor: sửa `MainActor.assumeIsolated` để giữ callback đồng bộ và kiểm executor. CI tiếp theo phát hiện test HDR dùng API SDK26; phép đo phụ chỉ biên dịch khi compiler≥6.2, các kiểm HDR/SDR/metadata/pixel vẫn chạy SDK15.
+- Local fullsuite sourceb267165: **144PASS/1FAIL/3SKIP**,148total. FAIL `testInstalledVietnameseInputContext`: sự kiện NSEvent mô phỏng trả `tieengs vieetj ` thay `tiếng việt `. Không xóa/bỏ test để tạo PASS; VI physical typing lịch sử vẫn có, nhưng A22 cần kiểm hoàn chỉnh và EN/VNI. HDR riêng sau sửa guard PASS. [Bằng chứng](bao-cao/bang-chung/GITHUB-PAGES-20261003/native-local-test-summary.json).
+- Metal MDB_MAP_FULL và priority-inversion warning vẫn xuất hiện. Website public không chứng nhận bộ cài/hiệu năng/IME.
+
 # PhotoAxis 1.0.0 (3) — tồn đọng nghiệm thu, 03/10/2026
 
 Đây là bản phát triển local, chưa có bản public. Các gate bên ngoài chưa được người dùng thay đổi phạm vi. `releaseReady=false`; không có xác nhận R02.

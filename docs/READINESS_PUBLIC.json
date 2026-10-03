@@ -4,9 +4,10 @@
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
-      "docs/bao-cao/P13.md"
+      "docs/bao-cao/P13.md",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "Publisher, namespace, Team/Developer ID/notary, repository and website targets unconfirmed"
+    "reason": "Source repository nguyenduchai/PhotoAxis/public, GitHub Pages HTTPS, GPL-3.0-only and GitHub Issues confirmed by owner and configured. Legal publisher/namespace/Team/Developer ID/notary remain missing."
   },
   "R02": {
     "status": "BLOCKED_EXTERNAL",
@@ -18,16 +19,18 @@
       "docs/bao-cao/MO_RONG_DIEU_TRA.md",
       "docs/bao-cao/TONG_TIEN_DO_VA_PUBLIC_2026-10-02.md",
       "docs/bao-cao/P12-native2.md",
-      "docs/bao-cao/bang-chung/P12-native2/manifest.json"
+      "docs/bao-cao/bang-chung/P12-native2/manifest.json",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending."
+    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
     "evidence": [
       "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
-      "docs/bao-cao/bang-chung/INVESTIGATION2/binary-verification.log"
+      "docs/bao-cao/bang-chung/INVESTIGATION2/binary-verification.log",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
     "reason": "Build3 Release arm64/minOS14 local ad-hoc verified; current source/UUID/binary/Core and clean-source local DMG provenance recorded. Final Developer ID artifact and release acceptance missing; historical build1/build2 evidence is not substituted."
   },
@@ -50,7 +53,8 @@
     "evidence": [
       "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/packaging.log",
-      "docs/bao-cao/bang-chung/INVESTIGATION2/SHA256SUMS.txt"
+      "docs/bao-cao/bang-chung/INVESTIGATION2/SHA256SUMS.txt",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
     "reason": "Current build3 local unsigned DMG mounted read-only, copied/tree-compared, codesign verified and detached; checksum/sourceDirty=false recorded. Final Developer ID/notarized public DMG and clean installation are missing."
   },
@@ -75,25 +79,31 @@
       "docs/bao-cao/P15-native.md",
       "docs/HUONG_DAN_DIEU_TRA.md",
       "docs/RELEASE_NOTES.md",
-      "docs/bao-cao/MO_RONG_DIEU_TRA.md"
+      "docs/bao-cao/MO_RONG_DIEU_TRA.md",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "12-page VI/EN website preview links/metadata/owned assets pass; build3 OCR/video/calibrated-measurement guide/release notes/privacy content updated. D54 build1 gallery remains historical. Final accepted public gallery, publisher/support/terms/license/pricing/host and signed-installer URLs/checksums remain pending; download disabled/noindex."
+    "reason": "Public bilingual GitHub Pages introduction/source/Issues/GPLv3/hosting privacy and build3 OCR/measurement gallery verified. Signed-installer acceptance/URLs/checksums and final legal publisher remain pending; installer download disabled/noindex."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
-    "evidence": [],
-    "reason": "No public HTTPS website or anonymous download yet"
+    "evidence": [
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+    ],
+    "reason": "Public HTTPS introduction website verified anonymously:27HTTPfiles/checksums/commit, desktop/mobile VI/EN. Signed installer HTTP download and clean installation still missing."
   },
   "R11": {
     "status": "CHUA_KIEM_CHUNG",
-    "evidence": [],
-    "reason": "No public artifact/tag/source/site cross-check yet"
+    "evidence": [
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+    ],
+    "reason": "Initial public source/website commit08a68a2/Pages manifest cross-check PASS. Compatibility fixes pushed and new build3 local binary verified; final signed artifact/tag/source cross-check pending."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",
     "evidence": [
-      "docs/RUNBOOK_PHAT_HANH.md"
+      "docs/RUNBOOK_PHAT_HANH.md",
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "Incident plan prepared; target permissions and actual site rollback/maintenance artifact pending"
+    "reason": "Owner/admin access, Pages workflow/HTTPS and reproducible payload manifest established; final signed-installer incident/rollback and clean target verification pending."
   }
 }

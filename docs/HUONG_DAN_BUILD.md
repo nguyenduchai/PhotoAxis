@@ -44,7 +44,7 @@ Override `PHOTOAXIS_BUILD_ROOT` nếu cần, chọn ổ local ngoài Documents/i
 open PhotoAxis.xcodeproj
 ```
 
-Chọn shared scheme **PhotoAxis**, destination **My Mac**, Run (Cmd+R), Test (Cmd+U). Xcode dùng DerivedData mặc định của Xcode ngoài repo; project không cần generator cài thêm. Debug/Release lấy cấu hình từ `Config/*.xcconfig`. Local bundle ID `local.photoaxis.development`, Team rỗng, identity `-`; tên ứng dụng PhotoAxis, version 1.0.0 (build 1).
+Chọn shared scheme **PhotoAxis**, destination **My Mac**, Run (Cmd+R), Test (Cmd+U). Xcode dùng DerivedData mặc định của Xcode ngoài repo; project không cần generator cài thêm. Debug/Release lấy cấu hình từ `Config/*.xcconfig`. Local bundle ID `local.photoaxis.development`, Team rỗng, identity `-`; tên ứng dụng PhotoAxis, version 1.0.0 (build 3).
 
 Khi thêm/xóa file Swift hoặc thay cấu trúc target:
 
@@ -76,7 +76,7 @@ Không mở nhiều instance có tài liệu thật bằng cách này ở các c
 
 ## CI và release
 
-`.github/workflows/ci.yml` khai báo macos-15 arm64/Xcode 16.4, Debug/test và Release local; checkout ghim SHA. CI chạy khi PR/push nhánh main hoặc codex/** hoặc gọi thủ công. Không có secret ký, thao tác publish, tạo tag hay tải binary công khai. Vì repository hiện chưa có remote nên chưa có run CI; local PASS không thay thế xác nhận CI.
+`.github/workflows/ci.yml` khai báo macos-15 arm64/Xcode 16.4, Debug/test và Release local; checkout ghim SHA. CI chạy khi PR/push nhánh main hoặc codex/** hoặc gọi thủ công. Không có secret ký, thao tác publish, tạo tag hay tải binary công khai. Repo public và CI đã hoạt động tại https://github.com/nguyenduchai/PhotoAxis/actions . CI Xcode16.4 được kiểm thực; xem báo cáo Pages03/10 về các lỗi và bản sửa. Local macOS27 fullsuite gần nhất144PASS/1FAIL Telex/3SKIP, không thay nghiệm thu IME/thiết bị.
 
 P13/P15 mới bổ sung danh tính, Developer ID/notarization và phát hành có kiểm soát; không dùng app ad-hoc phát triển để public.
 

@@ -8,6 +8,8 @@
 
 Repo public bắt đầu từ snapshot source build 3; lịch sử triển khai trước khi công khai giữ local trên nhánh `local/implementation-history`. Mã commit cũ trong bằng chứng là provenance lịch sử, không phải commit của nhánh public. Ảnh Adobe nội bộ không được đưa vào snapshot public.
 
+**Kiểm tra source khi công khai:** đã sửa tương thích UndoManager với Xcode16.4 và điều kiện API HDR SDK26. Local fullsuite mới144PASS/1FAILTelex/3SKIP; Release mới build/codesignPASS, CI đang kiểm lại. Đây vẫn là bản phát triển; xem báo cáo để phân biệt evidence lịch sử và binary cuối.
+
 **Phân phối hiện tại:** website và mã nguồn công khai; bản DMG build 3 đã xuất để kiểm thử local, chưa Developer ID/notarized. Nút tải bộ cài public còn tắt. [Báo cáo Pages và DMG](docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md).
 
 **Trạng thái:** ứng dụng native đã triển khai luồng chỉnh ảnh, Perspective Crop nhiều layer giữ editable, Type/Shape, điều chỉnh ảnh, Save/Open `.paxis`, Export PNG/JPEG và recovery. Version/build local **1.0.0 (3)**; baseline **1.0-draft.3**. P12–P15 đã có nghiệm thu/benchmark local, icon/archive/DMG local, website và công cụ phát hành; các chặng phát hành vẫn chưa đóng đầy đủ ở nghiệm thu native tổng thể/IME/thiết bị/ký/cài sạch. Target mã nguồn và website đã chốt GitHub/GitHub Pages. Xem [tiến độ thực tế](docs/TIEN_DO_TRIEN_KHAI.md), [ma trận 43 ca](docs/MA_TRAN_NGHIEM_THU.md) và [báo cáo P12](docs/bao-cao/P12.md).

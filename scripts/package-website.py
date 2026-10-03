@@ -25,13 +25,14 @@ for source in files:
     checksums[relative.as_posix()] = hashlib.sha256(target.read_bytes()).hexdigest()
 (destination / '.nojekyll').write_text('')
 (destination / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
-for name in ['.nojekyll', 'robots.txt']:
+for name in ['robots.txt']:
     checksums[name] = hashlib.sha256((destination / name).read_bytes()).hexdigest()
 manifest = {
     'schema': 1,
     'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
     'siteMode': 'public-development-preview',
     'installerPublicReady': False,
+    'controlFiles': {'.nojekyll': hashlib.sha256(b'').hexdigest()},
     'files': checksums,
 }
 (destination / 'deployment-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')

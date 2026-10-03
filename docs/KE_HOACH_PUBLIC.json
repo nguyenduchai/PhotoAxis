@@ -8,7 +8,7 @@
   "distributionRepository": "https://github.com/nguyenduchai/PhotoAxis",
   "distributionTargetCommit": null,
   "websiteURL": "https://nguyenduchai.github.io/PhotoAxis/",
-  "websiteCommit": null,
+  "websiteCommit": "08a68a2efe86b87f6a8b36916e97907b6bfc0ed3",
   "artifact": "PhotoAxis-1.0.0-arm64.dmg",
   "artifactSHA256": null,
   "distributionManifest": null,
@@ -17,6 +17,8 @@
   "publicReady": false,
   "status": "BLOCKED_EXTERNAL",
   "sourceLicense": "GPL-3.0-only",
-  "websiteStatus": "CONFIGURED_PENDING_DEPLOYMENT",
-  "supportURL": "https://github.com/nguyenduchai/PhotoAxis/issues"
+  "websiteStatus": "LIVE_SOURCE_PREVIEW",
+  "supportURL": "https://github.com/nguyenduchai/PhotoAxis/issues",
+  "websiteCommitScope": "First verified deployment; latest deployment commit is recorded at websiteDeploymentManifestURL.",
+  "websiteDeploymentManifestURL": "https://nguyenduchai.github.io/PhotoAxis/deployment-manifest.json"
 }

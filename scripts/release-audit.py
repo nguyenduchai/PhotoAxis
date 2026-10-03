@@ -123,7 +123,7 @@ def postcheck(config_path,plan_path,ledger_path):
     dmg=out/'PhotoAxis-1.0.0-arm64.dmg'
     dist.run(['codesign','--verify','--strict',dmg],log);dist.run(['xcrun','stapler','validate',dmg],log);dist.run(['spctl','--assess','--type','open','--context','context:primary-signature','--verbose=4',dmg],log)
     original=Path(plan['distributionManifest']).parent/'PhotoAxis.app'
-    app_tree=dist.inspect_dmg(dmg,original,log)
+    app_tree=dist.inspect_dmg(dmg,original,log,source_commit=plan['sourceCommit'])
     result={'status':'PUBLIC_HTTP_HASH_SIGNATURE_PAYLOAD_PASS_NATIVE_INSTALL_PENDING','website':site,'checksum':sums,'asset':asset,'appTreeSHA256':app_tree,'sourceCommit':plan['sourceCommit'],'distributionTargetCommit':plan['distributionTargetCommit'],'websiteCommit':plan['websiteCommit'],'nativeInstallFromDownloadedAssetVerified':False,'offlineWorkflowFromDownloadedAssetVerified':False,'scope':'downloaded public bytes verified; no app execution or quarantine change, browser installation/native workflow and remote tag/CI still required'}
     (out/'postcheck.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({'artifactDirectory':str(out),'result':result},indent=2))
 

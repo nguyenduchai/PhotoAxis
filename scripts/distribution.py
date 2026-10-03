@@ -79,11 +79,11 @@ def tree_hash(root):
         digest.update(name.encode()+b'\0'+payload+b'\0')
     return digest.hexdigest()
 
-def distribution_documents(local):
+def distribution_documents(local, source_commit=None):
     license_bytes=(ROOT/'LICENSE').read_bytes()
     if b'GNU GENERAL PUBLIC LICENSE' not in license_bytes or b'Version 3, 29 June 2007' not in license_bytes:
         raise GateError('GNU GPLv3 license text is required in the installer')
-    commit=run(['git','rev-parse','HEAD']).strip()
+    commit=source_commit or run(['git','rev-parse','HEAD']).strip()
     source=('PhotoAxis 1.0.0 (3)\nGNU GPL version 3 (GPL-3.0-only)\n'
             'Copyright (C) 2026 PhotoAxis contributors. No warranty.\n\n'
             'Corresponding source: https://github.com/nguyenduchai/PhotoAxis\n'
@@ -97,14 +97,14 @@ def distribution_documents(local):
     source=source.encode()
     return {'LICENSE.txt':license_bytes,'SOURCE.txt':source}
 
-def inspect_dmg(dmg, expected_app, log):
+def inspect_dmg(dmg, expected_app, log, source_commit=None):
     mount=Path(tempfile.mkdtemp(prefix='mount-',dir=dmg.parent)); attached=False
     try:
         data=run(['hdiutil','attach','-readonly','-nobrowse','-noautoopen','-mountpoint',mount,'-plist',dmg],log,stdout_only=True)
         attached=True
         info=plistlib.loads(data.encode())
         if not any(e.get('mount-point')==str(mount) for e in info.get('system-entities',[])): raise GateError('DMG did not mount at the isolated verification directory')
-        documents=distribution_documents('-LOCAL-UNSIGNED' in dmg.name)
+        documents=distribution_documents('-LOCAL-UNSIGNED' in dmg.name, source_commit)
         if sorted(p.name for p in mount.iterdir() if not p.name.startswith('.'))!=sorted(['Applications','PhotoAxis.app',*documents]): raise GateError('Unexpected DMG payload')
         for name,expected_bytes in documents.items():
             if (mount/name).is_symlink() or (mount/name).read_bytes()!=expected_bytes: raise GateError('DMG license/source notice differs: '+name)
