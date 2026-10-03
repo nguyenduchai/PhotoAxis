@@ -1,5 +1,16 @@
 # PhotoAxis — Tiến độ thực hiện
 
+
+## Brush, Clone Stamp và preview tự động — build 6, 03/10/2026
+
+**DONE local — Paint1:** Brush B và Clone Stamp S đã tích hợp vào thanh công cụ native và canvas chung. Cỡ/độ cứng/độ đậm liên tục; kéo hiện nét, thả chốt một Undo, Escape hủy. Clone lấy composite đã chốt bằng Option-click hoặc click + Option-Return, giữ mẫu cố định và hỗ trợ Aligned. Không thay byte ảnh tiếp nhận. Project có nét dùng schema4, đọc lại1–3; hồ sơ giữ mẫu clone dẫn xuất và kiểm SHA256/audit.
+
+- Scan tự cập nhật khi kéo/nhập, bỏ nút Xem trước. Crop/Perspective có inset tự cập nhật; Image Size/Canvas Size có candidate trực tiếp. Apply/Return chỉ chốt Undo, Cancel phục hồi model/viewport. Lỗi dải đen ngoài vùng nét khi xoay Scan đã sửa và có hồi quy alpha.
+- Full suite **184 ca: 180 PASS / 1 FAIL Telex đã biết / 3 SKIP benchmark**; **16 ca mới đều PASS**. Release/ad-hoc PASS; 486 khóa VI/EN/400 references, inventory/12 trang website/16 policy PASS. Native VI/EN lưu/mở schema4, vẽ/lấy mẫu, Undo/Redo và PNG1200×900; đối chiếu asset hash/original bytes/pixel màu độc lập PASS. Native Scan3°/Image Size/Perspective auto đã kiểm trong phạm vi ghi ở báo cáo.
+- [Báo cáo](bao-cao/PAINT_LIVE_2026-10-03.md), [hướng dẫn](HUONG_DAN_BRUSH_CLONE.md), [đặc tả mở rộng](DAC_TA_PAINT.md). CI/Pages và DMG build6 đang hoàn tất; sẽ ghi receipts khi hậu kiểm xong.
+- `releaseReady=false`; không nâng các gate IME/máy đích/hiệu năng/full quota/Developer ID/notary/cài sạch thành PASS. **19/43 là nghiệm thu build3 lịch sử**, chưa full A01–A43 build6. Pressure/tablet/eraser/healing/custom brush/masks và các tiện ích điều tra ngoài phạm vi hiện có chưa triển khai.
+
+
 ## Hợp nhất workspace — build 5, 03/10/2026
 
 **DONE local:** đã bỏ menu/cửa sổ Điều tra riêng, hợp nhất vào bảng **Chỉnh sửa / Nguồn / Phân tích / Đầu ra** của workspace PhotoAxis. Tham số nằm trong bảng bên phải; OCR/đo/vùng che/chú thích chọn trực tiếp trên canvas. Đối chiếu và rà soát hiển thị ngay trong cửa sổ chính. Tệp → Mở nhận `.paxcase`; danh mục và hồ sơ đồng bộ với tab. Draft đổi tab/model được hủy; không thay mất tab orphan chưa lưu; nguồn và durable audit giữ nguyên.

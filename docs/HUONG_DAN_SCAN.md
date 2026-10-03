@@ -10,13 +10,13 @@ Có từ bản phát triển PhotoAxis1.0.0(4). [Đặc tả/phạm vi](DAC_TA_S
 4. Chọn **Màu / Thang xám / Đen trắng**. Tăng làm trắng giấy để giảm bóng và ám màu; giảm nhiễu và độ nét dùng vừa phải. Với đen trắng, tăng ngưỡng giữ nhiều nét mực hơn; thay vùng nền cục bộ rồi kiểm chữ mảnh/chữ ký/con dấu.
 5. Chỉnh **Cong ngang / Cong dọc** bằng mắt để căn dòng cong của trang sách. Mô hình này sửa dạng bow theo hai trục, chưa tự sửa mọi trang sách3D/nếp gấp. Kiểm chú thích trên layer khác sau chỉnh cong.
 6. Chọn Original/A4dọc/A4ngang/Letter hoặc pixel tự nhập, PPI36–1200. Nội dung được fit giữ tỷ lệ và căn giữa; viền trống trong project là alpha. Khi Export PNG cần giấy trắng, tắt transparency; JPEG có nền trắng mặc định. Kích thước/PPI không bổ sung chi tiết đã thiếu từ ảnh chụp.
-7. Chọn **Xem trước** sau thay đổi; **Áp dụng** chỉ bật khi candidate hợp lệ. Một Apply tạo một bước Undo/Redo; Cancel bỏ bản nháp. Save `.paxis` giữ nguồn và tham số để mở/chỉnh tiếp trên build4 trở lên.
+7. Từ build6, kết quả **tự cập nhật** sau mỗi thay đổi, không cần nút Xem trước; **Áp dụng** chỉ bật khi candidate hợp lệ. Một Apply tạo một bước Undo/Redo; Cancel bỏ bản nháp. Save `.paxis` giữ nguồn và tham số để mở/chỉnh tiếp trên build4 trở lên.
 
 ## Nhiều trang
 
 Vào **Ảnh → Xử lý scan hàng loạt…** (English: **Image → Batch Document Scan…**), chọn1–50ảnh PNG/JPEG/HEIC/HEIF. Hộp Scan ghi tên **Trang mẫu**; preview chỉ minh họa trang này. Danh sách trang có nút lên/xuống để quyết định thứ tự PNG/project/PDF. Các checkbox phát hiện trang/căn thẳng chữ áp dụng riêng cho từng trang, không sao chép góc phát hiện từ trang mẫu.
 
-Đặt tham số chung, chọn Xem trước rồi **Chạy hàng loạt**, chọn thư mục cha. App tạo thư mục mới `PhotoAxis-Scan-UUID`; không ghi đè input. Controls khóa khi xử lý. Cancel được kiểm giữa các tác vụ framework; một thao tác Vision/GPU/Image I/O đang chạy có thể cần kết thúc trước khi nhận hủy.
+Đặt tham số chung, xem kết quả tự cập nhật rồi **Chạy hàng loạt**, chọn thư mục cha. App tạo thư mục mới `PhotoAxis-Scan-UUID`; không ghi đè input. Controls khóa khi xử lý. Cancel được kiểm giữa các tác vụ framework; một thao tác Vision/GPU/Image I/O đang chạy có thể cần kết thúc trước khi nhận hủy.
 
 ```text
 PhotoAxis-Scan-UUID/

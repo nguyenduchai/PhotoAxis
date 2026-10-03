@@ -256,6 +256,24 @@ actor ImagePipeline {
         guard let result=context.createCGImage(image,from:rect,format:.RGBA8,colorSpace:srgb) else{throw ImageImportError.unreadable}
         return result
     }
+    func cloneSnapshot(_ snapshot: ProjectSnapshot, name: String) throws -> EmbeddedImage {
+        try Task.checkCancellation()
+        let image = try renderDocument(model:snapshot.model,assets:snapshot.assets), buffer = NSMutableData()
+        guard let destination = CGImageDestinationCreateWithData(buffer,UTType.png.identifier as CFString,1,nil) else { throw ImageImportError.unreadable }
+        CGImageDestinationAddImage(destination,image,nil)
+        guard CGImageDestinationFinalize(destination) else { throw ImageImportError.unreadable }
+        try Task.checkCancellation()
+        let data = buffer as Data
+        return EmbeddedImage(descriptor:SourceDescriptor(id:Self.digest(data),size:snapshot.model.canvas),data:data,name:name,ppi:snapshot.model.ppi,convertedToSDR:false)
+    }
+    private func paintImage(_ paint: PaintContent, assets: [String: EmbeddedImage], scale: Double = 1) throws -> CIImage {
+        var images: [String: CGImage] = [:]
+        for id in paint.sourceIDs {
+            guard let asset = assets[id] else { throw DocumentError.missingSource }
+            images[id] = try normalizedImage(asset)
+        }
+        return try PaintRasterizer.image(paint,sources:images,samplingScale:scale)
+    }
     /// Shares the full layer graph; preview only changes the evaluation extent.
     func exportImage(snapshot: ProjectSnapshot, options: ExportOptions, previewEdge: Int? = nil) throws -> CGImage {
         try options.validate(); try Task.checkCancellation()
@@ -296,6 +314,7 @@ actor ImagePipeline {
                     local=CIImage(color:CIColor(red:shape.fill.red,green:shape.fill.green,blue:shape.fill.blue,alpha:shape.fill.alpha)).cropped(to:CGRect(x:0,y:0,width:shape.size.width,height:shape.size.height))
                 }else{local=CIImage(cgImage:try ContentRasterizer.shapeImage(shape))}
             case .text(let text): local=CIImage(cgImage:try ContentRasterizer.textImage(text))
+            case .paint(let paint): local = try paintImage(paint,assets:assets,scale:clipSamplingScale)
             }
             var retainedMask: CIImage?
             if !layer.clip.isEmpty {
@@ -358,6 +377,7 @@ actor ImagePipeline {
             guard let asset = assets[id] else { return nil }; ci = try AdjustmentFilters.apply(layer.adjustments,to:CIImage(cgImage:try normalizedImage(asset)))
         case .shape(let shape): ci=CIImage(cgImage:try ContentRasterizer.shapeImage(shape))
         case .text(let text): ci=CIImage(cgImage:try ContentRasterizer.textImage(text))
+        case .paint(let paint): ci = try paintImage(paint,assets:assets,scale:min(1,64/Double(max(paint.size.width,paint.size.height))))
         }
         if let settings = layer.scan, settings.enabled {
             if scanFilters == nil { scanFilters = try ScanFilters() }
@@ -387,6 +407,10 @@ actor ImagePipeline {
                 }
             case .shape(let shape):image=try ContentRasterizer.shapeImage(shape)
             case .text(let text):image=try ContentRasterizer.textImage(text)
+            case .paint(let paint):
+                let rect = CGRect(x:floor(local.x),y:Double(paint.size.height)-floor(local.y)-1,width:1,height:1)
+                guard let pixel = context.createCGImage(try paintImage(paint,assets:assets),from:rect,format:.RGBA8,colorSpace:srgb) else { continue }
+                image = pixel; samplePoint = Point2D(x:0,y:0)
             }
             do {
                 guard let pixel = image.cropping(to: CGRect(x: floor(samplePoint.x),y: floor(samplePoint.y),width: 1,height: 1)) else { continue }

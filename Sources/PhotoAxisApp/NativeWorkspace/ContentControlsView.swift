@@ -48,7 +48,7 @@ extension RGBAColor {
     var content:LayerContent? {
         guard let d=document else{return nil}
         if let draft=d.contentSession?.draft{return draft}
-        if let c=d.selectedLayer?.content {switch c {case .text,.shape:return c;case .image:break}}
+        if let c=d.selectedLayer?.content {switch c {case .text,.shape:return c;case .image,.paint:break}}
         switch d.activeTool {case .type:return .text(d.textDefaults);case .rectangle,.ellipse,.line:return .shape(d.shapeDefaults);default:return nil}
     }
     func refresh(_ document:PhotoDocument?) {
@@ -78,7 +78,7 @@ extension RGBAColor {
         case .shape(let shape):
             fillEnabled.state=shape.fill.alpha>0 ? .on:.off;fill.color=shape.fill.nsColor;stroke.color=shape.stroke.nsColor
             field(strokeWidth,shape.strokeWidth);field(width,Double(shape.size.width));field(height,Double(shape.size.height));message.stringValue=localization.text("shape.help")
-        case .image:break
+        case .image,.paint:break
         }
         if d.contentSession?.isValid==false{message.stringValue=localization.text("content.invalid")}
         message.textColor=(d.contentSession?.isValid==false) ? .systemRed:.secondaryLabelColor
@@ -118,10 +118,10 @@ extension RGBAColor {
                 s.size=try CanvasSize(width:Int(w),height:Int(h));s.fill=fillEnabled.state == .on ? RGBAColor(fill.color) ?? .black:.clear
                 if sender === fillEnabled,s.fill.alpha==0,fillEnabled.state == .on{s.fill=d.foreground}
                 s.stroke=RGBAColor(stroke.color) ?? .black;s.strokeWidth=try numeric(strokeWidth);c = .shape(s)
-            case .image:return
+            case .image,.paint:return
             }
             if d.contentSession==nil,let layer=d.selectedLayer {
-                switch layer.content{case .text,.shape:try d.startContentEdit(layer.id);case .image:break}
+                switch layer.content{case .text,.shape:try d.startContentEdit(layer.id);case .image,.paint:break}
             }
             if d.contentSession != nil{d.updateContent(c)}
             else if case .text(let t)=c{d.textDefaults=try ContentRasterizer.measured(t);d.changed?()}

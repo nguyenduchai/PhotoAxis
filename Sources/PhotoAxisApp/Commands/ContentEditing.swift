@@ -33,7 +33,7 @@ extension PhotoDocument {
         if contentSession?.layerID==id{return}
         guard resolveSession(),!isInteractionLocked,let layer=model.layer(id),!layer.isLocked else{throw DocumentError.lockedLayer}
         let command:DocumentCommand
-        switch layer.content {case .text:command = .editText;case .shape:command = .editShape;case .image:throw DocumentError.invalidValue}
+        switch layer.content {case .text:command = .editText;case .shape:command = .editShape;case .image,.paint:throw DocumentError.invalidValue}
         let old=selectedLayerID;selectedLayerID=id
         contentSession=ContentSession(layerID:id,previousSelection:old,command:command,candidate:model,draft:layer.content,usesProperties:!layer.transform.isAffine)
         changed?()

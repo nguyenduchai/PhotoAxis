@@ -23,11 +23,16 @@ final class PhotoDocument: NSDocument {
     var background:RGBAColor = .white
     var textDefaults=TextContent(text:"",fontName:"Helvetica",fontSize:48,color:.black)
     var shapeDefaults=ShapeContent(kind:.rectangle,size:try! CanvasSize(width:1,height:1),fill:.black)
+    var brushSettings = BrushSettings()
+    var paintMessageKey = "paint.help"
+    var paintSession: PaintSession?
+    struct GeometrySession { let original: PhotoDocumentModel; let viewport: ViewportState; let command: DocumentCommand; var candidate: PhotoDocumentModel? }
+    var geometrySession: GeometrySession?
     var contentSession:ContentSession?
     var cropSession: CropState?
     var perspectiveSession: PerspectiveState?
-    var hasSession: Bool { toolSession != nil || cropSession != nil || perspectiveSession != nil || contentSession != nil }
-    var sessionIsValid: Bool { contentSession.map { $0.isValid && !$0.isComposing } ?? perspectiveSession?.isValid ?? cropSession?.isValid ?? toolSession?.isValid ?? false }
+    var hasSession: Bool { geometrySession != nil || paintSession != nil || toolSession != nil || cropSession != nil || perspectiveSession != nil || contentSession != nil }
+    var sessionIsValid: Bool { geometrySession.map { $0.candidate != nil } ?? (paintSession != nil || (contentSession.map { $0.isValid && !$0.isComposing } ?? perspectiveSession?.isValid ?? cropSession?.isValid ?? toolSession?.isValid ?? false)) }
     private(set) var toolSession: EditingSession?
     struct EditingSession {
         let command: DocumentCommand
@@ -39,6 +44,8 @@ final class PhotoDocument: NSDocument {
     private var rebuildingUndo = false
     let localization: L10n
     var presentedModel: PhotoDocumentModel {
+        if let geometrySession { return geometrySession.candidate ?? geometrySession.original }
+        if let paintSession { return paintSession.candidate }
         if let state=perspectiveSession,state.showsPreview,let candidate=state.candidate {return candidate}
         return contentSession?.candidate ?? toolSession?.preview ?? model
     }
@@ -78,7 +85,7 @@ final class PhotoDocument: NSDocument {
         if model.investigation != nil {
             do {
                 guard let investigationSession else { throw InvestigationError.missingCase }
-                try investigationSession.record(command.rawValue, before: model, after: next)
+                try investigationSession.record(command.rawValue, before: model, after: next, assets: assets)
             } catch { auditFailed?(localization.text((error as? InvestigationError)?.localizationKey ?? "investigation.error.auditUnavailable")); return false }
         }
         history = newHistory
@@ -118,6 +125,11 @@ final class PhotoDocument: NSDocument {
     }
     func invalidateSession() { toolSession?.isValid = false; cropSession?.isValid = false; changed?() }
     func applySession() {
+        if let state = geometrySession {
+            guard let candidate = state.candidate else { return }
+            if commit(candidate,command:state.command) { geometrySession = nil; viewport.fit(model.canvas) }; changed?(); return
+        }
+        if paintSession != nil { finishPaint(); return }
         if let state=contentSession {
             guard state.isValid,!state.isComposing else{return}
             if case .text(let text)=state.draft {
@@ -141,7 +153,7 @@ final class PhotoDocument: NSDocument {
         guard let session = toolSession, session.isValid else { return }
         if commit(session.preview, command: session.command) { toolSession = nil }; changed?()
     }
-    func cancelSession() { guard hasSession else { return }; if let state=contentSession{selectedLayerID=state.previousSelection};contentSession=nil; if let crop=cropSession {activeTool=crop.previousTool}; if let state=perspectiveSession {activeTool=state.previousTool;if let editing=state.editingViewport {viewport=editing}}; perspectiveSession=nil; toolSession = nil; cropSession = nil; changed?() }
+    func cancelSession() { guard hasSession else { return }; if let state = geometrySession { viewport = state.viewport }; geometrySession = nil; if let state = paintSession { selectedLayerID = state.previousSelection }; paintSession = nil; reclaimAssets(); if let state=contentSession{selectedLayerID=state.previousSelection};contentSession=nil; if let crop=cropSession {activeTool=crop.previousTool}; if let state=perspectiveSession {activeTool=state.previousTool;if let editing=state.editingViewport {viewport=editing}}; perspectiveSession=nil; toolSession = nil; cropSession = nil; changed?() }
     /// Switching tabs never calls this. Commands that replace/edit the session target do.
     func resolveSession() -> Bool {
         guard hasSession else { return true }
@@ -164,6 +176,7 @@ final class PhotoDocument: NSDocument {
     private func validateSelection() {
         if selectedLayerID.flatMap({ model.layer($0) }) == nil { selectedLayerID = model.layers.last?.id }
     }
+    func retainPaintAsset(_ asset: EmbeddedImage) { assets[asset.descriptor.id] = asset }
     private func reclaimAssets() { let ids = history.retainedSourceIDs.union(model.sources.keys); assets = assets.filter { ids.contains($0.key) } }
     private func registerRestore(to index: Int, from: Int, command: DocumentCommand) {
         undoManager?.registerUndo(withTarget: self) { document in
@@ -176,7 +189,7 @@ final class PhotoDocument: NSDocument {
                         do {
                             guard let session = document.investigationSession else { throw InvestigationError.missingCase }
                             let next = index == 0 ? document.history.base : document.history.entries[index - 1].after
-                            try session.record(index < document.history.cursor ? "undo" : "redo", before: document.model, after: next)
+                            try session.record(index < document.history.cursor ? "undo" : "redo", before: document.model, after: next, assets: document.assets)
                         } catch {
                             document.auditFailed?(document.localization.text((error as? InvestigationError)?.localizationKey ?? "investigation.error.auditUnavailable"))
                             DispatchQueue.main.async { document.rebuildUndo() }; return

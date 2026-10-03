@@ -196,16 +196,56 @@ final class InvestigationCaseStore {
             let intake = try await projects.open(intakeURL)
             assets.merge(intake.assets) { existing, _ in existing }
         }
+        for descriptor in current.sources.values where assets[descriptor.id] == nil {
+            let folder = root.appendingPathComponent("derived")
+            try InvestigationFiles.directory(folder)
+            let url = folder.appendingPathComponent(descriptor.id)
+            let data = try await Task.detached { try InvestigationFiles.read(url,limit:BoundedZIP.assetLimit) }.value
+            guard InvestigationDigest.hash(data) == descriptor.id else { throw InvestigationError.integrity }
+            let asset = try await projects.pipeline.prepare(.clipboard(data,name:"Clone source snapshot"),budget:ImportBudget(remainingPixels:descriptor.size.pixelCount))
+            // Clipboard preparation can re-encode PNG. File preparation retains the hashed bytes.
+            guard asset.descriptor.size == descriptor.size else { throw InvestigationError.integrity }
+            assets[descriptor.id] = EmbeddedImage(descriptor:descriptor,data:data,name:"Clone source snapshot",ppi:current.ppi,convertedToSDR:false)
+        }
         guard Set(current.sources.keys).isSubset(of: Set(assets.keys)) else { throw InvestigationError.integrity }
         return ProjectSnapshot(model: current, assets: assets, stateID: UUID())
     }
-    func commitModel(_ id: UUID, operation: String, before: PhotoDocumentModel, after: PhotoDocumentModel) throws {
+    func commitModel(_ id: UUID, operation: String, before: PhotoDocumentModel, after: PhotoDocumentModel, assets: [String: EmbeddedImage] = [:]) throws {
         let previous = try ProjectSchema(before).encoded(), next = try ProjectSchema(after).encoded()
         guard try item(id).currentModelJSON == previous, before.investigation == after.investigation else { throw InvestigationError.integrity }
-        try mutate(operation, itemID: id, details: ["beforeModelSHA256": InvestigationDigest.hash(previous), "afterModelSHA256": InvestigationDigest.hash(next)], modelAfter: next) { value in
+        let added = Set(after.sources.keys).subtracting(before.sources.keys)
+        var published: [URL] = []
+        do {
+            if !added.isEmpty {
+                let folder = root.appendingPathComponent("derived")
+                if !FileManager.default.fileExists(atPath:folder.path) { try FileManager.default.createDirectory(at:folder,withIntermediateDirectories:false,attributes:[.posixPermissions:0o700]) }
+                try InvestigationFiles.directory(folder)
+                var stored = 0
+                for url in try FileManager.default.contentsOfDirectory(at:folder,includingPropertiesForKeys:nil) {
+                    guard ProjectSchema.isSourceID(url.lastPathComponent) else { throw InvestigationError.integrity }
+                    var info = stat(); guard lstat(url.path,&info) == 0, info.st_mode & S_IFMT == S_IFREG else { throw InvestigationError.integrity }
+                    stored += Int(info.st_size)
+                }
+                let originalBytes = value.items.reduce(Int64(0),{ $0+Int64($1.originalByteCount) }) + (value.analysis?.videos.reduce(Int64(0),{ $0+Int64($1.byteCount) }) ?? 0)
+                let capacity = min(Int64(BoundedZIP.archiveLimit),10_737_418_240-originalBytes)
+                guard Int64(stored) <= capacity else { throw InvestigationError.limit }
+                for sourceID in added.sorted() {
+                    let url = folder.appendingPathComponent(sourceID)
+                    if FileManager.default.fileExists(atPath:url.path) {
+                        guard try InvestigationFiles.hashFile(url,limit:BoundedZIP.assetLimit) == sourceID else { throw InvestigationError.integrity }
+                    } else {
+                        guard let asset = assets[sourceID], asset.descriptor == after.sources[sourceID], asset.data.count <= BoundedZIP.assetLimit,
+                              InvestigationDigest.hash(asset.data) == sourceID, Int64(stored)+Int64(asset.data.count) <= capacity else { throw InvestigationError.limit }
+                        try AtomicFile.write(to:url) { try $0.write(contentsOf:asset.data) }; published.append(url)
+                        try FileManager.default.setAttributes([.posixPermissions:0o444],ofItemAtPath:url.path); stored += asset.data.count
+                    }
+                }
+            }
+        try mutate(operation, itemID: id, details: ["beforeModelSHA256": InvestigationDigest.hash(previous), "afterModelSHA256": InvestigationDigest.hash(next),"addedSourcesJSON":String(decoding:try InvestigationDigest.encode(added.sorted()),as:UTF8.self)], modelAfter: next) { value in
             guard let i = value.items.firstIndex(where: { $0.id == id }) else { throw InvestigationError.invalidCase }
             value.items[i].currentModelJSON = next
         }
+        } catch { for url in published { try? FileManager.default.removeItem(at:url) }; throw error }
     }
     func updateIntake(_ id: UUID, caption: String, intake: EvidenceIntake) throws {
         let old = try item(id)
@@ -270,5 +310,5 @@ final class InvestigationSession {
     let store: InvestigationCaseStore
     let itemID: UUID
     init(store: InvestigationCaseStore, itemID: UUID) { self.store = store; self.itemID = itemID }
-    func record(_ operation: String, before: PhotoDocumentModel, after: PhotoDocumentModel) throws { try store.commitModel(itemID, operation: operation, before: before, after: after) }
+    func record(_ operation: String, before: PhotoDocumentModel, after: PhotoDocumentModel, assets: [String: EmbeddedImage] = [:]) throws { try store.commitModel(itemID, operation: operation, before: before, after: after, assets: assets) }
 }

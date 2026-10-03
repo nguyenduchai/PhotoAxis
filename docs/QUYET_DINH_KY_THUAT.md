@@ -177,3 +177,14 @@ Theo yêu cầu người dùng, build5 bỏ menu Điều tra và các NSWindowCo
 Các view nguồn/so sánh/overlay dùng chung vùng canvas. ROI được lấy qua rect fit của chính nguồn hiển thị, không lấy tọa độ màn hình hoặc zoom làm pixel/đơn vị thật. OCR dùng intake; đo/che dùng model hiện tại; magnifier dùng nguồn nhúng đầu tiên, giữ clip và không validate ROI theo canvas đã crop. Model/tab/page thay đổi hủy bản nháp; completion ảnh dùng request ID hoặc anchor để không gắn vào tab khác. Áp dụng chú thích là một command/Undo/audit; bản gốc và format case/project giữ nguyên. Tab orphan có cùng ID được từ chối, giữ model chưa lưu.
 
 Lượt native trên macOS27.0.1 ghi nhận worker OCR chờ lâu ở Vision/TextRecognition → dịch vụ ANE load model trong bản QA đầu. Build5 dùng `VNRequest.supportedComputeStageDevices` và gán `.cpu` cho từng stage hỗ trợ CPU, ghi computePolicy vào event OCR; stage không báo CPU vẫn do hệ thống chọn. Giữ Vision revision3, tiếng Việt runtime, vùng nguồn và kết quả/confirmation. Tham chiếu [Apple compute-device assignment](https://developer.apple.com/documentation/vision/visionrequest/setcomputedevice(_:for:)); API VNRequest/CoreML hiện tại được đối chiếu trong SDK với availability macOS14. Không xem đây là chứng minh mọi máy/OS hoặc full quota đã được nghiệm thu.
+
+
+## ADR-024 — Paint typed và preview tự động (03/10/2026)
+
+Yêu cầu mới cho phép Brush/Clone ngoài baseline. Nét giữ điểm/settings trong layer paint; mask8-bit linear-gray của từng ROI hợp theo lighten, alpha áp một lần cho stroke. Dab cách tối đa15%diameter (ít nhất1px); pointer sampling theo viewport, export đầy đủ. PNG clone lấy composite model đã chốt, sRGB/SHA256 riêng và offset top-left; mẫu cố định tránh phản hồi từ dấu vừa đóng. Không snapshot source mỗi tick. Schema4 khi có paint, reader1–4; metadata paint tính trong ngân sách Undo. Quota điểm/mẫu/ROI/source kiểm trước mutation và raster.
+
+Phiên pointer original/candidate, changed render trực tiếp; mouseUp một Undo, Escape/focus/tab/navigation hủy nét đang kéo. Token/model/canvas không gắn mẫu muộn cho tab/model khác. Mẫu case publish read-only `derived/SHA256` trước atomic audit/model; manifest lỗi dọn file mới. Case reopen kiểm hash/định dạng/kích thước mẫu chưa có trong archive saved. Intake không viết lại.
+
+Scan continuous sliders/text notifications debounce85ms, worker/generation/cancellation; bỏ Preview khỏi product. Perspective inset512px debounce45ms giữ original quad để sửa; Apply/Return chốt Undo. Adjustment continuous giữ nguyên. Debounce không chứng minh nativeFPS/full quota. [Phạm vi](DAC_TA_PAINT.md), [thao tác](HUONG_DAN_BRUSH_CLONE.md).
+
+Mask và ảnh nhìn thấy của nét được giới hạn tường minh vào ROI có nền trong suốt trước composite. Kiểm native đã phát hiện nền đen ngoài ROI khi Scan xoay 3°; sửa clip này và thêm oracle alpha độc lập tại −3°/+3°/+14° và Perspective. Crop thường, Image Size và Canvas Size cũng tự preview, Cancel khôi phục viewport, Apply ghi một Undo.

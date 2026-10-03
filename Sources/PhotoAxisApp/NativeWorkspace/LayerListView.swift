@@ -82,7 +82,7 @@ final class LayerSelectionList: NSScrollView, NSTableViewDataSource, NSTableView
         let layer = displayed[row], cell = LayerRowView(frame:NSRect(x:0,y:0,width:table.bounds.width,height:44))
         cell.name.stringValue = layer.name; cell.name.toolTip = layer.name
         let typeKey: String
-        switch layer.content { case .image: typeKey="layer.imageKind"; case .shape: typeKey="layer.shapeKind"; case .text: typeKey="layer.textKind" }
+        switch layer.content { case .paint: typeKey="layer.paintKind"; case .image: typeKey="layer.imageKind"; case .shape: typeKey="layer.shapeKind"; case .text: typeKey="layer.textKind" }
         cell.kind.stringValue = localization.text(typeKey)
         cell.thumbnail.image = thumbnails[layer.id]?.2
         cell.eye.image = NSImage(systemSymbolName:layer.isVisible ? "eye" : "eye.slash",accessibilityDescription:localization.text("layer.visible"))
@@ -114,7 +114,7 @@ final class LayerSelectionList: NSScrollView, NSTableViewDataSource, NSTableView
         guard let d=document,let layer=d.selectedLayer else{return}
         let point=table.convert(table.window?.mouseLocationOutsideOfEventStream ?? .zero,from:nil)
         // Double-click the name still renames; the thumbnail/body opens typed content.
-        if point.x<65 {switch layer.content{case .text,.shape:editContent?(layer.id);return;case .image:break}}
+        if point.x<65 {switch layer.content{case .text,.shape:editContent?(layer.id);return;case .image,.paint:break}}
         renameSelected()
     }
     @objc func renameSelected() {

@@ -49,3 +49,10 @@ Mở cùng ID từ hai URL trong một phiên hiện bị từ chối để khô
 Schema 2 giữ cấu trúc ZIP, nguồn nhúng và layer typed ở trên, thêm `investigation: {caseID, itemID}` là hai UUID. `itemID` phải trùng ID tài liệu; schema 2 bắt buộc reference, schema 1 không được chứa reference. Writer không nâng version cho tài liệu thông thường. Reader hiện tại nhận tối đa version 2; version lớn hơn bị từ chối. PhotoAxis bản cũ chỉ đọc schema 1 sẽ từ chối schema 2.
 
 Working archive được quản lý trong `.paxcase`, có checkpoint/hash riêng và nguồn tiếp nhận chuẩn hóa được giữ để phục hồi Delete → Save → Undo. Khi mở từ hồ sơ, current model trong manifest có thể mới hơn checkpoint; Undo trong phiên mới rỗng nhưng nhật ký hồ sơ vẫn đầy đủ. Khi mở `.paxis` điều tra riêng, app khóa sửa/Save/Export đến khi mở đúng hồ sơ. Save As/Place/Clipboard/Export thường bị chặn cho tài liệu gắn hồ sơ để giữ ngữ cảnh xử lý và rà soát chia sẻ. [Hợp đồng `.paxcase`](DINH_DANG_PAXCASE.md), [quy trình sử dụng](HUONG_DAN_DIEU_TRA.md).
+
+
+## Paint1 — schema4 (build6)
+
+Có typed paint layer thì formatVersion4, ưu tiên hơn Scan3/working2. Reader mới đọc1/2/3/4; project không paint giữ quy tắc version cũ. Paint có size và strokes: kind brush/clone, điểm top-left, diameter/hardness/opacity/colorRGBA, sourceID/sourceOffset chỉ cho clone. Mẫu clone PNG nhúng `assets/SHA256` cùng registry; sourceID phải tồn tại, payload không được gắn nhầm image/text/shape. Legacyversion1–3 chứa paint bị từ chối.
+
+Nguồn clone là composite sRGB8-bit cố định; không cần ảnh input ngoài project. Paint sourceIDs dùng chung registry/hash/quota và giữ trong Undo khi layer xóa. Các điểm/settings giữ editable, transform/clip layer áp như nội dung khác. Settings công cụ hiện hành/cursor/điểm lấy mẫu UI không lưu; chỉ offset và nguồn của từng nét lưu. Giới hạn4096điểm/65536mẫu/nét;512nét/32768điểm/layer;262144điểm/120MP ROI document. [Đặc tả](DAC_TA_PAINT.md).

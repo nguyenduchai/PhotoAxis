@@ -1,3 +1,10 @@
+# Paint1 và live preview — build6, 03/10/2026
+
+- Brush/Clone cơ bản có chuột, không pressure/tablet/eraser/healing/texture/mask. Mẫu clone đóng băng; muốn lấy thay đổi vừa sửa phải lấy mẫu lại. Lấy mẫu có thể chờ render/encode canvas đầy đủ.
+- Nét/ROI/source/History có quota; không chứng nhận full quota hoặc native60FPS/máy đích từ fixture nhỏ. Inset/Scan có coalescing và bỏ tác vụ cũ, không phải deadline FPS.
+- Project có paint là schema4, app trước build6 từ chối; nguồn/mẫu còn nhúng kể cả ngoài crop hoặc dưới nét phủ. Dùng output đã rà soát khi chia sẻ.
+- Local Telex event test vẫn FAIL, benchmark opt-in SKIP; warning MDB_MAP_FULL và QoS cũ tiếp tục qualification. Full nghiệm thu A01–A43, macOS14/non-Retina/M1-16GB/ảnh thực/DeveloperID/notary/cài sạch còn mở. 19/43 là build3 lịch sử.
+
 # Workspace tích hợp — build5, 03/10/2026
 
 Đã hợp nhất Điều tra vào Sources/Analysis/Output của workspace, bỏ menu/window/form modal riêng. Native VI/EN scoped OCR/đo/đối chiếu/PNG và9testmới PASS; full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP. [Báo cáo](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md).

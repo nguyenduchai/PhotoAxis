@@ -1,7 +1,7 @@
 import Foundation
 
 public enum DocumentCommand: String, Sendable {
-    case scan, annotation, adjustments, createText, editText, createShape, editShape, importImage, rename, duplicate, delete, reorder, visibility, lock, opacity, move, transform, align, crop, perspectiveCrop, imageSize, canvasSize, rotateCanvas, flipCanvas
+    case brush, cloneStamp, scan, annotation, adjustments, createText, editText, createShape, editShape, importImage, rename, duplicate, delete, reorder, visibility, lock, opacity, move, transform, align, crop, perspectiveCrop, imageSize, canvasSize, rotateCanvas, flipCanvas
     public var localizationKey: String { "command." + rawValue }
 }
 
@@ -61,7 +61,9 @@ public struct DocumentHistory: Sendable {
         512 + model.name.utf8.count + model.sources.count * 192 + model.layers.reduce(0) { total, layer in
             let textBytes: Int
             if case .text(let text) = layer.content { textBytes = text.text.utf8.count + text.fontName.utf8.count + text.fontFamily.utf8.count + text.fontStyle.utf8.count } else { textBytes = 0 }
-            return total + 512 + layer.name.utf8.count + textBytes + layer.clip.reduce(0) { $0 + $1.count * 16 }
+            let paintBytes: Int
+            if case .paint(let paint) = layer.content { paintBytes = paint.metadataBytes } else { paintBytes = 0 }
+            return total + 512 + layer.name.utf8.count + textBytes + paintBytes + layer.clip.reduce(0) { $0 + $1.count * 16 }
         }
     }
 }

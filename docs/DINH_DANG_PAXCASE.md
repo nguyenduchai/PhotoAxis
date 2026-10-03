@@ -45,3 +45,8 @@ Video nhận nằm ở `originals/<video-sha256>.<mov|mp4|m4v>` (giữ đuôi co
 OCR gắn itemID/originalSHA/sourceSHA/size/ROI; từng dòng có text/confidence/box, confirmations giữ text/operator/giờ máy riêng theo thứ tự append. Nhận dạng không làm đổi model/pixel. Phép đo lưu calibrationID/points/kind/result/operator/giờ máy; calibration giữ nguồn/model hash/canvas/reference2điểm/knownLength/unit/assumption. Validate tính lại kết quả, từ chối polygon tự cắt/không hữu hạn. Phép đo lịch sử còn giữ khi model đổi; store từ chối tạo phép đo mới bằng calibration không trùng model hiện tại.
 
 Export `photoaxis.investigation-analysis` schema1 có caseID/code/title/input ledger hash, currentItems(itemID/originalSHA/currentModelSHA) và toàn bộ analysis. JSON này chứa thông tin chưa che; cần kiểm người nhận/nội dung. Processing log và analysis export bổ sung cho nhau: event ghi operation/ID/hash/ROI; nội dung OCR/calibration đầy đủ được giữ trong manifest/analysis JSON được state digest ràng buộc. [Đặc tả chi tiết](DAC_TA_MO_RONG_DIEU_TRA.md).
+
+
+## Nguồn clone dẫn xuất (build6)
+
+Caseversion2 giữ nguyên, currentModelJSON có thể là `.paxis` schema4. File `derived/<SHA256>` giữ PNG mẫu clone read-only, xuất hiện trước event/model được commit. AddedSourcesJSON/beforeModelSHA256/afterModelSHA256 ghi trong event. Mở model chưa Save dùng nguồn intake/saved archive và bổ sung nguồn thiếu từ derived; kiểm SHA256/bytecount/Image I/O/size trước dùng. Ghi audit thất bại dọn asset mới, không sửa intake; Undo/Redo giữ mẫu để mở lại. Derivedbudget≤1GiB và nằm trong trần10GiB cùng originals/video; mỗiasset≤512MiB. Các file dẫn xuất không phải intake hoặc chứng minh nguồn gốc/thời gian. Chỉ chia sẻ qua output đã rà soát.

@@ -483,3 +483,25 @@
 "workspace.analysisReview" = "Đối chiếu kết quả trên ảnh";
 "workspace.panelPage" = "Bảng workspace";
 "workspace.regionPicker" = "Chọn vùng hoặc điểm trên ảnh";
+
+/* Live previews and native painting */
+"tool.brush" = "Cọ vẽ";
+"tool.cloneStamp" = "Đóng dấu sao chép";
+"paint.layer" = "Nét vẽ / sao chép";
+"layer.paintKind" = "Nét vẽ";
+"command.brush" = "Vẽ cọ";
+"command.cloneStamp" = "Đóng dấu sao chép";
+"paint.size" = "Cỡ";
+"paint.hardness" = "Cứng";
+"paint.opacity" = "Đậm";
+"paint.aligned" = "Liên tục";
+"paint.help" = "Kéo để vẽ trên layer nét riêng; thả chuột chốt một Undo. Escape hủy nét đang kéo. [ và ] đổi cỡ cọ.";
+"paint.cloneHelp" = "Option-nhấp để lấy mẫu ảnh đang thấy; kéo để đóng dấu. Cũng có thể nhấp vị trí nguồn rồi Option-Return. Mẫu được giữ cố định đến lần lấy mẫu tiếp theo.";
+"paint.needSource" = "Chọn điểm nguồn bằng Option-nhấp hoặc nhấp rồi Option-Return trước khi đóng dấu.";
+"paint.sampling" = "Đang lấy mẫu ảnh…";
+"paint.sourceReady" = "Đã lấy mẫu; kéo để đóng dấu.";
+"paint.pickError" = "Không lấy được mẫu hoặc ảnh đã đổi. Chọn lại điểm nguồn.";
+"paint.limit" = "Không thể thêm nét: kiểm tra khóa layer và giới hạn layer, điểm, mặt nạ hoặc nguồn ảnh. Undo/xóa bớt hoặc chọn layer mới.";
+"paint.unavailable" = "Layer nét bị khóa/ẩn, tài liệu đang bận hoặc đã đủ layer.";
+"preview.live" = "Kết quả cập nhật tự động";
+"scan.live" = "Tự cập nhật khi đổi thông số. Áp dụng chỉ chốt kết quả; Hủy giữ nguyên bản trước.";

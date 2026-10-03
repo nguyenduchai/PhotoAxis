@@ -50,3 +50,5 @@ open PhotoAxis.xcodeproj
 Đặc tả đã được duyệt; kiểm thử và mục tiêu hiệu năng vẫn cần thực hiện, đo và lưu bằng chứng. Bộ prompt là kế hoạch thực thi, không phải báo cáo đã hoàn thành ứng dụng.
 
 Đầu ra chuẩn bị phát hành: [P13 ký/DMG](docs/bao-cao/P13.md), [P14 website/docs](docs/bao-cao/P14.md), [P15 preflight](docs/bao-cao/P15.md), [website preview](website/README.md), [kế hoạch public](docs/KE_HOACH_PUBLIC.md). Không có bản public signed/notarized; localDMG không thay bản tải công khai.
+
+Brush/Clone Stamp và live preview build6: [hướng dẫn](docs/HUONG_DAN_BRUSH_CLONE.md), [phạm vi](docs/DAC_TA_PAINT.md). Project paint dùng schema4; bản cũ từ chối. Bộ cài stable vẫn đang nghiệm thu/ký/notarize.

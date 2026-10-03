@@ -46,6 +46,7 @@ public extension PhotoDocumentModel {
         case .text(let text):try text.validate()
         case .shape(let shape):try shape.validate()
         case .image(let id):guard sources[id] != nil else{throw DocumentError.missingSource}
+        case .paint(let paint): try paint.validate(); guard paint.sourceIDs.isSubset(of:Set(sources.keys)) else { throw DocumentError.missingSource }
         }
     }
 }

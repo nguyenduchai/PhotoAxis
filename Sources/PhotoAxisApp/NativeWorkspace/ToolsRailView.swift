@@ -16,7 +16,7 @@ final class ToolsRailView: SurfaceView {
     init(localization: L10n) {
         self.localization = localization
         columnsButton = WorkspaceButton(title: localization.text("tools.toggleColumns"), symbol: "chevron.right.2")
-        let tools: [ToolKind] = [.move, .crop, .eyedropper, .type, .rectangle, .hand, .zoom]
+        let tools: [ToolKind] = [.move, .crop, .brush, .cloneStamp, .eyedropper, .type, .rectangle, .hand, .zoom]
         slots = tools.map { tool in
             let group: [ToolKind] = tool == .crop ? [.crop, .perspectiveCrop] : tool == .rectangle ? [.rectangle, .ellipse, .line] : []
             let label = localization.text(tool.key) + " (" + tool.shortcut + ")"
@@ -75,7 +75,7 @@ final class ToolsRailView: SurfaceView {
                 button.toolTip=localization.text(selected == nil ? "feature.noDocument":"shape.help")
             }
             if !button.isEnabled { button.toolTip = localization.text(selected == nil ? "feature.noDocument" : "feature.unavailable") }
-            guard let raw = button.identifier?.rawValue.replacingOccurrences(of: "tool.", with: ""), let tool = ToolKind(rawValue: raw), tool == .hand || tool == .zoom || tool == .move || tool == .type || tool == .eyedropper else { continue }
+            guard let raw = button.identifier?.rawValue.replacingOccurrences(of: "tool.", with: ""), let tool = ToolKind(rawValue: raw), tool == .hand || tool == .zoom || tool == .move || tool == .type || tool == .eyedropper || tool == .brush || tool == .cloneStamp else { continue }
             button.isEnabled = selected != nil; button.state = selected == tool ? .on : .off
             button.target = self; button.action = #selector(activateNavigationTool(_:))
             if selected != nil { button.toolTip = button.accessibilityLabel() }

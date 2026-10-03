@@ -12,6 +12,7 @@ final class DocumentSizeController:NSWindowController,NSTextFieldDelegate {
     private let photoDocument:PhotoDocument,localization:L10n,isCanvas:Bool
     private let ratio:Double
     init(document photoDocument:PhotoDocument,canvas:Bool,localization:L10n) {
+        photoDocument.geometrySession = PhotoDocument.GeometrySession(original:photoDocument.model,viewport:photoDocument.viewport,command:canvas ? .canvasSize:.imageSize,candidate:photoDocument.model)
         self.photoDocument=photoDocument;self.localization=localization;isCanvas=canvas;ratio=Double(photoDocument.model.canvas.width)/Double(photoDocument.model.canvas.height)
         let panel=NSPanel(contentRect:NSRect(x:0,y:0,width:460,height:365),styleMask:[.titled],backing:.buffered,defer:false)
         panel.title=localization.text(canvas ? "image.canvasSize":"image.size");panel.isReleasedWhenClosed=false
@@ -35,9 +36,10 @@ final class DocumentSizeController:NSWindowController,NSTextFieldDelegate {
         notice.font = .systemFont(ofSize:11);notice.frame=NSRect(x:20,y:239,width:420,height:65);notice.stringValue=localization.text(canvas ? "image.canvasHelp":"image.sizeHelp");root.addSubview(notice)
         let cancel=NSButton(title:localization.text("action.cancel"),target:self,action:#selector(cancel));cancel.keyEquivalent="\u{1b}";cancel.bezelStyle = .rounded;cancel.frame=NSRect(x:216,y:320,width:105,height:30);root.addSubview(cancel)
         apply.title=localization.text("action.apply");apply.target=self;apply.action=#selector(confirm);apply.keyEquivalent="\r";apply.bezelStyle = .rounded;apply.frame=NSRect(x:325,y:320,width:115,height:30);root.addSubview(apply)
+        validate()
     }
     required init?(coder:NSCoder){fatalError("Use init(photoDocument:canvas:localization:)")}
-    @objc private func selectAnchor(_ sender:NSButton){anchor=sender.tag;for button in anchors{button.state=button.tag==anchor ? .on:.off}}
+    @objc private func selectAnchor(_ sender:NSButton){anchor=sender.tag;for button in anchors{button.state=button.tag==anchor ? .on:.off};validate()}
     func validated() throws -> (CanvasSize,Double) {
         guard let w=Int(widthField.stringValue),let h=Int(heightField.stringValue) else{throw DocumentError.invalidValue}
         let size=try CanvasSize(width:w,height:h)
@@ -51,15 +53,25 @@ final class DocumentSizeController:NSWindowController,NSTextFieldDelegate {
         }
         validate()
     }
-    func validate(){do{_=try validated();apply.isEnabled=true;notice.textColor = .secondaryLabelColor;notice.stringValue=localization.text(isCanvas ? "image.canvasHelp":"image.sizeHelp")}catch{apply.isEnabled=false;notice.textColor = .systemRed;notice.stringValue=localization.text("document.invalidSize")}}
-    @objc func confirm() {
+    func validate() {
+        guard var state = photoDocument.geometrySession else { apply.isEnabled = false; return }
         do {
-            let (size,ppi)=try validated()
-            try photoDocument.perform(isCanvas ? .canvasSize:.imageSize) { model in
-                if isCanvas {try model.canvasSize(size,anchorX:anchor%3,anchorY:anchor/3)} else{try model.imageSize(size,ppi:ppi)}
-            }
-            photoDocument.viewport.fit(photoDocument.model.canvas);photoDocument.changed?();cancel()
-        } catch{validate();notice.textColor = .systemRed;notice.stringValue=localization.text(error as? DocumentError == .invalidPPI ? "document.invalidPPI":"document.invalidSize")}
+            let (size,ppi) = try validated(); var candidate = state.original
+            if isCanvas { try candidate.canvasSize(size,anchorX:anchor%3,anchorY:anchor/3) } else { try candidate.imageSize(size,ppi:ppi) }
+            state.candidate = candidate; photoDocument.geometrySession = state; photoDocument.viewport.fit(candidate.canvas)
+            apply.isEnabled = true; notice.textColor = .secondaryLabelColor; notice.stringValue = localization.text(isCanvas ? "image.canvasHelp":"image.sizeHelp")
+        } catch {
+            state.candidate = nil; photoDocument.geometrySession = state; photoDocument.viewport = state.viewport
+            apply.isEnabled = false; notice.textColor = .systemRed; notice.stringValue = localization.text("document.invalidSize")
+        }
+        photoDocument.changed?()
     }
-    @objc private func cancel(){if let window,let parent=window.sheetParent {parent.endSheet(window)}}
+    @objc func confirm() {
+        validate(); guard apply.isEnabled else { return }
+        photoDocument.applySession()
+        guard photoDocument.geometrySession == nil else { notice.textColor = .systemRed; notice.stringValue = localization.text("investigation.error.auditUnavailable"); return }
+        end()
+    }
+    @objc func cancel() { photoDocument.cancelSession(); end() }
+    private func end() { if let window,let parent=window.sheetParent { parent.endSheet(window) } }
 }

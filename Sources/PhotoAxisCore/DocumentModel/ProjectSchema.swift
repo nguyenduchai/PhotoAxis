@@ -45,6 +45,7 @@ public struct ProjectSchema: Codable, Sendable {
         public var sourceID: String?
         public var text: TextContent?
         public var shape: ShapeContent?
+        public var paint: PaintContent?
         public var imageAdjustments: ImageAdjustments?
         public var scan: ScanSettings?
         public var transform: [Double]
@@ -59,6 +60,7 @@ public struct ProjectSchema: Codable, Sendable {
             case .image(let source): type = "image"; sourceID = source; imageAdjustments = layer.adjustments; scan = layer.scan
             case .text(let content): type = "text"; text = content
             case .shape(let content): type = "shape"; shape = content
+            case .paint(let content): type = "paint"; paint = content
             }
         }
         func model() throws -> PhotoLayer {
@@ -81,14 +83,17 @@ public struct ProjectSchema: Codable, Sendable {
             let content: LayerContent
             switch type {
             case "image":
-                guard let sourceID, let imageAdjustments, text == nil, shape == nil else { throw ProjectError.invalidDocument }
+                guard let sourceID, let imageAdjustments, text == nil, shape == nil, paint == nil else { throw ProjectError.invalidDocument }
                 try imageAdjustments.validate(); try scan?.validate(); content = .image(sourceID: sourceID)
             case "text":
-                guard let text, sourceID == nil, shape == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
+                guard let text, sourceID == nil, shape == nil, paint == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
                 try text.validate(); content = .text(text)
             case "shape":
-                guard let shape, sourceID == nil, text == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
+                guard let shape, sourceID == nil, text == nil, paint == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
                 try shape.validate(); content = .shape(shape)
+            case "paint":
+                guard let paint, sourceID == nil, text == nil, shape == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
+                try paint.validate(); content = .paint(paint)
             default: throw ProjectError.invalidDocument
             }
             var result = PhotoLayer(id: id, name: name, content: content, transform: try ProjectiveTransform(transform))
@@ -99,15 +104,16 @@ public struct ProjectSchema: Codable, Sendable {
 
     public init(_ model: PhotoDocumentModel) {
         id = model.id; name = model.name; canvas = model.canvas; ppi = model.ppi; revision = model.revision
-        formatVersion = model.layers.contains(where: { $0.scan != nil }) ? 3 : (model.investigation == nil ? 1 : 2)
+        formatVersion = model.layers.contains(where: { if case .paint = $0.content { return true }; return false }) ? 4 : model.layers.contains(where: { $0.scan != nil }) ? 3 : (model.investigation == nil ? 1 : 2)
         sources = model.sources.values.sorted { $0.id < $1.id }; layers = model.layers.map(Layer.init); investigation = model.investigation
     }
     public func model() throws -> PhotoDocumentModel {
         guard formatIdentifier == "photoaxis.document" else { throw ProjectError.invalidDocument }
-        guard formatVersion <= 3 else { throw ProjectError.newerVersion(formatVersion) }
-        guard (1...3).contains(formatVersion) else { throw ProjectError.unsupportedVersion(formatVersion) }
-        guard formatVersion == 3 || ((formatVersion == 2) == (investigation != nil)),
-              formatVersion == 3 || layers.allSatisfy({ $0.scan == nil }) else { throw ProjectError.invalidDocument }
+        guard formatVersion <= 4 else { throw ProjectError.newerVersion(formatVersion) }
+        guard (1...4).contains(formatVersion) else { throw ProjectError.unsupportedVersion(formatVersion) }
+        guard formatVersion >= 3 || ((formatVersion == 2) == (investigation != nil)),
+              formatVersion >= 3 || layers.allSatisfy({ $0.scan == nil }),
+              formatVersion == 4 || layers.allSatisfy({ $0.paint == nil }) else { throw ProjectError.invalidDocument }
         if let investigation { guard investigation.itemID == id else { throw ProjectError.invalidDocument } }
         guard name.utf8.count <= 4096, layers.count <= DocumentLimits.maximumLayers,
               sources.count <= DocumentLimits.maximumLayers, Set(layers.map(\.id)).count == layers.count,
@@ -121,13 +127,15 @@ public struct ProjectSchema: Codable, Sendable {
         result.layers = try layers.map { try $0.model() }; result.revision = revision
         var used = Set<String>()
         for layer in result.layers {
-            if case .image(let id) = layer.content {
-                guard result.sources[id] != nil else { throw ProjectError.assetMismatch }; used.insert(id)
-            }
+            guard layer.content.sourceIDs.isSubset(of:Set(result.sources.keys)) else { throw ProjectError.assetMismatch }
+            used.formUnion(layer.content.sourceIDs)
             _ = try LayerGeometry.support(size: result.localSize(of: layer), transform: layer.transform, clips: layer.clip)
             _ = try LayerGeometry.bounds(size: result.localSize(of: layer), transform: layer.transform, clips: layer.clip)
         }
         guard used == Set(result.sources.keys) else { throw ProjectError.assetMismatch }
+        let paints = result.layers.compactMap { layer -> PaintContent? in if case .paint(let paint) = layer.content { return paint }; return nil }
+        guard paints.reduce(0,{ $0+$1.workPixels }) <= DocumentLimits.maximumUniqueSourcePixels,
+              paints.reduce(0,{ $0+$1.strokes.reduce(0,{ $0+$1.points.count }) }) <= 262_144 else { throw ProjectError.resourceLimit }
         return result
     }
     public static func isSourceID(_ id: String) -> Bool {
@@ -170,8 +178,8 @@ public struct ProjectSchema: Codable, Sendable {
         struct Header: Decodable { let formatIdentifier: String; let formatVersion: Int }
         let header = try JSONDecoder().decode(Header.self,from:data)
         guard header.formatIdentifier == "photoaxis.document" else { throw ProjectError.invalidDocument }
-        guard header.formatVersion <= 3 else { throw ProjectError.newerVersion(header.formatVersion) }
-        guard (1...3).contains(header.formatVersion) else { throw ProjectError.unsupportedVersion(header.formatVersion) }
+        guard header.formatVersion <= 4 else { throw ProjectError.newerVersion(header.formatVersion) }
+        guard (1...4).contains(header.formatVersion) else { throw ProjectError.unsupportedVersion(header.formatVersion) }
         let result = try JSONDecoder().decode(Self.self, from: data); _ = try result.model(); return result
     }
 }

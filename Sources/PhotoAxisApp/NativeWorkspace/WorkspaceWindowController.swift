@@ -118,6 +118,10 @@ final class WorkspaceView: SurfaceView {
         zoomLabel.target = self; zoomLabel.action = #selector(changeZoom)
         cancelImportButton.target = self; cancelImportButton.action = #selector(cancelImport)
         cancelImportButton.bezelStyle = .rounded; cancelImportButton.isHidden = true
+        optionsBar.paintSettingsChanged = { [weak self] in
+            if let self, let p = canvas.paintCursor.point { canvas.painting.cursor(p) }
+        }
+        optionsBar.paintAlignmentChanged = { [weak self] in self?.canvas.painting.resetAlignment() }
         optionsBar.focusCanvas = { [weak self] in self?.window?.makeFirstResponder(self?.canvas) }
         optionsBar.fitCanvas = { [weak canvas] in canvas?.fit() }
         optionsBar.actualPixels = { [weak canvas] in canvas?.zoom(to: 1) }

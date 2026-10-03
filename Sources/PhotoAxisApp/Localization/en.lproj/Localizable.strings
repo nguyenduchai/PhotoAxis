@@ -483,3 +483,25 @@
 "workspace.analysisReview" = "Review results on image";
 "workspace.panelPage" = "Workspace panel";
 "workspace.regionPicker" = "Select regions or points on image";
+
+/* Live previews and native painting */
+"tool.brush" = "Brush";
+"tool.cloneStamp" = "Clone Stamp";
+"paint.layer" = "Paint / clone strokes";
+"layer.paintKind" = "Paint";
+"command.brush" = "Brush stroke";
+"command.cloneStamp" = "Clone stamp";
+"paint.size" = "Size";
+"paint.hardness" = "Hard";
+"paint.opacity" = "Opacity";
+"paint.aligned" = "Aligned";
+"paint.help" = "Drag to paint on a separate stroke layer; release for one Undo. Escape cancels the active stroke. [ and ] resize the brush.";
+"paint.cloneHelp" = "Option-click to sample the visible composite, then drag to stamp. Alternatively click a source position and press Option-Return. Sampling stays frozen until the next source pick.";
+"paint.needSource" = "Pick a source using Option-click or click then Option-Return before stamping.";
+"paint.sampling" = "Sampling the image…";
+"paint.sourceReady" = "Source ready; drag to stamp.";
+"paint.pickError" = "Sampling failed or the image changed. Pick the source again.";
+"paint.limit" = "Cannot add the stroke: check layer locks and limits for layers, points, masks or source pixels. Undo/remove content or choose another layer.";
+"paint.unavailable" = "The stroke layer is locked/hidden, the document is busy, or the layer limit is reached.";
+"preview.live" = "Live result preview";
+"scan.live" = "Updates automatically as settings change. Apply commits the result; Cancel restores the original.";

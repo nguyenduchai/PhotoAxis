@@ -1,10 +1,12 @@
 import AppKit
 
 enum ToolKind: String, CaseIterable {
-    case move, crop, perspectiveCrop, eyedropper, type, rectangle, ellipse, line, hand, zoom
+    case brush, cloneStamp, move, crop, perspectiveCrop, eyedropper, type, rectangle, ellipse, line, hand, zoom
     var key: String { "tool." + rawValue }
     var shortcut: String {
         switch self {
+        case .brush: "B"
+        case .cloneStamp: "S"
         case .move: "V"
         case .crop: "C"
         case .perspectiveCrop: "Shift+C"
@@ -28,6 +30,12 @@ enum ToolKind: String, CaseIterable {
                 p.move(to: first); for point in points.dropFirst() { p.line(to: point) }
             }
             switch kind {
+            case .brush:
+                segment([.init(x:7,y:6),.init(x:17,y:18),.init(x:20,y:15),.init(x:10,y:4)])
+                p.appendOval(in:.init(x:3,y:2,width:7,height:5))
+            case .cloneStamp:
+                p.appendOval(in:.init(x:8,y:13,width:6,height:7))
+                segment([.init(x:9,y:13),.init(x:9,y:9),.init(x:5,y:7),.init(x:5,y:4),.init(x:18,y:4),.init(x:18,y:7),.init(x:13,y:9),.init(x:13,y:13)])
             case .move:
                 segment([.init(x: 11,y: 3), .init(x: 11,y: 19)])
                 segment([.init(x: 3,y: 11), .init(x: 19,y: 11)])

@@ -1,3 +1,11 @@
+# PhotoAxis1.0.0(6) — Paint1 và xem trực tiếp
+
+- Brush B: nét theo màu tiền cảnh, cỡ/hardness/opacity, nội suy, layer paint editable; mouseUp một Undo, Escape hủy nét.
+- Clone Stamp S: Option-click hoặc click→Option-Return lấy composite cố định; aligned/unaligned, nguồn sRGB/SHA256 nhúng trong schema4.
+- Scan không cần nút Preview; Crop/Perspective tự hiện inset; Image Size/Canvas Size tự preview khi nhập/đổi neo. Apply chốt Undo; Cancel giữ original.
+- Save/Open/Export/recovery và case audit tiếp nhận paint; derived case giữ mẫu chưa Save, không ghi đè intake.
+- Development build local, chưa stable public/DeveloperID/notary; không pressure/tablet/eraser/healing/texture/mask. [Hướng dẫn](HUONG_DAN_BRUSH_CLONE.md), [phạm vi](DAC_TA_PAINT.md).
+
 # PhotoAxis 1.0.0 (5) — workspace tích hợp, bản phát triển
 
 Đã hợp nhất chức năng điều tra vào workspace chỉnh sửa: Nguồn/Phân tích/Đầu ra trong bảng bên phải, mở hồ sơ qua Tệp → Mở, ảnh thành tab và danh mục đồng bộ hồ sơ. Bỏ menu và cửa sổ Điều tra riêng; tham số inline, chọn ROI/điểm trực tiếp trên canvas, đối chiếu/OCR review trong cùng cửa sổ. Draft đổi tab/model hủy an toàn; bảo vệ tab orphan chưa lưu. Full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP,9ca mớiPASS; Release/native VI/EN scoped và16policyPASS. [Hướng dẫn](HUONG_DAN_DIEU_TRA.md), [báo cáo/bằng chứng](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md).
@@ -40,7 +48,7 @@ PhotoAxis là trình chỉnh ảnh native trên macOS, có workspace Tiếng Vi�
 
 Save `.paxis` schema1 giữ nguồn nguyên byte và layer/ma trận/clip/thông số trong một ZIP tự chứa. Export PNG/JPEG tạo ảnh phẳng sRGB8-bit với alpha hoặc matte, quality/kích thước/PPI và loại metadata GPS nguồn; export không xóa dirty marker. Recovery lưu thay đổi đã chốt; phiên chưa Apply không được hứa phục hồi. History không lưu qua lần mở lại; font không nhúng và thiếu font có thể thay hình thức chữ.
 
-Mục tiêu Apple Silicon/macOS14+, tối đa8000px/cạnh,40MP canvas/mỗi nguồn,50layer,120MP nguồn duy nhất/tài liệu,5tab,100 bước/128MiB History. App offline, không tài khoản/cloud/telemetry/AI/subscription/updater. Không PSD/RAW/Brush/Mask/Intel/App Store.
+Mục tiêu Apple Silicon/macOS14+, tối đa8000px/cạnh,40MP canvas/mỗi nguồn,50layer,120MP nguồn duy nhất/tài liệu,5tab,100 bước/128MiB History. App offline, không tài khoản/cloud/telemetry/AI/subscription/updater. Không PSD/RAW/Mask/Intel/App Store.
 
 **Trạng thái chuẩn bị:** chưa có bộ cài public. Còn nghiệm thu Telex/VNI thực, native shortcut/bố cục/tác vụ nền tổng thể, macOS14/non-Retina/máy chuẩn, warning Metal/QoS, ký/notarize/cài sạch/offline. Publisher/support/license/giá/targetrepo/website chưa chốt. Bản ghi chú này phải được đối chiếu với manifest và phạm vi nghiệm thu cuối trước publish; không xóa các hạn chế khi chưa xử lý hoặc được chấp thuận rõ.
 
@@ -50,6 +58,6 @@ PhotoAxis is a native macOS image editor with Vietnamese/English UI, typed image
 
 Save `.paxis` schema1 preserves original embedded sources and layer/matrix/clip/parameters in one self-contained ZIP. Export creates 8-bit sRGB PNG/JPEG with alpha or matte, quality/size/PPI and fresh metadata without original GPS. Export leaves the project dirty marker intact. Recovery stores committed edits, not uncommitted tool drafts. History is session-only; fonts are not embedded and fallback can alter text appearance.
 
-Target Apple Silicon/macOS14+,8000px/edge,40MP canvas/source,50layers,120MP unique sources/document,5tabs,100steps/128MiB History. Offline, without accounts/cloud/telemetry/AI/subscription/automatic updater. No PSD/RAW/Brush/Mask/Intel/App Store.
+Target Apple Silicon/macOS14+,8000px/edge,40MP canvas/source,50layers,120MP unique sources/document,5tabs,100steps/128MiB History. Offline, without accounts/cloud/telemetry/AI/subscription/automatic updater. No PSD/RAW/Mask/Intel/App Store.
 
 **Preparation status:** no public installer. Real Telex/VNI, remaining native shortcut/layout/background-task checks, macOS14/non-Retina/reference hardware, Metal/QoS evaluation and signed/notarized clean/offline installation remain pending. Publisher/support/license/pricing/repository/website targets are unconfirmed. Review against the final manifest and accepted scope before publication; do not erase unresolved limitations.

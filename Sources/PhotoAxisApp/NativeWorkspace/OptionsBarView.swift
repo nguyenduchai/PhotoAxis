@@ -6,6 +6,8 @@ final class OptionsBarView: SurfaceView {
     var fitCanvas: (() -> Void)?
     var actualPixels: (() -> Void)?
     var focusCanvas: (() -> Void)?
+    var paintSettingsChanged: (() -> Void)?
+    var paintAlignmentChanged: (() -> Void)?
     let applyButton: NSButton
     let cancelButton: NSButton
     let overflowButton: ToolGroupButton
@@ -15,6 +17,7 @@ final class OptionsBarView: SurfaceView {
     private(set) var usesOverflow = false
     private weak var document: PhotoDocument?
     private var mode = ""
+    private var paintControls: PaintControlsView?
     private var cropControls:CropOptionsView?
     private var perspectiveControls:PerspectiveOptionsView?
     private var transformControls: TransformOptionsView?
@@ -46,7 +49,7 @@ final class OptionsBarView: SurfaceView {
     required init?(coder: NSCoder) { fatalError("Use init(localization:)") }
 
     func configure(for tool: ToolKind) {
-        mode = ""; transformControls = nil;cropControls=nil;perspectiveControls=nil
+        mode = ""; paintControls = nil; transformControls = nil;cropControls=nil;perspectiveControls=nil
         toolLabel.stringValue = localization.text(tool.key)
         options.arrangedSubviews.forEach { options.removeArrangedSubview($0); $0.removeFromSuperview() }
         if tool == .hand || tool == .zoom {
@@ -57,6 +60,10 @@ final class OptionsBarView: SurfaceView {
             }
             options.addArrangedSubview(WorkspaceStyle.label(localization.text(tool == .hand ? "document.handHelp" : "document.zoomHelp"), size: 11, secondary: true))
             overflowButton.flyout = nil; needsLayout = true; return
+        }
+        if tool == .brush || tool == .cloneStamp {
+            let controls = PaintControlsView(localization:localization); controls.settingsChanged = { [weak self] in self?.paintSettingsChanged?() }; controls.alignmentChanged = { [weak self] in self?.paintAlignmentChanged?() }; paintControls = controls; options.addArrangedSubview(controls)
+            let menu = NSMenu(); let item = menu.addItem(withTitle:localization.text("options.more"),action:#selector(showPaintPopover),keyEquivalent:""); item.target = self; overflowButton.flyout = menu; needsLayout = true; return
         }
         if [.type,.rectangle,.ellipse,.line,.eyedropper].contains(tool) {
             let key=tool == .type ? "type.help":tool == .eyedropper ? "color.sampleHelp":"shape.help"
@@ -131,6 +138,8 @@ final class OptionsBarView: SurfaceView {
                 else { button.isEnabled = document?.canEditSelection == true }
             }
         }
+        paintControls?.refresh(document)
+        (popover.contentViewController?.view as? PaintControlsView)?.refresh(document)
         perspectiveControls?.refresh(document)
         (popover.contentViewController?.view as? PerspectiveOptionsView)?.refresh(document)
         cropControls?.refresh(document)
@@ -148,6 +157,14 @@ final class OptionsBarView: SurfaceView {
     @objc private func toggleAuto(_ sender:NSButton) { document?.autoSelect = sender.state == .on }
     @objc private func toggleControls(_ sender:NSButton) { document?.showTransformControls = sender.state == .on; document?.changed?() }
     @objc private func centerLayer() { do { try document?.centerSelected() } catch { NSSound.beep() } }
+    @objc private func showPaintPopover() {
+        let controls = PaintControlsView(localization:localization); controls.refresh(document)
+        controls.settingsChanged = { [weak self] in self?.paintSettingsChanged?() }
+        controls.alignmentChanged = { [weak self] in self?.paintAlignmentChanged?() }
+        let controller = NSViewController(); controller.view = controls
+        popover.contentViewController = controller; popover.contentSize = NSSize(width:740,height:36); popover.behavior = .transient
+        popover.show(relativeTo:overflowButton.bounds,of:overflowButton,preferredEdge:.maxY)
+    }
     @objc private func showPerspectivePopover() {
         let controls=PerspectiveOptionsView(localization:localization);controls.refresh(document)
         controls.focusCanvas={ [weak self] in self?.focusCanvas?() }

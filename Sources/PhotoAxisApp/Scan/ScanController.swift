@@ -83,7 +83,7 @@ final class ScanImageView: NSView {
         for i in sliders.indices {
             let slider = sliders[i]; slider.minValue = i >= 5 ? -1 : i == 4 ? 0.005 : 0
             slider.maxValue = i == 3 ? 0.4 : i == 4 ? 0.1 : 1; slider.doubleValue = values[i]
-            slider.isContinuous = false; slider.target = self; slider.action = #selector(changed); row(labels[i], slider)
+            slider.isContinuous = true; slider.target = self; slider.action = #selector(changed); row(labels[i], slider)
         }
         if batchFiles == nil {
             for (key, selector) in [("scan.detect",#selector(detectPage)),("scan.deskew",#selector(detectAngle)),("scan.clearPage",#selector(clearPage))] {
@@ -111,13 +111,13 @@ final class ScanImageView: NSView {
         let help = NSTextField(wrappingLabelWithString: localization.text("scan.help")); help.font = .systemFont(ofSize: 11); add(help)
         notice.frame = NSRect(x: 18,y: 615,width: 1064,height: 55); notice.font = .systemFont(ofSize: 12); root.addSubview(notice)
         previewButton.title = localization.text("scan.preview"); previewButton.bezelStyle = .rounded; previewButton.target = self; previewButton.action = #selector(preview)
-        previewButton.frame = NSRect(x: 640,y: 687,width: 145,height: 32); root.addSubview(previewButton)
+        previewButton.frame = NSRect(x: 640,y: 687,width: 145,height: 32); previewButton.isHidden = true
         let cancel = NSButton(title: localization.text("action.cancel"), target: self, action: #selector(cancel)); cancel.bezelStyle = .rounded; cancel.keyEquivalent = "\u{1b}"
         cancel.frame = NSRect(x: 793,y: 687,width: 120,height: 32); root.addSubview(cancel)
         applyButton.title = localization.text(batchFiles == nil ? "action.apply" : "scan.runBatch"); applyButton.bezelStyle = .rounded
         applyButton.target = self; applyButton.action = #selector(apply); applyButton.keyEquivalent = "\r"
         applyButton.frame = NSRect(x: 921,y: 687,width: 161,height: 32); applyButton.isEnabled = false; root.addSubview(applyButton)
-        panel.initialFirstResponder = previewButton
+        panel.initialFirstResponder = mode
         NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: NSControl.textDidChangeNotification, object: nil)
         preview()
     }
@@ -143,11 +143,19 @@ final class ScanImageView: NSView {
         }
         return result
     }
-    @objc func changed() {
+    private func invalidatePreview() {
         guard !batchRunning else { return }
         generation += 1; task?.cancel(); readyRecipe = nil; applyButton.isEnabled = false
         width.isEnabled = paperSize.indexOfSelectedItem == 4; height.isEnabled = width.isEnabled
-        notice.stringValue = localization.text("scan.needsPreview")
+        notice.stringValue = localization.text("scan.live")
+    }
+    @objc func changed() {
+        guard !batchRunning else { return }
+        invalidatePreview(); let token = generation
+        task = Task { [weak self] in
+            do { try await Task.sleep(for:.milliseconds(85)) } catch { return }
+            guard let self, generation == token else { return }; preview()
+        }
     }
     @objc private func textChanged(_ notification: Notification) {
         guard let field = notification.object as? NSControl, field.window === window else { return }
@@ -160,7 +168,7 @@ final class ScanImageView: NSView {
     }
     @objc func preview() {
         guard !batchRunning else { return }
-        changed(); let token = generation
+        invalidatePreview(); let token = generation
         notice.stringValue = localization.text("scan.processing")
         task = Task { [weak self] in
             guard let self else { return }
@@ -195,7 +203,7 @@ final class ScanImageView: NSView {
     @objc func clearPage() { guard !batchRunning else { return }; quad = nil; angle.stringValue = "0"; preview() }
     private func detect(angleOnly: Bool) {
         guard !batchRunning else { return }
-        changed(); let token = generation; notice.stringValue = localization.text("scan.processing")
+        invalidatePreview(); let token = generation; notice.stringValue = localization.text("scan.processing")
         task = Task { [weak self] in
             guard let self else { return }
             do {

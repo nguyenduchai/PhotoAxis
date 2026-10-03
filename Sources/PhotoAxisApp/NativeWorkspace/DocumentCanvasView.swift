@@ -76,6 +76,12 @@ final class WelcomeCanvasView: SurfaceView {
     var imagePipeline: ImagePipeline? { pipeline }
     lazy var editing = CanvasEditing(canvas:self)
     lazy var contentEditing=ContentInteraction(canvas:self,localization:localization)
+    lazy var painting = PaintInteraction(canvas:self)
+    let paintCursor = PaintCursorView()
+    lazy var livePerspective = PerspectiveLivePreview(localization:localization)
+    private var paintTracking: NSTrackingArea?
+    private var livePerspectiveTask: Task<Void,Never>?
+    private var livePerspectiveKey: PhotoDocumentModel?
     private let localization: L10n
     let metal = MetalPresentationView()
     let overlay = CanvasBorderOverlay()
@@ -121,7 +127,7 @@ final class WelcomeCanvasView: SurfaceView {
         notice.font = .systemFont(ofSize: 11); notice.textColor = .secondaryLabelColor; notice.alignment = .center
         welcome.orientation = .vertical; welcome.alignment = .centerX; welcome.spacing = 18
         for child in [brand, subtitle, actions, notice] { welcome.addArrangedSubview(child) }
-        for child in [welcome, metal, overlay, cropOverlay, perspectiveOverlay] { addSubview(child) }
+        for child in [welcome, metal, overlay, cropOverlay, perspectiveOverlay, livePerspective, paintCursor] { addSubview(child) }
         // A transformed layer may extend beyond the viewport; its overlay must
         // never paint over the options bar, tabs or surrounding panels.
         overlay.wantsLayer = true; overlay.layer?.masksToBounds = true
@@ -137,15 +143,15 @@ final class WelcomeCanvasView: SurfaceView {
         let switched = self.document !== document || self.pipeline !== pipeline
         self.document = document; self.pipeline = pipeline
         welcome.isHidden = document != nil
-        if switched { requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
-        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
+        if switched { painting.reset(); livePerspectiveTask?.cancel(); livePerspectiveKey = nil; requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
+        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); updateLivePerspective(); paintCursor.isHidden = document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true; contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
         window?.invalidateCursorRects(for: self)
     }
     override func layout() {
         super.layout()
         let width = min(430, max(0, bounds.width - 48))
         welcome.frame = NSRect(x: (bounds.width - width) / 2, y: max(24, bounds.midY - 90), width: width, height: 180)
-        metal.frame = bounds; overlay.frame = bounds; cropOverlay.frame = bounds; perspectiveOverlay.frame = bounds
+        metal.frame = bounds; paintCursor.frame = bounds; livePerspective.frame = NSRect(x:max(8,bounds.width-252),y:8,width:244,height:190); overlay.frame = bounds; cropOverlay.frame = bounds; perspectiveOverlay.frame = bounds
         resizeViewport();contentEditing.refresh()
     }
     override func viewDidChangeBackingProperties() { super.viewDidChangeBackingProperties(); resizeViewport() }
@@ -180,6 +186,43 @@ final class WelcomeCanvasView: SurfaceView {
         } else {perspectiveOverlay.gridLines=[]}
         perspectiveOverlay.needsDisplay=true
     }
+    private func liveGeometryCandidate() -> PhotoDocumentModel? {
+        guard let d = document else { return nil }
+        if let state = d.perspectiveSession, !state.showsPreview, state.isValid { return state.candidate }
+        if let state = d.cropSession, state.isValid {
+            var next = d.model
+            do { try next.crop(to:state.region,output:state.output); return next } catch { return nil }
+        }
+        return nil
+    }
+    func updateLivePerspective() {
+        guard let d = document, let candidate = liveGeometryCandidate(), let pipeline else {
+            livePerspectiveTask?.cancel(); livePerspectiveKey = nil; livePerspective.isHidden = true; return
+        }
+        livePerspective.isHidden = false
+        guard livePerspectiveKey != candidate else { return }
+        livePerspectiveKey = candidate; livePerspectiveTask?.cancel()
+        let snapshot = ProjectSnapshot(model:candidate,assets:d.assets,stateID:d.history.stateID)
+        livePerspectiveTask = Task { [weak self] in
+            do {
+                try await Task.sleep(for:.milliseconds(45))
+                let image = try await pipeline.exportImage(snapshot:snapshot,options:ExportOptions(size:candidate.canvas,ppi:candidate.ppi),previewEdge:512)
+                try Task.checkCancellation()
+                guard let self, livePerspectiveKey == candidate, liveGeometryCandidate() == candidate else { return }
+                livePerspective.imageView.image = NSImage(cgImage:image,size:.zero)
+            } catch is CancellationError {} catch { self?.livePerspective.isHidden = true }
+        }
+    }
+    override func updateTrackingAreas() {
+        super.updateTrackingAreas()
+        if let paintTracking { removeTrackingArea(paintTracking) }
+        let area = NSTrackingArea(rect:.zero,options:[.mouseMoved,.mouseEnteredAndExited,.activeInKeyWindow,.inVisibleRect],owner:self)
+        paintTracking = area; addTrackingArea(area)
+    }
+    override func mouseMoved(with event: NSEvent) {
+        if document?.activeTool == .brush || document?.activeTool == .cloneStamp { painting.cursor(convert(event.locationInWindow,from:nil)) }
+    }
+    override func mouseExited(with event: NSEvent) { paintCursor.point = nil; paintCursor.needsDisplay = true }
     func requestRender(interactive:Bool = false) {
         guard let document, let pipeline, bounds.width > 0, bounds.height > 0 else { renderTask?.cancel(); settleTask?.cancel(); requestedKey = nil; return }
         let id = document.model.id, revision = document.model.revision
@@ -231,7 +274,7 @@ final class WelcomeCanvasView: SurfaceView {
     }
     func fit() { guard let document else { return }; document.viewport.fit(document.presentedModel.canvas); navigationChanged() }
     func pan(x: Double, y: Double) { document?.viewport.pan(x: x, y: y); navigationChanged() }
-    private func navigationChanged() { contentEditing.reset();contentEditing.refresh(); editing.cancelPendingPick(); viewportChanged?(); updateCropOverlay(); updatePerspectiveOverlay(); requestRender(interactive:true) }
+    private func navigationChanged() { painting.cancel(); contentEditing.reset();contentEditing.refresh(); editing.cancelPendingPick(); viewportChanged?(); updateCropOverlay(); updatePerspectiveOverlay(); requestRender(interactive:true) }
     func selectTool(_ kind: ToolKind) {
         guard let document, document.activeTool == kind || document.resolveSession() else { return }
         if document.activeTool != kind { contentEditing.reset(); editing.resetPointer(); cropping.reset(); perspectiveEditing.reset() }
@@ -249,6 +292,7 @@ final class WelcomeCanvasView: SurfaceView {
         lastPointer = point
         if spaceHeld || document.activeTool == .hand { panStart = point; NSCursor.closedHand.set() }
         else if document.activeTool == .zoom { zoom(to: document.viewport.zoom * (event.modifierFlags.contains(.option) ? 0.5 : 2), anchor: point) }
+        else if document.activeTool == .brush || document.activeTool == .cloneStamp { painting.down(point,option:event.modifierFlags.contains(.option)) }
         else if document.activeTool == .crop {cropping.down(point)}
         else if document.activeTool == .perspectiveCrop {perspectiveEditing.down(point)}
         else if [.type,.rectangle,.ellipse,.line,.eyedropper].contains(document.activeTool){contentEditing.down(point,shift:event.modifierFlags.contains(.shift))}
@@ -259,11 +303,12 @@ final class WelcomeCanvasView: SurfaceView {
         let point = convert(event.locationInWindow, from: nil)
         if spaceHeld || document?.activeTool == .hand {
             if let start = panStart ?? lastPointer { pan(x:point.x-start.x,y:point.y-start.y) }; panStart=point
-        } else if document?.activeTool == .crop {cropping.drag(point)} else if document?.activeTool == .perspectiveCrop {perspectiveEditing.drag(point)} else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){contentEditing.drag(point,shift:event.modifierFlags.contains(.shift))} else { editing.dragged(point,shift:event.modifierFlags.contains(.shift)) }
+        } else if document?.activeTool == .brush || document?.activeTool == .cloneStamp { painting.drag(point) } else if document?.activeTool == .crop {cropping.drag(point)} else if document?.activeTool == .perspectiveCrop {perspectiveEditing.drag(point)} else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){contentEditing.drag(point,shift:event.modifierFlags.contains(.shift))} else { editing.dragged(point,shift:event.modifierFlags.contains(.shift)) }
         lastPointer=point
     }
     override func mouseUp(with event: NSEvent) {
-        if document?.activeTool == .crop {if !spaceHeld {cropping.up(convert(event.locationInWindow,from:nil))}else{cropping.reset()}}
+        if document?.activeTool == .brush || document?.activeTool == .cloneStamp { if !spaceHeld { painting.up(convert(event.locationInWindow,from:nil)) } else { painting.cancel() } }
+        else if document?.activeTool == .crop {if !spaceHeld {cropping.up(convert(event.locationInWindow,from:nil))}else{cropping.reset()}}
         else if document?.activeTool == .perspectiveCrop {if !spaceHeld {perspectiveEditing.up(convert(event.locationInWindow,from:nil))}else{perspectiveEditing.reset()}}
         else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){if !spaceHeld{contentEditing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift))}}
         else if !spaceHeld && document?.activeTool != .hand { editing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift)) }
@@ -280,6 +325,8 @@ final class WelcomeCanvasView: SurfaceView {
         zoom(to: document.viewport.zoom * (1 + event.magnification), anchor: convert(event.locationInWindow, from: nil))
     }
     override func keyDown(with event: NSEvent) {
+        if document?.activeTool == .cloneStamp, event.modifierFlags.contains(.option), [36,76].contains(event.keyCode) { painting.chooseSourceAtCursor(); return }
+        if document?.paintSession != nil, event.keyCode == 53 { painting.cancel(); return }
         guard event.modifierFlags.intersection([.command, .control, .option]).isEmpty else { super.keyDown(with: event); return }
         if let state=document?.contentSession,[36,76,53].contains(event.keyCode) {
             if event.keyCode==53{document?.cancelSession()}else if case .shape=state.draft{document?.applySession()};return
@@ -293,6 +340,9 @@ final class WelcomeCanvasView: SurfaceView {
         case 49: spaceHeld = true; window?.invalidateCursorRects(for: self)
         default:
             if event.charactersIgnoringModifiers?.lowercased() == "c" {selectTool(event.modifierFlags.contains(.shift) ? .perspectiveCrop:.crop)}
+            else if event.charactersIgnoringModifiers?.lowercased() == "b" { selectTool(.brush) }
+            else if event.charactersIgnoringModifiers?.lowercased() == "s" { selectTool(.cloneStamp) }
+            else if let key = event.charactersIgnoringModifiers, ["[","]"].contains(key), let d = document, d.activeTool == .brush || d.activeTool == .cloneStamp { d.brushSettings.diameter = min(1000,max(1,d.brushSettings.diameter * (key == "[" ? 0.8:1.25))); d.changed?() }
             else if event.charactersIgnoringModifiers?.lowercased() == "v" { selectTool(.move) }
             else if event.charactersIgnoringModifiers?.lowercased() == "t" {selectTool(.type)}
             else if event.charactersIgnoringModifiers?.lowercased() == "i" {selectTool(.eyedropper)}
@@ -311,7 +361,7 @@ final class WelcomeCanvasView: SurfaceView {
         if event.keyCode == 49 { spaceHeld = false; panStart = nil; window?.invalidateCursorRects(for: self) }
         else { editing.keyUp(event); super.keyUp(with: event) }
     }
-    override func resignFirstResponder() -> Bool { editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; return super.resignFirstResponder() }
+    override func resignFirstResponder() -> Bool { painting.cancel(); editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; return super.resignFirstResponder() }
     @objc func paste(_ sender: Any?) {
         paste(from: .general)
     }

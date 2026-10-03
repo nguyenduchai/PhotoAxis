@@ -1,7 +1,7 @@
 import Foundation
 
 public enum DocumentError: Error, Equatable {
-    case invalidPPI, layerLimit, sourceLimit, missingSource, missingLayer, lockedLayer, invalidValue, activeSession
+    case invalidPPI, layerLimit, sourceLimit, missingSource, missingLayer, lockedLayer, invalidValue, activeSession, resourceLimit
 }
 
 public struct SourceDescriptor: Codable, Equatable, Sendable {
@@ -56,6 +56,7 @@ public enum LayerContent: Equatable, Sendable {
     case image(sourceID: String)
     case text(TextContent)
     case shape(ShapeContent)
+    case paint(PaintContent)
 }
 
 public struct PhotoLayer: Equatable, Identifiable, Sendable {

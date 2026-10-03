@@ -8,6 +8,7 @@ public extension PhotoDocumentModel {
             guard let source = sources[id] else { throw DocumentError.missingSource }; return source.size
         case .shape(let shape): return shape.size
         case .text(let text): return text.layoutSize
+        case .paint(let paint): return paint.size
         }
     }
     func bounds(of id: UUID) throws -> LayerBounds {
@@ -42,7 +43,7 @@ public extension PhotoDocumentModel {
     mutating func delete(_ id: UUID) throws {
         let index = try editableIndex(id)
         layers.remove(at: index)
-        let used = Set(layers.compactMap { layer -> String? in if case .image(let id) = layer.content { return id }; return nil })
+        let used = layers.reduce(into:Set<String>()) { $0.formUnion($1.content.sourceIDs) }
         sources = sources.filter { used.contains($0.key) }; revision &+= 1
     }
     /// Final index in bottom-to-top model order, after removing the moving layer.
