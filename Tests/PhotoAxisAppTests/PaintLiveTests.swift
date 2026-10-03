@@ -139,7 +139,8 @@ import PhotoAxisCore
         d.brushSettings.aligned = false; canvas.painting.resetAlignment(); click(400,300)
         guard case .paint(let paint) = d.model.layers.last!.content else { return XCTFail("Missing native paint") }
         XCTAssertEqual(paint.strokes.count,3); XCTAssertEqual(paint.strokes[0].sourceOffset,paint.strokes[1].sourceOffset)
-        XCTAssertEqual(paint.strokes[2].sourceOffset,Point2D(x:-350,y:-240))
+        let unalignedOffset = try XCTUnwrap(paint.strokes[2].sourceOffset)
+        XCTAssertEqual(unalignedOffset.x,-350,accuracy:1e-9); XCTAssertEqual(unalignedOffset.y,-240,accuracy:1e-9)
         d.activeTool = .brush; d.changed?(); try await settle(); let before = d.model
         canvas.mouseDown(with:event(.leftMouseDown,100,100)); canvas.mouseDragged(with:event(.leftMouseDragged,200,100))
         XCTAssertNotEqual(d.presentedModel,before); XCTAssertEqual(d.model,before)

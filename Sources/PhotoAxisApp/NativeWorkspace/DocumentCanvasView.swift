@@ -98,7 +98,9 @@ final class WelcomeCanvasView: SurfaceView {
         let handles: Bool
         let samplingScale: Double
         let lightweightClip: Bool
+        let appearance: CanvasAppearance
     }
+    var canvasAppearance = CanvasAppearance() { didSet { if canvasAppearance != oldValue { layer?.backgroundColor = NSColor(white:canvasAppearance.background.gray,alpha:1).cgColor; requestRender() } } }
     private var requestedKey: RenderKey?
     private var generation = UUID()
     private var panStart: NSPoint?
@@ -232,7 +234,7 @@ final class WelcomeCanvasView: SurfaceView {
         // At Retina scale, continuous interaction evaluates one pixel per point.
         // Geometry/overlays stay in the original viewport; only sampling changes.
         let samplingScale = interactive ? max(0.25,min(1,1/viewport.backingScale)) : 1
-        let key = RenderKey(model:model,viewport:viewport,selectedID:selectedID,handles:handles,samplingScale:samplingScale,lightweightClip:interactive)
+        let key = RenderKey(model:model,viewport:viewport,selectedID:selectedID,handles:handles,samplingScale:samplingScale,lightweightClip:interactive,appearance:canvasAppearance)
         guard requestedKey != key else { return }
         requestedKey = key; renderTask?.cancel(); settleTask?.cancel(); generation = UUID(); let token = generation
         if interactive {
@@ -241,9 +243,10 @@ final class WelcomeCanvasView: SurfaceView {
                 guard let self, self.document?.model.id == id else { return }; requestRender(interactive:false)
             }
         }
+        let appearance = canvasAppearance
         renderTask = Task { [weak self] in
             do {
-                let frame = try await pipeline.render(model: model, assets: assets, viewport: viewport, samplingScale:samplingScale, lightweightClip:interactive)
+                let frame = try await pipeline.render(model: model, assets: assets, viewport: viewport, samplingScale:samplingScale, lightweightClip:interactive, appearance:appearance)
                 guard let self, !Task.isCancelled, generation == token, self.document?.model.id == id,
                       self.document?.model.revision == revision else { return }
                 metal.image = frame; metal.isHidden = false; overlay.isHidden = false
@@ -379,38 +382,5 @@ final class WelcomeCanvasView: SurfaceView {
     override func performDragOperation(_ sender: any NSDraggingInfo) -> Bool {
         let files = Self.files(sender.draggingPasteboard); guard !files.isEmpty else { return false }
         importImages?(files.map { .file($0) }); return true
-    }
-}
-
-@MainActor
-final class RulerView: SurfaceView {
-    private let vertical: Bool
-    var viewport: ViewportState? { didSet { needsDisplay = true } }
-    init(vertical: Bool) { self.vertical = vertical; super.init(color: WorkspaceStyle.toolbar) }
-    required init?(coder: NSCoder) { fatalError("Use init(vertical:)") }
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        guard let viewport else { return }
-        let origin = vertical ? viewport.origin.y : viewport.origin.x
-        let scale = viewport.zoom / viewport.backingScale
-        let length = vertical ? bounds.height : bounds.width
-        // 1/2/5 decade ticks keep labels readable at every zoom and backing scale.
-        let desired = 65 / scale, power = pow(10, floor(log10(desired)))
-        let step = [1.0, 2, 5, 10].first { $0 * power >= desired }! * power
-        let first = floor(-origin / scale / step) * step
-        let path = NSBezierPath(); WorkspaceStyle.text.setStroke(); path.lineWidth = 0.5
-        let attributes: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 8), .foregroundColor: WorkspaceStyle.text]
-        for value in stride(from: first, through: (length - origin) / scale, by: step) {
-            let position = origin + value * scale + (vertical ? 20 : 0)
-            path.move(to: vertical ? NSPoint(x: 13, y: position) : NSPoint(x: position, y: 13))
-            path.line(to: vertical ? NSPoint(x: 20, y: position) : NSPoint(x: position, y: 20))
-            let label = String(format: "%.0f", value) as NSString
-            if vertical {
-                NSGraphicsContext.saveGraphicsState()
-                let rotation = NSAffineTransform(); rotation.translateX(by: 3, yBy: position + 3); rotation.rotate(byDegrees: 90); rotation.concat()
-                label.draw(at: .zero, withAttributes: attributes); NSGraphicsContext.restoreGraphicsState()
-            } else { label.draw(at: NSPoint(x: position + 3, y: 1), withAttributes: attributes) }
-        }
-        path.stroke()
     }
 }

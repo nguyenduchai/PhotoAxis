@@ -12,6 +12,9 @@ final class ColorPreviewView: NSView {
 @MainActor
 final class SidebarView: SurfaceView {
     let pageSelector = NSPopUpButton()
+    private(set) var pageButtons: [NSButton] = []
+    let pageHelp = NSTextField(wrappingLabelWithString: "")
+    private let headerHeight: CGFloat = 100
     private let editingBody = SurfaceView()
     private var pages: [NSView] = []
     var pageChanged: ((Int) -> Void)?
@@ -71,7 +74,19 @@ final class SidebarView: SurfaceView {
         pageSelector.addItems(withTitles: ["workspace.edit", "workspace.sources", "workspace.analysis", "workspace.output"].map { localization.text($0) })
         pageSelector.target = self; pageSelector.action = #selector(selectPage)
         pageSelector.setAccessibilityIdentifier("workspace.panelPage")
-        addSubview(pageSelector)
+        pageSelector.isHidden = true
+        for (i,key) in ["workspace.edit","workspace.sources","workspace.analysis","workspace.output"].enumerated() {
+            let button = NSButton(title:localization.text(key),target:self,action:#selector(selectPageButton(_:)))
+            button.tag = i; button.bezelStyle = .regularSquare; button.setButtonType(.pushOnPushOff)
+            button.font = .systemFont(ofSize:11,weight:.medium)
+            button.image = NSImage(systemSymbolName:["slider.horizontal.3","tray.full","viewfinder","square.and.arrow.up"][i],accessibilityDescription:nil)
+            button.imagePosition = .imageLeading; button.imageScaling = .scaleProportionallyDown
+            button.identifier = .init("workspace.page."+["edit","sources","analysis","output"][i])
+            button.setAccessibilityLabel(localization.text(key)); pageButtons.append(button); addSubview(button)
+        }
+        pageHelp.font = .systemFont(ofSize:10); pageHelp.textColor = .secondaryLabelColor
+        pageHelp.identifier = .init("workspace.pageHelp"); addSubview(pageHelp)
+        showPage(0)
         editingBody.addSubview(colorControls);editingBody.addSubview(contentControls);editingBody.addSubview(adjustmentControls)
         layerList.isHidden = true; historyList.isHidden = true
         for (index, button) in layerActions.enumerated() { button.tag = index; button.target = self; button.action = #selector(layerAction(_:)) }
@@ -116,10 +131,16 @@ final class SidebarView: SurfaceView {
     func showPage(_ index: Int) {
         guard (0...pages.count).contains(index) else { return }
         pageSelector.selectItem(at: index); editingBody.isHidden = index != 0
+        for (i,button) in pageButtons.enumerated() { button.state = i == index ? .on:.off }
+        pageHelp.stringValue = localization.text(["workspace.editHelp","workspace.sourcesHelp","workspace.analysisHelp","workspace.outputHelp"][index])
         for (i, page) in pages.enumerated() { page.isHidden = index != i + 1 }
         needsLayout = true
     }
     @objc private func selectPage() { showPage(selectedPage); pageChanged?(selectedPage) }
+    @objc func selectPageButton(_ sender: NSButton) {
+        let old = selectedPage; showPage(sender.tag)
+        if selectedPage != old { pageChanged?(selectedPage) }
+    }
     @objc private func collapsePanels() { collapse?() }
     @objc func changeInspector() {
         historyList.isHidden = document == nil || inspectorTabs.selectedSegment != 1
@@ -188,12 +209,16 @@ final class SidebarView: SurfaceView {
     override func layout() {
         super.layout()
         guard bounds.width >= 100, bounds.height >= 100 else { return }
-        pageSelector.frame = NSRect(x: 8, y: 3, width: bounds.width - 16, height: 27)
-        editingBody.frame = NSRect(x: 0, y: 34, width: bounds.width, height: bounds.height - 34)
+        let buttonWidth = (bounds.width-22)/2
+        for (i,button) in pageButtons.enumerated() {
+            button.frame = NSRect(x:8+CGFloat(i%2)*(buttonWidth+6),y:4+CGFloat(i/2)*29,width:buttonWidth,height:26)
+        }
+        pageHelp.frame = NSRect(x:10,y:64,width:bounds.width-20,height:32)
+        editingBody.frame = NSRect(x:0,y:headerHeight,width:bounds.width,height:bounds.height-headerHeight)
         for page in pages { page.frame = editingBody.frame }
         let width = editingBody.bounds.width, height = editingBody.bounds.height
-        let colorHeight: CGFloat = 184
-        let inspectorHeight = max(170, (height - colorHeight) * 0.46)
+        let colorHeight: CGFloat = 168
+        let inspectorHeight = max(150, (height - colorHeight) * 0.44)
         let layerY = colorHeight + inspectorHeight
         dividerY = [28, colorHeight, layerY, layerY + 28, height - 30]
         colorTitle.frame = NSRect(x: 12, y: 6, width: width - 52, height: 18)
@@ -226,6 +251,6 @@ final class SidebarView: SurfaceView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         WorkspaceStyle.divider.setFill()
-        for y in (selectedPage == 0 ? dividerY : []) { NSRect(x: 0, y: y + 34, width: bounds.width, height: 1).fill() }
+        for y in (selectedPage == 0 ? dividerY : []) { NSRect(x: 0, y: y + headerHeight, width: bounds.width, height: 1).fill() }
     }
 }

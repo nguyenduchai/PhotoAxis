@@ -225,7 +225,7 @@ actor ImagePipeline {
         insert(image, id: asset.descriptor.id); return image
     }
 
-    func render(model: PhotoDocumentModel, assets: [String: EmbeddedImage], viewport: ViewportState, samplingScale: Double = 1, lightweightClip: Bool = false) throws -> CGImage {
+    func render(model: PhotoDocumentModel, assets: [String: EmbeddedImage], viewport: ViewportState, samplingScale: Double = 1, lightweightClip: Bool = false, appearance: CanvasAppearance = CanvasAppearance()) throws -> CGImage {
         try Task.checkCancellation()
         guard samplingScale.isFinite, (0.25...1).contains(samplingScale) else { throw ImageImportError.unreadable }
         let w = Int((viewport.width * viewport.backingScale * samplingScale).rounded()), h = Int((viewport.height * viewport.backingScale * samplingScale).rounded())
@@ -238,12 +238,13 @@ actor ImagePipeline {
             tx: viewport.origin.x * viewport.backingScale * samplingScale,
             ty: ((viewport.height - viewport.origin.y) * viewport.backingScale - Double(model.canvas.height) * viewport.zoom) * samplingScale)
         let visibleCanvas = canvasRect.applying(mapping).intersection(viewportRect)
-        let background = CIImage(color: CIColor(red: 30.0/255, green: 30.0/255, blue: 30.0/255)).cropped(to: viewportRect)
+        let background = CIImage(color: CIColor(red:appearance.background.gray,green:appearance.background.gray,blue:appearance.background.gray)).cropped(to: viewportRect)
         let checker = CIFilter(name: "CICheckerboardGenerator", parameters: ["inputCenter": CIVector(x: 0, y: 0),
             "inputColor0": CIColor(red: 0.65, green: 0.65, blue: 0.65), "inputColor1": CIColor(red: 0.45, green: 0.45, blue: 0.45),
-            "inputWidth": 8 * viewport.backingScale * samplingScale, "inputSharpness": 1])!.outputImage!.cropped(to: visibleCanvas)
+            "inputWidth": appearance.gridSize.points * viewport.backingScale * samplingScale, "inputSharpness": 1])!.outputImage!.cropped(to: visibleCanvas)
+        let transparency = appearance.showsTransparency ? checker : CIImage(color:CIColor(red:0.55,green:0.55,blue:0.55)).cropped(to:visibleCanvas)
         let output = composite.cropped(to: canvasRect).transformed(by: mapping)
-            .composited(over: checker.composited(over: background)).cropped(to: viewportRect)
+            .composited(over: transparency.composited(over: background)).cropped(to: viewportRect)
         guard let frame = context.createCGImage(output, from: viewportRect, format: .RGBA8, colorSpace: srgb) else { throw ImageImportError.unreadable }
         try Task.checkCancellation()
         return frame

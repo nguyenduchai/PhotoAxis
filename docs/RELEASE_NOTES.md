@@ -1,3 +1,11 @@
+# Thước, Cài đặt và công cụ hồ sơ — build7, 03/10/2026
+
+- Thiết kế lại thước ngang/dọc: số dọc nằm ngang, nhãn chỉ hiện khi đủ chỗ, tọa độ khớp canvas; thêm đơn vị px/mm/cm/in theo PPI.
+- Cài đặt bốn nhóm Chung/Workspace/Canvas/Cọ mặc định; tùy chọn có lưu, reset từng nhóm, cuộn và resize. Nền/ô trong suốt cập nhật trực tiếp; cọ mặc định áp cho tài liệu mở mới.
+- Bốn nút Chỉnh sửa/Nguồn/Phân tích/Đầu ra luôn thấy trong bảng phải. Công cụ điều tra dùng canvas/workspace chung; không có menu/form điều tra riêng.
+
+[Hướng dẫn Cài đặt](HUONG_DAN_CAI_DAT.md), [quy trình điều tra](HUONG_DAN_DIEU_TRA.md), [bằng chứng](bao-cao/WORKSPACE_UI_2026-10-03.md). Bản phát triển ad-hoc; `releaseReady=false`, chưa phải installer notarized. Schema project/case giữ nguyên4/2.
+
 # PhotoAxis1.0.0(6) — Paint1 và xem trực tiếp
 
 - Brush B: nét theo màu tiền cảnh, cỡ/hardness/opacity, nội suy, layer paint editable; mouseUp một Undo, Escape hủy nét.

@@ -1,3 +1,7 @@
+# Phạm vi bản phát triển build7 — 03/10/2026
+
+Thước/Cài đặt/trang workspace đã được cải tiến. Thước mm/cm/in theo PPI thể hiện kích thước in, không suy kích thước vật trong ảnh; dùng Hiệu chuẩn ở Phân tích. Cọ mặc định chỉ ảnh hưởng tài liệu thêm mới. Ngôn ngữ cần khởi động lại app. Các gate IME/macOS14/non-Retina/hiệu năng/DeveloperID/notary/cài sạch tiếp tục mở; nghiệm thu19/43 thuộc build3 lịch sử. [Báo cáo build7](bao-cao/WORKSPACE_UI_2026-10-03.md).
+
 # Paint1 và live preview — build6, 03/10/2026
 
 - Brush/Clone cơ bản có chuột, không pressure/tablet/eraser/healing/texture/mask. Mẫu clone đóng băng; muốn lấy thay đổi vừa sửa phải lấy mẫu lại. Lấy mẫu có thể chờ render/encode canvas đầy đủ.

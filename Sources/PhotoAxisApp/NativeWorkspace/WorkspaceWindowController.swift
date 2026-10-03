@@ -27,8 +27,8 @@ final class WorkspaceWindowController: NSWindowController {
     }
     required init?(coder: NSCoder) { fatalError("Use init(preferences:localization:)") }
 
-    func reloadLayout() { workspaceView.needsLayout = true; workspaceView.layoutSubtreeIfNeeded(); stateChanged?() }
-    @objc func resetWorkspace() { preferences.resetLayout(); workspaceView.chromeHidden = false; reloadLayout() }
+    func reloadLayout() { workspaceView.updatePresentationPreferences(); workspaceView.needsLayout = true; workspaceView.layoutSubtreeIfNeeded(); stateChanged?() }
+    @objc func resetWorkspace() { preferences.resetPresentation(); workspaceView.chromeHidden = false; reloadLayout() }
     @objc func toggleToolsColumns() {
         var layout = preferences.layout; layout.toolColumns = layout.toolColumns == 1 ? 2 : 1; preferences.layout = layout
         reloadLayout()
@@ -59,6 +59,8 @@ final class WorkspaceView: SurfaceView {
     let statusBar = SurfaceView(color: WorkspaceStyle.panel)
     let horizontalRuler = RulerView(vertical: false)
     let verticalRuler = RulerView(vertical: true)
+    let rulerCorner = SurfaceView(color:WorkspaceStyle.toolbar)
+    let rulerUnitLabel = WorkspaceStyle.label("px",size:10,secondary:true)
     let restorePanelButton: WorkspaceButton
     private let tabLabel: NSTextField
     private let statusLabel: NSTextField
@@ -109,7 +111,9 @@ final class WorkspaceView: SurfaceView {
             var layout = preferences.layout; layout.panelWidth = width; preferences.layout = layout
             needsLayout = true; layoutChanged?()
         }
-        for child in [optionsBar, tools, canvas, tabBar, statusBar, horizontalRuler, verticalRuler, sidebar, divider, collapsedRail] { addSubview(child) }
+        for child in [optionsBar, tools, canvas, tabBar, statusBar, horizontalRuler, verticalRuler, rulerCorner, sidebar, divider, collapsedRail] { addSubview(child) }
+        rulerCorner.addSubview(rulerUnitLabel); rulerUnitLabel.alignment = .center
+        updatePresentationPreferences()
         presentationHost.isHidden = true; addSubview(presentationHost)
         returnToEditor.target = self; returnToEditor.action = #selector(dismissPresentation)
         returnToEditor.setAccessibilityIdentifier("workspace.returnEditor")
@@ -174,6 +178,7 @@ final class WorkspaceView: SurfaceView {
             zoomLabel.stringValue = document.map { DocumentNumber.format($0.viewport.zoom * 100, language: Locale.current.identifier) + " %" } ?? "— %"
         }
         horizontalRuler.viewport = document?.viewport; verticalRuler.viewport = document?.viewport
+        horizontalRuler.ppi = document?.presentedModel.ppi ?? 72; verticalRuler.ppi = horizontalRuler.ppi
         if let taskProgress {
             statusLabel.stringValue = taskProgress
         } else {
@@ -196,6 +201,13 @@ final class WorkspaceView: SurfaceView {
     private func setCollapsed(_ collapsed: Bool) {
         var layout = preferences.layout; layout.panelCollapsed = collapsed; preferences.layout = layout
         needsLayout = true; layoutChanged?()
+    }
+
+    func updatePresentationPreferences() {
+        horizontalRuler.unit = preferences.rulerUnit; verticalRuler.unit = preferences.rulerUnit
+        rulerUnitLabel.stringValue = preferences.rulerUnit.rawValue
+        rulerUnitLabel.toolTip = localization.text("settings.rulerHelp")
+        canvas.canvasAppearance = preferences.canvasAppearance
     }
 
     override func layout() {
@@ -221,11 +233,14 @@ final class WorkspaceView: SurfaceView {
         tabBar.frame = NSRect(x: toolWidth, y: 36, width: centerWidth, height: 28)
         tabBar.layoutSubtreeIfNeeded()
         tabLabel.frame = NSRect(x: 14, y: 6, width: max(0, centerWidth - 28), height: 18)
-        let ruler: CGFloat = layout.rulersVisible ? 20 : 0
-        horizontalRuler.isHidden = !layout.rulersVisible; verticalRuler.isHidden = !layout.rulersVisible
-        horizontalRuler.frame = NSRect(x: toolWidth + ruler, y: 64, width: max(0, centerWidth - ruler), height: ruler)
-        verticalRuler.frame = NSRect(x: toolWidth, y: 64, width: ruler, height: bottom - 64)
-        canvas.frame = NSRect(x: toolWidth + ruler, y: 64 + ruler, width: max(0, centerWidth - ruler), height: max(0, bottom - 64 - ruler))
+        let rulerWidth = layout.rulersVisible ? RulerView.verticalWidth : 0
+        let rulerHeight = layout.rulersVisible ? RulerView.horizontalHeight : 0
+        horizontalRuler.isHidden = !layout.rulersVisible; verticalRuler.isHidden = !layout.rulersVisible; rulerCorner.isHidden = !layout.rulersVisible
+        horizontalRuler.frame = NSRect(x:toolWidth+rulerWidth,y:64,width:max(0,centerWidth-rulerWidth),height:rulerHeight)
+        verticalRuler.frame = NSRect(x:toolWidth,y:64+rulerHeight,width:rulerWidth,height:max(0,bottom-64-rulerHeight))
+        rulerCorner.frame = NSRect(x:toolWidth,y:64,width:rulerWidth,height:rulerHeight)
+        rulerUnitLabel.frame = NSRect(x:4,y:5,width:max(0,rulerWidth-8),height:18)
+        canvas.frame = NSRect(x:toolWidth+rulerWidth,y:64+rulerHeight,width:max(0,centerWidth-rulerWidth),height:max(0,bottom-64-rulerHeight))
         presentationHost.frame = canvas.frame
         returnToEditor.frame = NSRect(x: 8, y: 4, width: max(180, returnToEditor.intrinsicContentSize.width), height: 28)
         presentation?.frame = NSRect(x: 0, y: 36, width: canvas.frame.width, height: max(0, canvas.frame.height - 36))

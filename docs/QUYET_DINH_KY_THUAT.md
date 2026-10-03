@@ -188,3 +188,12 @@ Phiên pointer original/candidate, changed render trực tiếp; mouseUp một U
 Scan continuous sliders/text notifications debounce85ms, worker/generation/cancellation; bỏ Preview khỏi product. Perspective inset512px debounce45ms giữ original quad để sửa; Apply/Return chốt Undo. Adjustment continuous giữ nguyên. Debounce không chứng minh nativeFPS/full quota. [Phạm vi](DAC_TA_PAINT.md), [thao tác](HUONG_DAN_BRUSH_CLONE.md).
 
 Mask và ảnh nhìn thấy của nét được giới hạn tường minh vào ROI có nền trong suốt trước composite. Kiểm native đã phát hiện nền đen ngoài ROI khi Scan xoay 3°; sửa clip này và thêm oracle alpha độc lập tại −3°/+3°/+14° và Perspective. Crop thường, Image Size và Canvas Size cũng tự preview, Cancel khôi phục viewport, Apply ghi một Undo.
+
+
+## ADR-025 — Thước khớp viewport, Cài đặt và công cụ hồ sơ dễ tìm (03/10/2026)
+
+Theo phản hồi người dùng, build7 tách RulerView khỏi DocumentCanvasView: ngang28pt, dọc48pt, góc đơn vị riêng. Hai thước lấy cùng origin/zoom/backingScale với canvas; thước dọc viết số ngang. Bước major1/2/5 theo độ phóng, minor1/5; chỉ vẽ nhãn nếu trọn glyph nằm trong bounds có lề3pt, clip tick. Unitpx/mm/cm/in dùng PPI của model đang trình bày; không thay pixel/model, không thay thế calibration để đo vật trong ảnh.
+
+Cài đặt AppKit bốn nhóm có scroll/resize/reset riêng. Giữ nguyên layout JSON v1 cũ; appearance, rulerUnit và brush defaults ở keys riêng có validation/fallback. Canvas appearance tham gia render key/token, chỉ đổi viewport; export vẫn dùng composite model. Brush defaults chỉ áp khi thêm tài liệu mới/mở lại, không sửa nét hoặc cấu hình tab hiện hữu. Ngôn ngữ cần mở lại app; các tùy chọn workspace/canvas cập nhật trực tiếp.
+
+Popup trang được thay bằng bốn nút luôn thấy trong sidebar Chỉnh sửa/Nguồn/Phân tích/Đầu ra, có dòng giải thích theo trang. Controller/store/audit và định dạng hồ sơ không đổi. Kiểm thử Paint native dùng dung sai1e−9 cho phép đổi screen→document, giữ kiểm equality offset giữa hai nét Aligned; không dùng equality tuyệt đối cho sai số floating point khi hình học viewport đổi.

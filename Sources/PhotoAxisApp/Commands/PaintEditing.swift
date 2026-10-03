@@ -1,11 +1,18 @@
 import AppKit
 import PhotoAxisCore
 
-struct BrushSettings {
+struct BrushSettings: Codable, Equatable, Sendable {
     var diameter = 40.0
     var hardness = 0.8
     var opacity = 1.0
     var aligned = true
+    func validated() -> Self {
+        var value = self
+        value.diameter = diameter.isFinite ? min(1000,max(1,diameter)) : 40
+        value.hardness = hardness.isFinite ? min(1,max(0,hardness)) : 0.8
+        value.opacity = opacity.isFinite ? min(1,max(0,opacity)) : 1
+        return value
+    }
 }
 struct PaintSession {
     let original: PhotoDocumentModel

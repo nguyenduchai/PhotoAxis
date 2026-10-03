@@ -1,6 +1,23 @@
 # Sử dụng gói phục vụ điều tra
 
-PhotoAxis 1.0.0 (5). Các chức năng hồ sơ, OCR, video, đo và đầu ra dùng chung workspace native với trình chỉnh ảnh. Bảng bên phải có **Chỉnh sửa / Nguồn / Phân tích / Đầu ra**; không có menu hay cửa sổ Điều tra riêng. Bản hiện tại là bản phát triển local; xem [kết quả tích hợp](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md) và [trạng thái public](READINESS_PUBLIC.json).
+PhotoAxis 1.0.0 (7). Các chức năng hồ sơ, OCR, video, đo và đầu ra dùng chung workspace native với trình chỉnh ảnh. Bảng bên phải có bốn nút luôn hiển thị **Chỉnh sửa / Nguồn / Phân tích / Đầu ra**; không có menu hay cửa sổ Điều tra riêng. Bản hiện tại là bản phát triển local; xem [kết quả tích hợp](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md) và [trạng thái public](READINESS_PUBLIC.json).
+
+## Bắt đầu nhanh trong build 7
+
+Các chức năng điều tra đã dùng chung cửa sổ và canvas từ build5. Build7 thay danh sách xổ xuống bằng bốn nút có biểu tượng ở đầu bảng bên phải để dễ tìm. Chọn **Nguồn** khi chưa mở ảnh cũng được; đây là điểm bắt đầu hồ sơ.
+
+| Nút trong workspace | Công việc |
+| --- | --- |
+| Chỉnh sửa | Layer, màu, Brush/Clone, Type/Shape, Crop/Perspective và History |
+| Nguồn | Tạo/Mở hồ sơ, tiếp nhận ảnh/video, danh mục, metadata/hash và kiểm toàn vẹn |
+| Phân tích | So sánh nguồn/kết quả, chú thích, OCR/rà soát, trích khung hình, hiệu chuẩn và đo |
+| Đầu ra | Xác nhận vùng che, PNG chia sẻ, bản ảnh A4, danh mục/nhật ký/phân tích JSON |
+
+Nếu bảng đang thu gọn, bấm nút mở bảng `«` ở mép phải hoặc **Cửa sổ → Hiện bảng bên phải**; nếu ẩn workspace bằng Tab, nhấn Tab khi canvas có focus để hiện lại. Kiểm phiên bản trong **PhotoAxis → Cài đặt… → Chung**; bản mới phải hiển thị1.0.0(7). Mở ảnh thông thường chưa tạo hồ sơ; để dùng các chức năng lưu nguồn/nhật ký, chọn Nguồn → Tạo hồ sơ → Tiếp nhận ảnh.
+
+Luồng thử đầu tiên: **Nguồn → Tạo hồ sơ → Tiếp nhận ảnh → chọn ảnh trong Danh mục → Sửa bản làm việc → Chỉnh sửa**. Tiếp theo chọn **Phân tích → OCR tiếng Việt → chọn vùng → nhận dạng → rà soát/xác nhận**; hoặc **Hiệu chuẩn đo → chọn hai đầu thước thật → nhập chiều dài/đơn vị → Đo**. Cuối cùng **Đầu ra → Xác nhận vùng che → Xuất PNG chia sẻ**. Tham số ở cùng bảng bên phải; vùng chọn và kết quả hiển thị trên canvas của cửa sổ chính.
+
+Thước px/mm/cm/in ở mép canvas phục vụ tọa độ/kích thước in theoPPI, độc lập với hiệu chuẩn đo vật thật. Đổi cài đặt thước hoặc nền canvas không sửa model, nguồn hay nhật ký hồ sơ. [Cài đặt](HUONG_DAN_CAI_DAT.md).
 
 ## Tiếp nhận và làm việc
 

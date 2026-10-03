@@ -16,6 +16,7 @@ final class DocumentCoordinator {
     var confirmResize: ((ImageImportError) -> Bool)?
     var investigationSessionFor: ((InvestigationReference) -> InvestigationSession?)?
     var protectInvestigationDestination: ((URL) throws -> Void)?
+    private let preferences: WorkspacePreferences?
     let pipeline: ImagePipeline
     let projectStore: ProjectStore
     let exportStore: ExportStore
@@ -34,7 +35,8 @@ final class DocumentCoordinator {
     private(set) var importTask: Task<Void, Never>?
     private var importID: UUID?
     var isImporting: Bool { importTask != nil }
-    init(localization: L10n, pipeline: ImagePipeline = ImagePipeline(), recoveryRoot: URL? = nil) {
+    init(localization: L10n, pipeline: ImagePipeline = ImagePipeline(), recoveryRoot: URL? = nil, preferences: WorkspacePreferences? = nil) {
+        self.preferences = preferences
         self.localization = localization; self.pipeline = pipeline; projectStore = ProjectStore(pipeline:pipeline)
         exportStore = ExportStore(pipeline:pipeline)
         recoveryStore = RecoveryStore(root:recoveryRoot ?? RecoveryStore.defaultRoot,pipeline:pipeline)
@@ -42,6 +44,7 @@ final class DocumentCoordinator {
 
     func add(_ document: PhotoDocument) throws {
         guard documents.count < DocumentLimits.maximumDocuments else { throw CocoaError(.validationMultipleErrors) }
+        if let preferences { document.brushSettings = preferences.brushDefaults }
         document.changed = { [weak self] in self?.changed?() }
         document.auditFailed = { [weak self] in self?.report?($0) }
         documents.append(document)

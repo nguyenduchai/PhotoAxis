@@ -52,3 +52,6 @@ open PhotoAxis.xcodeproj
 Đầu ra chuẩn bị phát hành: [P13 ký/DMG](docs/bao-cao/P13.md), [P14 website/docs](docs/bao-cao/P14.md), [P15 preflight](docs/bao-cao/P15.md), [website preview](website/README.md), [kế hoạch public](docs/KE_HOACH_PUBLIC.md). Không có bản public signed/notarized; localDMG không thay bản tải công khai.
 
 Brush/Clone Stamp và live preview build6 (184ca:180PASS/1FAILTelexđãbiết/3SKIPbenchmark;16ca mới PASS): [hướng dẫn](docs/HUONG_DAN_BRUSH_CLONE.md), [phạm vi](docs/DAC_TA_PAINT.md). Project paint dùng schema4; bản cũ từ chối. Bộ cài stable vẫn đang nghiệm thu/ký/notarize.
+
+
+Thước và Cài đặt build7: số thước không bị cắt, chọn px/mm/cm/in theo PPI; Cài đặt bốn nhóm có nền canvas, ô trong suốt và cọ mặc định. Công cụ hồ sơ hiện trực tiếp qua bốn nút Chỉnh sửa/Nguồn/Phân tích/Đầu ra ở bảng phải. [Cài đặt](docs/HUONG_DAN_CAI_DAT.md), [cách dùng điều tra](docs/HUONG_DAN_DIEU_TRA.md), [báo cáo build7](docs/bao-cao/WORKSPACE_UI_2026-10-03.md).

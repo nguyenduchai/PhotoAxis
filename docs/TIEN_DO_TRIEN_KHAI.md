@@ -1,6 +1,15 @@
 # PhotoAxis — Tiến độ thực hiện
 
 
+## Thước, Cài đặt và công cụ hồ sơ dễ tìm — build7, 03/10/2026
+
+**DONE local:** thiết kế lại thước28/48pt, số dọc nằm ngang và nhãn ở mép không bị cắt; tọa độ khớp canvas, đơn vịpx/mm/cm/in theoPPI. Cài đặt native bốn nhóm Chung/Workspace/Canvas/Cọ mặc định, lưu/validation/reset riêng, tùy chọn nền/ô trong suốt cập nhật trực tiếp; cọ mặc định cho tài liệu mở mới. Bốn nút Chỉnh sửa/Nguồn/Phân tích/Đầu ra luôn thấy trong sidebar, tiếp tục dùng controller/canvas/hồ sơ chung.
+
+- Full suite cuối **191ca:187PASS/1FAILTelex đã biết/3SKIPbenchmark**; **7ca mới PASS**. Release/ad-hoc,527khóaVIEN/431references, inventory/16policy/12websitepages PASS. NativeVI/EN thước/Cài đặt/bốn trang, bảngEN260pt/cọ90px/khởi động lại đã kiểm. Hồ sơ tổng hợp14event và PNG1600×640:148200pixel che đen đục,875800pixel ngoài vùng bằng nguồn; byte/model/archive không đổi.
+- Native resize Cài đặt bằng CUA chưa thành công; min680×560 kiểm hosted. Không nhận đã chạy lại OCR/video/đo native hoặc full A01–A43. `releaseReady=false`, **19/43 thuộc build3 lịch sử**; IME/máy đích/hiệu năng/full quota/DeveloperID/notary/cài sạch tiếp tục mở.
+- [Báo cáo](bao-cao/WORKSPACE_UI_2026-10-03.md), [Cài đặt](HUONG_DAN_CAI_DAT.md), [hướng dẫn điều tra](HUONG_DAN_DIEU_TRA.md). DMG/CI/Pages receipt sẽ được chốt trước bàn giao build7.
+
+
 ## Brush, Clone Stamp và preview tự động — build 6, 03/10/2026
 
 **DONE local — Paint1:** Brush B và Clone Stamp S đã tích hợp vào thanh công cụ native và canvas chung. Cỡ/độ cứng/độ đậm liên tục; kéo hiện nét, thả chốt một Undo, Escape hủy. Clone lấy composite đã chốt bằng Option-click hoặc click + Option-Return, giữ mẫu cố định và hỗ trợ Aligned. Không thay byte ảnh tiếp nhận. Project có nét dùng schema4, đọc lại1–3; hồ sơ giữ mẫu clone dẫn xuất và kiểm SHA256/audit.

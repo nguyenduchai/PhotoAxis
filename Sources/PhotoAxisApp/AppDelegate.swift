@@ -24,7 +24,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         launchLanguage = preferences.language
         localization = L10n(choice: launchLanguage)
         NSApp.appearance = NSAppearance(named: .darkAqua)
-        documents = DocumentCoordinator(localization: localization)
+        documents = DocumentCoordinator(localization: localization, preferences: preferences)
         investigation = InvestigationController(coordinator: documents, localization: localization)
         investigation?.workingOpened = { [weak self] in self?.showWorkspace() }
         showWorkspace()
