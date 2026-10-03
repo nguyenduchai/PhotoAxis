@@ -108,7 +108,11 @@ import PhotoAxisCore
             XCTAssertNotNil(CGImageSourceCopyAuxiliaryDataInfoAtIndex(source,0,kCGImageAuxiliaryDataTypeISOGainMap))
             let hdr = try XCTUnwrap(CGImageSourceCreateImageAtIndex(source,0,[kCGImageSourceShouldAllowFloat:true,kCGImageSourceDecodeRequest:kCGImageSourceDecodeToHDR] as CFDictionary))
             XCTAssertGreaterThan(hdr.contentHeadroom,2.9)
+            #if compiler(>=6.2)
+            // The calculated metric is declared by the macOS 26 SDK; the HDR
+            // metadata, pixel and SDR-export checks below also run on older SDKs.
             if #available(macOS 26, *) { XCTAssertGreaterThan(hdr.calculatedContentHeadroom,1.5) }
+            #endif
         }
         let pipeline = ImagePipeline(), original = try Data(contentsOf:url), asset = try await pipeline.prepare(.file(url),budget:ImportBudget())
         XCTAssertTrue(asset.convertedToSDR); XCTAssertEqual(asset.data,original)
