@@ -1,0 +1,52 @@
+$ ditto $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+
+$ codesign --verify
+
+$ ditto $BUILD_ROOT/P13-local-nq58wpzy/PhotoAxis.app
+
+$ hdiutil create
+created: $BUILD_ROOT/P13-local-nq58wpzy/PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg
+hdiutil: WARNING: 'hdiutil create -volname -format ...' is deprecated. Please use 'diskutil image create from/blank --volumeName --format ...' instead.
+
+$ hdiutil attach
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>system-entities</key>
+	<array>
+		<dict>
+			<key>content-hint</key>
+			<string>Apple_HFS</string>
+			<key>dev-entry</key>
+			<string>/dev/disk24s1</string>
+			<key>mount-point</key>
+			<string>$BUILD_ROOT/P13-local-nq58wpzy/mount-6ppv_elw</string>
+			<key>potentially-mountable</key>
+			<true/>
+			<key>unmapped-content-hint</key>
+			<string>48465300-0000-11AA-AA11-00306543ECAC</string>
+			<key>volume-kind</key>
+			<string>hfs</string>
+		</dict>
+		<dict>
+			<key>content-hint</key>
+			<string>GUID_partition_scheme</string>
+			<key>dev-entry</key>
+			<string>/dev/disk24</string>
+			<key>potentially-mountable</key>
+			<false/>
+			<key>unmapped-content-hint</key>
+			<string>GUID_partition_scheme</string>
+		</dict>
+	</array>
+</dict>
+</plist>
+hdiutil: WARNING: 'hdiutil attach -readonly -nobrowse -mountpoint ...' is deprecated. Please use 'diskutil image attach --readOnly --mountOptions nobrowse --mountPoint ...' instead.
+
+$ codesign --verify
+
+$ hdiutil detach
+"disk24" ejected.
+hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.
+

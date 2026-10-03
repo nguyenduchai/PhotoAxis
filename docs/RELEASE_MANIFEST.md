@@ -1,4 +1,23 @@
-# DMGlocal hiện hành03/10/2026
+# DMG local hiện hành — build5 workspace tích hợp, 03/10/2026
+
+PhotoAxis **1.0.0 (5)**, GPL-3.0-only. Đóng gói từ checkout sạch `9333cfff5f1e928a596ec9e1066aa972a6915a52`; mã sản phẩm đã test `218b788d04fb0bb6abd8bf3516e49409265eb435`. UUID **E9797D10-3807-344C-AE33-A172F11B04A5**, executableSHA256 `ca49db43d0a772cdcb92e80c0e0518d95137cf35ec02ca78fba89f983bfcd7d5`, CoreSHA256 `32913d110b15836d8da1343b8eface1aaefde1bd44950fb6a4c9361317525f51`.
+
+| Trường | Giá trị |
+| --- | --- |
+| Artifact | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA256 | `32a7fad3139708906dcd445c76af6e18f092f8f0b201eb98cdf1ee31d1230802` |
+| App treeSHA256 | `f27e4ca23583cb8eda44634ec73d4d18613cd695ff86e03851ec7d855ec2da64` |
+| Source fingerprint | `8616d9909ed84b9000c636dec018552494335b153f276c46aa3dbdaa7f16feff` |
+| Bản giao | `$BUILD_ROOT/Deliverables/2026-10-03-build5-workspace` ngoài Git |
+| Source dirty khi đóng gói | false |
+| Kiểm tra payload | mount read-only/tree/codesign/version/build/arm64/minOS14/LICENSE/SOURCE/detach/copyhash PASS |
+| Ký và public | local ad-hoc, chưa DeveloperID/notary/cài sạch; publicReady=false |
+
+[Build manifest](bao-cao/bang-chung/WORKSPACE-20261003/build-manifest.json), [distribution manifest](bao-cao/bang-chung/WORKSPACE-20261003/distribution-manifest.json), [packaging log](bao-cao/bang-chung/WORKSPACE-20261003/packaging.log), [checksum](bao-cao/bang-chung/WORKSPACE-20261003/SHA256SUMS.txt), [receipt](bao-cao/bang-chung/WORKSPACE-20261003/delivery-receipt.json), [báo cáo](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md). Đây là bộ cài dùng thử local, không thay checksum của bản stable sau ký/staple. Các artifact dưới đây giữ làm lịch sử.
+
+---
+
+# DMG local build3 — lịch sử, 03/10/2026
 
 PhotoAxis1.0.0(3)GPL-3.0-only, packagingcommit43a5b93 sạch, binaryUUID741E1DF7-BF33-3A1D-9697-90ADCE9DF40E/SHA934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d. DMGSHA447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db,2.318.267byte,4payloadentries kèm LICENSE/SOURCE. Mount/tree/codesign/notice/hashPASS; bản giao `$BUILD_ROOT/Deliverables/2026-10-03-build3-final`. [Manifest](bao-cao/bang-chung/GITHUB-PAGES-20261003/distribution-manifest.json), [receipt](bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json), [báo cáo](bao-cao/GITHUB_PAGES_DMG_2026-10-03.md). Localad-hoc, chưaDeveloperID/notarize/cài sạch; `publicReady=false`. Artifact/galleries bên dưới là lịch sử, không thay binary/DMG mới.
 
@@ -6,7 +25,7 @@ PhotoAxis1.0.0(3)GPL-3.0-only, packagingcommit43a5b93 sạch, binaryUUID741E1DF7
 
 **Chưa có artifact public signed/notarized.** Tên public dự kiến `PhotoAxis-1.0.0-arm64.dmg`; chưa có checksum/notary ID cho file public này. Checksum local build3 dưới đây áp dụng bộ cài phát triển có cả hai gói điều tra; không dùng làm checksum bộ cài public sau ký/staple. Các artifact D54/build1 và build2 giữ vai trò lịch sử.
 
-## Release phát triển hiện hành — Investigation 2, build3
+## Release Investigation 2, build3 — lịch sử
 
 | Trường | Giá trị |
 | --- | --- |

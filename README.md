@@ -1,5 +1,7 @@
 # PhotoAxis
 
+**Build5 — workspace tích hợp:** chức năng điều tra đã hợp nhất vào Nguồn/Phân tích/Đầu ra bên cạnh bảng Chỉnh sửa. Không còn menu/cửa sổ/form modal Điều tra riêng. Chọn ROI/điểm trên canvas, đối chiếu và OCR review cùng cửa sổ. Full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP;9ca mớiPASS, Release/nativeVIEN scopedPASS. [Báo cáo và giới hạn](docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md), [hướng dẫn](docs/HUONG_DAN_DIEU_TRA.md).
+
 Ứng dụng chỉnh sửa ảnh native trên macOS, có layer editable, Perspective Crop và bộ công cụ rà soát ảnh/hồ sơ.
 
 [Website Việt/Anh](https://nguyenduchai.github.io/PhotoAxis/) · [Mã nguồn](https://github.com/nguyenduchai/PhotoAxis) · [Báo lỗi](https://github.com/nguyenduchai/PhotoAxis/issues)
@@ -14,7 +16,7 @@ Repo public bắt đầu từ snapshot source build 3; lịch sử triển khai 
 
 **Phân phối build3 trước Scan (lịch sử):** website và mã nguồn công khai; bản DMG build 3 đã xuất để kiểm thử local, chưa Developer ID/notarized. Nút tải bộ cài public còn tắt. [Báo cáo Pages và DMG](docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md).
 
-**Trạng thái:** ứng dụng native đã triển khai luồng chỉnh ảnh, Perspective Crop nhiều layer giữ editable, Type/Shape, điều chỉnh ảnh, Save/Open `.paxis`, Export PNG/JPEG và recovery. Version/build local **1.0.0 (4)**; baseline **1.0-draft.3**. P12–P15 đã có nghiệm thu/benchmark local, icon/archive/DMG local, website và công cụ phát hành; các chặng phát hành vẫn chưa đóng đầy đủ ở nghiệm thu native tổng thể/IME/thiết bị/ký/cài sạch. Target mã nguồn và website đã chốt GitHub/GitHub Pages. Xem [tiến độ thực tế](docs/TIEN_DO_TRIEN_KHAI.md), [ma trận 43 ca](docs/MA_TRAN_NGHIEM_THU.md) và [báo cáo P12](docs/bao-cao/P12.md).
+**Trạng thái:** ứng dụng native đã triển khai luồng chỉnh ảnh, Perspective Crop nhiều layer giữ editable, Type/Shape, điều chỉnh ảnh, Save/Open `.paxis`, Export PNG/JPEG và recovery. Version/build local **1.0.0 (5)**; baseline **1.0-draft.3**. P12–P15 đã có nghiệm thu/benchmark local, icon/archive/DMG local, website và công cụ phát hành; các chặng phát hành vẫn chưa đóng đầy đủ ở nghiệm thu native tổng thể/IME/thiết bị/ký/cài sạch. Target mã nguồn và website đã chốt GitHub/GitHub Pages. Xem [tiến độ thực tế](docs/TIEN_DO_TRIEN_KHAI.md), [ma trận 43 ca](docs/MA_TRAN_NGHIEM_THU.md) và [báo cáo P12](docs/bao-cao/P12.md).
 
 Nghiệm thu bổ sung03/10: **19/43 PASS**, chốt A04/A07/A26 bằng nativeVI/EN build3; benchmark mới3PASS. Telex VI có nhập/lưu/hủy thực, nhưng A22 chưa hoàn tấtEN/VNI. [Báo cáo và bằng chứng mới](docs/bao-cao/P12-native2.md).
 

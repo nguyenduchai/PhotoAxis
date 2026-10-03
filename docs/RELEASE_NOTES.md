@@ -1,3 +1,11 @@
+# PhotoAxis 1.0.0 (5) — workspace tích hợp, bản phát triển
+
+Đã hợp nhất chức năng điều tra vào workspace chỉnh sửa: Nguồn/Phân tích/Đầu ra trong bảng bên phải, mở hồ sơ qua Tệp → Mở, ảnh thành tab và danh mục đồng bộ hồ sơ. Bỏ menu và cửa sổ Điều tra riêng; tham số inline, chọn ROI/điểm trực tiếp trên canvas, đối chiếu/OCR review trong cùng cửa sổ. Draft đổi tab/model hủy an toàn; bảo vệ tab orphan chưa lưu. Full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP,9ca mớiPASS; Release/native VI/EN scoped và16policyPASS. [Hướng dẫn](HUONG_DAN_DIEU_TRA.md), [báo cáo/bằng chứng](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md).
+
+Investigation tools now share the native editing workspace. Sources, Analysis and Output live in the sidebar; cases open through File → Open and working images use document tabs. Separate Investigation menus, windows and modal parameter forms are removed. Pick image regions and points on the canvas; compare and review OCR in the same window. Draft cancellation protects changed contexts and unsaved orphan tabs. Local168tests:164PASS/1knownTelexFAIL/3benchmarkSKIP, including9newpassingtests. Native cold OCR and supported-target/full acceptance remain unqualified; no signed/notarized stable installer yet.
+
+---
+
 # PhotoAxis1.0.0(4) — Scan1, bản phát triển
 
 Scan1 thêm nhận diện trang/căn góc chữ, làm sạch nền/đen trắng thích nghi, nắn bow hai trục thủ công, chuẩn hóa A4/Letter/pixel/PPI và batch1–50ảnh xuất PNG/project/PDF/manifest. Giữ nguồn và typed layers, một Apply một Undo; file có Scan dùngschema3, reader mới vẫn đọc1/2. Fullsuite155PASS/1knownTelexFAIL/3SKIP;11Scan testsPASS, Release/ad-hoc PASS. [Hướng dẫn](HUONG_DAN_SCAN.md), [bằng chứng và giới hạn](bao-cao/SCAN_2026-10-03.md).
@@ -16,7 +24,7 @@ Local verification on 3October2026 closes New presets, five-tab isolation and Hi
 
 Gói phục vụ điều tra đã có hồ sơ `.paxcase`, file tiếp nhận đúng byte/SHA-256/metadata, thông tin bàn giao và nhật ký xử lý bền vững độc lập Undo; danh mục ảnh, chú thích typed và ô phóng to, so sánh nguồn/kết quả đồng bộ zoom/pan/swipe. Working archive điều tra dùng `.paxis` schema2; tài liệu thường giữ schema1. Export PNG/PDF A4 1/2/4ảnh/trang yêu cầu rà soát vùng che theo model hiện tại; file chia sẻ flatten, không nhúng nguồn. Có xuất danh mục/full log JSON.
 
-## Investigation 2 — OCR/video/đo, bản hiện hành local
+## Investigation 2 — OCR/video/đo, build3 lịch sử
 
 Build3 thêm OCR tiếng Việt native Vision trên ROI nguồn tiếp nhận; giữ bản máy read-only và các xác nhận người dùng riêng, engine/OS/hash/log. Giữ videoMOV/MP4/M4V nguyên byte và trích frame từ sample hình thực với ordinal/PTS hữu tỷ/track/transform/hash; offset thời gian tương đối cần căn cứ và không thayPTSgốc. Đo đoạn/diện tích cần thước chuẩn/đơn vị/căn cứ hình học, lưu điểm/modelhash và từ chối calibration cũ khi model đổi. JSON phân tích snapshot riêng có receipt/hash chứa dữ liệu chưa che. Case1 đọc tương thích, thêm analysis chuyển case2; `.paxis` thường1/working2 giữ nguyên.
 

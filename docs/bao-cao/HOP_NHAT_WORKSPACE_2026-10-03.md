@@ -53,6 +53,10 @@ OCR native lần đầu vẫn có thời gian chờ đáng kể khi Vision khở
 
 ## Phân phối và sẵn sàng public
 
-Website Việt/Anh đã cập nhật nội dung build 5 và thao tác trong workspace. Repo/source/website public theo GPL-3.0-only đã được người dùng duyệt. DMG build 5 local và CI/Pages receipts được cập nhật sau khi đóng gói và hậu kiểm; xem [release manifest](../RELEASE_MANIFEST.md).
+Website Việt/Anh đã cập nhật nội dung build 5 và thao tác trong workspace. Repo/source/website public theo GPL-3.0-only đã được người dùng duyệt. GitHub [CI build5](https://github.com/nguyenduchai/PhotoAxis/actions/runs/37105754309) trên macOS15.7.9/Xcode16.4: **163 PASS / 0 FAIL / 5 SKIP**, 168total, Debug/test/Release thành công. SKIP3benchmark/Telex/large-layout không đóng các gate đó. [CI summary](bang-chung/WORKSPACE-20261003/ci-summary.json), [log](bang-chung/WORKSPACE-20261003/ci.log).
+
+[Pages build5](https://github.com/nguyenduchai/PhotoAxis/actions/runs/37105754277) deploy và hậu kiểm anonymous HTTPS/hash **27file**/commit9333cff PASS; [receipt](bang-chung/WORKSPACE-20261003/pages-https.json). Các ảnh gallery build1/build3 giữ vai trò lịch sử, nội dung hướng dẫn build5 đã cập nhật.
+
+DMG build5 từ checkout sạch9333cff được mount/tree/codesign/GPL/source notice/detach/copyhash PASS, SHA256 **32a7fad3139708906dcd445c76af6e18f092f8f0b201eb98cdf1ee31d1230802**, 2446543byte. Bản giao ở `$BUILD_ROOT/Deliverables/2026-10-03-build5-workspace`. [Release manifest](../RELEASE_MANIFEST.md), [receipt](bang-chung/WORKSPACE-20261003/delivery-receipt.json). Source/config/test/script fingerprint không đổi giữa mã sản phẩm218b788, checkout đóng gói/CI9333cff và commit tài liệu/receipts sau đó.
 
 **Yêu cầu hợp nhất DONE local; stable public chưa đủ điều kiện.** `releaseReady=false`: cần đóng IME/native acceptance/máy đích/non-Retina/M1-16GB/performance/Metal-QoS/full quota/ảnh-video-đo thực, có Developer ID/notarization và cài sạch/Gatekeeper. Chức năng timeline video, batch OCR, tìm kiếm toàn hồ sơ, tự chèn bảng OCR/đo vào PDF, nắn sách3D tự động vẫn chưa triển khai; đây là tiện ích ngoài phạm vi hiện có. [Readiness](../READINESS_PUBLIC.json), [known issues](../KNOWN_ISSUES.md).
