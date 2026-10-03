@@ -1,0 +1,51 @@
+{
+  "stage": "OPEN-IMAGE-CURSOR-20261004",
+  "build": "8",
+  "data": "synthetic fixtures only",
+  "status": "PASS within stated scope",
+  "eventsValidated": 11,
+  "eventHashChain": "PASS",
+  "caseStateDigest": "PASS",
+  "ordinaryArchiveUnchangedDuringAnalysisAndSave": true,
+  "ordinaryArchiveSHA256": "c9c094b8a2c2f775a12ba3a04734ce9cac75118778b1dcc6793aaf501aa72729",
+  "ordinaryModelUnattached": true,
+  "ordinaryContrastPercent": 20,
+  "embeddedSourceBytesEqualToFixture": true,
+  "snapshotOrigin": "rendered-current-canvas-not-received-original",
+  "snapshotDocumentModelSHA256": "f94d1c4e61f7a61e1a8368f6fc363c7a51f1af88960e3bd4e1d09f7c7abbdd44",
+  "snapshotSHA256": "9a03cb272e310eb3be00c47a6f39b3dd6e07cfe44d6c87f0b3293d1e9b76d5e2",
+  "snapshotByteCount": 63533,
+  "measurementMM": 50,
+  "recomputedMeasurementMM": 50.0,
+  "sharingSHA256": "44bf2060636a09d53fe73b8053f62a4b837ecec9cd105a101e0ee47cd9c2580a",
+  "sharingSize": [
+    1600,
+    640
+  ],
+  "opaqueBlackRegionPixels": 147917,
+  "outsideRegionPixelsEqualToCanvasSnapshot": 876083,
+  "nativeLanguages": [
+    "vi",
+    "en"
+  ],
+  "finalNativeScope": [
+    "VI normal-image contrast20/Apply/Save/Open paxis",
+    "VI active-canvas calibration100mm/measurement50mm entered coordinates",
+    "VI redaction40,193,791,187 entered coordinates/share PNG",
+    "VI save analysis as newcase/verify integrity",
+    "EN ordinary active analysis with other case selected does not use case results",
+    "EN reopen savedcase/edit workingimage/analysis has calibration/compare",
+    "EN Crop corner pointerdrag1600x640 to1516x560 thenCancel;Brush/Clone/Hand selections;Hand pointerpan"
+  ],
+  "finalNativeOCR": "CHUA_KIEM_CHUNG: cold request stayed busy, QA quit and reopened saved document; no OCR event persisted in final case",
+  "preSaveGuardNativeOCR": "Three Vietnamese lines, ROI pointerdrag and human confirmation observed before destination guard fix; not claimed as final binary rerun",
+  "hostedOnlyScope": [
+    "exact NSCursor.current/image/hotspots/cache distinctions for all tool kinds",
+    "OptionZoom/Clone sample modifier roles,Space midpan release,all crop/move handles/rotation/offscreen rects",
+    "capture pixels match committed adjusted layered canvas and baseline before-after",
+    "direct annotation oneUndo/cancel/async tabchange/stale calibration/redactions",
+    "save fault cleanup/corrupt raster/nested existing case destination protection"
+  ],
+  "cursorScreenshotLimitation": "CUA overlays its own pointer; screenshots do not certify actual OS cursor bitmap. AppKit NSCursor identity/hotspot/image tests provide that evidence.",
+  "baselineAcceptanceUnchanged": true
+}

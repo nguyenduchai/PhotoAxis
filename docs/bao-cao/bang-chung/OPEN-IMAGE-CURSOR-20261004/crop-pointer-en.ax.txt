@@ -1,0 +1,65 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis.
+0 standard window IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Crop
+	2 pop up button Description: Crop mode, Value: Free
+	3 text field (disabled) Description: Width (px), Help: Aspect ratio only; output pixels come from the crop region., Value: 1600
+	4 text field (disabled) Description: Height (px), Help: Aspect ratio only; output pixels come from the crop region., Value: 640
+	5 button Swap dimensions
+	6 button Reset
+	7 checkbox Thirds grid, Value: 1
+	8 text 1516 × 560 px
+	9 button Cancel, Help: Crop, ID: options.cancel
+	10 button Apply, Help: Crop, ID: options.apply
+	11 button Description: Switch Tools between one and two columns, ID: tools.columns
+	12 button Description: Move (V), ID: tool.move
+	13 button Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	14 button Description: Brush (B), ID: tool.brush
+	15 button Description: Clone Stamp (S), ID: tool.cloneStamp
+	16 button Description: Eyedropper (I), ID: tool.eyedropper
+	17 button Description: Type (T), ID: tool.type
+	18 button Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	19 button Description: Hand (H), ID: tool.hand
+	20 button Description: Zoom (Z), ID: tool.zoom
+	21 color well Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	22 color well Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	23 text Live result preview
+	24 toggle button open-image-fixture.png, Value: off
+	25 button Close tab
+	26 toggle button IMG-0001, Value: on
+	27 button Close tab
+	28 text field (settable) Description: Zoom, Value: 104,38 %
+	29 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB px, ID: workspace.taskStatus
+	30 toggle button Edit, Value: off, ID: workspace.page.edit
+	31 toggle button Sources, Value: off, ID: workspace.page.sources
+	32 toggle button Analysis, Value: on, ID: workspace.page.analysis
+	33 toggle button Output, Value: off, ID: workspace.page.output
+	34 text Value: Annotate, OCR or measure the image in the active tab., ID: workspace.pageHelp
+	35 scroll area Secondary Actions: Scroll Up, Scroll Down
+		36 text ID: workspace.analysisStatus, Value: IMG-0001
+Using this tab’s case working image. OCR checks this image’s intake source.
+		37 button (disabled) Save analysis as a case…, ID: investigation.saveCurrentAnalysis
+		38 button (disabled) Compare before/after, ID: investigation.compare
+		39 button (disabled) Add annotation…, ID: investigation.annotate
+		40 button (disabled) Vietnamese OCR…, ID: investigation.ocr
+		41 button (disabled) Review OCR…, ID: investigation.reviewOCR
+		42 button (disabled) Extract frame…, ID: investigation.extractFrame
+		43 button (disabled) Calibrate measurement…, ID: investigation.calibrate
+		44 button (disabled) Measure distance/area…, ID: investigation.measure
+		45 scroll bar (disabled, settable, float) 0
+	46 splitter Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	47 close button
+	48 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	49 minimize button
+	50 text IMG-0001 — PhotoAxis
+51 menu bar
+	52 PhotoAxis OpenImage8 Done en
+	53 File
+	54 Edit
+	55 Image
+	56 Layer
+	57 Type
+	58 View
+	59 Window
+	60 Help
+
+The focused UI element is 0 standard window IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

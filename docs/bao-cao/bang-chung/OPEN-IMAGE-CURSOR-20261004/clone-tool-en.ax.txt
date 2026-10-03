@@ -1,0 +1,71 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis.
+0 standard window IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Clone Stamp Size
+	2 text field (settable) Description: Size, Value: 40, ID: paint.size
+	3 slider (settable, float) Description: Size, Value: 40, ID: paint.size.slider
+		4 value indicator (settable, float) 40
+	5 text px Hard
+	6 text field (settable) Description: Hard, Value: 80, ID: paint.hardness
+	7 slider (settable, float) Description: Hard, Value: 80, ID: paint.hardness.slider
+		8 value indicator (settable, float) 80
+	9 text % Opacity
+	10 text field (settable) Description: Opacity, Value: 100, ID: paint.opacity
+	11 slider (settable, float) Description: Opacity, Value: 100, ID: paint.opacity.slider
+		12 value indicator (settable, float) 100
+	13 text %
+	14 checkbox Aligned, Value: 1, ID: paint.aligned
+	15 text Option-click to sample the visible composite, then drag to stamp. Alternatively click a source position and press Option-Return. Sampling stays frozen until the next source pick.
+	16 button (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	17 button (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	18 button Description: Switch Tools between one and two columns, ID: tools.columns
+	19 button Description: Move (V), ID: tool.move
+	20 button Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	21 button Description: Brush (B), ID: tool.brush
+	22 button Description: Clone Stamp (S), ID: tool.cloneStamp
+	23 button Description: Eyedropper (I), ID: tool.eyedropper
+	24 button Description: Type (T), ID: tool.type
+	25 button Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	26 button Description: Hand (H), ID: tool.hand
+	27 button Description: Zoom (Z), ID: tool.zoom
+	28 color well Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	29 color well Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	30 toggle button open-image-fixture.png, Value: off
+	31 button Close tab
+	32 toggle button IMG-0001, Value: on
+	33 button Close tab
+	34 text field (settable) Description: Zoom, Value: 104,38 %
+	35 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB px, ID: workspace.taskStatus
+	36 toggle button Edit, Value: off, ID: workspace.page.edit
+	37 toggle button Sources, Value: off, ID: workspace.page.sources
+	38 toggle button Analysis, Value: on, ID: workspace.page.analysis
+	39 toggle button Output, Value: off, ID: workspace.page.output
+	40 text Value: Annotate, OCR or measure the image in the active tab., ID: workspace.pageHelp
+	41 scroll area Secondary Actions: Scroll Up, Scroll Down
+		42 text ID: workspace.analysisStatus, Value: IMG-0001
+Using this tab’s case working image. OCR checks this image’s intake source.
+		43 button (disabled) Save analysis as a case…, ID: investigation.saveCurrentAnalysis
+		44 button Compare before/after, ID: investigation.compare
+		45 button Add annotation…, ID: investigation.annotate
+		46 button Vietnamese OCR…, ID: investigation.ocr
+		47 button (disabled) Review OCR…, ID: investigation.reviewOCR
+		48 button (disabled) Extract frame…, ID: investigation.extractFrame
+		49 button Calibrate measurement…, ID: investigation.calibrate
+		50 button Measure distance/area…, ID: investigation.measure
+		51 scroll bar (disabled, settable, float) 0
+	52 splitter Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	53 close button
+	54 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	55 minimize button
+	56 text IMG-0001 — PhotoAxis
+57 menu bar
+	58 PhotoAxis OpenImage8 Done en
+	59 File
+	60 Edit
+	61 Image
+	62 Layer
+	63 Type
+	64 View
+	65 Window
+	66 Help
+
+The focused UI element is 0 standard window IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

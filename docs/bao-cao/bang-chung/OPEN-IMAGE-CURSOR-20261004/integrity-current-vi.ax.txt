@@ -1,0 +1,114 @@
+Window: "open-image-fixture.png — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Cọ vẽ (B), ID: tool.brush
+	11 nút Description: Đóng dấu sao chép (S), ID: tool.cloneStamp
+	12 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	13 nút Description: Văn bản (T), ID: tool.type
+	14 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	15 nút Description: Bàn tay (H), ID: tool.hand
+	16 nút Description: Thu phóng (Z), ID: tool.zoom
+	17 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	18 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 nút chuyển đổi open-image-fixture.png, Value: on
+	20 nút Đóng tab
+	21 trường văn bản (settable) Description: Thu phóng, Value: 104,38 %
+	22 text ID: workspace.taskStatus, Help: Hồ sơ, hash bản gốc và bản làm việc khớp. Đây là kiểm tra toàn vẹn nội bộ, không chứng minh nguồn gốc hoặc tính xác thực., Value: Hồ sơ, hash bản gốc và bản làm việc khớp. Đây là kiểm tra toàn vẹn nội bộ, không chứng minh nguồn gốc hoặc tính xác thực. sRGB px
+	23 nút chuyển đổi Chỉnh sửa, Value: off, ID: workspace.page.edit
+	24 nút chuyển đổi Nguồn, Value: on, ID: workspace.page.sources
+	25 nút chuyển đổi Phân tích, Value: off, ID: workspace.page.analysis
+	26 nút chuyển đổi Đầu ra, Value: off, ID: workspace.page.output
+	27 text Value: Tạo hoặc mở hồ sơ để tiếp nhận ảnh/video., ID: workspace.pageHelp
+	28 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		29 text ID: workspace.analysisStatus, Value: Hồ sơ, hash bản gốc và bản làm việc khớp. Đây là kiểm tra toàn vẹn nội bộ, không chứng minh nguồn gốc hoặc tính xác thực. UI8-CANVAS — Synthetic open-canvas analysis
+		30 nút bật lên Value: UI8-CANVAS — Synthetic open-canvas analysis, ID: workspace.caseSelector
+		31 nút Tạo hồ sơ…, ID: investigation.create
+		32 nút Mở hồ sơ…, ID: investigation.open
+		33 nút Thông tin hồ sơ…, ID: investigation.editCase
+		34 nút Tiếp nhận ảnh…, ID: investigation.import
+		35 nút Tiếp nhận video…, ID: investigation.importVideo
+		36 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+			37 bảng investigation.photos
+				38 row (selected)
+					39 trường văn bản (settable) IMG-0001  canvas-snapshot.png
+				40 nút sắp xếp Danh mục ảnh
+			41 thanh cuộn (disabled, settable, float) 0
+		42 nút Sửa bản làm việc, ID: investigation.editImage
+		43 nút Tiếp nhận và chú thích…, ID: investigation.editIntake
+		44 nút Kiểm tra toàn vẹn, ID: investigation.verify
+		45 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+			46 vùng nhập văn bản ID: investigation.details, Value: Hồ sơ
+Synthetic open-canvas analysis
+Synthetic QA
+
+IMG-0001 — canvas-snapshot.png
+Bản PNG dựng từ canvas đang mở, gồm các chỉnh sửa đã chốt; không phải file gốc được tiếp nhận. Hash nguồn nhúng và model được ghi trong nhật ký.
+
+SHA-256 (original): 9a03cb272e310eb3be00c47a6f39b3dd6e07cfe44d6c87f0b3293d1e9b76d5e2
+SHA-256 (working source): 9a03cb272e310eb3be00c47a6f39b3dd6e07cfe44d6c87f0b3293d1e9b76d5e2
+Bytes: 63533
+
+Thông tin tiếp nhận
+Nguồn tiếp nhận: Bản PNG dựng từ canvas đang mở, gồm các chỉnh sửa đã chốt; không phải file gốc được tiếp nhận. Hash nguồn nhúng và model được ghi trong nhật ký.
+Người cung cấp: 
+Người tiếp nhận: 
+Thời điểm tiếp nhận (kèm múi giờ nếu biết): 
+Biên bản bàn giao / ghi chú: 
+
+Metadata Image I/O của bản gốc (tách khỏi thông tin bổ sung)
+{"{Exif}":{"ColorSpace":1,"PixelXDimension":1600,"PixelYDimension":640},"{PNG}":{"InterlaceType":0,"XPixelsPerMeter":2835,"YPixelsPerMeter":2835},"{TIFF}":{"ResolutionUnit":2,"XResolution":72,"YResolution":72},"ColorModel":"RGB","Depth":8,"DPIHeight":72,"DPIWidth":72,"HasAlpha":true,"PixelHeight":640,"PixelWidth":1600,"ProfileName":"sRGB IEC61966-2.1"}
+
+Các vùng che
+1
+OCR, video và phép đo: OCR 0, Đo khoảng cách/diện tích… 1
+
+Nhật ký xử lý gần nhất (tối đa 15; nhật ký đầy đủ giữ trong case.json)
+#1 2026-10-03T18:13:33Z | caseCreated | 
+#2 2026-10-03T18:13:34Z | intake | 
+#3 2026-10-03T18:13:34Z | openImageSnapshot | 
+#4 2026-10-03T18:14:20Z | measurementCalibrated | 
+#5 2026-10-03T18:14:35Z | measurementRecorded | 
+#6 2026-10-03T18:15:16Z | redactionsReviewed | 
+#7 2026-10-03T18:15:31Z | sharingStarted | 
+#8 2026-10-03T18:15:32Z | sharingCompleted | 
+#9 2026-10-03T18:16:08Z | openImageAnalysisSaved | Synthetic QA
+#10 2026-10-03T18:18:45Z | integrityChecked | Synthetic QA
+
+			47 thanh cuộn (settable, float) 0
+				48 chỉ báo giá trị (settable, float) 0
+				49 nút mũi tên tăng dần
+				50 nút mũi tên giảm dần
+				51 nút trang tăng dần
+				52 nút trang giảm dần
+		53 nút Lưu phân tích thành hồ sơ…, ID: investigation.saveCurrentAnalysis
+		54 thanh cuộn (settable, float) 0
+			55 chỉ báo giá trị (settable, float) 0
+			56 nút mũi tên tăng dần
+			57 nút mũi tên giảm dần
+			58 nút trang tăng dần
+			59 nút trang giảm dần
+	60 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	61 nút đóng
+	62 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	63 nút thu nhỏ
+	64 text open-image-fixture.png — PhotoAxis
+65 menu bar
+	66 PhotoAxis OpenImage8 Done vi
+	67 Tệp
+	68 Chỉnh sửa
+	69 Ảnh
+	70 Lớp
+	71 Văn bản
+	72 Xem
+	73 Cửa sổ
+	74 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,114 @@
+Window: "open-image-fixture.png — PhotoAxis", App: PhotoAxis.
+0 standard window open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 button Fit on Screen
+	3 button 100%
+	4 text Drag or scroll to pan the canvas
+	5 button (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 button (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 button Description: Switch Tools between one and two columns, ID: tools.columns
+	8 button Description: Move (V), ID: tool.move
+	9 button Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 button Description: Brush (B), ID: tool.brush
+	11 button Description: Clone Stamp (S), ID: tool.cloneStamp
+	12 button Description: Eyedropper (I), ID: tool.eyedropper
+	13 button Description: Type (T), ID: tool.type
+	14 button Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	15 button Description: Hand (H), ID: tool.hand
+	16 button Description: Zoom (Z), ID: tool.zoom
+	17 color well Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	18 color well Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	19 toggle button open-image-fixture.png, Value: on
+	20 button Close tab
+	21 text field (settable) Description: Zoom, Value: 104,38 %
+	22 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB px, ID: workspace.taskStatus
+	23 toggle button Edit, Value: off, ID: workspace.page.edit
+	24 toggle button Sources, Value: on, ID: workspace.page.sources
+	25 toggle button Analysis, Value: off, ID: workspace.page.analysis
+	26 toggle button Output, Value: off, ID: workspace.page.output
+	27 text Value: Create or open a case to receive images/video., ID: workspace.pageHelp
+	28 scroll area Secondary Actions: Scroll Up, Scroll Down
+		29 text Value: UI8-CANVAS — Synthetic open-canvas analysis, ID: workspace.analysisStatus
+		30 pop up button Value: UI8-CANVAS — Synthetic open-canvas analysis, ID: workspace.caseSelector
+		31 button New case…, ID: investigation.create
+		32 button Open case…, ID: investigation.open
+		33 button Case information…, ID: investigation.editCase
+		34 button Receive photographs…, ID: investigation.import
+		35 button Receive video…, ID: investigation.importVideo
+		36 scroll area Secondary Actions: Scroll Up, Scroll Down
+			37 table investigation.photos
+				38 row (selected)
+					39 text field (settable) IMG-0001  canvas-snapshot.png
+				40 sort button Photographs
+			41 scroll bar (disabled, settable, float) 0
+		42 button Edit working image, ID: investigation.editImage
+		43 button Intake and caption…, ID: investigation.editIntake
+		44 button Verify integrity, ID: investigation.verify
+		45 scroll area Secondary Actions: Scroll Up, Scroll Down
+			46 text entry area ID: investigation.details, Value: Case
+Synthetic open-canvas analysis
+Synthetic QA
+
+IMG-0001 — canvas-snapshot.png
+Bản PNG dựng từ canvas đang mở, gồm các chỉnh sửa đã chốt; không phải file gốc được tiếp nhận. Hash nguồn nhúng và model được ghi trong nhật ký.
+
+SHA-256 (original): 9a03cb272e310eb3be00c47a6f39b3dd6e07cfe44d6c87f0b3293d1e9b76d5e2
+SHA-256 (working source): 9a03cb272e310eb3be00c47a6f39b3dd6e07cfe44d6c87f0b3293d1e9b76d5e2
+Bytes: 63533
+
+Intake record
+Received from / source description: Bản PNG dựng từ canvas đang mở, gồm các chỉnh sửa đã chốt; không phải file gốc được tiếp nhận. Hash nguồn nhúng và model được ghi trong nhật ký.
+Provided by: 
+Received by: 
+Receipt time (including time zone, if known): 
+Handover record / notes: 
+
+Original Image I/O metadata (not user-supplied fields)
+{"{Exif}":{"ColorSpace":1,"PixelXDimension":1600,"PixelYDimension":640},"{PNG}":{"InterlaceType":0,"XPixelsPerMeter":2835,"YPixelsPerMeter":2835},"{TIFF}":{"ResolutionUnit":2,"XResolution":72,"YResolution":72},"ColorModel":"RGB","Depth":8,"DPIHeight":72,"DPIWidth":72,"HasAlpha":true,"PixelHeight":640,"PixelWidth":1600,"ProfileName":"sRGB IEC61966-2.1"}
+
+Redaction regions
+1
+OCR, video and measurement: OCR 0, Measure distance/area… 1
+
+Recent processing events (up to 15; complete log retained in case.json)
+#1 2026-10-03T18:13:33Z | caseCreated | 
+#2 2026-10-03T18:13:34Z | intake | 
+#3 2026-10-03T18:13:34Z | openImageSnapshot | 
+#4 2026-10-03T18:14:20Z | measurementCalibrated | 
+#5 2026-10-03T18:14:35Z | measurementRecorded | 
+#6 2026-10-03T18:15:16Z | redactionsReviewed | 
+#7 2026-10-03T18:15:31Z | sharingStarted | 
+#8 2026-10-03T18:15:32Z | sharingCompleted | 
+#9 2026-10-03T18:16:08Z | openImageAnalysisSaved | Synthetic QA
+#10 2026-10-03T18:18:45Z | integrityChecked | Synthetic QA
+
+			47 scroll bar (settable, float) 0
+				48 value indicator (settable, float) 0
+				49 increment arrow button
+				50 decrement arrow button
+				51 increment page button
+				52 decrement page button
+		53 button Save analysis as a case…, ID: investigation.saveCurrentAnalysis
+		54 scroll bar (settable, float) 0
+			55 value indicator (settable, float) 0
+			56 increment arrow button
+			57 decrement arrow button
+			58 increment page button
+			59 decrement page button
+	60 splitter Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	61 close button
+	62 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	63 minimize button
+	64 text open-image-fixture.png — PhotoAxis
+65 menu bar
+	66 PhotoAxis OpenImage8 Done en
+	67 File
+	68 Edit
+	69 Image
+	70 Layer
+	71 Type
+	72 View
+	73 Window
+	74 Help
+
+The focused UI element is 0 standard window open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

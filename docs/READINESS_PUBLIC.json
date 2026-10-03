@@ -34,7 +34,7 @@
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json"
     ],
-    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build8 acceptance. Build8 local201total197PASS/1knownTelexFAIL/3benchmarkSKIP;10new active-canvas/cursor testsPASS. GitHubCI831ef1a macOS15.7.9/Xcode16.4:201total196PASS/0FAIL/5SKIP,10newPASS,Debug/test/ReleasePASS. Scoped final nativeVI open normal image/contrast20/Save paxis/active-analysis banner checked; OCR cold and native save/reopen verification in progress. Remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realdata/Scan/Paint qualification remains open."
+    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build8 acceptance. Build8 local201total197PASS/1knownTelexFAIL/3benchmarkSKIP;10new active-canvas/cursor testsPASS. GitHubCI831ef1a macOS15.7.9/Xcode16.4:201total196PASS/0FAIL/5SKIP,10newPASS,Debug/test/ReleasePASS. Scoped final nativeVIEN active-tab routing/derived savecase/reopen/verify,calibration50mm,PNG redaction/Crop cancel checked;independent10event/source/archive/model/pixel auditPASS. Final native OCR cold did not complete;pre-save-guard3lineOCR is separate scope. Exact NSCursor image/current/hotspots/modifiers/Space/allhandles checked hosted;CUA screenshot is not OS cursor bitmap evidence. Remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realdata/Scan/Paint qualification remains open."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -85,9 +85,11 @@
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/delivery-receipt.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/distribution-manifest.json",
-      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json"
+      "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json"
     ],
-    "reason": "Build7 local DMG source-clean8c39847 SHAc5cc4f08c9b9e09595686dc84700966e47be04d22e621209d3172849089905fd;mount/tree/codesign/GPL/source notice/detach/copyhashPASS;binary/Core match tested Release. Final DeveloperID/notarization/cleanGatekeeper installation missing."
+    "reason": "Build8 localDMG source-clean a4e44de SHAa2525c73714e63629e075afd08dcc979b09b66a5d5fdd380be62f6875aaa2080;mount/tree/codesign/GPL/source notice/detach/copyhashPASS;binary/Core/UUID match tested Release. DeveloperID/notarization/cleanGatekeeper installation missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",
@@ -115,7 +117,8 @@
       "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
-      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
+      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json"
     ],
     "reason": "Public VIEN source/GPLv3/Issues and build8 active-canvas investigation/native-cursor guides deployed at831ef1a;27HTTPS files/hash/commitPASS. Signed installer/legal publisher gate remains open;stable download disabled."
   },
@@ -138,9 +141,11 @@
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
-      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
+      "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json"
     ],
-    "reason": "Build8 tested source831ef1a/fingerprint98ef8ee6522f2a0f29c81945a310536a2ed50c59e7950ab4ab218f2728897bc0;CI201total196PASS/0FAIL/5SKIP,10newPASS;Pages27files/hash/commit831ef1aPASS. Current DMG/native receipts in progress. Final signed artifact/tag/full acceptance missing."
+    "reason": "Build8 cleanDMG a4e44de matches tested binary/Core/UUID/source fingerprint831ef1a;nativeCI201total196PASS/0FAIL/5SKIP,10newPASS;scoped native/output auditPASS with final OCRcold uncompleted;Pages27files/hash/commit831ef1aPASS. Final signed artifact/tag/full acceptance missing."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

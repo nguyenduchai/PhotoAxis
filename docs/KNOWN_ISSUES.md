@@ -6,6 +6,8 @@ Con trỏ tool/hover/modifier/drag dùng NSCursor native; pressure/tablet, custo
 
 ---
 
+OCR cold native bản cuối build8 chưa trả kết quả qua nhiều lần quan sát; QA đã ghi trạng thái, quit và mở lại tài liệu đã lưu. Case thử cuối không có OCR event. Lượt ROI3dòng/xác nhận trước sửa guard Save không thay nghiệm thu OCR cold/warm trên bản cuối/máy đích. [Bằng chứng phạm vi](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md).
+
 # Phạm vi bản phát triển build7 — 03/10/2026
 
 Thước/Cài đặt/trang workspace đã được cải tiến. Thước mm/cm/in theo PPI thể hiện kích thước in, không suy kích thước vật trong ảnh; dùng Hiệu chuẩn ở Phân tích. Cọ mặc định chỉ ảnh hưởng tài liệu thêm mới. Ngôn ngữ cần khởi động lại app. Các gate IME/macOS14/non-Retina/hiệu năng/DeveloperID/notary/cài sạch tiếp tục mở; nghiệm thu19/43 thuộc build3 lịch sử. [Báo cáo build7](bao-cao/WORKSPACE_UI_2026-10-03.md).
@@ -82,7 +84,7 @@ I11–I14 DONE local; [báo cáo](bao-cao/MO_RONG_DIEU_TRA.md). Native/automated
 
 | ID | Ảnh hưởng | Tình trạng/điều kiện xử lý |
 | --- | --- | --- |
-| INV2-01 | Khả dụng và độ đọc OCR | Runtime host có `vi-VT`; thiếu `vi-*` thì disabled/từ chối rõ. Chưa kiểm macOS14 hoặc cả OS hỗ trợ. Cần dữ liệu được phép dùng/đa font/chữ mờ/cold-warm; ROI tham chiếu nguồn intake chuẩn hóa, không phải canvas chỉnh hiện tại. OCR không chứng minh chữ đúng; người dùng xác nhận riêng. |
+| INV2-01 | Khả dụng và độ đọc OCR | Runtime host có `vi-VT`; thiếu `vi-*` thì disabled/từ chối rõ. Chưa kiểm macOS14 hoặc cả OS hỗ trợ. Cần dữ liệu được phép dùng/đa font/chữ mờ/cold-warm; ROI tab hồ sơ tham chiếu nguồn intake chuẩn hóa; tab thường build8 dùng snapshot committed canvas hiện tại. OCR không chứng minh chữ đúng; người dùng xác nhận riêng. |
 | INV2-02 | Độ trễ OCR lần đầu | Lượt đầu trước bản cuối quan sát khởi tạo model Apple khoảng79,6giây; lượt ấm synthetic nhanh. Worker/spinner/chuỗi bận đã có, chưa đo budget cold/warm trên máy đích. Không nhận quan sát cũ là benchmark cuối. |
 | INV2-03 | Phạm vi video | Test/native MOVH.264VFR/rotation/ordinal/PTS nguyên/hash PASS. Chưa bộ codec/camera/longclip/4K/HDR/máy đích;512MiB/file,20video,1track,100.000sample và120sdecode. PNG SDR8bit dẫn xuất; offset tương đối giữPTSgốc/căn cứ, không tự suy giờ quay tuyệt đối. |
 | INV2-04 | Độ chính xác đo ngoài thực địa | Một tỷ lệ uniform từ thước/căn cứ do người dùng khai báo; fixture50cm/100cm² PASS và model thay đổi làm calibration stale. Chưa tự kiểm camera/mặt phẳng/lens/depth hoặc tính độ không đảm bảo; cần phương pháp/thước/hình học được kiểm độc lập khi dùng ảnh thực. |

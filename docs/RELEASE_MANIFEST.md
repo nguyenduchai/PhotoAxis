@@ -1,4 +1,24 @@
-# DMG local hiện hành — build7 thước/Cài đặt/workspace, 03/10/2026
+# DMG local hiện hành — build8 ảnh đang mở/con trỏ, 04/10/2026
+
+PhotoAxis **1.0.0 (8)**, GPL-3.0-only. Checkout sạch `a4e44de60bbb12898e8ac1fd6b817252d07f0754`; mã sản phẩm đã kiểm `831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8`. UUID **43209510-3056-3E94-AF2B-25E5AAB23E0D**, executable SHA256 `67c4067068eb20df7beb93e12cf89da523b6bfc59c50f085aa2a01d9f282c76b`, Core SHA256 `17cb7225890bff1a800526efcd1ded903850143b818f408b4e920b120920f593`.
+
+| Trường | Giá trị |
+| --- | --- |
+| Artifact | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA256 | `a2525c73714e63629e075afd08dcc979b09b66a5d5fdd380be62f6875aaa2080` |
+| Byte | 2611249 |
+| App tree SHA256 | `2af4f20e805177d3ec076c428c21b22878b79f80fc6777bc755859573bc9b1e5` |
+| Source fingerprint | `98ef8ee6522f2a0f29c81945a310536a2ed50c59e7950ab4ab218f2728897bc0` |
+| Bản giao | `$BUILD_ROOT/Deliverables/2026-10-04-build8-open-image-cursor` ngoài Git |
+| Source dirty | false |
+| Kiểm payload | mount/tree/codesign/build8/arm64/minOS14/GPL/SOURCE/detach/copyhash PASS; binary/Core/UUID khớp bản kiểm |
+| Ký và public | ad-hoc local; chưa Developer ID/notary/cài sạch; publicReady=false |
+
+[Build manifest](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json), [distribution](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/distribution-manifest.json), [log](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/packaging.log), [checksum](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/SHA256SUMS.txt), [receipt](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json), [báo cáo phạm vi kiểm](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md). Stable sau ký/staple phải có manifest/checksum riêng. Các artifact dưới đây giữ làm lịch sử.
+
+---
+
+# DMG local build7 thước/Cài đặt/workspace — lịch sử, 03/10/2026
 
 PhotoAxis **1.0.0 (7)**, GPL-3.0-only. Checkout sạch `8c39847bb7aea49f5c3766066484d3fe681191c1`; mã sản phẩm đã kiểm `339ddec3ddd4f6e8dc9faf3981732686087423b7`. UUID **7D902A76-2780-35F8-A59E-9B500547FEC2**, executable SHA256 `af1b02ffe14e75682ff33d19bce6c64545bb19bf991c9c238db0c5f50df13f44`, Core SHA256 `b760e6e87efc9b7d0a17766c14b0867fc17211058713d03b5d8c0e439ad81860`.
 

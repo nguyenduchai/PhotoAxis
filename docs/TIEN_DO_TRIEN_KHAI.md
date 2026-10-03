@@ -2,9 +2,13 @@
 
 ## Phân tích ảnh đang mở và con trỏ native — build8, 04/10/2026
 
-**IN_PROGRESS kiểm native cuối:** đã triển khai Phân tích/Đầu ra theo tab đang mở, snapshot canvas cho tab thường và lưu phân tích thành hồ sơ có ghi rõ nguồn dựng; giữ nguyên tab `.paxis`, History và nguồn. Con trỏ NSCursor theo tool/handle/Option/Space/drag; vòng cọ giữ nguyên. 201testtotal197PASS/1knownTelexFAIL/3benchmarkSKIP,10ca mớiPASS;Release/16policy/inventory/536VIEN/435references/12websitepagesPASS. Native/outputaudit/CI/Pages/DMG được cập nhật khi chốt. [Báo cáo](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md), [thao tác](HUONG_DAN_DIEU_TRA.md). `releaseReady=false`;không nâng các gate chưa qualification.
+**DONE triển khai local:** Phân tích/Đầu ra theo tab đang mở, snapshot committed canvas cho tab thường; lưu phân tích thành `.paxcase` ghi rõ nguồn dựng, giữ nguyên `.paxis`, History và nguồn. Con trỏ NSCursor theo tool/handle/Option/Space/drag, giữ vòng cọ. Đã sửa lỗi guard chặn đích hồ sơ mới; Save/Open native cuối PASS.
 
-
+- Full suite cuối **201 tổng: 197 PASS / 1 FAIL Telex đã biết / 3 SKIP benchmark**; **10 ca mới PASS**. Release, inventory, 536khóaVIEN/435references,16policy/12websitepages PASS. GitHubCI macOS15.7.9/Xcode16.4 **196 PASS / 0 FAIL / 5 SKIP**,201tổng,10ca mớiPASS; Debug/test/ReleasePASS.
+- Native VI/EN theo tab, hiệu chuẩn100mm→50mm, vùng che/PNG, Save analysis/verify/Open case, ordinary tab không fallback case, comparison/Crop corner drag→Cancel/tool selection đã kiểm đúng phạm vi. Audit10event/source/archive/model hashes PASS;147.917pixel che đen đục,876.083ngoài vùng bằng snapshot; `.paxis`/nguồn nhúng không đổi.
+- **OCR cold native cuối chưa hoàn tất**, ghi trạng thái rồi quit QA/mở lại tài liệu đã lưu; case thử cuối không OCR event. Lượt ROI3dòng/xác nhận trước sửa guard giữ riêng, không nhận rerun cuối. Bitmap cursor/NSCursor.current/modifier/Space/tất cả handles kiểm hosted; CUA screenshot có con trỏ điều khiển riêng.
+- DMG local build8 từ checkout sạch a4e44de, mount/tree/codesign/GPL/hash/detach/copyPASS, SHA256`a2525c73714e63629e075afd08dcc979b09b66a5d5fdd380be62f6875aaa2080`; binary/Core/UUID đúng bản kiểm. Website VI/EN build8,27fileHTTPS/hash/commitPASS. [Báo cáo](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md), [hướng dẫn](HUONG_DAN_DIEU_TRA.md), [CI](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json), [receipt](bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json).
+- `releaseReady=false`; **19/43 thuộc build3 lịch sử**, không nâng gate IME/máy đích/hiệu năng/fullquota/OCRcold/dữ liệu thực/DeveloperID/notary/cài sạch. Baseline9DONE/7BLOCKED_EXTERNAL/P16khi cần không đổi.
 
 ## Thước, Cài đặt và công cụ hồ sơ dễ tìm — build7, 03/10/2026
 
