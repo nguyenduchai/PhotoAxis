@@ -167,20 +167,24 @@ final class PhotoDocument: NSDocument {
     private func reclaimAssets() { let ids = history.retainedSourceIDs.union(model.sources.keys); assets = assets.filter { ids.contains($0.key) } }
     private func registerRestore(to index: Int, from: Int, command: DocumentCommand) {
         undoManager?.registerUndo(withTarget: self) { document in
-            document.registerRestore(to: from, from: index, command: command)
-            if !document.rebuildingUndo {
-                if document.model.investigation != nil {
-                    do {
-                        guard let session = document.investigationSession else { throw InvestigationError.missingCase }
-                        let next = index == 0 ? document.history.base : document.history.entries[index - 1].after
-                        try session.record(index < document.history.cursor ? "undo" : "redo", before: document.model, after: next)
-                    } catch {
-                        document.auditFailed?(document.localization.text((error as? InvestigationError)?.localizationKey ?? "investigation.error.auditUnavailable"))
-                        DispatchQueue.main.async { document.rebuildUndo() }; return
+            // NSDocument UndoManager is used synchronously on the main actor.
+            // Older Foundation SDKs declare this callback @Sendable without isolation.
+            MainActor.assumeIsolated {
+                document.registerRestore(to: from, from: index, command: command)
+                if !document.rebuildingUndo {
+                    if document.model.investigation != nil {
+                        do {
+                            guard let session = document.investigationSession else { throw InvestigationError.missingCase }
+                            let next = index == 0 ? document.history.base : document.history.entries[index - 1].after
+                            try session.record(index < document.history.cursor ? "undo" : "redo", before: document.model, after: next)
+                        } catch {
+                            document.auditFailed?(document.localization.text((error as? InvestigationError)?.localizationKey ?? "investigation.error.auditUnavailable"))
+                            DispatchQueue.main.async { document.rebuildUndo() }; return
+                        }
                     }
+                    document.history.select(index); document.model = document.history.current
+                    document.validateSelection(); document.changed?()
                 }
-                document.history.select(index); document.model = document.history.current
-                document.validateSelection(); document.changed?()
             }
         }
         undoManager?.setActionName(localization.text(command.localizationKey))
