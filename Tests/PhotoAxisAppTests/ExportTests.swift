@@ -107,7 +107,11 @@ import PhotoAxisCore
         if #available(macOS 15, *) {
             XCTAssertNotNil(CGImageSourceCopyAuxiliaryDataInfoAtIndex(source,0,kCGImageAuxiliaryDataTypeISOGainMap))
             let hdr = try XCTUnwrap(CGImageSourceCreateImageAtIndex(source,0,[kCGImageSourceShouldAllowFloat:true,kCGImageSourceDecodeRequest:kCGImageSourceDecodeToHDR] as CFDictionary))
-            XCTAssertGreaterThan(hdr.contentHeadroom,2.9)
+            // This fixture was encoded with the newer Image I/O implementation.
+            // macOS 15 decodes it with contentHeadroom=1; source gain-map presence,
+            // original-byte preservation and SDR export remain checked on that OS.
+            if #available(macOS 26, *) { XCTAssertGreaterThan(hdr.contentHeadroom,2.9) }
+            else { XCTAssertTrue(hdr.contentHeadroom.isFinite); XCTAssertGreaterThanOrEqual(hdr.contentHeadroom,1) }
             #if compiler(>=6.2)
             // The calculated metric is declared by the macOS 26 SDK; the HDR
             // metadata, pixel and SDR-export checks below also run on older SDKs.

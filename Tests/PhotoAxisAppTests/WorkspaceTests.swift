@@ -220,6 +220,10 @@ final class WorkspaceTests: XCTestCase {
             controller.showWindow(nil)
             for (width, height) in [(1440, 900), (1280, 800), (1100, 700)] {
                 window.setFrame(NSRect(x: 30, y: 30, width: width, height: height), display: true)
+                guard abs(window.frame.width - CGFloat(width)) < 0.1,
+                      abs(window.frame.height - CGFloat(height)) < 0.1 else {
+                    throw XCTSkip("Window server constrained \(width)x\(height) to \(window.frame.size); full native layout acceptance requires a sufficiently large desktop")
+                }
                 controller.reloadLayout()
                 let root = controller.workspaceView
                 root.layoutSubtreeIfNeeded(); window.displayIfNeeded()
