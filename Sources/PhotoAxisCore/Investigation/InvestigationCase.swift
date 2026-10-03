@@ -2,7 +2,7 @@ import Foundation
 import CryptoKit
 
 public enum InvestigationError: Error, Equatable {
-    case invalidCase, limit, integrity, locked, protectedDestination, auditUnavailable, staleRedactions, missingCase, ocrUnavailable, videoUnavailable, staleCalibration
+    case invalidCase, limit, integrity, locked, protectedDestination, auditUnavailable, staleRedactions, missingCase, ocrUnavailable, ocrBusy, videoUnavailable, staleCalibration
     public var localizationKey: String { "investigation.error." + String(describing: self) }
 }
 

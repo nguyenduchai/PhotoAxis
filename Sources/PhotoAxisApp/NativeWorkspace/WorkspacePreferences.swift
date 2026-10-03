@@ -1,4 +1,25 @@
-import Foundation
+import AppKit
+
+enum InterfaceAppearance: String, CaseIterable, Sendable {
+    case system, dark, light
+    var nativeAppearance: NSAppearance? {
+        switch self { case .system: return nil; case .dark: return NSAppearance(named: .darkAqua); case .light: return NSAppearance(named: .aqua) }
+    }
+    @MainActor func apply() { NSApp.appearance = nativeAppearance }
+}
+
+struct FilePreferences: Codable, Equatable, Sendable {
+    var recoverySeconds = 10
+    var exportJPEG = false
+    var jpegQuality = 90
+    var linkExportDimensions = true
+    func validated() -> Self {
+        var value = self
+        if ![10,30,60].contains(value.recoverySeconds) { value.recoverySeconds = 10 }
+        value.jpegQuality = min(100,max(1,value.jpegQuality))
+        return value
+    }
+}
 
 enum RulerUnit: String, Codable, CaseIterable, Sendable {
     case pixels = "px", millimeters = "mm", centimeters = "cm", inches = "in"
@@ -55,6 +76,9 @@ final class WorkspacePreferences {
     static let languageKey = "interface.language"
     static let appearanceKey = "canvas.appearance.v1"
     static let brushKey = "paint.defaults.v1"
+    static let themeKey = "interface.appearance.v1"
+    static let filesKey = "files.defaults.v1"
+    static let outlineKey = "tools.brushOutline.v1"
     static let rulerKey = "workspace.rulerUnit.v1"
     private let defaults: UserDefaults
 
@@ -63,6 +87,19 @@ final class WorkspacePreferences {
     var language: InterfaceLanguage {
         get { InterfaceLanguage(rawValue: defaults.string(forKey: Self.languageKey) ?? "system") ?? .system }
         set { defaults.set(newValue.rawValue, forKey: Self.languageKey) }
+    }
+
+    var interfaceAppearance: InterfaceAppearance {
+        get { InterfaceAppearance(rawValue: defaults.string(forKey:Self.themeKey) ?? "system") ?? .system }
+        set { defaults.set(newValue.rawValue,forKey:Self.themeKey) }
+    }
+    var showsBrushOutline: Bool {
+        get { defaults.object(forKey:Self.outlineKey) == nil || defaults.bool(forKey:Self.outlineKey) }
+        set { defaults.set(newValue,forKey:Self.outlineKey) }
+    }
+    var files: FilePreferences {
+        get { (defaults.data(forKey:Self.filesKey).flatMap { try? JSONDecoder().decode(FilePreferences.self,from:$0) } ?? FilePreferences()).validated() }
+        set { if let data = try? JSONEncoder().encode(newValue.validated()) { defaults.set(data,forKey:Self.filesKey) } }
     }
 
     var layout: WorkspaceLayout {

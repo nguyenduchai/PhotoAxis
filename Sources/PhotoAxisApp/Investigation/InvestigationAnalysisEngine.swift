@@ -8,6 +8,13 @@ import UniformTypeIdentifiers
 import PhotoAxisCore
 
 /// All recognition and decoding runs on a worker. No network or generative model.
+private final class VisionRequestCancellation: @unchecked Sendable {
+    let request: VNRequest
+    init(_ request: VNRequest) { self.request = request }
+    // Only cancel crosses threads; request configuration/results stay on its worker.
+    func cancel() { request.cancel() }
+}
+
 enum InvestigationAnalysisEngine {
     static func vietnameseLanguage(supported: [String]) throws -> String {
         guard let language = supported.first(where: { $0.hasPrefix("vi-") }) else { throw InvestigationError.ocrUnavailable }
@@ -28,14 +35,19 @@ enum InvestigationAnalysisEngine {
         }
         return count
     }
-    static func recognize(image: CGImage, item: EvidenceItem, region: EvidenceRegion) throws -> EvidenceOCR {
+    static func recognize(image: CGImage, item: EvidenceItem, region: EvidenceRegion, cancellation: OCRCancellation? = nil) throws -> EvidenceOCR {
         let size = try CanvasSize(width: image.width, height: image.height); try region.validate(in: size)
         guard let crop = image.cropping(to: CGRect(x: region.x, y: region.y, width: region.width, height: region.height)) else { throw InvestigationError.invalidCase }
         let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
+        let handle = VisionRequestCancellation(request)
+        cancellation?.install { handle.cancel() }
+        try cancellation?.check()
         let language = try vietnameseLanguage(supported: request.supportedRecognitionLanguages())
         request.recognitionLanguages = [language]; request.usesLanguageCorrection = false; request.automaticallyDetectsLanguage = false
         try configureTextCompute(request)
-        try Task.checkCancellation(); try VNImageRequestHandler(cgImage: crop, options: [:]).perform([request]); try Task.checkCancellation()
+        try Task.checkCancellation(); try cancellation?.check()
+        try VNImageRequestHandler(cgImage: crop, options: [:]).perform([request])
+        try Task.checkCancellation(); try cancellation?.check()
         let lines = (request.results ?? []).compactMap { observation -> EvidenceOCRLine? in
             guard let candidate = observation.topCandidates(1).first, !candidate.string.isEmpty else { return nil }
             let box = observation.boundingBox

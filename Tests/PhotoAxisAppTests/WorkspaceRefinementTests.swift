@@ -63,10 +63,10 @@ import PhotoAxisCore
         XCTAssertEqual(restored.rulerUnit,.centimeters); XCTAssertEqual(restored.canvasAppearance.background,.light)
         XCTAssertEqual(restored.brushDefaults.diameter,90)
         let settings = SettingsWindowController(preferences:restored,localization:L10n(choice:.english)); defer { settings.close() }
-        settings.categories.selectedSegment = 2; settings.changeCategory(); settings.resetSection()
+        settings.selectCategory(2); settings.resetSection()
         XCTAssertEqual(restored.canvasAppearance,CanvasAppearance()); XCTAssertEqual(restored.rulerUnit,.centimeters)
         XCTAssertEqual(restored.brushDefaults.diameter,90); XCTAssertEqual(restored.language,.english)
-        settings.categories.selectedSegment = 1; settings.resetSection()
+        settings.selectCategory(1); settings.resetSection()
         XCTAssertEqual(restored.layout,WorkspaceLayout()); XCTAssertEqual(restored.rulerUnit,.pixels)
         XCTAssertEqual(restored.brushDefaults.diameter,90); XCTAssertEqual(restored.language,.english)
         defaults.set(Data("bad".utf8),forKey:WorkspacePreferences.brushKey); defaults.set(Data("bad".utf8),forKey:WorkspacePreferences.appearanceKey)
@@ -124,9 +124,9 @@ import PhotoAxisCore
             let (preferences,defaults,name) = fixture(); defer { defaults.removePersistentDomain(forName:name) }
             let settings = SettingsWindowController(preferences:preferences,localization:L10n(choice:language)); defer { settings.close() }
             var changes = 0; settings.layoutChanged = { changes += 1 }
-            settings.showWindow(nil); settings.window!.setContentSize(NSSize(width:680,height:540)); settings.window!.contentView!.layoutSubtreeIfNeeded()
-            XCTAssertEqual(settings.categories.segmentCount,4)
-            for i in 0..<4 { settings.categories.selectedSegment = i; settings.changeCategory(); settings.window!.contentView!.layoutSubtreeIfNeeded() }
+            settings.showWindow(nil); settings.window!.setContentSize(NSSize(width:880,height:540)); settings.window!.contentView!.layoutSubtreeIfNeeded()
+            XCTAssertEqual(settings.categoryButtons.count,6)
+            for i in 0..<6 { settings.selectCategory(i); settings.window!.contentView!.layoutSubtreeIfNeeded() }
             settings.rulers.state = .off; settings.rulerUnits.selectItem(at:3); settings.changeWorkspace()
             XCTAssertFalse(preferences.layout.rulersVisible); XCTAssertEqual(preferences.rulerUnit,.inches)
             settings.canvasBackground.selectItem(at:2); settings.transparency.state = .off; settings.changeCanvas()

@@ -18,6 +18,37 @@ import PhotoAxisCore
     func image(_ store: InvestigationCaseStore, _ coordinator: DocumentCoordinator) async throws -> EvidenceItem {
         try await store.importFile(fixture("ocr-tieng-viet.png"), intake: EvidenceIntake(source: "Synthetic fixture", receiver: "Test"), pipeline: coordinator.pipeline, projects: coordinator.projectStore)
     }
+    func testCancellingStalledOCRReturnsImmediatelyRejectsOverlapAndDiscardsLateResult() async throws {
+        let entered = expectation(description:"worker started"), returned = expectation(description:"caller cancelled"), ended = expectation(description:"worker released")
+        let release = DispatchSemaphore(value:0)
+        defer { release.signal() }
+        let request = Task {
+            do {
+                let _: String = try await OCRExecution.run { cancellation in
+                    entered.fulfill(); release.wait(); ended.fulfill(); return "late result"
+                }
+                XCTFail("A cancelled request must never publish a late result")
+            } catch is CancellationError { returned.fulfill() }
+            catch { XCTFail("Unexpected error: \(error)") }
+        }
+        await fulfillment(of:[entered],timeout:5)
+        request.cancel()
+        await fulfillment(of:[returned],timeout:2)
+        do { let _: String = try await OCRExecution.run { _ in "overlap" }; XCTFail("Do not create another worker while a cancelled worker is still running") }
+        catch { XCTAssertEqual(error as? InvestigationError,.ocrBusy) }
+        release.signal(); await fulfillment(of:[ended],timeout:5)
+        // Worker leaves the gate after publishing its ended signal.
+        try await Task.sleep(for:.milliseconds(50))
+        let value = try await OCRExecution.run { _ in "next request" }; XCTAssertEqual(value,"next request")
+    }
+    func testCancelledRecognitionNeverMutatesCaseOrAuditLog() async throws {
+        let (store,coordinator) = try context(), item = try await image(store,coordinator)
+        let before = try Data(contentsOf:store.manifestURL), events = store.value.events.count
+        let request = Task { try await store.recognize(item.id,region:.init(x:40,y:20,width:1520,height:180),pipeline:coordinator.pipeline,projects:coordinator.projectStore) }
+        request.cancel()
+        do { _ = try await request.value; XCTFail("Cancelled OCR must not complete") } catch is CancellationError {} catch { XCTFail("Unexpected error: \(error)") }
+        XCTAssertEqual(try Data(contentsOf:store.manifestURL),before); XCTAssertEqual(store.value.events.count,events)
+    }
     func testOCRComputeUsesOnlyRequestSupportedCPUDevices() throws {
         let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
         let supported = try request.supportedComputeStageDevices

@@ -23,7 +23,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         NSWindow.allowsAutomaticWindowTabbing = false
         launchLanguage = preferences.language
         localization = L10n(choice: launchLanguage)
-        NSApp.appearance = NSAppearance(named: .darkAqua)
+        preferences.interfaceAppearance.apply()
         documents = DocumentCoordinator(localization: localization, preferences: preferences)
         investigation = InvestigationController(coordinator: documents, localization: localization)
         investigation?.workingOpened = { [weak self] in self?.showWorkspace() }
@@ -128,7 +128,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
     @objc private func exportImage() {
         guard let document = documents.active, !documents.isSaving, !documents.isImporting,
               document.resolveSession(), let window = workspace?.window, exportSheet == nil else { return }
-        let sheet = ExportController(snapshot:document.snapshot(),pipeline:documents.pipeline,localization:localization)
+        let sheet = ExportController(snapshot:document.snapshot(),pipeline:documents.pipeline,localization:localization,defaults:preferences.files)
         exportSheet = sheet
         var requested: (ProjectSnapshot,ExportOptions)?
         sheet.confirmed = { requested = ($0,$1) }

@@ -557,3 +557,33 @@
 "investigation.saveCurrentAnalysis" = "Lưu phân tích thành hồ sơ…";
 "investigation.saveCurrentAnalysisHelp" = "Lưu bản chụp canvas và kết quả phân tích/nhật ký vào .paxcase. File gốc tiếp nhận cần nhập riêng ở Nguồn. Tab chỉnh sửa vẫn giữ nguyên. Sau khi sửa canvas, phân tích lại trước khi lưu một phiên mới.";
 "investigation.currentAnalysisSaved" = "Đã lưu phiên phân tích. Tab chỉnh sửa giữ nguyên; hồ sơ chứa bản dựng và thông tin nguồn tạo.";
+
+// Build 9: native Preferences and appearance.
+"settings.files" = "Lưu và xuất tệp";
+"settings.theme" = "Màu giao diện";
+"settings.theme.system" = "Theo hệ thống";
+"settings.theme.dark" = "Tối";
+"settings.theme.light" = "Sáng";
+"settings.themeHelp" = "Áp dụng ngay cho cửa sổ, panel, thanh công cụ và hộp thoại. Theo hệ thống tự thay đổi cùng giao diện macOS.";
+"settings.display" = "Hiển thị và màu ảnh";
+"settings.displayHelp" = "Màu giao diện độc lập với nền vùng làm việc và lưới trong suốt. Các tùy chọn hiển thị không thay đổi pixel ảnh, lịch sử chỉnh sửa hay màu của tệp xuất.";
+"settings.brushOutline" = "Hiện vòng tròn kích thước cọ trên canvas";
+"settings.cursorHelp" = "Biểu tượng của từng công cụ luôn được giữ. Vòng tròn cọ có thể ẩn để dễ quan sát chi tiết; Option với Clone Stamp vẫn chọn nguồn mẫu.";
+"settings.recovery" = "Khôi phục tài liệu";
+"settings.recoveryInterval" = "Lưu bản khôi phục mỗi";
+"settings.recovery.10" = "10 giây";
+"settings.recovery.30" = "30 giây";
+"settings.recovery.60" = "60 giây";
+"settings.recoveryHelp" = "Luôn bật bảo vệ tài liệu chưa lưu. Chu kỳ mới áp dụng từ lượt chờ tiếp theo. Bản khôi phục chỉ chứa chỉnh sửa đã xác nhận, không ghi đè tệp gốc; hãy dùng Lưu để lưu tài liệu chính thức.";
+"settings.exportDefaults" = "Mặc định khi xuất ảnh";
+"settings.exportFormat" = "Định dạng mặc định";
+"settings.format.png" = "PNG — hỗ trợ trong suốt";
+"settings.format.jpeg" = "JPEG — ảnh nền đục";
+"settings.jpegQuality" = "Chất lượng JPEG (1–100)";
+"settings.exportLinked" = "Giữ tỉ lệ kích thước khi mở Xuất ảnh";
+"settings.exportHelp" = "Áp dụng cho hộp thoại Xuất ảnh được mở tiếp theo. Bạn vẫn có thể thay đổi định dạng và chất lượng trong từng lần xuất. Xuất bản chia sẻ điều tra dùng quy tắc riêng để rà soát dữ liệu nhạy cảm.";
+"settings.fileError" = "Chất lượng JPEG phải là số nguyên từ 1 đến 100. Giá trị chưa hợp lệ sẽ không được lưu.";
+"settings.done" = "Đóng";
+"investigation.cancelOCR" = "Hủy nhận dạng chữ";
+"investigation.ocrCancelled" = "Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký.";
+"investigation.error.ocrBusy" = "Yêu cầu OCR trước đang dừng trong macOS. Bạn có thể tiếp tục chỉnh sửa; thử nhận dạng lại sau khi yêu cầu đó kết thúc.";

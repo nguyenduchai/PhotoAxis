@@ -100,7 +100,11 @@ final class WelcomeCanvasView: SurfaceView {
         let lightweightClip: Bool
         let appearance: CanvasAppearance
     }
-    var canvasAppearance = CanvasAppearance() { didSet { if canvasAppearance != oldValue { layer?.backgroundColor = NSColor(white:canvasAppearance.background.gray,alpha:1).cgColor; requestRender() } } }
+    var showsBrushOutline = true { didSet { updatePaintCursorVisibility() } }
+    private func updatePaintCursorVisibility() {
+        paintCursor.isHidden = !showsBrushOutline || spaceHeld || (document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true)
+    }
+    var canvasAppearance = CanvasAppearance() { didSet { if canvasAppearance != oldValue { surfaceColor = NSColor(white:canvasAppearance.background.gray,alpha:1); requestRender() } } }
     private var requestedKey: RenderKey?
     private var generation = UUID()
     private var panStart: NSPoint?
@@ -149,7 +153,7 @@ final class WelcomeCanvasView: SurfaceView {
         self.document = document; self.pipeline = pipeline
         welcome.isHidden = document != nil
         if switched { painting.reset(); livePerspectiveTask?.cancel(); livePerspectiveKey = nil; requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; dragCursor = nil; cursorPoint = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
-        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); updateLivePerspective(); paintCursor.isHidden = spaceHeld || (document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true); contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
+        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); updateLivePerspective(); updatePaintCursorVisibility(); contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
         window?.invalidateCursorRects(for: self)
     }
     override func layout() {
@@ -411,7 +415,7 @@ final class WelcomeCanvasView: SurfaceView {
         }
     }
     override func keyUp(with event: NSEvent) {
-        if event.keyCode == 49 { spaceHeld = false; panStart = nil; dragCursor = nil; paintCursor.isHidden = document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true; refreshCursor(); window?.invalidateCursorRects(for: self) }
+        if event.keyCode == 49 { spaceHeld = false; panStart = nil; dragCursor = nil; updatePaintCursorVisibility(); refreshCursor(); window?.invalidateCursorRects(for: self) }
         else { editing.keyUp(event); super.keyUp(with: event) }
     }
     override func resignFirstResponder() -> Bool { painting.cancel(); editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; dragCursor = nil; window?.invalidateCursorRects(for: self); return super.resignFirstResponder() }

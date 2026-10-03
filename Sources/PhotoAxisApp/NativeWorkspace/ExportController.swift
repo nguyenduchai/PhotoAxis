@@ -9,7 +9,7 @@ import PhotoAxisCore
     let snapshot: ProjectSnapshot
     private let pipeline: ImagePipeline, localization: L10n, ratio: Double
     private var previewTask: Task<Void,Never>?, generation = 0
-    init(snapshot: ProjectSnapshot, pipeline: ImagePipeline, localization: L10n) {
+    init(snapshot: ProjectSnapshot, pipeline: ImagePipeline, localization: L10n, defaults: FilePreferences = FilePreferences()) {
         self.snapshot = snapshot; self.pipeline = pipeline; self.localization = localization
         ratio = Double(snapshot.model.canvas.width)/Double(snapshot.model.canvas.height)
         let panel = NSPanel(contentRect:NSRect(x:0,y:0,width:680,height:460),styleMask:[.titled],backing:.buffered,defer:false)
@@ -19,14 +19,15 @@ import PhotoAxisCore
         preview.setAccessibilityLabel(localization.text("export.preview")); root.addSubview(preview)
         format.addItems(withTitles:["PNG","JPEG"]); format.target = self; format.action = #selector(optionsChanged)
         widthField.stringValue = String(snapshot.model.canvas.width); heightField.stringValue = String(snapshot.model.canvas.height)
-        ppiField.stringValue = DocumentNumber.format(snapshot.model.ppi,language:Locale.current.identifier); qualityField.stringValue = "90"
+        ppiField.stringValue = DocumentNumber.format(snapshot.model.ppi,language:Locale.current.identifier); qualityField.stringValue = String(defaults.validated().jpegQuality)
+        format.selectItem(at:defaults.exportJPEG ? 1:0)
         let fields: [(String,NSControl)] = [("export.format",format),("document.width",widthField),("document.height",heightField),("document.ppi",ppiField),("export.quality",qualityField),("export.matte",matte)]
         for (index,pair) in fields.enumerated() {
             let label = WorkspaceStyle.label(localization.text(pair.0)); label.frame = NSRect(x:315,y:25+index*43,width:170,height:28); root.addSubview(label)
             pair.1.frame = NSRect(x:490,y:23+index*43,width:170,height:28); pair.1.setAccessibilityLabel(localization.text(pair.0)); root.addSubview(pair.1)
             if let text = pair.1 as? NSTextField { text.delegate = self }
         }
-        link.title = localization.text("transform.link"); link.state = .on; link.frame = NSRect(x:315,y:290,width:345,height:24); root.addSubview(link)
+        link.title = localization.text("transform.link"); link.state = defaults.linkExportDimensions ? .on:.off; link.frame = NSRect(x:315,y:290,width:345,height:24); root.addSubview(link)
         alpha.title = localization.text("export.alpha"); alpha.state = .on; alpha.target = self; alpha.action = #selector(optionsChanged)
         alpha.frame = NSRect(x:315,y:322,width:345,height:24); root.addSubview(alpha)
         matte.color = .white; matte.supportsAlpha = false; matte.target = self; matte.action = #selector(optionsChanged)

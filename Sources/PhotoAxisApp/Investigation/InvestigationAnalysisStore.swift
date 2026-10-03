@@ -44,7 +44,10 @@ extension InvestigationCaseStore {
         let item = try item(id), snapshot = try await intakeSnapshot(id, projects: projects)
         guard let source = snapshot.assets[item.workingSourceSHA256] else { throw InvestigationError.integrity }
         let image = try await pipeline.normalizedImage(source)
-        let record = try await Task.detached { try InvestigationAnalysisEngine.recognize(image: image, item: item, region: region) }.value
+        let record = try await OCRExecution.run { cancellation in
+            try InvestigationAnalysisEngine.recognize(image:image,item:item,region:region,cancellation:cancellation)
+        }
+        try Task.checkCancellation()
         try mutateAnalysis("ocrRecognized", itemID: id, details: ["ocrID": record.id.uuidString, "sourceSHA256": record.sourceSHA256,
                                                                   "language": record.language, "computePolicy": "CPU where supported", "region": String(decoding: try InvestigationDigest.encode(region), as: UTF8.self)]) { $0.ocr.append(record) }
         return record

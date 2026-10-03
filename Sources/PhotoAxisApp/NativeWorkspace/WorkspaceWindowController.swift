@@ -208,6 +208,7 @@ final class WorkspaceView: SurfaceView {
         rulerUnitLabel.stringValue = preferences.rulerUnit.rawValue
         rulerUnitLabel.toolTip = localization.text("settings.rulerHelp")
         canvas.canvasAppearance = preferences.canvasAppearance
+        canvas.showsBrushOutline = preferences.showsBrushOutline
     }
 
     override func layout() {

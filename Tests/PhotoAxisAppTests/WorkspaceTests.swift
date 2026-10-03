@@ -152,7 +152,7 @@ final class WorkspaceTests: XCTestCase {
         settings.widthField.stringValue = "320"; settings.changeWidth()
         XCTAssertEqual(preferences.layout.panelWidth, 320)
         XCTAssertTrue(settings.validationNotice.isHidden)
-        settings.categories.selectedSegment = 1; settings.changeCategory(); settings.showWindow(nil); settings.widthField.selectText(nil); settings.close()
+        settings.selectCategory(1); settings.showWindow(nil); settings.widthField.selectText(nil); settings.close()
         controller.resetWorkspace(); settings.refreshLayoutControls(); settings.showWindow(nil)
         XCTAssertEqual(settings.widthField.stringValue, "300", "A closed Settings editor must refresh after workspace reset")
     }
@@ -175,7 +175,7 @@ final class WorkspaceTests: XCTestCase {
         XCTAssertTrue(root.tools.isHidden); XCTAssertTrue(root.sidebar.isHidden)
         window.sendEvent(tab); controller.reloadLayout()
         XCTAssertFalse(root.chromeHidden)
-        settings.categories.selectedSegment = 1; settings.changeCategory(); settings.showWindow(nil); settings.window?.makeKeyAndOrderFront(nil)
+        settings.selectCategory(1); settings.showWindow(nil); settings.window?.makeKeyAndOrderFront(nil)
         settings.widthField.selectText(nil)
         XCTAssertTrue(settings.window?.firstResponder is NSTextView)
         let fieldTab = NSEvent.keyEvent(with: .keyDown, location: .zero, modifierFlags: [], timestamp: ProcessInfo.processInfo.systemUptime,

@@ -74,7 +74,7 @@ final class DocumentCoordinator {
         guard recoveryLoop == nil else { return }
         recoveryLoop = Task { [weak self] in
             while !Task.isCancelled {
-                do { try await Task.sleep(for:.seconds(10)) } catch { break }
+                do { try await Task.sleep(for:.seconds(self?.preferences?.files.recoverySeconds ?? 10)) } catch { break }
                 guard let self else { break }; await flushRecovery()
             }
         }

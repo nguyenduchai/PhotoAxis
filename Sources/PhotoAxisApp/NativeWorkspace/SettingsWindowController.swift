@@ -9,7 +9,17 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     let columns = NSSegmentedControl(labels:[],trackingMode:.selectOne,target:nil,action:nil)
     let restartNotice: NSTextField
     let validationNotice: NSTextField
-    let categories = NSSegmentedControl(labels:[],trackingMode:.selectOne,target:nil,action:nil)
+    private(set) var selectedCategory = 0
+    private(set) var categoryButtons: [NSButton] = []
+    let appearanceChoices = NSSegmentedControl(labels:[],trackingMode:.selectOne,target:nil,action:nil)
+    let brushOutline = NSButton(checkboxWithTitle:"",target:nil,action:nil)
+    let recoveryInterval = NSPopUpButton(), exportFormat = NSPopUpButton()
+    let jpegQuality = NSTextField(string:"")
+    let exportLinked = NSButton(checkboxWithTitle:"",target:nil,action:nil)
+    let fileValidation = NSTextField(wrappingLabelWithString:"")
+    private let sidebar = SurfaceView(color:WorkspaceStyle.toolbar)
+    private let pageTitle = NSTextField(labelWithString:"")
+    private let categoryKeys = ["settings.general","settings.workspace","settings.canvas","settings.brush","settings.interface","settings.files"]
     let rulers = NSButton(checkboxWithTitle:"",target:nil,action:nil)
     let panelVisible = NSButton(checkboxWithTitle:"",target:nil,action:nil)
     let rulerUnits = NSPopUpButton(), canvasBackground = NSPopUpButton(), gridSizes = NSPopUpButton()
@@ -37,9 +47,9 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
         footer = WorkspaceStyle.label(localization.text("settings.saved"),size:11,secondary:true)
         formatter = NumberFormatter(); formatter.locale = .current; formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 0; formatter.isLenient = false
-        let window = NSWindow(contentRect:NSRect(x:0,y:0,width:760,height:620),styleMask:[.titled,.closable,.resizable],backing:.buffered,defer:false)
+        let window = NSWindow(contentRect:NSRect(x:0,y:0,width:940,height:660),styleMask:[.titled,.closable,.resizable],backing:.buffered,defer:false)
         window.title = localization.text("menu.settings"); window.tabbingMode = .disallowed; window.isReleasedWhenClosed = false
-        window.identifier = .init("settings.window"); window.minSize = NSSize(width:680,height:560)
+        window.identifier = .init("settings.window"); window.minSize = NSSize(width:880,height:560)
         super.init(window:window); buildContent(); refreshLayoutControls(); window.center()
     }
     required init?(coder:NSCoder) { fatalError("Use init(preferences:localization:)") }
@@ -51,14 +61,14 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     }
     private func identify(_ view:NSView,_ key:String) { view.identifier = .init(key); view.setAccessibilityLabel(localization.text(key)) }
     private func row(_ key:String,_ control:NSView) -> NSStackView {
-        let caption = label(key); caption.widthAnchor.constraint(equalToConstant:180).isActive = true
+        let caption = label(key); caption.widthAnchor.constraint(equalToConstant:156).isActive = true
         let row = NSStackView(views:[caption,control]); row.orientation = .horizontal; row.spacing = 16; row.alignment = .centerY
         control.setContentCompressionResistancePriority(.required,for:.horizontal)
         return row
     }
     private func card(_ key:String,_ children:[NSView]) -> NSView {
-        let card = SurfaceView(color:WorkspaceStyle.toolbar); card.layer?.cornerRadius = 9
-        card.layer?.borderWidth = 1; card.layer?.borderColor = WorkspaceStyle.divider.cgColor
+        let card = SurfaceView(color:WorkspaceStyle.toolbar); card.layer?.cornerRadius = 3
+        card.layer?.borderWidth = 1; card.surfaceBorderColor = WorkspaceStyle.divider
         let title = label(key); title.font = .systemFont(ofSize:13,weight:.semibold)
         let stack = NSStackView(views:[title]+children); stack.orientation = .vertical; stack.alignment = .leading; stack.spacing = 12
         stack.translatesAutoresizingMaskIntoConstraints = false; card.addSubview(stack)
@@ -77,7 +87,7 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     }
     private func popup(_ popup:NSPopUpButton,_ titles:[String],key:String,action:Selector) {
         popup.addItems(withTitles:titles.map { localization.text($0) }); identify(popup,key)
-        popup.target = self; popup.action = action; popup.widthAnchor.constraint(equalToConstant:240).isActive = true
+        popup.target = self; popup.action = action; popup.widthAnchor.constraint(equalToConstant:220).isActive = true
     }
     private func checkbox(_ button:NSButton,_ key:String,action:Selector) {
         button.title = localization.text(key); identify(button,key); button.target = self; button.action = action
@@ -85,22 +95,24 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     private func buildContent() {
         window?.contentView = root
         root.autoresizingMask = [.width,.height]
-        let icon = NSImageView(image:NSImage(systemSymbolName:"slider.horizontal.3",accessibilityDescription:nil)!)
-        icon.contentTintColor = .controlAccentColor; icon.frame = NSRect(x:24,y:24,width:46,height:46); root.addSubview(icon)
-        let title = label("settings.title"); title.font = .systemFont(ofSize:24,weight:.semibold)
-        title.frame = NSRect(x:88,y:18,width:550,height:32); root.addSubview(title)
-        let subtitle = label("settings.subtitle",secondary:true); subtitle.frame = NSRect(x:88,y:56,width:550,height:30); root.addSubview(subtitle)
-        categories.segmentCount = 4
-        for (i,key) in ["settings.general","settings.workspace","settings.canvas","settings.brush"].enumerated() { categories.setLabel(localization.text(key),forSegment:i) }
-        categories.selectedSegment = 0; categories.target = self; categories.action = #selector(changeCategory)
-        categories.identifier = .init("settings.categories"); root.addSubview(categories)
-
+        root.addSubview(sidebar)
+        let title = label("settings.title"); title.font = .systemFont(ofSize:16,weight:.semibold)
+        title.frame = NSRect(x:20,y:22,width:178,height:28); sidebar.addSubview(title)
+        for (row,index) in [0,4,1,2,3,5].enumerated() {
+            let button = NSButton(title:localization.text(categoryKeys[index]),target:self,action:#selector(chooseCategory(_:)))
+            button.tag = index; button.bezelStyle = .regularSquare; button.setButtonType(.pushOnPushOff)
+            button.isBordered = false; button.alignment = .left; button.font = .systemFont(ofSize:12)
+            button.frame = NSRect(x:12,y:70+row*38,width:190,height:32)
+            identify(button,categoryKeys[index]); sidebar.addSubview(button); categoryButtons.append(button)
+        }
+        pageTitle.font = .systemFont(ofSize:18,weight:.semibold); pageTitle.textColor = WorkspaceStyle.text
+        root.addSubview(pageTitle)
         languagePopup.addItems(withTitles:[localization.text("language.system"),"Tiếng Việt","English"])
         languagePopup.target = self; languagePopup.action = #selector(changeLanguage); identify(languagePopup,"settings.language")
-        languagePopup.widthAnchor.constraint(equalToConstant:240).isActive = true
+        languagePopup.widthAnchor.constraint(equalToConstant:220).isActive = true
         restartNotice.font = .systemFont(ofSize:11); restartNotice.textColor = .systemOrange
         let info = label("settings.aboutHelp",secondary:true)
-        let version = NSTextField(labelWithString:"PhotoAxis \(Bundle.main.object(forInfoDictionaryKey:"CFBundleShortVersionString") as? String ?? "1.0.0") (\(Bundle.main.object(forInfoDictionaryKey:"CFBundleVersion") as? String ?? "8")) · macOS 14+ · Apple Silicon")
+        let version = NSTextField(labelWithString:"PhotoAxis \(Bundle.main.object(forInfoDictionaryKey:"CFBundleShortVersionString") as? String ?? "1.0.0") (\(Bundle.main.object(forInfoDictionaryKey:"CFBundleVersion") as? String ?? "9")) · macOS 14+ · Apple Silicon")
         version.font = .monospacedDigitSystemFont(ofSize:11,weight:.medium)
         _ = page([card("settings.interface",[row("settings.language",languagePopup),restartNotice]),card("settings.about",[version,info,label("settings.shortcuts",secondary:true)])])
 
@@ -128,30 +140,75 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
             field.widthAnchor.constraint(equalToConstant:66).isActive = true
             slider.tag = i; slider.minValue = i == 0 ? 1:0; slider.maxValue = i == 0 ? 1000:100
             slider.isContinuous = true; slider.target = self; slider.action = #selector(changeBrushSlider(_:)); slider.identifier = .init(key+".slider")
-            slider.widthAnchor.constraint(equalToConstant:190).isActive = true
+            slider.widthAnchor.constraint(equalToConstant:150).isActive = true
             let controls = NSStackView(views:[field,slider,WorkspaceStyle.label(i == 0 ? "px":"%",size:11,secondary:true)]); controls.spacing = 8; controls.alignment = .centerY
             brushRows.append(row(key,controls))
         }
         checkbox(brushAligned,"settings.brushAligned",action:#selector(changeBrushAligned))
         brushValidation.font = .systemFont(ofSize:11); brushValidation.textColor = .systemOrange; brushValidation.isHidden = true
-        _ = page([card("settings.brush",[label("settings.brushHelp",secondary:true)]+brushRows+[brushAligned,brushValidation])])
+        _ = page([card("settings.brush",[label("settings.brushHelp",secondary:true)]+brushRows+[brushAligned,brushValidation,brushOutline,label("settings.cursorHelp",secondary:true)])])
+        checkbox(brushOutline,"settings.brushOutline",action:#selector(changeBrushOutline))
+        appearanceChoices.segmentCount = 3
+        for (i,key) in ["settings.theme.system","settings.theme.dark","settings.theme.light"].enumerated() { appearanceChoices.setLabel(localization.text(key),forSegment:i) }
+        appearanceChoices.target = self; appearanceChoices.action = #selector(changeAppearance)
+        identify(appearanceChoices,"settings.theme")
+        _ = page([card("settings.theme",[appearanceChoices,label("settings.themeHelp",secondary:true)]),card("settings.display",[label("settings.displayHelp",secondary:true)])])
+        popup(recoveryInterval,["settings.recovery.10","settings.recovery.30","settings.recovery.60"],key:"settings.recoveryInterval",action:#selector(changeFiles))
+        popup(exportFormat,["settings.format.png","settings.format.jpeg"],key:"settings.exportFormat",action:#selector(changeFiles))
+        jpegQuality.delegate = self; jpegQuality.widthAnchor.constraint(equalToConstant:80).isActive = true
+        identify(jpegQuality,"settings.jpegQuality")
+        checkbox(exportLinked,"settings.exportLinked",action:#selector(changeFiles))
+        fileValidation.stringValue = localization.text("settings.fileError"); fileValidation.textColor = .systemOrange; fileValidation.isHidden = true
+        _ = page([card("settings.recovery",[row("settings.recoveryInterval",recoveryInterval),label("settings.recoveryHelp",secondary:true)]),card("settings.exportDefaults",[row("settings.exportFormat",exportFormat),row("settings.jpegQuality",jpegQuality),exportLinked,fileValidation,label("settings.exportHelp",secondary:true)])])
         separator.boxType = .separator; root.addSubview(separator)
         resetButton.title = localization.text("settings.resetSection"); resetButton.bezelStyle = .rounded
         resetButton.target = self; resetButton.action = #selector(resetSection); resetButton.identifier = .init("settings.resetSection")
         root.addSubview(resetButton); root.addSubview(footer)
+        let done = NSButton(title:localization.text("settings.done"),target:self,action:#selector(finish))
+        done.bezelStyle = .rounded; done.keyEquivalent = "\r"; done.identifier = .init("settings.done")
+        done.frame = NSRect(x:root.bounds.width-110,y:root.bounds.height-50,width:90,height:30)
+        done.autoresizingMask = [.minXMargin,.minYMargin]; root.addSubview(done)
         root.postsFrameChangedNotifications = true
         NotificationCenter.default.addObserver(self,selector:#selector(resize),name:NSView.frameDidChangeNotification,object:root)
         resize(); changeCategory()
     }
     @objc private func resize() {
         let w = root.bounds.width, h = root.bounds.height
-        categories.frame = NSRect(x:24,y:100,width:w-48,height:30)
-        for page in pages { page.frame = NSRect(x:24,y:148,width:w-48,height:max(0,h-222)) }
-        separator.frame = NSRect(x:24,y:h-60,width:w-48,height:1)
-        footer.frame = NSRect(x:24,y:h-45,width:max(0,w-250),height:18)
-        resetButton.frame = NSRect(x:w-218,y:h-50,width:194,height:30)
+        sidebar.frame = NSRect(x:0,y:0,width:214,height:max(0,h-60))
+        pageTitle.frame = NSRect(x:238,y:22,width:max(0,w-262),height:30)
+        for page in pages { page.frame = NSRect(x:238,y:70,width:max(0,w-262),height:max(0,h-150)) }
+        separator.frame = NSRect(x:0,y:h-60,width:w,height:1)
+        footer.frame = NSRect(x:20,y:h-45,width:max(0,w-350),height:18)
+        resetButton.frame = NSRect(x:w-318,y:h-50,width:194,height:30)
     }
-    @objc func changeCategory() { for (i,page) in pages.enumerated() { page.isHidden = i != categories.selectedSegment } }
+    @objc private func finish() { window?.makeFirstResponder(nil); close() }
+    @objc private func chooseCategory(_ sender:NSButton) { selectCategory(sender.tag) }
+    func selectCategory(_ index:Int) {
+        guard pages.indices.contains(index) else { return }
+        window?.makeFirstResponder(nil); selectedCategory = index; changeCategory()
+    }
+    func changeCategory() {
+        for (i,page) in pages.enumerated() { page.isHidden = i != selectedCategory }
+        pageTitle.stringValue = localization.text(categoryKeys[selectedCategory])
+        for button in categoryButtons {
+            button.state = button.tag == selectedCategory ? .on:.off
+            button.contentTintColor = button.state == .on ? .controlAccentColor:WorkspaceStyle.text
+        }
+    }
+    @objc func changeAppearance() {
+        guard InterfaceAppearance.allCases.indices.contains(appearanceChoices.selectedSegment) else { return }
+        preferences.interfaceAppearance = InterfaceAppearance.allCases[appearanceChoices.selectedSegment]
+        preferences.interfaceAppearance.apply(); layoutChanged?()
+    }
+    @objc func changeBrushOutline() { preferences.showsBrushOutline = brushOutline.state == .on; layoutChanged?() }
+    @objc func changeFiles() {
+        guard let quality = Int(jpegQuality.stringValue), (1...100).contains(quality) else { fileValidation.isHidden = false; return }
+        var files = preferences.files
+        if [10,30,60].indices.contains(recoveryInterval.indexOfSelectedItem) { files.recoverySeconds = [10,30,60][recoveryInterval.indexOfSelectedItem] }
+        files.exportJPEG = exportFormat.indexOfSelectedItem == 1; files.jpegQuality = quality
+        files.linkExportDimensions = exportLinked.state == .on
+        preferences.files = files; fileValidation.isHidden = true
+    }
     @objc func changeLanguage() {
         guard InterfaceLanguage.allCases.indices.contains(languagePopup.indexOfSelectedItem) else { return }
         preferences.language = InterfaceLanguage.allCases[languagePopup.indexOfSelectedItem]
@@ -180,6 +237,7 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     }
     func controlTextDidChange(_ notification:Notification) {
         guard let field = notification.object as? NSTextField else { return }
+        if field === jpegQuality { changeFiles(); return }
         if field === widthField { changeWidth(); return }
         guard brushFields.contains(field), let value = DocumentNumber.parse(field.stringValue,language:Locale.current.identifier), value.isFinite,
               (brushSliders[field.tag].minValue...brushSliders[field.tag].maxValue).contains(value) else { brushValidation.isHidden = false; return }
@@ -197,11 +255,13 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
     @objc func changeBrushAligned() { var defaults = preferences.brushDefaults; defaults.aligned = brushAligned.state == .on; preferences.brushDefaults = defaults }
     @objc func resetSection() {
         window?.makeFirstResponder(nil)
-        switch categories.selectedSegment {
+        switch selectedCategory {
         case 0: preferences.language = .system
         case 1: preferences.resetLayout(); preferences.rulerUnit = .pixels
         case 2: preferences.canvasAppearance = CanvasAppearance()
-        case 3: preferences.brushDefaults = BrushSettings()
+        case 3: preferences.brushDefaults = BrushSettings(); preferences.showsBrushOutline = true
+        case 4: preferences.interfaceAppearance = .system; preferences.interfaceAppearance.apply()
+        case 5: preferences.files = FilePreferences()
         default: return
         }
         refreshLayoutControls(); layoutChanged?()
@@ -223,6 +283,13 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
             brushSliders[i].doubleValue = value
         }
         brushAligned.state = defaults.aligned ? .on:.off
+        brushOutline.state = preferences.showsBrushOutline ? .on:.off
+        appearanceChoices.selectedSegment = InterfaceAppearance.allCases.firstIndex(of:preferences.interfaceAppearance) ?? 0
+        let files = preferences.files
+        recoveryInterval.selectItem(at:[10,30,60].firstIndex(of:files.recoverySeconds) ?? 0)
+        exportFormat.selectItem(at:files.exportJPEG ? 1:0); exportLinked.state = files.linkExportDimensions ? .on:.off
+        if jpegQuality.currentEditor() == nil { jpegQuality.stringValue = String(files.jpegQuality) }
+        fileValidation.isHidden = true
         validationNotice.isHidden = true; brushValidation.isHidden = true
     }
 }

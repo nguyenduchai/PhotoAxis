@@ -55,6 +55,10 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     private var annotationUsesSource = false
     var hasPendingParameters: Bool { pending != nil }
     private var ocrSupported = false
+    private var ocrTask: Task<Void,Never>?
+    private let cancelOCRButton = NSButton()
+    var isRecognizingText: Bool { ocrTask != nil }
+    @objc func cancelOCR() { ocrTask?.cancel() }
     private let table = NSTableView()
     private let detail = NSTextView()
     private let heading = NSTextField(labelWithString: "")
@@ -75,6 +79,10 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         let pdf = button("investigation.exportPDF", #selector(exportPDF)), catalog = button("investigation.exportCatalog", #selector(exportCatalog))
         let log = button("investigation.exportLog", #selector(exportLog)), caseInfo = button("investigation.editCase", #selector(editCase))
         let ocr = button("investigation.ocr", #selector(recognizeText)), review = button("investigation.reviewOCR", #selector(reviewOCR))
+        cancelOCRButton.title = localization.text("investigation.cancelOCR")
+        cancelOCRButton.target = self; cancelOCRButton.action = #selector(cancelOCR)
+        cancelOCRButton.setAccessibilityIdentifier("investigation.cancelOCR"); cancelOCRButton.isHidden = true
+        analysisPanel.append(cancelOCRButton)
         let video = button("investigation.importVideo", #selector(importVideo)), frame = button("investigation.extractFrame", #selector(extractFrame))
         let calibrate = button("investigation.calibrate", #selector(calibrate)), measure = button("investigation.measure", #selector(measure))
         let analysis = button("investigation.exportAnalysis", #selector(exportAnalysis))
@@ -570,18 +578,24 @@ extension InvestigationController {
         }
         guard values.count <= 64 else { throw InvestigationError.limit }; return values
     }
-    @objc private func recognizeText() {
+    @objc func recognizeText() {
         guard !busy, canAnalyze else { return }; busy = true
-        Task { defer { busy = false }; do {
+        ocrTask = Task { defer { ocrTask = nil; cancelOCRButton.isHidden = true; busy = false }; do {
             let (store, item) = try await prepareActiveImage(), anchor = selectionAnchor
             let snapshot = try await store.intakeSnapshot(item.id, projects: coordinator.projectStore), source = snapshot.assets[item.workingSourceSHA256]!
             let size = source.descriptor.size
             guard let values = await parameters("investigation.ocr", fields: [("investigation.x", "0"), ("investigation.y", "0"), ("investigation.width", String(size.width)), ("investigation.height", String(size.height))], help: localization.text("investigation.ocrHelp")) else { return }
+            try Task.checkCancellation()
             let numbers = values.compactMap(Int.init); guard numbers.count == 4 else { throw InvestigationError.invalidCase }
             let region = EvidenceRegion(x: numbers[0], y: numbers[1], width: numbers[2], height: numbers[3])
+            cancelOCRButton.isHidden = false
             let record = try await store.recognize(item.id, region: region, pipeline: coordinator.pipeline, projects: coordinator.projectStore)
+            try Task.checkCancellation()
             guard anchor == selectionAnchor else { return }
+            cancelOCRButton.isHidden = true
             try await showOCR(record, store: store)
+        } catch is CancellationError {
+            alert(localization.text("investigation.ocrCancelled"))
         } catch { failure(error) } }
     }
     @objc private func reviewOCR() {

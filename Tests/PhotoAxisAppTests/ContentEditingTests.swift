@@ -176,7 +176,7 @@ import PhotoAxisCore
         for character in "tieengs vieetj " {
             let value=String(character),code=try XCTUnwrap(keyCodes[character])
             let event=try XCTUnwrap(NSEvent.keyEvent(with:.keyDown,location:.zero,modifierFlags:[],timestamp:ProcessInfo.processInfo.systemUptime,windowNumber:window.windowNumber,context:nil,characters:value,charactersIgnoringModifiers:value,isARepeat:false,keyCode:code))
-            host.editor.keyDown(with:event)
+            NSApp.sendEvent(event)
             try await Task.sleep(for:.milliseconds(30))
         }
         host.editor.unmarkText();host.editor.didChangeText()

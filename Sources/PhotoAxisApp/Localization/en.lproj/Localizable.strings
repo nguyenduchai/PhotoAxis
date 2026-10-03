@@ -557,3 +557,33 @@
 "investigation.saveCurrentAnalysis" = "Save analysis as a case…";
 "investigation.saveCurrentAnalysisHelp" = "Save the canvas snapshot and analysis/log to .paxcase. Received originals must be imported separately under Sources. The editable tab is preserved. After changing the canvas, analyze again before saving a new session.";
 "investigation.currentAnalysisSaved" = "Analysis saved. The editable tab is preserved; the case contains a rendered snapshot and its derivation details.";
+
+// Build 9: native Preferences and appearance.
+"settings.files" = "File Handling";
+"settings.theme" = "Color Theme";
+"settings.theme.system" = "Use System";
+"settings.theme.dark" = "Dark";
+"settings.theme.light" = "Light";
+"settings.themeHelp" = "Applies immediately to windows, panels, toolbars and dialogs. Use System follows macOS appearance changes.";
+"settings.display" = "Display and Image Color";
+"settings.displayHelp" = "The interface theme is independent of the canvas surround and transparency grid. Display preferences do not change image pixels, edit history or exported colors.";
+"settings.brushOutline" = "Show brush size outline on canvas";
+"settings.cursorHelp" = "Each tool keeps its pointer icon. Hide the brush outline to inspect details; Option with Clone Stamp still samples the source.";
+"settings.recovery" = "Document Recovery";
+"settings.recoveryInterval" = "Save recovery copy every";
+"settings.recovery.10" = "10 seconds";
+"settings.recovery.30" = "30 seconds";
+"settings.recovery.60" = "60 seconds";
+"settings.recoveryHelp" = "Recovery protection remains enabled. The new interval applies on the next wait cycle. Copies contain committed edits and never overwrite originals; use Save for your project file.";
+"settings.exportDefaults" = "Export Defaults";
+"settings.exportFormat" = "Default format";
+"settings.format.png" = "PNG — transparency support";
+"settings.format.jpeg" = "JPEG — opaque image";
+"settings.jpegQuality" = "JPEG quality (1–100)";
+"settings.exportLinked" = "Link dimensions when opening Export";
+"settings.exportHelp" = "Applies to the next Export dialog. Format and quality can still be changed for each export. Investigation sharing keeps its own sensitive-data review rules.";
+"settings.fileError" = "JPEG quality must be an integer from 1 to 100. Invalid values are not saved.";
+"settings.done" = "Close";
+"investigation.cancelOCR" = "Cancel text recognition";
+"investigation.ocrCancelled" = "OCR cancelled. No unfinished result was written to the audit log.";
+"investigation.error.ocrBusy" = "The previous OCR request is still stopping in macOS. You can continue editing; retry recognition after it finishes.";

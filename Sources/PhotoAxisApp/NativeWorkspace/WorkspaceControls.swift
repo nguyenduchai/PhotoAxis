@@ -1,12 +1,18 @@
 import AppKit
 
 enum WorkspaceStyle {
-    static let canvas = NSColor(white: 30 / 255, alpha: 1)
-    static let panel = NSColor(white: 43 / 255, alpha: 1)
-    static let toolbar = NSColor(white: 50 / 255, alpha: 1)
-    static let control = NSColor(white: 60 / 255, alpha: 1)
-    static let divider = NSColor(white: 69 / 255, alpha: 1)
-    static let text = NSColor(white: 217 / 255, alpha: 1)
+    private static func gray(_ name: String, dark: CGFloat, light: CGFloat) -> NSColor {
+        NSColor(name:NSColor.Name("PhotoAxis."+name),dynamicProvider: { appearance in
+            NSColor(white:appearance.bestMatch(from:[.darkAqua,.aqua]) == .darkAqua ? dark:light,alpha:1)
+        })
+    }
+    static let canvas = gray("canvas",dark:30/255,light:0.78)
+    static let panel = gray("panel",dark:43/255,light:0.91)
+    static let toolbar = gray("toolbar",dark:50/255,light:0.96)
+    static let control = gray("control",dark:60/255,light:0.82)
+    static let selected = gray("selected",dark:0.20,light:0.75)
+    static let divider = gray("divider",dark:69/255,light:0.68)
+    static let text = gray("text",dark:217/255,light:0.12)
 
     @MainActor static func label(_ text: String, size: CGFloat = 12, secondary: Bool = false) -> NSTextField {
         let label = NSTextField(labelWithString: text)
@@ -21,12 +27,23 @@ enum WorkspaceStyle {
 @MainActor
 class SurfaceView: NSView {
     override var isFlipped: Bool { true }
+    var surfaceColor: NSColor { didSet { refreshSurface() } }
+    var surfaceBorderColor: NSColor? { didSet { refreshSurface() } }
     init(color: NSColor = WorkspaceStyle.panel) {
+        surfaceColor = color
         super.init(frame: .zero)
         wantsLayer = true
-        layer?.backgroundColor = color.cgColor
+        refreshSurface()
     }
     required init?(coder: NSCoder) { fatalError("Use init(color:)") }
+    private func refreshSurface() {
+        effectiveAppearance.performAsCurrentDrawingAppearance {
+            layer?.backgroundColor = surfaceColor.cgColor
+            layer?.borderColor = surfaceBorderColor?.cgColor
+        }
+        needsDisplay = true
+    }
+    override func viewDidChangeEffectiveAppearance() { super.viewDidChangeEffectiveAppearance(); refreshSurface() }
 }
 
 @MainActor
@@ -63,7 +80,7 @@ class WorkspaceButton: NSButton {
     override func mouseExited(with event: NSEvent) { hover = false; needsDisplay = true }
     override func draw(_ dirtyRect: NSRect) {
         if state == .on || (isEnabled && (hover || isHighlighted)) {
-            (state == .on ? NSColor(white: 0.20, alpha: 1) : WorkspaceStyle.control).setFill()
+            (state == .on ? WorkspaceStyle.selected : WorkspaceStyle.control).setFill()
             NSBezierPath(roundedRect: bounds.insetBy(dx: 1, dy: 1), xRadius: 3, yRadius: 3).fill()
         }
         super.draw(dirtyRect)
