@@ -1,3 +1,11 @@
+# PhotoAxis1.0.0(4) — Scan1, bản phát triển
+
+Scan1 thêm nhận diện trang/căn góc chữ, làm sạch nền/đen trắng thích nghi, nắn bow hai trục thủ công, chuẩn hóa A4/Letter/pixel/PPI và batch1–50ảnh xuất PNG/project/PDF/manifest. Giữ nguồn và typed layers, một Apply một Undo; file có Scan dùngschema3, reader mới vẫn đọc1/2. Fullsuite155PASS/1knownTelexFAIL/3SKIP;11Scan testsPASS, Release/ad-hoc PASS. [Hướng dẫn](HUONG_DAN_SCAN.md), [bằng chứng và giới hạn](bao-cao/SCAN_2026-10-03.md).
+
+Scan1 adds page/text-angle detection, paper cleanup and adaptive black/white, manual two-axis bow correction, standard page sizes/PPI and serial batch PNG/editable-project/PDF/hash-manifest output for up to50images. Source bytes remain embedded; Scan projects require schema3, with backward reading of1/2. Real camera/book/fullquota and supported-target qualification are pending. Local155PASS/1knownTelexFAIL/3SKIP;11newScan testsPASS. No signed/notarized stable installer yet.
+
+---
+
 # PhotoAxis 1.0.0 (3) — release notes chuẩn bị, chưa public
 
 Nghiệm thu local03/10/2026 bổ sung New presets/5tab isolation/History–saved markers nativeVI/EN trên build3:19/43caPASS. Phím Telex VI nhập hai dòng/commit/cancel có bằng chứng,EN source/VNI còn thiếu. Benchmark riêng3PASS nhưngcorner chỉ31% mẫu worker≤33,333ms; chưa chứng nhận nativeFPS/máy đích. Không sửa mã sản phẩm hoặc đổi trạng thái public. [Báo cáo](bao-cao/P12-native2.md).

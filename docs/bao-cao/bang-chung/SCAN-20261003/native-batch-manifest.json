@@ -1,0 +1,62 @@
+{
+  "applicationBuild": "4",
+  "applicationVersion": "1.0.0",
+  "autoDeskew": true,
+  "autoPage": true,
+  "createdAt": "2026-10-03T05:47:26Z",
+  "engine": "PhotoAxis Scan 1 / Vision rectangles1 / Metal linear-sRGB",
+  "manualDeskewDegrees": 0,
+  "operatingSystem": "Phiên bản 27.0.1 (Bản dựng 26A434)",
+  "pages": [
+    {
+      "canvas": {
+        "height": 800,
+        "width": 600
+      },
+      "deskewDegrees": 0,
+      "index": 1,
+      "originalName": "02.png",
+      "pngSHA256": "224285bf0670aff05a71fc5e8e00dcc95b8a726939efa665a364987df41e0027",
+      "projectSHA256": "7d60793ac892f03984492dba4362701ee9680035e50a1142139c3e32dd435c0c",
+      "requiresReview": true,
+      "sourceBytes": 15090,
+      "sourceSHA256": "257b2f4232be8b67e107c8b8d2aa8e0f26029eff92a24cb47a5c1e7f05170ee4",
+      "warnings": [
+        "page-not-detected",
+        "text-angle-not-detected"
+      ]
+    },
+    {
+      "canvas": {
+        "height": 800,
+        "width": 600
+      },
+      "deskewDegrees": 0,
+      "index": 2,
+      "originalName": "01.png",
+      "pngSHA256": "224285bf0670aff05a71fc5e8e00dcc95b8a726939efa665a364987df41e0027",
+      "projectSHA256": "38a97c357b1ece75885c06f814f68ff87c42dc034698a0113203d79571183bd3",
+      "requiresReview": true,
+      "sourceBytes": 15090,
+      "sourceSHA256": "257b2f4232be8b67e107c8b8d2aa8e0f26029eff92a24cb47a5c1e7f05170ee4",
+      "warnings": [
+        "page-not-detected",
+        "text-angle-not-detected"
+      ]
+    }
+  ],
+  "pdfSHA256": "4b789b9afa64bb99289a17abc40bc9da9c6e26da780b3527b5969e736138862c",
+  "ppi": 300,
+  "recipe": {
+    "curveX": 0,
+    "curveY": 0,
+    "denoise": 0.1,
+    "enabled": true,
+    "mode": "color",
+    "paper": 0.8,
+    "radius": 0.025,
+    "sharpness": 0.3,
+    "threshold": 0.08
+  },
+  "schema": 1
+}

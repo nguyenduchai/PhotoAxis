@@ -1,0 +1,944 @@
+PASS: Xcode project matches source inventory
+$REPO/Sources/PhotoAxisApp/Localization/en.lproj/Localizable.strings: OK
+$REPO/Sources/PhotoAxisApp/Localization/vi.lproj/Localizable.strings: OK
+PASS: 452 matching vi/en keys; 381 static/dynamic references resolved
+Config/Info.plist: OK
+PhotoAxis.xcodeproj/project.pbxproj: OK
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project PhotoAxis.xcodeproj -scheme PhotoAxis -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath $BUILD_ROOT/DerivedData -resultBundlePath $BUILD_ROOT/test-results/PhotoAxis-20261003-124409-60198.xcresult CODE_SIGN_IDENTITY=- DEVELOPMENT_TEAM= test
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+    DEVELOPMENT_TEAM =
+
+Writing result bundle at path:
+	$BUILD_ROOT/test-results/PhotoAxis-20261003-124409-60198.xcresult
+
+note: Using codesigning identity override: -
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (4 targets)
+    Target 'PhotoAxisAppTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxis' in project 'PhotoAxis'
+    Target 'PhotoAxisCoreTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxis' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxisCore' in project 'PhotoAxis' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone/PhotoAxis.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+SwiftDriver PhotoAxis normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxis -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxis (in target 'PhotoAxis' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxis (in target 'PhotoAxis' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxis normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxis -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.abi.json (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.swiftmodule/arm64-apple-macos.abi.json
+
+SwiftDriver PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ ScanTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ScanTests.swift (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ScanTests.swift (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftPerFileCompile ScanTests.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxisAppTests (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxisAppTests (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftsourceinfo (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json
+
+SwiftDriverJobDiscovery normal arm64 Compiling ScanTests.swift (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Ld $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests normal (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L$BUILD_ROOT/DerivedData/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F$BUILD_ROOT/DerivedData/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis -Xlinker -object_path_lto -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_lto.o -rdynamic -Xlinker -dependency_info -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -framework PhotoAxisCore $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib -Xlinker -no_adhoc_codesign -o $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests
+
+CopySwiftLibs $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/PlugIns --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Library/SystemExtensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Extensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.2O10Sw/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ExtractAppIntentsMetadata (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.2O10Sw/Metal.xctoolchain --module-name PhotoAxisAppTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk --xcode-version 27A266a --platform-family macOS --deployment-target 14.0 --bundle-identifier local.photoaxis.apptests --output $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Resources --target-triple arm64-apple-macos14.0 --binary-file $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests --dependency-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_dependency_info.dat --stringsdata-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList --metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests.DependencyMetadataFileList --static-metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests.DependencyStaticMetadataFileList --swift-const-vals-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-03 12:44:18.252 appintentsmetadataprocessor[60289:472906] Starting appintentsmetadataprocessor export
+2026-10-03 12:44:18.256 appintentsmetadataprocessor[60289:472906] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib: replacing existing signature
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --entitlements $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis.app.xcent --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app: replacing existing signature
+
+Validate $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-validationUtility $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-lsregisterurl --record-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules
+
+2026-10-03 12:44:18.595 xcodebuild[60219:472363]  DVTAssertions: Warning in IDEFrameworks/IDEFoundation/Execution/LaunchSystem/IDELaunchSession.m:395
+Details:  setRunnablePIDWithDiagnostics:logSection:andCompletionHandler: called without a completion handler - blocking until diagnostics setup completes. Callers should migrate to using a completion handler for better performance.
+Object:   <IDELaunchSession: 0x7ada24f600>
+Method:   -setRunnablePIDWithDiagnostics:logSection:andCompletionHandler:
+Thread:   <NSThread: 0x7ada2630c0>{number = 6, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+Test Suite 'All tests' started at 2026-10-03 12:44:19.318.
+Test Suite 'PhotoAxisCoreTests.xctest' started at 2026-10-03 12:44:19.318.
+Test Suite 'ExportOptionsTests' started at 2026-10-03 12:44:19.318.
+Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' started.
+Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' passed (0.001 seconds).
+Test Suite 'ExportOptionsTests' passed at 2026-10-03 12:44:19.321.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.002) seconds
+Test Suite 'InvestigationTests' started at 2026-10-03 12:44:19.321.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' passed (0.005 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' passed (0.002 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' passed (0.002 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' passed (0.002 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' started.
+Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' passed (0.003 seconds).
+Test Suite 'InvestigationTests' passed at 2026-10-03 12:44:19.342.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.018 (0.021) seconds
+Test Suite 'ProjectFormatTests' started at 2026-10-03 12:44:19.342.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' passed (0.008 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' passed (0.005 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' passed (0.015 seconds).
+Test Suite 'ProjectFormatTests' passed at 2026-10-03 12:44:19.372.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.028 (0.030) seconds
+Test Suite 'ScanModelTests' started at 2026-10-03 12:44:19.372.
+Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' started.
+Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' passed (0.001 seconds).
+Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' started.
+Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' passed (0.002 seconds).
+Test Suite 'ScanModelTests' passed at 2026-10-03 12:44:19.375.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'PhotoAxisCoreTests.xctest' passed at 2026-10-03 12:44:19.375.
+	 Executed 17 tests, with 0 failures (0 unexpected) in 0.050 (0.057) seconds
+Test Suite 'All tests' passed at 2026-10-03 12:44:19.375.
+	 Executed 17 tests, with 0 failures (0 unexpected) in 0.050 (0.057) seconds
+􀟈 Test run started.
+􀄵 Testing Library Version: 2084
+􀄵 Target Platform: arm64e-apple-macos14.0
+􀟈 Suite ImageAdjustmentTests started.
+􀟈 Suite ContentTests started.
+􀟈 Suite MultiLayerGeometryTests started.
+􀟈 Suite DocumentTests started.
+􀟈 Suite PerspectiveGeometryTests started.
+􀟈 Suite CropGeometryTests started.
+􀟈 Test perspectiveRoundTripPreservesCornerIdentity() started.
+􀟈 Suite LayerHistoryTests started.
+􀟈 Test validatesDimensionsBeforeAllocation() started.
+􀟈 Test retinaZoomAndPanRoundTrip() started.
+􀟈 Test largeTranslationIsNotMistakenForSingularity() started.
+􀟈 Test shapeColorAndContentKeepTransformsAndClip() started.
+􀟈 Test typedContentValidationAndAtomicLock() started.
+􀟈 Test rejectsSingularityAndNonFiniteInput() started.
+􀟈 Test contentLayerQuotaAndHistoryRestoration() started.
+􀟈 Test documentOperationsComposeAfterLayerMapping() started.
+􀟈 Test backgroundsStayTypedAndLocked() started.
+􀟈 Test anchoredZoomAndBackingChangePreserveDocumentPoint() started.
+􀟈 Test boundsAndInvalidChangesAreAtomic() started.
+􀟈 Test quotasAreAtomicAndDeduplicateSources() started.
+􀟈 Test duplicateAndGeometryPreserveStoredParametersAndSharedSource() started.
+􀟈 Test mixedLayerCropUsesCommonMappingAndIsAtomic() started.
+􀟈 Test lockedLayerProtectionAndSharedDuplicate() started.
+􀟈 Test historyBranchAndSavedIdentitySurviveTrimming() started.
+􀟈 Test historyBudgetCountsRedoOnlyAssetsOnce() started.
+􀟈 Test homogeneousScaleDoesNotChangeTextRouting() started.
+􀟈 Test placementPreservesSourceAndInsertsAboveSelection() started.
+􀟈 Test unsafeGeometryIsRejectedAtomically() started.
+􀟈 Test geometryComposesWithoutLosingProjectiveMapping() started.
+􁁛 Test perspectiveRoundTripPreservesCornerIdentity() passed after 0.001 seconds.
+􀟈 Test cornerMappingInverseAndProjectedGrid() started.
+􀟈 Test invalidOperationIsAtomicAndViewportIndependent() started.
+􀟈 Test rejectsInvalidPolygonsAndSingularDomains() started.
+􀟈 Test outputModesLimitsAndSwap() started.
+􁁛 Test retinaZoomAndPanRoundTrip() passed after 0.001 seconds.
+􀟈 Test recoversKnownIndependentAnalyticHomography() started.
+􁁛 Test validatesDimensionsBeforeAllocation() passed after 0.001 seconds.
+􀟈 Test layerIdentityClipsHiddenLockedAndRepeatedCrop() started.
+􁁛 Test shapeColorAndContentKeepTransformsAndClip() passed after 0.001 seconds.
+􁁛 Test typedContentValidationAndAtomicLock() passed after 0.001 seconds.
+􁁛 Test largeTranslationIsNotMistakenForSingularity() passed after 0.001 seconds.
+􁁛 Test backgroundsStayTypedAndLocked() passed after 0.001 seconds.
+􁁛 Test rejectsSingularityAndNonFiniteInput() passed after 0.001 seconds.
+􀟈 Test repeatedCropIntersectsAndEmptyLayersAreRetained() started.
+􀟈 Test allNineAnchorsAndPPIOnly() started.
+􁁛 Test documentOperationsComposeAfterLayerMapping() passed after 0.001 seconds.
+􀟈 Test cropMapsEveryLayerAndKeepsSourceClip() started.
+􁁛 Test anchoredZoomAndBackingChangePreserveDocumentPoint() passed after 0.001 seconds.
+􀟈 Test rotationsFlipsAndPixelOutput() started.
+􀟈 Test invalidCropAtomicAndProjectiveClip() started.
+􁁛 Test duplicateAndGeometryPreserveStoredParametersAndSharedSource() passed after 0.001 seconds.
+􁁛 Test historyBranchAndSavedIdentitySurviveTrimming() passed after 0.001 seconds.
+􁁛 Test boundsAndInvalidChangesAreAtomic() passed after 0.001 seconds.
+􁁛 Test homogeneousScaleDoesNotChangeTextRouting() passed after 0.001 seconds.
+􁁛 Test quotasAreAtomicAndDeduplicateSources() passed after 0.001 seconds.
+􁁛 Test contentLayerQuotaAndHistoryRestoration() passed after 0.002 seconds.
+􁁛 Test mixedLayerCropUsesCommonMappingAndIsAtomic() passed after 0.001 seconds.
+􁁛 Test unsafeGeometryIsRejectedAtomically() passed after 0.001 seconds.
+􁁛 Test geometryComposesWithoutLosingProjectiveMapping() passed after 0.001 seconds.
+􁁛 Test lockedLayerProtectionAndSharedDuplicate() passed after 0.002 seconds.
+􁁛 Test placementPreservesSourceAndInsertsAboveSelection() passed after 0.001 seconds.
+􁁛 Test cornerMappingInverseAndProjectedGrid() passed after 0.002 seconds.
+􁁛 Test invalidOperationIsAtomicAndViewportIndependent() passed after 0.002 seconds.
+􁁛 Test outputModesLimitsAndSwap() passed after 0.002 seconds.
+􁁛 Test rejectsInvalidPolygonsAndSingularDomains() passed after 0.002 seconds.
+􁁛 Test recoversKnownIndependentAnalyticHomography() passed after 0.002 seconds.
+􁁛 Suite MultiLayerGeometryTests passed after 0.003 seconds.
+􁁛 Suite ImageAdjustmentTests passed after 0.003 seconds.
+􁁛 Suite ContentTests passed after 0.003 seconds.
+􁁛 Suite DocumentTests passed after 0.003 seconds.
+􁁛 Test repeatedCropIntersectsAndEmptyLayersAreRetained() passed after 0.001 seconds.
+􁁛 Test layerIdentityClipsHiddenLockedAndRepeatedCrop() passed after 0.002 seconds.
+􁁛 Suite PerspectiveGeometryTests passed after 0.003 seconds.
+􁁛 Test invalidCropAtomicAndProjectiveClip() passed after 0.002 seconds.
+􁁛 Test cropMapsEveryLayerAndKeepsSourceClip() passed after 0.002 seconds.
+􁁛 Test rotationsFlipsAndPixelOutput() passed after 0.002 seconds.
+􁁛 Test allNineAnchorsAndPPIOnly() passed after 0.002 seconds.
+􁁛 Suite CropGeometryTests passed after 0.005 seconds.
+􁁛 Test historyBudgetCountsRedoOnlyAssetsOnce() passed after 0.024 seconds.
+􁁛 Suite LayerHistoryTests passed after 0.025 seconds.
+􁁛 Test run with 33 tests in 7 suites passed after 0.025 seconds.
+2026-10-03 12:44:20.337224+0700 PhotoAxis[60313:473061] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.336416+0700 PhotoAxis[60313:473059] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.337846+0700 PhotoAxis[60313:473063] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.338232+0700 PhotoAxis[60313:473063] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.338238+0700 PhotoAxis[60313:473061] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.338227+0700 PhotoAxis[60313:473059] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.338519+0700 PhotoAxis[60313:473061] [Connection] Will NOT re-try to establish the connection
+2026-10-03 12:44:20.338554+0700 PhotoAxis[60313:473060] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.338568+0700 PhotoAxis[60313:473060] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-03 12:44:20.458582+0700 PhotoAxis[60313:473051] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to <TEMP_PATH>
+2026-10-03 12:44:20.537636+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:20.546420+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:20.767181+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:20.771729+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.123745+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.128270+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.130139+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.134599+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.136546+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.140990+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.142489+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.147365+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.149550+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.154045+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.156336+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.161054+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.170227+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.174614+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.176066+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.180594+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Suite 'All tests' started at 2026-10-03 12:44:21.191.
+Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-03 12:44:21.192.
+Test Suite 'AcceptanceWorkflowTests' started at 2026-10-03 12:44:21.192.
+Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' started.
+2026-10-03 12:44:21.195425+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.199724+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.336164+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:21.340295+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' passed (0.225 seconds).
+Test Suite 'AcceptanceWorkflowTests' passed at 2026-10-03 12:44:21.418.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.225 (0.226) seconds
+Test Suite 'BenchmarkTests' started at 2026-10-03 12:44:21.418.
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' started.
+$REPO/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' skipped (0.002 seconds).
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' started.
+$REPO/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' skipped (0.001 seconds).
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' started.
+$REPO/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' skipped (0.003 seconds).
+Test Suite 'BenchmarkTests' passed at 2026-10-03 12:44:21.426.
+	 Executed 3 tests, with 3 tests skipped and 0 failures (0 unexpected) in 0.006 (0.007) seconds
+Test Suite 'ContentEditingTests' started at 2026-10-03 12:44:21.426.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' started.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' passed (0.164 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' started.
+2026-10-03 12:44:21.603478+0700 PhotoAxis[60313:473115] [Common] Unable to obtain a task name port right for pid 412: (os/kern) failure (0x5)
+$REPO/Tests/PhotoAxisAppTests/ContentEditingTests.swift:183: error: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : XCTAssertEqual failed: ("tieengs vieetj ") is not equal to ("tiếng việt ")
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' failed (1.611 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' started.
+2026-10-03 12:44:23.204694+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.209151+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.247935+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.252905+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' passed (0.425 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' started.
+2026-10-03 12:44:23.632640+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.636893+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.674157+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.679031+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' passed (0.283 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' started.
+2026-10-03 12:44:23.912311+0700 PhotoAxis[60313:473051] [SafariPlatformSupport] Asked to display OTP completion list, but could not identify a key window. Bailing.
+2026-10-03 12:44:23.918124+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.922577+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' passed (0.034 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' started.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' passed (0.004 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' started.
+2026-10-03 12:44:23.951914+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.956294+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' passed (0.020 seconds).
+Test Suite 'ContentEditingTests' failed at 2026-10-03 12:44:23.970.
+	 Executed 7 tests, with 1 failure (0 unexpected) in 2.542 (2.544) seconds
+Test Suite 'CropEditingTests' started at 2026-10-03 12:44:23.970.
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' started.
+2026-10-03 12:44:23.972977+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:23.977618+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.022014+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.026703+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' passed (0.331 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' started.
+2026-10-03 12:44:24.306257+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.310381+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' passed (0.032 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' started.
+2026-10-03 12:44:24.336288+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.340864+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.349266+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.354767+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' passed (0.047 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' started.
+2026-10-03 12:44:24.383528+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.387895+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' passed (0.044 seconds).
+Test Suite 'CropEditingTests' passed at 2026-10-03 12:44:24.425.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.454 (0.455) seconds
+Test Suite 'DocumentAppTests' started at 2026-10-03 12:44:24.426.
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' started.
+2026-10-03 12:44:24.429503+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.434217+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.444274+0700 PhotoAxis[60313:473060] [PhotoAxis] handle_error:140: PNG read error
+2026-10-03 12:44:24.444336+0700 PhotoAxis[60313:473060] [PhotoAxis] imagePNG_error_break:256: *** ERROR: imagePNG_error_break
+2026-10-03 12:44:24.444354+0700 PhotoAxis[60313:473060] [PhotoAxis] makeImagePlus:3915: *** ERROR: 'PNG '-_reader->initImage[0] failed err=-50
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' passed (0.027 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' started.
+2026-10-03 12:44:24.456064+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.460397+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.506586+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.510898+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+sandbox_extension_consume failed: 1 (Operation not permitted)
+2026-10-03 12:44:24.624241+0700 PhotoAxis[60313:473051] [sandbox] Failed to get a sandbox extension (0)
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' passed (0.265 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' started.
+2026-10-03 12:44:24.724436+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.728893+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.740947+0700 PhotoAxis[60313:473114] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.745340+0700 PhotoAxis[60313:473114] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' passed (0.040 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' started.
+2026-10-03 12:44:24.761117+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.765750+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' passed (0.049 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' started.
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' passed (0.026 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' started.
+2026-10-03 12:44:24.837498+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.842526+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:24.911654+0700 PhotoAxis[60313:473063] 18855025155 11 AVE : Compiled AppleAVE2-913.43.1 on Aug 11 2026 20:48:30
+2026-10-03 12:44:24.911744+0700 PhotoAxis[60313:473063] 18855025503 11 AVE : Temporary Path: <TEMP_PATH>
+2026-10-03 12:44:24.911774+0700 PhotoAxis[60313:473063] 18855025536 11 AVE INFO: AVE_Plugin_HEVC_CreateInstance Enter 1752589105 0x206d8ef70 0x7c0efe2270 0
+2026-10-03 12:44:24.911850+0700 PhotoAxis[60313:473063] 18855025608 12 AVE INFO: AVE_Session_HEVC_Create Enter 0x7c103bc020 0x0
+2026-10-03 12:44:24.912243+0700 PhotoAxis[60313:473063] 18855026003 12 AVE INFO: AVE_Session_HEVC_Create Exit 0x7c103bc020 0x0 90 395 0
+2026-10-03 12:44:24.912279+0700 PhotoAxis[60313:473063] 18855026040 11 AVE INFO: AVE_Plugin_HEVC_CreateInstance Exit 1752589105 0x206d8ef70 0x7c0efe2270 90 0x7c103bc000 0x7c103bc020 1169 0 0
+2026-10-03 12:44:24.912312+0700 PhotoAxis[60313:473063] 18855026074 11 AVE INFO: AVE_Plugin_HEVC_StartTileSession Enter 0x7c103bc000 0x7c0efe2260 0x7c13251a00 640 480 0x206d8ef70 0
+2026-10-03 12:44:24.912343+0700 PhotoAxis[60313:473063] 18855026105 12 AVE INFO: AVE_Session_HEVC_StartTileSession Enter 0x7c103bc020 0x16fde9a40
+2026-10-03 12:44:24.912396+0700 PhotoAxis[60313:473063] 18855026157 12 AVE INFO: AVE_Session_HEVC_StartTileSession Exit 0x7c103bc020 0x16fde9a40 0
+2026-10-03 12:44:24.912468+0700 PhotoAxis[60313:473063] 18855026219 11 AVE INFO: AVE_Plugin_HEVC_StartTileSession Exit 0x7c103bc000 0x7c0efe2260 0x7c13251a00 640 480 0x206d8ef70 90 145 0 0
+2026-10-03 12:44:24.912596+0700 PhotoAxis[60313:473063] 18855026357 11 AVE INFO: AVE_Plugin_HEVC_PrepareToEncodeTiles Enter 0x7c103bc000 0 0
+2026-10-03 12:44:24.912630+0700 PhotoAxis[60313:473063] 18855026391 12 AVE INFO: AVE_Session_HEVC_Prepare Enter 0x7c103bc020
+2026-10-03 12:44:24.913120+0700 PhotoAxis[60313:473063] 18855026881 12 AVE INFO: AVE_Session_HEVC_Prepare Exit 0x7c103bc020 0
+2026-10-03 12:44:24.913154+0700 PhotoAxis[60313:473063] 18855026916 11 AVE INFO: AVE_Plugin_HEVC_PrepareToEncodeTiles Exit 0x7c103bc000 0 90 558 0 0
+2026-10-03 12:44:24.935908+0700 PhotoAxis[60313:473063] 18855049622 11 AVE INFO: AVE_Plugin_HEVC_Invalidate Enter 0x7c103bc000 0
+2026-10-03 12:44:24.935966+0700 PhotoAxis[60313:473063] 18855049727 12 AVE INFO: AVE_Session_HEVC_Stop Enter 0x7c103bc020
+2026-10-03 12:44:24.936169+0700 PhotoAxis[60313:473063] 18855049929 12 AVE INFO: AVE_Session_HEVC_Stop Exit 0x7c103bc020 0
+2026-10-03 12:44:24.936202+0700 PhotoAxis[60313:473063] 18855049964 11 AVE INFO: AVE_Plugin_HEVC_Invalidate Exit 0x7c103bc000 90 342 0 0
+2026-10-03 12:44:24.936380+0700 PhotoAxis[60313:473063] 18855050141 11 AVE INFO: AVE_Plugin_HEVC_Finalize Enter 0x7c103bc000 0
+2026-10-03 12:44:24.936412+0700 PhotoAxis[60313:473063] 18855050174 12 AVE INFO: AVE_Session_HEVC_Destroy Enter 0x7c103bc020
+2026-10-03 12:44:24.938218+0700 PhotoAxis[60313:473063] 18855051963 2 AVE : ID: 90 Type: 1 Enc: 2 | Input: 1 Proc: 1 Drop: 0
+2026-10-03 12:44:24.941050+0700 PhotoAxis[60313:473063] 18855054800 12 AVE INFO: AVE_Session_HEVC_Destroy Exit 0x7c103bc020 0
+2026-10-03 12:44:24.941091+0700 PhotoAxis[60313:473063] 18855054853 11 AVE INFO: AVE_Plugin_HEVC_Finalize Exit 0x7c103bc000 90 4712 0 0
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' passed (0.333 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' started.
+2026-10-03 12:44:25.170868+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.175034+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' passed (0.012 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' started.
+2026-10-03 12:44:25.183033+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.187269+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.187897+0700 PhotoAxis[60313:473061] [PhotoAxis] handle_error:140: PNG read error
+2026-10-03 12:44:25.187947+0700 PhotoAxis[60313:473061] [PhotoAxis] imagePNG_error_break:256: *** ERROR: imagePNG_error_break
+2026-10-03 12:44:25.187960+0700 PhotoAxis[60313:473061] [PhotoAxis] makeImagePlus:3915: *** ERROR: 'PNG '-_reader->initImage[0] failed err=-50
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' passed (0.023 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' started.
+2026-10-03 12:44:25.207423+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.211641+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' passed (0.046 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' started.
+2026-10-03 12:44:25.252434+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.256530+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' passed (0.007 seconds).
+Test Suite 'DocumentAppTests' passed at 2026-10-03 12:44:25.258.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.829 (0.832) seconds
+Test Suite 'ExportTests' started at 2026-10-03 12:44:25.258.
+Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' started.
+2026-10-03 12:44:25.276024+0700 PhotoAxis[60313:473051] [PhotoAxis] +[HDRImageConverter computeToneMappingCurveFromLumaGainHistogram:]:389: Failed to fill gaps
+2026-10-03 12:44:25.276049+0700 PhotoAxis[60313:473051] [PhotoAxis] -[HDRImageConverter generateToneMappingCurveForImage:targetHeadroom:]:179: Failed to compute tone mapping curve from luma gain histogram
+2026-10-03 12:44:25.276055+0700 PhotoAxis[60313:473051] [PhotoAxis] IIOApplyHDRGainMap:368: *** ERROR: Failed to generate FlexGTC info
+2026-10-03 12:44:25.278465+0700 PhotoAxis[60313:473051] [PhotoAxis] +[HDRImageConverter computeToneMappingCurveFromLumaGainHistogram:]:389: Failed to fill gaps
+2026-10-03 12:44:25.278486+0700 PhotoAxis[60313:473051] [PhotoAxis] -[HDRImageConverter generateToneMappingCurveForImage:targetHeadroom:]:179: Failed to compute tone mapping curve from luma gain histogram
+2026-10-03 12:44:25.284750+0700 PhotoAxis[60313:473051] [PhotoAxis] +[HDRImageConverter computeToneMappingCurveFromLumaGainHistogram:]:389: Failed to fill gaps
+2026-10-03 12:44:25.284777+0700 PhotoAxis[60313:473051] [PhotoAxis] -[HDRImageConverter generateToneMappingCurveForImage:targetHeadroom:]:179: Failed to compute tone mapping curve from luma gain histogram
+2026-10-03 12:44:25.284784+0700 PhotoAxis[60313:473051] [PhotoAxis] IIOApplyHDRGainMap:368: *** ERROR: Failed to generate FlexGTC info
+2026-10-03 12:44:25.286954+0700 PhotoAxis[60313:473051] [PhotoAxis] +[HDRImageConverter computeToneMappingCurveFromLumaGainHistogram:]:389: Failed to fill gaps
+2026-10-03 12:44:25.286981+0700 PhotoAxis[60313:473051] [PhotoAxis] -[HDRImageConverter generateToneMappingCurveForImage:targetHeadroom:]:179: Failed to compute tone mapping curve from luma gain histogram
+2026-10-03 12:44:25.292545+0700 PhotoAxis[60313:473051] [PhotoAxis] +[HDRImageConverter computeToneMappingCurveFromLumaGainHistogram:]:389: Failed to fill gaps
+2026-10-03 12:44:25.292572+0700 PhotoAxis[60313:473051] [PhotoAxis] -[HDRImageConverter generateToneMappingCurveForImage:targetHeadroom:]:179: Failed to compute tone mapping curve from luma gain histogram
+2026-10-03 12:44:25.292578+0700 PhotoAxis[60313:473051] [PhotoAxis] IIOApplyHDRGainMap:368: *** ERROR: Failed to generate FlexGTC info
+2026-10-03 12:44:25.297262+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.301675+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+$REPO/Tests/PhotoAxisAppTests/ExportTests.swift:121: warning: -[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata] : [Internal] Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions
+2026-10-03 12:44:25.325296+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.329623+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' passed (0.100 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' started.
+2026-10-03 12:44:25.360774+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.364960+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' passed (0.032 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' started.
+2026-10-03 12:44:25.397734+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.402049+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.427801+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.432614+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.459199+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.464056+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.480897+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.485424+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' passed (0.107 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' started.
+2026-10-03 12:44:25.500370+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.504798+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' passed (0.371 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' started.
+2026-10-03 12:44:25.872052+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.876311+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' passed (0.060 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' started.
+2026-10-03 12:44:25.934415+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:25.939189+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' passed (0.163 seconds).
+Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' started.
+2026-10-03 12:44:26.100359+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:26.104756+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' passed (0.357 seconds).
+Test Suite 'ExportTests' passed at 2026-10-03 12:44:26.450.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 1.190 (1.192) seconds
+Test Suite 'ImageAdjustmentTests' started at 2026-10-03 12:44:26.450.
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' started.
+2026-10-03 12:44:26.453147+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:26.457473+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' passed (0.353 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' started.
+2026-10-03 12:44:26.805938+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:26.810266+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:26.852302+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:26.856609+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.053234+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.057625+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.129430+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.133954+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' passed (0.553 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' started.
+2026-10-03 12:44:27.362119+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.366314+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' passed (0.066 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' started.
+2026-10-03 12:44:27.424375+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.428406+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.437172+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.441157+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.448873+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.452785+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' passed (0.120 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' started.
+2026-10-03 12:44:27.547584+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.552885+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' passed (0.021 seconds).
+Test Suite 'ImageAdjustmentTests' passed at 2026-10-03 12:44:27.564.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 1.112 (1.113) seconds
+Test Suite 'InvestigationAnalysisTests' started at 2026-10-03 12:44:27.564.
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' started.
+2026-10-03 12:44:27.570399+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.574552+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.614867+0700 PhotoAxis[60313:473130] [e5rt] Unable to find a valid E5 in provided path /System/Library/PrivateFrameworks/TextRecognition.framework/Resources/cr_tr_model_latincyrillic_v3_e5.mlmodelc.bundle/. Found bundles : { }. Expected : { H13S.bundle H13C.bundle H13G.bundle H13D.bundle H13.bundle H13P.bundle universal.bundle jit.bundle }. @ GetE5PathFromCompositeBundle
+2026-10-03 12:44:27.615099+0700 PhotoAxis[60313:473116] [e5rt] Unable to find a valid E5 in provided path /System/Library/PrivateFrameworks/TextRecognition.framework/Resources/cr_td_model_v3_e5.mlmodelc.bundle/. Found bundles : { }. Expected : { H13S.bundle H13C.bundle H13G.bundle H13D.bundle H13.bundle H13P.bundle universal.bundle jit.bundle }. @ GetE5PathFromCompositeBundle
+2026-10-03 12:44:27.628153+0700 PhotoAxis[60313:473114] [e5rt] Unable to find a valid E5 in provided path /System/Library/PrivateFrameworks/TextRecognition.framework/Resources/cr_orientation_model_v1_e5.mlmodelc.bundle/. Found bundles : { }. Expected : { H13S.bundle H13C.bundle H13G.bundle H13D.bundle H13.bundle H13P.bundle universal.bundle jit.bundle }. @ GetE5PathFromCompositeBundle
+2026-10-03 12:44:27.629539+0700 PhotoAxis[60313:473130] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.633819+0700 PhotoAxis[60313:473130] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' passed (0.241 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' started.
+2026-10-03 12:44:27.810166+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.816160+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' passed (0.076 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' started.
+2026-10-03 12:44:27.884763+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:27.889392+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' passed (0.168 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' started.
+2026-10-03 12:44:28.056274+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.060841+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' passed (0.150 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' started.
+2026-10-03 12:44:28.205368+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.210600+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.223222+0700 PhotoAxis[60313:473060] [ClientDonation] (+[PPSClientDonation isRegisteredSubsystem:category:]) Permission denied: CoreMedia / CM-ASSETCREATION
+2026-10-03 12:44:28.267859+0700 PhotoAxis[60313:473116] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.273104+0700 PhotoAxis[60313:473116] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' passed (0.112 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' started.
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' passed (0.001 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' started.
+2026-10-03 12:44:28.320649+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.325494+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' passed (0.030 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' started.
+2026-10-03 12:44:28.345887+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.350184+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' passed (0.040 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' started.
+2026-10-03 12:44:28.386204+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.390471+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' passed (0.149 seconds).
+Test Suite 'InvestigationAnalysisTests' passed at 2026-10-03 12:44:28.533.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.966 (0.969) seconds
+Test Suite 'InvestigationWorkflowTests' started at 2026-10-03 12:44:28.533.
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' started.
+2026-10-03 12:44:28.539683+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.544252+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' passed (0.457 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' started.
+2026-10-03 12:44:28.995149+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:28.999612+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.034888+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.039192+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' passed (0.056 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' started.
+2026-10-03 12:44:29.052196+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.056422+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' passed (0.081 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' started.
+2026-10-03 12:44:29.131883+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.136106+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' passed (0.068 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' started.
+2026-10-03 12:44:29.198999+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.203329+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' passed (0.093 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' started.
+2026-10-03 12:44:29.293247+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.297799+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' passed (0.068 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' started.
+2026-10-03 12:44:29.362121+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.366589+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' passed (0.046 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' started.
+2026-10-03 12:44:29.409203+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.413732+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' passed (0.192 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' started.
+2026-10-03 12:44:29.602531+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.607061+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' passed (0.160 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' started.
+2026-10-03 12:44:29.764292+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.768737+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.805602+0700 PhotoAxis[60313:473117] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.810180+0700 PhotoAxis[60313:473117] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' passed (0.059 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' started.
+2026-10-03 12:44:29.820806+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.827896+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' passed (0.118 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' started.
+2026-10-03 12:44:29.938700+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:29.943178+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' passed (0.128 seconds).
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' started.
+2026-10-03 12:44:30.067900+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.072413+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' passed (0.089 seconds).
+Test Suite 'InvestigationWorkflowTests' passed at 2026-10-03 12:44:30.154.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 1.617 (1.621) seconds
+Test Suite 'LayerEditingTests' started at 2026-10-03 12:44:30.154.
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' started.
+2026-10-03 12:44:30.165748+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.170576+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.217998+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.222337+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' passed (0.644 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' started.
+2026-10-03 12:44:30.806100+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.810431+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.819152+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.823385+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' passed (0.098 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' started.
+2026-10-03 12:44:30.899927+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.903976+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' passed (0.034 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' started.
+2026-10-03 12:44:30.932820+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.937055+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.945981+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.950526+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' passed (0.031 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' started.
+2026-10-03 12:44:30.964605+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.969026+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' passed (0.017 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' started.
+2026-10-03 12:44:30.981255+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:30.985866+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' passed (0.016 seconds).
+Test Suite 'LayerEditingTests' passed at 2026-10-03 12:44:30.994.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.838 (0.840) seconds
+Test Suite 'MultiLayerPerspectiveTests' started at 2026-10-03 12:44:30.994.
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' started.
+2026-10-03 12:44:30.997311+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:31.001705+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' passed (0.031 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' started.
+2026-10-03 12:44:31.028970+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:31.034025+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' passed (0.039 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' started.
+2026-10-03 12:44:31.068415+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:31.075224+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' passed (3.758 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' started.
+2026-10-03 12:44:34.825750+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:34.829944+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' passed (0.028 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' started.
+2026-10-03 12:44:34.854162+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:34.858833+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:34.904024+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:34.908320+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.106693+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.110820+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.188009+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.192428+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' passed (0.571 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' started.
+2026-10-03 12:44:35.428059+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.432924+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' passed (0.144 seconds).
+Test Suite 'MultiLayerPerspectiveTests' passed at 2026-10-03 12:44:35.567.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 4.571 (4.573) seconds
+Test Suite 'PerspectiveEditingTests' started at 2026-10-03 12:44:35.568.
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' started.
+2026-10-03 12:44:35.570151+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.574431+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' passed (0.034 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' started.
+2026-10-03 12:44:35.604880+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.609611+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.652612+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:35.657133+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' passed (0.469 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' started.
+2026-10-03 12:44:36.074558+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.078823+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.121971+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.126448+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.480584+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.484828+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.571161+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.575773+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' passed (0.903 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' started.
+2026-10-03 12:44:36.981550+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.985844+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.994966+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:36.999461+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' passed (0.035 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' started.
+2026-10-03 12:44:37.014943+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.019335+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' passed (0.067 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' started.
+2026-10-03 12:44:37.080303+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.084841+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' passed (0.046 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' started.
+2026-10-03 12:44:37.126661+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.131229+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.172589+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.176798+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' passed (0.094 seconds).
+Test Suite 'PerspectiveEditingTests' passed at 2026-10-03 12:44:37.219.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 1.649 (1.651) seconds
+Test Suite 'ProjectDocumentTests' started at 2026-10-03 12:44:37.219.
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' started.
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' passed (0.006 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' started.
+2026-10-03 12:44:37.227303+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.231590+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' passed (0.023 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' started.
+2026-10-03 12:44:37.252237+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.256522+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' passed (0.046 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' started.
+2026-10-03 12:44:37.296880+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.300929+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' passed (0.012 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' started.
+2026-10-03 12:44:37.308867+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.313031+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' passed (0.049 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' started.
+2026-10-03 12:44:37.358367+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.362734+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' passed (0.030 seconds).
+Test Suite 'ProjectDocumentTests' passed at 2026-10-03 12:44:37.386.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.165 (0.167) seconds
+Test Suite 'RecoveryTests' started at 2026-10-03 12:44:37.387.
+Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' started.
+2026-10-03 12:44:37.388952+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.393209+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' passed (0.039 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' started.
+2026-10-03 12:44:37.428556+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.432803+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' passed (0.150 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' started.
+Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' passed (0.113 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' started.
+2026-10-03 12:44:37.692474+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.697262+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' passed (0.030 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' started.
+2026-10-03 12:44:37.722084+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:37.731693+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' passed (10.162 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' started.
+2026-10-03 12:44:47.887742+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:47.896619+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:48.135138+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:48.143555+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' passed (0.275 seconds).
+Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' started.
+2026-10-03 12:44:48.163955+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:48.168285+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' passed (0.020 seconds).
+Test Suite 'RecoveryTests' passed at 2026-10-03 12:44:48.178.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 10.788 (10.791) seconds
+Test Suite 'ScanTests' started at 2026-10-03 12:44:48.178.
+Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' started.
+2026-10-03 12:44:48.191442+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:48.199263+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' passed (0.273 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' passed (0.048 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' passed (3.489 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' passed (0.231 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' passed (0.182 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' started.
+<unknown>:0: warning: -[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply] : [Internal] Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions
+Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' passed (0.359 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' passed (0.670 seconds).
+Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' started.
+Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' passed (0.029 seconds).
+Test Suite 'ScanTests' passed at 2026-10-03 12:44:53.460.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 5.279 (5.282) seconds
+Test Suite 'ViewportSamplingTests' started at 2026-10-03 12:44:53.461.
+Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' started.
+2026-10-03 12:44:53.463065+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.467727+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.489352+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.494397+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' passed (0.453 seconds).
+Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' started.
+2026-10-03 12:44:53.919876+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.924677+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.942704+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:53.950466+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' passed (0.227 seconds).
+Test Suite 'ViewportSamplingTests' passed at 2026-10-03 12:44:54.141.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.680 (0.681) seconds
+Test Suite 'WorkspaceTests' started at 2026-10-03 12:44:54.141.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' started.
+2026-10-03 12:44:54.182338+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:54.186867+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' passed (0.195 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' started.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' passed (0.024 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' started.
+2026-10-03 12:44:54.400758+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:54.405307+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:54.572967+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:54.577557+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' passed (0.421 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' started.
+2026-10-03 12:44:54.822558+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:54.827219+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:55.895365+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:55.900369+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' passed (2.207 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' started.
+2026-10-03 12:44:57.028462+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.033216+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.140097+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.144607+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.227320+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.232934+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.339611+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.343968+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' passed (0.430 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' started.
+2026-10-03 12:44:57.461887+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.466515+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' passed (0.316 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' started.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' passed (0.001 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' started.
+2026-10-03 12:44:57.775478+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-03 12:44:57.780189+0700 PhotoAxis[60313:473051] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' passed (0.217 seconds).
+Test Suite 'WorkspaceTests' passed at 2026-10-03 12:44:57.955.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 3.812 (3.814) seconds
+Test Suite 'PhotoAxisAppTests.xctest' failed at 2026-10-03 12:44:57.955.
+	 Executed 109 tests, with 3 tests skipped and 1 failure (0 unexpected) in 36.724 (36.764) seconds
+Test Suite 'All tests' failed at 2026-10-03 12:44:57.956.
+	 Executed 109 tests, with 3 tests skipped and 1 failure (0 unexpected) in 36.724 (36.764) seconds
+2026-10-03 12:45:06.214 xcodebuild[60219:471973] [MT] IDETestOperationsObserverDebug: 47.664 elapsed -- Testing started completed.
+2026-10-03 12:45:06.214 xcodebuild[60219:471973] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-03 12:45:06.214 xcodebuild[60219:471973] [MT] IDETestOperationsObserverDebug: 47.664 sec, +47.664 sec -- end
+
+Test session results, code coverage, and logs:
+	$BUILD_ROOT/test-results/PhotoAxis-20261003-124409-60198.xcresult
+
+Failing tests:
+	ContentEditingTests.testInstalledVietnameseInputContext()
+
+** TEST FAILED **
+
+Testing started
+
+Test result: $BUILD_ROOT/test-results/PhotoAxis-20261003-124409-60198.xcresult

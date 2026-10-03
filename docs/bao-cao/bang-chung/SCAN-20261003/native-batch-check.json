@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "pages": 2,
+  "order": [
+    "02.png",
+    "01.png"
+  ],
+  "sourcePreservation": true,
+  "pngProjectPDFHashes": true,
+  "applicationBuild": "4",
+  "outputPath": "$BUILD_ROOT/QA/Scan-Final-20261003/BatchOutput/PhotoAxis-Scan-24003FCF-AE58-498F-93C9-54FC839E2282"
+}

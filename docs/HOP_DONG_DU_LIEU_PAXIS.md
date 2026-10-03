@@ -39,3 +39,8 @@ Mỗi layer image giữ `ImageAdjustments` riêng: `enabled` Boolean, `exposure`
 Thứ tự trong working space linear-sRGB: Exposure → Brightness/Contrast → Saturation → local clip → transform → opacity → composite. Mapping của bản 1.0: EV giữ nguyên cho CIExposureAdjust; Brightness `b/100`, Contrast `1+c/100` trong CIColorControls với Saturation=1; bước Saturation dùng `1+s/100`, Brightness=0 và Contrast=1. Neutral/bypass không thêm filter. Không cam kết kết quả số như Photoshop. Chi tiết và nguồn Apple ở ADR-020.
 
 Duplicate sao chép tham số nhưng tiếp tục chia sẻ cùng asset ID; chỉnh một bản không sửa bản khác. Hidden/locked và các phép hình học/clip không xóa tham số. Reset đặt lại bốn số 0 và enabled=true, có Undo; nguồn nhúng không đổi. P09 phải round-trip cả giá trị cực trị, giá trị phân số, enabled=false với giá trị khác 0, layer duplicate/shared source và hai crop. So sánh pixel preview/thumbnail/render sau mở lại và kiểm tra chỉnh tiếp. Phần Save/Open của A25 còn chưa nghiệm thu ở P08.
+
+
+## Scan1 — schema3 có điều kiện, build4
+
+Image layer có trường tùy chọn `scan`: enabled, mode(color/gray/blackWhite), paper/denoise/sharpness0…1, threshold0…0,4, radius0,005…0,1, curveX/curveY−1…1; Double hữu hạn kể cả disabled. Text/shape không được mang trường này. Không thay byte assets; duplicate giữ metadata và chia sẻ source. Writer chọn version3 khi có Scan, otherwise1thường/2case-working; reader đọc1/2/3 và từ chối Scan ở version1/2. Old reader từ chối3 an toàn. `.paxcase` vẫn version1/2; working archive Scan yêu cầu reader mới. Preview chỉ raster xem nhanh; thông số vẫn editable khi Save/Open. [Đặc tả](DAC_TA_SCAN.md).

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": "3",
+  "build": "4",
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
@@ -20,9 +20,10 @@
       "docs/bao-cao/TONG_TIEN_DO_VA_PUBLIC_2026-10-02.md",
       "docs/bao-cao/P12-native2.md",
       "docs/bao-cao/bang-chung/P12-native2/manifest.json",
-      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
+      "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
+      "docs/bao-cao/SCAN_2026-10-03.md"
     ],
-    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately. Final GitHub CI78adb1b on macOS15.7.9/Xcode16.4:143PASS/0FAIL/5SKIP, Debug/test/Release success; skipped benchmark/Telex/large-layout do not close those gates. Local targeted HDR/layout2PASS/0FAIL/0SKIP."
+    "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending. New local sourceb267165 suite144PASS/1FAIL/3SKIP: synthetic Telex event test now executes but produces unconverted ASCII. IME gate remains open. Release after synchronous Undo actor compatibility fix built successfully; optional HDR SDK guard tested separately. Final GitHub CI78adb1b on macOS15.7.9/Xcode16.4:143PASS/0FAIL/5SKIP, Debug/test/Release success; skipped benchmark/Telex/large-layout do not close those gates. Local targeted HDR/layout2PASS/0FAIL/0SKIP. Current build4 Scan1: local159tests155PASS/1knownTelexFAIL/3benchmarkSKIP, all11newScan testsPASS. Real paper/book and50page fullquota remain unqualified; build3 acceptance19/43 is historical, not a full build4 rerun."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -31,9 +32,10 @@
       "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
       "docs/bao-cao/bang-chung/INVESTIGATION2/binary-verification.log",
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
-      "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json"
+      "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json",
+      "docs/bao-cao/bang-chung/SCAN-20261003/build-manifest.json"
     ],
-    "reason": "Release build3 after synchronous Undo actor SDK compatibility fix verified: UUID741E1DF7/BinarySHA934e24a8/CoreSHA8ae55ed5, local ad-hoc arm64/minOS14. Source-clean GPL installer43a5b93 recorded. Final Developer ID artifact and full release acceptance missing."
+    "reason": "Current local build4 Release verified: UUID8A2E6A7C-4058-391B-A8F6-24F1BB32D380, ad-hoc arm64/minOS14. Final Developer ID artifact and full release acceptance missing."
   },
   "R04": {
     "status": "BLOCKED_EXTERNAL",
@@ -58,7 +60,7 @@
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md",
       "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/delivery-receipt.json"
     ],
-    "reason": "Latest GPLv3 local DMG SHA447f1b3649d29518edbe4c1eae53acd7300ef8a4dd03bca8c1558bb93b6e94db mounted read-only; expected4payload entries, LICENSE/SOURCE bytes, app-tree/codesign/detach/copy checksum PASS. Source43a5b93/sourceDirty=false. Final Developer ID/notarization/clean Gatekeeper installation missing."
+    "reason": "Build3 local DMG is historical; build4 Scan packaging receipt will accompany the external local DMG. Final Developer ID/notarization/clean Gatekeeper installation missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",
@@ -84,7 +86,7 @@
       "docs/bao-cao/MO_RONG_DIEU_TRA.md",
       "docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md"
     ],
-    "reason": "Public bilingual GitHub Pages introduction/source/Issues/GPLv3/hosting privacy and build3 OCR/measurement gallery verified. Signed-installer acceptance/URLs/checksums and final legal publisher remain pending; installer download disabled/noindex."
+    "reason": "Public bilingual GitHub Pages introduction/source/Issues/GPLv3/hosting privacy and build3 OCR/measurement gallery verified. Signed-installer acceptance/URLs/checksums and final legal publisher remain pending; installer download disabled/noindex. Build4 bilingual Scan introduction/workflow added; pages deployment receipt accompanies delivery."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",

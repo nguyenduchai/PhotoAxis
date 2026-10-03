@@ -1,3 +1,13 @@
+# Scan1 — build4, 03/10/2026
+
+Scan đã triển khai local: phát hiện trang/góc, làm sạch giấy, nắn bow thủ công và batch1–50ảnh với PNG/project/PDF/manifest. [Báo cáo](bao-cao/SCAN_2026-10-03.md), [hướng dẫn](HUONG_DAN_SCAN.md). Không còn ghi các chức năng này là chưa xây.
+
+- SCAN-01: cần bộ giấy/sách chụp thực được phép dùng: chữ ký/nét mảnh/mực nhạt/bóng mạnh/biên khó. Tăng whitening/threshold có thể bỏ nét hoặc thay hình thức mực, phải rà từng trang.
+- SCAN-02: nắn cong là chỉnh bow hai trục thủ công, chưa tự dựng3D mọi trang sách/nếp gấp. Chú thích layer khác không theo bow; kiểm vị trí.
+- SCAN-03: đã thử batch nhỏ và rollback lỗi/Cancel, chưa qualification50trang ở fullquota/thời gian/memory/máy macOS14/M1-16GB. Một call Vision/GPU/ImageIO đang chạy không bị ngắt giữa call. Crash có thể để staging ẩn. Chưa import PDF/TIFF/batchOCR.
+- SCAN-04: Scan project dùng schema3; build3 cũ từ chối mở. File nguồn/GPS/pixel crop vẫn nhúng trong project. Batch không phải bản hồ sơ đã che hoặc chain-of-custody.
+- Các gate IME/máy đích/Metal-QoS/ký/notary/cài sạch bên dưới vẫn mở; 19/43 là bằng chứng baseline build3, chưa nghiệm thu lại toàn bộ trên build4.
+
 # Cập nhật GitHub/Pages03/10/2026
 
 Repo và website đã public cùng target `nguyenduchai/PhotoAxis`, GPL-3.0-only, hỗ trợ GitHub Issues. Target/source visibility/hosting/license/Issues không còn chưa chốt; phần publisher pháp lý/Team/namespace/notary/cài sạch vẫn thiếu.

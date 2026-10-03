@@ -1,0 +1,3 @@
+$REPO/Sources/PhotoAxisApp/Localization/en.lproj/Localizable.strings: OK
+$REPO/Sources/PhotoAxisApp/Localization/vi.lproj/Localizable.strings: OK
+PASS: 452 matching vi/en keys; 381 static/dynamic references resolved

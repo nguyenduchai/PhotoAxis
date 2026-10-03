@@ -1,5 +1,16 @@
 # PhotoAxis — Tiến độ thực hiện
 
+## Scan1 — build4, 03/10/2026
+
+**Đã bổ sung cả bốn nhóm chức năng bản scan theo yêu cầu, S01–S09 DONE local.** Phát hiện góc trang/căn chữ; làm trắng nền/giảm bóng–ám màu/nhiễu/làm rõ chữ/đen trắng thích nghi; nắn cong hai trục thủ công; chuẩn hóa A4/Letter/custom/PPI và batch1–50ảnh. Preview trước/sau/Apply một Undo/Cancel, metadata editable và source giữ nguyên; Scan schema3, đọc lại1/2; audit hồ sơ làm review/chuẩn đo cũ stale khi model đổi.
+
+- Fullsuite mã cuối **155PASS/1FAILTelex/3SKIP**,159total;11caScan mới đềuPASS. NativeVI/EN và batchEN2trang đổi thứ tự→PNG/project/PDF/manifest→byte/hash/schema độc lậpPASS. Release/ad-hocPASS,16policyPASS,452khóaVI/EN/381referencesPASS,12websitepagesPASS.
+- Fixture đường cong biết trước: độ trải baseline60px→0px. Đây là oracle nhỏ cho mô hình bow, không phải nghiệm thu mọi trang sách thực. Nắn sách3D tự động/PDF–TIFFimport/batchOCR chưa triển khai. Datasetcamera/sách/chữký/nétmảnh,50trangfullquota/macOS14/M1-16GB/performance chưa qualification.
+- Source/website public tiếp tục cùng GPLv3repo; DMGbuild4local và receipts được giao riêng. `releaseReady=false`, nút tải stable vẫn tắt. 19/43nghiệm thu baseline là phạm vi build3 lịch sử; chưa nhận đủ nghiệm thu build4.
+
+[Đặc tả](DAC_TA_SCAN.md), [hướng dẫn](HUONG_DAN_SCAN.md), [báo cáo kết quả](bao-cao/SCAN_2026-10-03.md), [manifest cuối](bao-cao/bang-chung/SCAN-20261003/build-manifest.json), [readiness](READINESS_PUBLIC.json).
+
+
 ## Website, mã nguồn GitHub và DMG — 03/10/2026
 
 **Đã hoàn thành yêu cầu website GitHub Pages, công khai source và xuất DMG local.** [Một repo ứng dụng/website](https://github.com/nguyenduchai/PhotoAxis), [website Việt/Anh](https://nguyenduchai.github.io/PhotoAxis/), giấy phép **GPL-3.0-only**, hỗ trợ GitHub Issues. 12 trang đã cập nhật hướng dẫn tự build, Privacy GitHub và ảnh OCR/đo build 3; 27 file HTTPS/hash/manifest cùng browser desktop/mobile VI/EN PASS.

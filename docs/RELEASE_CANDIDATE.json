@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "build": "3",
+  "build": "4",
   "specification": "1.0-draft.3",
   "schemaVersion": 1,
-  "sourceCommit": "43a5b9334704f0d957946202ebd8f45b2c553c2f",
-  "sourceFingerprintSHA256": "3ee2685aa34fa10abc728b8d3e10288920868d1ec7f10749928b7863462cff35",
-  "releaseBinaryUUID": "741E1DF7-BF33-3A1D-9697-90ADCE9DF40E",
-  "binarySHA256": "934e24a886f7b5adfe39319ed5f4dec20833819410f80709995ec339b06ca99d",
-  "coreFrameworkSHA256": "8ae55ed513e8d34db8ee6dae8ed59e1128a0bd1cd5abfe9ced58ea1963373058",
+  "sourceCommit": "4947ff7f821929a4982085a5611442f3ccfe20e8",
+  "sourceFingerprintSHA256": "c8955473c908b16e1d9f402141b6f796b9c7b71360038fdfe36aee5470d39aeb",
+  "releaseBinaryUUID": "8A2E6A7C-4058-391B-A8F6-24F1BB32D380",
+  "binarySHA256": "015a7ecc25f8e7d80f4c43cf45079a4eb440a1467eec6934c7e21db3c3734c1a",
+  "coreFrameworkSHA256": "ea33582a060f7c8d37142df7c28a69aa76edf6963db1fc524d6ed8ab319e41e9",
   "architecture": "arm64",
   "minimumOS": "14.0",
   "signing": "local-ad-hoc",
@@ -24,9 +24,10 @@
     "investigation full-quota and supported-target runtime/performance qualification",
     "runtime Vietnamese OCR availability and cold/warm behavior on supported macOS targets",
     "real permitted camera/video data, supported codecs/long clips and calibrated geometry qualification",
-    "final Developer ID/notarized installer, clean Gatekeeper/offline installation"
+    "final Developer ID/notarized installer, clean Gatekeeper/offline installation",
+    "Scan real camera/book/thin-stroke and maximum50page batch/supported-target qualification"
   ],
-  "evidence": "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json",
+  "evidence": "docs/bao-cao/bang-chung/SCAN-20261003/build-manifest.json",
   "investigationSpecification": "Investigation 2 (includes Investigation 1)",
   "investigationProjectSchemaVersion": 2,
   "caseSchemaVersion": 2,
@@ -36,8 +37,17 @@
   "acceptanceOpen": 24,
   "benchmarkEvidence": "docs/bao-cao/bang-chung/P12-native2/manifest.json",
   "latestLocalFullSuite": {
-    "passed": 144,
+    "passed": 155,
     "failed": 1,
     "skipped": 3
-  }
+  },
+  "previousCandidateBuild3": {
+    "sourceCommit": "43a5b9334704f0d957946202ebd8f45b2c553c2f",
+    "releaseBinaryUUID": "741E1DF7-BF33-3A1D-9697-90ADCE9DF40E",
+    "evidence": "docs/bao-cao/bang-chung/GITHUB-PAGES-20261003/build-manifest.json"
+  },
+  "scanSpecification": "Scan 1",
+  "scanProjectSchemaVersion": 3,
+  "scanEvidence": "docs/bao-cao/SCAN_2026-10-03.md",
+  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build4"
 }
