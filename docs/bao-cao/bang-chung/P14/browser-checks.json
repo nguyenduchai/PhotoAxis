@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "brokenImages": [],
+      "disabled": true,
+      "language": "vi",
+      "scrollWidth": 1581,
+      "width": 1600
+    },
+    {
+      "disabled": true,
+      "downloadFont": "16px",
+      "language": "vi",
+      "scrollWidth": 1581,
+      "width": 1600
+    },
+    {
+      "brokenImages": [],
+      "disabled": true,
+      "language": "vi",
+      "scrollWidth": 469,
+      "width": 487
+    },
+    {
+      "clientWidth": 371,
+      "devicePixelRatio": 0.800000011920929,
+      "disabled": true,
+      "language": "vi",
+      "scrollWidth": 371,
+      "width": 390
+    },
+    {
+      "clientWidth": 371,
+      "disabled": true,
+      "language": "en",
+      "scrollWidth": 371,
+      "width": 390
+    },
+    {
+      "clientWidth": 1261,
+      "disabled": true,
+      "language": "en",
+      "scrollWidth": 1261,
+      "width": 1280
+    },
+    {
+      "heading": "User guide",
+      "language": "en",
+      "page": "/en/guide.html",
+      "scrollWidth": 1261,
+      "width": 1280
+    },
+    {
+      "heading": "Hướng dẫn sử dụng",
+      "language": "vi",
+      "page": "/guide.html"
+    },
+    {
+      "hostingDisclosure": true,
+      "language": "vi",
+      "page": "/privacy.html",
+      "sourceMetadataWarning": true
+    },
+    {
+      "clientWidth": 1261,
+      "disabled": true,
+      "language": "vi",
+      "page": "/index.html",
+      "scrollWidth": 1261,
+      "width": 1280
+    }
+  ],
+  "keyboard": {
+    "tabFromSkipFocus": "PhotoAxis",
+    "outline": "solid"
+  },
+  "consoleErrors": [],
+  "viewportNote": "IAB existing page zoom yields CSS width=override/0.8; effective widths390 and1280 verified from rendered DOM; no user zoom setting changed"
+}

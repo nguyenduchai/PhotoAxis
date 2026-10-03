@@ -1,0 +1,96 @@
+Window: "A04-landscape-en — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-landscape-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-square-en, Value: off
+	18 nút Close tab
+	19 nút chuyển đổi A04-landscape-en •, Value: on
+	20 nút Close tab
+	21 nút chuyển đổi A04-portrait-en, Value: off
+	22 nút Close tab
+	23 nút chuyển đổi A04-A4-en, Value: off
+	24 nút Close tab
+	25 nút chuyển đổi A04-custom-en, Value: off
+	26 nút Close tab
+	27 trường văn bản (settable) Description: Zoom, Value: 89,9 %
+	28 text Value: 1.920 × 1.080 px · 72,00 PPI · Unsaved sRGB, ID: workspace.taskStatus
+	29 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	30 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	31 trường văn bản (settable) Description: HEX, Value: #000000
+	32 trường văn bản (settable) Description: Alpha %, Value: 100
+	33 trường văn bản (settable) Description: Red, Value: 0
+	34 trường văn bản (settable) Description: Green, Value: 0
+	35 trường văn bản (settable) Description: Blue, Value: 0
+	36 text Foreground Color Background Color HEX Alpha % R G B Color
+	37 nút Description: Collapse Panels, ID: sidebar.collapse
+	38 Description: Properties and History, ID: sidebar.inspectorTabs
+		39 nút radio Description: Properties, Value: 0
+		40 nút radio Description: History, Value: 1
+	41 text Layers
+	42 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		43 bảng
+			44 row (selectable)
+				45 ô
+					46 nút Description: Toggle Visibility: Background copy, Help: Toggle Visibility
+					47 hình ảnh
+					48 text Help: Background copy, Value: Background copy Shape
+					49 nút Description: Toggle Lock: Background copy, Help: Toggle Lock
+			50 row (selected)
+				51 ô (selected)
+					52 nút Description: Toggle Visibility: Background, Help: Toggle Visibility
+					53 hình ảnh
+					54 text Help: Background, Value: Background Shape
+					55 nút Description: Toggle Lock: Background, Help: Toggle Lock
+		56 thanh cuộn (disabled, settable, float) 0
+	57 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		58 bảng History
+			59 row (selectable)
+				60 ô
+					61 text Initial State
+			62 row (selected)
+				63 ô (selected)
+					64 text Duplicate Layer
+		65 thanh cuộn (disabled, settable, float) 0
+	66 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	67 text Opacity
+	68 trường văn bản (disabled) Description: Opacity, Value: 100 %
+	69 thanh trượt (disabled) Description: Opacity, Value: 100, Secondary Actions: Increment, Decrement
+		70 chỉ báo giá trị 100
+	71 nút Add Layer
+	72 nút (disabled) Description: Rename Layer, Help: This change is not valid or the layer is locked.
+	73 nút (disabled) Description: Move Layer Up, Help: This change is not valid or the layer is locked.
+	74 nút (disabled) Description: Move Layer Down, Help: This change is not valid or the layer is locked.
+	75 nút Duplicate Layer
+	76 nút (disabled) Description: Delete Layer, Help: This change is not valid or the layer is locked.
+	77 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	78 nút đóng
+	79 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	80 nút thu nhỏ
+	81 text A04-landscape-en — PhotoAxis
+82 menu bar
+	83 PhotoAxis Investigation2 verified en
+	84 File
+	85 Edit
+	86 Image
+	87 Layer
+	88 Type
+	89 View
+	90 Window
+	91 Investigation
+	92 Help
+
+The focused UI element is 0 cửa sổ thông thường A04-landscape-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scenario": "native Cancel task during real 40MP sRGB deterministic-noise PNG encode; existing target overwrite confirmed",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "previousTargetSHA256": "e5e296925175bc1d5e7124a231299f6db90087d523b4fe579b0800193372dbe3",
+  "afterCancelSHA256": "e5e296925175bc1d5e7124a231299f6db90087d523b4fe579b0800193372dbe3",
+  "byteIdentical": true,
+  "temporaryFilesRemaining": 0,
+  "benchmark": false,
+  "earlierAttempts": "Three smooth-image attempts reached post-commit; not counted PASS."
+}

@@ -1,0 +1,85 @@
+Window: "grid-corners.png — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Perspective Crop
+	2 nút bật lên Description: Mode: Auto, Value: W × H
+	3 trường văn bản (settable) Description: Width (px), Help: Output pixels: whole numbers, up to 8000 px per edge and 40 MP., Value: 8001
+	4 trường văn bản (settable) Description: Height (px), Help: Output pixels: whole numbers, up to 8000 px per edge and 40 MP., Value: 480
+	5 nút Swap dimensions
+	6 nút Clear
+	7 nút Reset
+	8 hộp kiểm Show Grid, Value: 1
+	9 hộp kiểm (disabled) Preview, Value: 0
+	10 text Use positive dimensions: ≤ 8000 px per side and ≤ 40 MP.
+	11 nút Cancel, Help: Use positive dimensions: ≤ 8000 px per side and ≤ 40 MP., ID: options.cancel
+	12 nút (disabled) Apply, Help: Use positive dimensions: ≤ 8000 px per side and ≤ 40 MP., ID: options.apply
+	13 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	14 nút Description: Move (V), ID: tool.move
+	15 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	16 nút (disabled) Description: Eyedropper (I), Help: Document editing is still in development., ID: tool.eyedropper
+	17 nút (disabled) Description: Type (T), Help: Document editing is still in development., ID: tool.type
+	18 nút Description: Shape Tools, Help: Shape Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.rectangle
+	19 nút Description: Hand (H), ID: tool.hand
+	20 nút Description: Zoom (Z), ID: tool.zoom
+	21 bảng màu (disabled) Description: Background Color, Help: Document editing is still in development., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	22 bảng màu (disabled) Description: Foreground Color, Help: Document editing is still in development., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	23 nút chuyển đổi grid-exif-6.jpg •, Value: off
+	24 nút Close tab
+	25 nút chuyển đổi grid-corners.png •, Value: on
+	26 nút Close tab
+	27 trường văn bản (settable) Description: Zoom, Value: 255 %
+	28 text 640 × 480 px · 72,00 PPI · Unsaved sRGB Color
+	29 nút Description: Collapse Panels, ID: sidebar.collapse
+	30 hình ảnh Description: Color preview; editing unavailable, Help: Document editing is still in development.
+	31 Description: Properties and History, ID: sidebar.inspectorTabs
+		32 nút radio Description: Properties, Value: 1
+		33 nút radio Description: History, Value: 0
+	34 text 640 × 480 px
+72,00 PPI · sRGB
+Layers: 1 Layers
+	35 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		36 bảng
+			37 row (selected)
+				38 ô (selected)
+					39 nút Description: Toggle Visibility: grid-corners.png, Help: Toggle Visibility
+					40 hình ảnh
+					41 text Help: grid-corners.png, Value: grid-corners.png Image
+					42 nút Description: Toggle Lock: grid-corners.png, Help: Toggle Lock
+		43 thanh cuộn (disabled, settable, float) 0
+	44 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	45 text Opacity
+	46 trường văn bản (settable) Description: Opacity, Value: 100 %
+	47 thanh trượt (settable, float) Description: Opacity, Value: 100
+		48 chỉ báo giá trị (settable, float) 100
+	49 text R
+	50 trường văn bản (disabled) Description: Red, Value: 0
+	51 text G
+	52 trường văn bản (disabled) Description: Green, Value: 0
+	53 text B
+	54 trường văn bản (disabled) Description: Blue, Value: 0
+	55 nút Add Layer
+	56 nút Rename Layer
+	57 nút Move Layer Up
+	58 nút Move Layer Down
+	59 nút Duplicate Layer
+	60 nút Delete Layer
+	61 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	62 nút đóng
+	63 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	64 nút thu nhỏ
+	65 text grid-corners.png — PhotoAxis
+66 menu bar
+	67 PhotoAxis Perspective Final
+	68 File
+	69 Edit
+	70 Image
+	71 Layer
+	72 Type
+	73 View
+	74 Window
+	75 Help
+
+Selected text: ```
+8001
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

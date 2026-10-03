@@ -1,0 +1,4 @@
+02/10/2026 CUA on verified QA app:
+getApp(bundle ID): cgWindowNotFound
+getApp(exact QA app path): The Mac is locked and automatic unlock could not unlock it.
+No native final pointer acceptance recorded. Prior unlock question remains pending.

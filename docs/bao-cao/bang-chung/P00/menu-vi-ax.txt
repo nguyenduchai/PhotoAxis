@@ -1,0 +1,8 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 Tệp, Secondary Actions: Cancel, Pick
+	1 menu Secondary Actions: Cancel
+		2 (disabled) Tạo tài liệu…
+		3 (disabled) Mở…
+		4 (disabled) Lưu
+		5 Đóng cửa sổ, ID: performClose:
+		6 Đóng Tất cả, ID: closeAll:

@@ -1,0 +1,6 @@
+{
+  "path": "$BUILD_ROOT/PhotoAxis-website-P14-LOCAL-PREVIEW.zip",
+  "sha256": "0178bfe384010031c89487b549ef2bae9e2e9b85f9daa88ebac96c3671764aa5",
+  "publicReady": false,
+  "contains": "website HTML/CSS/owned images/metadata only, no app/source/projects"
+}

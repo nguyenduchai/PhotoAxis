@@ -1,0 +1,11 @@
+{
+  "sourceHEAD": "1fecfa80a3588ef47ce1a739c2c77a637cccc701",
+  "branch": "main",
+  "remoteConfigured": false,
+  "publicMutationPerformed": false,
+  "tagCreatedOrPushed": false,
+  "releaseCreatedOrPublished": false,
+  "websiteDeployed": false,
+  "postcheckExecuted": false,
+  "reason": "R01-R09/R12 blocked; no public target/artifact yet"
+}

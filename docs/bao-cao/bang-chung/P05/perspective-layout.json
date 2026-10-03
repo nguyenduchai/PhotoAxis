@@ -1,0 +1,38 @@
+[
+  {
+    "backingScale" : 2,
+    "language" : "vi",
+    "optionsBarWidthPt" : 1440,
+    "optionsHeightPt" : 22,
+    "optionsWidthPt" : 1113,
+    "overflow" : false,
+    "widthPt" : 1440
+  },
+  {
+    "backingScale" : 2,
+    "language" : "vi",
+    "optionsBarWidthPt" : 900,
+    "optionsHeightPt" : 22,
+    "optionsWidthPt" : 573,
+    "overflow" : true,
+    "widthPt" : 1100
+  },
+  {
+    "backingScale" : 2,
+    "language" : "en",
+    "optionsBarWidthPt" : 1440,
+    "optionsHeightPt" : 22,
+    "optionsWidthPt" : 1111.5,
+    "overflow" : false,
+    "widthPt" : 1440
+  },
+  {
+    "backingScale" : 2,
+    "language" : "en",
+    "optionsBarWidthPt" : 900,
+    "optionsHeightPt" : 22,
+    "optionsWidthPt" : 571.5,
+    "overflow" : true,
+    "widthPt" : 1100
+  }
+]

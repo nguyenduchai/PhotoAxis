@@ -1,0 +1,80 @@
+Window: "A04-1080-transparent — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-1080-transparent — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Văn bản Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+	2 nút Hủy, Help: Áp dụng để xác nhận; Escape để hủy., ID: options.cancel
+	3 nút Áp dụng, Help: Áp dụng để xác nhận; Escape để hủy., ID: options.apply
+	4 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	5 nút Description: Di chuyển (V), ID: tool.move
+	6 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	7 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	8 nút Description: Văn bản (T), ID: tool.type
+	9 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	10 nút Description: Bàn tay (H), ID: tool.hand
+	11 nút Description: Thu phóng (Z), ID: tool.zoom
+	12 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 vùng cuộn Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+		15 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: Phiên tab A
+		16 thanh cuộn (disabled, settable, float) 0
+		17 thanh cuộn (disabled, settable, float) 0
+	18 nút chuyển đổi A04-1080-transparent, Value: on
+	19 nút Đóng tab
+	20 nút chuyển đổi A04-landscape-white, Value: off
+	21 nút Đóng tab
+	22 nút chuyển đổi A04-portrait-black, Value: off
+	23 nút Đóng tab
+	24 nút chuyển đổi A04-A4-white, Value: off
+	25 nút Đóng tab
+	26 nút chuyển đổi A04-custom-640, Value: off
+	27 nút Đóng tab
+	28 trường văn bản (settable) Description: Thu phóng, Value: 113,33 %
+	29 text Value: 1.080 × 1.080 px · 72,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	30 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	31 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	32 trường văn bản (settable) Description: HEX, Value: #000000
+	33 trường văn bản (settable) Description: Alpha %, Value: 100
+	34 trường văn bản (settable) Description: Đỏ, Value: 0
+	35 trường văn bản (settable) Description: Xanh lá, Value: 0
+	36 trường văn bản (settable) Description: Xanh dương, Value: 0
+	37 text Màu tiền cảnh Màu nền HEX Alpha % R G B Màu
+	38 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	39 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		40 nút radio Description: Thuộc tính, Value: 0
+		41 nút radio Description: Lịch sử, Value: 1
+	42 text Lớp Chưa có lớp.
+Mở hoặc tạo tài liệu để bắt đầu.
+	43 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		44 bảng Lịch sử
+			45 row (selected)
+				46 ô (selected)
+					47 text Trạng thái đầu
+		48 thanh cuộn (disabled, settable, float) 0
+	49 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	50 text Độ mờ
+	51 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	52 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		53 chỉ báo giá trị (settable, float) 100
+	54 nút Thêm lớp
+	55 nút Đổi tên lớp
+	56 nút Đưa lớp lên
+	57 nút Đưa lớp xuống
+	58 nút Nhân bản lớp
+	59 nút Xóa lớp
+	60 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	61 nút đóng
+	62 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	63 nút thu nhỏ
+	64 text A04-1080-transparent — PhotoAxis
+65 menu bar
+	66 PhotoAxis Investigation2 verified vi
+	67 Tệp
+	68 Chỉnh sửa
+	69 Ảnh
+	70 Lớp
+	71 Văn bản
+	72 Xem
+	73 Cửa sổ
+	74 Điều tra
+	75 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường A04-1080-transparent — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

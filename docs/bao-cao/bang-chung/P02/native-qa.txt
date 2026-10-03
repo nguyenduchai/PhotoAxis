@@ -1,0 +1,12 @@
+PhotoAxis P02 native QA, 22–23/09/2026, macOS 27.0, Apple M1 Pro, backing 2x.
+Data: self-authored fixtures only. No personal document or screenshot retained.
+
+22/09: Vietnamese Release/isolated QA. New 1080x1080 white background; reject width 8001; import grid/EXIF/alpha/static HEIC/P3; five tabs; partial batch error and sixth-tab rejection; 100%, scroll pan, typed zoom 12,5%; close Cancel. Screenshots retain intermediate button wording. qa-grid-pan-vi.png includes a capture border, not used for frame measurements.
+23/09: isolated PhotoAxis QA Final, copied from Release before the last two label corrections, bundle local.photoaxis.p02qa.final. English New A4 black 2480x3508 at 300 PPI; Place Embedded grid from Open Panel above locked background; Open alpha from exact fixture URL; Cmd+Q produces coordinator prompt without NSDocumentController review. Cancel preserves both Untitled and alpha tabs. Repeated quit, Don’t Save for each test document, app terminates.
+23/09 final UI: PhotoAxis QA Verified, bundle local.photoaxis.p02qa.verified, copied from final Release and ad-hoc re-signed without source changes. Open alpha via Open Panel. alpha-final-vi.png and AX verify latest UI and corrected layer count. UUID of compiled code matches final Release in binary-verification.log. Test-only patch afterward moves HEIC fixture generation to a background task; application source/binary unchanged.
+
+UI screenshots and AX collected through native CUA, not HTML. Screenshot scale may be reduced by capture; point/backing assertions come from model/render tests and layout-measurements.json. The latter records empty workspace regression layouts, not all populated document states.
+
+Limits: physical file drag, cross-application clipboard, pointer drag/pinch and display switching are not end-to-end verified. Private NSPasteboard, Space/pan responder and coordinate/render tests are separate component evidence. Save remains disabled with an explicit explanation until P09.
+
+Final batch recapture, 23/09: from an empty isolated QA workspace, selected all 8 self-authored fixture files through Open Panel with Shift+arrows. Five valid images opened. Unsupported text produced its own error; remaining files after the five-tab cap were rejected with the limit message. batch-error-limit-vi.png/AX capture this exact alert; five-tabs-final-vi.png/AX after dismissal show all five valid documents and EXIF orientation. Replaced an earlier mislabeled duplicate workspace screenshot during evidence audit.

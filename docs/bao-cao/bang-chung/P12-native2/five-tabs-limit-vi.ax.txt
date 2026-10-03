@@ -1,0 +1,75 @@
+Window: "A04-custom-640 — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-custom-640 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	11 nút Description: Văn bản (T), ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-1080-transparent, Value: off
+	18 nút Đóng tab
+	19 nút chuyển đổi A04-landscape-white, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi A04-portrait-black, Value: off
+	22 nút Đóng tab
+	23 nút chuyển đổi A04-A4-white, Value: off
+	24 nút Đóng tab
+	25 nút chuyển đổi A04-custom-640, Value: on
+	26 nút Đóng tab
+	27 trường văn bản (settable) Description: Thu phóng, Value: 255 %
+	28 text Value: 640 × 480 px · 144,50 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	29 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	30 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	31 trường văn bản (settable) Description: HEX, Value: #000000
+	32 trường văn bản (settable) Description: Alpha %, Value: 100
+	33 trường văn bản (settable) Description: Đỏ, Value: 0
+	34 trường văn bản (settable) Description: Xanh lá, Value: 0
+	35 trường văn bản (settable) Description: Xanh dương, Value: 0
+	36 text Màu tiền cảnh Màu nền HEX Alpha % R G B Màu
+	37 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	38 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		39 nút radio Description: Thuộc tính, Value: 1
+		40 nút radio Description: Lịch sử, Value: 0
+	41 text 640 × 480 px
+144,50 PPI · sRGB
+Số lớp: 0 Lớp Chưa có lớp.
+Mở hoặc tạo tài liệu để bắt đầu.
+	42 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	43 text Độ mờ
+	44 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	45 thanh trượt (disabled) Description: Độ mờ, Value: 100, Secondary Actions: Increment, Decrement
+		46 chỉ báo giá trị 100
+	47 nút Thêm lớp
+	48 nút (disabled) Description: Đổi tên lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	49 nút (disabled) Description: Đưa lớp lên, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	50 nút (disabled) Description: Đưa lớp xuống, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	51 nút (disabled) Description: Nhân bản lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	52 nút (disabled) Description: Xóa lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	53 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	54 nút đóng
+	55 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	56 nút thu nhỏ
+	57 text A04-custom-640 — PhotoAxis
+58 menu bar
+	59 PhotoAxis Investigation2 verified vi
+	60 Tệp
+	61 Chỉnh sửa
+	62 Ảnh
+	63 Lớp
+	64 Văn bản
+	65 Xem
+	66 Cửa sổ
+	67 Điều tra
+	68 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường A04-custom-640 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,43 @@
+PhotoAxis P07 — native QA, 29/09–01/10/2026
+Baseline 1.0-draft.3; app 1.0.0 (1); macOS 27.0 (26A428), Apple M1 Pro / 32 GiB, Retina 2x.
+QA app copies under $BUILD_ROOT/QA/P07; distinct bundle IDs local.photoaxis.p07vi and local.photoaxis.p07en.
+Only test fixtures and disposable test documents were used. No Save/Export implementation is claimed.
+Binary UUID/Core/Metal equivalence to the final Release is checked in build-manifest.json and binary-verification.log.
+
+29/09 — Release VI, pointer/keyboard through native CUA:
+- Open Fixtures/P02/grid-corners.png (640x480), Fit.
+- Create text “Chữ cũ — P07”, Helvetica 48; create ellipse and a second small ellipse.
+- Hide small ellipse; lock image. Shift+C, draw quad and move top-right corner inward/down.
+- native-quad-vi.png / native-preview-vi.png: four corners and Preview of mixed image/text/shape.
+- Apply: canvas 565x427; visible image, old text and ellipse receive the same perspective.
+  Layer types remain separate; hidden flag and image lock remain. native-applied-vi.png.
+- Cmd+Z restores 640x480 and original geometry; Cmd+Shift+Z reapplies 565x427. native-undo-vi.png.
+- Unhide small ellipse; double-click old text thumbnail. Properties editor scrolls into view and receives focus;
+  canvas inline editor does not appear. Replace with “Chữ mới”, Cmd+Return retains perspective.
+  native-properties-vi.png captures the draft in Properties before commit.
+
+01/10 — Release VI, fresh document (not the prior unsaved session):
+- Reopen grid fixture; create old text and ellipse, crop with inward/downward top-right corner to 565x427.
+- Type new text “THẲNG” after crop, Cmd+Return. New text baseline is horizontal while old text/grid remain projected.
+  native-new-text-vi.png and .ax.txt record four separate image/text/shape/text layers.
+- Double-click ellipse thumbnail: Properties opens and size field receives focus; no hidden text editor focus.
+- Turn Fill off, set Stroke to 6, Apply: projected ellipse becomes outline; old/new text are unchanged.
+  native-shape-edit-vi.png and .ax.txt; Apply/Cancel disabled after commit.
+- Vietnamese strings were inserted via native paste. This is NOT evidence of real Telex/VNI composition.
+
+01/10 — Release EN scope / automation limitation:
+- Settings → English, quit/reopen: Welcome and app menus show English, preference persists.
+- Mixed-layer pointer QA in English could not be completed: CUA native pipe/clipboard errors occurred in the macOS
+  Open → Go To Folder sheet; subsequent actions did not reliably dismiss/navigate that system sheet.
+- No PASS is claimed for this remaining English pointer sequence. The app-hosted native test covers both VI/EN
+  at 1100x700 pt: projected text Properties visibility/focus/Apply/Cancel and shape focus after History selection.
+  Complete a fresh English pointer run in P12; current evidence does not identify a PhotoAxis geometry failure.
+
+P06 follow-up:
+- Dedicated native IME recheck requests com.apple.inputmethod.VietnameseSimpleTelex after activating the input context.
+- Context still reports ABC only, selected source remains ABC; test SKIP. native-ime-recheck.txt records actual values.
+- No manual Telex/VNI result received. A22 / P06 remains BLOCKED_EXTERNAL.
+
+Limits: hosted tests and VI Release pointer QA do not prove macOS 14/non-Retina, full quota performance, real IME,
+Save/Open A20, Export or public signing. Test summary also retains one QoS runtime warning at shape Cancel/focus;
+functional assertions pass, root cause not yet established. Track in P12 without suppressing the checker.

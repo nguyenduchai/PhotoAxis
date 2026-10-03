@@ -1,0 +1,33 @@
+{
+  "cornerRGBTolerance" : 0.025000000000000001,
+  "corners" : [
+    [
+      20,
+      10
+    ],
+    [
+      620,
+      35
+    ],
+    [
+      605,
+      460
+    ],
+    [
+      35,
+      445
+    ]
+  ],
+  "order" : [
+    "TL",
+    "TR",
+    "BR",
+    "BL"
+  ],
+  "output" : [
+    600,
+    420
+  ],
+  "previewApply" : "identical RGBA bytes",
+  "source" : "grid-corners.png"
+}

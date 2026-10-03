@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "cancelOnSecondQuitDecisionKeepsBothTabs": true,
+  "completedNativeTimerRecordsAfterCancel": [
+    {
+      "date": 812605885.312648,
+      "stateID": "B2794F79-CBBC-4861-8271-913BA2E8C193",
+      "name": "Native Close QA B",
+      "revision": 3,
+      "archive": "3D301C74-1B67-4A31-9B9A-CB0A3CC6E08B",
+      "version": 1,
+      "id": "83FB974B-731C-481F-8C44-963A3E01634D"
+    },
+    {
+      "version": 1,
+      "date": 812605847.702643,
+      "revision": 3,
+      "name": "Native Close QA A",
+      "archive": "21848EC0-A94B-44D9-AB11-07AE399726A6",
+      "id": "BE267F7F-30EE-44EC-A842-3EB90E75351A",
+      "stateID": "C4A1729B-A157-4AC4-A2AD-651D82A3FFCA"
+    }
+  ],
+  "finalDontSaveRestartPending": false,
+  "recordsAfterFinalDontSave": 0,
+  "quitProcessExitedNormally": true,
+  "originalQAProjectHashesUnchanged": true,
+  "nativeRestartWelcomeNoRecovery": true,
+  "uncommittedTextCloseCancelKeepsEditor": true,
+  "escapeDiscardsTextPreviewWithoutDirty": true,
+  "missingFontOriginalNamePreserved": true,
+  "missingFontReplacementUndoRestoresOriginalName": true,
+  "scope": "final Release EN two dirty QA tabs; Dont Save A then Cancel B preserves both, final Dont Save all exits and cleans records; native restart has no Recovery"
+}

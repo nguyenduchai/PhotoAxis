@@ -1,0 +1,19 @@
+Window: "", App: PhotoAxis QA Final.
+0 dialog Description: alert, Secondary Actions: Raise
+	1 image PhotoAxis QA Final alert
+	2 text Close “Untitled” and discard changes? This development build does not support saving projects yet. Choose Cancel to keep the document open; Don’t Save discards it.
+	3 button Don’t Save, ID: action-button-2
+	4 button (disabled) Save, ID: action-button-3
+	5 button Cancel, ID: action-button-1
+6 menu bar
+	7 PhotoAxis QA Final
+	8 File
+	9 Edit
+	10 Image
+	11 Layer
+	12 Type
+	13 View
+	14 Window
+	15 Help
+
+The focused UI element is 0 dialog Description: alert, Secondary Actions: Raise

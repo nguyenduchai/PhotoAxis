@@ -1,0 +1,49 @@
+{
+  "reviewDate": "2026-10-03",
+  "recordType": "Summary of actual tool results; not substituted build/test console logs",
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s Tests/ReleaseTooling -v",
+      "status": "PASS",
+      "tests": 16,
+      "exitCode": 0
+    },
+    {
+      "command": "python3 scripts/generate-project.py --check",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 scripts/check-localization.py",
+      "status": "PASS",
+      "keys": 404,
+      "references": 333,
+      "exitCode": 0
+    },
+    {
+      "command": "python3 scripts/check-website.py",
+      "status": "PASS",
+      "pages": 12,
+      "exitCode": 0
+    },
+    {
+      "command": "python3 scripts/release-audit.py preflight",
+      "status": "BLOCKED_EXTERNAL",
+      "exitCode": 2,
+      "mutationPerformed": false
+    },
+    {
+      "command": "python3 docs/bao-cao/bang-chung/P12-native2/verify.py",
+      "status": "PASS",
+      "auditAssertions": 283,
+      "exitCode": 0
+    }
+  ],
+  "fullSuiteRerun": false,
+  "benchmarkCases": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "publicReady": false
+}

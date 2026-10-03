@@ -1,0 +1,106 @@
+[
+  {
+    "file": "assets/mixed-before-render.png",
+    "source": "docs/bao-cao/bang-chung/P12/before-vi.png",
+    "kind": "actual rendered/exported fixture PNG, not UI screenshot",
+    "sourceSHA256": "5be6c17054ea9d6c307516cb4b8e068a0bb6064a72bb6cf9cfddc17353709052",
+    "buildManifest": "docs/bao-cao/bang-chung/P12/build-manifest.json",
+    "scope": "does not certify final native public Release"
+  },
+  {
+    "file": "assets/mixed-after-render.png",
+    "source": "docs/bao-cao/bang-chung/P12/after-vi.png",
+    "kind": "actual exported fixture PNG after Save/reopen/edit, not UI screenshot",
+    "sourceSHA256": "77e7f043ead39128feedcc4d8127d7636657b6408c70f5ba2c5ad2691f1c739d",
+    "buildManifest": "docs/bao-cao/bang-chung/P12/build-manifest.json",
+    "scope": "does not certify final native public Release"
+  },
+  {
+    "file": "assets/photoaxis-icon.png",
+    "source": "scripts/generate-app-icon.swift",
+    "kind": "owned vector icon rendered with CoreGraphics/iconutil, no external assets",
+    "sourceSHA256": "a0f929930075034904e43bd8fac24f866490c185793667a3348f2813aecb39cf",
+    "artifactSHA256": "44687988f72b71738eaa591b727891bdea8abf2886489289e7ef7bf41ef78dd0"
+  },
+  {
+    "file": "assets/perspective-before-native.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-perspective-quad-vi.png",
+    "sourceSHA256": "d777a3ecd28797982e9c20173b2045b4ff6e23a1841aafb11d1e43ea9acbd610",
+    "kind": "native historical build1 local Release screenshot, pointer crop mixed layers",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/perspective-after-native.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-perspective-applied-vi.png",
+    "sourceSHA256": "1a2018c4c7dd44bacff27e094f50182afb10764b63b1df8143b14578325be628",
+    "kind": "native historical build1 local Release screenshot, pointer crop mixed layers",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/recovery-native.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-startup-recovery-vi.png",
+    "sourceSHA256": "e40eb7dd9597e38838719a907a9dfdbff7f6f8b14574de22961e46a7a3b73f93",
+    "kind": "actual native historical build1 Release startup after controlled QA fault and completed native timer snapshot",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/perspective-before-native-en.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-perspective-quad-en.png",
+    "sourceSHA256": "beac0b1c53cf1f8c3e638cb0287c9c2bbab9879747236827bb3981efc55d4697",
+    "kind": "native historical build1 local Release screenshot, pointer crop mixed layers",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/perspective-after-native-en.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-perspective-applied-en.png",
+    "sourceSHA256": "5f3658f5d68a3c8af7074a0815b053a3f2accb9128b3d0410be939cb4876e25b",
+    "kind": "native historical build1 local Release screenshot, pointer crop mixed layers",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/recovery-native-en.png",
+    "source": "docs/bao-cao/bang-chung/P15-native/final-startup-recovery-en.png",
+    "sourceSHA256": "fa97676107e9173c91f37684707c374434fde415ac0580a389024053da1da2bb",
+    "kind": "actual native historical build1 Release startup after controlled QA fault and completed native timer snapshot",
+    "buildManifest": "docs/bao-cao/bang-chung/P15-native/final-binary.json",
+    "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+    "scope": "synthetic owned fixture; local ad-hoc QA; not public installer acceptance"
+  },
+  {
+    "file": "assets/ocr-native.png",
+    "source": "docs/bao-cao/bang-chung/INVESTIGATION2/ocr-final-vi.png",
+    "sourceSHA256": "3f13597dff5718cfd88eb2b41e3189f150d11065db67fb10211dd3e904c6e246",
+    "kind": "actual native build3 local QA screenshot with owned synthetic fixture",
+    "buildManifest": "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
+    "releaseUUID": "4EFA7887-E96F-3149-B6F5-68BE3475F219",
+    "scope": "local ad-hoc QA; no public installer or real-evidence qualification"
+  },
+  {
+    "file": "assets/ocr-native-en.png",
+    "source": "docs/bao-cao/bang-chung/INVESTIGATION2/ocr-final-en.png",
+    "sourceSHA256": "9f238214f8cb24f7da12621764ec20ec8911a23166013b9ab45f6ac196b58640",
+    "kind": "actual native build3 local QA screenshot with owned synthetic fixture",
+    "buildManifest": "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
+    "releaseUUID": "4EFA7887-E96F-3149-B6F5-68BE3475F219",
+    "scope": "local ad-hoc QA; no public installer or real-evidence qualification"
+  },
+  {
+    "file": "assets/measurement-native-vi.png",
+    "source": "docs/bao-cao/bang-chung/INVESTIGATION2/measurement-final-vi.png",
+    "sourceSHA256": "6af36c022fcb055ded570a4d4644b4286900de03fe0a536a3b252e6be82fbb78",
+    "kind": "actual native build3 local QA screenshot with owned synthetic fixture",
+    "buildManifest": "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
+    "releaseUUID": "4EFA7887-E96F-3149-B6F5-68BE3475F219",
+    "scope": "local ad-hoc QA; no public installer or real-evidence qualification"
+  }
+]

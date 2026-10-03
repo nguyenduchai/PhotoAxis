@@ -1,0 +1,60 @@
+{
+  "assessmentDate": "2026-10-02",
+  "assessedCheckout": "d4f4cf1e900a27e412684c9d49afb293bd9e5d10",
+  "testedProductSource": "787e3d1384f101fbd081c4fd8b3fc96a26d2520d",
+  "checks": [
+    {
+      "name": "project",
+      "command": "python3 scripts/generate-project.py --check",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "localization",
+      "command": "python3 scripts/check-localization.py",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "website",
+      "command": "python3 scripts/check-website.py",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "release_tooling",
+      "command": "python3 -m unittest discover -s Tests/ReleaseTooling -v",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "preflight",
+      "command": "python3 scripts/release-audit.py preflight --config Config/Distribution.example.json",
+      "exitCode": 2,
+      "status": "BLOCKED_EXTERNAL"
+    }
+  ],
+  "fullSuiteRerun": {
+    "command": "bash scripts/check.sh > /tmp/photoaxis-readiness-check.log 2>&1",
+    "exitCode": 69,
+    "status": "BLOCKED_SETUP",
+    "testsStarted": false,
+    "currentHostOS": "27.0.1",
+    "reason": "Xcode 27.0 -checkFirstLaunchStatus returns 69; -license check returns 0. Script stops before xcodebuild test. Historical 113 PASS / 0 FAIL / 4 SKIP is from macOS 27.0, not a new run on 27.0.1."
+  },
+  "stages": {
+    "done": 9,
+    "blockedExternal": 7,
+    "postPublicConditional": 1
+  },
+  "acceptance": {
+    "pass": 16,
+    "pending": 27
+  },
+  "releaseGates": {
+    "fullyPassed": 0,
+    "total": 12,
+    "publicReady": false
+  },
+  "scope": "Documentation assessment, read-only verification and local static/tool tests. No source changes, new Release build, native UI sweep, benchmark rerun, signing, remote push or publication."
+}

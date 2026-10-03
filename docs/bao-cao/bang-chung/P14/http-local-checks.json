@@ -1,0 +1,62 @@
+[
+  {
+    "path": "en/guide.html",
+    "status": 200,
+    "bytes": 5204
+  },
+  {
+    "path": "en/index.html",
+    "status": 200,
+    "bytes": 4883
+  },
+  {
+    "path": "en/notices.html",
+    "status": 200,
+    "bytes": 2116
+  },
+  {
+    "path": "en/privacy.html",
+    "status": 200,
+    "bytes": 2583
+  },
+  {
+    "path": "en/release-notes.html",
+    "status": 200,
+    "bytes": 2556
+  },
+  {
+    "path": "en/support.html",
+    "status": 200,
+    "bytes": 2095
+  },
+  {
+    "path": "guide.html",
+    "status": 200,
+    "bytes": 5921
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "bytes": 5371
+  },
+  {
+    "path": "notices.html",
+    "status": 200,
+    "bytes": 2314
+  },
+  {
+    "path": "privacy.html",
+    "status": 200,
+    "bytes": 2901
+  },
+  {
+    "path": "release-notes.html",
+    "status": 200,
+    "bytes": 2776
+  },
+  {
+    "path": "support.html",
+    "status": 200,
+    "bytes": 2392
+  }
+]

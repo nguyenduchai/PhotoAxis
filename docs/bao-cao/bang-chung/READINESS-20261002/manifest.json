@@ -1,0 +1,23 @@
+{
+  "stage": "READINESS-20261002",
+  "specification": "1.0-draft.3",
+  "assessedCheckout": "d4f4cf1e900a27e412684c9d49afb293bd9e5d10",
+  "testedProductCommit": "787e3d1384f101fbd081c4fd8b3fc96a26d2520d",
+  "publicReady": false,
+  "releaseReady": false,
+  "evidenceSHA256": {
+    "artifact-check.json": "acca94232288198c224274956de73235f671bb6c90155fc2c177bca7151366e8",
+    "assessment-checks.json": "14f8cc00d0d60fe05e7d9343dc90b1b97bc46a91c626103d0ca854e83a1f8eb4",
+    "full-suite-attempt.log": "ab2ed71edbad07018948ad0724125611ca98bcb6f4e11757a4bc35636afe3711",
+    "localization.log": "ec3ca4504ac6f19af27b30aa468624b8777516087b91ace25822b04667f569ff",
+    "preflight.json": "f01d1a346259a377efb263e654e7196a89f14f3d76f2fad38819b05f3938d88d",
+    "project.log": "bf23530b321e2cc864f1860c93b75af3a25195768df4717b112e9fae56e962f5",
+    "release_tooling.log": "bc59c2cff7cc42d50d6627fd4d028cf77b98b293d98008f4e69b9c9024cd1291",
+    "runtime-check.json": "5d58c68844c589979b9c8aba952ab30c003b6e2b18c1a426e6aaa1eddd58a23a",
+    "website.log": "8ea8e4310518379c2614f9814e99a190939906ef222362212ba35a9c36d8695c",
+    "xcode-status-explicit.json": "e0c277bf4289db8c939e10b15cd1318b0f32eb09ab5a1096399d72a298bb8a1e",
+    "xcode-status.json": "fb3af710160ab0b9d072c2719796f3e8d4ca62826a84b78f991870c0899b1ed5"
+  },
+  "checksumFileSHA256": "1594e260c0fbc4f28386d755074268679cd065515be2b62946861bf62bb030e7",
+  "scope": "Documentation assessment. Existing artifact and result checks plus rerun local static/tool tests. Native full suite attempt blocked before tests by Xcode first-launch status; no new Release/native/benchmark/signing/publication."
+}

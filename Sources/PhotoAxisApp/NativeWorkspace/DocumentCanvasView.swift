@@ -1,0 +1,366 @@
+import AppKit
+import MetalKit
+import CoreImage
+import PhotoAxisCore
+
+@MainActor
+final class MetalPresentationView: MTKView, MTKViewDelegate {
+    private let presentation: CIContext?
+    private let queue: (any MTLCommandQueue)?
+    var image: CGImage? { didSet { needsDisplay = true } }
+    override func hitTest(_ point: NSPoint) -> NSView? { nil }
+    init() {
+        let device = MTLCreateSystemDefaultDevice()
+        presentation = device.map { CIContext(mtlDevice: $0, options: [.cacheIntermediates: false]) }
+        queue = device?.makeCommandQueue()
+        super.init(frame: .zero, device: device)
+        framebufferOnly = false; isPaused = true; enableSetNeedsDisplay = true
+        colorPixelFormat = .bgra8Unorm; colorspace = CGColorSpace(name: CGColorSpace.sRGB)
+        delegate = self
+    }
+    required init(coder: NSCoder) { fatalError("Use init()") }
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
+    func draw(in view: MTKView) {
+        guard let image, let drawable = currentDrawable, let buffer = queue?.makeCommandBuffer(), let presentation else { return }
+        // Evaluation/decoding already completed off-main. This encodes only presentation of the viewport bitmap.
+        let bitmap = CIImage(cgImage:image).transformed(by:.init(scaleX:drawableSize.width/CGFloat(image.width),y:drawableSize.height/CGFloat(image.height)))
+        presentation.render(bitmap, to: drawable.texture, commandBuffer: buffer,
+                            bounds: CGRect(origin: .zero, size: drawableSize), colorSpace: colorspace!)
+        buffer.present(drawable); buffer.commit()
+    }
+}
+
+@MainActor
+final class CanvasBorderOverlay: NSView {
+    var rectangle: NSRect = .zero { didSet { needsDisplay = true } }
+    var selectedCorners: [NSPoint] = [] { didSet { needsDisplay = true } }
+    var selectionBounds: NSRect? { didSet { needsDisplay = true } }
+    var showsHandles = false { didSet { needsDisplay = true } }
+    var handlePoints: [NSPoint] {
+        guard let r = selectionBounds, showsHandles else { return [] }
+        return [.init(x:r.minX,y:r.minY),.init(x:r.midX,y:r.minY),.init(x:r.maxX,y:r.minY),.init(x:r.maxX,y:r.midY),
+                .init(x:r.maxX,y:r.maxY),.init(x:r.midX,y:r.maxY),.init(x:r.minX,y:r.maxY),.init(x:r.minX,y:r.midY),.init(x:r.midX,y:r.minY-24)]
+    }
+    func hitHandle(_ point:NSPoint)->Int? { handlePoints.firstIndex { hypot(point.x-$0.x,point.y-$0.y) <= 7 } }
+    override var isFlipped: Bool { true }
+    override func hitTest(_ point: NSPoint) -> NSView? { nil }
+    override func draw(_ dirtyRect: NSRect) {
+        NSColor(white: 0.85, alpha: 0.8).setStroke()
+        let path = NSBezierPath(rect: rectangle); path.lineWidth = 1; path.stroke()
+        guard selectedCorners.count >= 3 else { return }
+        NSColor.controlAccentColor.setStroke()
+        let selected = NSBezierPath(); selected.move(to:selectedCorners[0]); selectedCorners.dropFirst().forEach{selected.line(to:$0)}; selected.close(); selected.stroke()
+        guard let box = selectionBounds, showsHandles else { return }
+        let outline = NSBezierPath(rect:box); outline.setLineDash([3,3],count:2,phase:0); outline.stroke()
+        let stem = NSBezierPath(); stem.move(to:.init(x:box.midX,y:box.minY)); stem.line(to:.init(x:box.midX,y:box.minY-24)); stem.stroke()
+        for (index,p) in handlePoints.enumerated() {
+            NSColor.white.setFill()
+            let rect = NSRect(x:p.x-3.5,y:p.y-3.5,width:7,height:7)
+            let handle = index == 8 ? NSBezierPath(ovalIn:rect) : NSBezierPath(rect:rect)
+            handle.fill(); handle.stroke()
+        }
+    }
+}
+
+@MainActor
+final class WelcomeCanvasView: SurfaceView {
+    var toggleChrome: (() -> Void)?
+    var newDocument: (() -> Void)?
+    var openImages: (() -> Void)?
+    var importImages: (([ImageInput]) -> Void)?
+    var viewportChanged: (() -> Void)?
+    var toolChanged: ((ToolKind) -> Void)?
+    var renderFailed: ((String) -> Void)?
+    private(set) var document: PhotoDocument?
+    private var pipeline: ImagePipeline?
+    var imagePipeline: ImagePipeline? { pipeline }
+    lazy var editing = CanvasEditing(canvas:self)
+    lazy var contentEditing=ContentInteraction(canvas:self,localization:localization)
+    private let localization: L10n
+    let metal = MetalPresentationView()
+    let overlay = CanvasBorderOverlay()
+    let cropOverlay = CropOverlay()
+    let perspectiveOverlay = PerspectiveOverlay()
+    lazy var perspectiveEditing = PerspectiveInteraction(canvas:self)
+    lazy var cropping = CropInteraction(canvas:self)
+    private let welcome = NSStackView(frame: NSRect(x: 0, y: 0, width: 430, height: 180))
+    private var renderTask: Task<Void, Never>?
+    private var settleTask: Task<Void,Never>?
+    private struct RenderKey: Equatable {
+        let model: PhotoDocumentModel, viewport: ViewportState
+        let selectedID: UUID?
+        let handles: Bool
+        let samplingScale: Double
+        let lightweightClip: Bool
+    }
+    private var requestedKey: RenderKey?
+    private var generation = UUID()
+    private var panStart: NSPoint?
+    private var lastPointer: NSPoint?
+    private(set) var spaceHeld = false
+    private(set) var presentedViewport: ViewportState?
+    private(set) var presentedModel: PhotoDocumentModel?
+    private(set) var presentedIsInteractive = false
+    override var acceptsFirstResponder: Bool { true }
+    override var undoManager: UndoManager? { document?.undoManager }
+
+    init(localization: L10n) {
+        self.localization = localization
+        super.init(color: WorkspaceStyle.canvas)
+        identifier = .init("workspace.canvas"); setAccessibilityLabel(localization.text("workspace.canvas"))
+        let brand = WorkspaceStyle.label("PhotoAxis", size: 26); brand.font = .systemFont(ofSize: 26, weight: .semibold)
+        let subtitle = NSTextField(wrappingLabelWithString: localization.text("welcome.subtitle"))
+        subtitle.font = .systemFont(ofSize: 12); subtitle.textColor = .secondaryLabelColor; subtitle.alignment = .center
+        let actions = NSStackView()
+        for (key, selector) in [("action.new", #selector(makeNew)), ("action.open", #selector(openFiles))] {
+            let button = NSButton(title: localization.text(key), target: self, action: selector)
+            button.bezelStyle = .rounded; button.font = .systemFont(ofSize: 12); actions.addArrangedSubview(button)
+        }
+        actions.spacing = 12
+        let notice = NSTextField(wrappingLabelWithString: localization.text("document.welcome"))
+        notice.font = .systemFont(ofSize: 11); notice.textColor = .secondaryLabelColor; notice.alignment = .center
+        welcome.orientation = .vertical; welcome.alignment = .centerX; welcome.spacing = 18
+        for child in [brand, subtitle, actions, notice] { welcome.addArrangedSubview(child) }
+        for child in [welcome, metal, overlay, cropOverlay, perspectiveOverlay] { addSubview(child) }
+        // A transformed layer may extend beyond the viewport; its overlay must
+        // never paint over the options bar, tabs or surrounding panels.
+        overlay.wantsLayer = true; overlay.layer?.masksToBounds = true
+        cropOverlay.wantsLayer=true;cropOverlay.layer?.masksToBounds=true;cropOverlay.isHidden=true
+        perspectiveOverlay.wantsLayer=true;perspectiveOverlay.layer?.masksToBounds=true;perspectiveOverlay.isHidden=true
+        metal.isHidden = true; overlay.isHidden = true
+        registerForDraggedTypes([.fileURL])
+    }
+    required init?(coder: NSCoder) { fatalError("Use init(localization:)") }
+    @objc private func makeNew() { newDocument?() }
+    @objc private func openFiles() { openImages?() }
+    func display(_ document: PhotoDocument?, pipeline: ImagePipeline) {
+        let switched = self.document !== document || self.pipeline !== pipeline
+        self.document = document; self.pipeline = pipeline
+        welcome.isHidden = document != nil
+        if switched { requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
+        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
+        window?.invalidateCursorRects(for: self)
+    }
+    override func layout() {
+        super.layout()
+        let width = min(430, max(0, bounds.width - 48))
+        welcome.frame = NSRect(x: (bounds.width - width) / 2, y: max(24, bounds.midY - 90), width: width, height: 180)
+        metal.frame = bounds; overlay.frame = bounds; cropOverlay.frame = bounds; perspectiveOverlay.frame = bounds
+        resizeViewport();contentEditing.refresh()
+    }
+    override func viewDidChangeBackingProperties() { super.viewDidChangeBackingProperties(); resizeViewport() }
+    private func resizeViewport() {
+        guard let document else { return }
+        let scale = window?.backingScaleFactor ?? 1
+        if document.viewport.width != bounds.width || document.viewport.height != bounds.height || document.viewport.backingScale != scale {
+            document.viewport.resize(width: bounds.width, height: bounds.height, backingScale: scale, canvas: document.presentedModel.canvas)
+            viewportChanged?(); requestRender()
+        }
+    }
+    func updateCropOverlay() {
+        guard let d=document,let crop=d.cropSession else{cropOverlay.isHidden=true;return}
+        cropOverlay.isHidden=false;overlay.showsHandles=false;overlay.selectedCorners=[]
+        let v=d.viewport, origin=v.transform.viewPoint(fromDocument:.init(x:0,y:0)),start=v.transform.viewPoint(fromDocument:.init(x:crop.region.x,y:crop.region.y))
+        let scale=v.zoom/v.backingScale
+        cropOverlay.canvasRect=NSRect(x:origin.x,y:origin.y,width:Double(d.model.canvas.width)*scale,height:Double(d.model.canvas.height)*scale)
+        cropOverlay.cropRect=NSRect(x:start.x,y:start.y,width:crop.region.width*scale,height:crop.region.height*scale)
+        cropOverlay.grid=crop.grid;cropOverlay.needsDisplay=true
+    }
+    func updatePerspectiveOverlay() {
+        guard let d=document,let state=d.perspectiveSession,!state.showsPreview,
+              let quad=state.quad,quad.points.count==4,let v=presentedViewport,
+              presentedModel?.canvas==d.model.canvas else {perspectiveOverlay.isHidden=true;return}
+        perspectiveOverlay.isHidden=false;overlay.showsHandles=false;overlay.selectedCorners=[]
+        func view(_ p:Point2D)->NSPoint {let q=v.transform.viewPoint(fromDocument:p);return NSPoint(x:q.x,y:q.y)}
+        let origin=view(.init(x:0,y:0)),scale=v.zoom/v.backingScale
+        perspectiveOverlay.canvasRect=NSRect(x:origin.x,y:origin.y,width:Double(d.model.canvas.width)*scale,height:Double(d.model.canvas.height)*scale)
+        perspectiveOverlay.corners=quad.points.map(view);perspectiveOverlay.isValid=state.isValid
+        if state.grid,let size=state.output,let grid=try? quad.grid(in:d.model.canvas,output:size) {
+            perspectiveOverlay.gridLines=grid.map{$0.map(view)}
+        } else {perspectiveOverlay.gridLines=[]}
+        perspectiveOverlay.needsDisplay=true
+    }
+    func requestRender(interactive:Bool = false) {
+        guard let document, let pipeline, bounds.width > 0, bounds.height > 0 else { renderTask?.cancel(); settleTask?.cancel(); requestedKey = nil; return }
+        let id = document.model.id, revision = document.model.revision
+        let model = document.presentedModel, assets = document.assets, viewport = document.viewport
+        let selectedID = document.selectedLayerID
+        let handles = document.canEditSelection && (document.toolSession?.command == .transform || (document.activeTool == .move && document.showTransformControls))
+        // At Retina scale, continuous interaction evaluates one pixel per point.
+        // Geometry/overlays stay in the original viewport; only sampling changes.
+        let samplingScale = interactive ? max(0.25,min(1,1/viewport.backingScale)) : 1
+        let key = RenderKey(model:model,viewport:viewport,selectedID:selectedID,handles:handles,samplingScale:samplingScale,lightweightClip:interactive)
+        guard requestedKey != key else { return }
+        requestedKey = key; renderTask?.cancel(); settleTask?.cancel(); generation = UUID(); let token = generation
+        if interactive {
+            settleTask = Task { [weak self] in
+                do { try await Task.sleep(for:.milliseconds(150)) } catch { return }
+                guard let self, self.document?.model.id == id else { return }; requestRender(interactive:false)
+            }
+        }
+        renderTask = Task { [weak self] in
+            do {
+                let frame = try await pipeline.render(model: model, assets: assets, viewport: viewport, samplingScale:samplingScale, lightweightClip:interactive)
+                guard let self, !Task.isCancelled, generation == token, self.document?.model.id == id,
+                      self.document?.model.revision == revision else { return }
+                metal.image = frame; metal.isHidden = false; overlay.isHidden = false
+                presentedViewport = viewport; presentedModel = model; presentedIsInteractive = interactive
+                let origin = viewport.transform.viewPoint(fromDocument: .init(x: 0, y: 0))
+                overlay.rectangle = NSRect(x: origin.x, y: origin.y,
+                    width: Double(model.canvas.width) * viewport.zoom / viewport.backingScale,
+                    height: Double(model.canvas.height) * viewport.zoom / viewport.backingScale)
+                overlay.selectedCorners = []; overlay.selectionBounds = nil; overlay.showsHandles = handles
+                if let selectedID, let layer = model.layer(selectedID), (document.activeTool == .move || document.toolSession != nil) && document.cropSession == nil && document.perspectiveSession == nil,
+                   let corners = try? LayerGeometry.support(size:model.localSize(of:layer),transform:layer.transform,clips:layer.clip),
+                   let box = try? model.bounds(of:selectedID) {
+                    overlay.selectedCorners = corners.map { let p=viewport.transform.viewPoint(fromDocument:$0); return NSPoint(x:p.x,y:p.y) }
+                    let start=viewport.transform.viewPoint(fromDocument:.init(x:box.x,y:box.y))
+                    overlay.selectionBounds = NSRect(x:start.x,y:start.y,width:box.width*viewport.zoom/viewport.backingScale,height:box.height*viewport.zoom/viewport.backingScale)
+                }
+                updateCropOverlay(); updatePerspectiveOverlay()
+                setAccessibilityValue(String(format: localization.text("document.canvasStatus"), model.canvas.width, model.canvas.height, viewport.zoom * 100))
+            } catch is CancellationError {} catch {
+                guard let self, generation == token else { return }; requestedKey = nil
+                renderFailed?(localization.text("document.renderError"))
+            }
+        }
+    }
+    func zoom(to value: Double, anchor: NSPoint? = nil) {
+        guard let document else { return }
+        document.viewport.setZoom(value, anchor: anchor.map { .init(x: $0.x, y: $0.y) }); navigationChanged()
+    }
+    func fit() { guard let document else { return }; document.viewport.fit(document.presentedModel.canvas); navigationChanged() }
+    func pan(x: Double, y: Double) { document?.viewport.pan(x: x, y: y); navigationChanged() }
+    private func navigationChanged() { contentEditing.reset();contentEditing.refresh(); editing.cancelPendingPick(); viewportChanged?(); updateCropOverlay(); updatePerspectiveOverlay(); requestRender(interactive:true) }
+    func selectTool(_ kind: ToolKind) {
+        guard let document, document.activeTool == kind || document.resolveSession() else { return }
+        if document.activeTool != kind { contentEditing.reset(); editing.resetPointer(); cropping.reset(); perspectiveEditing.reset() }
+        if kind == .crop { do {try document.startCrop()} catch{return} }
+        if kind == .perspectiveCrop {do {try document.startPerspective()} catch{return}}
+        document.activeTool = kind; toolChanged?(kind); document.changed?(); requestRender(); window?.invalidateCursorRects(for: self)
+    }
+    override func resetCursorRects() {
+        if document != nil { addCursorRect(bounds, cursor: spaceHeld || document?.activeTool == .hand ? .openHand : .crosshair) }
+    }
+    override func mouseDown(with event: NSEvent) {
+        window?.makeFirstResponder(self)
+        guard let document else { return }
+        let point = convert(event.locationInWindow, from: nil)
+        lastPointer = point
+        if spaceHeld || document.activeTool == .hand { panStart = point; NSCursor.closedHand.set() }
+        else if document.activeTool == .zoom { zoom(to: document.viewport.zoom * (event.modifierFlags.contains(.option) ? 0.5 : 2), anchor: point) }
+        else if document.activeTool == .crop {cropping.down(point)}
+        else if document.activeTool == .perspectiveCrop {perspectiveEditing.down(point)}
+        else if [.type,.rectangle,.ellipse,.line,.eyedropper].contains(document.activeTool){contentEditing.down(point,shift:event.modifierFlags.contains(.shift))}
+        else if event.clickCount==2,let layer=document.selectedLayer,case .text=layer.content{contentEditing.edit(layer.id)}
+        else { editing.down(point,shift:event.modifierFlags.contains(.shift)) }
+    }
+    override func mouseDragged(with event: NSEvent) {
+        let point = convert(event.locationInWindow, from: nil)
+        if spaceHeld || document?.activeTool == .hand {
+            if let start = panStart ?? lastPointer { pan(x:point.x-start.x,y:point.y-start.y) }; panStart=point
+        } else if document?.activeTool == .crop {cropping.drag(point)} else if document?.activeTool == .perspectiveCrop {perspectiveEditing.drag(point)} else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){contentEditing.drag(point,shift:event.modifierFlags.contains(.shift))} else { editing.dragged(point,shift:event.modifierFlags.contains(.shift)) }
+        lastPointer=point
+    }
+    override func mouseUp(with event: NSEvent) {
+        if document?.activeTool == .crop {if !spaceHeld {cropping.up(convert(event.locationInWindow,from:nil))}else{cropping.reset()}}
+        else if document?.activeTool == .perspectiveCrop {if !spaceHeld {perspectiveEditing.up(convert(event.locationInWindow,from:nil))}else{perspectiveEditing.reset()}}
+        else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){if !spaceHeld{contentEditing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift))}}
+        else if !spaceHeld && document?.activeTool != .hand { editing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift)) }
+        else { editing.finishPointer() }
+        panStart = nil; lastPointer = nil; window?.invalidateCursorRects(for: self)
+    }
+    override func scrollWheel(with event: NSEvent) {
+        guard document != nil else { super.scrollWheel(with: event); return }
+        let factor = event.hasPreciseScrollingDeltas ? 1.0 : 12.0
+        pan(x: event.scrollingDeltaX * factor, y: event.scrollingDeltaY * factor)
+    }
+    override func magnify(with event: NSEvent) {
+        guard let document else { return }
+        zoom(to: document.viewport.zoom * (1 + event.magnification), anchor: convert(event.locationInWindow, from: nil))
+    }
+    override func keyDown(with event: NSEvent) {
+        guard event.modifierFlags.intersection([.command, .control, .option]).isEmpty else { super.keyDown(with: event); return }
+        if let state=document?.contentSession,[36,76,53].contains(event.keyCode) {
+            if event.keyCode==53{document?.cancelSession()}else if case .shape=state.draft{document?.applySession()};return
+        }
+        if (document?.cropSession != nil || document?.perspectiveSession != nil || document?.hasAdjustmentSession == true) && [36,76,53].contains(event.keyCode) {
+            cropping.reset();perspectiveEditing.reset();if event.keyCode == 53 {document?.cancelSession()} else{document?.applySession()};return
+        }
+        if document?.activeTool != .crop && document?.activeTool != .perspectiveCrop && editing.keyDown(event) { return }
+        switch event.keyCode {
+        case 48: toggleChrome?()
+        case 49: spaceHeld = true; window?.invalidateCursorRects(for: self)
+        default:
+            if event.charactersIgnoringModifiers?.lowercased() == "c" {selectTool(event.modifierFlags.contains(.shift) ? .perspectiveCrop:.crop)}
+            else if event.charactersIgnoringModifiers?.lowercased() == "v" { selectTool(.move) }
+            else if event.charactersIgnoringModifiers?.lowercased() == "t" {selectTool(.type)}
+            else if event.charactersIgnoringModifiers?.lowercased() == "i" {selectTool(.eyedropper)}
+            else if event.charactersIgnoringModifiers?.lowercased() == "u" {
+                let shapes:[ToolKind]=[.rectangle,.ellipse,.line],index=shapes.firstIndex(of:document?.activeTool ?? .rectangle) ?? 0
+                selectTool(event.modifierFlags.contains(.shift) ? shapes[(index+1)%3]:shapes[index])
+            }
+            else if event.charactersIgnoringModifiers?.lowercased() == "x" {document?.swapColors()}
+            else if event.charactersIgnoringModifiers?.lowercased() == "d" {document?.resetColors()}
+            else if event.charactersIgnoringModifiers?.lowercased() == "h" { selectTool(.hand) }
+            else if event.charactersIgnoringModifiers?.lowercased() == "z" { selectTool(.zoom) }
+            else { super.keyDown(with: event) }
+        }
+    }
+    override func keyUp(with event: NSEvent) {
+        if event.keyCode == 49 { spaceHeld = false; panStart = nil; window?.invalidateCursorRects(for: self) }
+        else { editing.keyUp(event); super.keyUp(with: event) }
+    }
+    override func resignFirstResponder() -> Bool { editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; return super.resignFirstResponder() }
+    @objc func paste(_ sender: Any?) {
+        paste(from: .general)
+    }
+    func paste(from board: NSPasteboard) {
+        let files = Self.files(board)
+        if !files.isEmpty { importImages?(files.map { .file($0) }) }
+        else if let data = board.data(forType: .png) ?? board.data(forType: .tiff) {
+            importImages?([.clipboard(data, name: localization.text("document.clipboard"))])
+        }
+    }
+    static func files(_ board: NSPasteboard) -> [URL] {
+        board.readObjects(forClasses: [NSURL.self], options: [.urlReadingFileURLsOnly: true]) as? [URL] ?? []
+    }
+    override func draggingEntered(_ sender: any NSDraggingInfo) -> NSDragOperation { Self.files(sender.draggingPasteboard).isEmpty ? [] : .copy }
+    override func performDragOperation(_ sender: any NSDraggingInfo) -> Bool {
+        let files = Self.files(sender.draggingPasteboard); guard !files.isEmpty else { return false }
+        importImages?(files.map { .file($0) }); return true
+    }
+}
+
+@MainActor
+final class RulerView: SurfaceView {
+    private let vertical: Bool
+    var viewport: ViewportState? { didSet { needsDisplay = true } }
+    init(vertical: Bool) { self.vertical = vertical; super.init(color: WorkspaceStyle.toolbar) }
+    required init?(coder: NSCoder) { fatalError("Use init(vertical:)") }
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+        guard let viewport else { return }
+        let origin = vertical ? viewport.origin.y : viewport.origin.x
+        let scale = viewport.zoom / viewport.backingScale
+        let length = vertical ? bounds.height : bounds.width
+        // 1/2/5 decade ticks keep labels readable at every zoom and backing scale.
+        let desired = 65 / scale, power = pow(10, floor(log10(desired)))
+        let step = [1.0, 2, 5, 10].first { $0 * power >= desired }! * power
+        let first = floor(-origin / scale / step) * step
+        let path = NSBezierPath(); WorkspaceStyle.text.setStroke(); path.lineWidth = 0.5
+        let attributes: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 8), .foregroundColor: WorkspaceStyle.text]
+        for value in stride(from: first, through: (length - origin) / scale, by: step) {
+            let position = origin + value * scale + (vertical ? 20 : 0)
+            path.move(to: vertical ? NSPoint(x: 13, y: position) : NSPoint(x: position, y: 13))
+            path.line(to: vertical ? NSPoint(x: 20, y: position) : NSPoint(x: position, y: 20))
+            let label = String(format: "%.0f", value) as NSString
+            if vertical {
+                NSGraphicsContext.saveGraphicsState()
+                let rotation = NSAffineTransform(); rotation.translateX(by: 3, yBy: position + 3); rotation.rotate(byDegrees: 90); rotation.concat()
+                label.draw(at: .zero, withAttributes: attributes); NSGraphicsContext.restoreGraphicsState()
+            } else { label.draw(at: NSPoint(x: position + 3, y: 1), withAttributes: attributes) }
+        }
+        path.stroke()
+    }
+}

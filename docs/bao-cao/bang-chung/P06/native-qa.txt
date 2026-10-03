@@ -1,0 +1,79 @@
+P06 native QA — 28–29/09/2026, Asia/Ho_Chi_Minh
+M1 Pro / 32 GiB, macOS 27.0, Xcode 27, Retina 2x; AppKit window 1280x800 pt.
+App 1.0.0 (1), specification 1.0-draft.3, local ad-hoc only.
+
+PROVENANCE
+Exploratory VI: QA/P06-final/PhotoAxis Content Final.app, local.photoaxis.p06final.
+Exploratory EN: QA/P06-en/PhotoAxis Content English.app, local.photoaxis.p06english.
+Final VI: QA/P06-verified/PhotoAxis P06 vi.app, local.photoaxis.p06verifiedvi.
+Final EN: QA/P06-verified/PhotoAxis P06 en.app, local.photoaxis.p06verifieden.
+Final apps are copies of the last Release with changed bundle identifier and re-signing only.
+Executable UUIDs/hashes are in build-manifest.json; Core framework and Metal library match Release.
+Exploratory screenshots without final- prefix precede final changes to OptionsBar focus ordering,
+NativeTextEditor invalid-format guard, ColorControls alpha-label width and regression tests.
+
+EXPLORATORY VI — PASS for the listed actions
+Created transparent canvas 640x480, Fit = 255% on Retina.
+Pasted Unicode “Tiếng Việt”; Return created another line; typed V T C X D and space.
+Type remained selected and FG/BG unchanged; Cmd+Return committed one text layer.
+Changed size to 36, style Helvetica Bold, Center alignment, line gap 8.
+Applied and switched Move; Cmd+Z restored 48/Regular/Left/0 together;
+Shift+Cmd+Z restored 36/Bold/Center/8 together.
+Entered FG #1278FF -> RGB 18/120/255.
+Dragged Rectangle 216x106, Ellipse 161x110; Fill unchecked and black stroke 4 px for ellipse.
+Created Line 444x36, black stroke 4 px; Return applied.
+X swapped blue FG with white BG; D restored black/white; I sampled rectangle as #1278FF.
+Screens: text-edit-vi.png, text-applied-vi.png, shapes-sample-vi.png and AX files.
+
+ISSUES FOUND AND FIXED
+1. NSStackView root at zero width/height generated layout constraint warnings. Replaced with
+   manual adaptive inspector rows; final test runtimeWarnings=[]; VI/EN layout test passes.
+2. Numeric field end-edit action could start a new session after the Apply/Cancel button had
+   committed/discarded. End field editing via canvas focus first, then Apply/Cancel.
+   Hosted regression checks session=nil, history count and restored size.
+3. Invalid font size was forwarded to NSTextView. Use the candidate's last validated style and
+   extent for the editor while invalid draft controls remain visible and Apply is disabled.
+   Regression uses 1e100; observed native validation at 1001. No huge editor layout now.
+4. Increased Alpha % label width; final VI/EN label is fully visible.
+
+FINAL VI — PASS, re-bound 29/09 to final Release UUID
+Created P06 Final, transparent 640x480, Fit 255%.
+Pasted “PhotoAxis — Tiếng Việt”, Return then typed “V T C X D ”; Cmd+Return committed.
+Typed 24 in size field, Return, clicked Apply while number field had focus:
+  Apply/Cancel disabled afterwards, inline editor gone, size remains 24 (no reopened session).
+Typed 1001 in size field:
+  Apply disabled, localized invalid message in AX, editor stays at prior 24 px size.
+Clicked Cancel from field:
+  size restored 24, Apply/Cancel disabled, one original text layer remains.
+Set FG #1278FF and alpha 50; switched Move then Shift+U to Ellipse;
+  drag created 255x138 ellipse with fill alpha .5; Return committed.
+D restored colors; I sampled ellipse center:
+  HEX #1278FF, RGB 18/120/255, alpha 50.2% (128/255), not the opaque checkerboard color.
+Screens: final-invalid-vi.png, final-alpha-sample-vi.png and full AX files.
+
+FINAL EN — PASS, final Release UUID
+Created P06 Final English, transparent 640x480; Type click, Unicode text:
+  “Chữ Việt — PhotoAxis” + Return + “ă â ê ô ơ ư đ”; Cmd+Return committed.
+Changed size 48 -> 24; clicked Apply from numeric field. Session ended; both buttons disabled.
+Double-clicked layer thumbnail: native Text Content editor obtained focus and original string.
+Selected all, pasted “Hủy thay đổi này”, Escape: editor closed, original layer/string retained.
+Screens: final-text-en.png, final-cancel-en.png, final-text-en.ax.txt.
+
+HOSTED TESTS — separate from physical pointer / installed-IME acceptance
+NSTextView in NSWindow: setMarkedText -> Apply disabled; insertText commits Vietnamese Unicode;
+Return newline; Cmd+Return Apply; Escape Cancel; typing undo is native/local.
+Shape drags via responder at document coordinates: Shift rectangle/ellipse equal dimensions,
+line snapped; each Apply one command; Cancel no extra layer.
+Projective text goes to Properties NSTextView, first responder correct, editing preserves matrix.
+Missing font original name kept; fallback render does not mutate model; replacement Undo restores it.
+Color/alpha/transparent hit-test, alignment, clipping/transform, quota and numeric focus covered.
+
+UNVERIFIED / EXTERNAL ACCEPTANCE
+Telex/VNI real composition is NOT demonstrated by Unicode paste or setMarkedText alone.
+CUA Ctrl+Space + ASCII typing produced literal “Tieengs Vieetj ”, not a verified source switch.
+Dedicated testInstalledVietnameseInputContext discovered only com.apple.keylayout.ABC and SKIPPED
+before typing. Available-source record is native-ime.txt. Host preference listing is insufficient
+proof that the app's tested input context can use Telex. No system input sources were installed.
+Manual real Telex/VNI test was requested; no result received when this report was written.
+P06 remains BLOCKED_EXTERNAL for this A22 acceptance item; P07 has not been started.
+Non-Retina, macOS 14 hardware, benchmarks/stress and full mixed-layer crop/save/export remain later work.

@@ -1,0 +1,5 @@
+Available sources: ["com.apple.keylayout.ABC"]
+Original: com.apple.keylayout.ABC
+Requested: com.apple.inputmethod.VietnameseSimpleTelex
+Selected: com.apple.keylayout.ABC
+Allowed locales: []

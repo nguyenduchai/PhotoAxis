@@ -1,0 +1,56 @@
+PhotoAxis Investigation 1, 2026-10-02; native AppKit, owned synthetic fixture only.
+Final source: 826bebf61c068ca1864fdf8a20f6b410ca13aa2f
+Final Release UUID: 12159300-9A9E-32E9-8A06-08297E444A0B
+Machine: M1 Pro / 32 GiB / Retina 2x / macOS27.0.1 / Xcode27.0.
+Cua controls used exclusively for native menu/window/pointer/file-panel actions.
+Local outputs: $BUILD_ROOT/QA/Investigation. No personal image/evidence file used.
+
+Earlier scope:
+0ef5378 VI: case create + receive grid-corners.png + source/intake fields;
+annotation arrow at100,120,140,100, 3 shape layers; Cmd+Z / Cmd+Shift+Z;
+Cmd+S; review guard refused first sharing attempt; reviewed ROI20,30,55,37.
+Original bytes7710 / SHA256 8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765.
+Prototype Release UUID 6640C7D3-84D3-30E2-B6FC-0DDC7E291C5F; earlier screenshots not assigned to final UUID.
+
+A Save Panel QA mistake entered an absolute path in the name field; panel
+converted '/' to ':'. One output open() blocked main thread. Only the owned
+QA process was stopped and owned QA package moved to the local Library root.
+Stack sample /tmp/photoaxis-investigation-native-sample.txt kept outside Git.
+Worker sharing write fix b350a77; UI writes succeeded after proper folder selection.
+b350a77 VI: native-reviewed.png / native-A4.pdf / native-source-catalog.json /
+native-processing-log.json, completion alerts and receipt hashes checked.
+Comparison +125% / swipe0.35 / scroll / Reset checked; old drag did not move.
+e5fda41 fix uses successive pointer locations; final hosted/native drag checked below.
+No earlier screenshot presented as final binary evidence.
+
+Final Release 826bebf61c068ca1864fdf8a20f6b410ca13aa2f:
+1. EN QA bundle launched with independent defaults, matches Release UUID/Core.
+2. Investigation menu / open Ho-so-native.paxcase through Go To Folder; title,
+   operator and Vietnamese annotation text retained. Open working / Cmd+S -> Saved;
+   workingSaveStarted27 / workingSaved28; intake source archive binding populated.
+3. Compare dual source/result: native drag500,500 to550,530. Screenshot original
+   red corner moves41,525 ->91,555 and processed945,525 ->995,555 (both50,30px).
+   +button125%; swipe checkbox true / slider0.35; Reset100%. See before/pan/swipe PNGs.
+4. Native A4 report perPage2 / verified-English-A4.pdf. Completion receipt event30.
+   EN app quit cleanly to release case writer lock.
+5. VI QA bundle opened same package; integrity success dialog; event31.
+   Shared PNG verified-reviewed.png / completion33; full log export completion35.
+   Case35events; exported log34events, exact prefix; own completion stays in case.
+6. PNG all2035region pixels black opaque; source byte-for-byte unchanged; PDF A4
+   raster-only, no text/font/annotations/embedded original. Receipt file hashes verified.
+7. Poppler/pypdf/Pillow read-only QA;14PDF pages visually reviewed across all
+   layouts/EN/native outputs. No clipping, correct diacritics/hash/footer/black region.
+   Fixture layout report scoped b350a77; final native PDF separately checked on826bebf.
+8. Final VI case window remains available for local review. Working state clean;
+   a case remains writer-locked until this QA app quits. Ordinary Release app is
+   separate; no Developer ID/notarization/public install claims.
+
+Known non-successful events kept:9 first unreviewed refused sharing;11 blocked
+prototype write with no completion receipt. Owned wrong-name PNG in Fixtures
+was moved out of repository into QA/path-selection-diagnostics after hash matching.
+No log rewritten/truncated; full original JSON outside Git because early QA names
+contain local paths. AX text sanitized; event hash inspection uses unmodified bytes.
+
+Unverified: physical trackpad pinch/Telex/VNI, macOS14/non-Retina/reference hardware,
+full100photos/10GiB/32MiB/10000events and native performance/long-run capacity;
+baseline A/R remaining acceptance. No forensic certification or chain-of-custody claim.

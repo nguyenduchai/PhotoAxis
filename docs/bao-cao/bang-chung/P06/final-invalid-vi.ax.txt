@@ -1,0 +1,99 @@
+Window: "P06 Final — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường P06 Final — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Văn bản Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+	2 nút Hủy, Help: Giá trị không hợp lệ hoặc chữ vượt 8000 px / 40 MP. Hoàn tất gõ tổ hợp trước khi áp dụng., ID: options.cancel
+	3 nút (disabled) Áp dụng, Help: Giá trị không hợp lệ hoặc chữ vượt 8000 px / 40 MP. Hoàn tất gõ tổ hợp trước khi áp dụng., ID: options.apply
+	4 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	5 nút Description: Di chuyển (V), ID: tool.move
+	6 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	7 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	8 nút Description: Văn bản (T), ID: tool.type
+	9 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	10 nút Description: Bàn tay (H), ID: tool.hand
+	11 nút Description: Thu phóng (Z), ID: tool.zoom
+	12 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 vùng cuộn Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+		15 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: PhotoAxis — Tiếng Việt
+V T C X D
+		16 thanh cuộn (disabled, settable, float) 0
+		17 thanh cuộn (disabled, settable, float) 0
+	18 nút chuyển đổi P06 Final •, Value: on
+	19 nút Đóng tab
+	20 trường văn bản (settable) Description: Thu phóng, Value: 255 %
+	21 text 640 × 480 px · 72,00 PPI · Chưa lưu sRGB
+	22 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	23 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	24 trường văn bản (settable) Description: HEX, Value: #000000
+	25 trường văn bản (settable) Description: Alpha %, Value: 100
+	26 trường văn bản (settable) Description: Đỏ, Value: 0
+	27 trường văn bản (settable) Description: Xanh lá, Value: 0
+	28 trường văn bản (settable) Description: Xanh dương, Value: 0
+	29 text Màu tiền cảnh Màu nền HEX Alpha % R G B
+	30 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		31 text Họ phông
+		32 nút bật lên Description: Họ phông, Value: Helvetica, ID: type.family
+		33 text Kiểu phông
+		34 nút bật lên Description: Kiểu phông, Value: Regular, ID: type.style
+		35 text Cỡ chữ…
+		36 trường văn bản (settable) Description: Cỡ chữ…, Value: 1001, ID: type.size
+		37 text Màu chữ
+		38 bảng màu Description: Màu chữ, Value: rgb 0 0 0 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
+		39 text Căn lề
+		40 nút bật lên Description: Căn lề, Value: Trái, ID: type.alignment
+		41 text Cách dòng (px)
+		42 trường văn bản (settable) Description: Cách dòng (px), Value: 0, ID: type.spacing
+		43 text Giá trị không hợp lệ hoặc chữ vượt 8000 px / 40 MP. Hoàn tất gõ tổ hợp trước khi áp dụng.
+		44 thanh cuộn (settable, float) 0
+			45 chỉ báo giá trị (settable, float) 0
+			46 nút mũi tên tăng dần
+			47 nút mũi tên giảm dần
+			48 nút trang tăng dần
+			49 nút trang giảm dần
+	50 text Màu
+	51 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	52 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		53 nút radio Description: Thuộc tính, Value: 1
+		54 nút radio Description: Lịch sử, Value: 0
+	55 text Lớp
+	56 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		57 bảng
+			58 row (selected)
+				59 ô (selected)
+					60 nút Description: Ẩn/hiện lớp: Chữ, Help: Ẩn/hiện lớp
+					61 hình ảnh
+					62 text Help: Chữ, Value: Chữ Chữ
+					63 nút Description: Khóa/mở khóa lớp: Chữ, Help: Khóa/mở khóa lớp
+		64 thanh cuộn (disabled, settable, float) 0
+	65 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	66 text Độ mờ
+	67 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	68 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		69 chỉ báo giá trị (settable, float) 100
+	70 nút Thêm lớp
+	71 nút Đổi tên lớp
+	72 nút Đưa lớp lên
+	73 nút Đưa lớp xuống
+	74 nút Nhân bản lớp
+	75 nút Xóa lớp
+	76 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	77 nút đóng
+	78 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	79 nút thu nhỏ
+	80 text P06 Final — PhotoAxis
+81 menu bar
+	82 PhotoAxis
+	83 Tệp
+	84 Chỉnh sửa
+	85 Ảnh
+	86 Lớp
+	87 Văn bản
+	88 Xem
+	89 Cửa sổ
+	90 Trợ giúp
+
+Selected text: ```
+1001
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

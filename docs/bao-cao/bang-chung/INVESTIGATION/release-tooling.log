@@ -1,0 +1,21 @@
+test_apple_development_and_mismatched_team_are_blocked (test_distribution.ReleasePolicyTests.test_apple_development_and_mismatched_team_are_blocked) ... ok
+test_distinct_namespaces_and_missing_public_target (test_distribution.ReleasePolicyTests.test_distinct_namespaces_and_missing_public_target) ... ok
+test_existing_dmg_cannot_be_overwritten (test_distribution.ReleasePolicyTests.test_existing_dmg_cannot_be_overwritten) ... ok
+test_false_release_ready_cannot_trigger_git_or_upload (test_distribution.ReleasePolicyTests.test_false_release_ready_cannot_trigger_git_or_upload) ... ok
+test_machine_plist_stdout_is_not_corrupted_by_tool_stderr_warning (test_distribution.ReleasePolicyTests.test_machine_plist_stdout_is_not_corrupted_by_tool_stderr_warning) ... ok
+test_no_secret_fields_and_no_development_namespace (test_distribution.ReleasePolicyTests.test_no_secret_fields_and_no_development_namespace) ... ok
+test_tree_hash_detects_bytes_and_symlink_target_without_following (test_distribution.ReleasePolicyTests.test_tree_hash_detects_bytes_and_symlink_target_without_following) ... ok
+test_unknown_identity_and_missing_fields_are_blocked (test_distribution.ReleasePolicyTests.test_unknown_identity_and_missing_fields_are_blocked) ... ok
+test_anonymous_download_enforces_size_before_promotion (test_release_audit.PublicationAuditTests.test_anonymous_download_enforces_size_before_promotion) ... ok
+test_http_download_refused_before_request_or_destination_creation (test_release_audit.PublicationAuditTests.test_http_download_refused_before_request_or_destination_creation) ... ok
+test_https_redirect_cannot_downgrade_to_http (test_release_audit.PublicationAuditTests.test_https_redirect_cannot_downgrade_to_http) ... ok
+test_local_unsigned_manifest_cannot_be_promoted_by_boolean (test_release_audit.PublicationAuditTests.test_local_unsigned_manifest_cannot_be_promoted_by_boolean) ... ok
+test_missing_configuration_and_unaccepted_gates_list_all_blockers (test_release_audit.PublicationAuditTests.test_missing_configuration_and_unaccepted_gates_list_all_blockers) ... ok
+test_old_build_cannot_be_published_as_current_investigation_build (test_release_audit.PublicationAuditTests.test_old_build_cannot_be_published_as_current_investigation_build) ... ok
+test_pass_without_real_evidence_or_path_outside_repository_is_rejected (test_release_audit.PublicationAuditTests.test_pass_without_real_evidence_or_path_outside_repository_is_rejected) ... ok
+test_wrong_public_checksum_discards_partial_and_never_creates_final (test_release_audit.PublicationAuditTests.test_wrong_public_checksum_discards_partial_and_never_creates_final) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.073s
+
+OK

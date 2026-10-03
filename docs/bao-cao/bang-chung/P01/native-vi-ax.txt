@@ -1,0 +1,58 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Di chuyển
+	2 hộp kiểm (disabled) Tự động chọn, Help: Chưa mở tài liệu. Công cụ này chưa khả dụng., Value: 0
+	3 hộp kiểm (disabled) Hiện điều khiển biến đổi, Help: Chưa mở tài liệu. Công cụ này chưa khả dụng., Value: 0
+	4 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	5 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	6 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	7 nút (disabled) Description: Di chuyển (V), Help: Di chuyển (V) — Chưa mở tài liệu. Công cụ này chưa khả dụng., ID: tool.move
+	8 nút Description: Nhóm cắt xén, Help: Nhóm cắt xén — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.crop
+	9 nút (disabled) Description: Lấy mẫu màu (I), Help: Lấy mẫu màu (I) — Chưa mở tài liệu. Công cụ này chưa khả dụng., ID: tool.eyedropper
+	10 nút (disabled) Description: Văn bản (T), Help: Văn bản (T) — Chưa mở tài liệu. Công cụ này chưa khả dụng., ID: tool.type
+	11 nút Description: Nhóm hình dạng, Help: Nhóm hình dạng — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.rectangle
+	12 nút (disabled) Description: Bàn tay (H), Help: Bàn tay (H) — Chưa mở tài liệu. Công cụ này chưa khả dụng., ID: tool.hand
+	13 nút (disabled) Description: Thu phóng (Z), Help: Thu phóng (Z) — Chưa mở tài liệu. Công cụ này chưa khả dụng., ID: tool.zoom
+	14 bảng màu (disabled) Description: Màu nền, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	15 bảng màu (disabled) Description: Màu tiền cảnh, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	16 text PhotoAxis Không gian chỉnh sửa, ghép ảnh và sáng tạo của bạn.
+	17 nút (disabled) Tạo tài liệu…, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	18 nút (disabled) Mở…, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	19 text Công cụ tài liệu sẽ có trong bản phát triển tiếp theo. Chưa mở tài liệu — % Chưa mở tài liệu sRGB Màu
+	20 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	21 hình ảnh Description: Mẫu màu; chưa thể chỉnh sửa, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	22 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		23 nút radio Description: Thuộc tính, Value: 1
+		24 nút radio Description: Lịch sử, Value: 0
+	25 text Chưa chọn lớp.
+Thuộc tính của lớp sẽ hiển thị tại đây. Lớp Chưa có lớp.
+Mở hoặc tạo tài liệu để bắt đầu.
+	26 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	27 text Độ mờ
+	28 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	29 text R
+	30 trường văn bản (disabled) Description: Đỏ, Value: 0
+	31 text G
+	32 trường văn bản (disabled) Description: Xanh lá, Value: 0
+	33 text B
+	34 trường văn bản (disabled) Description: Xanh dương, Value: 0
+	35 nút (disabled) Description: Thêm lớp, Help: Chưa mở tài liệu. Công cụ này chưa khả dụng.
+	36 nút (disabled) Description: Nhân bản lớp, Help: Chưa mở tài liệu. Công cụ này chưa khả dụng.
+	37 nút (disabled) Description: Xóa lớp, Help: Chưa mở tài liệu. Công cụ này chưa khả dụng.
+	38 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	39 nút đóng
+	40 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	41 nút thu nhỏ
+	42 text PhotoAxis
+43 menu bar
+	44 PhotoAxis
+	45 Tệp
+	46 Chỉnh sửa
+	47 Ảnh
+	48 Lớp
+	49 Văn bản
+	50 Xem
+	51 Cửa sổ
+	52 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường PhotoAxis, ID: workspace.window, Secondary Actions: Raise

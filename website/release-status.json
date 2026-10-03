@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "architecture": "arm64",
+  "minimumOS": "14.0",
+  "publicReady": false,
+  "artifactURL": null,
+  "releaseURL": null,
+  "checksumURL": null,
+  "sha256": null,
+  "publisher": null,
+  "supportEmail": null,
+  "distributionTermsURL": null,
+  "status": "preparing",
+  "build": "3",
+  "websiteURL": "https://nguyenduchai.github.io/PhotoAxis/",
+  "sourceRepository": "https://github.com/nguyenduchai/PhotoAxis",
+  "sourceLicense": "GPL-3.0-only",
+  "siteMode": "public-development-preview"
+}

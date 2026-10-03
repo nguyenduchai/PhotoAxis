@@ -1,0 +1,117 @@
+The following is a diff from the previous accessibility tree for Window: "P15 Native Mixed Before — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 23-32
+~21 cửa sổ thông thường P15 Native Mixed Before — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+~	22 text Bàn tay
++	23 nút Vừa màn hình
++	24 nút 100%
++	25 text Kéo hoặc cuộn để di chuyển canvas
++	26 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
++	27 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
++	28 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
++	29 nút Description: Di chuyển (V), ID: tool.move
++	30 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
++	31 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
++	32 nút Description: Văn bản (T), ID: tool.type
++	33 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
++	34 nút Description: Bàn tay (H), ID: tool.hand
++	35 nút Description: Thu phóng (Z), ID: tool.zoom
++	36 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	37 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	38 nút chuyển đổi P15 Native Mixed Before, Value: on
++	39 nút Đóng tab
++	40 trường văn bản (settable) Description: Thu phóng, Value: 408 %
++	41 text Value: 400 × 300 px · 144,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
++	42 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	43 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	44 trường văn bản (settable) Description: HEX, Value: #000000
++	45 trường văn bản (settable) Description: Alpha %, Value: 100
++	46 trường văn bản (settable) Description: Đỏ, Value: 0
++	47 trường văn bản (settable) Description: Xanh lá, Value: 0
++	48 trường văn bản (settable) Description: Xanh dương, Value: 0
++	49 text Màu tiền cảnh Màu nền HEX Alpha % R G B
++	50 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		51 hộp kiểm (disabled) Tô nền, Value: 0, ID: shape.fill
++		52 text Màu tô
++		53 bảng màu (disabled) Description: Màu tô, Value: rgb 0 0 0 0, ID: shape.fillColor, Secondary Actions: Hiển thị bảng màu
++		54 text Màu viền
++		55 bảng màu (disabled) Description: Màu viền, Value: rgb 0 1 1 1, ID: shape.stroke, Secondary Actions: Hiển thị bảng màu
++		56 text Viền (px)
++		57 trường văn bản (disabled) Description: Viền (px), Value: 6, ID: shape.strokeWidth
++		58 text Chiều rộng (px)
++		59 trường văn bản (disabled) Description: Chiều rộng (px), Value: 220, ID: document.width
++		60 text Chiều cao (px)
++		61 trường văn bản (disabled) Description: Chiều cao (px), Value: 22, ID: document.height
++		62 text Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng.
++		63 thanh cuộn (settable, float) 0
++			64 chỉ báo giá trị (settable, float) 0
++			65 nút mũi tên tăng dần
++			66 nút mũi tên giảm dần
++			67 nút trang tăng dần
++			68 nút trang giảm dần
++	69 text Màu
++	70 nút Description: Thu gọn các bảng, ID: sidebar.collapse
++	71 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
++		72 nút radio Description: Thuộc tính, Value: 1
++		73 nút radio Description: Lịch sử, Value: 0
++	74 text Lớp
++	75 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		76 bảng
++			77 row (selected)
++				78 ô (selected)
++					79 nút Description: Ẩn/hiện lớp: Locked, Help: Ẩn/hiện lớp
++					80 hình ảnh
++					81 text Help: Locked, Value: Locked Hình
++					82 nút Description: Khóa/mở khóa lớp: Locked, Help: Khóa/mở khóa lớp
++			83 row (selectable)
++				84 ô
++					85 nút Description: Ẩn/hiện lớp: Hidden, Help: Ẩn/hiện lớp
++					86 hình ảnh
++					87 text Help: Hidden, Value: Hidden Hình
++					88 nút Description: Khóa/mở khóa lớp: Hidden, Help: Khóa/mở khóa lớp
++			89 row (selectable)
++				90 ô
++					91 nút Description: Ẩn/hiện lớp: Ellipse, Help: Ẩn/hiện lớp
++					92 hình ảnh
++					93 text Help: Ellipse, Value: Ellipse Hình
++					94 nút Description: Khóa/mở khóa lớp: Ellipse, Help: Khóa/mở khóa lớp
++			95 row (selectable)
++				96 ô
++					97 nút Description: Ẩn/hiện lớp: Chữ cũ, Help: Ẩn/hiện lớp
++					98 hình ảnh
++					99 text Help: Chữ cũ, Value: Chữ cũ Chữ
++					100 nút Description: Khóa/mở khóa lớp: Chữ cũ, Help: Khóa/mở khóa lớp
++			101 row (selectable)
++				102 ô
++					103 nút Description: Ẩn/hiện lớp: Second image, Help: Ẩn/hiện lớp
++					104 hình ảnh
++					105 text Help: Second image, Value: Second image Ảnh
++					106 nút Description: Khóa/mở khóa lớp: Second image, Help: Khóa/mở khóa lớp
++			107 row (selectable)
++				108 ô
++					109 nút Description: Ẩn/hiện lớp: colors-srgb.png, Help: Ẩn/hiện lớp
++					110 hình ảnh
++					111 text Help: colors-srgb.png, Value: colors-srgb.png Ảnh
++					112 nút Description: Khóa/mở khóa lớp: colors-srgb.png, Help: Khóa/mở khóa lớp
++		113 thanh cuộn (settable, float) 0
++			114 chỉ báo giá trị (settable, float) 0
++			115 nút mũi tên tăng dần
++			116 nút mũi tên giảm dần
++			117 nút trang tăng dần
++			118 nút trang giảm dần
++	119 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
++	120 text Độ mờ
++	121 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
++	122 thanh trượt (disabled) Description: Độ mờ, Value: 100, Secondary Actions: Increment, Decrement
++		123 chỉ báo giá trị 100
++	124 nút Thêm lớp
++	125 nút (disabled) Description: Đổi tên lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
++	126 nút (disabled) Description: Đưa lớp lên, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
++	127 nút (disabled) Description: Đưa lớp xuống, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
++	128 nút Nhân bản lớp
++	129 nút (disabled) Description: Xóa lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
++	130 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
++	131 nút đóng
++	132 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	133 nút thu nhỏ
++	134 text P15 Native Mixed Before — PhotoAxis
+The focused UI element is 21 cửa sổ thông thường P15 Native Mixed Before — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,67 @@
+Window: "A04-square-en — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-square-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-square-en, Value: on
+	18 nút Close tab
+	19 trường văn bản (settable) Description: Zoom, Value: 113,33 %
+	20 text Value: 1.080 × 1.080 px · 72,00 PPI · Saved sRGB, ID: workspace.taskStatus
+	21 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	22 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	23 trường văn bản (settable) Description: HEX, Value: #000000
+	24 trường văn bản (settable) Description: Alpha %, Value: 100
+	25 trường văn bản (settable) Description: Red, Value: 0
+	26 trường văn bản (settable) Description: Green, Value: 0
+	27 trường văn bản (settable) Description: Blue, Value: 0
+	28 text Foreground Color Background Color HEX Alpha % R G B Color
+	29 nút Description: Collapse Panels, ID: sidebar.collapse
+	30 Description: Properties and History, ID: sidebar.inspectorTabs
+		31 nút radio Description: Properties, Value: 1
+		32 nút radio Description: History, Value: 0
+	33 text 1.080 × 1.080 px
+72,00 PPI · sRGB
+Layers: 0 Layers No layers yet.
+Open or create a document to begin.
+	34 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	35 text Opacity
+	36 trường văn bản (disabled) Description: Opacity, Value: 100 %
+	37 thanh trượt (disabled) Description: Opacity, Value: 100, Secondary Actions: Increment, Decrement
+		38 chỉ báo giá trị 100
+	39 nút Add Layer
+	40 nút (disabled) Description: Rename Layer, Help: This change is not valid or the layer is locked.
+	41 nút (disabled) Description: Move Layer Up, Help: This change is not valid or the layer is locked.
+	42 nút (disabled) Description: Move Layer Down, Help: This change is not valid or the layer is locked.
+	43 nút (disabled) Description: Duplicate Layer, Help: This change is not valid or the layer is locked.
+	44 nút (disabled) Description: Delete Layer, Help: This change is not valid or the layer is locked.
+	45 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	46 nút đóng
+	47 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	48 nút thu nhỏ
+	49 text A04-square-en — PhotoAxis
+50 menu bar
+	51 PhotoAxis Investigation2 verified en
+	52 File
+	53 Edit
+	54 Image
+	55 Layer
+	56 Type
+	57 View
+	58 Window
+	59 Investigation
+	60 Help
+
+The focused UI element is 0 cửa sổ thông thường A04-square-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

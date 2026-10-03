@@ -1,0 +1,4 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 menu Secondary Actions: Cancel
+	1 (disabled) Crop (C)
+	2 (disabled) Perspective Crop (C)

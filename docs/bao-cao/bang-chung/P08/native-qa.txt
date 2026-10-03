@@ -1,0 +1,51 @@
+P08 native QA — 01/10/2026
+Host: M1 Pro / 32 GiB, macOS 27.0, Xcode 27.0, Retina 2x.
+CUA điều khiển app AppKit thật, không mockup. Hosted tests không chạy thay chuột vật lý.
+Cửa sổ Release 1280x800 pt; hosted NSWindow VI/EN 1100x700 pt.
+Fixture tự tạo: Fixtures/P02/colors-srgb.png, alpha-edges.png.
+Không lưu ảnh/AX của sidebar cá nhân trong Open panel vào repository.
+
+Build trước sửa action keyboard/accessibility:
+Executable UUID 3496C2E0-C3A1-3E4E-ACA5-8D05049CAF49.
+QA/P08/PhotoAxis P08 vi verified.app: kéo Exposure 0 -> 1,79 EV thành công.
+native-exposure-vi.png chụp ngay sau lần kéo đó.
+Lượt thử History VI tiếp theo bị công cụ báo cửa sổ đã thay đổi; dừng chuỗi đó,
+không dùng giá trị crop/slider về sau làm bằng chứng do agent tạo.
+QA/P08/PhotoAxis P08 en pointer-before-keyboard-fix.app (giữ binary cũ):
+đổi English trong Settings, quit/reopen giữ lựa chọn; mở colors-srgb.png.
+Kéo Exposure 0 -> 1,79: History chỉ Initial State + Image Adjustments.
+Cmd+Z phục hồi 0; nhập 1,25 preview rồi click Cancel phục hồi 0;
+nhập 1,25 Return chốt; nhập 999 Apply disabled; Escape phục hồi 1,25.
+Enable off giữ 1,25 và ảnh bypass; Reset bật lại nhóm và bốn số 0;
+Undo Reset trở về enabled=false, Exposure 1,25; Redo Reset trở về trung tính.
+Cuộn Properties, nhập Saturation -100 Return: canvas và thumbnail xám.
+Khóa layer: cả bốn slider/ô số và Enable/Reset disabled, có lý do English.
+Các native-* không có 'final-' (trừ native-qa.txt) thuộc build này.
+
+Build cuối cùng:
+Executable UUID FF8AFACD-DEAE-3E9C-A849-DF55BFE9834C, cùng Release.
+QA/P08/PhotoAxis P08 en verified.app đã thay binary sau khi tiến trình QA thoát;
+ngôn ngữ English giữ qua mở lại. Không thay bundle VI đang có thao tác bên ngoài.
+Mở alpha-edges.png 640x480; dùng AX setValue Exposure=2, action commit đúng 2
+và chỉ một mục Image Adjustments trong History (native-final-history-en.txt).
+Cmd+Z về trung tính; kéo Exposure 0 -> -1,72, ảnh tối và alpha edge còn đúng.
+Nhập 1,25 Return: commit, Apply/Cancel disabled sau kết thúc phiên.
+Nhập 999: Apply disabled; click Cancel giữ 1,25, không commit giá trị sai.
+Enable off giữ 1,25; Reset bật nhóm và về 0; Cmd+Z phục hồi enabled=false/1,25;
+Cmd+Shift+Z về trung tính. Cuộn, nhập Saturation -100 Return: ảnh xám còn alpha edge.
+Khóa layer: controls disabled. native-final-* thuộc binary cuối đã xác minh UUID.
+Bản QA/P08/PhotoAxis P08 vi completed.app là copy final ký/UUID đã kiểm;
+không gán lượt pointer VI cũ cho binary này. Hosted test VI/EN chạy source cuối.
+
+Lỗi phát hiện/sửa:
+- Các lần kéo ban đầu với super.mouseDown theo tracking loop chỉ nhận vị trí bắt đầu.
+  TransactionSlider vẫn là NSSlider native, nay xử lý mouseDown/Dragged/Up,
+  giữ offset khi nắm knob, clamp min/max, sendAction cho preview, commit khi mouseUp.
+  Refresh không ghi đè cell đang tracking. Hosted test 12 tick/1 Undo và opacity 1 Undo PASS.
+- Begin session gọi refresh đồng bộ: chụp số nhập hoặc slider value trước callback,
+  để numeric và action keyboard/AX không bị ghi đè bằng giá trị cũ.
+- Mất focus numeric không tự action trước Cancel; native Cancel và Escape đã kiểm.
+
+Giới hạn: không Save/Open .paxis ở P08. Chưa nghiệm thu Telex/VNI A22;
+P07 pointer English mixed-layer còn theo dõi riêng; native P08 không thay kết quả đó.
+Full quota, macOS 14, non-Retina và Instruments/QoS thuộc P12.

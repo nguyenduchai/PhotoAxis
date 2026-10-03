@@ -1,0 +1,35 @@
+{
+  "eventHashesAndSequence": 20,
+  "stateDigest": "PASS",
+  "imageOriginalsAndArchives": 3,
+  "videoSources": 1,
+  "exactPTS": {
+    "2": 0.35,
+    "1": 0.1
+  },
+  "ocrRecords": 2,
+  "confirmations": [
+    1,
+    2
+  ],
+  "rawAndConfirmedTextSeparate": "PASS",
+  "measurementResults": [
+    {
+      "kind": "distance",
+      "result": 50
+    },
+    {
+      "kind": "area",
+      "result": 100
+    },
+    {
+      "kind": "distance",
+      "result": 50
+    }
+  ],
+  "nativeOutputSHA256": "9c4903cc84ea012d22d3f5d8da707e9db4314b5bbbda3d51a6e6345b92950c68",
+  "outputReceiptSequence": 18,
+  "outputIsSnapshotBeforeLaterEnglishConfirmation": true,
+  "status": "PASS",
+  "dataScope": "synthetic fixtures; no real case or personal image"
+}

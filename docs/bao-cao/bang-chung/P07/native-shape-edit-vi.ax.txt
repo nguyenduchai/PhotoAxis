@@ -1,0 +1,112 @@
+Window: "grid-corners.png — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Văn bản Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+	2 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	3 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	4 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	5 nút Description: Di chuyển (V), ID: tool.move
+	6 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	7 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	8 nút Description: Văn bản (T), ID: tool.type
+	9 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	10 nút Description: Bàn tay (H), ID: tool.hand
+	11 nút Description: Thu phóng (Z), ID: tool.zoom
+	12 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 nút chuyển đổi grid-corners.png •, Value: on
+	15 nút Đóng tab
+	16 trường văn bản (settable) Description: Thu phóng, Value: 286,65 %
+	17 text 565 × 427 px · 72,00 PPI · Chưa lưu sRGB
+	18 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	20 trường văn bản (settable) Description: HEX, Value: #000000
+	21 trường văn bản (settable) Description: Alpha %, Value: 100
+	22 trường văn bản (settable) Description: Đỏ, Value: 0
+	23 trường văn bản (settable) Description: Xanh lá, Value: 0
+	24 trường văn bản (settable) Description: Xanh dương, Value: 0
+	25 text Màu tiền cảnh Màu nền HEX Alpha % R G B
+	26 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		27 hộp kiểm Tô nền, Value: 0, ID: shape.fill
+		28 text Màu tô
+		29 bảng màu Description: Màu tô, Value: rgb 0 0 0 0, ID: shape.fillColor, Secondary Actions: Hiển thị bảng màu
+		30 text Màu viền
+		31 bảng màu Description: Màu viền, Value: rgb 0 0 0 1, ID: shape.stroke, Secondary Actions: Hiển thị bảng màu
+		32 text Viền (px)
+		33 trường văn bản (settable) Description: Viền (px), Value: 6, ID: shape.strokeWidth
+		34 text Chiều rộng (px)
+		35 trường văn bản (settable) Description: Chiều rộng (px), Value: 157, ID: document.width
+		36 text Chiều cao (px)
+		37 trường văn bản (settable) Description: Chiều cao (px), Value: 83, ID: document.height
+		38 text Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng.
+		39 thanh cuộn (settable, float) 0
+			40 chỉ báo giá trị (settable, float) 0
+			41 nút mũi tên tăng dần
+			42 nút mũi tên giảm dần
+			43 nút trang tăng dần
+			44 nút trang giảm dần
+	45 text Màu
+	46 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	47 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		48 nút radio Description: Thuộc tính, Value: 1
+		49 nút radio Description: Lịch sử, Value: 0
+	50 text Lớp
+	51 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		52 bảng
+			53 row (selectable)
+				54 ô
+					55 nút Description: Ẩn/hiện lớp: Chữ, Help: Ẩn/hiện lớp
+					56 hình ảnh
+					57 text Help: Chữ, Value: Chữ Chữ
+					58 nút Description: Khóa/mở khóa lớp: Chữ, Help: Khóa/mở khóa lớp
+			59 row (selected)
+				60 ô (selected)
+					61 nút Description: Ẩn/hiện lớp: Hình elip, Help: Ẩn/hiện lớp
+					62 hình ảnh
+					63 text Help: Hình elip, Value: Hình elip Hình
+					64 nút Description: Khóa/mở khóa lớp: Hình elip, Help: Khóa/mở khóa lớp
+			65 row (selectable)
+				66 ô
+					67 nút Description: Ẩn/hiện lớp: Chữ, Help: Ẩn/hiện lớp
+					68 hình ảnh
+					69 text Help: Chữ, Value: Chữ Chữ
+					70 nút Description: Khóa/mở khóa lớp: Chữ, Help: Khóa/mở khóa lớp
+			71 row (selectable)
+				72 ô
+					73 nút Description: Ẩn/hiện lớp: grid-corners.png, Help: Ẩn/hiện lớp
+					74 hình ảnh
+					75 text Help: grid-corners.png, Value: grid-corners.png Ảnh
+					76 nút Description: Khóa/mở khóa lớp: grid-corners.png, Help: Khóa/mở khóa lớp
+		77 thanh cuộn (settable, float) 0
+			78 chỉ báo giá trị (settable, float) 0
+			79 nút mũi tên tăng dần
+			80 nút mũi tên giảm dần
+			81 nút trang tăng dần
+			82 nút trang giảm dần
+	83 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	84 text Độ mờ
+	85 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	86 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		87 chỉ báo giá trị (settable, float) 100
+	88 nút Thêm lớp
+	89 nút Đổi tên lớp
+	90 nút Đưa lớp lên
+	91 nút Đưa lớp xuống
+	92 nút Nhân bản lớp
+	93 nút Xóa lớp
+	94 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	95 nút đóng
+	96 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	97 nút thu nhỏ
+	98 text grid-corners.png — PhotoAxis
+99 menu bar
+	100 PhotoAxis
+	101 Tệp
+	102 Chỉnh sửa
+	103 Ảnh
+	104 Lớp
+	105 Văn bản
+	106 Xem
+	107 Cửa sổ
+	108 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

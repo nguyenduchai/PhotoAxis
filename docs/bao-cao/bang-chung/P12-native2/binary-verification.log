@@ -1,0 +1,19 @@
+$ codesign --verify --deep --strict $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+UUID: 4EFA7887-E96F-3149-B6F5-68BE3475F219 (arm64) $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+
+$ codesign --verify --deep --strict $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified vi.app
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified vi.app/Contents/MacOS/PhotoAxis
+UUID: 4EFA7887-E96F-3149-B6F5-68BE3475F219 (arm64) $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified vi.app/Contents/MacOS/PhotoAxis
+
+$ codesign --verify --deep --strict $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified en.app
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified en.app/Contents/MacOS/PhotoAxis
+UUID: 4EFA7887-E96F-3149-B6F5-68BE3475F219 (arm64) $BUILD_ROOT/QA/Investigation2/PhotoAxis Investigation2 verified en.app/Contents/MacOS/PhotoAxis
+
+$ codesign --verify --deep --strict $BUILD_ROOT/P12-native2-benchmark/DerivedData/Build/Products/Release/PhotoAxis.app
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/P12-native2-benchmark/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+UUID: F7D4E855-E897-3CDE-B951-4C5BD9BDB6E0 (arm64) $BUILD_ROOT/P12-native2-benchmark/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis

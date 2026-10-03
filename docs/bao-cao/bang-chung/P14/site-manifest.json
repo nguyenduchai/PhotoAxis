@@ -1,0 +1,30 @@
+{
+  "status": "LOCAL_PREVIEW",
+  "publicReady": false,
+  "appManifest": "docs/bao-cao/bang-chung/P13/build-manifest.json",
+  "websiteFilesSHA256": {
+    "README.md": "1b5111630ec00af0f5ab9d00fa34f079627a26ffdf2235958b40df4d32dc7371",
+    "asset-provenance.json": "72b903fc161ec0d015e2db86a95aa1330aa5ec07174763eeb44e1b07c43a3ae8",
+    "assets/mixed-after-render.png": "77e7f043ead39128feedcc4d8127d7636657b6408c70f5ba2c5ad2691f1c739d",
+    "assets/mixed-before-render.png": "5be6c17054ea9d6c307516cb4b8e068a0bb6064a72bb6cf9cfddc17353709052",
+    "assets/perspective-after-native.png": "4efae24685ed6fa089a8ab27e03ff430cb485f0ad519e561a7b59dc0b22bad47",
+    "assets/perspective-before-native.png": "026f9fd4d1f63f810aa2718279e9f912f5abfbd5553537d113f90f4d06ce8bce",
+    "assets/photoaxis-icon.png": "44687988f72b71738eaa591b727891bdea8abf2886489289e7ef7bf41ef78dd0",
+    "assets/recovery-native.png": "f7b9a391697898e3762a23dfb8b5a41334e578183f181c7e6d8642a94c0b6031",
+    "en/guide.html": "b190843d99a7ccd994bfee15ecdf0cb6e3b219c77d6e538e503ed577ea313383",
+    "en/index.html": "b4c2f648dbe67e434501fd12bce386e338057bf697cf86bd60c190041d5901af",
+    "en/notices.html": "92fe8e711b372551995b01402b62618e3f05b5115ce730b3a453f0a2e5acaf3e",
+    "en/privacy.html": "43d8f17173633f0fb7a48c010518a56b2931005b664a223588b2a94929d44094",
+    "en/release-notes.html": "8a5dc5372e8da68b7ed8655bbac2ca59a3367390556abeedf06c28d2c8950599",
+    "en/support.html": "abf40646b4941f2fd221d2ba3849f5d56b94462507185ff9c9d2c39e230f1b7e",
+    "guide.html": "5537ad4910452b4012a947463438f271dec392e01ce5fb95fc95ebe2590d38f1",
+    "index.html": "abf1c49fedcd028dc02244eab43538797ad5372b71639013efc324846dc364f2",
+    "notices.html": "fa5ae96e03aa621d7b2e13d4baa9db9cfc62447a72cf90ceed185a2c784e9bb1",
+    "privacy.html": "5759b2f1bb7e665bf954af49315d31f80c9b28b46db1267ce7589fb4e146bd1c",
+    "release-notes.html": "e9eacccb6a509f186f18e9c5f934ce13d72350a4601d3345eb6eab7c88437d29",
+    "release-status.json": "f62a1f76878a10e054d5b6d05aa60590056da4945634e245dc698328620cfe4e",
+    "styles.css": "01311f36a5a2cab878579f165dc4390424f9aa4bdf81ed538be53d7a852c7808",
+    "support.html": "3d2ee9b1748c79ea18ed86b453cb341c375b578fb4fb0754a494b22bb9e404a1"
+  },
+  "scope": "site separate from app; CSS viewport390/1280 VI/EN; externalHTTPS/download pending"
+}

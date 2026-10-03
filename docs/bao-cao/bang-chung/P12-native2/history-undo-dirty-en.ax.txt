@@ -1,0 +1,105 @@
+Window: "A04-custom-en — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-custom-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Rectangle Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies.
+	2 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	3 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	4 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	5 nút Description: Move (V), ID: tool.move
+	6 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	7 nút Description: Eyedropper (I), ID: tool.eyedropper
+	8 nút Description: Type (T), ID: tool.type
+	9 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	10 nút Description: Hand (H), ID: tool.hand
+	11 nút Description: Zoom (Z), ID: tool.zoom
+	12 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 nút chuyển đổi A04-square-en, Value: off
+	15 nút Close tab
+	16 nút chuyển đổi A04-landscape-en, Value: off
+	17 nút Close tab
+	18 nút chuyển đổi A04-portrait-en, Value: off
+	19 nút Close tab
+	20 nút chuyển đổi A04-A4-en, Value: off
+	21 nút Close tab
+	22 nút chuyển đổi A04-custom-en •, Value: on
+	23 nút Close tab
+	24 trường văn bản (settable) Description: Zoom, Value: 255 %
+	25 text Value: 640 × 480 px · 144,50 PPI · Unsaved sRGB, ID: workspace.taskStatus
+	26 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	27 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	28 trường văn bản (settable) Description: HEX, Value: #000000
+	29 trường văn bản (settable) Description: Alpha %, Value: 100
+	30 trường văn bản (settable) Description: Red, Value: 0
+	31 trường văn bản (settable) Description: Green, Value: 0
+	32 trường văn bản (settable) Description: Blue, Value: 0
+	33 text Foreground Color Background Color HEX Alpha % R G B Color
+	34 nút Description: Collapse Panels, ID: sidebar.collapse
+	35 Description: Properties and History, ID: sidebar.inspectorTabs
+		36 nút radio Description: Properties, Value: 0
+		37 nút radio Description: History, Value: 1
+	38 text Layers
+	39 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		40 bảng
+			41 row (selected)
+				42 ô (selected)
+					43 nút Description: Toggle Visibility: Rectangle, Help: Toggle Visibility
+					44 hình ảnh
+					45 text Help: Rectangle, Value: Rectangle Shape
+					46 nút Description: Toggle Lock: Rectangle, Help: Toggle Lock
+			47 row (selectable)
+				48 ô
+					49 nút Description: Toggle Visibility: Text, Help: Toggle Visibility
+					50 hình ảnh
+					51 text Help: Text, Value: Text Text
+					52 nút Description: Toggle Lock: Text, Help: Toggle Lock
+		53 thanh cuộn (disabled, settable, float) 0
+	54 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		55 bảng History
+			56 row (selectable)
+				57 ô
+					58 text Initial State
+			59 row (selectable)
+				60 ô
+					61 text Create Text
+			62 row (selectable)
+				63 ô
+					64 text Create Shape
+			65 row (selected)
+				66 ô (selected)
+					67 text Layer Opacity
+			68 row (selectable)
+				69 ô
+					70 text Duplicate Layer
+		71 thanh cuộn (disabled, settable, float) 0
+	72 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	73 text Opacity
+	74 trường văn bản (settable) Description: Opacity, Value: 60 %
+	75 thanh trượt (settable, float) Description: Opacity, Value: 60
+		76 chỉ báo giá trị (settable, float) 60
+	77 nút Add Layer
+	78 nút Rename Layer
+	79 nút Move Layer Up
+	80 nút Move Layer Down
+	81 nút Duplicate Layer
+	82 nút Delete Layer
+	83 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	84 nút đóng
+	85 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	86 nút thu nhỏ
+	87 text A04-custom-en — PhotoAxis
+88 menu bar
+	89 PhotoAxis Investigation2 verified en
+	90 File
+	91 Edit
+	92 Image
+	93 Layer
+	94 Type
+	95 View
+	96 Window
+	97 Investigation
+	98 Help
+
+Selected:
+	65 row (selected)
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

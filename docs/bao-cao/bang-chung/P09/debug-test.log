@@ -1,0 +1,752 @@
+PASS: Xcode project matches source inventory
+$REPO/Sources/PhotoAxisApp/Localization/en.lproj/Localizable.strings: OK
+$REPO/Sources/PhotoAxisApp/Localization/vi.lproj/Localizable.strings: OK
+PASS: 276 matching vi/en keys; 263 static/dynamic references resolved
+Config/Info.plist: OK
+PhotoAxis.xcodeproj/project.pbxproj: OK
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project PhotoAxis.xcodeproj -scheme PhotoAxis -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath $BUILD_ROOT/DerivedData -resultBundlePath $BUILD_ROOT/test-results/PhotoAxis-20261002-001928-50954.xcresult CODE_SIGN_IDENTITY=- DEVELOPMENT_TEAM= test
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+    DEVELOPMENT_TEAM =
+
+Writing result bundle at path:
+	$BUILD_ROOT/test-results/PhotoAxis-20261002-001928-50954.xcresult
+
+note: Using codesigning identity override: -
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (4 targets)
+    Target 'PhotoAxisAppTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxis' in project 'PhotoAxis'
+    Target 'PhotoAxisCoreTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxis' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxisCore' in project 'PhotoAxis' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone/PhotoAxis.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+SwiftDriver PhotoAxisCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCore -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ ProjectSchema.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Sources/PhotoAxisCore/DocumentModel/ProjectSchema.swift (in target 'PhotoAxisCore' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 $HOME/Documents/ChatGPT/Photoshop\ clone/Sources/PhotoAxisCore/DocumentModel/ProjectSchema.swift (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftPerFileCompile ProjectSchema.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxisCore (in target 'PhotoAxisCore' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProjectSchema.swift (in target 'PhotoAxisCore' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation PhotoAxisCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCore -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxisCore (in target 'PhotoAxisCore' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxisCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCore -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Ld $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore normal (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L$BUILD_ROOT/DerivedData/Build/Products/Debug -F$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F$BUILD_ROOT/DerivedData/Build/Products/Debug -filelist $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.LinkFileList -install_name @rpath/PhotoAxisCore.framework/Versions/A/PhotoAxisCore -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -object_path_lto -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_lto.o -rdynamic -Xlinker -dependency_info -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule -Xlinker -no_adhoc_codesign -o $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/arm64-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftmodule $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.abi.json (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/arm64-apple-macos.abi.json
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftsourceinfo (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Modules/PhotoAxisCore.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+ExtractAppIntentsMetadata (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --module-name PhotoAxisCore --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk --xcode-version 27A266a --platform-family macOS --deployment-target 14.0 --bundle-identifier local.photoaxis.core --output $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Resources --target-triple arm64-apple-macos14.0 --binary-file $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore --dependency-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore_dependency_info.dat --stringsdata-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.SwiftFileList --metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore.DependencyMetadataFileList --static-metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/PhotoAxisCore.DependencyStaticMetadataFileList --swift-const-vals-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/Objects-normal/arm64/PhotoAxisCore.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-02 00:19:34.394 appintentsmetadataprocessor[51012:413944] Starting appintentsmetadataprocessor export
+2026-10-02 00:19:34.396 appintentsmetadataprocessor[51012:413944] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+GenerateTAPI $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore.tbd (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/tapi stubify -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -F$BUILD_ROOT/DerivedData/Build/Products/Debug -L$BUILD_ROOT/DerivedData/Build/Products/Debug $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore -o $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore.tbd
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A
+
+SwiftDriver PhotoAxis normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxis -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation PhotoAxis normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxis -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxis (in target 'PhotoAxis' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxis (in target 'PhotoAxis' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxis normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxis -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -F $BUILD_ROOT/DerivedData/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.abi.json (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/Objects-normal/arm64/PhotoAxis.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.swiftmodule/arm64-apple-macos.abi.json
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -remove-static-executable $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks
+warning: not stripping binary because it is signed: $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore (in target 'PhotoAxis' from project 'PhotoAxis')
+
+ProcessInfoPlistFile $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Info.plist $HOME/Documents/ChatGPT/Photoshop\ clone/Config/Info.plist (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-infoPlistUtility $HOME/Documents/ChatGPT/Photoshop\ clone/Config/Info.plist -producttype com.apple.product-type.application -genpkginfo $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PkgInfo -expandbuildsettings -platform macosx -scanforprivacyfile $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework -o $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Info.plist
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --preserve-metadata\=identifier,entitlements,flags --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A: replacing existing signature
+
+SwiftDriver PhotoAxisCoreTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCoreTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+CopySwiftLibs $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Library/SystemExtensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Extensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxisCoreTests (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftCompile normal arm64 Compiling\ ProjectFormatTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisCoreTests/ProjectFormatTests.swift (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisCoreTests/ProjectFormatTests.swift (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftPerFileCompile ProjectFormatTests.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PhotoAxisAppTests (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+
+SwiftDriver\ Compilation PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxisAppTests (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json
+
+CopySwiftLibs $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/PlugIns --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Library/SystemExtensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Extensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisAppTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib: replacing existing signature
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PhotoAxisCoreTests (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxisCoreTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCoreTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftsourceinfo (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.abi.json (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.abi.json $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.swiftmodule/arm64-apple-macos.abi.json
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --entitlements $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis.app.xcent --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app
+$BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app: replacing existing signature
+
+Validate $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-validationUtility $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-lsregisterurl --record-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxis.app
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProjectFormatTests.swift (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation PhotoAxisCoreTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisCoreTests -Onone @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path $BUILD_ROOT/DerivedData/Index.noindex/DataStore -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Debug/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -experimental-emit-module-separately -disable-cmo
+
+Ld $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/MacOS/PhotoAxisCoreTests normal (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L$BUILD_ROOT/DerivedData/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F$BUILD_ROOT/DerivedData/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -object_path_lto -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_lto.o -rdynamic -Xlinker -dependency_info -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -framework PhotoAxisCore -Xlinker -no_adhoc_codesign -o $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/MacOS/PhotoAxisCoreTests
+
+CopySwiftLibs $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/MacOS/PhotoAxisCoreTests --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Frameworks --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/PlugIns --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Library/SystemExtensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Extensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ExtractAppIntentsMetadata (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --module-name PhotoAxisCoreTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk --xcode-version 27A266a --platform-family macOS --deployment-target 14.0 --bundle-identifier local.photoaxis.tests --output $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Resources --target-triple arm64-apple-macos14.0 --binary-file $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/MacOS/PhotoAxisCoreTests --dependency-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests_dependency_info.dat --stringsdata-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.SwiftFileList --metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests.DependencyMetadataFileList --static-metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/PhotoAxisCoreTests.DependencyStaticMetadataFileList --swift-const-vals-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/Objects-normal/arm64/PhotoAxisCoreTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-02 00:19:36.756 appintentsmetadataprocessor[51038:414210] Starting appintentsmetadataprocessor export
+2026-10-02 00:19:36.758 appintentsmetadataprocessor[51038:414210] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-10-02 00:19:36.836 xcodebuild[50978:413731]  DVTAssertions: Warning in IDEFrameworks/IDEFoundation/Execution/LaunchSystem/IDELaunchSession.m:395
+Details:  setRunnablePIDWithDiagnostics:logSection:andCompletionHandler: called without a completion handler - blocking until diagnostics setup completes. Callers should migrate to using a completion handler for better performance.
+Object:   <IDELaunchSession: 0x7bae467600>
+Method:   -setRunnablePIDWithDiagnostics:logSection:andCompletionHandler:
+Thread:   <NSThread: 0x7bace92c40>{number = 3, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+Test Suite 'All tests' started at 2026-10-02 00:19:37.622.
+Test Suite 'PhotoAxisCoreTests.xctest' started at 2026-10-02 00:19:37.623.
+Test Suite 'ProjectFormatTests' started at 2026-10-02 00:19:37.623.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' passed (0.002 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' passed (0.006 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' passed (0.004 seconds).
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' started.
+Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' passed (0.011 seconds).
+Test Suite 'ProjectFormatTests' passed at 2026-10-02 00:19:37.647.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.023 (0.024) seconds
+Test Suite 'PhotoAxisCoreTests.xctest' passed at 2026-10-02 00:19:37.647.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.023 (0.025) seconds
+Test Suite 'All tests' passed at 2026-10-02 00:19:37.648.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.023 (0.025) seconds
+􀟈 Test run started.
+􀄵 Testing Library Version: 2084
+􀄵 Target Platform: arm64e-apple-macos14.0
+􀟈 Suite MultiLayerGeometryTests started.
+􀟈 Suite LayerHistoryTests started.
+􀟈 Suite PerspectiveGeometryTests started.
+􀟈 Suite DocumentTests started.
+􀟈 Suite ImageAdjustmentTests started.
+􀟈 Test validatesDimensionsBeforeAllocation() started.
+􀟈 Test rejectsSingularityAndNonFiniteInput() started.
+􀟈 Suite CropGeometryTests started.
+􀟈 Test retinaZoomAndPanRoundTrip() started.
+􀟈 Test largeTranslationIsNotMistakenForSingularity() started.
+􀟈 Test invalidOperationIsAtomicAndViewportIndependent() started.
+􀟈 Test cornerMappingInverseAndProjectedGrid() started.
+􀟈 Suite ContentTests started.
+􀟈 Test perspectiveRoundTripPreservesCornerIdentity() started.
+􀟈 Test outputModesLimitsAndSwap() started.
+􀟈 Test rejectsInvalidPolygonsAndSingularDomains() started.
+􀟈 Test duplicateAndGeometryPreserveStoredParametersAndSharedSource() started.
+􀟈 Test quotasAreAtomicAndDeduplicateSources() started.
+􀟈 Test recoversKnownIndependentAnalyticHomography() started.
+􀟈 Test boundsAndInvalidChangesAreAtomic() started.
+􀟈 Test documentOperationsComposeAfterLayerMapping() started.
+􀟈 Test layerIdentityClipsHiddenLockedAndRepeatedCrop() started.
+􀟈 Test anchoredZoomAndBackingChangePreserveDocumentPoint() started.
+􀟈 Test placementPreservesSourceAndInsertsAboveSelection() started.
+􀟈 Test homogeneousScaleDoesNotChangeTextRouting() started.
+􀟈 Test rotationsFlipsAndPixelOutput() started.
+􀟈 Test allNineAnchorsAndPPIOnly() started.
+􀟈 Test invalidCropAtomicAndProjectiveClip() started.
+􀟈 Test backgroundsStayTypedAndLocked() started.
+􀟈 Test repeatedCropIntersectsAndEmptyLayersAreRetained() started.
+􁁛 Test validatesDimensionsBeforeAllocation() passed after 0.001 seconds.
+􀟈 Test cropMapsEveryLayerAndKeepsSourceClip() started.
+􁁛 Test rejectsSingularityAndNonFiniteInput() passed after 0.001 seconds.
+􀟈 Test mixedLayerCropUsesCommonMappingAndIsAtomic() started.
+􀟈 Test typedContentValidationAndAtomicLock() started.
+􀟈 Test shapeColorAndContentKeepTransformsAndClip() started.
+􀟈 Test contentLayerQuotaAndHistoryRestoration() started.
+􁁛 Test largeTranslationIsNotMistakenForSingularity() passed after 0.002 seconds.
+􀟈 Test historyBudgetCountsRedoOnlyAssetsOnce() started.
+􀟈 Test historyBranchAndSavedIdentitySurviveTrimming() started.
+􀟈 Test unsafeGeometryIsRejectedAtomically() started.
+􀟈 Test geometryComposesWithoutLosingProjectiveMapping() started.
+􁁛 Test retinaZoomAndPanRoundTrip() passed after 0.002 seconds.
+􁁛 Test cornerMappingInverseAndProjectedGrid() passed after 0.002 seconds.
+􁁛 Test outputModesLimitsAndSwap() passed after 0.002 seconds.
+􁁛 Test rejectsInvalidPolygonsAndSingularDomains() passed after 0.002 seconds.
+􁁛 Test perspectiveRoundTripPreservesCornerIdentity() passed after 0.002 seconds.
+􁁛 Test anchoredZoomAndBackingChangePreserveDocumentPoint() passed after 0.002 seconds.
+􁁛 Test invalidOperationIsAtomicAndViewportIndependent() passed after 0.002 seconds.
+􁁛 Test documentOperationsComposeAfterLayerMapping() passed after 0.002 seconds.
+􁁛 Test homogeneousScaleDoesNotChangeTextRouting() passed after 0.002 seconds.
+􀟈 Test lockedLayerProtectionAndSharedDuplicate() started.
+􁁛 Test duplicateAndGeometryPreserveStoredParametersAndSharedSource() passed after 0.002 seconds.
+􁁛 Test boundsAndInvalidChangesAreAtomic() passed after 0.002 seconds.
+􁁛 Test recoversKnownIndependentAnalyticHomography() passed after 0.002 seconds.
+􁁛 Test placementPreservesSourceAndInsertsAboveSelection() passed after 0.002 seconds.
+􁁛 Test quotasAreAtomicAndDeduplicateSources() passed after 0.002 seconds.
+􁁛 Test backgroundsStayTypedAndLocked() passed after 0.002 seconds.
+􁁛 Test rotationsFlipsAndPixelOutput() passed after 0.002 seconds.
+􁁛 Test layerIdentityClipsHiddenLockedAndRepeatedCrop() passed after 0.003 seconds.
+􁁛 Test invalidCropAtomicAndProjectiveClip() passed after 0.002 seconds.
+􁁛 Test typedContentValidationAndAtomicLock() passed after 0.001 seconds.
+􁁛 Test cropMapsEveryLayerAndKeepsSourceClip() passed after 0.003 seconds.
+􁁛 Test repeatedCropIntersectsAndEmptyLayersAreRetained() passed after 0.002 seconds.
+􁁛 Test allNineAnchorsAndPPIOnly() passed after 0.003 seconds.
+􁁛 Suite DocumentTests passed after 0.004 seconds.
+􁁛 Suite ImageAdjustmentTests passed after 0.003 seconds.
+􁁛 Test unsafeGeometryIsRejectedAtomically() passed after 0.001 seconds.
+􁁛 Test geometryComposesWithoutLosingProjectiveMapping() passed after 0.001 seconds.
+􁁛 Test shapeColorAndContentKeepTransformsAndClip() passed after 0.001 seconds.
+􁁛 Suite PerspectiveGeometryTests passed after 0.004 seconds.
+􁁛 Test contentLayerQuotaAndHistoryRestoration() passed after 0.001 seconds.
+􁁛 Test lockedLayerProtectionAndSharedDuplicate() passed after 0.001 seconds.
+􁁛 Suite ContentTests passed after 0.004 seconds.
+􁁛 Test historyBranchAndSavedIdentitySurviveTrimming() passed after 0.001 seconds.
+􁁛 Suite CropGeometryTests passed after 0.003 seconds.
+􁁛 Test mixedLayerCropUsesCommonMappingAndIsAtomic() passed after 0.002 seconds.
+􁁛 Suite MultiLayerGeometryTests passed after 0.004 seconds.
+􁁛 Test historyBudgetCountsRedoOnlyAssetsOnce() passed after 0.019 seconds.
+􁁛 Suite LayerHistoryTests passed after 0.022 seconds.
+􁁛 Test run with 33 tests in 7 suites passed after 0.022 seconds.
+2026-10-02 00:19:38.421809+0700 PhotoAxis[51054:414324] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.423311+0700 PhotoAxis[51054:414324] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.422246+0700 PhotoAxis[51054:414326] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.422591+0700 PhotoAxis[51054:414325] [Connection] Unable to get synchronousRemoteObje2026-10-02 00:19:38.423448+0700 PhotoAxis[51054:414330] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+ctProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.422953+0700 PhotoAxis[51054:414329] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.423332+0700 PhotoAxis[51054:414326] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com2026-10-02 00:19:38.423558+0700 PhotoAxis[51054:414329] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.423863+0700 PhotoAxis[51054:414324] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.424214+0700 PhotoAxis[51054:414331] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.424551+0700 PhotoAxis[51054:414326] [Connection] Will NOT re-try to establish the connection
+2026-10-02 00:19:38.423543+0700 PhotoAxis[51054:414325] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.424740+0700 PhotoAxis[51054:414331] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.423546+0700 PhotoAxis[51054:414330] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.424330+0700 PhotoAxis[51054:414324] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.424771+0700 PhotoAxis[51054:414332] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.425219+0700 PhotoAxis[51054:414332] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 00:19:38.528277+0700 PhotoAxis[51054:414313] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to <TEMP_PATH>
+2026-10-02 00:19:38.584438+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:38.591202+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:38.732370+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:38.736483+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Suite 'All tests' started at 2026-10-02 00:19:39.026.
+Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-02 00:19:39.026.
+Test Suite 'ContentEditingTests' started at 2026-10-02 00:19:39.027.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' started.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' passed (0.150 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' started.
+2026-10-02 00:19:39.198313+0700 PhotoAxis[51054:414324] [Common] Unable to obtain a task name port right for pid 414: (os/kern) failure (0x5)
+$REPO/Tests/PhotoAxisAppTests/ContentEditingTests.swift:173: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : Test skipped - The native context cannot activate Telex; manual IME acceptance remains required
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' skipped (0.680 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' started.
+2026-10-02 00:19:39.864289+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:39.870908+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:39.919603+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:39.924753+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' passed (0.422 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' started.
+2026-10-02 00:19:40.287054+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.291261+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.326034+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.330299+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' passed (0.255 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' started.
+2026-10-02 00:19:40.536293+0700 PhotoAxis[51054:414313] [SafariPlatformSupport] Asked to display OTP completion list, but could not identify a key window. Bailing.
+2026-10-02 00:19:40.542103+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.546497+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' passed (0.038 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' started.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' passed (0.003 seconds).
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' started.
+2026-10-02 00:19:40.582036+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.586081+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' passed (0.020 seconds).
+Test Suite 'ContentEditingTests' passed at 2026-10-02 00:19:40.598.
+	 Executed 7 tests, with 1 test skipped and 0 failures (0 unexpected) in 1.569 (1.572) seconds
+Test Suite 'CropEditingTests' started at 2026-10-02 00:19:40.598.
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' started.
+2026-10-02 00:19:40.601003+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.605123+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.656396+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.660391+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' passed (0.346 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' started.
+2026-10-02 00:19:40.952670+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.956819+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' passed (0.038 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' started.
+2026-10-02 00:19:40.984367+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.988332+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:40.995136+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.002227+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' passed (0.039 seconds).
+Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' started.
+2026-10-02 00:19:41.024566+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.029495+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' passed (0.043 seconds).
+Test Suite 'CropEditingTests' passed at 2026-10-02 00:19:41.066.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.466 (0.467) seconds
+Test Suite 'DocumentAppTests' started at 2026-10-02 00:19:41.066.
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' started.
+2026-10-02 00:19:41.068747+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.072858+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.079002+0700 PhotoAxis[51054:414326] [PhotoAxis] handle_error:140: PNG read error
+2026-10-02 00:19:41.079051+0700 PhotoAxis[51054:414326] [PhotoAxis] imagePNG_error_break:256: *** ERROR: imagePNG_error_break
+2026-10-02 00:19:41.079063+0700 PhotoAxis[51054:414326] [PhotoAxis] makeImagePlus:3915: *** ERROR: 'PNG '-_reader->initImage[0] failed err=-50
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' passed (0.020 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' started.
+2026-10-02 00:19:41.090871+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.094728+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.136385+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.140262+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+sandbox_extension_consume failed: 1 (Operation not permitted)
+2026-10-02 00:19:41.233465+0700 PhotoAxis[51054:414313] [sandbox] Failed to get a sandbox extension (0)
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' passed (0.238 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' started.
+2026-10-02 00:19:41.328778+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.334702+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.345381+0700 PhotoAxis[51054:414325] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.353171+0700 PhotoAxis[51054:414325] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' passed (0.038 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' started.
+2026-10-02 00:19:41.365012+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.369255+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' passed (0.045 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' started.
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' passed (0.025 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' started.
+2026-10-02 00:19:41.436191+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.440200+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.501623+0700 PhotoAxis[51054:414329] 16204820876 11 AVE : Compiled AppleAVE2-913.43.1 on Aug 11 2026 20:48:30
+2026-10-02 00:19:41.501688+0700 PhotoAxis[51054:414329] 16204821157 11 AVE : Temporary Path: <TEMP_PATH>
+2026-10-02 00:19:41.501719+0700 PhotoAxis[51054:414329] 16204821188 11 AVE INFO: AVE_Plugin_HEVC_CreateInstance Enter 1752589105 0x1fcb7af70 0x7961ed7690 0
+2026-10-02 00:19:41.501785+0700 PhotoAxis[51054:414329] 16204821251 12 AVE INFO: AVE_Session_HEVC_Create Enter 0x7961430020 0x0
+2026-10-02 00:19:41.502159+0700 PhotoAxis[51054:414329] 16204821626 12 AVE INFO: AVE_Session_HEVC_Create Exit 0x7961430020 0x0 210 375 0
+2026-10-02 00:19:41.502190+0700 PhotoAxis[51054:414329] 16204821659 11 AVE INFO: AVE_Plugin_HEVC_CreateInstance Exit 1752589105 0x1fcb7af70 0x7961ed7690 210 0x7961430000 0x7961430020 1079 0 0
+2026-10-02 00:19:41.502222+0700 PhotoAxis[51054:414329] 16204821691 11 AVE INFO: AVE_Plugin_HEVC_StartTileSession Enter 0x7961430000 0x7961ed7680 0x795d498cc0 640 480 0x1fcb7af70 0
+2026-10-02 00:19:41.502252+0700 PhotoAxis[51054:414329] 16204821721 12 AVE INFO: AVE_Session_HEVC_StartTileSession Enter 0x7961430020 0x16b239a40
+2026-10-02 00:19:41.502299+0700 PhotoAxis[51054:414329] 16204821768 12 AVE INFO: AVE_Session_HEVC_StartTileSession Exit 0x7961430020 0x16b239a40 0
+2026-10-02 00:19:41.502328+0700 PhotoAxis[51054:414329] 16204821797 11 AVE INFO: AVE_Plugin_HEVC_StartTileSession Exit 0x7961430000 0x7961ed7680 0x795d498cc0 640 480 0x1fcb7af70 210 106 0 0
+2026-10-02 00:19:41.502436+0700 PhotoAxis[51054:414329] 16204821904 11 AVE INFO: AVE_Plugin_HEVC_PrepareToEncodeTiles Enter 0x7961430000 0 0
+2026-10-02 00:19:41.502465+0700 PhotoAxis[51054:414329] 16204821934 12 AVE INFO: AVE_Session_HEVC_Prepare Enter 0x7961430020
+2026-10-02 00:19:41.502912+0700 PhotoAxis[51054:414329] 16204822379 12 AVE INFO: AVE_Session_HEVC_Prepare Exit 0x7961430020 0
+2026-10-02 00:19:41.502946+0700 PhotoAxis[51054:414329] 16204822414 11 AVE INFO: AVE_Plugin_HEVC_PrepareToEncodeTiles Exit 0x7961430000 0 210 510 0 0
+2026-10-02 00:19:41.525996+0700 PhotoAxis[51054:414329] 16204845427 11 AVE INFO: AVE_Plugin_HEVC_Invalidate Enter 0x7961430000 0
+2026-10-02 00:19:41.526058+0700 PhotoAxis[51054:414329] 16204845525 12 AVE INFO: AVE_Session_HEVC_Stop Enter 0x7961430020
+2026-10-02 00:19:41.526259+0700 PhotoAxis[51054:414329] 16204845726 12 AVE INFO: AVE_Session_HEVC_Stop Exit 0x7961430020 0
+2026-10-02 00:19:41.526292+0700 PhotoAxis[51054:414329] 16204845760 11 AVE INFO: AVE_Plugin_HEVC_Invalidate Exit 0x7961430000 210 333 0 0
+2026-10-02 00:19:41.526462+0700 PhotoAxis[51054:414329] 16204845929 11 AVE INFO: AVE_Plugin_HEVC_Finalize Enter 0x7961430000 0
+2026-10-02 00:19:41.526495+0700 PhotoAxis[51054:414329] 16204845963 12 AVE INFO: AVE_Session_HEVC_Destroy Enter 0x7961430020
+2026-10-02 00:19:41.528307+0700 PhotoAxis[51054:414329] 16204847766 2 AVE : ID: 210 Type: 1 Enc: 2 | Input: 1 Proc: 1 Drop: 0
+2026-10-02 00:19:41.531109+0700 PhotoAxis[51054:414329] 16204850564 12 AVE INFO: AVE_Session_HEVC_Destroy Exit 0x7961430020 0
+2026-10-02 00:19:41.531152+0700 PhotoAxis[51054:414329] 16204850620 11 AVE INFO: AVE_Plugin_HEVC_Finalize Exit 0x7961430000 210 4690 0 0
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' passed (0.323 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' started.
+2026-10-02 00:19:41.760674+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.767189+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' passed (0.022 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' started.
+2026-10-02 00:19:41.784304+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.791468+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.792539+0700 PhotoAxis[51054:414329] [PhotoAxis] handle_error:140: PNG read error
+2026-10-02 00:19:41.792620+0700 PhotoAxis[51054:414329] [PhotoAxis] imagePNG_error_break:256: *** ERROR: imagePNG_error_break
+2026-10-02 00:19:41.792639+0700 PhotoAxis[51054:414329] [PhotoAxis] makeImagePlus:3915: *** ERROR: 'PNG '-_reader->initImage[0] failed err=-50
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' passed (0.035 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' started.
+2026-10-02 00:19:41.819554+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.824533+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' passed (0.057 seconds).
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' started.
+2026-10-02 00:19:41.875381+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.880883+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' passed (0.009 seconds).
+Test Suite 'DocumentAppTests' passed at 2026-10-02 00:19:41.882.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.813 (0.816) seconds
+Test Suite 'ImageAdjustmentTests' started at 2026-10-02 00:19:41.883.
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' started.
+2026-10-02 00:19:41.885375+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:41.890879+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' passed (0.362 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' started.
+2026-10-02 00:19:42.247132+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.251458+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.291809+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.295777+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.476225+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.480198+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.546229+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.550601+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' passed (0.507 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' started.
+2026-10-02 00:19:42.756266+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.760548+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' passed (0.064 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' started.
+2026-10-02 00:19:42.818100+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.822487+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.832478+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.836594+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.844200+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.848674+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' passed (0.118 seconds).
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' started.
+2026-10-02 00:19:42.937086+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.941227+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' passed (0.017 seconds).
+Test Suite 'ImageAdjustmentTests' passed at 2026-10-02 00:19:42.951.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 1.067 (1.069) seconds
+Test Suite 'LayerEditingTests' started at 2026-10-02 00:19:42.951.
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' started.
+2026-10-02 00:19:42.954978+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.960434+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:42.998072+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.003646+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' passed (0.607 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' started.
+2026-10-02 00:19:43.561914+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.566137+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.577616+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.582245+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' passed (0.086 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' started.
+2026-10-02 00:19:43.647922+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.652183+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' passed (0.031 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' started.
+2026-10-02 00:19:43.678677+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.685222+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.692692+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.696908+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' passed (0.033 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' started.
+2026-10-02 00:19:43.711710+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.718435+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' passed (0.017 seconds).
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' started.
+2026-10-02 00:19:43.729261+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.733338+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' passed (0.015 seconds).
+Test Suite 'LayerEditingTests' passed at 2026-10-02 00:19:43.742.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.789 (0.791) seconds
+Test Suite 'MultiLayerPerspectiveTests' started at 2026-10-02 00:19:43.743.
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' started.
+2026-10-02 00:19:43.744784+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.749634+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' passed (0.030 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' started.
+2026-10-02 00:19:43.774983+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.779099+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' passed (0.036 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' started.
+2026-10-02 00:19:43.813881+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:43.817994+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' passed (3.703 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' started.
+2026-10-02 00:19:47.514091+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.518007+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' passed (0.027 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' started.
+2026-10-02 00:19:47.547201+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.554226+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.597213+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.601948+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.790590+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.794502+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+$REPO/Tests/PhotoAxisAppTests/MultiLayerPerspectiveTests.swift:226: warning: -[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages] : [Internal] Thread running at User-interactive quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions
+2026-10-02 00:19:47.952594+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:47.956996+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' passed (0.626 seconds).
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' started.
+2026-10-02 00:19:48.169213+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.173254+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' passed (0.131 seconds).
+Test Suite 'MultiLayerPerspectiveTests' passed at 2026-10-02 00:19:48.297.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 4.552 (4.554) seconds
+Test Suite 'PerspectiveEditingTests' started at 2026-10-02 00:19:48.297.
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' started.
+2026-10-02 00:19:48.302473+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.306865+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' passed (0.033 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' started.
+2026-10-02 00:19:48.332767+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.337239+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.374579+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.378841+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' passed (0.427 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' started.
+2026-10-02 00:19:48.763082+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.767896+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.808734+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:48.813073+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.148525+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.152478+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.224474+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.228613+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' passed (0.835 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' started.
+2026-10-02 00:19:49.601805+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.605685+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.612693+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.619821+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' passed (0.035 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' started.
+2026-10-02 00:19:49.631151+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.635239+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' passed (0.059 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' started.
+2026-10-02 00:19:49.691192+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.695273+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' passed (0.039 seconds).
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' started.
+2026-10-02 00:19:49.729638+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.735382+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.775957+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.779973+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' passed (0.089 seconds).
+Test Suite 'PerspectiveEditingTests' passed at 2026-10-02 00:19:49.817.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 1.518 (1.520) seconds
+Test Suite 'ProjectDocumentTests' started at 2026-10-02 00:19:49.817.
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' started.
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' passed (0.005 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' started.
+2026-10-02 00:19:49.823743+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.827694+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' passed (0.051 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' started.
+2026-10-02 00:19:49.876351+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.880555+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' passed (0.047 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' started.
+2026-10-02 00:19:49.923318+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.929021+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' passed (0.020 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' started.
+2026-10-02 00:19:49.952879+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:49.958054+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' passed (0.065 seconds).
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' started.
+2026-10-02 00:19:50.008099+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.012175+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' passed (0.026 seconds).
+Test Suite 'ProjectDocumentTests' passed at 2026-10-02 00:19:50.032.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.213 (0.215) seconds
+Test Suite 'WorkspaceTests' started at 2026-10-02 00:19:50.033.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' started.
+2026-10-02 00:19:50.065528+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.069901+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' passed (0.156 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' started.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' passed (0.016 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' started.
+2026-10-02 00:19:50.236360+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.240328+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.377219+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.381445+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' passed (0.338 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' started.
+2026-10-02 00:19:50.577041+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:50.581365+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:51.564273+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:51.568806+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' passed (2.045 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' started.
+2026-10-02 00:19:52.621427+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:52.625655+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' passed (0.271 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' started.
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' passed (0.001 seconds).
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' started.
+2026-10-02 00:19:52.895318+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 00:19:52.899362+0700 PhotoAxis[51054:414313] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' passed (0.231 seconds).
+Test Suite 'WorkspaceTests' passed at 2026-10-02 00:19:53.092.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 3.058 (3.060) seconds
+Test Suite 'PhotoAxisAppTests.xctest' passed at 2026-10-02 00:19:53.092.
+	 Executed 58 tests, with 1 test skipped and 0 failures (0 unexpected) in 14.047 (14.066) seconds
+Test Suite 'All tests' passed at 2026-10-02 00:19:53.093.
+	 Executed 58 tests, with 1 test skipped and 0 failures (0 unexpected) in 14.047 (14.067) seconds
+2026-10-02 00:19:58.634 xcodebuild[50978:413720] [MT] IDETestOperationsObserverDebug: 21.838 elapsed -- Testing started completed.
+2026-10-02 00:19:58.634 xcodebuild[50978:413720] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-02 00:19:58.634 xcodebuild[50978:413720] [MT] IDETestOperationsObserverDebug: 21.838 sec, +21.838 sec -- end
+
+Test session results, code coverage, and logs:
+	$BUILD_ROOT/test-results/PhotoAxis-20261002-001928-50954.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
+Test result: $BUILD_ROOT/test-results/PhotoAxis-20261002-001928-50954.xcresult

@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-02T18:10:37.671660+07:00",
+  "source": "security find-identity -v -p codesigning; names/hashes omitted",
+  "developerIDApplicationCount": 0,
+  "appleDevelopmentCount": 1,
+  "publicSigningPerformed": false
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "file": "alpha.png",
+    "sha256": "04f1e63a07586c839b75ad6a36bc1bd12cc7eff50cded74d573f5ec5a29aaf68",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "colors-display-p3.png",
+    "sha256": "c3bf70f33556122fcfccafaa963d0559b6afd8f1c54c9dae5058cb0ffb05fdad",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "gps-stripped.png",
+    "sha256": "7f322f4c9d8e52fe31041969abd5ebc945d4a12aace0f4c18cd110f23f13d37e",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "gray-16.png",
+    "sha256": "4715bbc9392544e0d3ab188391eb95e77021ddb5b843d2e92a0ce1a351b4a5a8",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "gray-8.png",
+    "sha256": "4715bbc9392544e0d3ab188391eb95e77021ddb5b843d2e92a0ce1a351b4a5a8",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "hdr-to-sdr.png",
+    "sha256": "573730fdb80fb85ce653f513c080b55f5bd761b87c94a3a5a3a8908aa6f3013c",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "matte-blue.png",
+    "sha256": "468189e1eb4467f54bd3482a81885d03e7459a068891f058a86922c87bf5ccd9",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "mixed-en.png",
+    "sha256": "fbebfef52a1d567752e0dfe51c56f36b9f9536dfe37739fcaf42db66b7ae7235",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "mixed-vi.png",
+    "sha256": "fbebfef52a1d567752e0dfe51c56f36b9f9536dfe37739fcaf42db66b7ae7235",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "preserved.png",
+    "sha256": "d36a4c3fbfc99eda26ff822738dace340c8e79e8aa5c38a58b8319ef7a6c5490",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  },
+  {
+    "file": "resized.png",
+    "sha256": "72ef657ea487ca22a95580e1b7d1ae2716bc1fd7db256d76eacce114f29ffcd3",
+    "chunks": [
+      "IHDR",
+      "iCCP",
+      "eXIf",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "actualICC": true,
+    "iccSHA256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+  }
+]

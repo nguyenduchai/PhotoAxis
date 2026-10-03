@@ -1,0 +1,12 @@
+{
+  "historyBlobsScanned": 1276,
+  "credentialPatternHits": [],
+  "largeBlobsOver40MB": [],
+  "sensitiveTrackedPaths": [],
+  "method": "Scanned all Git history blob bytes for private-key headers, GitHub/AWS/OpenAI token patterns and tracked secret-file paths; this is a scoped pattern scan, not a formal security certification.",
+  "publicPublication": "Initial snapshot excluding the unlicensed Adobe reference; prior implementation history retained on local/implementation-history and not pushed.",
+  "excludedPath": "docs/tham-chieu/P01/adobe-workspace-reference.jpg",
+  "sourceLicense": "GPL-3.0-only",
+  "appCodeUnchanged": true,
+  "packagingAndWebsiteChanged": true
+}

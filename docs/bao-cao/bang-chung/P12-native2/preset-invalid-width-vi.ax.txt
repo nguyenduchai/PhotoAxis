@@ -1,0 +1,31 @@
+Window: "Tạo tài liệu…", App: PhotoAxis.
+0 tờ Secondary Actions: Raise
+	1 text Tên
+	2 trường văn bản (settable) Description: Tên, Value: A04-custom-640
+	3 text Mẫu có sẵn
+	4 nút bật lên Description: Mẫu có sẵn, Value: Tùy chỉnh
+	5 text Chiều rộng (px)
+	6 trường văn bản (settable) Description: Chiều rộng (px), Value: 8001
+	7 text Chiều cao (px)
+	8 trường văn bản (settable) Description: Chiều cao (px), Value: 1080
+	9 text Mật độ (PPI)
+	10 trường văn bản (settable) Description: Mật độ (PPI), Value: 72
+	11 text Nền
+	12 nút bật lên Description: Nền, Value: Trong suốt
+	13 nút ⇅, Description: Đảo chiều
+	14 text Chiều rộng/cao phải là số nguyên 1–8000 px; diện tích tối đa 40 megapixel.
+	15 nút Hủy
+	16 nút (disabled) Tạo tài liệu…
+17 menu bar
+	18 PhotoAxis Investigation2 verified vi
+	19 Tệp
+	20 Chỉnh sửa
+	21 Ảnh
+	22 Lớp
+	23 Văn bản
+	24 Xem
+	25 Cửa sổ
+	26 Điều tra
+	27 Trợ giúp
+
+The focused UI element is 6 trường văn bản (settable) Description: Chiều rộng (px), Value: 8001

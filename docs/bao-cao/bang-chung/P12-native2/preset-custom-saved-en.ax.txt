@@ -1,0 +1,75 @@
+Window: "A04-custom-en — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-custom-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-square-en, Value: off
+	18 nút Close tab
+	19 nút chuyển đổi A04-landscape-en, Value: off
+	20 nút Close tab
+	21 nút chuyển đổi A04-portrait-en, Value: off
+	22 nút Close tab
+	23 nút chuyển đổi A04-A4-en, Value: off
+	24 nút Close tab
+	25 nút chuyển đổi A04-custom-en, Value: on
+	26 nút Close tab
+	27 trường văn bản (settable) Description: Zoom, Value: 255 %
+	28 text Value: 640 × 480 px · 144,50 PPI · Saved sRGB, ID: workspace.taskStatus
+	29 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	30 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	31 trường văn bản (settable) Description: HEX, Value: #000000
+	32 trường văn bản (settable) Description: Alpha %, Value: 100
+	33 trường văn bản (settable) Description: Red, Value: 0
+	34 trường văn bản (settable) Description: Green, Value: 0
+	35 trường văn bản (settable) Description: Blue, Value: 0
+	36 text Foreground Color Background Color HEX Alpha % R G B Color
+	37 nút Description: Collapse Panels, ID: sidebar.collapse
+	38 Description: Properties and History, ID: sidebar.inspectorTabs
+		39 nút radio Description: Properties, Value: 1
+		40 nút radio Description: History, Value: 0
+	41 text 640 × 480 px
+144,50 PPI · sRGB
+Layers: 0 Layers No layers yet.
+Open or create a document to begin.
+	42 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	43 text Opacity
+	44 trường văn bản (disabled) Description: Opacity, Value: 100 %
+	45 thanh trượt (disabled) Description: Opacity, Value: 100, Secondary Actions: Increment, Decrement
+		46 chỉ báo giá trị 100
+	47 nút Add Layer
+	48 nút (disabled) Description: Rename Layer, Help: This change is not valid or the layer is locked.
+	49 nút (disabled) Description: Move Layer Up, Help: This change is not valid or the layer is locked.
+	50 nút (disabled) Description: Move Layer Down, Help: This change is not valid or the layer is locked.
+	51 nút (disabled) Description: Duplicate Layer, Help: This change is not valid or the layer is locked.
+	52 nút (disabled) Description: Delete Layer, Help: This change is not valid or the layer is locked.
+	53 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	54 nút đóng
+	55 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	56 nút thu nhỏ
+	57 text A04-custom-en — PhotoAxis
+58 menu bar
+	59 PhotoAxis Investigation2 verified en
+	60 File
+	61 Edit
+	62 Image
+	63 Layer
+	64 Type
+	65 View
+	66 Window
+	67 Investigation
+	68 Help
+
+The focused UI element is 0 cửa sổ thông thường A04-custom-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,31 @@
+Window: "New Document…", App: PhotoAxis.
+0 tờ Secondary Actions: Raise
+	1 text Name
+	2 trường văn bản (settable) Description: Name, Value: A04-custom-en
+	3 text Preset
+	4 nút bật lên Description: Preset, Value: 1080 × 1080
+	5 text Width (px)
+	6 trường văn bản (settable) Description: Width (px), Value: 640
+	7 text Height (px)
+	8 trường văn bản (settable) Description: Height (px), Value: 480
+	9 text Resolution (PPI)
+	10 trường văn bản (settable) Description: Resolution (PPI), Value: 0
+	11 text Background
+	12 nút bật lên Description: Background, Value: Transparent
+	13 nút ⇅, Description: Swap dimensions
+	14 text PPI must be a number greater than zero.
+	15 nút Cancel
+	16 nút (disabled) New Document…
+17 menu bar
+	18 PhotoAxis Investigation2 verified en
+	19 File
+	20 Edit
+	21 Image
+	22 Layer
+	23 Type
+	24 View
+	25 Window
+	26 Investigation
+	27 Help
+
+The focused UI element is 10 trường văn bản (settable) Description: Resolution (PPI), Value: 0

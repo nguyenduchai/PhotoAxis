@@ -1,0 +1,24 @@
+MACOSX_DEPLOYMENT_TARGET = 14.0
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+ARCHS = arm64
+SWIFT_VERSION = 6.0
+SWIFT_STRICT_CONCURRENCY = complete
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 3
+// Local development only; P13 supplies the real identity and signing configuration.
+CODE_SIGN_IDENTITY = -
+CODE_SIGN_STYLE = Manual
+DEVELOPMENT_TEAM =
+// Ad-hoc builds have no Team ID for library validation of the embedded framework.
+// P13 must use Developer ID and explicitly enable Hardened Runtime for distribution.
+ENABLE_HARDENED_RUNTIME = NO
+ENABLE_USER_SCRIPT_SANDBOXING = YES
+GENERATE_INFOPLIST_FILE = YES
+// Defaults for local development. P13 supplies publisher-owned namespaces per build.
+PHOTOAXIS_APP_BUNDLE_ID = local.photoaxis.development
+PHOTOAXIS_CORE_BUNDLE_ID = local.photoaxis.core
+PHOTOAXIS_DOCUMENT_UTI = com.photoaxis.document
+PHOTOAXIS_CASE_UTI = $(PHOTOAXIS_DOCUMENT_UTI).investigation

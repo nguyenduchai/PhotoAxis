@@ -1,0 +1,1481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		8592533CC3B13A0AD2158C7E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xcconfig";
+			path = "Config/Debug.xcconfig";
+			sourceTree = "SOURCE_ROOT";
+		};
+		02B7D5B3482BD93E0B267E4F = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xcconfig";
+			path = "Config/Release.xcconfig";
+			sourceTree = "SOURCE_ROOT";
+		};
+		97E8AED76165F1452530CC1B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.strings";
+			name = "en";
+			path = "Sources/PhotoAxisApp/Localization/en.lproj/Localizable.strings";
+			sourceTree = "SOURCE_ROOT";
+		};
+		27F0E69FEF247F17B36A77F0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.strings";
+			name = "vi";
+			path = "Sources/PhotoAxisApp/Localization/vi.lproj/Localizable.strings";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E967D16DAE74A49B5E0E0512 = {
+			isa = "PBXVariantGroup";
+			children = ("97E8AED76165F1452530CC1B", "27F0E69FEF247F17B36A77F0");
+			name = "Localizable.strings";
+			sourceTree = "<group>";
+		};
+		B6A64B3E9EB5C78594CE7082 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.framework";
+			path = "PhotoAxisCore.framework";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		D8FEFDA651C19B8754694F3C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/BoundedZIP.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CF1C30A3734E32B5D6506EA6 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/CanvasSize.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C7BA595F32E4810C9A5CA753 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/ContentOperations.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1DE4C8630385417DCAC67507 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/DocumentHistory.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A6AEB413AC92938CF384745D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/ExportOptions.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4DF1905518D232B947478830 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/ImageAdjustments.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		61C9EBA2D8856BD38C274429 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/LayerOperations.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2592E8340C95AA94A487D798 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/PhotoDocumentModel.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E59210666065A0527FC7F831 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/DocumentModel/ProjectSchema.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		60DAEEADB2E16E2DC4C3F779 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/DocumentGeometry.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		FE9DFA57B84406188DD9DF69 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/LayerGeometry.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1EA7942339413D65C27078F3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/PerspectiveGeometry.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BA73C0E27BB05BAEB09C4AE1 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/ProjectiveTransform.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2B71D95FF85B1C7EF2932BD7 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/ViewportState.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		34B455FB3D9104B43195FBFF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Geometry/ViewportTransform.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		199EACDA156A65C64E57235C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Investigation/InvestigationAnalysis.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1B142E8AE5ABB93AB0DE3162 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Investigation/InvestigationAnnotations.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6EBE3850D646475227EF034D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisCore/Investigation/InvestigationCase.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		AFE28616CA63A7D17D7404CD = {
+			isa = "PBXGroup";
+			children = ("D8FEFDA651C19B8754694F3C", "CF1C30A3734E32B5D6506EA6", "C7BA595F32E4810C9A5CA753", "1DE4C8630385417DCAC67507", "A6AEB413AC92938CF384745D", "4DF1905518D232B947478830", "61C9EBA2D8856BD38C274429", "2592E8340C95AA94A487D798", "E59210666065A0527FC7F831", "60DAEEADB2E16E2DC4C3F779", "FE9DFA57B84406188DD9DF69", "1EA7942339413D65C27078F3", "BA73C0E27BB05BAEB09C4AE1", "2B71D95FF85B1C7EF2932BD7", "34B455FB3D9104B43195FBFF", "199EACDA156A65C64E57235C", "1B142E8AE5ABB93AB0DE3162", "6EBE3850D646475227EF034D");
+			name = "PhotoAxisCore";
+			sourceTree = "<group>";
+		};
+		4D5809CFC3F7CD2F6F119364 = {
+			isa = "PBXBuildFile";
+			fileRef = "D8FEFDA651C19B8754694F3C";
+		};
+		D3EEB8533CA372A65B726439 = {
+			isa = "PBXBuildFile";
+			fileRef = "CF1C30A3734E32B5D6506EA6";
+		};
+		4A6C8A9603A1247901BCB28D = {
+			isa = "PBXBuildFile";
+			fileRef = "C7BA595F32E4810C9A5CA753";
+		};
+		CA58C681D48B706D8FCCCBC8 = {
+			isa = "PBXBuildFile";
+			fileRef = "1DE4C8630385417DCAC67507";
+		};
+		4B1623FE2CFB2CA17B739941 = {
+			isa = "PBXBuildFile";
+			fileRef = "A6AEB413AC92938CF384745D";
+		};
+		12E7C075147356FE1146A398 = {
+			isa = "PBXBuildFile";
+			fileRef = "4DF1905518D232B947478830";
+		};
+		BFEFF005A75D417B9BB6F1A0 = {
+			isa = "PBXBuildFile";
+			fileRef = "61C9EBA2D8856BD38C274429";
+		};
+		BE2DD79E9ADCA1D8DF6DFC58 = {
+			isa = "PBXBuildFile";
+			fileRef = "2592E8340C95AA94A487D798";
+		};
+		175943962A298DAB2C10A07F = {
+			isa = "PBXBuildFile";
+			fileRef = "E59210666065A0527FC7F831";
+		};
+		96A1BF7C1689C1C76ABAF617 = {
+			isa = "PBXBuildFile";
+			fileRef = "60DAEEADB2E16E2DC4C3F779";
+		};
+		A3F35C07E929113F012BB046 = {
+			isa = "PBXBuildFile";
+			fileRef = "FE9DFA57B84406188DD9DF69";
+		};
+		41E0811BA85D242A37F48C9C = {
+			isa = "PBXBuildFile";
+			fileRef = "1EA7942339413D65C27078F3";
+		};
+		C4AB868616E698C13DDB72D2 = {
+			isa = "PBXBuildFile";
+			fileRef = "BA73C0E27BB05BAEB09C4AE1";
+		};
+		72DEEA2AEF597764FC411693 = {
+			isa = "PBXBuildFile";
+			fileRef = "2B71D95FF85B1C7EF2932BD7";
+		};
+		66E8CDC00C1391B2858E28FD = {
+			isa = "PBXBuildFile";
+			fileRef = "34B455FB3D9104B43195FBFF";
+		};
+		53D3621C6CFD959476A1B4A5 = {
+			isa = "PBXBuildFile";
+			fileRef = "199EACDA156A65C64E57235C";
+		};
+		0B87EDB052BE585695403B62 = {
+			isa = "PBXBuildFile";
+			fileRef = "1B142E8AE5ABB93AB0DE3162";
+		};
+		862A8162052C3E19188E891A = {
+			isa = "PBXBuildFile";
+			fileRef = "6EBE3850D646475227EF034D";
+		};
+		13889EDC27A7A78F5C4990B2 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("4D5809CFC3F7CD2F6F119364", "D3EEB8533CA372A65B726439", "4A6C8A9603A1247901BCB28D", "CA58C681D48B706D8FCCCBC8", "4B1623FE2CFB2CA17B739941", "12E7C075147356FE1146A398", "BFEFF005A75D417B9BB6F1A0", "BE2DD79E9ADCA1D8DF6DFC58", "175943962A298DAB2C10A07F", "96A1BF7C1689C1C76ABAF617", "A3F35C07E929113F012BB046", "41E0811BA85D242A37F48C9C", "C4AB868616E698C13DDB72D2", "72DEEA2AEF597764FC411693", "66E8CDC00C1391B2858E28FD", "53D3621C6CFD959476A1B4A5", "0B87EDB052BE585695403B62", "862A8162052C3E19188E891A");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A300EFA52F370B2423721C32 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB1194942D9999C3B2EFCFF = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PHOTOAXIS_CORE_BUNDLE_ID)";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				DEFINES_MODULE = "YES";
+				SKIP_INSTALL = "YES";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+			};
+		};
+		2A92E1D62610AD2E30FA5CEF = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PHOTOAXIS_CORE_BUNDLE_ID)";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				DEFINES_MODULE = "YES";
+				SKIP_INSTALL = "YES";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+			};
+		};
+		492985E3F45B5BB02DE87FF4 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("FAB1194942D9999C3B2EFCFF", "2A92E1D62610AD2E30FA5CEF");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		FBDAC3E8D3E520485275D3E8 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "492985E3F45B5BB02DE87FF4";
+			buildPhases = ("13889EDC27A7A78F5C4990B2", "A300EFA52F370B2423721C32");
+			buildRules = ();
+			dependencies = ();
+			name = "PhotoAxisCore";
+			productName = "PhotoAxisCore";
+			productReference = "B6A64B3E9EB5C78594CE7082";
+			productType = "com.apple.product-type.framework";
+		};
+		22EC0F4A88EEE712CF56F127 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "PhotoAxis.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		95A964C6DCE664D5F8BB6F25 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/AppDelegate.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8180BD7A683F303B44377E33 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/AdjustmentEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F6F0A1844F0D5F97917E1061 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/ContentEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9105CC11051AB0FAF381DCFF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/CropEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EBE6393E956915D544F9B73C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/ExportStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		AB57C7B588CABC02BCE2E79A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/ICCEmbedding.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2546AAA15F2FAFF8F454BA4E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/PerspectiveEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		807C9D2F4620D1EDB3AFFB03 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/PhotoDocument.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8DD8DDC53CB5D82F9AF82FC1 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/ProjectStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		3FA33B59D9C08688FE508757 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/RecoveryCrashFixture.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		FA9AE33ACD1625F756EC8019 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/RecoveryStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		7599560319920D2352EFA34C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Commands/TransformEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1DAC58D8C5EC1935292C63D6 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationAnalysisEngine.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F9B897768345D65E669DB203 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationAnalysisStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BADEC29AEFEAB6A3E0711D79 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationCaseStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CF8C16592749008895D59DA4 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationComparison.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BD5BF4D94705D1BEB1219FE3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4D60BE49A401A084402E21AC = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationReviewController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BDE2203BAD57904BA251AC2B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Investigation/InvestigationSharing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8C839FE785B3B415BD81F6A1 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Localization/L10n.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		19739BA2349DD6F2D35E24D0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/AdjustmentControlsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		ADF114F52C3980738504F2C6 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/CanvasEditing.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9EB9867622430FD285AD96D2 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/ColorControlsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		97901CC6DFBD63370595E17D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/ContentControlsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B19D21F743BE2B942267A17D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/ContentInteraction.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8940E96CAC34AB7A65C7F066 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/CropInteraction.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		51063AD1CDEF368E99E6E3C8 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/CropOptionsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		60F4F1475BF58A64AA97F8EE = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/DocumentCanvasView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EEA51481A1AE412ED030697E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/DocumentControls.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		768160CB22610F6A4C884873 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/DocumentCoordinator.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		41D80039D23B4597EFCE7C30 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/DocumentSizeController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8A9F7A50AF5DD4D6449D55E2 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/ExportController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BF127F0F6A6E06815A77D050 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/LayerListView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		3276D5CAF77BC828EF9C4DAE = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/NativeTextEditor.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F70F1F914E7215D09AFEF532 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/OptionsBarView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		DB0E934172096CCB8B22B59C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/PerspectiveInteraction.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5CEC9E287B5ED313DCCEA63A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/PerspectiveOptionsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D71F153156D1B41714E3C059 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/RecoveryController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		AB9AF6E7C0E1D21E9FCEFACC = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/SettingsWindowController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		FD3FA5AAEE822C81B1BCBC78 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/SidebarView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		7CF7E402E08DD2CCCD9DE92D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/ToolsRailView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C516AF917F444850EA9B4563 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/TransformOptionsView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A4300CCDC50F8DF2DBD5C68F = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/WorkspaceControls.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		235A645BE583A5A6F101CA08 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/WorkspacePreferences.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5F23C97451007572C0E2344E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/NativeWorkspace/WorkspaceWindowController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EBFF1900073E6E76E708646A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Renderer/AdjustmentFilters.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9F79606E3DD0725114880F29 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Renderer/ContentRasterizer.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6038FCBFC8A1CBD6673C7023 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Renderer/ImagePipeline.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		601BE1431A8F8C5D48D3C5B3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/Tools/ToolKind.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		724FE2284EE87D5D1DAA985C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/PhotoAxisApp/main.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F304CFC6E827B42E1E927E7A = {
+			isa = "PBXGroup";
+			children = ("95A964C6DCE664D5F8BB6F25", "8180BD7A683F303B44377E33", "F6F0A1844F0D5F97917E1061", "9105CC11051AB0FAF381DCFF", "EBE6393E956915D544F9B73C", "AB57C7B588CABC02BCE2E79A", "2546AAA15F2FAFF8F454BA4E", "807C9D2F4620D1EDB3AFFB03", "8DD8DDC53CB5D82F9AF82FC1", "3FA33B59D9C08688FE508757", "FA9AE33ACD1625F756EC8019", "7599560319920D2352EFA34C", "1DAC58D8C5EC1935292C63D6", "F9B897768345D65E669DB203", "BADEC29AEFEAB6A3E0711D79", "CF8C16592749008895D59DA4", "BD5BF4D94705D1BEB1219FE3", "4D60BE49A401A084402E21AC", "BDE2203BAD57904BA251AC2B", "8C839FE785B3B415BD81F6A1", "19739BA2349DD6F2D35E24D0", "ADF114F52C3980738504F2C6", "9EB9867622430FD285AD96D2", "97901CC6DFBD63370595E17D", "B19D21F743BE2B942267A17D", "8940E96CAC34AB7A65C7F066", "51063AD1CDEF368E99E6E3C8", "60F4F1475BF58A64AA97F8EE", "EEA51481A1AE412ED030697E", "768160CB22610F6A4C884873", "41D80039D23B4597EFCE7C30", "8A9F7A50AF5DD4D6449D55E2", "BF127F0F6A6E06815A77D050", "3276D5CAF77BC828EF9C4DAE", "F70F1F914E7215D09AFEF532", "DB0E934172096CCB8B22B59C", "5CEC9E287B5ED313DCCEA63A", "D71F153156D1B41714E3C059", "AB9AF6E7C0E1D21E9FCEFACC", "FD3FA5AAEE822C81B1BCBC78", "7CF7E402E08DD2CCCD9DE92D", "C516AF917F444850EA9B4563", "A4300CCDC50F8DF2DBD5C68F", "235A645BE583A5A6F101CA08", "5F23C97451007572C0E2344E", "EBFF1900073E6E76E708646A", "9F79606E3DD0725114880F29", "6038FCBFC8A1CBD6673C7023", "601BE1431A8F8C5D48D3C5B3", "724FE2284EE87D5D1DAA985C", "104E1B318C542E8448BAF10E", "983450BB93E7600E91EF7AF3");
+			name = "PhotoAxis";
+			sourceTree = "<group>";
+		};
+		031CC7D6C489A9C1C71C5254 = {
+			isa = "PBXBuildFile";
+			fileRef = "95A964C6DCE664D5F8BB6F25";
+		};
+		B49605FE717D730FE6FACA92 = {
+			isa = "PBXBuildFile";
+			fileRef = "8180BD7A683F303B44377E33";
+		};
+		16BEAC740EEA65793AE943A6 = {
+			isa = "PBXBuildFile";
+			fileRef = "F6F0A1844F0D5F97917E1061";
+		};
+		6CF688568CB035A47D27C6B0 = {
+			isa = "PBXBuildFile";
+			fileRef = "9105CC11051AB0FAF381DCFF";
+		};
+		335A162E53D0642D3ED7FD3D = {
+			isa = "PBXBuildFile";
+			fileRef = "EBE6393E956915D544F9B73C";
+		};
+		DFC42FA34AFA640BD0BA3117 = {
+			isa = "PBXBuildFile";
+			fileRef = "AB57C7B588CABC02BCE2E79A";
+		};
+		5D9C3CEF303839EF92825AB4 = {
+			isa = "PBXBuildFile";
+			fileRef = "2546AAA15F2FAFF8F454BA4E";
+		};
+		9879F90A299DFBD7562EE2B5 = {
+			isa = "PBXBuildFile";
+			fileRef = "807C9D2F4620D1EDB3AFFB03";
+		};
+		4D30B770DEC25203CF28F650 = {
+			isa = "PBXBuildFile";
+			fileRef = "8DD8DDC53CB5D82F9AF82FC1";
+		};
+		D368879C9DC31B4BC4CE3D29 = {
+			isa = "PBXBuildFile";
+			fileRef = "3FA33B59D9C08688FE508757";
+		};
+		D99B19783C83C3C568B7D858 = {
+			isa = "PBXBuildFile";
+			fileRef = "FA9AE33ACD1625F756EC8019";
+		};
+		EDD9824F97069A9216C69D16 = {
+			isa = "PBXBuildFile";
+			fileRef = "7599560319920D2352EFA34C";
+		};
+		F8476CE83CFBD71D7D31092A = {
+			isa = "PBXBuildFile";
+			fileRef = "1DAC58D8C5EC1935292C63D6";
+		};
+		DFC21031C032C1118500D488 = {
+			isa = "PBXBuildFile";
+			fileRef = "F9B897768345D65E669DB203";
+		};
+		55E8A0ABC8C9C43B22940008 = {
+			isa = "PBXBuildFile";
+			fileRef = "BADEC29AEFEAB6A3E0711D79";
+		};
+		02E1938CF2BDF5897AAAE1DD = {
+			isa = "PBXBuildFile";
+			fileRef = "CF8C16592749008895D59DA4";
+		};
+		E00B34618C977E785B95CD97 = {
+			isa = "PBXBuildFile";
+			fileRef = "BD5BF4D94705D1BEB1219FE3";
+		};
+		C3C1A42328F0312EC13EE826 = {
+			isa = "PBXBuildFile";
+			fileRef = "4D60BE49A401A084402E21AC";
+		};
+		826A4AF0ADB452626448E3B7 = {
+			isa = "PBXBuildFile";
+			fileRef = "BDE2203BAD57904BA251AC2B";
+		};
+		A7E2911A5748A9E4C5E4A5D0 = {
+			isa = "PBXBuildFile";
+			fileRef = "8C839FE785B3B415BD81F6A1";
+		};
+		F4F31830A8D97AEE4EDAB4D8 = {
+			isa = "PBXBuildFile";
+			fileRef = "19739BA2349DD6F2D35E24D0";
+		};
+		63F70DDB1A595D9358598458 = {
+			isa = "PBXBuildFile";
+			fileRef = "ADF114F52C3980738504F2C6";
+		};
+		19341995CC903D014A10F352 = {
+			isa = "PBXBuildFile";
+			fileRef = "9EB9867622430FD285AD96D2";
+		};
+		E13EE060F122321818FFF859 = {
+			isa = "PBXBuildFile";
+			fileRef = "97901CC6DFBD63370595E17D";
+		};
+		62873D75163D7046976E2F80 = {
+			isa = "PBXBuildFile";
+			fileRef = "B19D21F743BE2B942267A17D";
+		};
+		1BABFAF4088F6F325D945B7E = {
+			isa = "PBXBuildFile";
+			fileRef = "8940E96CAC34AB7A65C7F066";
+		};
+		BFA874A9918D5065BF8E5DD6 = {
+			isa = "PBXBuildFile";
+			fileRef = "51063AD1CDEF368E99E6E3C8";
+		};
+		3AA63B1AA86F92293CB3BA7C = {
+			isa = "PBXBuildFile";
+			fileRef = "60F4F1475BF58A64AA97F8EE";
+		};
+		EB8B2CCC393805F865F0C447 = {
+			isa = "PBXBuildFile";
+			fileRef = "EEA51481A1AE412ED030697E";
+		};
+		FFEAB1C60006B051883111DC = {
+			isa = "PBXBuildFile";
+			fileRef = "768160CB22610F6A4C884873";
+		};
+		FCF4FB2788CAF65448EF8FCE = {
+			isa = "PBXBuildFile";
+			fileRef = "41D80039D23B4597EFCE7C30";
+		};
+		642A8F97810D89AC94055562 = {
+			isa = "PBXBuildFile";
+			fileRef = "8A9F7A50AF5DD4D6449D55E2";
+		};
+		B2486BEF29F2AD8C0C5065F0 = {
+			isa = "PBXBuildFile";
+			fileRef = "BF127F0F6A6E06815A77D050";
+		};
+		F4887D450EBFA19203281EB7 = {
+			isa = "PBXBuildFile";
+			fileRef = "3276D5CAF77BC828EF9C4DAE";
+		};
+		61335BE61AABF71C1789BE2F = {
+			isa = "PBXBuildFile";
+			fileRef = "F70F1F914E7215D09AFEF532";
+		};
+		10DCB4099EF92DE5A0D1968E = {
+			isa = "PBXBuildFile";
+			fileRef = "DB0E934172096CCB8B22B59C";
+		};
+		07F1DE71589B0B48E9BC442D = {
+			isa = "PBXBuildFile";
+			fileRef = "5CEC9E287B5ED313DCCEA63A";
+		};
+		DD0F788BFA51C7F7252B5AE6 = {
+			isa = "PBXBuildFile";
+			fileRef = "D71F153156D1B41714E3C059";
+		};
+		DCB84D5519D5AA52EA2BBD40 = {
+			isa = "PBXBuildFile";
+			fileRef = "AB9AF6E7C0E1D21E9FCEFACC";
+		};
+		D193AF4345A85F4CEA621702 = {
+			isa = "PBXBuildFile";
+			fileRef = "FD3FA5AAEE822C81B1BCBC78";
+		};
+		E0F0529FAACAD97F058A52A9 = {
+			isa = "PBXBuildFile";
+			fileRef = "7CF7E402E08DD2CCCD9DE92D";
+		};
+		CD5CF55510772DD668738A26 = {
+			isa = "PBXBuildFile";
+			fileRef = "C516AF917F444850EA9B4563";
+		};
+		694F80BF45D62C0629A3DE15 = {
+			isa = "PBXBuildFile";
+			fileRef = "A4300CCDC50F8DF2DBD5C68F";
+		};
+		E1C5A9203CAB7568691378F0 = {
+			isa = "PBXBuildFile";
+			fileRef = "235A645BE583A5A6F101CA08";
+		};
+		B48DE1AF0CD8DAA245448A71 = {
+			isa = "PBXBuildFile";
+			fileRef = "5F23C97451007572C0E2344E";
+		};
+		2FE15FDD6FD32AF10CB42831 = {
+			isa = "PBXBuildFile";
+			fileRef = "EBFF1900073E6E76E708646A";
+		};
+		03E8FDADCAA2042AD2B9A046 = {
+			isa = "PBXBuildFile";
+			fileRef = "9F79606E3DD0725114880F29";
+		};
+		4280CF0A1573B5E05465E204 = {
+			isa = "PBXBuildFile";
+			fileRef = "6038FCBFC8A1CBD6673C7023";
+		};
+		72F765A2F1FE08A7B98EB05B = {
+			isa = "PBXBuildFile";
+			fileRef = "601BE1431A8F8C5D48D3C5B3";
+		};
+		8CD520D3D6C66FDAD5F27B1C = {
+			isa = "PBXBuildFile";
+			fileRef = "724FE2284EE87D5D1DAA985C";
+		};
+		566EAFB2D16E9FBA90984804 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("031CC7D6C489A9C1C71C5254", "B49605FE717D730FE6FACA92", "16BEAC740EEA65793AE943A6", "6CF688568CB035A47D27C6B0", "335A162E53D0642D3ED7FD3D", "DFC42FA34AFA640BD0BA3117", "5D9C3CEF303839EF92825AB4", "9879F90A299DFBD7562EE2B5", "4D30B770DEC25203CF28F650", "D368879C9DC31B4BC4CE3D29", "D99B19783C83C3C568B7D858", "EDD9824F97069A9216C69D16", "F8476CE83CFBD71D7D31092A", "DFC21031C032C1118500D488", "55E8A0ABC8C9C43B22940008", "02E1938CF2BDF5897AAAE1DD", "E00B34618C977E785B95CD97", "C3C1A42328F0312EC13EE826", "826A4AF0ADB452626448E3B7", "A7E2911A5748A9E4C5E4A5D0", "F4F31830A8D97AEE4EDAB4D8", "63F70DDB1A595D9358598458", "19341995CC903D014A10F352", "E13EE060F122321818FFF859", "62873D75163D7046976E2F80", "1BABFAF4088F6F325D945B7E", "BFA874A9918D5065BF8E5DD6", "3AA63B1AA86F92293CB3BA7C", "EB8B2CCC393805F865F0C447", "FFEAB1C60006B051883111DC", "FCF4FB2788CAF65448EF8FCE", "642A8F97810D89AC94055562", "B2486BEF29F2AD8C0C5065F0", "F4887D450EBFA19203281EB7", "61335BE61AABF71C1789BE2F", "10DCB4099EF92DE5A0D1968E", "07F1DE71589B0B48E9BC442D", "DD0F788BFA51C7F7252B5AE6", "DCB84D5519D5AA52EA2BBD40", "D193AF4345A85F4CEA621702", "E0F0529FAACAD97F058A52A9", "CD5CF55510772DD668738A26", "694F80BF45D62C0629A3DE15", "E1C5A9203CAB7568691378F0", "B48DE1AF0CD8DAA245448A71", "2FE15FDD6FD32AF10CB42831", "03E8FDADCAA2042AD2B9A046", "4280CF0A1573B5E05465E204", "72F765A2F1FE08A7B98EB05B", "8CD520D3D6C66FDAD5F27B1C");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF8B4FAC96D6C6AD307206B = {
+			isa = "PBXBuildFile";
+			fileRef = "B6A64B3E9EB5C78594CE7082";
+		};
+		3A6C6F783D26541A8A2DF00C = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "985959785319747668373CC6";
+			proxyType = 1;
+			remoteGlobalIDString = "FBDAC3E8D3E520485275D3E8";
+			remoteInfo = "PhotoAxisCore";
+		};
+		A5AC2370E129F571B03C1E48 = {
+			isa = "PBXTargetDependency";
+			target = "FBDAC3E8D3E520485275D3E8";
+			targetProxy = "3A6C6F783D26541A8A2DF00C";
+		};
+		844126653C86CB9CE7ECF677 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("4FF8B4FAC96D6C6AD307206B");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		104E1B318C542E8448BAF10E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.metal";
+			path = "Sources/PhotoAxisApp/Renderer/Perspective.ci.metal";
+			sourceTree = "SOURCE_ROOT";
+		};
+		51503C2492BDF84DA711D67B = {
+			isa = "PBXShellScriptBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Compile Core Image kernel";
+			inputPaths = ("$(SRCROOT)/Sources/PhotoAxisApp/Renderer/Perspective.ci.metal");
+			outputPaths = ("$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Perspective.metallib");
+			shellPath = "/bin/bash";
+			shellScript = "set -euo pipefail\nmkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\" \"$TEMP_DIR/PerspectiveKernel\"\nxcrun -sdk macosx metal -fcikernel -c -mmacosx-version-min=\"$MACOSX_DEPLOYMENT_TARGET\" \"$SCRIPT_INPUT_FILE_0\" -o \"$TEMP_DIR/PerspectiveKernel/Perspective.air\"\nxcrun metallib -cikernel \"$TEMP_DIR/PerspectiveKernel/Perspective.air\" -o \"$TEMP_DIR/PerspectiveKernel/Perspective.metallib\"\ncp \"$TEMP_DIR/PerspectiveKernel/Perspective.metallib\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
+		};
+		983450BB93E7600E91EF7AF3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "image.icns";
+			path = "Sources/PhotoAxisApp/Resources/PhotoAxis.icns";
+			sourceTree = "SOURCE_ROOT";
+		};
+		153346415E1312334F930DB7 = {
+			isa = "PBXBuildFile";
+			fileRef = "E967D16DAE74A49B5E0E0512";
+		};
+		03E6C20028943FA15CF9AF13 = {
+			isa = "PBXBuildFile";
+			fileRef = "983450BB93E7600E91EF7AF3";
+		};
+		039EA9679B9F0C47FCFDC1B8 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("153346415E1312334F930DB7", "03E6C20028943FA15CF9AF13");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7658283FBF567D56DBB7A75 = {
+			isa = "PBXBuildFile";
+			fileRef = "B6A64B3E9EB5C78594CE7082";
+			settings = {
+				ATTRIBUTES = ("CodeSignOnCopy", "RemoveHeadersOnCopy");
+			};
+		};
+		EA55C185EF4506EFBC4CDE22 = {
+			isa = "PBXCopyFilesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("E7658283FBF567D56DBB7A75");
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			name = "Embed Frameworks";
+		};
+		4E79D44D986F3B38C5730C49 = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PHOTOAXIS_APP_BUNDLE_ID)";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				INFOPLIST_FILE = "Config/Info.plist";
+				GENERATE_INFOPLIST_FILE = "NO";
+			};
+		};
+		3998BF1F0817369DC6AE38D4 = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PHOTOAXIS_APP_BUNDLE_ID)";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				INFOPLIST_FILE = "Config/Info.plist";
+				GENERATE_INFOPLIST_FILE = "NO";
+			};
+		};
+		7BA4293BBEAE241BBD0F6522 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("4E79D44D986F3B38C5730C49", "3998BF1F0817369DC6AE38D4");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		AD9F897BBFE7CBB96B194978 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "7BA4293BBEAE241BBD0F6522";
+			buildPhases = ("566EAFB2D16E9FBA90984804", "844126653C86CB9CE7ECF677", "51503C2492BDF84DA711D67B", "039EA9679B9F0C47FCFDC1B8", "EA55C185EF4506EFBC4CDE22");
+			buildRules = ();
+			dependencies = ("A5AC2370E129F571B03C1E48");
+			name = "PhotoAxis";
+			productName = "PhotoAxis";
+			productReference = "22EC0F4A88EEE712CF56F127";
+			productType = "com.apple.product-type.application";
+		};
+		23D62D6BDB61F2CE1498F121 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "PhotoAxisCoreTests.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		28612E9EB47FB3ADB902D234 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/ContentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6A4504BE56B47A5C7986F2CF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/CropGeometryTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		3AEF1B80623190C5D077371A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/DocumentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9192AC61D0C953DF5C95573B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/ExportOptionsTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BECE0022C923A86CDF447700 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/FoundationTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4893692E72401AC86E4212A5 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/ImageAdjustmentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1E9604B19C6353E0504CC598 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/InvestigationTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		FA227101EB901E351AFC13CC = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/LayerHistoryTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D61403157AD3A3CD08568AB3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/MultiLayerGeometryTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1AF311B85F4669EB3F0DC9C0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/PerspectiveGeometryTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		36BFAF650E3CE0349F4B6695 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisCoreTests/ProjectFormatTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4D11AC3F636A2E4433D28B6A = {
+			isa = "PBXGroup";
+			children = ("28612E9EB47FB3ADB902D234", "6A4504BE56B47A5C7986F2CF", "3AEF1B80623190C5D077371A", "9192AC61D0C953DF5C95573B", "BECE0022C923A86CDF447700", "4893692E72401AC86E4212A5", "1E9604B19C6353E0504CC598", "FA227101EB901E351AFC13CC", "D61403157AD3A3CD08568AB3", "1AF311B85F4669EB3F0DC9C0", "36BFAF650E3CE0349F4B6695");
+			name = "PhotoAxisCoreTests";
+			sourceTree = "<group>";
+		};
+		5E07E75012B3F8F613E249B1 = {
+			isa = "PBXBuildFile";
+			fileRef = "28612E9EB47FB3ADB902D234";
+		};
+		7FEA37AC07DC6897C2E24F18 = {
+			isa = "PBXBuildFile";
+			fileRef = "6A4504BE56B47A5C7986F2CF";
+		};
+		856EF3691C0BA7812604E979 = {
+			isa = "PBXBuildFile";
+			fileRef = "3AEF1B80623190C5D077371A";
+		};
+		E79BBF747722194DE1F0F930 = {
+			isa = "PBXBuildFile";
+			fileRef = "9192AC61D0C953DF5C95573B";
+		};
+		6C61A572202D94DE42739256 = {
+			isa = "PBXBuildFile";
+			fileRef = "BECE0022C923A86CDF447700";
+		};
+		22BB0C8D933F04D451D772BC = {
+			isa = "PBXBuildFile";
+			fileRef = "4893692E72401AC86E4212A5";
+		};
+		F494E022BEC1EC95CC5856ED = {
+			isa = "PBXBuildFile";
+			fileRef = "1E9604B19C6353E0504CC598";
+		};
+		41A1BA4DCEAA885AA4C7A54F = {
+			isa = "PBXBuildFile";
+			fileRef = "FA227101EB901E351AFC13CC";
+		};
+		16B8D96E5554EEF8252553E6 = {
+			isa = "PBXBuildFile";
+			fileRef = "D61403157AD3A3CD08568AB3";
+		};
+		FCDB82CD63F2D5BCE17960F1 = {
+			isa = "PBXBuildFile";
+			fileRef = "1AF311B85F4669EB3F0DC9C0";
+		};
+		61A34AEF96565EE25BDEE35A = {
+			isa = "PBXBuildFile";
+			fileRef = "36BFAF650E3CE0349F4B6695";
+		};
+		80297E7C9A6BDFBE0151F17B = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("5E07E75012B3F8F613E249B1", "7FEA37AC07DC6897C2E24F18", "856EF3691C0BA7812604E979", "E79BBF747722194DE1F0F930", "6C61A572202D94DE42739256", "22BB0C8D933F04D451D772BC", "F494E022BEC1EC95CC5856ED", "41A1BA4DCEAA885AA4C7A54F", "16B8D96E5554EEF8252553E6", "FCDB82CD63F2D5BCE17960F1", "61A34AEF96565EE25BDEE35A");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340A186291B13D12AC65439 = {
+			isa = "PBXBuildFile";
+			fileRef = "B6A64B3E9EB5C78594CE7082";
+		};
+		A5C2082849D662D0251771D8 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "985959785319747668373CC6";
+			proxyType = 1;
+			remoteGlobalIDString = "FBDAC3E8D3E520485275D3E8";
+			remoteInfo = "PhotoAxisCore";
+		};
+		8DD3E18FB7D459CD4DDA8822 = {
+			isa = "PBXTargetDependency";
+			target = "FBDAC3E8D3E520485275D3E8";
+			targetProxy = "A5C2082849D662D0251771D8";
+		};
+		048DCA209CFCE8BAA73759A4 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("3340A186291B13D12AC65439");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C5760C1FD10A370ABE095B = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "local.photoaxis.tests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				SKIP_INSTALL = "YES";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+			};
+		};
+		B6B1ECBD26F4B33C2E1F6549 = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "local.photoaxis.tests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				SKIP_INSTALL = "YES";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+			};
+		};
+		3F80700C0ECAD40BC716F3BF = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("87C5760C1FD10A370ABE095B", "B6B1ECBD26F4B33C2E1F6549");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		E5FCE70C8BB6330ED389F7B0 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "3F80700C0ECAD40BC716F3BF";
+			buildPhases = ("80297E7C9A6BDFBE0151F17B", "048DCA209CFCE8BAA73759A4");
+			buildRules = ();
+			dependencies = ("8DD3E18FB7D459CD4DDA8822");
+			name = "PhotoAxisCoreTests";
+			productName = "PhotoAxisCoreTests";
+			productReference = "23D62D6BDB61F2CE1498F121";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B236E83850D7537D5FC4C8BD = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "PhotoAxisAppTests.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+			includeInIndex = 0;
+		};
+		A6B9BCFEC465FB112D2FC027 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/AcceptanceWorkflowTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		79E1A36841887361199A7FF0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/BenchmarkTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6439D8201B2B25DD0E3DAFD7 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/ContentEditingTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		61872D450D942B4F53070C6F = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/CropEditingTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		ED3364A923BC4052B49AB191 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/DocumentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EB25B12534FFD15D50B22156 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/ExportTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5AE3507BE61BD34C4D4EB458 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/ImageAdjustmentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5DB45DF243374DA274212A97 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/InvestigationAnalysisTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2B7F5F25E0BE5B9285455D0E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/InvestigationWorkflowTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		ACB4160374CF5A418126CE95 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/LayerEditingTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2F1D6AF32A3513B9B4EAF218 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/MultiLayerPerspectiveTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D720C89DD04AF00D19951A66 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/PerspectiveEditingTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		AD77270A3A1700B6BBB91C4E = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/ProjectDocumentTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		64F1D9A2156628BCB9B3A227 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/RecoveryTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		316924DF3B2180546B8C4A82 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/ViewportSamplingTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4D6F8B36190341016D36B8C8 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/PhotoAxisAppTests/WorkspaceTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9C86E876F75260D9108EFE97 = {
+			isa = "PBXGroup";
+			children = ("A6B9BCFEC465FB112D2FC027", "79E1A36841887361199A7FF0", "6439D8201B2B25DD0E3DAFD7", "61872D450D942B4F53070C6F", "ED3364A923BC4052B49AB191", "EB25B12534FFD15D50B22156", "5AE3507BE61BD34C4D4EB458", "5DB45DF243374DA274212A97", "2B7F5F25E0BE5B9285455D0E", "ACB4160374CF5A418126CE95", "2F1D6AF32A3513B9B4EAF218", "D720C89DD04AF00D19951A66", "AD77270A3A1700B6BBB91C4E", "64F1D9A2156628BCB9B3A227", "316924DF3B2180546B8C4A82", "4D6F8B36190341016D36B8C8", "0BBC603710BD0E24F2A14BBE", "06D92DD447786EF55856CE2B", "F784B65F3D7CE1F3F2FB4635", "720984B8681E6D40E7A90C97");
+			name = "PhotoAxisAppTests";
+			sourceTree = "<group>";
+		};
+		861AA08037BFD02F5E33458E = {
+			isa = "PBXBuildFile";
+			fileRef = "A6B9BCFEC465FB112D2FC027";
+		};
+		8977491B8F2EF3D4956741D3 = {
+			isa = "PBXBuildFile";
+			fileRef = "79E1A36841887361199A7FF0";
+		};
+		C5BA28ADB4F43D5B2F5FBD1A = {
+			isa = "PBXBuildFile";
+			fileRef = "6439D8201B2B25DD0E3DAFD7";
+		};
+		7F3036DD71655A5D5831321F = {
+			isa = "PBXBuildFile";
+			fileRef = "61872D450D942B4F53070C6F";
+		};
+		D24133AED85AAAB928AC52DB = {
+			isa = "PBXBuildFile";
+			fileRef = "ED3364A923BC4052B49AB191";
+		};
+		C693AE61795D76FFC07CF483 = {
+			isa = "PBXBuildFile";
+			fileRef = "EB25B12534FFD15D50B22156";
+		};
+		31EE2C008A82E6B95DA6F265 = {
+			isa = "PBXBuildFile";
+			fileRef = "5AE3507BE61BD34C4D4EB458";
+		};
+		C71881CE1C0CDE3D7F951757 = {
+			isa = "PBXBuildFile";
+			fileRef = "5DB45DF243374DA274212A97";
+		};
+		992CC5A9815DDD29A03B7E05 = {
+			isa = "PBXBuildFile";
+			fileRef = "2B7F5F25E0BE5B9285455D0E";
+		};
+		588785A17798CEC8A623ED85 = {
+			isa = "PBXBuildFile";
+			fileRef = "ACB4160374CF5A418126CE95";
+		};
+		ECF981E93CC813FE4FD21019 = {
+			isa = "PBXBuildFile";
+			fileRef = "2F1D6AF32A3513B9B4EAF218";
+		};
+		D8BC9CBA8CAA3F6DB2E770CF = {
+			isa = "PBXBuildFile";
+			fileRef = "D720C89DD04AF00D19951A66";
+		};
+		037C8B257AECEFFD95E789B2 = {
+			isa = "PBXBuildFile";
+			fileRef = "AD77270A3A1700B6BBB91C4E";
+		};
+		3A0977D64908B062B3C3D8A3 = {
+			isa = "PBXBuildFile";
+			fileRef = "64F1D9A2156628BCB9B3A227";
+		};
+		2D72CBB641E74037BCD34CBB = {
+			isa = "PBXBuildFile";
+			fileRef = "316924DF3B2180546B8C4A82";
+		};
+		C9ABE2A25504AD73B9C90E77 = {
+			isa = "PBXBuildFile";
+			fileRef = "4D6F8B36190341016D36B8C8";
+		};
+		9B60F22BD815CFDACD31615C = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("861AA08037BFD02F5E33458E", "8977491B8F2EF3D4956741D3", "C5BA28ADB4F43D5B2F5FBD1A", "7F3036DD71655A5D5831321F", "D24133AED85AAAB928AC52DB", "C693AE61795D76FFC07CF483", "31EE2C008A82E6B95DA6F265", "C71881CE1C0CDE3D7F951757", "992CC5A9815DDD29A03B7E05", "588785A17798CEC8A623ED85", "ECF981E93CC813FE4FD21019", "D8BC9CBA8CAA3F6DB2E770CF", "037C8B257AECEFFD95E789B2", "3A0977D64908B062B3C3D8A3", "2D72CBB641E74037BCD34CBB", "C9ABE2A25504AD73B9C90E77");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075E56FA475E45C3552E1BC5 = {
+			isa = "PBXBuildFile";
+			fileRef = "B6A64B3E9EB5C78594CE7082";
+		};
+		CAC9833EC259AF272869DB8C = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "985959785319747668373CC6";
+			proxyType = 1;
+			remoteGlobalIDString = "FBDAC3E8D3E520485275D3E8";
+			remoteInfo = "PhotoAxisCore";
+		};
+		0F30F415FF4E96A024E7C178 = {
+			isa = "PBXTargetDependency";
+			target = "FBDAC3E8D3E520485275D3E8";
+			targetProxy = "CAC9833EC259AF272869DB8C";
+		};
+		E380F296F82CE6C4BD340EB5 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "985959785319747668373CC6";
+			proxyType = 1;
+			remoteGlobalIDString = "AD9F897BBFE7CBB96B194978";
+			remoteInfo = "PhotoAxis";
+		};
+		81D205854E7A3AC32F46E4E0 = {
+			isa = "PBXTargetDependency";
+			target = "AD9F897BBFE7CBB96B194978";
+			targetProxy = "E380F296F82CE6C4BD340EB5";
+		};
+		31F7E30DE729C56E3FD0B86E = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("075E56FA475E45C3552E1BC5");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BBC603710BD0E24F2A14BBE = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "folder";
+			path = "Fixtures/P02";
+			sourceTree = "SOURCE_ROOT";
+		};
+		67388E1D25DC0D7B49FDD360 = {
+			isa = "PBXBuildFile";
+			fileRef = "0BBC603710BD0E24F2A14BBE";
+		};
+		06D92DD447786EF55856CE2B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "folder";
+			path = "Fixtures/P09";
+			sourceTree = "SOURCE_ROOT";
+		};
+		0C13A6B93A46139CBB7C1E20 = {
+			isa = "PBXBuildFile";
+			fileRef = "06D92DD447786EF55856CE2B";
+		};
+		F784B65F3D7CE1F3F2FB4635 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "folder";
+			path = "Fixtures/P10";
+			sourceTree = "SOURCE_ROOT";
+		};
+		DC00E240A0CA886A3E1D5FA4 = {
+			isa = "PBXBuildFile";
+			fileRef = "F784B65F3D7CE1F3F2FB4635";
+		};
+		720984B8681E6D40E7A90C97 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "folder";
+			path = "Fixtures/P17";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4DAB2A7BDB94BE5EF977658A = {
+			isa = "PBXBuildFile";
+			fileRef = "720984B8681E6D40E7A90C97";
+		};
+		38E2CE986F0353852247E795 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("67388E1D25DC0D7B49FDD360", "0C13A6B93A46139CBB7C1E20", "DC00E240A0CA886A3E1D5FA4", "4DAB2A7BDB94BE5EF977658A");
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EE1D6954B96482D09E1C48 = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "local.photoaxis.apptests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				SKIP_INSTALL = "YES";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoAxis.app/Contents/MacOS/PhotoAxis";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+			};
+		};
+		B19C988DCA913032DBA28A50 = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "local.photoaxis.apptests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks");
+				SKIP_INSTALL = "YES";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoAxis.app/Contents/MacOS/PhotoAxis";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+			};
+		};
+		A8277E95FFF668E31D67D629 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("04EE1D6954B96482D09E1C48", "B19C988DCA913032DBA28A50");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		30D546A5A48110FD5B042395 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "A8277E95FFF668E31D67D629";
+			buildPhases = ("9B60F22BD815CFDACD31615C", "31F7E30DE729C56E3FD0B86E", "38E2CE986F0353852247E795");
+			buildRules = ();
+			dependencies = ("0F30F415FF4E96A024E7C178", "81D205854E7A3AC32F46E4E0");
+			name = "PhotoAxisAppTests";
+			productName = "PhotoAxisAppTests";
+			productReference = "B236E83850D7537D5FC4C8BD";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		433548979C024CC63B5F3B8D = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "8592533CC3B13A0AD2158C7E";
+			buildSettings = {
+			};
+			name = "Debug";
+		};
+		B800A40FDE6F0A0218D9BCD2 = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "02B7D5B3482BD93E0B267E4F";
+			buildSettings = {
+			};
+			name = "Release";
+		};
+		67F98A53B3601D59AC990BA8 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("433548979C024CC63B5F3B8D", "B800A40FDE6F0A0218D9BCD2");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		4EDC8BFAFC6BD936B849F38C = {
+			isa = "PBXGroup";
+			children = ("B6A64B3E9EB5C78594CE7082", "22EC0F4A88EEE712CF56F127", "23D62D6BDB61F2CE1498F121", "B236E83850D7537D5FC4C8BD");
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		BB46FAA54206ABCCC287A42B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xcconfig";
+			path = "Config/Base.xcconfig";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6AE27F664CD0832AD1AAA396 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "Config/Info.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		87E89ABB4C1C551FE08D355D = {
+			isa = "PBXGroup";
+			children = ("8592533CC3B13A0AD2158C7E", "02B7D5B3482BD93E0B267E4F", "BB46FAA54206ABCCC287A42B", "6AE27F664CD0832AD1AAA396");
+			name = "Config";
+			sourceTree = "<group>";
+		};
+		EB814BE3CA3B78C0734C5605 = {
+			isa = "PBXGroup";
+			children = ("AFE28616CA63A7D17D7404CD", "F304CFC6E827B42E1E927E7A", "4D11AC3F636A2E4433D28B6A", "9C86E876F75260D9108EFE97", "E967D16DAE74A49B5E0E0512", "87E89ABB4C1C551FE08D355D", "4EDC8BFAFC6BD936B849F38C");
+			sourceTree = "<group>";
+		};
+		985959785319747668373CC6 = {
+			isa = "PBXProject";
+			attributes = {
+				BuildIndependentTargetsInParallel = "YES";
+				LastUpgradeCheck = "1600";
+			};
+			buildConfigurationList = "67F98A53B3601D59AC990BA8";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "en";
+			hasScannedForEncodings = 0;
+			knownRegions = ("en", "vi", "Base");
+			mainGroup = "EB814BE3CA3B78C0734C5605";
+			productRefGroup = "4EDC8BFAFC6BD936B849F38C";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ("FBDAC3E8D3E520485275D3E8", "AD9F897BBFE7CBB96B194978", "E5FCE70C8BB6330ED389F7B0", "30D546A5A48110FD5B042395");
+		};
+	};
+	rootObject = "985959785319747668373CC6";
+}

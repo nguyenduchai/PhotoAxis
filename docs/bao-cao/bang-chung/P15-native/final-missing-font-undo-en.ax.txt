@@ -1,0 +1,15 @@
+The following is a diff from the previous accessibility tree for Window: "P15 Native Mixed Before — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 128-131
+~	1 text Hand
++	126 nút Fit on Screen
++	127 nút 100%
++	128 text Drag or scroll to pan the canvas
+~	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+~	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
++	129 nút chuyển đổi P15 Native Mixed Before, Value: on
++	130 nút Close tab
+~		31 nút bật lên Description: Font Family, Value: PhotoAxisQANonexistentFont (missing font), ID: type.family
+~		33 nút bật lên (disabled) Description: Font Style, Value: Regular, ID: type.style
++		131 nút Edit Text
+~		43 text Missing font: PhotoAxisQANonexistentFont. Preview uses a fallback; appearance may differ. Choose a family/style to replace it.
+The focused UI element is 0 cửa sổ thông thường P15 Native Mixed Before — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

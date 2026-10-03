@@ -1,0 +1,189 @@
+Window: "Hồ sơ ảnh điều tra", App: PhotoAxis.
+0 cửa sổ thông thường Hồ sơ ảnh điều tra, ID: investigation.window, Secondary Actions: Raise
+	1 text QA-DT-01 — Hồ sơ thử nghiệm chức năng điều tra
+	2 nút Tạo hồ sơ…, ID: investigation.create
+	3 nút Mở hồ sơ…, ID: investigation.open
+	4 nút Thông tin hồ sơ…, ID: investigation.editCase
+	5 nút Tiếp nhận ảnh…, ID: investigation.import
+	6 nút Tiếp nhận và chú thích…, ID: investigation.editIntake
+	7 nút Sửa bản làm việc, ID: investigation.editImage
+	8 nút Kiểm tra toàn vẹn, ID: investigation.verify
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 bảng investigation.photos
+			11 row (selected)
+				12 trường văn bản (settable) IMG-0001  grid-corners.png
+			13 nút sắp xếp Danh mục ảnh
+		14 thanh cuộn (disabled, settable, float) 0
+	15 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		16 vùng nhập văn bản ID: investigation.details, Value: Hồ sơ
+Hồ sơ thử nghiệm chức năng điều tra
+Người thử nghiệm
+
+IMG-0001 — grid-corners.png
+
+
+SHA-256 (original): 8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765
+SHA-256 (working source): 8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765
+Bytes: 7710
+
+Thông tin tiếp nhận
+{"handover":"Dữ liệu thử nghiệm, không phải hồ sơ thực tế","provider":"","receivedAt":"","receiver":"Người thử nghiệm","source":"Fixture góc màu tự tạo trong repository"}
+
+Metadata Image I/O của bản gốc (tách khỏi thông tin bổ sung)
+{"{Exif}":{"ColorSpace":1,"PixelXDimension":640,"PixelYDimension":480},"{PNG}":{"Chromaticities":[0.31270000000000003,0.32900000000000001,0.64000000000000001,0.33000000000000002,0.30000000000000004,0.60000000000000009,0.15000000000000002,0.060000000000000005],"Gamma":0.45455000000000001,"InterlaceType":0,"sRGBIntent":0},"{TIFF}":{"Orientation":1},"ColorModel":"RGB","Depth":8,"HasAlpha":true,"Orientation":1,"PixelHeight":480,"PixelWidth":640,"ProfileName":"sRGB IEC61966-2.1"}
+
+Các vùng che
+[{"height":37,"width":55,"x":20,"y":30}]
+
+Nhật ký xử lý gần nhất (tối đa 100; nhật ký đầy đủ giữ trong case.json)
+#1 2026-10-02T06:03:23Z | caseCreated | Người thử nghiệm | 1.0.0 (2) Investigation 1
+code: QA-DT-01
+title: Hồ sơ thử nghiệm chức năng điều tra
+#2 2026-10-02T06:04:03Z | intake | Người thử nghiệm | 1.0.0 (2) Investigation 1
+intakeJSON: {"handover":"Dữ liệu thử nghiệm, không phải hồ sơ thực tế","provider":"","receivedAt":"","receiver":"Người thử nghiệm","source":"Fixture góc màu tự tạo trong repository"}
+originalName: grid-corners.png
+originalSHA256: 8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765
+resizeAllowed: false
+workingSourceSHA256: 8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765
+{"canvas":{"height":480,"width":640},"formatIdentifier":"photoaxis.document","formatVersion":2,"id":"BDCAE277-5A30-4FAD-AC95-02859D97D41C","investigation":{"caseID":"042310DD-A20F-4240-AA7F-63B42986C9F4","itemID":"BDCAE277-5A30-4FAD-AC95-02859D97D41C"},"layers":[{"clip":[],"id":"3E9CE8E0-5474-4416-9916-48814AC15EF8","imageAdjustments":{"brightness":0,"contrast":0,"enabled":true,"exposure":0,"saturation":0},"isLocked":false,"isVisible":true,"name":"grid-corners.png","opacity":1,"sourceID":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","transform":[1,0,0,0,1,0,0,0,1],"type":"image"}],"name":"IMG-0001","ppi":72,"revision":1,"sources":[{"id":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","size":{"height":480,"width":640}}]}
+#3 2026-10-02T06:04:10Z | workingOpened | Người thử nghiệm | 1.0.0 (2) Investigation 1
+
+#4 2026-10-02T06:04:20Z | annotation | Người thử nghiệm | 1.0.0 (2) Investigation 1
+afterModelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+beforeModelSHA256: 691bc8b9104b16e146205e676868d45a1723cbcc8354ab3fbe63901a2c6057d9
+{"canvas":{"height":480,"width":640},"formatIdentifier":"photoaxis.document","formatVersion":2,"id":"BDCAE277-5A30-4FAD-AC95-02859D97D41C","investigation":{"caseID":"042310DD-A20F-4240-AA7F-63B42986C9F4","itemID":"BDCAE277-5A30-4FAD-AC95-02859D97D41C"},"layers":[{"clip":[],"id":"3E9CE8E0-5474-4416-9916-48814AC15EF8","imageAdjustments":{"brightness":0,"contrast":0,"enabled":true,"exposure":0,"saturation":0},"isLocked":false,"isVisible":true,"name":"grid-corners.png","opacity":1,"sourceID":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","transform":[1,0,0,0,1,0,0,0,1],"type":"image"},{"clip":[],"id":"D2BA8900-F2AE-4B3F-9845-E4B49D4C5AFF","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":1,"y":1},"lineStart":{"x":0,"y":0},"size":{"height":100,"width":140},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,100,0,1,120,0,0,1],"type":"shape"},{"clip":[],"id":"84D049C3-8520-4B03-99E8-C5CB0BF907A7","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":0,"y":0},"lineStart":{"x":0.9953329548342739,"y":0.7720024464572077},"size":{"height":3,"width":24},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,216.11200908397743,0,1,217.68399266062838,0,0,1],"type":"shape"},{"clip":[],"id":"1B03CBF2-CE1D-4FEC-A97C-A45C0130109B","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":0,"y":0},"lineStart":{"x":0.9938274266764268,"y":0.9929823021969665},"size":{"height":22,"width":10},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,230.06172573323573,0,1,198.15438935166674,0,0,1],"type":"shape"}],"name":"IMG-0001","ppi":72,"revision":4,"sources":[{"id":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","size":{"height":480,"width":640}}]}
+#5 2026-10-02T06:04:28Z | undo | Người thử nghiệm | 1.0.0 (2) Investigation 1
+afterModelSHA256: 691bc8b9104b16e146205e676868d45a1723cbcc8354ab3fbe63901a2c6057d9
+beforeModelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+{"canvas":{"height":480,"width":640},"formatIdentifier":"photoaxis.document","formatVersion":2,"id":"BDCAE277-5A30-4FAD-AC95-02859D97D41C","investigation":{"caseID":"042310DD-A20F-4240-AA7F-63B42986C9F4","itemID":"BDCAE277-5A30-4FAD-AC95-02859D97D41C"},"layers":[{"clip":[],"id":"3E9CE8E0-5474-4416-9916-48814AC15EF8","imageAdjustments":{"brightness":0,"contrast":0,"enabled":true,"exposure":0,"saturation":0},"isLocked":false,"isVisible":true,"name":"grid-corners.png","opacity":1,"sourceID":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","transform":[1,0,0,0,1,0,0,0,1],"type":"image"}],"name":"IMG-0001","ppi":72,"revision":1,"sources":[{"id":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","size":{"height":480,"width":640}}]}
+#6 2026-10-02T06:04:29Z | redo | Người thử nghiệm | 1.0.0 (2) Investigation 1
+afterModelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+beforeModelSHA256: 691bc8b9104b16e146205e676868d45a1723cbcc8354ab3fbe63901a2c6057d9
+{"canvas":{"height":480,"width":640},"formatIdentifier":"photoaxis.document","formatVersion":2,"id":"BDCAE277-5A30-4FAD-AC95-02859D97D41C","investigation":{"caseID":"042310DD-A20F-4240-AA7F-63B42986C9F4","itemID":"BDCAE277-5A30-4FAD-AC95-02859D97D41C"},"layers":[{"clip":[],"id":"3E9CE8E0-5474-4416-9916-48814AC15EF8","imageAdjustments":{"brightness":0,"contrast":0,"enabled":true,"exposure":0,"saturation":0},"isLocked":false,"isVisible":true,"name":"grid-corners.png","opacity":1,"sourceID":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","transform":[1,0,0,0,1,0,0,0,1],"type":"image"},{"clip":[],"id":"D2BA8900-F2AE-4B3F-9845-E4B49D4C5AFF","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":1,"y":1},"lineStart":{"x":0,"y":0},"size":{"height":100,"width":140},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,100,0,1,120,0,0,1],"type":"shape"},{"clip":[],"id":"84D049C3-8520-4B03-99E8-C5CB0BF907A7","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":0,"y":0},"lineStart":{"x":0.9953329548342739,"y":0.7720024464572077},"size":{"height":3,"width":24},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,216.11200908397743,0,1,217.68399266062838,0,0,1],"type":"shape"},{"clip":[],"id":"1B03CBF2-CE1D-4FEC-A97C-A45C0130109B","isLocked":false,"isVisible":true,"name":"Chú thích Dấu vết 1","opacity":1,"shape":{"fill":{"alpha":0,"blue":0,"green":0,"red":0},"kind":"line","lineEnd":{"x":0,"y":0},"lineStart":{"x":0.9938274266764268,"y":0.9929823021969665},"size":{"height":22,"width":10},"stroke":{"alpha":1,"blue":0.1,"green":0.1,"red":1},"strokeWidth":3},"transform":[1,0,230.06172573323573,0,1,198.15438935166674,0,0,1],"type":"shape"}],"name":"IMG-0001","ppi":72,"revision":4,"sources":[{"id":"8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765","size":{"height":480,"width":640}}]}
+#7 2026-10-02T06:04:29Z | workingSaveStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+snapshotSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+#8 2026-10-02T06:04:29Z | workingSaved | Người thử nghiệm | 1.0.0 (2) Investigation 1
+savedModelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+workingFileSHA256: 1352792748846f8adabbf66e9ae746dc7abd6f5c818808a510a34ea0bb51de06
+#9 2026-10-02T06:07:28Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: $BUILD_ROOT:QA:Investigation:before-review.png
+format: PNG
+#10 2026-10-02T06:07:53Z | redactionsReviewed | Người thử nghiệm | 1.0.0 (2) Investigation 1
+regionsJSON: [{"height":37,"width":55,"x":20,"y":30}]
+#11 2026-10-02T06:08:17Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: $BUILD_ROOT:QA:Investigation:native-reviewed.png
+format: PNG
+#12 2026-10-02T06:15:12Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-reviewed.png
+format: PNG
+#13 2026-10-02T06:15:12Z | sharingCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-reviewed.png
+format: PNG
+modelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+redactionsSHA256: 3b05744b6ecd8e3ea23318757ef0948c7e92c47dc82351434c3837a8236a3e2b
+sha256: 2dae46dd3027ce8fe9b3a9cf5535f1127449ed495c1e9c497b038c86704889dd
+#14 2026-10-02T06:15:47Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-A4.pdf
+format: PDF
+perPage: 2
+#15 2026-10-02T06:15:47Z | sharingCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-A4.pdf
+format: PDF
+inputLedgerSHA256: c64813a9d4bd1d2569ada70e3cfdcde70faee739825021913fbc3e171be77275
+perPage: 2
+sha256: fe21a06b2ffaa67d65c244671509fdfa04d5f32890a926f6e40626dcc698a623
+#16 2026-10-02T06:16:37Z | catalogExportStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-source-catalog.json
+#17 2026-10-02T06:16:37Z | catalogExportCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-source-catalog.json
+sha256: 176aa9e6e4293acedac623a812bd2e4358b1daff1d9a2a0de30348ea782a764b
+#18 2026-10-02T06:17:06Z | processingLogExportStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-processing-log.json
+#19 2026-10-02T06:17:06Z | processingLogExportCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: native-processing-log.json
+sha256: dcb33fada0a177d71ad09d0c40e4e6883cc53f3134f99492466b6fcb35c718ed
+#20 2026-10-02T06:17:21Z | integrityChecked | Người thử nghiệm | 1.0.0 (2) Investigation 1
+
+#21 2026-10-02T07:44:41Z | workingOpened | Người thử nghiệm | 1.0.0 (2) Investigation 1
+
+#22 2026-10-02T07:44:53Z | intakeAmended | Người thử nghiệm | 1.0.0 (2) Investigation 1
+caption: 
+intakeJSON: {"handover":"Dữ liệu thử nghiệm, không phải hồ sơ thực tế","provider":"","receivedAt":"","receiver":"Người thử nghiệm","source":"Fixture góc màu tự tạo trong repository"}
+previousCaption: 
+previousIntakeJSON: {"handover":"Dữ liệu thử nghiệm, không phải hồ sơ thực tế","provider":"","receivedAt":"","receiver":"Người thử nghiệm","source":"Fixture góc màu tự tạo trong repository"}
+#23 2026-10-02T07:45:01Z | redactionsReviewed | Người thử nghiệm | 1.0.0 (2) Investigation 1
+regionsJSON: [{"height":37,"width":55,"x":20,"y":30}]
+#24 2026-10-02T07:45:12Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: Ban-anh.pdf
+format: PDF
+perPage: 2
+#25 2026-10-02T07:45:13Z | sharingCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: Ban-anh.pdf
+format: PDF
+inputLedgerSHA256: ec81d913ac76c17b8e516588c1b185cf61033e4094255c5607a875d578542b42
+perPage: 2
+sha256: ac80c1a657c454feae49785f2f92b7265386a5dce1cb6e22257a8425f8e56414
+#26 2026-10-02T09:20:53Z | workingOpened | Người thử nghiệm | 1.0.0 (2) Investigation 1
+
+#27 2026-10-02T09:20:54Z | workingSaveStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+snapshotSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+#28 2026-10-02T09:20:54Z | workingSaved | Người thử nghiệm | 1.0.0 (2) Investigation 1
+savedModelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+workingFileSHA256: 1352792748846f8adabbf66e9ae746dc7abd6f5c818808a510a34ea0bb51de06
+#29 2026-10-02T09:22:57Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-English-A4.pdf
+format: PDF
+perPage: 2
+#30 2026-10-02T09:22:57Z | sharingCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-English-A4.pdf
+format: PDF
+inputLedgerSHA256: b92eb0389ecc83b1f487b9c5f3bd21e22ef7f2ab896c6285b4cd7821c6863856
+perPage: 2
+sha256: ad6aa8abcad65108b4672baf21485a0bac2f6e5a8daefa8dbff0eead7f739f2f
+#31 2026-10-02T09:24:21Z | integrityChecked | Người thử nghiệm | 1.0.0 (2) Investigation 1
+
+#32 2026-10-02T09:24:49Z | sharingStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-reviewed.png
+format: PNG
+#33 2026-10-02T09:24:49Z | sharingCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-reviewed.png
+format: PNG
+modelSHA256: dd536c76ecd367706833b44c803ac57d428eb591ddb1d32f35312b6aa78cd4ac
+redactionsSHA256: 3b05744b6ecd8e3ea23318757ef0948c7e92c47dc82351434c3837a8236a3e2b
+sha256: 2dae46dd3027ce8fe9b3a9cf5535f1127449ed495c1e9c497b038c86704889dd
+#34 2026-10-02T09:25:17Z | processingLogExportStarted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-processing-log.json
+#35 2026-10-02T09:25:17Z | processingLogExportCompleted | Người thử nghiệm | 1.0.0 (2) Investigation 1
+fileName: verified-processing-log.json
+sha256: b1d4fd7cf467846c5a87fdbfcdace432c9ee04891f2eeaa16848ab4f4c69072b
+
+		17 thanh cuộn (settable, float) 0
+			18 chỉ báo giá trị (settable, float) 0
+			19 nút mũi tên tăng dần
+			20 nút mũi tên giảm dần
+			21 nút trang tăng dần
+			22 nút trang giảm dần
+	23 nút So sánh nguồn/kết quả, ID: investigation.compare
+	24 nút Thêm chú thích…, ID: investigation.annotate
+	25 nút Xác nhận vùng che…, ID: investigation.redact
+	26 nút Xuất PNG chia sẻ…, ID: investigation.exportPNG
+	27 nút Lập bản ảnh A4…, ID: investigation.exportPDF
+	28 nút Danh mục nguồn…, ID: investigation.exportCatalog
+	29 nút Xuất nhật ký đầy đủ…, ID: investigation.exportLog
+	30 text Hồ sơ chứa file gốc và metadata. Chia sẻ bản xuất đã kiểm tra riêng. SHA-256 kiểm tra toàn vẹn, không tự chứng minh nguồn gốc, thời gian hoặc thay hồ sơ bảo quản, bàn giao. Nhật ký xử lý độc lập với Undo.
+	31 nút đóng
+	32 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	33 text Hồ sơ ảnh điều tra
+34 menu bar
+	35 PhotoAxis
+	36 Tệp
+	37 Chỉnh sửa
+	38 Ảnh
+	39 Lớp
+	40 Văn bản
+	41 Xem
+	42 Cửa sổ
+	43 Điều tra
+	44 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Hồ sơ ảnh điều tra, ID: investigation.window, Secondary Actions: Raise

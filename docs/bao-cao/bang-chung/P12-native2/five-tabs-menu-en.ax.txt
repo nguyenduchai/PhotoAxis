@@ -1,0 +1,11 @@
+Window: "A04-custom-en — PhotoAxis", App: PhotoAxis.
+0 File, Secondary Actions: Cancel, Pick
+	1 menu Secondary Actions: Cancel
+		2 (disabled) New Document…, ID: makeDocument
+		3 Open…, ID: openImages
+		4 Place Embedded…, ID: placeImages
+		5 Save, ID: saveProject
+		6 Save As…, ID: saveProjectAs
+		7 Export As…, ID: exportImage
+		8 (disabled) Recover Documents…
+		9 Close, ID: closeDocument

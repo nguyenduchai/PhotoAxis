@@ -1,0 +1,18 @@
+Window: "", App: PhotoAxis.
+0 hộp thoại Description: cảnh báo, Secondary Actions: Raise
+	1 hình ảnh PhotoAxis Investigation2 verified en cảnh báo
+	2 text Image import results A26-native-vi.paxis: At most 5 documents. Close a tab before opening another.
+	3 nút Close, ID: action-button-1
+4 menu bar
+	5 PhotoAxis Investigation2 verified en
+	6 File
+	7 Edit
+	8 Image
+	9 Layer
+	10 Type
+	11 View
+	12 Window
+	13 Investigation
+	14 Help
+
+The focused UI element is 0 hộp thoại Description: cảnh báo, Secondary Actions: Raise

@@ -1,0 +1,26 @@
+Window: "Đo khoảng cách/diện tích…", App: PhotoAxis.
+0 cửa sổ thông thường Đo khoảng cách/diện tích…, ID: investigation.reviewWindow, Secondary Actions: Raise
+	1 text ID: investigation.analysisSummary, Value: Thước chuẩn màu xanh; điểm đo màu đỏ
+10.0 cm / (60, 480); (160, 480)
+0.1 cm/px
+Fixture tổng hợp: 100px gán chuẩn10cm để kiểm công thức trên mặt phẳng; không đo vật chứng
+SHA-256(model): d6c4a61330dd96ba01d9e77e747be63c034dcf44c60a705a6a7a456b4493ecef
+
+Khoảng cách: 50 cm
+(60, 480); (360, 80)
+	2 nút đóng
+	3 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	4 text Đo khoảng cách/diện tích…
+5 menu bar
+	6 PhotoAxis Investigation2 verified vi
+	7 Tệp
+	8 Chỉnh sửa
+	9 Ảnh
+	10 Lớp
+	11 Văn bản
+	12 Xem
+	13 Cửa sổ
+	14 Điều tra
+	15 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Đo khoảng cách/diện tích…, ID: investigation.reviewWindow, Secondary Actions: Raise

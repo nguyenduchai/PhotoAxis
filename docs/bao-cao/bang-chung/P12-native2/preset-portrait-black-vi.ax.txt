@@ -1,0 +1,97 @@
+Window: "A04-portrait-black — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-portrait-black — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	11 nút Description: Văn bản (T), ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-1080-transparent, Value: off
+	18 nút Đóng tab
+	19 nút chuyển đổi A04-landscape-white, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi A04-portrait-black, Value: on
+	22 nút Đóng tab
+	23 trường văn bản (settable) Description: Thu phóng, Value: 63,75 %
+	24 text Value: 1.080 × 1.920 px · 72,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	25 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	26 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	27 trường văn bản (settable) Description: HEX, Value: #000000
+	28 trường văn bản (settable) Description: Alpha %, Value: 100
+	29 trường văn bản (settable) Description: Đỏ, Value: 0
+	30 trường văn bản (settable) Description: Xanh lá, Value: 0
+	31 trường văn bản (settable) Description: Xanh dương, Value: 0
+	32 text Màu tiền cảnh Màu nền HEX Alpha % R G B
+	33 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		34 hộp kiểm (disabled) Tô nền, Value: 1, ID: shape.fill
+		35 text Màu tô
+		36 bảng màu (disabled) Description: Màu tô, Value: rgb 0 0 0 1, ID: shape.fillColor, Secondary Actions: Hiển thị bảng màu
+		37 text Màu viền
+		38 bảng màu (disabled) Description: Màu viền, Value: rgb 0 0 0 1, ID: shape.stroke, Secondary Actions: Hiển thị bảng màu
+		39 text Viền (px)
+		40 trường văn bản (disabled) Description: Viền (px), Value: 0, ID: shape.strokeWidth
+		41 text Chiều rộng (px)
+		42 trường văn bản (disabled) Description: Chiều rộng (px), Value: 1080, ID: document.width
+		43 text Chiều cao (px)
+		44 trường văn bản (disabled) Description: Chiều cao (px), Value: 1920, ID: document.height
+		45 text Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng.
+		46 thanh cuộn (settable, float) 0
+			47 chỉ báo giá trị (settable, float) 0
+			48 nút mũi tên tăng dần
+			49 nút mũi tên giảm dần
+			50 nút trang tăng dần
+			51 nút trang giảm dần
+	52 text Màu
+	53 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	54 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		55 nút radio Description: Thuộc tính, Value: 1
+		56 nút radio Description: Lịch sử, Value: 0
+	57 text Lớp
+	58 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		59 bảng
+			60 row (selected)
+				61 ô (selected)
+					62 nút Description: Ẩn/hiện lớp: Nền, Help: Ẩn/hiện lớp
+					63 hình ảnh
+					64 text Help: Nền, Value: Nền Hình
+					65 nút Description: Khóa/mở khóa lớp: Nền, Help: Khóa/mở khóa lớp
+		66 thanh cuộn (disabled, settable, float) 0
+	67 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	68 text Độ mờ
+	69 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	70 thanh trượt (disabled) Description: Độ mờ, Value: 100, Secondary Actions: Increment, Decrement
+		71 chỉ báo giá trị 100
+	72 nút Thêm lớp
+	73 nút (disabled) Description: Đổi tên lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	74 nút (disabled) Description: Đưa lớp lên, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	75 nút (disabled) Description: Đưa lớp xuống, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	76 nút Nhân bản lớp
+	77 nút (disabled) Description: Xóa lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	78 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	79 nút đóng
+	80 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	81 nút thu nhỏ
+	82 text A04-portrait-black — PhotoAxis
+83 menu bar
+	84 PhotoAxis Investigation2 verified vi
+	85 Tệp
+	86 Chỉnh sửa
+	87 Ảnh
+	88 Lớp
+	89 Văn bản
+	90 Xem
+	91 Cửa sổ
+	92 Điều tra
+	93 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường A04-portrait-black — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

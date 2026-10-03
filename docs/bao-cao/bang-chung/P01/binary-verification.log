@@ -1,0 +1,73 @@
+$ codesign --verify --deep --strict --verbose=2 <BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app
+--prepared:<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/Current/.
+--validated:<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/Current/.
+<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app: valid on disk
+<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app: satisfies its Designated Requirement
+
+
+$ codesign -dv --verbose=2 <BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app
+Executable=<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+Identifier=local.photoaxis.development
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=916 flags=0x2(adhoc) hashes=18+7 location=embedded
+Signature=adhoc
+Info.plist entries=22
+TeamIdentifier=not set
+Sealed Resources version=2 rules=13 files=3
+Internal requirements count=0 size=12
+Total signatures=1
+Chosen signature=1
+
+
+$ file <BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis: Mach-O 64-bit executable arm64
+
+
+$ xcrun vtool -show-build <BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+<BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis:
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 14.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+
+$ plutil -p <BUILD_ROOT>/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/Info.plist
+{
+  "BuildMachineOSBuild" => "26A428"
+  "CFBundleDevelopmentRegion" => "en"
+  "CFBundleDisplayName" => "PhotoAxis"
+  "CFBundleExecutable" => "PhotoAxis"
+  "CFBundleIdentifier" => "local.photoaxis.development"
+  "CFBundleLocalizations" => [
+    0 => "en"
+    1 => "vi"
+  ]
+  "CFBundleName" => "PhotoAxis"
+  "CFBundlePackageType" => "APPL"
+  "CFBundleShortVersionString" => "1.0.0"
+  "CFBundleSupportedPlatforms" => [
+    0 => "MacOSX"
+  ]
+  "CFBundleVersion" => "1"
+  "DTCompiler" => "com.apple.compilers.llvm.clang.1_0"
+  "DTPlatformBuild" => "26A425"
+  "DTPlatformName" => "macosx"
+  "DTPlatformVersion" => "27.0"
+  "DTSDKBuild" => "26A425"
+  "DTSDKName" => "macosx27.0"
+  "DTXcode" => "2700"
+  "DTXcodeBuild" => "27A266a"
+  "LSMinimumSystemVersion" => "14.0"
+  "NSHighResolutionCapable" => true
+  "NSPrincipalClass" => "NSApplication"
+}
+
+
+App resources (no reference artwork / mockup):
+Contents/Resources/en.lproj/Localizable.strings
+Contents/Resources/vi.lproj/Localizable.strings

@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "1fecfa80a3588ef47ce1a739c2c77a637cccc701",
+  "testsPassed": 15,
+  "testsFailed": 0,
+  "checksScope": "release gating and synthetic HTTP response safety; no actual public download/notary claims",
+  "filesSHA256": {
+    "scripts/release-audit.py": "922dcaec43286404f0686acf7b556bf0f3cb3832b06ec11b78e214477ef92b5b",
+    "Tests/ReleaseTooling/test_release_audit.py": "b437f723f276c1f2eda6e9b6d03a99ead62df9be6c90a08447a534668c40d66c",
+    "docs/READINESS_PUBLIC.json": "9a909ef368c7ca802342e093b9bbfdc5116903b7fb6473b0a70615fbac736d96",
+    "docs/KE_HOACH_PUBLIC.json": "3fee8f78aae9dc81c9f20ca1b841ee0dd296cb44fa0dee028f6146740054d240"
+  },
+  "evidenceSHA256": {
+    "policy-tests.log": "30824945ffc12a8d57007774669d1fd0f7c8ccc9872cf22636a6fdabf2a0d49b",
+    "preflight.json": "06306f92079513bdfe142c0454396741869720a3bd6448873f6797a8fee88ff3",
+    "repository-release-state.json": "179e0607e525e28843a20b874f33992d1e2891a635db02e32e720a81c41d3967"
+  }
+}

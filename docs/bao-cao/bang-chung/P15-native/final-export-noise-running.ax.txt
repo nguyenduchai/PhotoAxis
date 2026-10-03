@@ -1,0 +1,89 @@
+The following is a diff from the previous accessibility tree for Window: "Native Export Cancellation Noise — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~61 cửa sổ thông thường Native Export Cancellation Noise — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+~	62 text Hand
+~	63 nút Fit on Screen
+~	64 nút 100%
+~	65 text Drag or scroll to pan the canvas
++	66 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
++	67 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
++	68 nút Description: Switch Tools between one and two columns, ID: tools.columns
++	69 nút Description: Move (V), ID: tool.move
++	70 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
++	71 nút Description: Eyedropper (I), ID: tool.eyedropper
++	72 nút Description: Type (T), ID: tool.type
++	73 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
++	74 nút Description: Hand (H), ID: tool.hand
++	75 nút Description: Zoom (Z), ID: tool.zoom
++	76 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	77 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	78 nút chuyển đổi Native Export Cancellation Noise, Value: on
++	79 nút Close tab
++	80 trường văn bản (settable) Description: Zoom, Value: 21,58 %
++	81 text Help: Rendering and writing export: Native Export Cancellation Noise, Value: Rendering and writing export: Native Export Cancellation Noise sRGB, ID: workspace.taskStatus
++	82 nút Cancel task
++	83 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	84 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	85 trường văn bản (settable) Description: HEX, Value: #000000
++	86 trường văn bản (settable) Description: Alpha %, Value: 100
++	87 trường văn bản (settable) Description: Red, Value: 0
++	88 trường văn bản (settable) Description: Green, Value: 0
++	89 trường văn bản (settable) Description: Blue, Value: 0
++	90 text Foreground Color Background Color HEX Alpha % R G B
++	91 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		92 hộp kiểm Image Adjustments, Value: 1, ID: adjustment.enabled, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++		93 nút Reset, Description: Reset Image Adjustments, ID: adjustment.reset, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++		94 text Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare. Exposure
++		95 trường văn bản (settable) Description: Exposure, Value: 0, ID: adjustment.exposure
++		96 thanh trượt (settable, float) Description: Exposure, Value: 0, ID: adjustment.exposure.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			97 chỉ báo giá trị (settable, float) 0
++		98 text EV Brightness
++		99 trường văn bản (settable) Description: Brightness, Value: 0, ID: adjustment.brightness
++		100 thanh trượt (settable, float) Description: Brightness, Value: 0, ID: adjustment.brightness.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			101 chỉ báo giá trị (settable, float) 0
++		102 text % Contrast
++		103 trường văn bản (settable) Description: Contrast, Value: 0, ID: adjustment.contrast
++		104 thanh trượt (settable, float) Description: Contrast, Value: 0, ID: adjustment.contrast.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			105 chỉ báo giá trị (settable, float) 0
++		106 text % Saturation
++		107 trường văn bản (settable) Description: Saturation, Value: 0, ID: adjustment.saturation
++		108 thanh trượt (settable, float) Description: Saturation, Value: 0, ID: adjustment.saturation.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			109 chỉ báo giá trị (settable, float) 0
++		110 text %
++		111 thanh cuộn (settable, float) 0
++			112 chỉ báo giá trị (settable, float) 0
++			113 nút mũi tên tăng dần
++			114 nút mũi tên giảm dần
++			115 nút trang tăng dần
++			116 nút trang giảm dần
++	117 text Color
++	118 nút Description: Collapse Panels, ID: sidebar.collapse
++	119 Description: Properties and History, ID: sidebar.inspectorTabs
++		120 nút radio Description: Properties, Value: 1
++		121 nút radio Description: History, Value: 0
++	122 text Layers
++	123 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		124 bảng
++			125 row (selected)
++				126 ô (selected)
++					127 nút Description: Toggle Visibility: Image 1, Help: Toggle Visibility
++					128 hình ảnh
++					129 text Help: Image 1, Value: Image 1 Image
++					130 nút Description: Toggle Lock: Image 1, Help: Toggle Lock
++		131 thanh cuộn (disabled, settable, float) 0
++	132 nút bật lên (disabled) Description: Blend Mode, Value: Normal
++	133 text Opacity
++	134 trường văn bản (settable) Description: Opacity, Value: 100 %
++	135 thanh trượt (settable, float) Description: Opacity, Value: 100
++		136 chỉ báo giá trị (settable, float) 100
++	137 nút Add Layer
++	138 nút Rename Layer
++	139 nút Move Layer Up
++	140 nút Move Layer Down
++	141 nút Duplicate Layer
++	142 nút Delete Layer
++	143 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
++	144 nút đóng
++	145 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	146 nút thu nhỏ
++	147 text Native Export Cancellation Noise — PhotoAxis
+The focused UI element is 61 cửa sổ thông thường Native Export Cancellation Noise — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

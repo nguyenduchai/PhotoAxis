@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "787e3d1384f101fbd081c4fd8b3fc96a26d2520d",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "releaseTextSectionSHA256": "e3b12047c61816a32f1ef467186d98ab59cf3d381e60b27ef257b985f19e29e1",
+  "coreSHA256": "abd7d3e450bf3cae2a8bd283fd9d4df44eb792785b5e7ed88715776a436e196e",
+  "qaApps": [
+    {
+      "language": "vi",
+      "bundleID": "com.photoaxis.qa.p15.final.vi",
+      "sameExecutableTextAndCore": true,
+      "UUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9"
+    },
+    {
+      "language": "en",
+      "bundleID": "com.photoaxis.qa.p15.final.en",
+      "sameExecutableTextAndCore": true,
+      "UUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9"
+    }
+  ],
+  "signingNote": "QA bundle IDs and ad-hoc signature blobs differ; executable UUID, __text section and Core bytes match Release.",
+  "qaFixtureRepair": "Python copytree initially dereferenced framework symlinks; own QA bundles reconstructed using ditto and deep-strict verified. Release product was valid throughout.",
+  "qaDeepStrictVerified": true
+}

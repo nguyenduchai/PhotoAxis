@@ -1,0 +1,6 @@
+{
+  "DeveloperIDApplicationAvailable": false,
+  "AppleDevelopmentAvailable": true,
+  "scope": "read-only current Keychain identity inventory; no private keys/certificates exported",
+  "notarizationPerformed": false
+}

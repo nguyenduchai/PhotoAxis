@@ -1,0 +1,39 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 Cửa sổ, Secondary Actions: Cancel, Pick
+	1 menu Secondary Actions: Cancel
+		2 Lấp đầy
+		3 Chính giữa
+		4 Di chuyển & định cỡ lại
+			5 menu Secondary Actions: Cancel
+				6 (disabled) Nửa màn hình
+				7 Bên trái
+				8 Bên phải
+				9 Trên cùng
+				10 Dưới cùng
+				11 (disabled) Góc phần tư
+				12 Trên cùng bên trái
+				13 Trên cùng bên phải
+				14 Dưới cùng bên trái
+				15 Dưới cùng bên phải
+				16 (disabled) Sắp xếp
+				17 Bên trái & bên phải
+				18 Bên trái & góc phần tư
+				19 Bên phải & bên trái
+				20 Bên phải & góc phần tư
+				21 Trên cùng & dưới cùng
+				22 Trên cùng & góc phần tư
+				23 Dưới cùng & trên cùng
+				24 Dưới cùng & góc phần tư
+				25 Góc phần tư
+				26 (disabled) Quay lại kích cỡ trước đó
+		27 Xếp cạnh nhau toàn màn hình
+			28 menu Secondary Actions: Cancel
+				29 Bên trái màn hình
+				30 Bên phải màn hình
+		31 (disabled) Xóa cửa sổ khỏi nhóm
+		32 Hiện bảng bên phải, ID: togglePanels
+		33 Hai cột, ID: toggleTools
+		34 Đặt lại không gian làm việc, ID: resetWorkspace
+		35 Thu nhỏ, ID: performMiniaturize:
+		36 Thu nhỏ Tất cả, ID: miniaturizeAll:
+		37 PhotoAxis, ID: makeKeyAndOrderFront:

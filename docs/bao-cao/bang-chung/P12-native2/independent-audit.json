@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "auditAssertions": 283,
+  "nativeCases": [
+    "A04",
+    "A07",
+    "A26"
+  ],
+  "scope": "Recorded native VI/EN evidence and independent ZIP/model/preview/sample audit. Not a fresh UI run, real IME test, native FPS or target-device qualification.",
+  "partialTelex": "VI real ASCII key conversion/Return/CmdReturn/Cancel recorded; EN source context and VNI unverified. A22 remains open.",
+  "presetProjects": [
+    {
+      "file": "A04-1080-transparent.paxis",
+      "canvas": {
+        "height": 1080,
+        "width": 1080
+      },
+      "ppi": 72,
+      "layers": 0,
+      "previewDimensions": [
+        512,
+        512
+      ],
+      "sha256": "7712348195af3ffb6753a27c19d70d5a4a3da308ddbbba0c17cc2f7a496d7688"
+    },
+    {
+      "file": "A04-landscape-white.paxis",
+      "canvas": {
+        "height": 1080,
+        "width": 1920
+      },
+      "ppi": 72,
+      "layers": 1,
+      "previewDimensions": [
+        512,
+        288
+      ],
+      "sha256": "e0499bbed6fc71bb5b8f96c3e8d4d1af987d5b1f415479d05ae949f2166de3ca"
+    },
+    {
+      "file": "A04-portrait-black.paxis",
+      "canvas": {
+        "height": 1920,
+        "width": 1080
+      },
+      "ppi": 72,
+      "layers": 1,
+      "previewDimensions": [
+        288,
+        512
+      ],
+      "sha256": "6f5002566393c6ddcbf4a98369d6d2214dd4c14e38e10e1354301da54463ce4e"
+    },
+    {
+      "file": "A04-A4-white.paxis",
+      "canvas": {
+        "height": 3508,
+        "width": 2480
+      },
+      "ppi": 300,
+      "layers": 1,
+      "previewDimensions": [
+        361,
+        512
+      ],
+      "sha256": "065873b825dcad05eb191993563ebaeb8a808b8f812db5e36bd0f138ee40e44a"
+    },
+    {
+      "file": "A04-custom-640.paxis",
+      "canvas": {
+        "height": 480,
+        "width": 640
+      },
+      "ppi": 144.5,
+      "layers": 0,
+      "previewDimensions": [
+        512,
+        384
+      ],
+      "sha256": "4d9f7167e524725c8fb87f92965f7c5926aa8b9d6dcb0c17fa18d3e905e90ec8"
+    },
+    {
+      "file": "A04-square-en.paxis",
+      "canvas": {
+        "height": 1080,
+        "width": 1080
+      },
+      "ppi": 72,
+      "layers": 0,
+      "previewDimensions": [
+        512,
+        512
+      ],
+      "sha256": "49f12049ce131596e4019effac0ade6cacef82d13e3ab8a73282d2e7b8f35b8a"
+    },
+    {
+      "file": "A04-landscape-en.paxis",
+      "canvas": {
+        "height": 1080,
+        "width": 1920
+      },
+      "ppi": 72,
+      "layers": 1,
+      "previewDimensions": [
+        512,
+        288
+      ],
+      "sha256": "52c9ff8729764d2e901fa049a1fdba20cbe2d327f2ba88e1d7d612424b6361b8"
+    },
+    {
+      "file": "A04-portrait-en.paxis",
+      "canvas": {
+        "height": 1920,
+        "width": 1080
+      },
+      "ppi": 72,
+      "layers": 1,
+      "previewDimensions": [
+        288,
+        512
+      ],
+      "sha256": "3aa201e24702a9e67cf74fb6d9674031c01be77da600b179a8c6e2ef0346b21d"
+    },
+    {
+      "file": "A04-A4-en.paxis",
+      "canvas": {
+        "height": 3508,
+        "width": 2480
+      },
+      "ppi": 300,
+      "layers": 1,
+      "previewDimensions": [
+        361,
+        512
+      ],
+      "sha256": "7d9c6315f2e6d0f56dd8a8fe1965839b62773d18b83965ad8629223d6d126145"
+    },
+    {
+      "file": "A04-custom-en.paxis",
+      "canvas": {
+        "height": 480,
+        "width": 640
+      },
+      "ppi": 144.5,
+      "layers": 0,
+      "previewDimensions": [
+        512,
+        384
+      ],
+      "sha256": "9c6e38eb6c8d80be6b3950eeed7b761b793415f7f52cff4a05ea163f9c993ee9"
+    }
+  ],
+  "benchmark": {
+    "open": {
+      "medianSeconds": 97.1201,
+      "maximumSeconds": 99.3412,
+      "p95Seconds": 99.3412
+    },
+    "export": {
+      "medianSeconds": 356.0067,
+      "maximumSeconds": 358.066,
+      "p95Seconds": 358.066
+    },
+    "pan": {
+      "medianSeconds": 28.6592,
+      "maximumSeconds": 33.3008,
+      "p95Seconds": 31.5038,
+      "fractionWithin33ms": 1.0,
+      "settled": {
+        "medianSeconds": 29.0816,
+        "maximumSeconds": 32.3569,
+        "p95Seconds": 32.3569
+      }
+    },
+    "perspectiveCorner": {
+      "medianSeconds": 34.5714,
+      "maximumSeconds": 65.0922,
+      "p95Seconds": 40.9115,
+      "fractionWithin33ms": 0.31,
+      "settled": {
+        "medianSeconds": 63.9599,
+        "maximumSeconds": 64.5669,
+        "p95Seconds": 64.5669
+      }
+    },
+    "slider": {
+      "medianSeconds": 28.4021,
+      "maximumSeconds": 34.1925,
+      "p95Seconds": 31.314,
+      "fractionWithin33ms": 0.98,
+      "settled": {
+        "medianSeconds": 28.7608,
+        "maximumSeconds": 29.6218,
+        "p95Seconds": 29.6218
+      }
+    },
+    "zoom": {
+      "medianSeconds": 28.3258,
+      "maximumSeconds": 33.0721,
+      "p95Seconds": 30.7501,
+      "fractionWithin33ms": 1.0,
+      "settled": {
+        "medianSeconds": 27.4514,
+        "maximumSeconds": 30.2679,
+        "p95Seconds": 30.2679
+      }
+    }
+  },
+  "recoveryFiveTabsSeconds": 14.746307416666241
+}

@@ -1,0 +1,10 @@
+{
+  "status": "UNVERIFIED_BEFORE_COMMIT",
+  "scenario": "native 8000x5000 canvas with 50 clipped shared-source image layers; overwrite confirmed; Cancel task AX observed then clicked",
+  "previousTargetSHA256": "e5e296925175bc1d5e7124a231299f6db90087d523b4fe579b0800193372dbe3",
+  "afterCancelSHA256": "d64b9a54abe22b3a7dcc9dada2a7a14353a5f94fb504ba8915f413ece603e53c",
+  "byteIdentical": false,
+  "temporaryFilesRemaining": 0,
+  "benchmark": false,
+  "earlierAttempts": "40MP stress / 50 un-clipped images completed before click reached commit; not counted as cancellation PASS"
+}

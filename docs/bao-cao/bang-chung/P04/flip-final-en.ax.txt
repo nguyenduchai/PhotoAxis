@@ -1,0 +1,73 @@
+Window: "grid-corners.png — PhotoAxis", App: PhotoAxis Crop Final.
+0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút (disabled) Description: Eyedropper (I), Help: Document editing is still in development., ID: tool.eyedropper
+	11 nút (disabled) Description: Type (T), Help: Document editing is still in development., ID: tool.type
+	12 nút Description: Shape Tools, Help: Shape Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu (disabled) Description: Background Color, Help: Document editing is still in development., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu (disabled) Description: Foreground Color, Help: Document editing is still in development., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi grid-corners.png •, Value: on
+	18 nút Close tab
+	19 trường văn bản (settable) Description: Zoom, Value: 633,33 %
+	20 text 320 × 240 px · 300,00 PPI · Unsaved sRGB Color
+	21 nút Description: Collapse Panels, ID: sidebar.collapse
+	22 hình ảnh Description: Color preview; editing unavailable, Help: Document editing is still in development.
+	23 Description: Properties and History, ID: sidebar.inspectorTabs
+		24 nút radio Description: Properties, Value: 1
+		25 nút radio Description: History, Value: 0
+	26 text 320 × 240 px
+300,00 PPI · sRGB
+Layers: 1 Layers
+	27 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		28 bảng
+			29 row (selected)
+				30 ô (selected)
+					31 nút Description: Toggle Visibility: grid-corners.png, Help: Toggle Visibility
+					32 hình ảnh
+					33 text Help: grid-corners.png, Value: grid-corners.png Image
+					34 nút Description: Toggle Lock: grid-corners.png, Help: Toggle Lock
+		35 thanh cuộn (disabled, settable, float) 0
+	36 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	37 text Opacity
+	38 trường văn bản (settable) Description: Opacity, Value: 100 %
+	39 thanh trượt (settable, float) Description: Opacity, Value: 100
+		40 chỉ báo giá trị (settable, float) 100
+	41 text R
+	42 trường văn bản (disabled) Description: Red, Value: 0
+	43 text G
+	44 trường văn bản (disabled) Description: Green, Value: 0
+	45 text B
+	46 trường văn bản (disabled) Description: Blue, Value: 0
+	47 nút Add Layer
+	48 nút Rename Layer
+	49 nút Move Layer Up
+	50 nút Move Layer Down
+	51 nút Duplicate Layer
+	52 nút Delete Layer
+	53 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	54 nút đóng
+	55 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	56 nút thu nhỏ
+	57 text grid-corners.png — PhotoAxis
+58 menu bar
+	59 PhotoAxis Crop Final
+	60 File
+	61 Edit
+	62 Image
+	63 Layer
+	64 Type
+	65 View
+	66 Window
+	67 Help
+
+The focused UI element is 0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

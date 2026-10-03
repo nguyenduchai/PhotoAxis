@@ -1,0 +1,24 @@
+Window: "Image Size…", App: PhotoAxis Crop Final.
+0 tờ Secondary Actions: Raise
+	1 text Width (px)
+	2 trường văn bản (settable) Description: Width (px), Value: 320
+	3 text Height (px)
+	4 trường văn bản (settable) Description: Height (px), Value: 240
+	5 text Resolution (PPI)
+	6 trường văn bản (settable) Description: Resolution (PPI), Value: 300
+	7 hộp kiểm Link proportions, Value: 1
+	8 text Scale all layers with the canvas. Changing only PPI changes metadata, not pixel dimensions.
+	9 nút Cancel
+	10 nút Apply
+11 menu bar
+	12 PhotoAxis Crop Final
+	13 File
+	14 Edit
+	15 Image
+	16 Layer
+	17 Type
+	18 View
+	19 Window
+	20 Help
+
+The focused UI element is 6 trường văn bản (settable) Description: Resolution (PPI), Value: 300

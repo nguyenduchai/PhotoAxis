@@ -1,0 +1,77 @@
+Window: "grid-corners.png — PhotoAxis", App: PhotoAxis Crop Final.
+0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Cắt xén
+	2 nút bật lên Description: Chế độ cắt, Value: Tự do
+	3 trường văn bản (disabled) Description: Chiều rộng (px), Help: Chỉ đặt tỷ lệ; số pixel đầu ra lấy từ vùng cắt., Value: 640
+	4 trường văn bản (disabled) Description: Chiều cao (px), Help: Chỉ đặt tỷ lệ; số pixel đầu ra lấy từ vùng cắt., Value: 480
+	5 nút Đảo chiều
+	6 nút Đặt lại
+	7 hộp kiểm Lưới một phần ba, Value: 1
+	8 text 320 × 240 px
+	9 nút Hủy, Help: Cắt xén, ID: options.cancel
+	10 nút Áp dụng, Help: Cắt xén, ID: options.apply
+	11 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	12 nút Description: Di chuyển (V), ID: tool.move
+	13 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	14 nút (disabled) Description: Lấy mẫu màu (I), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.eyedropper
+	15 nút (disabled) Description: Văn bản (T), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.type
+	16 nút Description: Nhóm hình dạng, Help: Nhóm hình dạng — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.rectangle
+	17 nút Description: Bàn tay (H), ID: tool.hand
+	18 nút Description: Thu phóng (Z), ID: tool.zoom
+	19 bảng màu (disabled) Description: Màu nền, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	20 bảng màu (disabled) Description: Màu tiền cảnh, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	21 nút chuyển đổi grid-corners.png •, Value: on
+	22 nút Đóng tab
+	23 trường văn bản (settable) Description: Thu phóng, Value: 316,67 %
+	24 text 640 × 480 px · 72,00 PPI · Chưa lưu sRGB Màu
+	25 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	26 hình ảnh Description: Mẫu màu; chưa thể chỉnh sửa, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	27 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		28 nút radio Description: Thuộc tính, Value: 1
+		29 nút radio Description: Lịch sử, Value: 0
+	30 text 640 × 480 px
+72,00 PPI · sRGB
+Số lớp: 1 Lớp
+	31 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		32 bảng
+			33 row (selected)
+				34 ô (selected)
+					35 nút Description: Ẩn/hiện lớp: grid-corners.png, Help: Ẩn/hiện lớp
+					36 hình ảnh
+					37 text Help: grid-corners.png, Value: grid-corners.png Ảnh
+					38 nút Description: Khóa/mở khóa lớp: grid-corners.png, Help: Khóa/mở khóa lớp
+		39 thanh cuộn (disabled, settable, float) 0
+	40 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	41 text Độ mờ
+	42 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	43 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		44 chỉ báo giá trị (settable, float) 100
+	45 text R
+	46 trường văn bản (disabled) Description: Đỏ, Value: 0
+	47 text G
+	48 trường văn bản (disabled) Description: Xanh lá, Value: 0
+	49 text B
+	50 trường văn bản (disabled) Description: Xanh dương, Value: 0
+	51 nút Thêm lớp
+	52 nút Đổi tên lớp
+	53 nút Đưa lớp lên
+	54 nút Đưa lớp xuống
+	55 nút Nhân bản lớp
+	56 nút Xóa lớp
+	57 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	58 nút đóng
+	59 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	60 nút thu nhỏ
+	61 text grid-corners.png — PhotoAxis
+62 menu bar
+	63 PhotoAxis Crop Final
+	64 Tệp
+	65 Chỉnh sửa
+	66 Ảnh
+	67 Lớp
+	68 Văn bản
+	69 Xem
+	70 Cửa sổ
+	71 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

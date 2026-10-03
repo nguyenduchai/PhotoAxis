@@ -1,0 +1,98 @@
+{
+  "canvasPixels" : 40000000,
+  "completedRecoveryFiveTabsSeconds" : 14.528007541666739,
+  "cycles" : [
+    {
+      "cycle" : 0,
+      "decodedCacheAfterClose" : 0,
+      "decodedCacheBeforeClose" : 160000000,
+      "memoryAfterClose" : {
+        "metalCurrentAllocatedBytes" : 1259569152,
+        "processHighWaterRSSBytes" : 2643427328,
+        "residentBytes" : 2463432704
+      },
+      "memoryBeforeClose" : {
+        "metalCurrentAllocatedBytes" : 1962819584,
+        "processHighWaterRSSBytes" : 2643427328,
+        "residentBytes" : 2488598528
+      },
+      "seconds" : 29.036335416665679
+    },
+    {
+      "cycle" : 1,
+      "decodedCacheAfterClose" : 0,
+      "decodedCacheBeforeClose" : 160000000,
+      "memoryAfterClose" : {
+        "metalCurrentAllocatedBytes" : 1288241152,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2338373632
+      },
+      "memoryBeforeClose" : {
+        "metalCurrentAllocatedBytes" : 1331200000,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2370338816
+      },
+      "seconds" : 17.382390624999971
+    },
+    {
+      "cycle" : 2,
+      "decodedCacheAfterClose" : 0,
+      "decodedCacheBeforeClose" : 160000000,
+      "memoryAfterClose" : {
+        "metalCurrentAllocatedBytes" : 1288241152,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2347253760
+      },
+      "memoryBeforeClose" : {
+        "metalCurrentAllocatedBytes" : 1331200000,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2371534848
+      },
+      "seconds" : 17.34532770833539
+    },
+    {
+      "cycle" : 3,
+      "decodedCacheAfterClose" : 0,
+      "decodedCacheBeforeClose" : 160000000,
+      "memoryAfterClose" : {
+        "metalCurrentAllocatedBytes" : 1288241152,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2348548096
+      },
+      "memoryBeforeClose" : {
+        "metalCurrentAllocatedBytes" : 1331200000,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2372075520
+      },
+      "seconds" : 17.353041541668063
+    },
+    {
+      "cycle" : 4,
+      "decodedCacheAfterClose" : 0,
+      "decodedCacheBeforeClose" : 160000000,
+      "memoryAfterClose" : {
+        "metalCurrentAllocatedBytes" : 1292435456,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2350153728
+      },
+      "memoryBeforeClose" : {
+        "metalCurrentAllocatedBytes" : 1335394304,
+        "processHighWaterRSSBytes" : 2782789632,
+        "residentBytes" : 2375532544
+      },
+      "seconds" : 17.37272379166825
+    }
+  ],
+  "fixtureSHA256" : [
+    "825a063578103feeeec9ebc15a28aa57d938545c558265b40a6039154a8b9f2e",
+    "d9f2eec9035610ea555fe56940cb2f018d04a763e0bbaac45586d087814d38da",
+    "1c6ceb677b62dcf696284d8843b17dc6933fd8c28055fc9c3d3bc32db3e052b5"
+  ],
+  "full40MPPNGExportSeconds" : 1.3552167916677718,
+  "layersPerDocument" : 50,
+  "recoveryGoalMet" : true,
+  "recoveryGoalSeconds" : 30,
+  "scope" : "real Image I\/O\/renderer\/ZIP\/atomic writes, five separately reopened projects; screenshots\/physical input and macOS14 not covered. Memory samples include allocator\/driver retention; high-water RSS is cumulative, Metal allocated size is a sampled API value, not a GPU peak trace.",
+  "tabs" : 5,
+  "uniqueSourcePixelsPerDocument" : 120000000
+}

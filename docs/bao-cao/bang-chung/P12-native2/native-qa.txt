@@ -1,0 +1,13 @@
+Recorded native QA, reviewed 03/10/2026, PhotoAxis1.0.0(3) source0169bf5.
+Host macOS27.0.1/M1Pro32GiB/Retina2x/window1280x800pt, local ad-hoc.
+New: VI+EN each created/saved four presets and custom, invalid width8001 andPPI0, custom144,5PPI, Swap.
+Tabs: five tabs, New disabled; actual sixth imageVI and sixth projectEN refused with localized limit alert.
+History VI+EN: text->rectangle->opacity60->duplicate->SaveAs, Undo dirty, Redo Saved, select CreateText, opacity75->branch cuts redo, Edit menu Redo disabled, Save->Undo dirty->Redo Saved.
+Tabs VI+EN: pending text Phiên tab A retained across B duplicate/Undo; A Apply/Undo and B Redo independent; C text75/History/Saved unchanged.
+Files: ten original presets; EN first History Save copied before overwrite; branch Save copiedVI/EN. VI first Save hasAX/screenshot only.
+IME: first ABC attempt literal ASCII. Later existing Telex-enabled inventory; VI pressKey individually tieengs vieetj/Return/thuwr nghieemj -> Vietnamese two lines; CmdReturn and Save exact model; EditText/selectAll/thuwr/Escape -> saved marker and byte-identical prior file. No Unicode paste/setValue for this IME text.
+IME EN: attempted input-source shortcut, literal ASCII remains; selected target source unverified, not accepted as app regression or Telex PASS. VNI not tested. All unsuccessful attempts retained. No source settings added/removed/enabled/disabled by agent.
+CUA helper closure retained old VI binding when generic function reused after EN launch; re-bound explicit EN path and separate helpers before EN evidence. Inventory avoided same bundle ID ambiguity by exact verified app path.
+QA apps quit after storing artifacts. New emptyEN IME QA document discarded through Don’t Save. No personal document touched.
+Menu screenshot unavailable in some AX menu states; preserve AX-only instead of fabricated image.
+Source/product unchanged; current native manifest/regular binary/Core checked. Benchmark uses isolated testability binary; console/tmp unavailable after execution environment refresh, xcresult+raw JSON persisted.

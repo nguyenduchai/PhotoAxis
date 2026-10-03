@@ -1,0 +1,135 @@
+Window: "Native Close QA B — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường Native Close QA B — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi Native Close QA A •, Value: off
+	18 nút Close tab
+	19 nút chuyển đổi Native Close QA B •, Value: on
+	20 nút Close tab
+	21 trường văn bản (settable) Description: Zoom, Value: 408 %
+	22 text Value: 400 × 300 px · 144,00 PPI · Unsaved sRGB, ID: workspace.taskStatus
+	23 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	24 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	25 trường văn bản (settable) Description: HEX, Value: #000000
+	26 trường văn bản (settable) Description: Alpha %, Value: 100
+	27 trường văn bản (settable) Description: Red, Value: 0
+	28 trường văn bản (settable) Description: Green, Value: 0
+	29 trường văn bản (settable) Description: Blue, Value: 0
+	30 text Foreground Color Background Color HEX Alpha % R G B
+	31 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		32 hộp kiểm (disabled) Fill, Value: 0, ID: shape.fill
+		33 text Fill Color
+		34 bảng màu (disabled) Description: Fill Color, Value: rgb 0 0 0 0, ID: shape.fillColor, Secondary Actions: Hiển thị bảng màu
+		35 text Stroke
+		36 bảng màu (disabled) Description: Stroke, Value: rgb 0 1 1 1, ID: shape.stroke, Secondary Actions: Hiển thị bảng màu
+		37 text Stroke (px)
+		38 trường văn bản (disabled) Description: Stroke (px), Value: 6, ID: shape.strokeWidth
+		39 text Width (px)
+		40 trường văn bản (disabled) Description: Width (px), Value: 220, ID: document.width
+		41 text Height (px)
+		42 trường văn bản (disabled) Description: Height (px), Value: 22, ID: document.height
+		43 text Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies.
+		44 thanh cuộn (settable, float) 1
+			45 chỉ báo giá trị (settable, float) 1
+			46 nút mũi tên tăng dần
+			47 nút mũi tên giảm dần
+			48 nút trang tăng dần
+			49 nút trang giảm dần
+	50 text Color
+	51 nút Description: Collapse Panels, ID: sidebar.collapse
+	52 Description: Properties and History, ID: sidebar.inspectorTabs
+		53 nút radio Description: Properties, Value: 1
+		54 nút radio Description: History, Value: 0
+	55 text Layers
+	56 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		57 bảng
+			58 row (selected)
+				59 ô (selected)
+					60 nút Description: Toggle Visibility: Locked copy, Help: Toggle Visibility
+					61 hình ảnh
+					62 text Help: Locked copy, Value: Locked copy Shape
+					63 nút Description: Toggle Lock: Locked copy, Help: Toggle Lock
+			64 row (selectable)
+				65 ô
+					66 nút Description: Toggle Visibility: Locked, Help: Toggle Visibility
+					67 hình ảnh
+					68 text Help: Locked, Value: Locked Shape
+					69 nút Description: Toggle Lock: Locked, Help: Toggle Lock
+			70 row (selectable)
+				71 ô
+					72 nút Description: Toggle Visibility: Hidden, Help: Toggle Visibility
+					73 hình ảnh
+					74 text Help: Hidden, Value: Hidden Shape
+					75 nút Description: Toggle Lock: Hidden, Help: Toggle Lock
+			76 row (selectable)
+				77 ô
+					78 nút Description: Toggle Visibility: Ellipse, Help: Toggle Visibility
+					79 hình ảnh
+					80 text Help: Ellipse, Value: Ellipse Shape
+					81 nút Description: Toggle Lock: Ellipse, Help: Toggle Lock
+			82 row (selectable)
+				83 ô
+					84 nút Description: Toggle Visibility: Chữ cũ, Help: Toggle Visibility
+					85 hình ảnh
+					86 text Help: Chữ cũ, Value: Chữ cũ Text
+					87 nút Description: Toggle Lock: Chữ cũ, Help: Toggle Lock
+			88 row (selectable)
+				89 ô
+					90 nút Description: Toggle Visibility: Second image, Help: Toggle Visibility
+					91 hình ảnh
+					92 text Help: Second image, Value: Second image Image
+					93 nút Description: Toggle Lock: Second image, Help: Toggle Lock
+			94 row (selectable)
+				95 ô
+					96 nút Description: Toggle Visibility: colors-srgb.png, Help: Toggle Visibility
+					97 hình ảnh
+					98 text Help: colors-srgb.png, Value: colors-srgb.png Image
+					99 nút Description: Toggle Lock: colors-srgb.png, Help: Toggle Lock
+		100 thanh cuộn (settable, float) 0
+			101 chỉ báo giá trị (settable, float) 0
+			102 nút mũi tên tăng dần
+			103 nút mũi tên giảm dần
+			104 nút trang tăng dần
+			105 nút trang giảm dần
+	106 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	107 text Opacity
+	108 trường văn bản (disabled) Description: Opacity, Value: 100 %
+	109 thanh trượt (disabled) Description: Opacity, Value: 100, Secondary Actions: Increment, Decrement
+		110 chỉ báo giá trị 100
+	111 nút Add Layer
+	112 nút (disabled) Description: Rename Layer, Help: This change is not valid or the layer is locked.
+	113 nút (disabled) Description: Move Layer Up, Help: This change is not valid or the layer is locked.
+	114 nút (disabled) Description: Move Layer Down, Help: This change is not valid or the layer is locked.
+	115 nút Duplicate Layer
+	116 nút (disabled) Description: Delete Layer, Help: This change is not valid or the layer is locked.
+	117 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	118 nút đóng
+	119 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	120 nút thu nhỏ
+	121 text Native Close QA B — PhotoAxis
+122 menu bar
+	123 PhotoAxis
+	124 File
+	125 Edit
+	126 Image
+	127 Layer
+	128 Type
+	129 View
+	130 Window
+	131 Help
+
+The focused UI element is 0 cửa sổ thông thường Native Close QA B — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

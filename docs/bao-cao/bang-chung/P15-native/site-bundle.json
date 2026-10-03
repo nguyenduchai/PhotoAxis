@@ -1,0 +1,9 @@
+{
+  "path": "$BUILD_ROOT/PhotoAxis-website-P15-native-LOCAL-PREVIEW.zip",
+  "sha256": "8bc103be11796f46f4b25567551430996a7a06b4fefb449b067c8fc6936586a7",
+  "publicReady": false,
+  "contains": "website HTML/CSS/owned images/metadata only; no app or user projects",
+  "fileCount": 25,
+  "CRC": "PASS",
+  "fileBytesMatchWebsite": true
+}

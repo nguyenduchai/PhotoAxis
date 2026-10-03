@@ -1,0 +1,847 @@
+PASS: Xcode project matches source inventory
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project PhotoAxis.xcodeproj -scheme PhotoAxisBenchmark -configuration Release -destination platform=macOS,arch=arm64 -derivedDataPath $BUILD_ROOT/DerivedData -resultBundlePath $BUILD_ROOT/test-results/Benchmark-20261002-044106-95651.xcresult "-only-testing:PhotoAxisAppTests/BenchmarkTests" CODE_SIGN_IDENTITY=- DEVELOPMENT_TEAM= ENABLE_TESTABILITY=YES test
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+    DEVELOPMENT_TEAM = 
+    ENABLE_TESTABILITY = YES
+
+Writing result bundle at path:
+	$BUILD_ROOT/test-results/Benchmark-20261002-044106-95651.xcresult
+
+note: Using codesigning identity override: -
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (4 targets)
+    Target 'PhotoAxisAppTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxis' in project 'PhotoAxis'
+    Target 'PhotoAxisCoreTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxis' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxisCore' in project 'PhotoAxis' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone/PhotoAxis.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+SwiftDriver PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -O -whole-module-optimization @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Release -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Release -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -num-threads 10 -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Release/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -no-emit-module-separately-wmo
+
+SwiftDriver\ Compilation PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -O -whole-module-optimization @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Release -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Release -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -num-threads 10 -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Release/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -no-emit-module-separately-wmo
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-3JALJ2T1IHM44.swiftmodule
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-B89DES4OS3UY.swiftmodule
+
+SwiftCompile normal arm64 Compiling\ AcceptanceWorkflowTests.swift,\ BenchmarkTests.swift,\ ContentEditingTests.swift,\ CropEditingTests.swift,\ DocumentTests.swift,\ ExportTests.swift,\ ImageAdjustmentTests.swift,\ LayerEditingTests.swift,\ MultiLayerPerspectiveTests.swift,\ PerspectiveEditingTests.swift,\ ProjectDocumentTests.swift,\ RecoveryTests.swift,\ ViewportSamplingTests.swift,\ WorkspaceTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/AcceptanceWorkflowTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/BenchmarkTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ContentEditingTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/CropEditingTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/DocumentTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ExportTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ImageAdjustmentTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/LayerEditingTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/MultiLayerPerspectiveTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/PerspectiveEditingTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ProjectDocumentTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/RecoveryTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/ViewportSamplingTests.swift $HOME/Documents/ChatGPT/Photoshop\ clone/Tests/PhotoAxisAppTests/WorkspaceTests.swift /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/OSLog.swiftmodule/arm64e-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisCore.framework/Modules/PhotoAxisCore.swiftmodule/arm64-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/AppKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/os.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/ModelIO.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Accessibility.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/QuartzCore.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_Builtin_float.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreTransferable.swiftmodule/arm64e-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.swiftmodule/arm64-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreVideo.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_DarwinFoundation1.swiftmodule/arm64e-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-3JALJ2T1IHM44.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/DeveloperToolsSupport.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Foundation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Observation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreFoundation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreData.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_StringProcessing.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_DarwinFoundation3.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CryptoKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/ColorSync.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Darwin.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_Concurrency.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/ImageIO.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/UniformTypeIdentifiers.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/XPC.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Dispatch.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/simd.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/System.swiftmodule/arm64e-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-B89DES4OS3UY.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/ObjectiveC.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/DataDetection.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreImage.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/MetalKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/SwiftUICore.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/LocalAuthentication.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Combine.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/IOKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Swift.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Metal.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreText.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/CoreGraphics.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/_DarwinFoundation2.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Spatial.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/27.0/Symbols.swiftmodule/arm64e-apple-macos.swiftmodule $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CUPS-2JOHDYMAXZIUKL4TTN5F5JXJ7.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_AvailabilityInternal-5DAEH8HX7V4RQE56Y3X40WM6I.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/OpenGL-4W216V7KSGTVRVQ99IHZIELRR.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdbool-80N40WYVOST4TFWGVP4G77ZPH.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/simd-47NEYG2DFG2C3WBAXBBE4JA74.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreVideo-7WVHFJK0F8856I2LZWRSCD9M0.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_inttypes-2GEIXT95BOIBANSW0WL8ZBFBM.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ptrauth-80Y5TXML56VBNB9R0EBSY9FL7.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-2NVA7HXD8MM2N4PLJOLJHYH6W.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdint-27SSW2S09I1QU6WGDQMV7BTUU.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/string_h-1E39ZRUARS7BI34S3YGFYLRR3.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/XPC-2TKOFHE886VNLGNZC5DUN597J.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_float-41J32EK8TDF1WPSPV6G0SUJYY.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/QuartzCore-8WZDMJW150OF6KFAIY58XX6JV.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Metal-A0JU28VV8HL9KMD1BF7X47XR3.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ModelIO-E0RC7U9WESK4JOSDF7GIRBEF.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation3-4DJJS9AS0Y55FX20VKFNBKVJW.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Darwin-BNI7XZV6K8DVAN2CI7INRYNLV.pcm $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-9X50NXGE6X35W3FTNPSYF36E2.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/SwiftUICore-AHDIK1JAV7J2WKOX9WHON1P6R.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/IOSurface-F04D5UK1QA42Z4OH0EE312MI8.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/IOKit-EPUKOVO6L5JOVWRERMAAAHK9V.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/libkern-825SIAOFIT8B6QI5S2N8PTPG9.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Spatial-CJNMT5QHP6BYUV87ULZ2QYW6F.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation2-9ARSB1XLFBAE56GBY5SP1RSPL.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/DeveloperToolsSupport-6NF7DRJP3LYXKXA20MJ3ODU1F.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ColorSync-CJIGOZUG76XTMYNX23L4LO1K4.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/libDER-N3DGJHOQZD2VOSZPHS5EE54J.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_intrinsics-F2Z79FL4ZB384M6YYI22JZ9QN.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/MetalKit-7XP91263B7G32XVTAI9DTJOIS.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/sys_types-C5PUJX809MAFPCO1Y2WA5C8DX.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/AppKit-79XYJJTQV9A9U1SWM78DOZ729.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/MachO-59MXDW0X0KFS9Z9NAHMS494KN.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/launch-24HWVLMUETZRWFY2R380XJY33.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ObjectiveC-DFOTSTYTTUKX2B3LHNVXBMXH4.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreText-2YGX7JF93UG2Q0PZX3UO3L1DR.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_limits-AKM66CV0RJBO08OIME0K4VQPI.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreImage-6S2Q8RIP79RJJ2O21I825W2P6.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/zlib-BSMAAUQZ5YJHPA9BT82TO1XLG.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreGraphics-16HT95YO8PR33KCE3RA3JNHN1.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreServices-8UZSX0Q7NZFHIWJPAQ8AG1MXX.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/LocalAuthentication-518YF09L055KGFVZ62Y9UYOD3.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation1-4GE1I45TVCO6WM30WXV4QBMY.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/SwiftShims-P6XCYMLD4PWLTCE6GNJZ4FY7.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ApplicationServices-4L2S93H58HBTAL12ULV5WIZ9K.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Foundation-9UZFB6U10S84IUKSRCGZFSVIV.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_tgmath-CG2MT3UNXI95D87WIVM1OQ81K.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Dispatch-4XSAGBYNZMR3X2YFHXN6RLJVR.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Security-75MKO8HT9NM70RWD7269T2NR3.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/os-8AH53WOFLLUMJ9EHSVTLV3WYP.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdarg-EXBCB2ZUIBOIJJWR3T2ADNCB2.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/os_object-95W99Q8N9W2DE9WTYZK0J2V10.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ptrcheck-72510UQW7989IZKOU1EVSOQPF.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/DiskArbitration-LNPF3V5FWD4A4CO8KOT3OJ09.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/ImageIO-CMHBY3R7XUBDMBPW0HOZH9AVC.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreTransferable-DLAG9O4T0SCHZKJI53Z1P1KBZ.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Symbols-AL5KMN7844CK84B53O5SEHDS4.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CFNetwork-21IUPFIKCO02GVMG0YXGV3A9I.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreData-35JFA0NQEZQ6IKK3GWD1XICM8.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stddef-9MCEGQLJV348FY8M4PZRS9J2W.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdatomic-7H9M9C8NNOGLS0L7I2FF4S1RB.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-CHL40JWUE6LLCHOTPC0IQGPJS.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/DataDetection-3ELZ5DDRIMYVU3ARI992T9KNI.pcm $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-6KBPLGN2VVYFKEE7MU56E7L04.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/OSLog-11LMYSWPDCR66BBRGXY455JKO.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/Accessibility-DQQTI0AYA21O6YPE6PBI264VY.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/os_workgroup-3UCWLK9R6GJ0ENRZ82WRFS0E9.pcm $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules/CoreFoundation-887WX5YCSZHW9MREZTQZVGMTA.pcm $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependencies-1.json (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftCompile normal arm64 (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    
+
+$REPO/Tests/PhotoAxisAppTests/ExportTests.swift:107:12: warning: unnecessary check for 'macOS'; enclosing scope ensures guard will always be true [#UselessAvailabilityCheck]
+103 |     }
+104 |     func testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata() async throws {
+105 |         guard #available(macOS 15, *) else { throw XCTSkip("ISO gain-map fixture verification requires macOS 15+; macOS 14 remains a separate target-machine check") }
+    |         `- note: enclosing scope here
+106 |         let url = fixture("P10/iso-gainmap.heic"), source = try XCTUnwrap(CGImageSourceCreateWithURL(url as CFURL,nil))
+107 |         if #available(macOS 15, *) {
+    |            `- warning: unnecessary check for 'macOS'; enclosing scope ensures guard will always be true [#UselessAvailabilityCheck]
+108 |             XCTAssertNotNil(CGImageSourceCopyAuxiliaryDataInfoAtIndex(source,0,kCGImageAuxiliaryDataTypeISOGainMap))
+109 |             let hdr = try XCTUnwrap(CGImageSourceCreateImageAtIndex(source,0,[kCGImageSourceShouldAllowFloat:true,kCGImageSourceDecodeRequest:kCGImageSourceDecodeToHDR] as CFDictionary))
+
+$REPO/Tests/PhotoAxisAppTests/ExportTests.swift:129:16: warning: unnecessary check for 'macOS'; enclosing scope ensures guard will always be true [#UselessAvailabilityCheck]
+103 |     }
+104 |     func testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata() async throws {
+105 |         guard #available(macOS 15, *) else { throw XCTSkip("ISO gain-map fixture verification requires macOS 15+; macOS 14 remains a separate target-machine check") }
+    |         `- note: enclosing scope here
+106 |         let url = fixture("P10/iso-gainmap.heic"), source = try XCTUnwrap(CGImageSourceCreateWithURL(url as CFURL,nil))
+107 |         if #available(macOS 15, *) {
+    :
+127 |             let result = try XCTUnwrap(CGImageSourceCreateWithURL(target as CFURL,nil))
+128 |             XCTAssertNil(CGImageSourceCopyAuxiliaryDataInfoAtIndex(result,0,kCGImageAuxiliaryDataTypeHDRGainMap))
+129 |             if #available(macOS 15, *) { XCTAssertNil(CGImageSourceCopyAuxiliaryDataInfoAtIndex(result,0,kCGImageAuxiliaryDataTypeISOGainMap)) }
+    |                `- warning: unnecessary check for 'macOS'; enclosing scope ensures guard will always be true [#UselessAvailabilityCheck]
+130 |             let pixel = try rgba(image,32,32), expected = try rgba(normalized,32,32)
+131 |             for (a,b) in zip(pixel,expected) { XCTAssertEqual(a,b,accuracy:0.015) }
+
+[#UselessAvailabilityCheck]: <https://docs.swift.org/compiler/documentation/diagnostics/useless-availability-check>
+SwiftDriverJobDiscovery normal arm64 Compiling AcceptanceWorkflowTests.swift, BenchmarkTests.swift, ContentEditingTests.swift, CropEditingTests.swift, DocumentTests.swift, ExportTests.swift, ImageAdjustmentTests.swift, LayerEditingTests.swift, MultiLayerPerspectiveTests.swift, PerspectiveEditingTests.swift, ProjectDocumentTests.swift, RecoveryTests.swift, ViewportSamplingTests.swift, WorkspaceTests.swift (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+
+SwiftDriver\ Compilation\ Requirements PhotoAxisAppTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PhotoAxisAppTests -O -whole-module-optimization @$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -target arm64-apple-macos14.0 -g -module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -swift-version 6 -I $BUILD_ROOT/DerivedData/Build/Products/Release -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F $BUILD_ROOT/DerivedData/Build/Products/Release -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -num-threads 10 -Xcc -ivfsstatcache -Xcc $BUILD_ROOT/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-e829b21a6f8c9b70876ba0858053c0447231f6df4def33e022ae2eb8f782df1a.sdkstatcache -output-file-map $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path $BUILD_ROOT/DerivedData/ModuleCache.noindex -sdk-module-cache-path $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file $BUILD_ROOT/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_const_extract_protocols.json -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-generated-files.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-own-target-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxis-9730526f0700b8b20d57e2b47e796b5b-VFS/all-product-headers.yaml -Xcc -iquote -Xcc $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests-project-headers.hmap -Xcc -I$BUILD_ROOT/DerivedData/Build/Products/Release/include -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources-normal/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources/arm64 -Xcc -I$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/DerivedSources -emit-objc-header -emit-objc-header-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests-Swift.h -working-directory $HOME/Documents/ChatGPT/Photoshop\ clone -no-emit-module-separately-wmo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisAppTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftsourceinfo (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftsourceinfo $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisAppTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+Copy $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.abi.json $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisAppTests.swiftmodule/arm64-apple-macos.abi.json
+
+Ld $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests normal (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release -L$BUILD_ROOT/DerivedData/Build/Products/Release -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F$BUILD_ROOT/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release -F$BUILD_ROOT/DerivedData/Build/Products/Release -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis -Xlinker -object_path_lto -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_lto.o -rdynamic -Xlinker -dependency_info -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -framework PhotoAxisCore -Xlinker -no_adhoc_codesign -o $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests
+
+GenerateDSYMFile $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest.dSYM $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    export PATH\=/Applications/Xcode.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain/usr/bin:/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain/usr/local/bin:/var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:$HOME/.local/bin:/Applications/ServBay/script/alias:/Applications/ServBay/bin:/Applications/ServBay/sbin:/Applications/ServBay/script:/Applications/ServBay/package/python/current/Python.framework/Versions/Current/bin:/Applications/ServBay/package/node/current/bin:/Applications/ServBay/package/go/current/bin:/Applications/ServBay/package/openjdk/current/bin:/Applications/ServBay/package/rust/current/bin:/Applications/ServBay/package/ruby/current/bin:/Applications/ServBay/package/dotnetsdk/current:/Applications/ServBay/package/dotnetsdk/current/tools:$HOME/.dotnet/tools/Applications/ServBay/package/mono/current:$HOME/aicoworker/app/nodejs/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware\ Fusion.app/Contents/Public:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.codex/tmp/arg0/codex-arg0l6eAKP:$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:$HOME/.lmstudio/bin:$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests -o $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest.dSYM
+
+CopySwiftLibs $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/PlugIns --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Library/SystemExtensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Extensions --scan-folder $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxisCore.framework --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ExtractAppIntentsMetadata (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.qtuLtL/Metal.xctoolchain --module-name PhotoAxisAppTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk --xcode-version 27A266a --platform-family macOS --deployment-target 14.0 --bundle-identifier local.photoaxis.apptests --output $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/Resources --target-triple arm64-apple-macos14.0 --binary-file $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest/Contents/MacOS/PhotoAxisAppTests --dependency-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests_dependency_info.dat --stringsdata-file $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftFileList --metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests.DependencyMetadataFileList --static-metadata-file-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/PhotoAxisAppTests.DependencyStaticMetadataFileList --swift-const-vals-list $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxisAppTests.build/Objects-normal/arm64/PhotoAxisAppTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-02 04:41:20.955 appintentsmetadataprocessor[95741:743637] Starting appintentsmetadataprocessor export
+2026-10-02 04:41:20.958 appintentsmetadataprocessor[95741:743637] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest (in target 'PhotoAxisAppTests' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/PlugIns/PhotoAxisAppTests.xctest
+
+CodeSign $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --entitlements $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Release/PhotoAxis.build/PhotoAxis.app.xcent --timestamp\=none --generate-entitlement-der $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+$BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app: replacing existing signature
+
+Validate $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-validationUtility $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd $HOME/Documents/ChatGPT/Photoshop\ clone
+    builtin-lsregisterurl --record-path $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules $BUILD_ROOT/DerivedData/SDKExplicitPrecompiledModules
+
+2026-10-02 04:41:21.849641+0700 PhotoAxis[95745:743771] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.850201+0700 PhotoAxis[95745:743778] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.850771+0700 PhotoAxis[95745:743773] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.851327+0700 PhotoAxis[95745:743778] [Connection] Unable to re-register with Proc2026-10-02 04:41:21.851333+0700 PhotoAxis[95745:743773] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+ess Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.851348+0700 PhotoAxis[95745:743771] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.851409+0700 PhotoAxis[95745:743782] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.851884+0700 PhotoAxis[95745:743782] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.851961+0700 PhotoAxis[95745:743778] [Connection] Will NOT re-try to establish the connection
+2026-10-02 04:41:21.852027+0700 PhotoAxis[95745:743771] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.852073+0700 PhotoAxis[95745:743771] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-02 04:41:21.947527+0700 PhotoAxis[95745:743735] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to <TEMP_PATH>
+2026-10-02 04:41:22.038685+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.049379+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.208062+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.212075+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Suite 'Selected tests' started at 2026-10-02 04:41:22.468.
+Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-02 04:41:22.468.
+Test Suite 'BenchmarkTests' started at 2026-10-02 04:41:22.468.
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' started.
+2026-10-02 04:41:22.473133+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.477289+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.554383+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:22.558803+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' passed (11.572 seconds).
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' started.
+2026-10-02 04:41:34.045627+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.050824+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.113888+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.118089+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.121808+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.126125+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.190045+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.194278+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.227991+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.232354+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.559063+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.566484+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.630691+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.635210+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.668824+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:34.673045+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.003489+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.007406+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.075639+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.079972+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.116052+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.120081+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.455418+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.459273+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.522566+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.526784+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.564239+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.568416+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.900919+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.904978+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.974205+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:35.978337+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.014078+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.019168+0700 PhotoAxis[95745:743778] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' passed (2.405 seconds).
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' started.
+2026-10-02 04:41:36.450941+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.457959+0700 PhotoAxis[95745:743735] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.579065+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.584190+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.697333+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.702103+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.811044+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.815556+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.924816+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:36.929809+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.032462+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.038195+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.143667+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.150361+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.799344+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.803883+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.906089+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:37.910251+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.012185+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.016250+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.646959+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.651941+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.755841+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.760437+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.862088+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:38.866614+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.501458+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.505813+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.609929+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.614437+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.719551+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:39.724091+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.386303+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.390836+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.498533+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.503267+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.609422+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:40.614080+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.267306+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.271976+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.377576+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.382032+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.487173+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:41.491922+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.156196+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.160791+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.267594+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.272241+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.379566+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:42.384010+0700 PhotoAxis[95745:743853] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.022002+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.026443+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.130069+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.134453+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.239596+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.244450+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.911527+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:43.916090+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.022371+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.028700+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.132642+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.136857+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.787064+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.794790+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.903469+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:44.908614+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.013721+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.020752+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.667447+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.672742+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.783525+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.791174+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.898112+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:45.902692+0700 PhotoAxis[95745:744249] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.553223+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.560048+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.669364+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.674481+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.777651+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:46.782205+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.443482+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.447957+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.552545+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.557295+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.659921+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:47.664319+0700 PhotoAxis[95745:743771] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.309254+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.313883+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.417482+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.421971+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.524300+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:48.528752+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.175807+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.180767+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.287541+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.292127+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.399650+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:41:49.404731+0700 PhotoAxis[95745:744253] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.174913+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.182563+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.314286+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.318989+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.422260+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:00.428207+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.087863+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.092897+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.196813+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.201544+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.306448+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.310955+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.949399+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:01.956381+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.064754+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.069256+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.172044+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.176528+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.825115+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.829700+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.935191+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:02.939599+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.043010+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.047436+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.679910+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.684463+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.789236+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.793705+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.895900+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:03.900330+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.601685+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.606946+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.715390+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.719842+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.823136+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.827706+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.858643+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:04.862739+0700 PhotoAxis[95745:744248] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:05.973840+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:05.978568+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.082489+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.086991+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.189995+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.194576+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.843068+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.847785+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.950680+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:06.954982+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.063118+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.067333+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.714957+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.719593+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.824011+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.828520+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.931595+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:07.937738+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.587624+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.591912+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.696955+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.701269+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.807655+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:08.812209+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.464467+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.469158+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.574711+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.579090+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.682531+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:09.687711+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.328238+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.332856+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.436015+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.440556+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.542073+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:10.546866+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.194587+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.199453+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.302931+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.307797+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.412247+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:11.416569+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.065846+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.070605+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.175494+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.180078+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.283338+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.287744+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.935385+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:12.940031+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.043708+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.048289+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.151424+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.156320+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.790900+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.795669+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.899936+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:13.904568+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.006101+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.012650+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.674092+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.679123+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.786484+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.791417+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.899951+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:14.904604+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.548249+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.555333+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.661564+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.666127+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.768970+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:15.773656+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.420777+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.425435+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.530532+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.534960+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.638998+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:16.643539+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.283086+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.289612+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.393773+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.398249+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.500855+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:17.505362+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.168975+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.173718+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.279746+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.284415+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.388586+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:18.393256+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.052197+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.056749+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.164962+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.169355+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.274823+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.279304+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.917895+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:19.922701+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.029724+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.034944+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.137707+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.142405+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.781508+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.786078+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.891199+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.895683+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:20.997962+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.002458+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.623651+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.628484+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.734544+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.739136+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.840983+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:21.845353+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.483346+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.488143+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.593050+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.597556+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.699768+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:22.704248+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.358494+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.363368+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.467085+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.471700+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.574157+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:23.578371+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.237533+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.241889+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.347768+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.353775+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.457034+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:24.461453+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.106427+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.110906+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.214913+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.219478+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.321898+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.326233+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.965790+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:25.970284+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.074359+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.078796+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.181516+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.186044+0700 PhotoAxis[95745:744670] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.823546+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.827982+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.932367+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:26.936807+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.045020+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.049967+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.675605+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.683295+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.788183+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.792824+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.897729+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:27.902436+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.549435+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.556576+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.663954+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.668842+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.773640+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:28.778474+0700 PhotoAxis[95745:744664] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.418606+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.423127+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.529482+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.534102+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.637426+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:29.641831+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.299407+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.304500+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.408514+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.414356+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.515913+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:30.520348+0700 PhotoAxis[95745:744665] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.147423+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.153460+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.258061+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.262878+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.366680+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:31.371112+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.014635+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.019556+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.127936+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.132282+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.237079+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.242036+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.873030+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.877520+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.980694+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:32.985398+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.089310+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.093865+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.741154+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.745785+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.850958+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.855657+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.959349+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:33.963880+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.610350+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.615051+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.721330+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.725757+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.829190+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:34.833677+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.486877+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.492145+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.597395+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.601997+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.704821+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:35.709249+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.368376+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.372919+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.476646+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.481201+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.583889+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:36.588646+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.225580+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.230711+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.337528+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.342053+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.453009+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:37.457802+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.094332+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.100100+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.206429+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.211229+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.314596+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.318852+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.954280+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:38.958977+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.062322+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.066922+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.170244+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.174846+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.819616+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.824291+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.929719+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:39.934466+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.037696+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.042976+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.714120+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.720173+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.825199+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.830240+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.933013+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:40.937415+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.566822+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.571494+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.679080+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.683643+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.787768+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:41.792120+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.447481+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.452254+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.556466+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.561012+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.664715+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:42.669200+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.308985+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.313673+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.418404+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.423009+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.533298+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:43.538264+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.174742+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.179255+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.282348+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.286785+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.389913+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:44.394522+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.036427+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.041161+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.146046+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.150622+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.252347+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.256881+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.912846+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:45.917625+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.022841+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.027405+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.131157+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.138411+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.790388+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.794484+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.909331+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:46.913686+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.016364+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.020779+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.663296+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.667919+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.774148+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.778615+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.881013+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:47.885261+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.532373+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.537023+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.640988+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.645549+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.748474+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:48.753098+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.400018+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.404931+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.509934+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.514433+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.618470+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:49.623067+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.255874+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.260209+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.364044+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.368322+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.471941+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:50.476604+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.122860+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.127051+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.232104+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.236669+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.340847+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.345400+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.982603+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:51.987151+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.092909+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.097421+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.202928+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.207976+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.854387+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.859478+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.965384+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:52.969801+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.073891+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.078431+0700 PhotoAxis[95745:744666] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.721776+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.726207+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.830350+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.834993+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.939326+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:53.943471+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.589977+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.594954+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.702200+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.706977+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.810886+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:54.815430+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.452282+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.456963+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.561813+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.566539+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.669517+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:55.674420+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.311707+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.316469+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.424968+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.430243+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.536452+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:56.540974+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.183891+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.188422+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.292845+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.297289+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.401346+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:57.405850+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.067449+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.071963+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.176270+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.181326+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.286060+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.290826+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.926291+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:58.930853+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.037840+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.042288+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.144976+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.149704+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.789616+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.794224+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.898357+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:42:59.902897+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.006247+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.010406+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.664506+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.669304+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.774634+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.779129+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.882724+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:00.887300+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.531428+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.535725+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.640676+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.644834+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.748162+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:01.752717+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.384069+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.388665+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.493172+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.497595+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.602868+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:02.607533+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.268532+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.273003+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.377045+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.382051+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.483908+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:03.488412+0700 PhotoAxis[95745:744415] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.126756+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.131192+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.234864+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.239555+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.343243+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.347655+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.991416+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:04.997598+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.105402+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.110156+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.212961+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.217818+0700 PhotoAxis[95745:744694] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.859207+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.863780+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.967891+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:05.972299+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.075403+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.091079+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.748456+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.754667+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.863124+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.867652+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.974652+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:06.979163+0700 PhotoAxis[95745:744416] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.626141+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.635075+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.741849+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.746397+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.849356+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:07.854292+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.495768+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.500584+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.608028+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.612749+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.718073+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:08.723186+0700 PhotoAxis[95745:744252] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.369502+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.374115+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.477137+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.481445+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.582492+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:09.587002+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.228862+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.233719+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.340617+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.345444+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.452520+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:10.457925+0700 PhotoAxis[95745:743869] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.104788+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.109345+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.214782+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.219524+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.325964+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.330777+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.974392+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:11.978781+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.086785+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.090974+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.194935+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.198979+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.831951+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.836303+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.941335+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:12.946617+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.053751+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.058236+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.688118+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.694896+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.802628+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.807113+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.911275+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:13.915775+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.549517+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.554130+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.659044+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.663694+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.769470+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+2026-10-02 04:43:14.774111+0700 PhotoAxis[95745:744669] mdb_txn_commit error: MDB_MAP_FULL: Environment mapsize limit reached
+Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' passed (98.903 seconds).
+Test Suite 'BenchmarkTests' passed at 2026-10-02 04:43:15.350.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 112.880 (112.882) seconds
+Test Suite 'PhotoAxisAppTests.xctest' passed at 2026-10-02 04:43:15.351.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 112.880 (112.882) seconds
+Test Suite 'Selected tests' passed at 2026-10-02 04:43:15.351.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 112.880 (112.883) seconds
+2026-10-02 04:43:15.701 xcodebuild[95667:743166] [MT] IDETestOperationsObserverDebug: 114.433 elapsed -- Testing started completed.
+2026-10-02 04:43:15.701 xcodebuild[95667:743166] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-02 04:43:15.701 xcodebuild[95667:743166] [MT] IDETestOperationsObserverDebug: 114.433 sec, +114.433 sec -- end
+
+Test session results, code coverage, and logs:
+	$BUILD_ROOT/test-results/Benchmark-20261002-044106-95651.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
+Benchmark result: $BUILD_ROOT/test-results/Benchmark-20261002-044106-95651.xcresult
+PASS: all 3 Release benchmark cases executed, no skips

@@ -1,0 +1,277 @@
+{
+  "status": "PASS",
+  "pdf": [
+    {
+      "file": "A4-English.pdf",
+      "sha256": "775f3b4298c9664ab48080144d5e2eae977592c9c0592fc22c8d2c044d0407ab",
+      "pages": [
+        {
+          "page": 1,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 2,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        }
+      ],
+      "forbiddenCatalogEntries": false
+    },
+    {
+      "file": "A4-4.pdf",
+      "sha256": "3691c7fb5d7c483fbea750a476d755a6e279ba6c2afa49bf6967ac7467621da3",
+      "pages": [
+        {
+          "page": 1,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 2,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        }
+      ],
+      "forbiddenCatalogEntries": false
+    },
+    {
+      "file": "A4-2.pdf",
+      "sha256": "1b709e2a770b6508bfbbd36d34ef847a4bf852a2abbe92d246c5b4e1d378e947",
+      "pages": [
+        {
+          "page": 1,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 2,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 3,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        }
+      ],
+      "forbiddenCatalogEntries": false
+    },
+    {
+      "file": "A4-1.pdf",
+      "sha256": "386de6bf443c2f7f09f5f0f88c0166e3d9c69673ab189a4242c7295b21e534bb",
+      "pages": [
+        {
+          "page": 1,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 2,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 3,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 4,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        },
+        {
+          "page": 5,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        }
+      ],
+      "forbiddenCatalogEntries": false
+    },
+    {
+      "file": "native-A4.pdf",
+      "sha256": "fe21a06b2ffaa67d65c244671509fdfa04d5f32890a926f6e40626dcc698a623",
+      "pages": [
+        {
+          "page": 1,
+          "raster": [
+            1240,
+            1754
+          ],
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "fonts": 0,
+          "selectableText": false,
+          "annotations": 0,
+          "opaqueMask": false
+        }
+      ],
+      "forbiddenCatalogEntries": false
+    }
+  ],
+  "nativePNG": {
+    "size": [
+      640,
+      480
+    ],
+    "maskedPixels": 2035,
+    "allMaskPixelsOpaqueBlack": true,
+    "sha256": "2dae46dd3027ce8fe9b3a9cf5535f1127449ed495c1e9c497b038c86704889dd"
+  },
+  "original": {
+    "sha256": "8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765",
+    "bytes": 7710,
+    "matchesFixtureByteForByte": true
+  },
+  "scope": "PDF fixtures/native VI output checked before source-retention fix; not attributed to final Release UUID",
+  "fixtureTestSourceCommit": "b350a77"
+}

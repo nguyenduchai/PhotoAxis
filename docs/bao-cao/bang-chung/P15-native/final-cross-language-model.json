@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "nativeEnglishSaveThenVietnameseOpenSaveAsModelIdentical": true,
+  "assetHashesIdentical": true,
+  "oldTextContent": "PHỐI CẢNH MỚI\nD54 QA T H V",
+  "oldTextProjectiveClipUnchanged": true,
+  "shapePayload": {
+    "fill": {
+      "alpha": 0.6,
+      "blue": 0,
+      "green": 0.25,
+      "red": 1
+    },
+    "kind": "ellipse",
+    "lineEnd": {
+      "x": 1,
+      "y": 1
+    },
+    "lineStart": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "height": 110,
+      "width": 150
+    },
+    "stroke": {
+      "alpha": 1,
+      "blue": 1,
+      "green": 1,
+      "red": 1
+    },
+    "strokeWidth": 7
+  },
+  "realIME": false,
+  "scope": "actual native VI crop/Save/EN Open + Recovery/edit text and shape/Save/PNG/JPEG/VI Open/PNG/Save As; full-session Undo not serialized"
+}

@@ -1,0 +1,17 @@
+P09 native QA, macOS 27, M1 Pro/32 GiB, Retina 2×, 02/10/2026.
+Bản UI: QA/P09/PhotoAxis P09 vi verified.app và en verified.app, ID QA riêng, không đổi preference của app người dùng.
+
+1. Welcome VI hiển thị mở .paxis và các ảnh được hỗ trợ.
+2. Cmd+O → NSOpenPanel → mixed .paxis 320×240, hai crop: báo thiếu PhotoAxisMissingFont-Fixture bằng VI, giữ payload; 7 layer ảnh/chữ/hình, Hidden/Locked, Saved.
+3. Cmd+Shift+S → NSSavePanel VI → Native-VI.paxis: Saved, file thật tồn tại.
+4. Rename layer thành “Chữ đã lưu khi đóng VI” → Cmd+W: có Cancel/Don't Save/Save; Save thật hoàn tất rồi tab đóng.
+5. UI English Cmd+O Native-VI.paxis: cảnh báo font bằng English; tên layer Việt giữ nguyên, Saved, Undo cũ không phục hồi.
+6. English Save As Native-EN.paxis: Python zipfile kiểm JSON model và mọi assets bằng từng byte so với Native-VI.
+7. Save As vào Native-EN.paxis đã tồn tại: macOS hiển thị overwrite; Cancel rồi Cancel Save Panel, hash đích giữ nguyên; đóng clean không hỏi discard.
+8. Finder → Open With → PhotoAxis P09 vi verified.app trên Native-EN.paxis: AppDelegate nhận URL, mở đầy đủ project, cảnh báo font VI, Saved. Chụp vi-finder-open-en.png.
+
+AX/screenshot là Release bundle native, không mockup. NSOpenPanel/NSSavePanel và nút hệ thống theo ngôn ngữ macOS VI; các title/message do app sở hữu theo lựa chọn VI/EN.
+Các screenshot/native thao tác trên Core trước hardening cuối duplicate JSON/header-version (manifest ghi hash framework riêng). Bản Core cuối được xác nhận bằng full hosted round-trip/render/atomic/adversarial tests và Release signature; không gán các screenshot trên cho một framework hash khác. Binary App/UI không đổi trong hardening Core.
+
+Ghi nhận UI cũ để xử lý P11: Open help còn chỉ liệt kê ảnh; close title vẫn dùng câu “bỏ thay đổi?” mặc dù Save đã hoạt động. Body và ba lựa chọn đúng, không có discard tự động.
+Giới hạn hiện tại: cùng project UUID tại hai URL không mở đồng thời; đóng tab trước để mở bản sao. A20/A43 còn Export P10, recovery P11; IME thật A22 vẫn chưa kiểm chứng.

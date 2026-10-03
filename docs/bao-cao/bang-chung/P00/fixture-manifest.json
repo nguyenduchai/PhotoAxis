@@ -1,0 +1,57 @@
+{
+  "corners" : {
+    "BL" : "yellow",
+    "BR" : "blue",
+    "TL" : "red",
+    "TR" : "green"
+  },
+  "generator" : "scripts/generate-fixtures.swift",
+  "images" : [
+    {
+      "bytes" : 7710,
+      "colorSpace" : "kCGColorSpaceSRGB",
+      "file" : "grid-corners.png",
+      "height" : 480,
+      "orientation" : 1,
+      "sha256" : "8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765",
+      "width" : 640
+    },
+    {
+      "bytes" : 25050,
+      "colorSpace" : "kCGColorSpaceSRGB",
+      "file" : "alpha-edges.png",
+      "height" : 480,
+      "orientation" : 1,
+      "sha256" : "0bb92ffabcf9afd6e6426762a61dd56dca8b52b611f745d51f65dce4ed875a76",
+      "width" : 640
+    },
+    {
+      "bytes" : 44066,
+      "colorSpace" : "kCGColorSpaceSRGB",
+      "file" : "grid-exif-6.jpg",
+      "height" : 480,
+      "orientation" : 6,
+      "sha256" : "f0322ef14d530ebfb9a236a7b0ae5cd7f93736bc760a3dc546f807ee7644d71c",
+      "width" : 640
+    },
+    {
+      "bytes" : 6986,
+      "colorSpace" : "kCGColorSpaceSRGB",
+      "file" : "colors-srgb.png",
+      "height" : 480,
+      "orientation" : 1,
+      "sha256" : "95191611cce1572bf63b2dbc3743c65a5ef29a3de3662f9f3372b4df1e45501d",
+      "width" : 640
+    },
+    {
+      "bytes" : 7344,
+      "colorSpace" : "kCGColorSpaceDisplayP3",
+      "file" : "colors-display-p3.png",
+      "height" : 480,
+      "orientation" : 1,
+      "sha256" : "b40ba959019a5354135a84c5c59806f10d125b953de9eaa60d9d7baf0c081e4b",
+      "width" : 640
+    }
+  ],
+  "provenance" : "Self-authored; no personal data"
+}

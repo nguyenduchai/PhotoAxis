@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-02T18:27:22.798427+07:00",
+  "status": "PASS_LOCAL_VERIFICATION_PUBLIC_BLOCKED",
+  "sourceCommit": "0169bf52cd0d3793c0027a82888833c8a58f4f78",
+  "sourceFingerprintMatch": true,
+  "sourceFilesUnchangedSinceBuild": true,
+  "releaseBinaryAndCoreHashesMatch": true,
+  "localDMGHashMatch": true,
+  "localDMGSourceClean": true,
+  "candidateAndDistributionBuild": "3",
+  "automatedTests": {
+    "passed": 144,
+    "failed": 0,
+    "skipped": 4
+  },
+  "policyTestsPassed": 16,
+  "localizationKeys": 404,
+  "localizationReferences": 333,
+  "websitePagesChecked": 12,
+  "changedMarkdownLinksChecked": 188,
+  "readinessEvidencePathsExist": true,
+  "baselineAcceptance": {
+    "total": 43,
+    "passed": 16,
+    "unclosed": 27
+  },
+  "stageProgress": {
+    "done": 9,
+    "blockedExternal": 7,
+    "maintenanceWhenNeeded": 1
+  },
+  "publicGatesPassed": 0,
+  "publicGatesTotal": 12,
+  "preflightExitCode": 2,
+  "publicReady": false,
+  "developerIDApplicationCount": 0,
+  "gitRemoteConfigured": false,
+  "publicSigningOrPublicationPerformed": false,
+  "nativeScope": "synthetic fixtures on macOS27.0.1/M1Pro32GiB/Retina2x; see native-qa.txt",
+  "nativeInspection": "native-analysis-inspection.json"
+}

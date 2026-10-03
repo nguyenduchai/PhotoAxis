@@ -1,0 +1,19 @@
+Window: "", App: PhotoAxis Crop Final.
+0 hộp thoại Description: cảnh báo, Secondary Actions: Raise
+	1 hình ảnh PhotoAxis Crop Final cảnh báo
+	2 text Finish the current edit? Apply the preview, discard it, or cancel this action to keep editing.
+	3 nút Discard, ID: action-button-2
+	4 nút Apply, ID: action-button-3
+	5 nút Cancel, ID: action-button-1
+6 menu bar
+	7 PhotoAxis Crop Final
+	8 File
+	9 Edit
+	10 Image
+	11 Layer
+	12 Type
+	13 View
+	14 Window
+	15 Help
+
+The focused UI element is 0 hộp thoại Description: cảnh báo, Secondary Actions: Raise

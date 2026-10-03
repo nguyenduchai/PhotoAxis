@@ -1,0 +1,65 @@
+Window: "alpha-edges.png — PhotoAxis", App: PhotoAxis QA Verified.
+0 cửa sổ thông thường alpha-edges.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút (disabled) Description: Di chuyển (V), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Nhóm cắt xén — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.crop
+	10 nút (disabled) Description: Lấy mẫu màu (I), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.eyedropper
+	11 nút (disabled) Description: Văn bản (T), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Nhóm hình dạng — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu (disabled) Description: Màu nền, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu (disabled) Description: Màu tiền cảnh, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi alpha-edges.png •, Value: on
+	18 nút Đóng tab
+	19 trường văn bản (settable) Description: Thu phóng, Value: 255 %
+	20 text 640 × 480 px · 72,00 PPI · Chưa lưu sRGB Màu
+	21 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	22 hình ảnh Description: Mẫu màu; chưa thể chỉnh sửa, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	23 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		24 nút radio Description: Thuộc tính, Value: 1
+		25 nút radio Description: Lịch sử, Value: 0
+	26 text 640 × 480 px
+72,00 PPI · sRGB
+Số lớp: 1 Lớp
+	27 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		28 bảng
+			29 row (selected)
+				30 ô (selected)
+					31 text alpha-edges.png
+		32 thanh cuộn (disabled, settable, float) 0
+	33 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	34 text Độ mờ
+	35 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	36 text R
+	37 trường văn bản (disabled) Description: Đỏ, Value: 0
+	38 text G
+	39 trường văn bản (disabled) Description: Xanh lá, Value: 0
+	40 text B
+	41 trường văn bản (disabled) Description: Xanh dương, Value: 0
+	42 nút (disabled) Description: Thêm lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	43 nút (disabled) Description: Nhân bản lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	44 nút (disabled) Description: Xóa lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	45 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	46 nút đóng
+	47 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	48 nút thu nhỏ
+	49 text alpha-edges.png — PhotoAxis
+50 menu bar
+	51 PhotoAxis QA Verified
+	52 Tệp
+	53 Chỉnh sửa
+	54 Ảnh
+	55 Lớp
+	56 Văn bản
+	57 Xem
+	58 Cửa sổ
+	59 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường alpha-edges.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

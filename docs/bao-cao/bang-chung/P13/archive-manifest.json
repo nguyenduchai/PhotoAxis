@@ -1,0 +1,16 @@
+{
+  "status": "LOCAL_AD_HOC_ARCHIVE",
+  "publicReady": false,
+  "version": "1.0.0",
+  "build": "1",
+  "appTreeSHA256": "33b6590d0fe0debe99b876754f4e6b202ef09a2d3c9dccfe1c158f46cf75bfcf",
+  "binarySHA256": "8edf5a3669d8ae5d7ecda217d7ed651206ab036c21c08e9421bbb238a8a10bf2",
+  "archiveStartHEAD": "a4f54f0",
+  "productImplementationCommits": [
+    "a9737df",
+    "8b8c15d"
+  ],
+  "sourceNote": "only new P15 audit Python/test/ledger untracked while archive ran; no uncommitted Sources/Config/project changes",
+  "path": "$BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive",
+  "scope": "actual archive layout/resources/local signature/arm64/minOS14 checked; not signed distribution or runtime acceptance of archived binary"
+}

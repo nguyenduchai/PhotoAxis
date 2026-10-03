@@ -1,0 +1,39 @@
+[
+  {
+    "command": [
+      "xcode-select",
+      "-p"
+    ],
+    "exitCode": 0,
+    "stdout": "/Library/Developer/CommandLineTools",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xcodebuild",
+      "-version"
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  },
+  {
+    "command": [
+      "xcodebuild",
+      "-checkFirstLaunchStatus"
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  },
+  {
+    "command": [
+      "xcodebuild",
+      "-license",
+      "check"
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  }
+]

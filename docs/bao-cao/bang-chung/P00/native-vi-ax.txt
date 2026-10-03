@@ -1,0 +1,16 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường PhotoAxis, Secondary Actions: Raise
+	1 text PhotoAxis Chưa mở tài liệu Góc nhìn mới cho ảnh của bạn. Không gian chỉnh sửa, ghép ảnh và sáng tạo của bạn.
+	2 nút (disabled) Tạo tài liệu…, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	3 nút (disabled) Mở…, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	4 text Công cụ tài liệu sẽ có trong bản phát triển tiếp theo. Trên máy Mac của bạn
+	5 nút đóng
+	6 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	7 nút thu nhỏ
+	8 text PhotoAxis
+9 menu bar
+	10 PhotoAxis
+	11 Tệp
+	12 Cửa sổ
+
+The focused UI element is 0 cửa sổ thông thường PhotoAxis, Secondary Actions: Raise

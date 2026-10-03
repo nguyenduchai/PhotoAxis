@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "finalUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "initialNativeUUID": "66727FF1-035D-3DBF-87B3-08D4960A2DBB",
+  "finalApplyAndSaveAs": {
+    "canvas": {
+      "height": 300,
+      "width": 400
+    },
+    "layers": 6,
+    "typesIDsHiddenLockedPreserved": true,
+    "allTransformsChangedAndClipped": true,
+    "immutableSourceSHA256": "95191611cce1572bf63b2dbc3743c65a5ef29a3de3662f9f3372b4df1e45501d"
+  },
+  "initialSaveCloseOpenENEdit": {
+    "oldTextProjectiveAndClipPreserved": true,
+    "newTextAffineNoClip": true,
+    "unicodeContent": "PhotoAxis — Việt Nam",
+    "realIME": false
+  },
+  "finalExportCancelledTargetUnchangedAfterTaskSettled": true,
+  "nativeOverwriteCancelInitialTargetUnchanged": true,
+  "initialRecoveredSaveAsOriginalProjectUnchanged": true,
+  "initialRecoveryVIAfterSaveRecords": 0,
+  "initialRecoveryENAfterDiscardRecords": 0,
+  "currentPending": "Full final shortcuts/layout/active background close/failure-alert sweep, physical Telex/VNI, macOS14/1x/reference hardware and Instruments remain pending; desktop was unlocked and scoped native recovery/edit/lifecycle checks completed.",
+  "finalNativeRecoveryStartupBothLanguages": true,
+  "finalNativeRecoveredVIExposure": 0.3,
+  "finalNativeRecoveredSaveAsOriginalProjectExposure": 0,
+  "finalRecoveryVIAfterSaveRecords": 0,
+  "finalRecoveryENAfterFinalDontSaveRecords": 0,
+  "finalNativeTextShapeEditExport": true,
+  "finalNativeCrossLanguageModelAssetsIdentical": true
+}

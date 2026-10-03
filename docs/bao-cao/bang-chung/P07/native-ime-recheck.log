@@ -1,0 +1,44 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project PhotoAxis.xcodeproj -scheme PhotoAxis -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath $BUILD_ROOT/DerivedData -resultBundlePath $BUILD_ROOT/test-results/P06-IME-20261001-110223.xcresult "-only-testing:PhotoAxisAppTests/ContentEditingTests/testInstalledVietnameseInputContext" CODE_SIGN_IDENTITY=- DEVELOPMENT_TEAM= test-without-building
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+    DEVELOPMENT_TEAM =
+
+Writing result bundle at path:
+	$BUILD_ROOT/test-results/P06-IME-20261001-110223.xcresult
+
+2026-10-01 11:02:30.459366+0700 PhotoAxis[79303:1482676] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.460145+0700 PhotoAxis[79303:1482666] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.460366+0700 PhotoAxis[79303:1482676] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.460390+0700 PhotoAxis[79303:1482666] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.460804+0700 PhotoAxis[79303:1482668] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.460823+0700 PhotoAxis[79303:1482668] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.461481+0700 PhotoAxis[79303:1482668] [Connection] Will NOT re-try to establish the connection
+2026-10-01 11:02:30.461535+0700 PhotoAxis[79303:1482666] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.461565+0700 PhotoAxis[79303:1482666] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-01 11:02:30.574630+0700 PhotoAxis[79303:1482647] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to <TEMP_PATH>
+Test Suite 'Selected tests' started at 2026-10-01 11:02:31.184.
+Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-01 11:02:31.185.
+Test Suite 'ContentEditingTests' started at 2026-10-01 11:02:31.185.
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' started.
+2026-10-01 11:02:31.209012+0700 PhotoAxis[79303:1482728] [Common] Unable to obtain a task name port right for pid 459: (os/kern) failure (0x5)
+$REPO/Tests/PhotoAxisAppTests/ContentEditingTests.swift:173: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : Test skipped - The native context cannot activate Telex; manual IME acceptance remains required
+Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' skipped (0.664 seconds).
+Test Suite 'ContentEditingTests' passed at 2026-10-01 11:02:31.851.
+	 Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.664 (0.666) seconds
+Test Suite 'PhotoAxisAppTests.xctest' passed at 2026-10-01 11:02:31.851.
+	 Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.664 (0.667) seconds
+Test Suite 'Selected tests' passed at 2026-10-01 11:02:31.852.
+	 Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.664 (0.668) seconds
+2026-10-01 11:02:32.229 xcodebuild[79160:1482314] [MT] IDETestOperationsObserverDebug: 2.595 elapsed -- Testing started completed.
+2026-10-01 11:02:32.229 xcodebuild[79160:1482314] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-01 11:02:32.229 xcodebuild[79160:1482314] [MT] IDETestOperationsObserverDebug: 2.595 sec, +2.595 sec -- end
+
+Test session results, code coverage, and logs:
+	$BUILD_ROOT/test-results/P06-IME-20261001-110223.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started
+Test result: $BUILD_ROOT/test-results/P06-IME-20261001-110223.xcresult

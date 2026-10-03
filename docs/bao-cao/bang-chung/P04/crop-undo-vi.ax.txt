@@ -1,0 +1,15 @@
+The following is a diff from the previous accessibility tree for Window: "grid-corners.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 17-18, 29-34
++	68 nút chuyển đổi grid-corners.png •, Value: on
++	69 nút Đóng tab
+~	20 text 640 × 480 px · 72,00 PPI · Chưa lưu sRGB Màu
+~	26 text 640 × 480 px
+72,00 PPI · sRGB
+Số lớp: 1 Lớp
++			70 row (selected)
++				71 ô (selected)
++					72 nút Description: Ẩn/hiện lớp: grid-corners.png, Help: Ẩn/hiện lớp
++					73 hình ảnh
++					74 text Help: grid-corners.png, Value: grid-corners.png Ảnh
++					75 nút Description: Khóa/mở khóa lớp: grid-corners.png, Help: Khóa/mở khóa lớp
+The focused UI element is 0 cửa sổ thông thường grid-corners.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

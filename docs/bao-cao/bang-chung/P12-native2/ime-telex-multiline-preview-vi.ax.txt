@@ -1,0 +1,89 @@
+Window: "A22-Telex-native2 — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A22-Telex-native2 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Văn bản Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+	2 nút Hủy, Help: Áp dụng để xác nhận; Escape để hủy., ID: options.cancel
+	3 nút Áp dụng, Help: Áp dụng để xác nhận; Escape để hủy., ID: options.apply
+	4 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	5 nút Description: Di chuyển (V), ID: tool.move
+	6 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	7 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	8 nút Description: Văn bản (T), ID: tool.type
+	9 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	10 nút Description: Bàn tay (H), ID: tool.hand
+	11 nút Description: Thu phóng (Z), ID: tool.zoom
+	12 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 vùng cuộn Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+		15 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: tiếng việt
+thử nghiệm
+		16 thanh cuộn (disabled, settable, float) 0
+		17 thanh cuộn (disabled, settable, float) 0
+	18 nút chuyển đổi A22-Telex-native2 •, Value: on
+	19 nút Đóng tab
+	20 trường văn bản (settable) Description: Thu phóng, Value: 255 %
+	21 text Value: 640 × 480 px · 72,00 PPI · Chưa lưu sRGB, ID: workspace.taskStatus
+	22 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	23 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	24 trường văn bản (settable) Description: HEX, Value: #000000
+	25 trường văn bản (settable) Description: Alpha %, Value: 100
+	26 trường văn bản (settable) Description: Đỏ, Value: 0
+	27 trường văn bản (settable) Description: Xanh lá, Value: 0
+	28 trường văn bản (settable) Description: Xanh dương, Value: 0
+	29 text Màu tiền cảnh Màu nền HEX Alpha % R G B
+	30 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		31 text Họ phông
+		32 nút bật lên Description: Họ phông, Value: Helvetica, ID: type.family
+		33 text Kiểu phông
+		34 nút bật lên Description: Kiểu phông, Value: Regular, ID: type.style
+		35 text Cỡ chữ…
+		36 trường văn bản (settable) Description: Cỡ chữ…, Value: 24, ID: type.size
+		37 text Màu chữ
+		38 bảng màu Description: Màu chữ, Value: rgb 0 0 0 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
+		39 text Căn lề
+		40 nút bật lên Description: Căn lề, Value: Trái, ID: type.alignment
+		41 text Cách dòng (px)
+		42 trường văn bản (settable) Description: Cách dòng (px), Value: 0, ID: type.spacing
+		43 text Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+		44 thanh cuộn (settable, float) 0
+			45 chỉ báo giá trị (settable, float) 0
+			46 nút mũi tên tăng dần
+			47 nút mũi tên giảm dần
+			48 nút trang tăng dần
+			49 nút trang giảm dần
+	50 text Màu
+	51 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	52 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		53 nút radio Description: Thuộc tính, Value: 1
+		54 nút radio Description: Lịch sử, Value: 0
+	55 text Lớp Chưa có lớp.
+Mở hoặc tạo tài liệu để bắt đầu.
+	56 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	57 text Độ mờ
+	58 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	59 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		60 chỉ báo giá trị (settable, float) 100
+	61 nút Thêm lớp
+	62 nút Đổi tên lớp
+	63 nút Đưa lớp lên
+	64 nút Đưa lớp xuống
+	65 nút Nhân bản lớp
+	66 nút Xóa lớp
+	67 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	68 nút đóng
+	69 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	70 nút thu nhỏ
+	71 text A22-Telex-native2 — PhotoAxis
+72 menu bar
+	73 PhotoAxis Investigation2 verified vi
+	74 Tệp
+	75 Chỉnh sửa
+	76 Ảnh
+	77 Lớp
+	78 Văn bản
+	79 Xem
+	80 Cửa sổ
+	81 Điều tra
+	82 Trợ giúp
+
+The focused UI element is 15 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: tiếng việt
+thử nghiệm

@@ -1,0 +1,10 @@
+{
+  "status": "CHUA_KIEM_CHUNG",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "scope": "CUA native corner/edge resize attempts; window unchanged; not a product failure or minimum-window acceptance",
+  "attempts": [
+    "windowNotFoundAtPosition((1370.5, 870.5))",
+    "windowNotFoundAtPosition((1367.0, 797.0))"
+  ],
+  "next": "Manual native window resize/reference checks at 1100x700, 1280 and 1440 pt; hosted layout tests remain separate"
+}

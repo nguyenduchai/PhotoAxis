@@ -1,0 +1,53 @@
+{
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceName": "My Mac",
+        "modelName": "MacBook Pro",
+        "osBuildNumber": "26A428",
+        "osVersion": "27.0",
+        "platform": "macOS"
+      },
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "passedTests": 109,
+      "skippedTests": 1,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription": "PhotoAxis · Built with macOS 27.0",
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1790888747.4,
+  "passedTests": 109,
+  "result": "Passed",
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "[Internal] Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions",
+      "sourceURL": "file://$REPO/Tests/PhotoAxisAppTests/ExportTests.swift"
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "[Internal] Thread running at User-interactive quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions",
+      "sourceURL": "file://$REPO/Tests/PhotoAxisAppTests/MultiLayerPerspectiveTests.swift"
+    }
+  ],
+  "skippedTests": 1,
+  "startTime": 1790888709.194,
+  "statistics": [],
+  "testFailures": [],
+  "title": "Test - PhotoAxis",
+  "topInsights": [
+    {
+      "category": "Longest Test Runs",
+      "impact": "38% of duration",
+      "text": "1 longest test run with outlier durations exceeding 4.18s (three standard deviations)"
+    }
+  ],
+  "totalTestCount": 110
+}

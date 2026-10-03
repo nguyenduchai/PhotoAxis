@@ -1,0 +1,99 @@
+Window: "alpha-edges.png — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường alpha-edges.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút Cancel, Help: Invalid value. Exposure −4…+4 EV; Brightness/Contrast/Saturation −100…+100., ID: options.cancel
+	6 nút (disabled) Apply, Help: Invalid value. Exposure −4…+4 EV; Brightness/Contrast/Saturation −100…+100., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi alpha-edges.png •, Value: on
+	18 nút Close tab
+	19 trường văn bản (settable) Description: Zoom, Value: 255 %
+	20 text 640 × 480 px · 72,00 PPI · Unsaved sRGB
+	21 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	22 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	23 trường văn bản (settable) Description: HEX, Value: #000000
+	24 trường văn bản (settable) Description: Alpha %, Value: 100
+	25 trường văn bản (settable) Description: Red, Value: 0
+	26 trường văn bản (settable) Description: Green, Value: 0
+	27 trường văn bản (settable) Description: Blue, Value: 0
+	28 text Foreground Color Background Color HEX Alpha % R G B
+	29 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		30 hộp kiểm Image Adjustments, Help: Invalid value. Exposure −4…+4 EV; Brightness/Contrast/Saturation −100…+100., Value: 1, ID: adjustment.enabled
+		31 nút Reset, Description: Reset Image Adjustments, Help: Invalid value. Exposure −4…+4 EV; Brightness/Contrast/Saturation −100…+100., ID: adjustment.reset
+		32 text Invalid value. Exposure −4…+4 EV; Brightness/Contrast/Saturation −100…+100. Exposure
+		33 trường văn bản (settable) Description: Exposure, Value: 999, ID: adjustment.exposure
+		34 thanh trượt (settable, float) Description: Exposure, Value: 1.25, ID: adjustment.exposure.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
+			35 chỉ báo giá trị (settable, float) 1.25
+		36 text EV Brightness
+		37 trường văn bản (settable) Description: Brightness, Value: 0, ID: adjustment.brightness
+		38 thanh trượt (settable, float) Description: Brightness, Value: 0, ID: adjustment.brightness.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
+			39 chỉ báo giá trị (settable, float) 0
+		40 text % Contrast
+		41 trường văn bản (settable) Description: Contrast, Value: 0, ID: adjustment.contrast
+		42 thanh trượt (settable, float) Description: Contrast, Value: 0, ID: adjustment.contrast.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
+			43 chỉ báo giá trị (settable, float) 0
+		44 text % Saturation
+		45 trường văn bản (settable) Description: Saturation, Value: 0, ID: adjustment.saturation
+		46 thanh trượt (settable, float) Description: Saturation, Value: 0, ID: adjustment.saturation.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
+			47 chỉ báo giá trị (settable, float) 0
+		48 text %
+		49 thanh cuộn (settable, float) 0
+			50 chỉ báo giá trị (settable, float) 0
+			51 nút mũi tên tăng dần
+			52 nút mũi tên giảm dần
+			53 nút trang tăng dần
+			54 nút trang giảm dần
+	55 text Color
+	56 nút Description: Collapse Panels, ID: sidebar.collapse
+	57 Description: Properties and History, ID: sidebar.inspectorTabs
+		58 nút radio Description: Properties, Value: 1
+		59 nút radio Description: History, Value: 0
+	60 text Layers
+	61 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		62 bảng
+			63 row (selected)
+				64 ô (selected)
+					65 nút Description: Toggle Visibility: alpha-edges.png, Help: Toggle Visibility
+					66 hình ảnh
+					67 text Help: alpha-edges.png, Value: alpha-edges.png Image
+					68 nút Description: Toggle Lock: alpha-edges.png, Help: Toggle Lock
+		69 thanh cuộn (disabled, settable, float) 0
+	70 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	71 text Opacity
+	72 trường văn bản (settable) Description: Opacity, Value: 100 %
+	73 thanh trượt (settable, float) Description: Opacity, Value: 100
+		74 chỉ báo giá trị (settable, float) 100
+	75 nút Add Layer
+	76 nút Rename Layer
+	77 nút Move Layer Up
+	78 nút Move Layer Down
+	79 nút Duplicate Layer
+	80 nút Delete Layer
+	81 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	82 nút đóng
+	83 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	84 nút thu nhỏ
+	85 text alpha-edges.png — PhotoAxis
+86 menu bar
+	87 PhotoAxis
+	88 File
+	89 Edit
+	90 Image
+	91 Layer
+	92 Type
+	93 View
+	94 Window
+	95 Help
+
+The focused UI element is 33 trường văn bản (settable) Description: Exposure, Value: 999, ID: adjustment.exposure

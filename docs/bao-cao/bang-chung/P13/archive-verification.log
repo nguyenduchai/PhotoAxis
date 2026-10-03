@@ -1,0 +1,19 @@
+$ codesign --verify --deep --strict $BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app
+
+$ lipo -archs $BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app/Contents/MacOS/PhotoAxis
+arm64
+
+$ xcrun vtool -show-build $BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app/Contents/MacOS/PhotoAxis
+$BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app/Contents/MacOS/PhotoAxis:
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 14.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app/Contents/MacOS/PhotoAxis
+UUID: F60BEA99-2900-373C-8B39-5A922E96B990 (arm64) $BUILD_ROOT/PhotoAxis-P13-LOCAL-UNSIGNED.xcarchive/Products/Applications/PhotoAxis.app/Contents/MacOS/PhotoAxis

@@ -1,0 +1,100 @@
+{
+  "status": "BLOCKED_EXTERNAL",
+  "publicReady": false,
+  "mutationPerformed": false,
+  "results": {
+    "R01": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Publisher, namespace, Team/Developer ID/notary, repository and website targets unconfirmed",
+      "evidence": [
+        "docs/bao-cao/P13.md"
+      ]
+    },
+    "R02": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Final native/IME/macOS14/non-Retina/reference hardware and warnings evaluation pending",
+      "evidence": [
+        "docs/MA_TRAN_NGHIEM_THU.md",
+        "docs/RELEASE_CANDIDATE.json"
+      ]
+    },
+    "R03": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Local provenance/arm64/minOS14 verified; final signed artifact missing",
+      "evidence": [
+        "docs/bao-cao/bang-chung/P13/build-manifest.json"
+      ]
+    },
+    "R04": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "No Developer ID Application identity available",
+      "evidence": [
+        "docs/bao-cao/bang-chung/P13/signing-availability.json"
+      ]
+    },
+    "R05": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "No Accepted submissions or stapled public app/DMG",
+      "evidence": [
+        "docs/bao-cao/P13.md"
+      ]
+    },
+    "R06": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Local unsigned DMG payload/hash verified; public artifact missing",
+      "evidence": [
+        "docs/bao-cao/bang-chung/P13/distribution-manifest.json"
+      ]
+    },
+    "R07": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Clean browser/quarantine/Gatekeeper installation on target OS missing",
+      "evidence": [
+        "docs/KNOWN_ISSUES.md"
+      ]
+    },
+    "R08": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Local data workflow passed; packaged signed clean/offline/upgrade native workflow unverified",
+      "evidence": [
+        "docs/bao-cao/P12.md"
+      ]
+    },
+    "R09": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Preview passed; publisher/support/terms/host/current native screenshots/final download pending",
+      "evidence": [
+        "docs/bao-cao/P14.md"
+      ]
+    },
+    "R10": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "No public HTTPS website or anonymous download yet",
+      "evidence": []
+    },
+    "R11": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "No public artifact/tag/source/site cross-check yet",
+      "evidence": []
+    },
+    "R12": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Incident plan prepared; target permissions and actual site rollback/maintenance artifact pending",
+      "evidence": [
+        "docs/RUNBOOK_PHAT_HANH.md"
+      ]
+    }
+  },
+  "blockingReasons": [
+    "R01: Missing confirmed configuration: appBundleID, coreBundleID, developerIDIdentity, distributionRepository, distributionTermsURL, distributionVisibility, documentUTI, licenseName, notaryKeychainProfile, pricing, publisher, sourceRemoteName, sourceRepository, sourceVisibility, supportEmail, teamID, websiteDeployMode, websiteURL",
+    "R02: R02 is not accepted: RELEASE_CANDIDATE.releaseReady is false",
+    "Publication plan publicReady is not true",
+    "Unaccepted required gates: R01, R02, R03, R04, R05, R06, R07, R08, R09, R12",
+    "Confirmed commit missing: sourceCommit",
+    "Confirmed commit missing: distributionTargetCommit",
+    "Confirmed commit missing: websiteCommit",
+    "R03-R08: final distribution manifest missing",
+    "R09: website is still a preview with disabled download"
+  ],
+  "scope": "read-only local release gates; GitHub permissions/CI/tag/draft/publish and HTTPS/native postcheck remain separate actual operations"
+}

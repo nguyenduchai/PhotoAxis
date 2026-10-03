@@ -1,0 +1,35 @@
+PhotoAxis Investigation 2 — native QA, 02/10/2026
+Scope: synthetic fixtures only; no real case/personal images.
+Host: macOS27.0.1, Apple M1 Pro32GiB, Retina2x, Xcode27.0Build27A266a.
+UI operated using native accessibility/pointer/keyboard through CUA; screenshots are app captures, not web mockups.
+
+Final source:0169bf52cd0d3793c0027a82888833c8a58f4f78
+Release version/build:1.0.0/3
+Release UUID:4EFA7887-E96F-3149-B6F5-68BE3475F219
+Core SHA256:8ae55ed513e8d34db8ee6dae8ed59e1128a0bd1cd5abfe9ced58ea1963373058
+Final VI/EN QA bundles were copied with ditto and re-signed after unique bundle IDs; executable hashes differ, UUID/Core match Release. See build-manifest.json.
+
+Fixture OCR:Fixtures/P17/ocr-tieng-viet.png,1600x640,synthetic Vietnamese text.
+Fixture video:Fixtures/P17/video-vfr-rotated.mov,H.264 four color frames at0/100/350/900ms,preferredTransform90deg.
+Case:$BUILD_ROOT/QA/Investigation2/Ho-so-mo-rong.paxcase
+Case ID:84F8902A-0098-4A36-AB21-75CF95D00C3D
+Case title:Kiểm thử OCR, video và phép đo
+Operator:Người kiểm thử
+
+Initial native creation/intake/OCR/video/frame2/calibration/distance/area used sourceacfc121. First confirmation deliberately kept two of three machine lines; machine result remained intact.
+After source0169bf5 fixes, closed/reopened this case with final VI app; performed the following:
+- OCR source ROI40,20,1520,450:three Vietnamese lines, fourth line excluded; raw text read-only and explicit confirmation saved.
+- Measurement review shows reference/points as(x,y),50cm distance; added another50cm distance from100px=10cm reference and300/400px displacement. Synthetic geometry basis explicitly says this is a fixture, not a measurement of evidence.
+- Extracted frame1:green,200x320,PTS100/1000,offset0; earlier frame2 staysblue,PTS350/1000,offset5/correctedrelative5.350s with synthetic reason.
+- Exported native-analysis-vi.json through native Save Panel outside package; Started/Completed receipt and outputhash.
+- Case reopened; verify original video/image hashes and archives passed.
+Closed VI app before English writer open.
+Final EN app opened same case, viewed latest three-line OCR, appended explicit confirmation and verified integrity. No English-only video/measurement action repetition is claimed. Closed EN app afterwards.
+
+Final captures:ocr-final-vi.png/ax.txt,measurement-final-vi.png/ax.txt,frame-final-vi.png,case-final-vi.png/ax.txt,case-final-en.png/ax.txt,ocr-final-en.png/ax.txt.
+Independent read-only inspect-native-analysis.py result:native-analysis-inspection.json.
+20event payload hashes/sequence and final state digest PASS;3image originals/archives,1rawvideo,2OCRrecords with confirmationcounts[1,2],2frames,3measurements50cm/100cm2/50cm.
+JSON output SHA256:9c4903cc84ea012d22d3f5d8da707e9db4314b5bbbda3d51a6e6345b92950c68
+Completed receipt:sequence18;output input-ledger linked to Started sequence17. JSON is snapshot before subsequent EN confirmation/verify events19/20.
+
+Limits:No actual Telex/VNI composition qualification; Unicode typed/pasted text does not substitute. No macOS14/non-Retina/M1-16GB/full-quota/long-run/performance or real-camera/field measurement qualification. Native actual completion and persisted data were checked; cold OCR observation (~79.6s on initial prior run) is not a final benchmark. Current worker/spinner exists; warm final work completes quickly enough that a stable busy-state capture was not obtained. No claim that full baseline native acceptance was closed by these new screenshots.

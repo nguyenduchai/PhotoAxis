@@ -1,0 +1,58 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Move
+	2 hộp kiểm (disabled) Auto-Select, Help: No document open. This tool is not available yet., Value: 0
+	3 hộp kiểm (disabled) Show Transform Controls, Help: No document open. This tool is not available yet., Value: 0
+	4 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	5 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	6 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	7 nút (disabled) Description: Move (V), Help: Move (V) — No document open. This tool is not available yet., ID: tool.move
+	8 nút Description: Crop Tools, Help: Crop Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.crop
+	9 nút (disabled) Description: Eyedropper (I), Help: Eyedropper (I) — No document open. This tool is not available yet., ID: tool.eyedropper
+	10 nút (disabled) Description: Type (T), Help: Type (T) — No document open. This tool is not available yet., ID: tool.type
+	11 nút Description: Shape Tools, Help: Shape Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.rectangle
+	12 nút (disabled) Description: Hand (H), Help: Hand (H) — No document open. This tool is not available yet., ID: tool.hand
+	13 nút (disabled) Description: Zoom (Z), Help: Zoom (Z) — No document open. This tool is not available yet., ID: tool.zoom
+	14 bảng màu (disabled) Description: Background Color, Help: Document editing is still in development., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	15 bảng màu (disabled) Description: Foreground Color, Help: Document editing is still in development., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	16 text PhotoAxis Your workspace for editing, composing and creating.
+	17 nút (disabled) New Document…, Help: Document editing is still in development.
+	18 nút (disabled) Open…, Help: Document editing is still in development.
+	19 text Document tools will be available in a future development build. No document open — % No document open sRGB Color
+	20 nút Description: Collapse Panels, ID: sidebar.collapse
+	21 hình ảnh Description: Color preview; editing unavailable, Help: Document editing is still in development.
+	22 Description: Properties and History, ID: sidebar.inspectorTabs
+		23 nút radio Description: Properties, Value: 1
+		24 nút radio Description: History, Value: 0
+	25 text No layer selected.
+Layer properties will appear here. Layers No layers yet.
+Open or create a document to begin.
+	26 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	27 text Opacity
+	28 trường văn bản (disabled) Description: Opacity, Value: 100 %
+	29 text R
+	30 trường văn bản (disabled) Description: Red, Value: 0
+	31 text G
+	32 trường văn bản (disabled) Description: Green, Value: 0
+	33 text B
+	34 trường văn bản (disabled) Description: Blue, Value: 0
+	35 nút (disabled) Description: Add Layer, Help: No document open. This tool is not available yet.
+	36 nút (disabled) Description: Duplicate Layer, Help: No document open. This tool is not available yet.
+	37 nút (disabled) Description: Delete Layer, Help: No document open. This tool is not available yet.
+	38 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 392, Secondary Actions: Increment, Decrement
+	39 nút đóng
+	40 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	41 nút thu nhỏ
+	42 text PhotoAxis
+43 menu bar
+	44 PhotoAxis
+	45 File
+	46 Edit
+	47 Image
+	48 Layer
+	49 Type
+	50 View
+	51 Window
+	52 Help
+
+The focused UI element is 0 cửa sổ thông thường PhotoAxis, ID: workspace.window, Secondary Actions: Raise

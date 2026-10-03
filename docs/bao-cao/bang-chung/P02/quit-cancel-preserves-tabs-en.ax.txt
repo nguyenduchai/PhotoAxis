@@ -1,0 +1,67 @@
+Window: "alpha-edges.png — PhotoAxis", App: PhotoAxis QA Final.
+0 standard window alpha-edges.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 button Fit on Screen
+	3 button 100%
+	4 text Drag or scroll to pan the canvas
+	5 button (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 button (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 button Description: Switch Tools between one and two columns, ID: tools.columns
+	8 button (disabled) Description: Move (V), Help: Document editing is still in development., ID: tool.move
+	9 button Description: Crop Tools, Help: Crop Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.crop
+	10 button (disabled) Description: Eyedropper (I), Help: Document editing is still in development., ID: tool.eyedropper
+	11 button (disabled) Description: Type (T), Help: Document editing is still in development., ID: tool.type
+	12 button Description: Shape Tools, Help: Shape Tools — Click, hold or right-click to see the group. Tools are not available yet., ID: tool.rectangle
+	13 button Description: Hand (H), ID: tool.hand
+	14 button Description: Zoom (Z), ID: tool.zoom
+	15 color well (disabled) Description: Background Color, Help: Document editing is still in development., Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	16 color well (disabled) Description: Foreground Color, Help: Document editing is still in development., Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	17 toggle button Untitled •, Value: off
+	18 button Close tab
+	19 toggle button alpha-edges.png •, Value: on
+	20 button Close tab
+	21 text field (settable) Description: Zoom, Value: 255 %
+	22 text 640 × 480 px · 72,00 PPI · Unsaved sRGB Color
+	23 button Description: Collapse Panels, ID: sidebar.collapse
+	24 image Description: Color preview; editing unavailable, Help: Document editing is still in development.
+	25 Description: Properties and History, ID: sidebar.inspectorTabs
+		26 radio button Description: Properties, Value: 1
+		27 radio button Description: History, Value: 0
+	28 text 640 × 480 px
+72,00 PPI · sRGB
+1 layers Layers
+	29 scroll area Secondary Actions: Scroll Up, Scroll Down
+		30 table
+			31 row (selected)
+				32 cell (selected)
+					33 text alpha-edges.png
+		34 scroll bar (disabled, settable, float) 0
+	35 pop up button (disabled) Description: Blend Mode, Value: Normal
+	36 text Opacity
+	37 text field (disabled) Description: Opacity, Value: 100 %
+	38 text R
+	39 text field (disabled) Description: Red, Value: 0
+	40 text G
+	41 text field (disabled) Description: Green, Value: 0
+	42 text B
+	43 text field (disabled) Description: Blue, Value: 0
+	44 button (disabled) Description: Add Layer, Help: Document editing is still in development.
+	45 button (disabled) Description: Duplicate Layer, Help: Document editing is still in development.
+	46 button (disabled) Description: Delete Layer, Help: Document editing is still in development.
+	47 splitter Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	48 close button
+	49 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	50 minimize button
+	51 text alpha-edges.png — PhotoAxis
+52 menu bar
+	53 PhotoAxis QA Final
+	54 File
+	55 Edit
+	56 Image
+	57 Layer
+	58 Type
+	59 View
+	60 Window
+	61 Help
+
+The focused UI element is 0 standard window alpha-edges.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

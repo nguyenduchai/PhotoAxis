@@ -1,0 +1,18 @@
+{
+  "file": "iso-gainmap.heic",
+  "bytes": 1484,
+  "sha256": "9594b47bbafedef60e81460ad209a6b5efa06f5252f876ef82c1956ac8018f32",
+  "width": 64,
+  "height": 64,
+  "generator": "scripts/generate-hdr-fixture.swift",
+  "sourceFloatRGBA": [
+    3.0,
+    1.2,
+    0.4,
+    1.0
+  ],
+  "sourceContentHeadroom": 3,
+  "decodedHDRContentHeadroom": 2.999999,
+  "decodedHDRCalculatedHeadroom": 1.8544922,
+  "fixture": "synthetic 32-bit float extended-linear-sRGB with real ISO gain map; not a camera photo"
+}

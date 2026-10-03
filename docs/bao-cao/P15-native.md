@@ -1,0 +1,66 @@
+# P15 bổ sung — kiểm tra native và sửa tiến độ, 02/10/2026
+
+**Đã thực hiện trên ứng dụng Release thật; nghiệm thu toàn V1.0 và public vẫn BLOCKED_EXTERNAL.** Bản 1.0.0 (1), baseline 1.0-draft.3, chạy trên M1 Pro/32 GiB/macOS 27/Xcode 27/Retina 2×. Sau sửa lỗi tiến độ: **113 PASS, 0 FAIL, 4 SKIP**, Release build PASS. Các ca SKIP là một ca Telex/VNI thực và ba benchmark opt-in; benchmark riêng trước đó có 3 PASS và renderer không thay đổi bởi sửa lỗi này.
+
+## Binary và phạm vi bằng chứng
+
+| Lượt | Nguồn/binary | Phạm vi đã chạy |
+| --- | --- | --- |
+| Native ban đầu | Capture tại HEAD `e4328a5`; Release UUID `66727FF1-035D-3DBF-87B3-08D4960A2DBB`, từ P12/P13 | VI phối cảnh/Save As/PNG/overwrite, EN Open/JPEG/sửa chữ/thêm Unicode/Save; timer và startup Recovery VI/EN thật |
+| Sau sửa tiến độ | Code commit `787e3d1384f101fbd081c4fd8b3fc96a26d2520d`; UUID `D54A11BC-024A-3419-B64C-9D70715C2ED9` | VI và EN pointer quad/Preview/Apply; Save/Open/sửa chữ và shape/PNG/JPEG hai chiều; EN Export 40 MP/Cancel; startup Recovery VI/EN; quit hai tab/Cancel/Don’t Save/restart |
+
+[Manifest](bang-chung/P15-native/build-manifest.json), [binary ban đầu](bang-chung/P15-native/initial-binary.json) và [binary sau sửa](bang-chung/P15-native/final-binary.json) phân biệt hai lượt. SHA-256 đoạn executable `__TEXT,__text` của bản sau sửa là `e3b12047c61816a32f1ef467186d98ab59cf3d381e60b27ef257b985f19e29e1`; Core framework `abd7d3e450bf3cae2a8bd283fd9d4df44eb792785b5e7ed88715776a436e196e`. QA app chỉ đổi bundle ID/ngôn ngữ/chữ ký ad-hoc để dùng kho dữ liệu thử riêng; UUID, đoạn code executable và Core bytes khớp Release. Không đọc hay kết thúc tiến trình/tài liệu cá nhân.
+
+Source fingerprint `7ce103c1e9c7f8401707174fbbe87bcbcc82871f8e7c1de462b9800453115b01` được kiểm lại bằng tracked files ở commit 787e3d1 cộng byte fixture tự sinh trong `Fixtures/Generated` không nằm trong Git; hash các fixture được ghi riêng. Sau build chỉ hai script website thay đổi, không thay Swift/config/project. Khi thêm bằng chứng, chỉ cập nhật evidence hashes; không gán fingerprint mới của website cho binary cũ.
+
+## Lỗi phát hiện và sửa
+
+Workspace đang Save/Export có thể hiện lại tên/kích thước hoặc “Saved” khi refresh navigation, dù tooltip còn mô tả tác vụ đang chạy. `updateNavigation` trước đây chỉ bảo vệ tiến độ Import. Thêm `taskProgress` dùng chung và giữ dòng trạng thái khi refresh/đổi tab/zoom; callback hoàn tất trả lại trạng thái tài liệu hiện tại. Không thay snapshot, atomic writer hoặc điểm Cancel.
+
+`WorkspaceTests.testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges` kiểm hai ngôn ngữ với coordinator/workspace thật, hai tài liệu, callback Save/Export, refresh/tab/viewport, text/tooltip/Cancel và kết thúc. Ca này cùng bộ hồi quy có **113 PASS/0 FAIL/4 SKIP**. Native Export EN sau sửa hiện đúng “Rendering and writing export” thay vì “Saved”; [ảnh đang chạy](bang-chung/P15-native/final-export-noise-running.png) và AX trước/sau được lưu.
+
+## Thao tác phối cảnh, file và Export thực
+
+- Mở `.paxis` synthetic 640×480 gồm sáu layer: hai ảnh, chữ, ellipse, rectangle ẩn và line khóa. Kéo quad bằng pointer, chỉnh hai góc, chọn W×H 400×300, Preview và Apply. Đã lặp trên **VI/EN bản D54**; [quad Việt](bang-chung/P15-native/final-perspective-quad-vi.png), [English](bang-chung/P15-native/final-perspective-quad-en.png), [Apply Việt](bang-chung/P15-native/final-perspective-applied-vi.png), [English](bang-chung/P15-native/final-perspective-applied-en.png).
+- VI dùng NSSavePanel ghi [final-perspective.paxis](bang-chung/P15-native/final-perspective.paxis), đóng và mở bằng EN. ZIP/document.json giữ sáu ID, type/order/hidden/locked; mỗi transform đã đổi và có clip; nguồn SHA-256 vẫn `95191611cce1572bf63b2dbc3743c65a5ef29a3de3662f9f3372b4df1e45501d`. Canvas 400×300; không flatten. [EN mở lại](bang-chung/P15-native/final-perspective-reopened-en.png).
+- Lượt ban đầu EN sửa chữ cũ “PHỐI CẢNH MỚI” giữ matrix projective/clip, thêm “PhotoAxis — Việt Nam” có affine/no clip, di chuyển bằng pointer và lưu dự án. Unicode được nhập bằng AX/paste, **không phải Telex/VNI thực**. [Dự án chữ](bang-chung/P15-native/native-text-final.paxis), [ảnh Unicode đã di chuyển](bang-chung/P15-native/unicode-moved-en.png).
+- Native Export có PNG 256×192/300 PPI/alpha, JPEG 200×150/72 PPI/quality 85/matte trắng ở lượt ban đầu; VI bản D54 xuất [PNG 400×300/144 PPI](bang-chung/P15-native/final-perspective.png). Image I/O/ColorSync đọc file thật: 8 bit/kênh, ICC sRGB nhúng, orientation 1, không GPS; PNG có alpha, JPEG opaque. [Metadata](bang-chung/P15-native/native-export-metadata.json). RGBA của hai lượt native VI cùng quad/kích thước byte-identical. Đây là kiểm tính lặp lại, không thay oracle độc lập P10 hoặc ảnh HDR camera thật.
+- Native overwrite Cancel ban đầu giữ nguyên PNG cũ; Replace ghi file 400×300. Trên bản D54, dùng ảnh noise RGB8/sRGB tự tạo 8000×5000 để tác vụ encode còn chạy khi bấm **Cancel task** sau xác nhận overwrite. File đích giữ SHA `e5e296925175bc1d5e7124a231299f6db90087d523b4fe579b0800193372dbe3` sau tác vụ kết thúc, không còn file `.photoaxis-*.tmp`, marker tài liệu không đổi. [Kết quả Cancel](bang-chung/P15-native/final-native-export-cancel.json). Ba lần thử ảnh trơn trước đó đã commit trước khi click nên **không được tính PASS cho Cancel đang chạy**. Noise fixture lớn ở ngoài Git, không phải benchmark tốc độ.
+
+[Đối chiếu model/byte](bang-chung/P15-native/native-file-verification.json) ghi phạm vi từng UUID và phần còn thiếu. Preview/file không chứa selection/overlay; phần alpha/matte/màu tham chiếu tiếp tục dựa trên tests pixel P10/P12 đã chạy lại trong bộ 113 ca.
+
+## Recovery khởi động thật
+
+Lượt UUID667: VI sửa Exposure bằng số theo vùng **0,3**, chờ timer ~10 giây tạo revision 3 rồi sao chép record/archive. Chỉ kết thúc bất thường đúng executable QA riêng. Khởi động lại app xuất hiện danh sách Recovery VI; Open Recovered tạo dirty document không có project URL. Close → Cancel giữ tài liệu; Cmd+S/Save As ghi [native-recovered-saved.paxis](bang-chung/P15-native/native-recovered-saved.paxis) có Exposure 0,3, file dự án gốc vẫn 0 và kho Recovery VI còn 0 record.
+
+EN ở cùng binary có timer revision 6 sau sửa/thêm/di chuyển chữ. Kết thúc bất thường tiến trình QA riêng, khởi động thật có danh sách EN; Discard trở về workspace rỗng và kho Recovery EN còn 0 record. [Startup VI](bang-chung/P15-native/startup-recovery-vi.png), [EN](bang-chung/P15-native/startup-recovery-en.png), [fault provenance](bang-chung/P15-native/controlled-native-restart.json). Các record là timer từ thao tác native, không phải danh sách seed trong hosted test. Không gọi SIGKILL có kiểm soát là crash sản phẩm.
+
+Sau khi desktop mở khóa lại, bản D54 EN đã khởi động với timer archive sau Apply: [startup EN cuối](bang-chung/P15-native/final-startup-recovery-en.png). Open Recovered → sửa chữ hai dòng bằng Return/Cmd+Return → chỉnh stroke ellipse 5→7/Apply → Save As → PNG400×300/144PPI và JPEG200×150/72PPI/quality81/matte trắng. Mở bằng VI, Save As lần nữa: document.json và nguồn nhúng giống hệt; PNG xuất VI/EN có RGBA byte-identical. [Model đối chiếu](bang-chung/P15-native/final-cross-language-model.json), [metadata/pixel](bang-chung/P15-native/final-native-export-metadata.json), [script kiểm lại](bang-chung/P15-native/inspect-final-exports.swift).
+
+VI bản D54 sửa Exposure 0,3, timer tạo archive thật, chỉ dừng bất thường đúng executable QA; [startup VI cuối](bang-chung/P15-native/final-startup-recovery-vi.png) xuất hiện. Open Recovered → Close/Cancel → Save As giữ exposure/chữ/shape và dọn record; file gốc vẫn Exposure 0. [Fault ledger cuối](bang-chung/P15-native/final-controlled-native-restart-vi.json), [dự án recovered](bang-chung/P15-native/final-recovered-saved-vi.paxis). Không gán ảnh startup UUID667 cho UUIDD54.
+
+EN bản D54 mở fixture thiếu font: alert và Properties giữ `PhotoAxisQANonexistentFont`, chọn Helvetica/Apply rồi Undo phục hồi tên gốc. Đóng khi chữ preview chưa commit: Cancel giữ editor, Escape bỏ preview và dự án vẫn Saved. Hai fixture A/B có model ID riêng, mỗi tab duplicate và timer record riêng; Quit → Don’t Save A → Cancel B giữ cả hai dirty tab/record. Quit lần nữa/Don’t Save cả hai kết thúc tiến trình bình thường, dọn 0 record; restart Welcome không Recovery, file nguồn không đổi. [Lifecycle ledger](bang-chung/P15-native/final-native-lifecycle.json), [font thiếu](bang-chung/P15-native/final-missing-font-properties-en.png), [quit tab thứ hai](bang-chung/P15-native/final-quit-second-tab-en.png), [restart không hồi sinh](bang-chung/P15-native/final-no-recovery-after-dont-save-en.png). Đây là dữ liệu thử riêng.
+
+Script inspect ban đầu nhầm enum alpha của CGImage decode với bitmap premultiplied dùng để so pixel; đã sửa assertion thành `.last` (giá trị 3 thực đọc từ PNG), giữ `.noneSkipLast` (5) cho JPEG. File ảnh không đổi. Bản script cuối kiểm sáu file và so RGBA VI/EN PASS; không sửa assertions renderer/product để che sai pixel.
+
+## Đính chính fixture QA và website
+
+Lần copy QA D54 đầu tiên bằng Python đã dereference framework symlink khiến verify deep-strict báo ambiguous bundle format. **Release product luôn có cấu trúc hợp lệ**. Đã dừng đúng app QA synthetic, dựng lại hai QA bundle bằng `ditto`, đổi ID và ký ad-hoc; symlink giữ đúng, verify deep-strict PASS. Capture trước sửa fixture vẫn chạy cùng UUID/đoạn code/Core, nhưng không được tuyên bố chữ ký fixture đã verify ở thời điểm capture. [Final binary ledger](bang-chung/P15-native/final-binary.json) ghi rõ việc này.
+
+Website hiện dùng cả Perspective và startup Recovery VI/EN trên native D54; ảnh UUID667 giữ làm bằng chứng lịch sử riêng. Không còn dùng hosted Recovery làm ảnh startup. [Provenance website](../../website/asset-provenance.json). Kiểm lại 12 trang static, VI/EN tại CSS 1280/390 px: không tràn ngang, tất cả ảnh nạp, nút tải disabled; [số đo](bang-chung/P15-native/website-responsive-checks.json) và [ảnh gallery](bang-chung/P15-native/website-native-gallery.png). Đây là preview local, chưa HTTPS/deploy/download public. [Manifest site hiện hành](bang-chung/P15-native/site-manifest.json) và [ZIP/checksum](bang-chung/P15-native/site-bundle.json) ghi 25 file, CRC PASS và byte từng file khớp website; artifact nằm ngoài Git. Manifest/ZIP P14 giữ nguyên làm lịch sử.
+
+## Điều kiện chưa hoàn tất
+
+Native D54 sửa chữ/shape/font thiếu, startup Recovery VI/EN và quit hai tab đã có kết quả như trên. Còn rà shortcut/tooltip/focus toàn diện, crop/transform session kết hợp close trong Save/Export nền và mọi kích thước/reference. Hai lần kéo cạnh/góc cửa sổ bằng CUA báo `windowNotFoundAtPosition`, chưa thay đổi kích thước; [ledger](bang-chung/P15-native/native-window-resize.json) ghi CHƯA KIỂM CHỨNG, không coi là lỗi sản phẩm hay PASS layout. Cần kiểm native kích thước tối thiểu thủ công/công cụ hỗ trợ resize. Telex/VNI thực vẫn SKIP. Không đổi tất cả A01–A43 thành PASS từ các luồng đã chạy ở trên.
+
+macOS 14, màn hình 1× và M1/16 GB chưa có; input-to-present/FPS, Instruments/Metal MDB_MAP_FULL và hai warning QoS chưa kết luận. Developer ID Application/notary profile/namespace chính thức, publisher/support/license/giá, GitHub/visibility/website target và quyền còn thiếu. R02/releaseReady và R01–R12 public giữ gate tương ứng. P16 chỉ có khi xảy ra issue sau public.
+
+Lệnh kiểm: `bash scripts/check.sh`, `bash scripts/build.sh Release`, collector P15-native; xcresult `PhotoAxis-20261002-054851-9381.xcresult`, [test summary](bang-chung/P15-native/test-summary.json), [test log](bang-chung/P15-native/debug-test.log), [Release log](bang-chung/P15-native/release-build.log). Bundle, xcresult, noise fixture và DMG nằm trong `$BUILD_ROOT=~/Library/Developer/PhotoAxisBuilds/83990cd22abb`, ngoài repository.
+
+## Đóng gói local hiện hành và preflight public
+
+Từ checkout sạch `2a28b930104ffb3c13c476aed45b0e5ffb7ae470`, `python3 scripts/distribution.py local` copy Release D54 đã test, không rebuild. DMG mới ở `$BUILD_ROOT/P13-local-esza83lu`, SHA `dc75214a98520c14bd6b3d34e4e510580cd49f4824122d7eef8a06b04aaf9e2e`. Mount read-only/payload/version/icon/arm64/minOS14/file-symlink-tree/chữ ký ad-hoc deep-strict PASS; detach hoàn tất. Hash executable và Core khớp build test 787e3d1. [Manifest](bang-chung/P15-native/distribution-manifest.json), [log](bang-chung/P15-native/packaging.log), [checksum](bang-chung/P15-native/SHA256SUMS.txt). Artifact/website ZIP nằm ngoài Git; DMG P13 và archive cũ giữ lịch sử, không gán cho D54.
+
+`python3 scripts/release-audit.py preflight --config Config/Distribution.example.json` trả exit 2 đúng gate: [preflight](bang-chung/P15-native/preflight.json) có `BLOCKED_EXTERNAL`, `publicReady=false`, `mutationPerformed=false`. Kiểm lại [identity availability](bang-chung/P15-native/signing-availability.json): Apple Development có, Developer ID Application không có; Git remote trống. Không submit ký/notary, push/tag/release/deploy hoặc công khai source. [15 policy tests](bang-chung/P15-native/release-policy-tests.log) PASS.
+
+Sau khi đóng gói, thử đọc AX native VI để tiếp tục rà History/shortcut bị macOS khóa lại, công cụ không unlock được. [Precheck](bang-chung/P15-native/native-remaining-precheck.json) ghi thao tác chưa chạy, không thay dữ liệu app. Bằng chứng native đã hoàn tất ở trên vẫn giữ nguyên; phần rà còn lại cần desktop mở khóa.

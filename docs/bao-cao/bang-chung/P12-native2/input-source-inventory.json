@@ -1,0 +1,48 @@
+{
+  "currentSource" : "com.apple.keylayout.ABC",
+  "scope" : "TIS read-only inventory; enabled flags do not prove a native NSTextInputContext can select the source. No system preference was modified.",
+  "sources" : [
+    {
+      "enabled" : true,
+      "id" : "com.apple.keylayout.ABC",
+      "selectable" : true,
+      "selected" : true
+    },
+    {
+      "enabled" : true,
+      "id" : "com.apple.inputmethod.VietnameseIM",
+      "selectable" : false,
+      "selected" : false
+    },
+    {
+      "enabled" : true,
+      "id" : "com.apple.inputmethod.VietnameseIM.VietnameseTelex",
+      "selectable" : true,
+      "selected" : false
+    },
+    {
+      "enabled" : false,
+      "id" : "com.apple.keylayout.Vietnamese",
+      "selectable" : true,
+      "selected" : false
+    },
+    {
+      "enabled" : false,
+      "id" : "com.apple.inputmethod.VietnameseIM.VietnameseVNI",
+      "selectable" : true,
+      "selected" : false
+    },
+    {
+      "enabled" : false,
+      "id" : "com.apple.inputmethod.VietnameseIM.VietnameseVIQR",
+      "selectable" : true,
+      "selected" : false
+    },
+    {
+      "enabled" : false,
+      "id" : "com.apple.inputmethod.VietnameseIM.VietnameseSimpleTelex",
+      "selectable" : true,
+      "selected" : false
+    }
+  ]
+}

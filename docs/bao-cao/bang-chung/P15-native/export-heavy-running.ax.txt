@@ -1,0 +1,392 @@
+The following is a diff from the previous accessibility tree for Window: "Native Cancel 50 Image Layers — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~29 cửa sổ thông thường Native Cancel 50 Image Layers — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+~	30 text Hand
+~	31 nút Fit on Screen
+~	32 nút 100%
+~	33 text Drag or scroll to pan the canvas
++	34 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
++	35 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
++	36 nút Description: Switch Tools between one and two columns, ID: tools.columns
++	37 nút Description: Move (V), ID: tool.move
++	38 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
++	39 nút Description: Eyedropper (I), ID: tool.eyedropper
++	40 nút Description: Type (T), ID: tool.type
++	41 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
++	42 nút Description: Hand (H), ID: tool.hand
++	43 nút Description: Zoom (Z), ID: tool.zoom
++	44 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	45 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	46 nút chuyển đổi P15 Native Mixed Before, Value: off
++	47 nút Close tab
++	48 nút chuyển đổi PhotoAxis benchmark, Value: off
++	49 nút Close tab
++	50 nút chuyển đổi Native Cancel 50 Image Layers, Value: on
++	51 nút Close tab
++	52 trường văn bản (settable) Description: Zoom, Value: 21,58 %
++	53 text Help: Rendering and writing export: Native Cancel 50 Image Layers, Value: 8.000 × 5.000 px · 144,00 PPI · Saved sRGB
++	54 nút Cancel task
++	55 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	56 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	57 trường văn bản (settable) Description: HEX, Value: #000000
++	58 trường văn bản (settable) Description: Alpha %, Value: 100
++	59 trường văn bản (settable) Description: Red, Value: 0
++	60 trường văn bản (settable) Description: Green, Value: 0
++	61 trường văn bản (settable) Description: Blue, Value: 0
++	62 text Foreground Color Background Color HEX Alpha % R G B
++	63 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		64 hộp kiểm Image Adjustments, Value: 1, ID: adjustment.enabled, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++		65 nút Reset, Description: Reset Image Adjustments, ID: adjustment.reset, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++		66 text Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare. Exposure
++		67 trường văn bản (settable) Description: Exposure, Value: 0, ID: adjustment.exposure
++		68 thanh trượt (settable, float) Description: Exposure, Value: 0, ID: adjustment.exposure.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			69 chỉ báo giá trị (settable, float) 0
++		70 text EV Brightness
++		71 trường văn bản (settable) Description: Brightness, Value: 0, ID: adjustment.brightness
++		72 thanh trượt (settable, float) Description: Brightness, Value: 0, ID: adjustment.brightness.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			73 chỉ báo giá trị (settable, float) 0
++		74 text % Contrast
++		75 trường văn bản (settable) Description: Contrast, Value: 0, ID: adjustment.contrast
++		76 thanh trượt (settable, float) Description: Contrast, Value: 0, ID: adjustment.contrast.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			77 chỉ báo giá trị (settable, float) 0
++		78 text % Saturation
++		79 trường văn bản (settable) Description: Saturation, Value: 0, ID: adjustment.saturation
++		80 thanh trượt (settable, float) Description: Saturation, Value: 0, ID: adjustment.saturation.slider, Help: Exposure −4…+4 EV; other values −100…+100%. Return commits numbers, Escape cancels; toggle to compare.
++			81 chỉ báo giá trị (settable, float) 0
++		82 text %
++		83 thanh cuộn (settable, float) 0
++			84 chỉ báo giá trị (settable, float) 0
++			85 nút mũi tên tăng dần
++			86 nút mũi tên giảm dần
++			87 nút trang tăng dần
++			88 nút trang giảm dần
++	89 text Color
++	90 nút Description: Collapse Panels, ID: sidebar.collapse
++	91 Description: Properties and History, ID: sidebar.inspectorTabs
++		92 nút radio Description: Properties, Value: 1
++		93 nút radio Description: History, Value: 0
++	94 text Layers
++	95 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		96 bảng
++			97 row (selected)
++				98 ô (selected)
++					99 nút Description: Toggle Visibility: Image 50, Help: Toggle Visibility
++					100 hình ảnh
++					101 text Help: Image 50, Value: Image 50 Image
++					102 nút Description: Toggle Lock: Image 50, Help: Toggle Lock
++			103 row (selectable)
++				104 ô
++					105 nút Description: Toggle Visibility: Image 49, Help: Toggle Visibility
++					106 hình ảnh
++					107 text Help: Image 49, Value: Image 49 Image
++					108 nút Description: Toggle Lock: Image 49, Help: Toggle Lock
++			109 row (selectable)
++				110 ô
++					111 nút Description: Toggle Visibility: Image 48, Help: Toggle Visibility
++					112 hình ảnh
++					113 text Help: Image 48, Value: Image 48 Image
++					114 nút Description: Toggle Lock: Image 48, Help: Toggle Lock
++			115 row (selectable)
++				116 ô
++					117 nút Description: Toggle Visibility: Image 47, Help: Toggle Visibility
++					118 hình ảnh
++					119 text Help: Image 47, Value: Image 47 Image
++					120 nút Description: Toggle Lock: Image 47, Help: Toggle Lock
++			121 row (selectable)
++				122 ô
++					123 nút Description: Toggle Visibility: Image 46, Help: Toggle Visibility
++					124 hình ảnh
++					125 text Help: Image 46, Value: Image 46 Image
++					126 nút Description: Toggle Lock: Image 46, Help: Toggle Lock
++			127 row (selectable)
++				128 ô
++					129 nút Description: Toggle Visibility: Image 45, Help: Toggle Visibility
++					130 hình ảnh
++					131 text Help: Image 45, Value: Image 45 Image
++					132 nút Description: Toggle Lock: Image 45, Help: Toggle Lock
++			133 row (selectable)
++				134 ô
++					135 nút Description: Toggle Visibility: Image 44, Help: Toggle Visibility
++					136 hình ảnh
++					137 text Help: Image 44, Value: Image 44 Image
++					138 nút Description: Toggle Lock: Image 44, Help: Toggle Lock
++			139 row (selectable)
++				140 ô
++					141 nút Description: Toggle Visibility: Image 43, Help: Toggle Visibility
++					142 hình ảnh
++					143 text Help: Image 43, Value: Image 43 Image
++					144 nút Description: Toggle Lock: Image 43, Help: Toggle Lock
++			145 row (selectable)
++				146 ô
++					147 nút Description: Toggle Visibility: Image 42, Help: Toggle Visibility
++					148 hình ảnh
++					149 text Help: Image 42, Value: Image 42 Image
++					150 nút Description: Toggle Lock: Image 42, Help: Toggle Lock
++			151 row (selectable)
++				152 ô
++					153 nút Description: Toggle Visibility: Image 41, Help: Toggle Visibility
++					154 hình ảnh
++					155 text Help: Image 41, Value: Image 41 Image
++					156 nút Description: Toggle Lock: Image 41, Help: Toggle Lock
++			157 row (selectable)
++				158 ô
++					159 nút Description: Toggle Visibility: Image 40, Help: Toggle Visibility
++					160 hình ảnh
++					161 text Help: Image 40, Value: Image 40 Image
++					162 nút Description: Toggle Lock: Image 40, Help: Toggle Lock
++			163 row (selectable)
++				164 ô
++					165 nút Description: Toggle Visibility: Image 39, Help: Toggle Visibility
++					166 hình ảnh
++					167 text Help: Image 39, Value: Image 39 Image
++					168 nút Description: Toggle Lock: Image 39, Help: Toggle Lock
++			169 row (selectable)
++				170 ô
++					171 nút Description: Toggle Visibility: Image 38, Help: Toggle Visibility
++					172 hình ảnh
++					173 text Help: Image 38, Value: Image 38 Image
++					174 nút Description: Toggle Lock: Image 38, Help: Toggle Lock
++			175 row
++				176 ô
++					177 nút Description: Toggle Visibility: Image 37, Help: Toggle Visibility
++					178 hình ảnh
++					179 text Help: Image 37, Value: Image 37 Image
++					180 nút Description: Toggle Lock: Image 37, Help: Toggle Lock
++			181 row
++				182 ô
++					183 nút Description: Toggle Visibility: Image 36, Help: Toggle Visibility
++					184 hình ảnh
++					185 text Help: Image 36, Value: Image 36 Image
++					186 nút Description: Toggle Lock: Image 36, Help: Toggle Lock
++			187 row
++				188 ô
++					189 nút Description: Toggle Visibility: Image 35, Help: Toggle Visibility
++					190 hình ảnh
++					191 text Help: Image 35, Value: Image 35 Image
++					192 nút Description: Toggle Lock: Image 35, Help: Toggle Lock
++			193 row
++				194 ô
++					195 nút Description: Toggle Visibility: Image 34, Help: Toggle Visibility
++					196 hình ảnh
++					197 text Help: Image 34, Value: Image 34 Image
++					198 nút Description: Toggle Lock: Image 34, Help: Toggle Lock
++			199 row
++				200 ô
++					201 nút Description: Toggle Visibility: Image 33, Help: Toggle Visibility
++					202 hình ảnh
++					203 text Help: Image 33, Value: Image 33 Image
++					204 nút Description: Toggle Lock: Image 33, Help: Toggle Lock
++			205 row
++				206 ô
++					207 nút Description: Toggle Visibility: Image 32, Help: Toggle Visibility
++					208 hình ảnh
++					209 text Help: Image 32, Value: Image 32 Image
++					210 nút Description: Toggle Lock: Image 32, Help: Toggle Lock
++			211 row
++				212 ô
++					213 nút Description: Toggle Visibility: Image 31, Help: Toggle Visibility
++					214 hình ảnh
++					215 text Help: Image 31, Value: Image 31 Image
++					216 nút Description: Toggle Lock: Image 31, Help: Toggle Lock
++			217 row
++				218 ô
++					219 nút Description: Toggle Visibility: Image 30, Help: Toggle Visibility
++					220 hình ảnh
++					221 text Help: Image 30, Value: Image 30 Image
++					222 nút Description: Toggle Lock: Image 30, Help: Toggle Lock
++			223 row
++				224 ô
++					225 nút Description: Toggle Visibility: Image 29, Help: Toggle Visibility
++					226 hình ảnh
++					227 text Help: Image 29, Value: Image 29 Image
++					228 nút Description: Toggle Lock: Image 29, Help: Toggle Lock
++			229 row
++				230 ô
++					231 nút Description: Toggle Visibility: Image 28, Help: Toggle Visibility
++					232 hình ảnh
++					233 text Help: Image 28, Value: Image 28 Image
++					234 nút Description: Toggle Lock: Image 28, Help: Toggle Lock
++			235 row
++				236 ô
++					237 nút Description: Toggle Visibility: Image 27, Help: Toggle Visibility
++					238 hình ảnh
++					239 text Help: Image 27, Value: Image 27 Image
++					240 nút Description: Toggle Lock: Image 27, Help: Toggle Lock
++			241 row
++				242 ô
++					243 nút Description: Toggle Visibility: Image 26, Help: Toggle Visibility
++					244 hình ảnh
++					245 text Help: Image 26, Value: Image 26 Image
++					246 nút Description: Toggle Lock: Image 26, Help: Toggle Lock
++			247 row
++				248 ô
++					249 nút Description: Toggle Visibility: Image 25, Help: Toggle Visibility
++					250 hình ảnh
++					251 text Help: Image 25, Value: Image 25 Image
++					252 nút Description: Toggle Lock: Image 25, Help: Toggle Lock
++			253 row
++				254 ô
++					255 nút Description: Toggle Visibility: Image 24, Help: Toggle Visibility
++					256 hình ảnh
++					257 text Help: Image 24, Value: Image 24 Image
++					258 nút Description: Toggle Lock: Image 24, Help: Toggle Lock
++			259 row
++				260 ô
++					261 nút Description: Toggle Visibility: Image 23, Help: Toggle Visibility
++					262 hình ảnh
++					263 text Help: Image 23, Value: Image 23 Image
++					264 nút Description: Toggle Lock: Image 23, Help: Toggle Lock
++			265 row
++				266 ô
++					267 nút Description: Toggle Visibility: Image 22, Help: Toggle Visibility
++					268 hình ảnh
++					269 text Help: Image 22, Value: Image 22 Image
++					270 nút Description: Toggle Lock: Image 22, Help: Toggle Lock
++			271 row
++				272 ô
++					273 nút Description: Toggle Visibility: Image 21, Help: Toggle Visibility
++					274 hình ảnh
++					275 text Help: Image 21, Value: Image 21 Image
++					276 nút Description: Toggle Lock: Image 21, Help: Toggle Lock
++			277 row
++				278 ô
++					279 nút Description: Toggle Visibility: Image 20, Help: Toggle Visibility
++					280 hình ảnh
++					281 text Help: Image 20, Value: Image 20 Image
++					282 nút Description: Toggle Lock: Image 20, Help: Toggle Lock
++			283 row
++				284 ô
++					285 nút Description: Toggle Visibility: Image 19, Help: Toggle Visibility
++					286 hình ảnh
++					287 text Help: Image 19, Value: Image 19 Image
++					288 nút Description: Toggle Lock: Image 19, Help: Toggle Lock
++			289 row
++				290 ô
++					291 nút Description: Toggle Visibility: Image 18, Help: Toggle Visibility
++					292 hình ảnh
++					293 text Help: Image 18, Value: Image 18 Image
++					294 nút Description: Toggle Lock: Image 18, Help: Toggle Lock
++			295 row
++				296 ô
++					297 nút Description: Toggle Visibility: Image 17, Help: Toggle Visibility
++					298 hình ảnh
++					299 text Help: Image 17, Value: Image 17 Image
++					300 nút Description: Toggle Lock: Image 17, Help: Toggle Lock
++			301 row
++				302 ô
++					303 nút Description: Toggle Visibility: Image 16, Help: Toggle Visibility
++					304 hình ảnh
++					305 text Help: Image 16, Value: Image 16 Image
++					306 nút Description: Toggle Lock: Image 16, Help: Toggle Lock
++			307 row
++				308 ô
++					309 nút Description: Toggle Visibility: Image 15, Help: Toggle Visibility
++					310 hình ảnh
++					311 text Help: Image 15, Value: Image 15 Image
++					312 nút Description: Toggle Lock: Image 15, Help: Toggle Lock
++			313 row
++				314 ô
++					315 nút Description: Toggle Visibility: Image 14, Help: Toggle Visibility
++					316 hình ảnh
++					317 text Help: Image 14, Value: Image 14 Image
++					318 nút Description: Toggle Lock: Image 14, Help: Toggle Lock
++			319 row
++				320 ô
++					321 nút Description: Toggle Visibility: Image 13, Help: Toggle Visibility
++					322 hình ảnh
++					323 text Help: Image 13, Value: Image 13 Image
++					324 nút Description: Toggle Lock: Image 13, Help: Toggle Lock
++			325 row
++				326 ô
++					327 nút Description: Toggle Visibility: Image 12, Help: Toggle Visibility
++					328 hình ảnh
++					329 text Help: Image 12, Value: Image 12 Image
++					330 nút Description: Toggle Lock: Image 12, Help: Toggle Lock
++			331 row
++				332 ô
++					333 nút Description: Toggle Visibility: Image 11, Help: Toggle Visibility
++					334 hình ảnh
++					335 text Help: Image 11, Value: Image 11 Image
++					336 nút Description: Toggle Lock: Image 11, Help: Toggle Lock
++			337 row
++				338 ô
++					339 nút Description: Toggle Visibility: Image 10, Help: Toggle Visibility
++					340 hình ảnh
++					341 text Help: Image 10, Value: Image 10 Image
++					342 nút Description: Toggle Lock: Image 10, Help: Toggle Lock
++			343 row
++				344 ô
++					345 nút Description: Toggle Visibility: Image 9, Help: Toggle Visibility
++					346 hình ảnh
++					347 text Help: Image 9, Value: Image 9 Image
++					348 nút Description: Toggle Lock: Image 9, Help: Toggle Lock
++			349 row
++				350 ô
++					351 nút Description: Toggle Visibility: Image 8, Help: Toggle Visibility
++					352 hình ảnh
++					353 text Help: Image 8, Value: Image 8 Image
++					354 nút Description: Toggle Lock: Image 8, Help: Toggle Lock
++			355 row
++				356 ô
++					357 nút Description: Toggle Visibility: Image 7, Help: Toggle Visibility
++					358 hình ảnh
++					359 text Help: Image 7, Value: Image 7 Image
++					360 nút Description: Toggle Lock: Image 7, Help: Toggle Lock
++			361 row
++				362 ô
++					363 nút Description: Toggle Visibility: Image 6, Help: Toggle Visibility
++					364 hình ảnh
++					365 text Help: Image 6, Value: Image 6 Image
++					366 nút Description: Toggle Lock: Image 6, Help: Toggle Lock
++			367 row
++				368 ô
++					369 nút Description: Toggle Visibility: Image 5, Help: Toggle Visibility
++					370 hình ảnh
++					371 text Help: Image 5, Value: Image 5 Image
++					372 nút Description: Toggle Lock: Image 5, Help: Toggle Lock
++			373 row
++				374 ô
++					375 nút Description: Toggle Visibility: Image 4, Help: Toggle Visibility
++					376 hình ảnh
++					377 text Help: Image 4, Value: Image 4 Image
++					378 nút Description: Toggle Lock: Image 4, Help: Toggle Lock
++			379 row
++				380 ô
++					381 nút Description: Toggle Visibility: Image 3, Help: Toggle Visibility
++					382 hình ảnh
++					383 text Help: Image 3, Value: Image 3 Image
++					384 nút Description: Toggle Lock: Image 3, Help: Toggle Lock
++			385 row
++				386 ô
++					387 nút Description: Toggle Visibility: Image 2, Help: Toggle Visibility
++					388 hình ảnh
++					389 text Help: Image 2, Value: Image 2 Image
++					390 nút Description: Toggle Lock: Image 2, Help: Toggle Lock
++			391 row
++				392 ô
++					393 nút Description: Toggle Visibility: Image 1, Help: Toggle Visibility
++					394 hình ảnh
++					395 text Help: Image 1, Value: Image 1 Image
++					396 nút Description: Toggle Lock: Image 1, Help: Toggle Lock
++		397 thanh cuộn (settable, float) 0.01024938875305625
++			398 chỉ báo giá trị (settable, float) 0.01024938875305625
++			399 nút mũi tên tăng dần
++			400 nút mũi tên giảm dần
++			401 nút trang tăng dần
++			402 nút trang giảm dần
++	403 nút bật lên (disabled) Description: Blend Mode, Value: Normal
++	404 text Opacity
++	405 trường văn bản (settable) Description: Opacity, Value: 20 %
++	406 thanh trượt (settable, float) Description: Opacity, Value: 20
++		407 chỉ báo giá trị (settable, float) 20
++	408 nút Add Layer
++	409 nút Rename Layer
++	410 nút Move Layer Up
++	411 nút Move Layer Down
++	412 nút Duplicate Layer
++	413 nút Delete Layer
++	414 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
++	415 nút đóng
++	416 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	417 nút thu nhỏ
++	418 text Native Cancel 50 Image Layers — PhotoAxis
+The focused UI element is 29 cửa sổ thông thường Native Cancel 50 Image Layers — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

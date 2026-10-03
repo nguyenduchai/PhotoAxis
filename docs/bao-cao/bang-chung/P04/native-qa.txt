@@ -1,0 +1,57 @@
+PhotoAxis P04 native QA — 25–26/09/2026, MacBookPro18,3, M1 Pro/32 GiB,
+macOS 27.0, Retina 2x. App 1.0.0 (1), baseline 1.0-draft.3.
+Only self-authored grid-corners.png fixture (640x480). No personal photos.
+All UI input/screenshots via native CUA, not HTML or scripted AX substitutes.
+
+25/09 — Vietnamese:
+- Release QA isolated bundle. Open grid from native Open Panel, C starts Crop.
+- Found stale Hand tool label; fixed OptionsBar to label the active Crop session.
+- Rebuilt/retested; PhotoAxis Crop Final shows Cat xen correctly (actual AX uses Vietnamese accents).
+- Actual CUA drag bottom-right handle from full 640x480 to 320x240; outside shade,
+  eight handles, thirds grid. Return commits 320x240. Cmd+Z restores 640x480,
+  Cmd+Shift+Z restores 320x240. Captures crop-preview-vi, crop-applied-vi, crop-undo-vi.
+- Canvas Size 640x480, top-left anchor: result retains only top-left 320x240;
+  remaining area transparent. Captures canvas-size-vi and clip-after-expand-vi.
+- Rotate clockwise: canvas becomes 480x640, red corner moves to top-right;
+  removed pixels remain transparent. rotate-vi image and AX. Undo chain restores original.
+- PPI-only 72 -> 300 on 320x240 retained pixel dimensions in the earlier QA copy;
+  code/model test independently checks all layer matrices unchanged.
+
+26/09 — English, same isolated preference domain, restart after language selection:
+- Ratio 16:9 produces 640x360. Swap yields Custom 9:16; Reset gives 270x480.
+  Grid unchecked, then Escape cancels without changing 640x480. ratio-swap-reset-en.ax.txt.
+- W x H 8001x120 rejects Apply. Found live typing 160 still invalid because each
+  intermediate digit was fitted against the previous preview. Fixed CropState
+  configurationBasis; failed candidates no longer replace valid geometry.
+- Rebuilt with regression for sequential 1/16/160/8001/160 input. Native recheck:
+  8001x120 invalid, then 160x120 valid; Apply becomes enabled. crop-wxh-final-en,
+  invalid-size-final-en.ax.txt, valid-size-final-en.ax.txt.
+- Return leaves the field editor; Return on canvas commits 160x120. Four corner
+  colors retained, no overlay in renderer output. crop-result-final-en image/AX.
+- Undo restores 640x480. Image Size width 320 automatically sets height 240;
+  PPI 300 and Apply yield 320x240/300. image-size-final-en image/AX.
+- Flip Horizontal swaps red/green and blue/yellow in the expected orientation;
+  flip-final-en image/AX. C then H opens Apply/Discard/Cancel; Cancel preserves
+  the Crop session, explicit Crop Cancel returns to Hand. resolve-final-en.ax.txt.
+- Quit during an invalid Crop also showed disabled Apply; Discard then Don't Save
+  closed only the QA fixture. No save success is claimed.
+
+Final boundary guard: added rejection when finite Custom Ratio operands divide
+into infinity/zero; tested with a 308-digit numerator and tiny decimal denominator.
+All 47 tests pass on final source, Release passes. QA copy replaced/re-signed;
+confirmed app quit completely, relaunched final executable, opened fixture and
+entered Crop. final-launch-en.ax.txt records a subsequent successful fresh launch.
+Full UI chain was not repeated after this guard-only addition. UUID comparison
+in binary-verification.log binds the final QA executable to the Release binary.
+
+Capture provenance:
+- *-vi and ratio-swap-reset-en / invalid-size-en: before live-input fix.
+- *-final-en except final-launch: after live-input fix, before ratio overflow guard.
+- final-launch-en: final guard version. No visual layout changes after captured UI.
+- crop-*.png without native language suffix are image-only outputs regenerated
+  by the final hosted tests, not screenshots. layout-measurements.json is empty
+  workspace layout regression evidence, not every populated Crop state.
+
+Remaining acceptance: editable Type/Shape P06/P07, Save P09, Export P10, recovery
+P11, full A01-A43/R01-R12, macOS 14/non-Retina/physical pinch/display switching,
+IME and P12 benchmarks. Hosted responder/pixel checks do not substitute those.

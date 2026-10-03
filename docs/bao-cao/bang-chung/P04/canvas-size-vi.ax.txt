@@ -1,0 +1,31 @@
+Window: "Kích thước vùng vẽ…", App: PhotoAxis Crop Final.
+0 tờ Secondary Actions: Raise
+	1 text Chiều rộng (px)
+	2 trường văn bản (settable) Description: Chiều rộng (px), Value: 640
+	3 text Chiều cao (px)
+	4 trường văn bản (settable) Description: Chiều cao (px), Value: 480
+	5 text Điểm neo
+	6 nút chuyển đổi ↖, Description: Điểm neo 1, 1, Value: on
+	7 nút chuyển đổi ↑, Description: Điểm neo 1, 2, Value: off
+	8 nút chuyển đổi ↗, Description: Điểm neo 1, 3, Value: off
+	9 nút chuyển đổi ←, Description: Điểm neo 2, 1, Value: off
+	10 nút chuyển đổi •, Description: Điểm neo 2, 2, Value: off
+	11 nút chuyển đổi →, Description: Điểm neo 2, 3, Value: off
+	12 nút chuyển đổi ↙, Description: Điểm neo 3, 1, Value: off
+	13 nút chuyển đổi ↓, Description: Điểm neo 3, 2, Value: off
+	14 nút chuyển đổi ↘, Description: Điểm neo 3, 3, Value: off
+	15 text Đổi canvas, không co giãn lớp. Điểm neo xác định vị trí canvas cũ. Phần đã cắt vẫn bị ẩn bởi clip.
+	16 nút Hủy
+	17 nút Áp dụng
+18 menu bar
+	19 PhotoAxis Crop Final
+	20 Tệp
+	21 Chỉnh sửa
+	22 Ảnh
+	23 Lớp
+	24 Văn bản
+	25 Xem
+	26 Cửa sổ
+	27 Trợ giúp
+
+The focused UI element is 4 trường văn bản (settable) Description: Chiều cao (px), Value: 480

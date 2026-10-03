@@ -1,0 +1,11 @@
+{
+  "releaseUUID": "66727FF1-035D-3DBF-87B3-08D4960A2DBB",
+  "sourceBuildEvidence": "docs/bao-cao/bang-chung/P13/build-manifest.json",
+  "captureRepositoryCommit": "e4328a5",
+  "scope": "before progress display fix; actual native timer, Save/Open/Export and controlled VI/EN restart; QA namespace only",
+  "qaIDs": [
+    "com.photoaxis.qa.p15.native.vi",
+    "com.photoaxis.qa.p15.native.en"
+  ],
+  "qaDeepStrictVerified": true
+}

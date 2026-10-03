@@ -1,0 +1,39 @@
+Window: "Review OCR…", App: PhotoAxis.
+0 cửa sổ thông thường Review OCR…, ID: investigation.reviewWindow, Secondary Actions: Raise
+	1 text ID: investigation.analysisSummary, Value: SHA-256: b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24
+vi-VT / Vision revision 3
+ROI: 40,20,1520,450
+62,64,495,61: 1.0
+52,196,736,91: 1.0
+52,336,1059,91: 1.0 Automatic recognition — unconfirmed
+	2 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		3 vùng nhập văn bản ID: investigation.ocrRecognized, Value: HỒ SƠ ĐIỀU TRA
+Tài liệu kiểm thử tiếng Việt
+Không suy đoán phần không đọc được
+		4 thanh cuộn (disabled, settable, float) 0
+	5 text Reviewed / manually corrected text
+	6 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		7 vùng nhập văn bản (settable) ID: investigation.ocrConfirmed, Value: HỒ SƠ ĐIỀU TRA
+Tài liệu kiểm thử tiếng Việt
+Không suy đoán phần không đọc được
+		8 thanh cuộn (disabled, settable, float) 0
+	9 nút Confirm and save review, ID: investigation.confirmOCR
+	10 text Confirmation and log saved. The initial OCR remains unchanged.
+	11 nút đóng
+	12 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	13 text Review OCR…
+14 menu bar
+	15 PhotoAxis Investigation2 verified en
+	16 File
+	17 Edit
+	18 Image
+	19 Layer
+	20 Type
+	21 View
+	22 Window
+	23 Investigation
+	24 Help
+
+The focused UI element is 3 vùng nhập văn bản ID: investigation.ocrRecognized, Value: HỒ SƠ ĐIỀU TRA
+Tài liệu kiểm thử tiếng Việt
+Không suy đoán phần không đọc được

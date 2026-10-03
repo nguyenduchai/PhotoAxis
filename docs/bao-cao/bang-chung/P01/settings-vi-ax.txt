@@ -1,0 +1,32 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Ngôn ngữ giao diện
+	2 nút bật lên Description: Ngôn ngữ giao diện, Value: English, ID: settings.language
+	3 text Mở lại PhotoAxis để áp dụng ngôn ngữ mới. Nội dung tài liệu không thay đổi. Độ rộng bảng
+	4 trường văn bản (settable) Description: Độ rộng bảng, Value: 300, ID: settings.panelWidth
+	5 máy tập đi bộ Description: Độ rộng bảng, Value: 300, Secondary Actions: Increment, Decrement
+		6 nút mũi tên tăng dần
+		7 nút mũi tên giảm dần
+	8 text pt (260–420) Bố trí công cụ
+	9 Description: Bố trí công cụ, ID: settings.toolColumns
+		10 nút radio Description: Một cột, Value: 1
+		11 nút radio Description: Hai cột, Value: 0
+	12 nút đóng
+	13 nút thu phóng (disabled)
+	14 text Cài đặt…
+15 menu bar
+	16 PhotoAxis
+	17 Tệp
+	18 Chỉnh sửa
+	19 Ảnh
+	20 Lớp
+	21 Văn bản
+	22 Xem
+	23 Cửa sổ
+	24 Trợ giúp
+
+Selected text: ```
+300
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

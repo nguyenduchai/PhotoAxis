@@ -1,0 +1,48 @@
+{
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceName": "My Mac",
+        "modelName": "MacBook Pro",
+        "osBuildNumber": "26A434",
+        "osVersion": "27.0.1",
+        "platform": "macOS"
+      },
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "passedTests": 130,
+      "skippedTests": 4,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription": "PhotoAxis · Built with macOS 27.0.1",
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1790932224.234,
+  "passedTests": 130,
+  "result": "Passed",
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "[Internal] Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions",
+      "sourceURL": "file://$REPO/Tests/PhotoAxisAppTests/ExportTests.swift"
+    }
+  ],
+  "skippedTests": 4,
+  "startTime": 1790932183.516,
+  "statistics": [],
+  "testFailures": [],
+  "title": "Test - PhotoAxis",
+  "topInsights": [
+    {
+      "category": "Longest Test Runs",
+      "impact": "46% of duration",
+      "text": "2 longest test runs with outlier durations exceeding 3.72s (three standard deviations)"
+    }
+  ],
+  "totalTestCount": 134
+}

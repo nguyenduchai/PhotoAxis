@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-02T04:33:57.648741+00:00",
+  "architecture": "arm64",
+  "releaseUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "codesignDeepStrictRelease": "PASS",
+  "codesignDeepStrictPackagedApp": "PASS",
+  "signatureType": "ad-hoc",
+  "hardenedRuntime": false,
+  "developerIDApplicationPresent": false,
+  "appleDevelopmentPresent": true,
+  "testResultsReadAgain": [
+    {
+      "resultBundle": "$BUILD_ROOT/test-results/PhotoAxis-20261002-054851-9381.xcresult",
+      "result": "Passed",
+      "passedTests": 113,
+      "failedTests": 0,
+      "skippedTests": 4,
+      "startTime": 1790894934.909,
+      "finishTime": 1790894980.035,
+      "runtimeWarningsCount": 2
+    },
+    {
+      "resultBundle": "$BUILD_ROOT/test-results/Benchmark-20261002-044106-95651.xcresult",
+      "result": "Passed",
+      "passedTests": 3,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "startTime": 1790890869.933,
+      "finishTime": 1790890995.703,
+      "runtimeWarningsCount": 0
+    }
+  ],
+  "hostOS": "27.0.1",
+  "xcode": "Xcode 27.0\nBuild version 27A266a",
+  "scope": "Read existing xcresults and verify unchanged local bundles. No new build/functional/native/benchmark run, no signing/upload."
+}

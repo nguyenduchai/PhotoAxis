@@ -1,0 +1,12 @@
+{
+  "cacheBytesAfterRelease" : 0,
+  "cycles" : 24,
+  "decodedCacheBytes" : 1228800,
+  "historyBytes" : 471875,
+  "historySteps" : 49,
+  "layerCount" : 6,
+  "scope" : "small fixture stability; not P12 full quota benchmark",
+  "seconds" : 0.14053087500360562,
+  "sourceBytes" : 6986,
+  "sourceCount" : 1
+}

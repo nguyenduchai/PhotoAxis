@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "build": "3",
+  "tag": "v1.0.0",
+  "sourceRepository": "https://github.com/nguyenduchai/PhotoAxis",
+  "sourceCommit": null,
+  "sourceVisibility": "public",
+  "distributionRepository": "https://github.com/nguyenduchai/PhotoAxis",
+  "distributionTargetCommit": null,
+  "websiteURL": "https://nguyenduchai.github.io/PhotoAxis/",
+  "websiteCommit": null,
+  "artifact": "PhotoAxis-1.0.0-arm64.dmg",
+  "artifactSHA256": null,
+  "distributionManifest": null,
+  "siteArtifact": null,
+  "releaseNotes": "docs/RELEASE_NOTES.md",
+  "publicReady": false,
+  "status": "BLOCKED_EXTERNAL",
+  "sourceLicense": "GPL-3.0-only",
+  "websiteStatus": "CONFIGURED_PENDING_DEPLOYMENT",
+  "supportURL": "https://github.com/nguyenduchai/PhotoAxis/issues"
+}

@@ -1,0 +1,1 @@
+Synthetic fixtures only. OCR: Arial 60pt, 1600x640, four Vietnamese lines. Video: 320x200 H.264, 90-degree track transform, four red/green/blue/yellow presentation samples at 0/100/350/900 ms. No real case or personal data.

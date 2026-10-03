@@ -1,0 +1,80 @@
+{
+  "editedProjectNativeEnglishAndVietnameseExportRGBAByteIdentical" : true,
+  "exports" : [
+    {
+      "alphaInfo" : 3,
+      "bitsPerComponent" : 8,
+      "file" : "native-png-original-256.png",
+      "GPSAbsent" : true,
+      "height" : 192,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 300,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 256
+    },
+    {
+      "alphaInfo" : 5,
+      "bitsPerComponent" : 8,
+      "file" : "native-jpeg-200.jpg",
+      "GPSAbsent" : true,
+      "height" : 150,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 72,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 200
+    },
+    {
+      "alphaInfo" : 3,
+      "bitsPerComponent" : 8,
+      "file" : "final-perspective.png",
+      "GPSAbsent" : true,
+      "height" : 300,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 144,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 400
+    },
+    {
+      "alphaInfo" : 3,
+      "bitsPerComponent" : 8,
+      "file" : "final-edited-en.png",
+      "GPSAbsent" : true,
+      "height" : 300,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 144,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 400
+    },
+    {
+      "alphaInfo" : 5,
+      "bitsPerComponent" : 8,
+      "file" : "final-edited-en.jpg",
+      "GPSAbsent" : true,
+      "height" : 150,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 72,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 200
+    },
+    {
+      "alphaInfo" : 3,
+      "bitsPerComponent" : 8,
+      "file" : "final-edited-reopened-vi.png",
+      "GPSAbsent" : true,
+      "height" : 300,
+      "ICCEmbedded" : true,
+      "orientation" : 1,
+      "ppi" : 144,
+      "profile" : "sRGB IEC61966-2.1",
+      "width" : 400
+    }
+  ],
+  "releaseUUIDForFinalExports" : "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "scope" : "actual native outputs; earlier two exports are UUID667, four final outputs UUIDD54; camera HDR and real IME remain separate",
+  "status" : "PASS"
+}

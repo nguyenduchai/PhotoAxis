@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-10-02T04:09:43.235Z",
+  "scope": "Local current VI/EN website, CSS 1280x800 and 390x844; not public HTTPS",
+  "observationNote": "Initial English image sampling occurred before lazy images completed. Final samples below were taken after page load and confirmed naturalWidth for all six images.",
+  "nativeBinaryUUID": "D54A11BC-024A-3419-B64C-9D70715C2ED9",
+  "checks": [
+    {
+      "allImagesLoaded": true,
+      "caption": [
+        "Trước Apply · ảnh chụp native bản Release local, 02/10/2026.",
+        "Sau Apply · cùng bản Release local, giữ lớp ảnh, chữ và hình chỉnh sửa được.",
+        "Startup native thực sau dừng bất thường bản QA, dùng snapshot timer đã hoàn tất. Ảnh từ Release local hiện tại sau sửa dòng tiến trình.",
+        "PNG xuất thực P12 sau Save/mở lại và sửa tiếp; đây là ảnh đầu ra, không phải screenshot UI."
+      ],
+      "downloadDisabled": true,
+      "height": 800,
+      "lang": "vi",
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "allImagesLoaded": true,
+      "caption": [
+        "Trước Apply · ảnh chụp native bản Release local, 02/10/2026.",
+        "Sau Apply · cùng bản Release local, giữ lớp ảnh, chữ và hình chỉnh sửa được.",
+        "Startup native thực sau dừng bất thường bản QA, dùng snapshot timer đã hoàn tất. Ảnh từ Release local hiện tại sau sửa dòng tiến trình.",
+        "PNG xuất thực P12 sau Save/mở lại và sửa tiếp; đây là ảnh đầu ra, không phải screenshot UI."
+      ],
+      "downloadDisabled": true,
+      "height": 844,
+      "lang": "vi",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "allImagesLoaded": true,
+      "caption": [
+        "Before Apply · native local Release capture, 2 October 2026.",
+        "After Apply · the same local Release with editable image, text and shape layers.",
+        "Actual native startup after a controlled QA stop, using a completed timer snapshot. Capture from the current local Release after the progress display fix.",
+        "Actual P12 PNG export after Save/reopen and continued editing; image output, not a UI screenshot."
+      ],
+      "downloadDisabled": true,
+      "height": 800,
+      "lang": "en",
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "allImagesLoaded": true,
+      "caption": [
+        "Before Apply · native local Release capture, 2 October 2026.",
+        "After Apply · the same local Release with editable image, text and shape layers.",
+        "Actual native startup after a controlled QA stop, using a completed timer snapshot. Capture from the current local Release after the progress display fix.",
+        "Actual P12 PNG export after Save/reopen and continued editing; image output, not a UI screenshot."
+      ],
+      "downloadDisabled": true,
+      "height": 844,
+      "lang": "en",
+      "scrollWidth": 375,
+      "width": 390
+    }
+  ]
+}

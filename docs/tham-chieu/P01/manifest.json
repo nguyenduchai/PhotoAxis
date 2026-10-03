@@ -1,0 +1,13 @@
+{
+  "stage": "P01",
+  "frozenAt": "2026-09-20",
+  "specification": "1.0-draft.3",
+  "sha256": {
+    "adobe-workspace-reference.jpg": "5f2d30d1c3f6c97859cdda322ad8d7c8b4cbb8027c8615678bd582795cf10d47",
+    "mockup-workspace-draft2.png": "2cc0ed960f7b6b585918d4da6e5c9a221ac4fd4196c99d3f931f040844d06e9f"
+  },
+  "publicDistributionExcluded": [
+    "adobe-workspace-reference.jpg"
+  ],
+  "note": "Historical Adobe hash only; local reference image is excluded from public repository."
+}

@@ -1,0 +1,79 @@
+Window: "A04-1080-transparent — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-1080-transparent — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Văn bản Bấm để nhập chữ. Return xuống dòng; Cmd+Return áp dụng; Esc hủy.
+	2 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	3 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	4 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	5 nút Description: Di chuyển (V), ID: tool.move
+	6 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	7 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	8 nút Description: Văn bản (T), ID: tool.type
+	9 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	10 nút Description: Bàn tay (H), ID: tool.hand
+	11 nút Description: Thu phóng (Z), ID: tool.zoom
+	12 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 nút chuyển đổi A04-1080-transparent, Value: on
+	15 nút Đóng tab
+	16 nút chuyển đổi A04-landscape-white, Value: off
+	17 nút Đóng tab
+	18 nút chuyển đổi A04-portrait-black, Value: off
+	19 nút Đóng tab
+	20 nút chuyển đổi A04-A4-white, Value: off
+	21 nút Đóng tab
+	22 nút chuyển đổi A04-custom-640, Value: off
+	23 nút Đóng tab
+	24 trường văn bản (settable) Description: Thu phóng, Value: 113,33 %
+	25 text Value: 1.080 × 1.080 px · 72,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	26 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	27 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	28 trường văn bản (settable) Description: HEX, Value: #000000
+	29 trường văn bản (settable) Description: Alpha %, Value: 100
+	30 trường văn bản (settable) Description: Đỏ, Value: 0
+	31 trường văn bản (settable) Description: Xanh lá, Value: 0
+	32 trường văn bản (settable) Description: Xanh dương, Value: 0
+	33 text Màu tiền cảnh Màu nền HEX Alpha % R G B Màu
+	34 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	35 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		36 nút radio Description: Thuộc tính, Value: 0
+		37 nút radio Description: Lịch sử, Value: 1
+	38 text Lớp Chưa có lớp.
+Mở hoặc tạo tài liệu để bắt đầu.
+	39 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		40 bảng Lịch sử
+			41 row (selected)
+				42 ô (selected)
+					43 text Trạng thái đầu
+			44 row (selectable)
+				45 ô
+					46 text Tạo chữ
+		47 thanh cuộn (disabled, settable, float) 0
+	48 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	49 text Độ mờ
+	50 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	51 thanh trượt (disabled) Description: Độ mờ, Value: 100, Secondary Actions: Increment, Decrement
+		52 chỉ báo giá trị 100
+	53 nút Thêm lớp
+	54 nút (disabled) Description: Đổi tên lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	55 nút (disabled) Description: Đưa lớp lên, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	56 nút (disabled) Description: Đưa lớp xuống, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	57 nút (disabled) Description: Nhân bản lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	58 nút (disabled) Description: Xóa lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	59 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	60 nút đóng
+	61 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	62 nút thu nhỏ
+	63 text A04-1080-transparent — PhotoAxis
+64 menu bar
+	65 PhotoAxis Investigation2 verified vi
+	66 Tệp
+	67 Chỉnh sửa
+	68 Ảnh
+	69 Lớp
+	70 Văn bản
+	71 Xem
+	72 Cửa sổ
+	73 Điều tra
+	74 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường A04-1080-transparent — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

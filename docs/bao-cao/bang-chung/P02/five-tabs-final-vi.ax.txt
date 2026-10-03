@@ -1,0 +1,73 @@
+Window: "grid-exif-6.jpg — PhotoAxis", App: PhotoAxis QA Verified.
+0 cửa sổ thông thường grid-exif-6.jpg — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút (disabled) Description: Di chuyển (V), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Nhóm cắt xén — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.crop
+	10 nút (disabled) Description: Lấy mẫu màu (I), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.eyedropper
+	11 nút (disabled) Description: Văn bản (T), Help: Chức năng chỉnh sửa tài liệu đang được phát triển., ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Nhóm hình dạng — Bấm, nhấn giữ hoặc chuột phải để xem nhóm. Các công cụ chưa khả dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu (disabled) Description: Màu nền, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu (disabled) Description: Màu tiền cảnh, Help: Chức năng chỉnh sửa tài liệu đang được phát triển., Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi alpha-edges.png •, Value: off
+	18 nút Đóng tab
+	19 nút chuyển đổi colors-display-p3.png •, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi colors-srgb.png •, Value: off
+	22 nút Đóng tab
+	23 nút chuyển đổi grid-corners.png •, Value: off
+	24 nút Đóng tab
+	25 nút chuyển đổi grid-exif-6.jpg •, Value: on
+	26 nút Đóng tab
+	27 trường văn bản (settable) Description: Thu phóng, Value: 191,25 %
+	28 text 480 × 640 px · 72,00 PPI · Chưa lưu sRGB Màu
+	29 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	30 hình ảnh Description: Mẫu màu; chưa thể chỉnh sửa, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	31 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		32 nút radio Description: Thuộc tính, Value: 1
+		33 nút radio Description: Lịch sử, Value: 0
+	34 text 480 × 640 px
+72,00 PPI · sRGB
+Số lớp: 1 Lớp
+	35 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		36 bảng
+			37 row (selected)
+				38 ô (selected)
+					39 text grid-exif-6.jpg
+		40 thanh cuộn (disabled, settable, float) 0
+	41 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	42 text Độ mờ
+	43 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	44 text R
+	45 trường văn bản (disabled) Description: Đỏ, Value: 0
+	46 text G
+	47 trường văn bản (disabled) Description: Xanh lá, Value: 0
+	48 text B
+	49 trường văn bản (disabled) Description: Xanh dương, Value: 0
+	50 nút (disabled) Description: Thêm lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	51 nút (disabled) Description: Nhân bản lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	52 nút (disabled) Description: Xóa lớp, Help: Chức năng chỉnh sửa tài liệu đang được phát triển.
+	53 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	54 nút đóng
+	55 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	56 nút thu nhỏ
+	57 text grid-exif-6.jpg — PhotoAxis
+58 menu bar
+	59 PhotoAxis QA Verified
+	60 Tệp
+	61 Chỉnh sửa
+	62 Ảnh
+	63 Lớp
+	64 Văn bản
+	65 Xem
+	66 Cửa sổ
+	67 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường grid-exif-6.jpg — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,2 @@
+Available sources: ["com.apple.keylayout.ABC"]
+Selected: com.apple.keylayout.ABC

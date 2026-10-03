@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "sourceCommit": "826bebf61c068ca1864fdf8a20f6b410ca13aa2f",
+  "caseID": "042310DD-A20F-4240-AA7F-63B42986C9F4",
+  "itemID": "BDCAE277-5A30-4FAD-AC95-02859D97D41C",
+  "original": {
+    "bytes": 7710,
+    "sha256": "8edc84ccc6009f065b033ca26cc1bc25e13d5879571d1faffa6b64420105f765",
+    "matchesFixtureByteForByte": true,
+    "permissions": "0o444"
+  },
+  "ledger": {
+    "events": 35,
+    "sha256LinksIndependentlyVerified": true,
+    "currentCaseStateDigestVerified": true,
+    "exportedEvents": 34,
+    "exportCompletionRemainsInCase": true,
+    "incompleteStarts": [
+      9,
+      11
+    ],
+    "intakeArchiveHash": "1352792748846f8adabbf66e9ae746dc7abd6f5c818808a510a34ea0bb51de06",
+    "checkpointHash": "1352792748846f8adabbf66e9ae746dc7abd6f5c818808a510a34ea0bb51de06"
+  },
+  "PNG": {
+    "size": [
+      640,
+      480
+    ],
+    "maskedPixels": 2035,
+    "allMaskPixelsOpaqueBlack": true
+  },
+  "PDF": {
+    "pages": 1,
+    "size": "A4",
+    "raster": [
+      1240,
+      1754
+    ],
+    "textSelectable": false,
+    "annotations": false,
+    "fonts": false,
+    "embeddedFiles": false
+  },
+  "pan": {
+    "pointerPixels": [
+      50,
+      30
+    ],
+    "screenshots": [
+      {
+        "view": "source",
+        "before": [
+          41,
+          525
+        ],
+        "after": [
+          91,
+          555
+        ],
+        "delta": [
+          50,
+          30
+        ]
+      },
+      {
+        "view": "processed",
+        "before": [
+          945,
+          525
+        ],
+        "after": [
+          995,
+          555
+        ],
+        "delta": [
+          50,
+          30
+        ]
+      }
+    ]
+  },
+  "receipts": [
+    {
+      "file": "verified-reviewed.png",
+      "sha256": "2dae46dd3027ce8fe9b3a9cf5535f1127449ed495c1e9c497b038c86704889dd",
+      "matchingReceipts": [
+        33
+      ]
+    },
+    {
+      "file": "verified-English-A4.pdf",
+      "sha256": "ad6aa8abcad65108b4672baf21485a0bac2f6e5a8daefa8dbff0eead7f739f2f",
+      "matchingReceipts": [
+        30
+      ]
+    },
+    {
+      "file": "verified-processing-log.json",
+      "sha256": "b1d4fd7cf467846c5a87fdbfcdace432c9ee04891f2eeaa16848ab4f4c69072b",
+      "matchingReceipts": [
+        35
+      ]
+    },
+    {
+      "file": "native-source-catalog.json",
+      "sha256": "176aa9e6e4293acedac623a812bd2e4358b1daff1d9a2a0de30348ea782a764b",
+      "matchingReceipts": [
+        17
+      ]
+    }
+  ]
+}

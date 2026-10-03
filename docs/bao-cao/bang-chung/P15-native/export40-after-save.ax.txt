@@ -1,0 +1,384 @@
+The following is a diff from the previous accessibility tree for Window: "PhotoAxis benchmark — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 31-40
+~29 cửa sổ thông thường PhotoAxis benchmark — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+~	30 text Hand
++	31 nút Fit on Screen
++	32 nút 100%
++	33 text Drag or scroll to pan the canvas
++	34 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
++	35 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
++	36 nút Description: Switch Tools between one and two columns, ID: tools.columns
++	37 nút Description: Move (V), ID: tool.move
++	38 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
++	39 nút Description: Eyedropper (I), ID: tool.eyedropper
++	40 nút Description: Type (T), ID: tool.type
++	41 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
++	42 nút Description: Hand (H), ID: tool.hand
++	43 nút Description: Zoom (Z), ID: tool.zoom
++	44 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	45 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	46 nút chuyển đổi P15 Native Mixed Before, Value: off
++	47 nút Close tab
++	48 nút chuyển đổi PhotoAxis benchmark, Value: on
++	49 nút Close tab
++	50 trường văn bản (settable) Description: Zoom, Value: 21,58 %
++	51 text Help: Rendering and writing export: PhotoAxis benchmark, Value: 8.000 × 5.000 px · 144,00 PPI · Saved sRGB
++	52 nút Cancel task
++	53 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	54 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	55 trường văn bản (settable) Description: HEX, Value: #000000
++	56 trường văn bản (settable) Description: Alpha %, Value: 100
++	57 trường văn bản (settable) Description: Red, Value: 0
++	58 trường văn bản (settable) Description: Green, Value: 0
++	59 trường văn bản (settable) Description: Blue, Value: 0
++	60 text Foreground Color Background Color HEX Alpha % R G B
++	61 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		62 hộp kiểm Fill, Value: 1, ID: shape.fill
++		63 text Fill Color
++		64 bảng màu Description: Fill Color, Value: rgb 0.2 0.2 0.8 0.3, ID: shape.fillColor, Secondary Actions: Hiển thị bảng màu
++		65 text Stroke
++		66 bảng màu Description: Stroke, Value: rgb 0 0 0 1, ID: shape.stroke, Secondary Actions: Hiển thị bảng màu
++		67 text Stroke (px)
++		68 trường văn bản (settable) Description: Stroke (px), Value: 0, ID: shape.strokeWidth
++		69 text Width (px)
++		70 trường văn bản (settable) Description: Width (px), Value: 600, ID: document.width
++		71 text Height (px)
++		72 trường văn bản (settable) Description: Height (px), Value: 450, ID: document.height
++		73 text Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies.
++		74 thanh cuộn (settable, float) 1
++			75 chỉ báo giá trị (settable, float) 1
++			76 nút mũi tên tăng dần
++			77 nút mũi tên giảm dần
++			78 nút trang tăng dần
++			79 nút trang giảm dần
++	80 text Color
++	81 nút Description: Collapse Panels, ID: sidebar.collapse
++	82 Description: Properties and History, ID: sidebar.inspectorTabs
++		83 nút radio Description: Properties, Value: 1
++		84 nút radio Description: History, Value: 0
++	85 text Layers
++	86 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		87 bảng
++			88 row (selected)
++				89 ô (selected)
++					90 nút Description: Toggle Visibility: Typed 46, Help: Toggle Visibility
++					91 hình ảnh
++					92 text Help: Typed 46, Value: Typed 46 Shape
++					93 nút Description: Toggle Lock: Typed 46, Help: Toggle Lock
++			94 row (selectable)
++				95 ô
++					96 nút Description: Toggle Visibility: Typed 45, Help: Toggle Visibility
++					97 hình ảnh
++					98 text Help: Typed 45, Value: Typed 45 Shape
++					99 nút Description: Toggle Lock: Typed 45, Help: Toggle Lock
++			100 row (selectable)
++				101 ô
++					102 nút Description: Toggle Visibility: Typed 44, Help: Toggle Visibility
++					103 hình ảnh
++					104 text Help: Typed 44, Value: Typed 44 Shape
++					105 nút Description: Toggle Lock: Typed 44, Help: Toggle Lock
++			106 row (selectable)
++				107 ô
++					108 nút Description: Toggle Visibility: Typed 43, Help: Toggle Visibility
++					109 hình ảnh
++					110 text Help: Typed 43, Value: Typed 43 Shape
++					111 nút Description: Toggle Lock: Typed 43, Help: Toggle Lock
++			112 row (selectable)
++				113 ô
++					114 nút Description: Toggle Visibility: Typed 42, Help: Toggle Visibility
++					115 hình ảnh
++					116 text Help: Typed 42, Value: Typed 42 Shape
++					117 nút Description: Toggle Lock: Typed 42, Help: Toggle Lock
++			118 row (selectable)
++				119 ô
++					120 nút Description: Toggle Visibility: Typed 41, Help: Toggle Visibility
++					121 hình ảnh
++					122 text Help: Typed 41, Value: Typed 41 Shape
++					123 nút Description: Toggle Lock: Typed 41, Help: Toggle Lock
++			124 row (selectable)
++				125 ô
++					126 nút Description: Toggle Visibility: Typed 40, Help: Toggle Visibility
++					127 hình ảnh
++					128 text Help: Typed 40, Value: Typed 40 Shape
++					129 nút Description: Toggle Lock: Typed 40, Help: Toggle Lock
++			130 row (selectable)
++				131 ô
++					132 nút Description: Toggle Visibility: Typed 39, Help: Toggle Visibility
++					133 hình ảnh
++					134 text Help: Typed 39, Value: Typed 39 Shape
++					135 nút Description: Toggle Lock: Typed 39, Help: Toggle Lock
++			136 row (selectable)
++				137 ô
++					138 nút Description: Toggle Visibility: Typed 38, Help: Toggle Visibility
++					139 hình ảnh
++					140 text Help: Typed 38, Value: Typed 38 Shape
++					141 nút Description: Toggle Lock: Typed 38, Help: Toggle Lock
++			142 row (selectable)
++				143 ô
++					144 nút Description: Toggle Visibility: Typed 37, Help: Toggle Visibility
++					145 hình ảnh
++					146 text Help: Typed 37, Value: Typed 37 Shape
++					147 nút Description: Toggle Lock: Typed 37, Help: Toggle Lock
++			148 row (selectable)
++				149 ô
++					150 nút Description: Toggle Visibility: Typed 36, Help: Toggle Visibility
++					151 hình ảnh
++					152 text Help: Typed 36, Value: Typed 36 Shape
++					153 nút Description: Toggle Lock: Typed 36, Help: Toggle Lock
++			154 row (selectable)
++				155 ô
++					156 nút Description: Toggle Visibility: Typed 35, Help: Toggle Visibility
++					157 hình ảnh
++					158 text Help: Typed 35, Value: Typed 35 Shape
++					159 nút Description: Toggle Lock: Typed 35, Help: Toggle Lock
++			160 row (selectable)
++				161 ô
++					162 nút Description: Toggle Visibility: Typed 34, Help: Toggle Visibility
++					163 hình ảnh
++					164 text Help: Typed 34, Value: Typed 34 Shape
++					165 nút Description: Toggle Lock: Typed 34, Help: Toggle Lock
++			166 row (selectable)
++				167 ô
++					168 nút Description: Toggle Visibility: Typed 33, Help: Toggle Visibility
++					169 hình ảnh
++					170 text Help: Typed 33, Value: Typed 33 Shape
++					171 nút Description: Toggle Lock: Typed 33, Help: Toggle Lock
++			172 row (selectable)
++				173 ô
++					174 nút Description: Toggle Visibility: Typed 32, Help: Toggle Visibility
++					175 hình ảnh
++					176 text Help: Typed 32, Value: Typed 32 Shape
++					177 nút Description: Toggle Lock: Typed 32, Help: Toggle Lock
++			178 row (selectable)
++				179 ô
++					180 nút Description: Toggle Visibility: Typed 31, Help: Toggle Visibility
++					181 hình ảnh
++					182 text Help: Typed 31, Value: Typed 31 Shape
++					183 nút Description: Toggle Lock: Typed 31, Help: Toggle Lock
++			184 row (selectable)
++				185 ô
++					186 nút Description: Toggle Visibility: Typed 30, Help: Toggle Visibility
++					187 hình ảnh
++					188 text Help: Typed 30, Value: Typed 30 Shape
++					189 nút Description: Toggle Lock: Typed 30, Help: Toggle Lock
++			190 row (selectable)
++				191 ô
++					192 nút Description: Toggle Visibility: Typed 29, Help: Toggle Visibility
++					193 hình ảnh
++					194 text Help: Typed 29, Value: Typed 29 Shape
++					195 nút Description: Toggle Lock: Typed 29, Help: Toggle Lock
++			196 row (selectable)
++				197 ô
++					198 nút Description: Toggle Visibility: Typed 28, Help: Toggle Visibility
++					199 hình ảnh
++					200 text Help: Typed 28, Value: Typed 28 Shape
++					201 nút Description: Toggle Lock: Typed 28, Help: Toggle Lock
++			202 row (selectable)
++				203 ô
++					204 nút Description: Toggle Visibility: Typed 27, Help: Toggle Visibility
++					205 hình ảnh
++					206 text Help: Typed 27, Value: Typed 27 Shape
++					207 nút Description: Toggle Lock: Typed 27, Help: Toggle Lock
++			208 row (selectable)
++				209 ô
++					210 nút Description: Toggle Visibility: Typed 26, Help: Toggle Visibility
++					211 hình ảnh
++					212 text Help: Typed 26, Value: Typed 26 Shape
++					213 nút Description: Toggle Lock: Typed 26, Help: Toggle Lock
++			214 row (selectable)
++				215 ô
++					216 nút Description: Toggle Visibility: Typed 25, Help: Toggle Visibility
++					217 hình ảnh
++					218 text Help: Typed 25, Value: Typed 25 Shape
++					219 nút Description: Toggle Lock: Typed 25, Help: Toggle Lock
++			220 row (selectable)
++				221 ô
++					222 nút Description: Toggle Visibility: Typed 24, Help: Toggle Visibility
++					223 hình ảnh
++					224 text Help: Typed 24, Value: Typed 24 Shape
++					225 nút Description: Toggle Lock: Typed 24, Help: Toggle Lock
++			226 row (selectable)
++				227 ô
++					228 nút Description: Toggle Visibility: Typed 23, Help: Toggle Visibility
++					229 hình ảnh
++					230 text Help: Typed 23, Value: Typed 23 Shape
++					231 nút Description: Toggle Lock: Typed 23, Help: Toggle Lock
++			232 row (selectable)
++				233 ô
++					234 nút Description: Toggle Visibility: Typed 22, Help: Toggle Visibility
++					235 hình ảnh
++					236 text Help: Typed 22, Value: Typed 22 Shape
++					237 nút Description: Toggle Lock: Typed 22, Help: Toggle Lock
++			238 row (selectable)
++				239 ô
++					240 nút Description: Toggle Visibility: Typed 21, Help: Toggle Visibility
++					241 hình ảnh
++					242 text Help: Typed 21, Value: Typed 21 Shape
++					243 nút Description: Toggle Lock: Typed 21, Help: Toggle Lock
++			244 row (selectable)
++				245 ô
++					246 nút Description: Toggle Visibility: Typed 20, Help: Toggle Visibility
++					247 hình ảnh
++					248 text Help: Typed 20, Value: Typed 20 Shape
++					249 nút Description: Toggle Lock: Typed 20, Help: Toggle Lock
++			250 row (selectable)
++				251 ô
++					252 nút Description: Toggle Visibility: Typed 19, Help: Toggle Visibility
++					253 hình ảnh
++					254 text Help: Typed 19, Value: Typed 19 Shape
++					255 nút Description: Toggle Lock: Typed 19, Help: Toggle Lock
++			256 row (selectable)
++				257 ô
++					258 nút Description: Toggle Visibility: Typed 18, Help: Toggle Visibility
++					259 hình ảnh
++					260 text Help: Typed 18, Value: Typed 18 Shape
++					261 nút Description: Toggle Lock: Typed 18, Help: Toggle Lock
++			262 row (selectable)
++				263 ô
++					264 nút Description: Toggle Visibility: Typed 17, Help: Toggle Visibility
++					265 hình ảnh
++					266 text Help: Typed 17, Value: Typed 17 Shape
++					267 nút Description: Toggle Lock: Typed 17, Help: Toggle Lock
++			268 row (selectable)
++				269 ô
++					270 nút Description: Toggle Visibility: Typed 16, Help: Toggle Visibility
++					271 hình ảnh
++					272 text Help: Typed 16, Value: Typed 16 Shape
++					273 nút Description: Toggle Lock: Typed 16, Help: Toggle Lock
++			274 row (selectable)
++				275 ô
++					276 nút Description: Toggle Visibility: Typed 15, Help: Toggle Visibility
++					277 hình ảnh
++					278 text Help: Typed 15, Value: Typed 15 Shape
++					279 nút Description: Toggle Lock: Typed 15, Help: Toggle Lock
++			280 row (selectable)
++				281 ô
++					282 nút Description: Toggle Visibility: Typed 14, Help: Toggle Visibility
++					283 hình ảnh
++					284 text Help: Typed 14, Value: Typed 14 Shape
++					285 nút Description: Toggle Lock: Typed 14, Help: Toggle Lock
++			286 row (selectable)
++				287 ô
++					288 nút Description: Toggle Visibility: Typed 13, Help: Toggle Visibility
++					289 hình ảnh
++					290 text Help: Typed 13, Value: Typed 13 Shape
++					291 nút Description: Toggle Lock: Typed 13, Help: Toggle Lock
++			292 row (selectable)
++				293 ô
++					294 nút Description: Toggle Visibility: Typed 12, Help: Toggle Visibility
++					295 hình ảnh
++					296 text Help: Typed 12, Value: Typed 12 Shape
++					297 nút Description: Toggle Lock: Typed 12, Help: Toggle Lock
++			298 row (selectable)
++				299 ô
++					300 nút Description: Toggle Visibility: Typed 11, Help: Toggle Visibility
++					301 hình ảnh
++					302 text Help: Typed 11, Value: Typed 11 Shape
++					303 nút Description: Toggle Lock: Typed 11, Help: Toggle Lock
++			304 row (selectable)
++				305 ô
++					306 nút Description: Toggle Visibility: Typed 10, Help: Toggle Visibility
++					307 hình ảnh
++					308 text Help: Typed 10, Value: Typed 10 Shape
++					309 nút Description: Toggle Lock: Typed 10, Help: Toggle Lock
++			310 row (selectable)
++				311 ô
++					312 nút Description: Toggle Visibility: Typed 9, Help: Toggle Visibility
++					313 hình ảnh
++					314 text Help: Typed 9, Value: Typed 9 Shape
++					315 nút Description: Toggle Lock: Typed 9, Help: Toggle Lock
++			316 row
++				317 ô
++					318 nút Description: Toggle Visibility: Typed 8, Help: Toggle Visibility
++					319 hình ảnh
++					320 text Help: Typed 8, Value: Typed 8 Shape
++					321 nút Description: Toggle Lock: Typed 8, Help: Toggle Lock
++			322 row
++				323 ô
++					324 nút Description: Toggle Visibility: Typed 7, Help: Toggle Visibility
++					325 hình ảnh
++					326 text Help: Typed 7, Value: Typed 7 Shape
++					327 nút Description: Toggle Lock: Typed 7, Help: Toggle Lock
++			328 row
++				329 ô
++					330 nút Description: Toggle Visibility: Typed 6, Help: Toggle Visibility
++					331 hình ảnh
++					332 text Help: Typed 6, Value: Typed 6 Shape
++					333 nút Description: Toggle Lock: Typed 6, Help: Toggle Lock
++			334 row
++				335 ô
++					336 nút Description: Toggle Visibility: Typed 5, Help: Toggle Visibility
++					337 hình ảnh
++					338 text Help: Typed 5, Value: Typed 5 Shape
++					339 nút Description: Toggle Lock: Typed 5, Help: Toggle Lock
++			340 row
++				341 ô
++					342 nút Description: Toggle Visibility: Typed 4, Help: Toggle Visibility
++					343 hình ảnh
++					344 text Help: Typed 4, Value: Typed 4 Shape
++					345 nút Description: Toggle Lock: Typed 4, Help: Toggle Lock
++			346 row
++				347 ô
++					348 nút Description: Toggle Visibility: Typed 3, Help: Toggle Visibility
++					349 hình ảnh
++					350 text Help: Typed 3, Value: Typed 3 Text
++					351 nút Description: Toggle Lock: Typed 3, Help: Toggle Lock
++			352 row
++				353 ô
++					354 nút Description: Toggle Visibility: Typed 2, Help: Toggle Visibility
++					355 hình ảnh
++					356 text Help: Typed 2, Value: Typed 2 Text
++					357 nút Description: Toggle Lock: Typed 2, Help: Toggle Lock
++			358 row
++				359 ô
++					360 nút Description: Toggle Visibility: Typed 1, Help: Toggle Visibility
++					361 hình ảnh
++					362 text Help: Typed 1, Value: Typed 1 Text
++					363 nút Description: Toggle Lock: Typed 1, Help: Toggle Lock
++			364 row
++				365 ô
++					366 nút Description: Toggle Visibility: Typed 0, Help: Toggle Visibility
++					367 hình ảnh
++					368 text Help: Typed 0, Value: Typed 0 Text
++					369 nút Description: Toggle Lock: Typed 0, Help: Toggle Lock
++			370 row
++				371 ô
++					372 nút Description: Toggle Visibility: synthetic-8000x5000-3.jpg, Help: Toggle Visibility
++					373 hình ảnh
++					374 text Help: synthetic-8000x5000-3.jpg, Value: synthetic-8000x5000-3.jpg Image
++					375 nút Description: Toggle Lock: synthetic-8000x5000-3.jpg, Help: Toggle Lock
++			376 row
++				377 ô
++					378 nút Description: Toggle Visibility: synthetic-8000x5000-2.jpg, Help: Toggle Visibility
++					379 hình ảnh
++					380 text Help: synthetic-8000x5000-2.jpg, Value: synthetic-8000x5000-2.jpg Image
++					381 nút Description: Toggle Lock: synthetic-8000x5000-2.jpg, Help: Toggle Lock
++			382 row
++				383 ô
++					384 nút Description: Toggle Visibility: synthetic-8000x5000-1.jpg, Help: Toggle Visibility
++					385 hình ảnh
++					386 text Help: synthetic-8000x5000-1.jpg, Value: synthetic-8000x5000-1.jpg Image
++					387 nút Description: Toggle Lock: synthetic-8000x5000-1.jpg, Help: Toggle Lock
++		388 thanh cuộn (settable, float) 0.01024938875305625
++			389 chỉ báo giá trị (settable, float) 0.01024938875305625
++			390 nút mũi tên tăng dần
++			391 nút mũi tên giảm dần
++			392 nút trang tăng dần
++			393 nút trang giảm dần
++	394 nút bật lên (disabled) Description: Blend Mode, Value: Normal
++	395 text Opacity
++	396 trường văn bản (settable) Description: Opacity, Value: 100 %
++	397 thanh trượt (settable, float) Description: Opacity, Value: 100
++		398 chỉ báo giá trị (settable, float) 100
++	399 nút Add Layer
++	400 nút Rename Layer
++	401 nút Move Layer Up
++	402 nút Move Layer Down
++	403 nút Duplicate Layer
++	404 nút Delete Layer
++	405 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
++	406 nút đóng
++	407 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	408 nút thu nhỏ
++	409 text PhotoAxis benchmark — PhotoAxis
+The focused UI element is 29 cửa sổ thông thường PhotoAxis benchmark — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,175 @@
+PASS: Xcode project matches source inventory
+<REPO>/Sources/PhotoAxisApp/Localization/en.lproj/Localizable.strings: OK
+<REPO>/Sources/PhotoAxisApp/Localization/vi.lproj/Localizable.strings: OK
+PASS: 16 matching vi/en keys; static references resolved
+Config/Info.plist: OK
+PhotoAxis.xcodeproj/project.pbxproj: OK
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project PhotoAxis.xcodeproj -scheme PhotoAxis -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath <BUILD_ROOT>/DerivedData -resultBundlePath <BUILD_ROOT>/test-results/P00-20260920-203514-26388.xcresult CODE_SIGN_IDENTITY=- DEVELOPMENT_TEAM= test
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+    DEVELOPMENT_TEAM =
+
+Writing result bundle at path:
+	<BUILD_ROOT>/test-results/P00-20260920-203514-26388.xcresult
+
+note: Using codesigning identity override: -
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'PhotoAxisCoreTests' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxis' in project 'PhotoAxis'
+        ➜ Explicit dependency on target 'PhotoAxisCore' in project 'PhotoAxis'
+    Target 'PhotoAxisCore' in project 'PhotoAxis' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 6be79489ce19aa6c1a5f9968548cb3b7
+Build description path: <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/XCBuildData/6be79489ce19aa6c1a5f9968548cb3b7.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk <BUILD_ROOT>/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd <REPO>/PhotoAxis.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o <BUILD_ROOT>/DerivedData/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+ProcessInfoPlistFile <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Resources/Info.plist <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/empty-PhotoAxisCore.plist (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-infoPlistUtility <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCore.build/empty-PhotoAxisCore.plist -producttype com.apple.product-type.framework -expandbuildsettings -platform macosx -o <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/Resources/Info.plist
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A (in target 'PhotoAxisCore' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A: replacing existing signature
+
+ProcessInfoPlistFile <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Info.plist <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/empty-PhotoAxisCoreTests.plist (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-infoPlistUtility <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/empty-PhotoAxisCoreTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Info.plist
+
+CopySwiftLibs <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/MacOS/PhotoAxisCoreTests --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Frameworks --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/PlugIns --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Library/SystemExtensions --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Extensions --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxisCoreTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+Copy <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -remove-static-executable <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks
+warning: not stripping binary because it is signed: <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework/Versions/A/PhotoAxisCore (in target 'PhotoAxis' from project 'PhotoAxis')
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --preserve-metadata\=identifier,entitlements,flags --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework/Versions/A: replacing existing signature
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest (in target 'PhotoAxisCoreTests' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCoreTests.xctest: replacing existing signature
+
+CopySwiftLibs <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PlugIns --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Library/SystemExtensions --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Extensions --scan-folder <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxisCore.framework --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ProcessInfoPlistFile <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Info.plist <REPO>/Config/Info.plist (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-infoPlistUtility <REPO>/Config/Info.plist -producttype com.apple.product-type.application -genpkginfo <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/PkgInfo -expandbuildsettings -platform macosx -scanforprivacyfile <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Frameworks/PhotoAxisCore.framework -o <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/Info.plist
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/PhotoAxis.debug.dylib: replacing existing signature
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+
+    Signing Identity:     "Sign to Run Locally"
+
+    /usr/bin/codesign --force --sign - --entitlements <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/PhotoAxis.build/Debug/PhotoAxis.build/PhotoAxis.app.xcent --timestamp\=none --generate-entitlement-der <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app
+<BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app: replacing existing signature
+
+Validate <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-validationUtility <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app (in target 'PhotoAxis' from project 'PhotoAxis')
+    cd <REPO>
+    builtin-lsregisterurl --record-path <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted <BUILD_ROOT>/DerivedData/Build/Products/Debug/PhotoAxis.app
+
+PruneExplicitPrecompiledModules <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules <BUILD_ROOT>/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules <BUILD_ROOT>/DerivedData/SDKExplicitPrecompiledModules
+
+2026-09-20 20:35:20.264 xcodebuild[26409:1015898]  DVTAssertions: Warning in IDEFrameworks/IDEFoundation/Execution/LaunchSystem/IDELaunchSession.m:395
+Details:  setRunnablePIDWithDiagnostics:logSection:andCompletionHandler: called without a completion handler - blocking until diagnostics setup completes. Callers should migrate to using a completion handler for better performance.
+Object:   <IDELaunchSession: 0x794926a580>
+Method:   -setRunnablePIDWithDiagnostics:logSection:andCompletionHandler:
+Thread:   <NSThread: 0x794bc86dc0>{number = 5, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+Test Suite 'All tests' started at 2026-09-20 20:35:20.951.
+Test Suite 'All tests' passed at 2026-09-20 20:35:20.951.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+􀟈 Test run started.
+􀄵 Testing Library Version: 2084
+􀄵 Target Platform: arm64e-apple-macos14.0
+􀟈 Test documentOperationsComposeAfterLayerMapping() started.
+􀟈 Test retinaZoomAndPanRoundTrip() started.
+􀟈 Test validatesDimensionsBeforeAllocation() started.
+􀟈 Test perspectiveRoundTripPreservesCornerIdentity() started.
+􀟈 Test rejectsSingularityAndNonFiniteInput() started.
+􀟈 Test largeTranslationIsNotMistakenForSingularity() started.
+􁁛 Test largeTranslationIsNotMistakenForSingularity() passed after 0.001 seconds.
+􁁛 Test perspectiveRoundTripPreservesCornerIdentity() passed after 0.001 seconds.
+􁁛 Test documentOperationsComposeAfterLayerMapping() passed after 0.001 seconds.
+􁁛 Test retinaZoomAndPanRoundTrip() passed after 0.001 seconds.
+􁁛 Test rejectsSingularityAndNonFiniteInput() passed after 0.001 seconds.
+􁁛 Test validatesDimensionsBeforeAllocation() passed after 0.001 seconds.
+􁁛 Test run with 6 tests in 0 suites passed after 0.001 seconds.
+2026-09-20 20:35:21.233 xcodebuild[26409:1015824] [MT] IDETestOperationsObserverDebug: 1.038 elapsed -- Testing started completed.
+2026-09-20 20:35:21.233 xcodebuild[26409:1015824] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-20 20:35:21.233 xcodebuild[26409:1015824] [MT] IDETestOperationsObserverDebug: 1.038 sec, +1.038 sec -- end
+
+Test session results, code coverage, and logs:
+	<BUILD_ROOT>/test-results/P00-20260920-203514-26388.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
+Test result: <BUILD_ROOT>/test-results/P00-20260920-203514-26388.xcresult

@@ -1,0 +1,67 @@
+# PhotoAxis 1.0.0 — hồ sơ artifact, 02/10/2026
+
+**Chưa có artifact public signed/notarized.** Tên public dự kiến `PhotoAxis-1.0.0-arm64.dmg`; chưa có checksum/notary ID cho file public này. Checksum local build3 dưới đây áp dụng bộ cài phát triển có cả hai gói điều tra; không dùng làm checksum bộ cài public sau ký/staple. Các artifact D54/build1 và build2 giữ vai trò lịch sử.
+
+## Release phát triển hiện hành — Investigation 2, build3
+
+| Trường | Giá trị |
+| --- | --- |
+| Version/build/schema |1.0.0/3; `.paxis`thường1/working2; case1 tương thích và case2 chứaanalysis |
+| Source commit |`0169bf52cd0d3793c0027a82888833c8a58f4f78`; sạch khi build/đóng gói |
+| Kiểm thử |144PASS/0FAIL/4SKIP; Release/ad-hocPASS;16policytestsPASS |
+| UUID |`4EFA7887-E96F-3149-B6F5-68BE3475F219` |
+| ExecutableSHA256 |`faa4d7264d3d92dc12ff6774ae5a5561b06ea09abb12acfbe8f5c1f1d620128c` |
+| CoreSHA256 |`8ae55ed513e8d34db8ee6dae8ed59e1128a0bd1cd5abfe9ced58ea1963373058` |
+| Source fingerprint |`317d062da381ee744dc7b680a3b5dd40d23525e9536da30c9cb63c67fa0e9d02` |
+| DMG local |`PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| DMGSHA256 |`797ee11a3267d0fde0a90d003a97379fca3ffa442ece1a6d0c75f50aea8a84bc` |
+| App treeSHA256 |`24cac782391b5fa84eefe0417b4739fc3201eeb2f618be619fe9049335714ca4` |
+| Artifact directory |`$BUILD_ROOT/P13-local-_pehi_4j` ngoàiGit |
+| Host/target |macOS27.0.1/M1Pro32GiB/Retina2×/Xcode27; targetarm64/minOS14 |
+| Public |false; ad-hoc, HardenedRuntimefalse, chưaDeveloperID/notary/cleansignedinstall |
+
+DMG đã mount read-only, copy/tree-compare app và symlinkApplications, verify codesign/version/build/architecture/minOS và detach. [Buildmanifest](bao-cao/bang-chung/INVESTIGATION2/build-manifest.json), [distributionmanifest](bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json), [packaginglog](bao-cao/bang-chung/INVESTIGATION2/packaging.log), [checksum](bao-cao/bang-chung/INVESTIGATION2/SHA256SUMS.txt), [báo cáo](bao-cao/MO_RONG_DIEU_TRA.md). QA VI/EN đổi bundleID/ký lại giữUUID/Core và có executablehash riêng. Candidate/readiness build3 đã cập nhật; tài liệu/bằng chứng commit sau không thay byte source/app đã test.
+
+## Release Investigation 1, build2 — lịch sử
+
+| Trường | Giá trị |
+| --- | --- |
+| Version/build/schema | 1.0.0 / 2 / project thường1, working điều tra2, case1 |
+| Code commit | `826bebf61c068ca1864fdf8a20f6b410ca13aa2f`, source sạch lúc build |
+| Kiểm thử | 130PASS/0FAIL/4SKIP, Release/codesign local PASS,16policytestsPASS |
+| Release UUID | `12159300-9A9E-32E9-8A06-08297E444A0B` |
+| Executable SHA-256 | `af5d183cdc7f55256736d8eb4468f40348fb8231472bf6daf8e173c979a946a7` |
+| Core SHA-256 | `aa75aef238cc69a8ad5c989560aad3b5627c8bf5623f9b1c22898a60e4a9a3ec` |
+| Source fingerprint | `096a5a9f2a7f0f8475ee855bcc58af4e98518b289db228f96855d5a25f294317` |
+| Host/minOS/architecture | macOS27.0.1/M1Pro32GiB/Retina2×/Xcode27, targetarm64/minOS14 |
+| Ký/phân phối | Ad-hoc local; chưa Developer ID/notary/installer public hoặc DMG build2 |
+
+[Provenance hiện hành](bao-cao/bang-chung/INVESTIGATION/build-manifest.json), [báo cáo gói](bao-cao/GOI_DIEU_TRA.md), [candidate](RELEASE_CANDIDATE.json). QA VI/EN đổi bundle ID và ký lại, giữ UUID/Core; hash executable QA ghi riêng. Website gallery/build1 vẫn là preview lịch sử, nút tải disabled. Khi đủ gate phải ký/đóng gói/test máy đích lại đúng build2 hoặc bản ứng viên tiếp theo.
+
+## DMG local baseline build1 — lịch sử
+
+| Trường | Kết quả đã kiểm chứng |
+| --- | --- |
+| Version/build/schema/spec | 1.0.0 / 1 / 1 / 1.0-draft.3 |
+| Source app đã test | `787e3d1384f101fbd081c4fd8b3fc96a26d2520d` — sửa tiến độ Save/Export; 113 PASS/0 FAIL/4 SKIP |
+| Checkout đóng gói | `2a28b930104ffb3c13c476aed45b0e5ffb7ae470`, `sourceDirty=false` |
+| Release UUID của DMG lịch sử | `D54A11BC-024A-3419-B64C-9D70715C2ED9` |
+| SHA-256 executable | `efb838f4862a126a463cd2fbe200e2ff8e6aadba11929e30067113f1f8d1c9ba` |
+| SHA-256 Core framework | `abd7d3e450bf3cae2a8bd283fd9d4df44eb792785b5e7ed88715776a436e196e` |
+| Build source fingerprint | `7ce103c1e9c7f8401707174fbbe87bcbcc82871f8e7c1de462b9800453115b01` |
+| Toolchain/architecture/minOS | Xcode 27 / macOS SDK 27 / arm64 / minimum 14.0 |
+| Publisher/Team/namespace chính thức | Chưa xác nhận; bundle local `local.photoaxis.development`, Core `local.photoaxis.core`, UTI `com.photoaxis.document` |
+| Developer ID/notarization | Chưa có Developer ID Application; chưa submit/Accepted/staple |
+| R02/clean install/offline public download | Chưa đạt, `RELEASE_CANDIDATE.releaseReady=false` |
+| Artifact local mới | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA-256 DMG local mới | `dc75214a98520c14bd6b3d34e4e510580cd49f4824122d7eef8a06b04aaf9e2e` |
+| Cây file/symlink app trong DMG | `a8925b6d5081f1faefcdb85e14c8c7c9cdc44c0886a19d64cc37abd364546ba3` |
+| Artifact directory | `$BUILD_ROOT/P13-local-esza83lu` ngoài Git |
+
+Đã copy đúng Release D54 đã kiểm thử bằng `ditto`, không rebuild tại checkout đóng gói. Swift/tests/config/project/fixture không đổi so với commit app 787e3d1; sau build chỉ script website và tài liệu/bằng chứng đổi. Hash toàn executable/Core và UUID khớp bản test. Build fingerprint ghi inventory tại thời điểm build, không thay bằng fingerprint script website mới.
+
+DMG đã mount read-only vào thư mục riêng: đúng `PhotoAxis.app` + symlink `Applications` tới `/Applications`; cây file/symlink khớp app trước đóng gói. `codesign --verify --deep --strict` local-ad-hoc PASS; arm64/minOS14/version/build/icon đúng, không test bundle. Mount đã detach. `LOCAL-UNSIGNED` nghĩa chưa ký Developer ID để phân phối; app bên trong vẫn ad-hoc cho phát triển. Chưa cài sạch/Gatekeeper/offline từ bản public tải xuống.
+
+[Manifest DMG build1 lịch sử](bao-cao/bang-chung/P15-native/distribution-manifest.json), [build provenance](bao-cao/bang-chung/P15-native/build-manifest.json), [packaging log](bao-cao/bang-chung/P15-native/packaging.log), [checksum local](bao-cao/bang-chung/P15-native/SHA256SUMS.txt), [preflight public](bao-cao/bang-chung/P15-native/preflight.json). Khi đủ gate, `signed` phải sinh artifact/manifest/checksum mới sau ký và staple, rồi kiểm cài sạch/offline trước publicReady.
+
+DMG P13 trước sửa tiến độ, UUID667, SHA `9cc9f16759f64a9a1117f9b8d2dd1aa09fd03fd1a4f4ff9367f96958032a1849`, giữ làm lịch sử tại `$BUILD_ROOT/P13-local-bwa8c92a`; [manifest P13](bao-cao/bang-chung/P13/distribution-manifest.json). Local archive P13 cũng trước sửa tiến độ, không phải binary của DMG D54 lịch sử.

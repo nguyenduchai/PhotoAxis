@@ -1,0 +1,32 @@
+Window: "Settings…", App: PhotoAxis.
+0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise
+	1 text Interface Language
+	2 nút bật lên Description: Interface Language, Value: Tiếng Việt, ID: settings.language
+	3 text Reopen PhotoAxis to apply the language change. Your documents are not affected. Panel Width
+	4 trường văn bản (settable) Description: Panel Width, Value: 300, ID: settings.panelWidth
+	5 máy tập đi bộ Description: Panel Width, Value: 300, Secondary Actions: Increment, Decrement
+		6 nút mũi tên tăng dần
+		7 nút mũi tên giảm dần
+	8 text pt (260–420) Tools Layout
+	9 Description: Tools Layout, ID: settings.toolColumns
+		10 nút radio Description: One Column, Value: 1
+		11 nút radio Description: Two Columns, Value: 0
+	12 nút đóng
+	13 nút thu phóng (disabled)
+	14 text Settings…
+15 menu bar
+	16 PhotoAxis
+	17 File
+	18 Edit
+	19 Image
+	20 Layer
+	21 Type
+	22 View
+	23 Window
+	24 Help
+
+Selected text: ```
+300
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

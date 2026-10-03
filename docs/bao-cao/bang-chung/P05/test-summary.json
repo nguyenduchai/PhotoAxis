@@ -1,0 +1,42 @@
+{
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceName": "My Mac",
+        "modelName": "MacBook Pro",
+        "osBuildNumber": "26A428",
+        "osVersion": "27.0",
+        "platform": "macOS"
+      },
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "passedTests": 60,
+      "skippedTests": 0,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription": "PhotoAxis · Built with macOS 27.0",
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1790525615.032,
+  "passedTests": 60,
+  "result": "Passed",
+  "runtimeWarnings": [],
+  "skippedTests": 0,
+  "startTime": 1790525592.589,
+  "statistics": [],
+  "testFailures": [],
+  "title": "Test - PhotoAxis",
+  "topInsights": [
+    {
+      "category": "Longest Test Runs",
+      "impact": "30% of duration",
+      "text": "1 longest test run with outlier durations exceeding 1.14s (three standard deviations)"
+    }
+  ],
+  "totalTestCount": 60
+}

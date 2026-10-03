@@ -1,0 +1,13 @@
+The following is a diff from the previous accessibility tree for Window: "Native Export Cancellation Noise — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 78-79, 82, 125-130
++	147 nút chuyển đổi Native Export Cancellation Noise, Value: on
++	148 nút Close tab
+~	81 text Value: 8.000 × 5.000 px · 144,00 PPI · Saved sRGB, ID: workspace.taskStatus
++			149 row (selected)
++				150 ô (selected)
++					151 nút Description: Toggle Visibility: Image 1, Help: Toggle Visibility
++					152 hình ảnh
++					153 text Help: Image 1, Value: Image 1 Image
++					154 nút Description: Toggle Lock: Image 1, Help: Toggle Lock
++	155 text Native Export Cancellation Noise — PhotoAxis
+The focused UI element is 61 cửa sổ thông thường Native Export Cancellation Noise — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

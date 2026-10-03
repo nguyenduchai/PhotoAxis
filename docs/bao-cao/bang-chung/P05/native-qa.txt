@@ -1,0 +1,39 @@
+PhotoAxis P05 native QA — 27/09/2026, Asia/Ho_Chi_Minh
+Spec: 1.0-draft.3; app 1.0.0 (1); P04 parent cf84825.
+
+BINARY / PROVENANCE
+- Final native app: $BUILD_ROOT/QA/P05-final/PhotoAxis Perspective Final.app
+- QA bundle ID local.photoaxis.p05final; copied from final Release and ad-hoc re-signed to isolate UI preferences.
+- Release: $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+- Executable UUID, Core framework and embedded Perspective.metallib checked against Release; see binary-verification.log and build-manifest.json.
+- All perspective-*.png/AX files in this folder are from P05-final after the Metal kernel and inverse hit-test fix. Earlier QA/P05 app and incomplete NSView bitmap captures are excluded.
+- Final Debug rerun at 23:13 passed 60 tests; Release rerun records durable logs because earlier /tmp logs were no longer present. No source changes between final native captures and this rerun.
+- Screen Retina 2x, captured app window 2560x1600 backing pixels (1280x800 pt); M1 Pro/32 GiB, macOS 27.0 (26A428), Xcode 27.0 (27A266a).
+- CUA transient connection/screenshot failures earlier in the day were retried after resumption; only successful final observations are claimed below.
+
+VIETNAMESE / FINAL APP
+1. Open the generated grid-corners.png (640x480). Shift+C starts Perspective Crop; missing quad explains drag-to-start and Apply is disabled.
+2. At 255% zoom, pointer drag from (274,306) to (1804,1453) in the 2560x1600 screenshot creates Auto 600x450. Drag top-right handle to (1778,369): Auto 595x438. TL/TR/BR/BL labels, independent TR movement, projected grid and shade visible. perspective-quad-vi.png and AX.
+3. Enable Preview: output has no quad/grid/handles, fit zoom 279.45%; committed status/properties still 640x480. perspective-preview-vi.png.
+4. Return applies; canvas/properties 595x438, previous Hand tool restored. perspective-applied-vi.png.
+5. Cmd+Z returns canvas 640x480 and original grid; Cmd+Shift+Z restores 595x438. perspective-undo-vi.png records Undo; Redo checked in AX during session.
+6. Settings selects English for next launch, with restart explanation. English workspace observed after reopening final app.
+
+ENGLISH / FINAL APP
+1. Native Open also imported grid-exif-6.jpg as 480x640. Reopen exact grid-corners.png via Go To path, confirmed tab and canvas 640x480; no personal files used.
+2. Shift+C, Reset -> full 640x480; Mode W x H. Enter width 8001: red outline, explanation 'Use positive dimensions: ...', Preview and Apply disabled. perspective-invalid-output-en.png and AX. Long reason truncates with ellipsis in Options; tooltip and AX expose the complete limit.
+3. Enter 320 and 240: valid output, Preview enabled; Preview shows image only. perspective-preview-en.png. The status bar retains committed dimensions until Apply; preview image/rulers use candidate geometry.
+4. Click Apply: canvas/status/properties 320x240, fit 510%, restores Hand. perspective-applied-en.png and AX. Cmd+Z restores 640x480.
+5. New Shift+C session; Reset; Mode Ratio, A4 -> 210:297, output 466x659. Swap -> 297:210, output 659x466. Toggle Grid off; Reset preserves Ratio and dimensions. Clear -> Auto 640x480 and same full quad. Escape cancels, preserves committed 640x480 and restores Hand.
+
+HOSTED APPKIT / NUMERIC EVIDENCE (not physical device QA)
+- Actual canvas mouse/key responders in NSWindow: initial rectangle, every corner independently at 50/100/200%, inside move, Space-pan, Preview on/off, Return one history entry, Escape no entry.
+- Core viewport conversion tested at zoom 0.5/1/2 and backing 1/2. Physical machine is Retina 2x only.
+- Options callbacks and layout in vi/en at window widths 1440/1100 pt. Overflow component deliberately constrained to 900 pt at 1100; perspective-layout.json records actual bar width separately. Apply/Cancel remain in bounds, distinct. No claim of a complete 1100x700 screenshot review.
+- Tests regenerate image-only PNG fixtures and parameters; these are render artifacts, not screenshots and not an implemented Export UI.
+
+NOT VERIFIED / FOLLOW-UP
+- Physical pinch, non-Retina/display switching, real macOS 14, Telex/VNI, stress/RSS/latency targets: P12.
+- Editable Type/Shape P06 and Perspective multilayer P07; Save/Open .paxis P09; Export P10; recovery P11.
+- Source ROI for fallback kernel is conservative full input; performance profiling remains P12.
+- No Developer ID/notarization/public release; no remote/push.

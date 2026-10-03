@@ -1,0 +1,5 @@
+{
+  "maximumNormalIntervalSeconds" : 30,
+  "secondsToCompletedRecovery" : 10.196506977081299,
+  "source" : "real coordinator timer and atomic recovery manifest"
+}

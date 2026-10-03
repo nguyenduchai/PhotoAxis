@@ -1,0 +1,90 @@
+Window: "A04-landscape-white — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A04-landscape-white — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	11 nút Description: Văn bản (T), ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi A04-1080-transparent, Value: off
+	18 nút Đóng tab
+	19 nút chuyển đổi A04-landscape-white, Value: on
+	20 nút Đóng tab
+	21 nút chuyển đổi A04-portrait-black, Value: off
+	22 nút Đóng tab
+	23 nút chuyển đổi A04-A4-white, Value: off
+	24 nút Đóng tab
+	25 nút chuyển đổi A04-custom-640, Value: off
+	26 nút Đóng tab
+	27 trường văn bản (settable) Description: Thu phóng, Value: 89,9 %
+	28 text Value: 1.920 × 1.080 px · 72,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	29 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	30 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	31 trường văn bản (settable) Description: HEX, Value: #000000
+	32 trường văn bản (settable) Description: Alpha %, Value: 100
+	33 trường văn bản (settable) Description: Đỏ, Value: 0
+	34 trường văn bản (settable) Description: Xanh lá, Value: 0
+	35 trường văn bản (settable) Description: Xanh dương, Value: 0
+	36 text Màu tiền cảnh Màu nền HEX Alpha % R G B Màu
+	37 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	38 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		39 nút radio Description: Thuộc tính, Value: 0
+		40 nút radio Description: Lịch sử, Value: 1
+	41 text Lớp
+	42 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		43 bảng
+			44 row (selected)
+				45 ô (selected)
+					46 nút Description: Ẩn/hiện lớp: Nền, Help: Ẩn/hiện lớp
+					47 hình ảnh
+					48 text Help: Nền, Value: Nền Hình
+					49 nút Description: Khóa/mở khóa lớp: Nền, Help: Khóa/mở khóa lớp
+		50 thanh cuộn (disabled, settable, float) 0
+	51 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		52 bảng Lịch sử
+			53 row (selected)
+				54 ô (selected)
+					55 text Trạng thái đầu
+			56 row (selectable)
+				57 ô
+					58 text Nhân bản lớp
+		59 thanh cuộn (disabled, settable, float) 0
+	60 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	61 text Độ mờ
+	62 trường văn bản (disabled) Description: Độ mờ, Value: 100 %
+	63 thanh trượt (disabled) Description: Độ mờ, Value: 100, Secondary Actions: Increment, Decrement
+		64 chỉ báo giá trị 100
+	65 nút Thêm lớp
+	66 nút (disabled) Description: Đổi tên lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	67 nút (disabled) Description: Đưa lớp lên, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	68 nút (disabled) Description: Đưa lớp xuống, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	69 nút Nhân bản lớp
+	70 nút (disabled) Description: Xóa lớp, Help: Thay đổi không hợp lệ hoặc lớp đang bị khóa.
+	71 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	72 nút đóng
+	73 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	74 nút thu nhỏ
+	75 text A04-landscape-white — PhotoAxis
+76 menu bar
+	77 PhotoAxis Investigation2 verified vi
+	78 Tệp
+	79 Chỉnh sửa
+	80 Ảnh
+	81 Lớp
+	82 Văn bản
+	83 Xem
+	84 Cửa sổ
+	85 Điều tra
+	86 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường A04-landscape-white — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

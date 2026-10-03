@@ -1,0 +1,91 @@
+Window: "P06 Final English — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường P06 Final English — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Type Click for point text. Return adds a line; Cmd+Return applies; Esc cancels.
+	2 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	3 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	4 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	5 nút Description: Move (V), ID: tool.move
+	6 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	7 nút Description: Eyedropper (I), ID: tool.eyedropper
+	8 nút Description: Type (T), ID: tool.type
+	9 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	10 nút Description: Hand (H), ID: tool.hand
+	11 nút Description: Zoom (Z), ID: tool.zoom
+	12 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 nút chuyển đổi P06 Final English •, Value: on
+	15 nút Close tab
+	16 trường văn bản (settable) Description: Zoom, Value: 255 %
+	17 text 640 × 480 px · 72,00 PPI · Unsaved sRGB
+	18 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	20 trường văn bản (settable) Description: HEX, Value: #000000
+	21 trường văn bản (settable) Description: Alpha %, Value: 100
+	22 trường văn bản (settable) Description: Red, Value: 0
+	23 trường văn bản (settable) Description: Green, Value: 0
+	24 trường văn bản (settable) Description: Blue, Value: 0
+	25 text Foreground Color Background Color HEX Alpha % R G B
+	26 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		27 text Font Family
+		28 nút bật lên Description: Font Family, Value: Helvetica, ID: type.family
+		29 text Font Style
+		30 nút bật lên Description: Font Style, Value: Regular, ID: type.style
+		31 text Font Size…
+		32 trường văn bản (settable) Description: Font Size…, Value: 24, ID: type.size
+		33 text Text Color
+		34 bảng màu Description: Text Color, Value: rgb 0 0 0 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
+		35 text Alignment
+		36 nút bật lên Description: Alignment, Value: Left, ID: type.alignment
+		37 text Line Gap (px)
+		38 trường văn bản (settable) Description: Line Gap (px), Value: 0, ID: type.spacing
+		39 nút Edit Text
+		40 text Click for point text. Return adds a line; Cmd+Return applies; Esc cancels.
+		41 thanh cuộn (settable, float) 0
+			42 chỉ báo giá trị (settable, float) 0
+			43 nút mũi tên tăng dần
+			44 nút mũi tên giảm dần
+			45 nút trang tăng dần
+			46 nút trang giảm dần
+	47 text Color
+	48 nút Description: Collapse Panels, ID: sidebar.collapse
+	49 Description: Properties and History, ID: sidebar.inspectorTabs
+		50 nút radio Description: Properties, Value: 1
+		51 nút radio Description: History, Value: 0
+	52 text Layers
+	53 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		54 bảng
+			55 row (selected)
+				56 ô (selected)
+					57 nút Description: Toggle Visibility: Text, Help: Toggle Visibility
+					58 hình ảnh
+					59 text Help: Text, Value: Text Text
+					60 nút Description: Toggle Lock: Text, Help: Toggle Lock
+		61 thanh cuộn (disabled, settable, float) 0
+	62 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	63 text Opacity
+	64 trường văn bản (settable) Description: Opacity, Value: 100 %
+	65 thanh trượt (settable, float) Description: Opacity, Value: 100
+		66 chỉ báo giá trị (settable, float) 100
+	67 nút Add Layer
+	68 nút Rename Layer
+	69 nút Move Layer Up
+	70 nút Move Layer Down
+	71 nút Duplicate Layer
+	72 nút Delete Layer
+	73 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	74 nút đóng
+	75 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	76 nút thu nhỏ
+	77 text P06 Final English — PhotoAxis
+78 menu bar
+	79 PhotoAxis
+	80 File
+	81 Edit
+	82 Image
+	83 Layer
+	84 Type
+	85 View
+	86 Window
+	87 Help
+
+The focused UI element is 0 cửa sổ thông thường P06 Final English — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,29 @@
+Window: "A04-custom-640 — PhotoAxis", App: PhotoAxis.
+0 Chỉnh sửa, Secondary Actions: Cancel, Pick
+	1 menu Secondary Actions: Cancel
+		2 Hoàn tác Độ mờ lớp, ID: undoAction
+		3 (disabled) Làm lại, ID: redoAction
+		4 (disabled) Cắt, ID: cut:
+		5 (disabled) Sao chép, ID: copy:
+		6 (disabled) Dán, ID: paste:
+		7 (disabled) Chọn tất cả, ID: selectAll:
+		8 Công cụ viết
+			9 menu Secondary Actions: Cancel
+				10 (disabled) Hiển thị công cụ viết, ID: showWritingTools:
+				11 (disabled) Hiệu đính, ID: showWritingTools:
+				12 (disabled) Viết lại, ID: showWritingTools:
+				13 (disabled) Chuyển thành Thân thiện, ID: showWritingTools:
+				14 (disabled) Chuyển thành Chuyên nghiệp, ID: showWritingTools:
+				15 (disabled) Chuyển thành Ngắn gọn, ID: showWritingTools:
+				16 (disabled) Tóm tắt, ID: showWritingTools:
+				17 (disabled) Tạo các điểm chính, ID: showWritingTools:
+				18 (disabled) Chuyển thành Danh sách, ID: showWritingTools:
+				19 (disabled) Chuyển thành Bảng, ID: showWritingTools:
+				20 (disabled) Soạn thảo…, ID: showWritingTools:
+		21 Tự động điền
+			22 menu Secondary Actions: Cancel
+				23 (disabled) Liên hệ…
+				24 (disabled) Mật khẩu…
+				25 (disabled) Thẻ tín dụng…
+		26 Bắt đầu Đọc chính tả…, ID: startDictation:
+		27 Biểu tượng & Ký hiệu, ID: orderFrontCharacterPalette:

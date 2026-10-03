@@ -1,0 +1,16 @@
+Window: "PhotoAxis", App: PhotoAxis.
+0 standard window PhotoAxis, Secondary Actions: Raise
+	1 text PhotoAxis No document open A new perspective for your photos. Your workspace for editing, composing and creating.
+	2 button (disabled) New Document…, Help: Document editing is still in development.
+	3 button (disabled) Open…, Help: Document editing is still in development.
+	4 text Document tools will be available in a future development build. On your Mac
+	5 close button
+	6 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	7 minimize button
+	8 text PhotoAxis
+9 menu bar
+	10 PhotoAxis
+	11 File
+	12 Window
+
+The focused UI element is 0 standard window PhotoAxis, Secondary Actions: Raise

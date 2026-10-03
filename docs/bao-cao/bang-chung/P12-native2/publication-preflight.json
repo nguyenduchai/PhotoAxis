@@ -1,0 +1,114 @@
+{
+  "status": "BLOCKED_EXTERNAL",
+  "publicReady": false,
+  "mutationPerformed": false,
+  "results": {
+    "R01": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Publisher, namespace, Team/Developer ID/notary, repository and website targets unconfirmed",
+      "evidence": [
+        "docs/bao-cao/P13.md"
+      ]
+    },
+    "R02": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "19/43 acceptance cases PASS, 24 open. Build3 native VI/EN New presets, five-tab isolation/limit and History/branch/saved markers independently verified; product source unchanged. Existing full suite144PASS/0FAIL/4SKIP was not rerun in this stage; new benchmark3PASS/0FAIL/0SKIP, perspective corner31% samples within33.333ms requires PERF-03 evaluation. Real ASCII-to-Vietnamese typing/Return/CmdReturn/Save/Escape recorded in VI only; EN input source context/VNI/full composition remain unverified. Remaining full native acceptance, macOS14/non-Retina/M1-16GB/input-to-present/long-run/Metal-QoS and Investigation supported-target/quota/OCR/camera/video/calibrated geometry qualification still pending.",
+      "evidence": [
+        "docs/MA_TRAN_NGHIEM_THU.md",
+        "docs/RELEASE_CANDIDATE.json",
+        "docs/bao-cao/P15-native.md",
+        "docs/bao-cao/GOI_DIEU_TRA.md",
+        "docs/bao-cao/MO_RONG_DIEU_TRA.md",
+        "docs/bao-cao/TONG_TIEN_DO_VA_PUBLIC_2026-10-02.md",
+        "docs/bao-cao/P12-native2.md",
+        "docs/bao-cao/bang-chung/P12-native2/manifest.json"
+      ]
+    },
+    "R03": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Build3 Release arm64/minOS14 local ad-hoc verified; current source/UUID/binary/Core and clean-source local DMG provenance recorded. Final Developer ID artifact and release acceptance missing; historical build1/build2 evidence is not substituted.",
+      "evidence": [
+        "docs/bao-cao/bang-chung/INVESTIGATION2/build-manifest.json",
+        "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
+        "docs/bao-cao/bang-chung/INVESTIGATION2/binary-verification.log"
+      ]
+    },
+    "R04": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "No Developer ID Application identity available",
+      "evidence": [
+        "docs/bao-cao/bang-chung/INVESTIGATION2/signing-availability.json"
+      ]
+    },
+    "R05": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "No Accepted submissions or stapled public app/DMG",
+      "evidence": [
+        "docs/bao-cao/P13.md"
+      ]
+    },
+    "R06": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Current build3 local unsigned DMG mounted read-only, copied/tree-compared, codesign verified and detached; checksum/sourceDirty=false recorded. Final Developer ID/notarized public DMG and clean installation are missing.",
+      "evidence": [
+        "docs/bao-cao/bang-chung/INVESTIGATION2/distribution-manifest.json",
+        "docs/bao-cao/bang-chung/INVESTIGATION2/packaging.log",
+        "docs/bao-cao/bang-chung/INVESTIGATION2/SHA256SUMS.txt"
+      ]
+    },
+    "R07": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Clean browser/quarantine/Gatekeeper installation on target OS missing",
+      "evidence": [
+        "docs/KNOWN_ISSUES.md"
+      ]
+    },
+    "R08": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "Scoped baseline/Investigation1 history and current Investigation2 synthetic native workflow are checked; signed clean/offline/upgrade installation on supported target systems remains unverified.",
+      "evidence": [
+        "docs/bao-cao/P12.md"
+      ]
+    },
+    "R09": {
+      "status": "BLOCKED_EXTERNAL",
+      "reason": "12-page VI/EN website preview links/metadata/owned assets pass; build3 OCR/video/calibrated-measurement guide/release notes/privacy content updated. D54 build1 gallery remains historical. Final accepted public gallery, publisher/support/terms/license/pricing/host and signed-installer URLs/checksums remain pending; download disabled/noindex.",
+      "evidence": [
+        "docs/bao-cao/P14.md",
+        "docs/bao-cao/P15-native.md",
+        "docs/HUONG_DAN_DIEU_TRA.md",
+        "docs/RELEASE_NOTES.md",
+        "docs/bao-cao/MO_RONG_DIEU_TRA.md"
+      ]
+    },
+    "R10": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "No public HTTPS website or anonymous download yet",
+      "evidence": []
+    },
+    "R11": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "No public artifact/tag/source/site cross-check yet",
+      "evidence": []
+    },
+    "R12": {
+      "status": "CHUA_KIEM_CHUNG",
+      "reason": "Incident plan prepared; target permissions and actual site rollback/maintenance artifact pending",
+      "evidence": [
+        "docs/RUNBOOK_PHAT_HANH.md"
+      ]
+    }
+  },
+  "blockingReasons": [
+    "R01: [Errno 2] No such file or directory: '$REPO/Config/Distribution.local.json'",
+    "R02: R02 is not accepted: RELEASE_CANDIDATE.releaseReady is false",
+    "Publication plan publicReady is not true",
+    "Unaccepted required gates: R01, R02, R03, R04, R05, R06, R07, R08, R09, R12",
+    "Confirmed commit missing: sourceCommit",
+    "Confirmed commit missing: distributionTargetCommit",
+    "Confirmed commit missing: websiteCommit",
+    "R03-R08: final distribution manifest missing",
+    "R09: website is still a preview with disabled download"
+  ],
+  "scope": "read-only local release gates; GitHub permissions/CI/tag/draft/publish and HTTPS/native postcheck remain separate actual operations"
+}

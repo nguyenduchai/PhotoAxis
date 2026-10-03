@@ -1,0 +1,21 @@
+$ codesign --verify --deep --strict $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app
+
+$ xcrun vtool -show-build $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+$BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis:
+Load command 11
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform MACOS
+    minos 14.0
+      sdk 27.0
+   ntools 1
+     tool LD
+  version 27037.1
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+UUID: 525A6348-416E-398B-8616-963A5B2FF012 (arm64) $BUILD_ROOT/DerivedData/Build/Products/Release/PhotoAxis.app/Contents/MacOS/PhotoAxis
+
+$ codesign --verify --deep --strict $BUILD_ROOT/QA/P03-closeout-final/PhotoAxis Stage Review.app
+
+$ xcrun dwarfdump --uuid $BUILD_ROOT/QA/P03-closeout-final/PhotoAxis Stage Review.app/Contents/MacOS/PhotoAxis
+UUID: 525A6348-416E-398B-8616-963A5B2FF012 (arm64) $BUILD_ROOT/QA/P03-closeout-final/PhotoAxis Stage Review.app/Contents/MacOS/PhotoAxis

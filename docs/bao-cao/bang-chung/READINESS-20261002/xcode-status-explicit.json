@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "xcodebuild",
+      "-version"
+    ],
+    "exitCode": 0,
+    "stdout": "Xcode 27.0\nBuild version 27A266a",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xcodebuild",
+      "-checkFirstLaunchStatus"
+    ],
+    "exitCode": 69,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xcodebuild",
+      "-license",
+      "check"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

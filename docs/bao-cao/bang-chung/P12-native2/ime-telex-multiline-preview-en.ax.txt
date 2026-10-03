@@ -1,0 +1,94 @@
+Window: "A22-Telex-native-en — PhotoAxis", App: PhotoAxis.
+0 cửa sổ thông thường A22-Telex-native-en — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Type Click for point text. Return adds a line; Cmd+Return applies; Esc cancels.
+	2 nút Cancel, Help: Apply to commit; Escape to cancel., ID: options.cancel
+	3 nút Apply, Help: Apply to commit; Escape to cancel., ID: options.apply
+	4 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	5 nút Description: Move (V), ID: tool.move
+	6 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	7 nút Description: Eyedropper (I), ID: tool.eyedropper
+	8 nút Description: Type (T), ID: tool.type
+	9 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	10 nút Description: Hand (H), ID: tool.hand
+	11 nút Description: Zoom (Z), ID: tool.zoom
+	12 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	13 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	14 vùng cuộn Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+		15 vùng nhập văn bản (settable) Description: Text Content, Value: tieengs vieetj
+thuwr nghieemj
+		16 thanh cuộn (disabled, settable, float) 0
+		17 thanh cuộn (settable, float) 0
+			18 chỉ báo giá trị (settable, float) 0
+			19 nút mũi tên tăng dần
+			20 nút mũi tên giảm dần
+			21 nút trang tăng dần
+			22 nút trang giảm dần
+	23 nút chuyển đổi A22-Telex-native-en •, Value: on
+	24 nút Close tab
+	25 trường văn bản (settable) Description: Zoom, Value: 255 %
+	26 text Value: 640 × 480 px · 72,00 PPI · Unsaved sRGB, ID: workspace.taskStatus
+	27 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	28 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	29 trường văn bản (settable) Description: HEX, Value: #000000
+	30 trường văn bản (settable) Description: Alpha %, Value: 100
+	31 trường văn bản (settable) Description: Red, Value: 0
+	32 trường văn bản (settable) Description: Green, Value: 0
+	33 trường văn bản (settable) Description: Blue, Value: 0
+	34 text Foreground Color Background Color HEX Alpha % R G B
+	35 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		36 text Font Family
+		37 nút bật lên Description: Font Family, Value: Helvetica, ID: type.family
+		38 text Font Style
+		39 nút bật lên Description: Font Style, Value: Regular, ID: type.style
+		40 text Font Size…
+		41 trường văn bản (settable) Description: Font Size…, Value: 24, ID: type.size
+		42 text Text Color
+		43 bảng màu Description: Text Color, Value: rgb 0 0 0 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
+		44 text Alignment
+		45 nút bật lên Description: Alignment, Value: Left, ID: type.alignment
+		46 text Line Gap (px)
+		47 trường văn bản (settable) Description: Line Gap (px), Value: 0, ID: type.spacing
+		48 text Click for point text. Return adds a line; Cmd+Return applies; Esc cancels.
+		49 thanh cuộn (settable, float) 0
+			50 chỉ báo giá trị (settable, float) 0
+			51 nút mũi tên tăng dần
+			52 nút mũi tên giảm dần
+			53 nút trang tăng dần
+			54 nút trang giảm dần
+	55 text Color
+	56 nút Description: Collapse Panels, ID: sidebar.collapse
+	57 Description: Properties and History, ID: sidebar.inspectorTabs
+		58 nút radio Description: Properties, Value: 1
+		59 nút radio Description: History, Value: 0
+	60 text Layers No layers yet.
+Open or create a document to begin.
+	61 nút bật lên (disabled) Description: Blend Mode, Value: Normal
+	62 text Opacity
+	63 trường văn bản (settable) Description: Opacity, Value: 100 %
+	64 thanh trượt (settable, float) Description: Opacity, Value: 100
+		65 chỉ báo giá trị (settable, float) 100
+	66 nút Add Layer
+	67 nút Rename Layer
+	68 nút Move Layer Up
+	69 nút Move Layer Down
+	70 nút Duplicate Layer
+	71 nút Delete Layer
+	72 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	73 nút đóng
+	74 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	75 nút thu nhỏ
+	76 text A22-Telex-native-en — PhotoAxis
+77 menu bar
+	78 PhotoAxis Investigation2 verified en
+	79 File
+	80 Edit
+	81 Image
+	82 Layer
+	83 Type
+	84 View
+	85 Window
+	86 Investigation
+	87 Help
+
+The focused UI element is 15 vùng nhập văn bản (settable) Description: Text Content, Value: tieengs vieetj
+thuwr nghieemj

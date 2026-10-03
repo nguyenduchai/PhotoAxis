@@ -1,0 +1,18 @@
+Window: "", App: PhotoAxis.
+0 hộp thoại Description: cảnh báo, Secondary Actions: Raise
+	1 hình ảnh PhotoAxis Investigation2 verified vi cảnh báo
+	2 text Kết quả nhập ảnh ocr-tieng-viet.png: Tối đa 5 tài liệu. Hãy đóng một tab trước khi mở thêm.
+	3 nút Đóng, ID: action-button-1
+4 menu bar
+	5 PhotoAxis Investigation2 verified vi
+	6 Tệp
+	7 Chỉnh sửa
+	8 Ảnh
+	9 Lớp
+	10 Văn bản
+	11 Xem
+	12 Cửa sổ
+	13 Điều tra
+	14 Trợ giúp
+
+The focused UI element is 0 hộp thoại Description: cảnh báo, Secondary Actions: Raise

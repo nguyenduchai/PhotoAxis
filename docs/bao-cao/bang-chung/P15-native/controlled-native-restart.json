@@ -1,0 +1,10 @@
+{
+  "fault": "SIGKILL only exact synthetic QA vi executable",
+  "sourceCommit": "e4328a500006698159d25ebf17653e61fa9a5325",
+  "executableUUID": "66727FF1-035D-3DBF-87B3-08D4960A2DBB",
+  "recordCreatedBy": "actual Release native edit + 10 second timer",
+  "revision": 3,
+  "exposure": 0.3,
+  "timestampUTC": "2026-10-01T22:41:41.326040+00:00",
+  "originalUserFilesTouched": false
+}

@@ -1,0 +1,376 @@
+The following is a diff from the previous accessibility tree for Window: "P07 Mixed — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~61 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+~	62 text Bàn tay
+~	63 nút Vừa màn hình
+~	64 nút 100%
++	65 text Kéo hoặc cuộn để di chuyển canvas
++	66 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
++	67 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
++	68 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
++	69 nút Description: Di chuyển (V), ID: tool.move
++	70 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
++	71 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
++	72 nút Description: Văn bản (T), ID: tool.type
++	73 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
++	74 nút Description: Bàn tay (H), ID: tool.hand
++	75 nút Description: Thu phóng (Z), ID: tool.zoom
++	76 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	77 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	78 nút chuyển đổi P07 Mixed, Value: on
++	79 nút Đóng tab
++	80 trường văn bản (settable) Description: Thu phóng, Value: 510 %
++	81 text 320 × 240 px · 144,00 PPI · Đã lưu sRGB
++	82 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	83 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	84 trường văn bản (settable) Description: HEX, Value: #000000
++	85 trường văn bản (settable) Description: Alpha %, Value: 100
++	86 trường văn bản (settable) Description: Đỏ, Value: 0
++	87 trường văn bản (settable) Description: Xanh lá, Value: 0
++	88 trường văn bản (settable) Description: Xanh dương, Value: 0
++	89 text Màu tiền cảnh Màu nền HEX Alpha % R G B
++	90 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		91 text Họ phông
++		92 nút bật lên Description: Họ phông, Value: Academy Engraved LET, ID: type.family
++		93 text Kiểu phông
++		94 nút bật lên Description: Kiểu phông, ID: type.style
++		95 text Cỡ chữ…
++		96 trường văn bản (settable) Description: Cỡ chữ…, Value: 24, ID: type.size
++		97 text Màu chữ
++		98 bảng màu Description: Màu chữ, Value: rgb 1 1 1 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
++		99 text Căn lề
++		100 nút bật lên Description: Căn lề, Value: Trái, ID: type.alignment
++		101 text Cách dòng (px)
++		102 trường văn bản (settable) Description: Cách dòng (px), Value: 0, ID: type.spacing
++		103 nút Sửa văn bản
++		104 text Thiếu phông: PhotoAxisMissingFont-Fixture. Xem tạm bằng phông dự phòng, hình thức có thể khác. Chọn họ/kiểu để thay thế.
++		105 thanh cuộn (settable, float) 0
++			106 chỉ báo giá trị (settable, float) 0
++			107 nút mũi tên tăng dần
++			108 nút mũi tên giảm dần
++			109 nút trang tăng dần
++			110 nút trang giảm dần
++	111 text Màu
++	112 nút Description: Thu gọn các bảng, ID: sidebar.collapse
++	113 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
++		114 nút radio Description: Thuộc tính, Value: 1
++		115 nút radio Description: Lịch sử, Value: 0
++	116 text Lớp
++	117 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		118 bảng
++			119 row (selected)
++				120 ô (selected)
++					121 nút Description: Ẩn/hiện lớp: Chữ mới có dấu, Help: Ẩn/hiện lớp
++					122 hình ảnh
++					123 text Help: Chữ mới có dấu, Value: Chữ mới có dấu Chữ
++					124 nút Description: Khóa/mở khóa lớp: Chữ mới có dấu, Help: Khóa/mở khóa lớp
++			125 row (selectable)
++				126 ô
++					127 nút Description: Ẩn/hiện lớp: Locked, Help: Ẩn/hiện lớp
++					128 hình ảnh
++					129 text Help: Locked, Value: Locked Hình
++					130 nút Description: Khóa/mở khóa lớp: Locked, Help: Khóa/mở khóa lớp
++			131 row (selectable)
++				132 ô
++					133 nút Description: Ẩn/hiện lớp: Hidden, Help: Ẩn/hiện lớp
++					134 hình ảnh
++					135 text Help: Hidden, Value: Hidden Hình
++					136 nút Description: Khóa/mở khóa lớp: Hidden, Help: Khóa/mở khóa lớp
++			137 row (selectable)
++				138 ô
++					139 nút Description: Ẩn/hiện lớp: Ellipse, Help: Ẩn/hiện lớp
++					140 hình ảnh
++					141 text Help: Ellipse, Value: Ellipse Hình
++					142 nút Description: Khóa/mở khóa lớp: Ellipse, Help: Khóa/mở khóa lớp
++			143 row (selectable)
++				144 ô
++					145 nút Description: Ẩn/hiện lớp: Chữ cũ, Help: Ẩn/hiện lớp
++					146 hình ảnh
++					147 text Help: Chữ cũ, Value: Chữ cũ Chữ
++					148 nút Description: Khóa/mở khóa lớp: Chữ cũ, Help: Khóa/mở khóa lớp
++			149 row (selectable)
++				150 ô
++					151 nút Description: Ẩn/hiện lớp: Second image, Help: Ẩn/hiện lớp
++					152 hình ảnh
++					153 text Help: Second image, Value: Second image Ảnh
++					154 nút Description: Khóa/mở khóa lớp: Second image, Help: Khóa/mở khóa lớp
++			155 row (selectable)
++				156 ô
++					157 nút Description: Ẩn/hiện lớp: colors-srgb.png, Help: Ẩn/hiện lớp
++					158 hình ảnh
++					159 text Help: colors-srgb.png, Value: colors-srgb.png Ảnh
++					160 nút Description: Khóa/mở khóa lớp: colors-srgb.png, Help: Khóa/mở khóa lớp
++		161 thanh cuộn (settable, float) 0
++			162 chỉ báo giá trị (settable, float) 0
++			163 nút mũi tên tăng dần
++			164 nút mũi tên giảm dần
++			165 nút trang tăng dần
++			166 nút trang giảm dần
++	167 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
++	168 text Độ mờ
++	169 trường văn bản (settable) Description: Độ mờ, Value: 100 %
++	170 thanh trượt (settable, float) Description: Độ mờ, Value: 100
++		171 chỉ báo giá trị (settable, float) 100
++	172 nút Thêm lớp
++	173 nút Đổi tên lớp
++	174 nút Đưa lớp lên
++	175 nút Đưa lớp xuống
++	176 nút Nhân bản lớp
++	177 nút Xóa lớp
++	178 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
++	179 nút đóng
++	180 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	181 nút thu nhỏ
++	182 text P07 Mixed — PhotoAxis
+The focused UI element is 61 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+
+The following is a diff from the previous accessibility tree for Window: "P07 Mixed — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 0-3
++14 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
++	15 text Hand
++	16 nút Fit on Screen
++	17 nút 100%
++	18 text Drag or scroll to pan the canvas
++	19 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
++	20 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
++	21 nút Description: Switch Tools between one and two columns, ID: tools.columns
++	22 nút Description: Move (V), ID: tool.move
++	23 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
++	24 nút Description: Eyedropper (I), ID: tool.eyedropper
++	25 nút Description: Type (T), ID: tool.type
++	26 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
++	27 nút Description: Hand (H), ID: tool.hand
++	28 nút Description: Zoom (Z), ID: tool.zoom
++	29 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	30 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	31 nút chuyển đổi P07 Mixed, Value: on
++	32 nút Close tab
++	33 trường văn bản (settable) Description: Zoom, Value: 510 %
++	34 text 320 × 240 px · 144,00 PPI · Saved sRGB
++	35 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	36 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	37 trường văn bản (settable) Description: HEX, Value: #000000
++	38 trường văn bản (settable) Description: Alpha %, Value: 100
++	39 trường văn bản (settable) Description: Red, Value: 0
++	40 trường văn bản (settable) Description: Green, Value: 0
++	41 trường văn bản (settable) Description: Blue, Value: 0
++	42 text Foreground Color Background Color HEX Alpha % R G B
++	43 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		44 text Font Family
++		45 nút bật lên Description: Font Family, Value: Academy Engraved LET, ID: type.family
++		46 text Font Style
++		47 nút bật lên Description: Font Style, ID: type.style
++		48 text Font Size…
++		49 trường văn bản (settable) Description: Font Size…, Value: 24, ID: type.size
++		50 text Text Color
++		51 bảng màu Description: Text Color, Value: rgb 1 1 1 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
++		52 text Alignment
++		53 nút bật lên Description: Alignment, Value: Left, ID: type.alignment
++		54 text Line Gap (px)
++		55 trường văn bản (settable) Description: Line Gap (px), Value: 0, ID: type.spacing
++		56 nút Edit Text
++		57 text Missing font: PhotoAxisMissingFont-Fixture. Preview uses a fallback; appearance may differ. Choose a family/style to replace it.
++		58 thanh cuộn (settable, float) 0
++			59 chỉ báo giá trị (settable, float) 0
++			60 nút mũi tên tăng dần
++			61 nút mũi tên giảm dần
++			62 nút trang tăng dần
++			63 nút trang giảm dần
++	64 text Color
++	65 nút Description: Collapse Panels, ID: sidebar.collapse
++	66 Description: Properties and History, ID: sidebar.inspectorTabs
++		67 nút radio Description: Properties, Value: 1
++		68 nút radio Description: History, Value: 0
++	69 text Layers
++	70 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		71 bảng
++			72 row (selected)
++				73 ô (selected)
++					74 nút Description: Toggle Visibility: Chữ đã lưu khi đóng VI, Help: Toggle Visibility
++					75 hình ảnh
++					76 text Help: Chữ đã lưu khi đóng VI, Value: Chữ đã lưu khi đóng VI Text
++					77 nút Description: Toggle Lock: Chữ đã lưu khi đóng VI, Help: Toggle Lock
++			78 row (selectable)
++				79 ô
++					80 nút Description: Toggle Visibility: Locked, Help: Toggle Visibility
++					81 hình ảnh
++					82 text Help: Locked, Value: Locked Shape
++					83 nút Description: Toggle Lock: Locked, Help: Toggle Lock
++			84 row (selectable)
++				85 ô
++					86 nút Description: Toggle Visibility: Hidden, Help: Toggle Visibility
++					87 hình ảnh
++					88 text Help: Hidden, Value: Hidden Shape
++					89 nút Description: Toggle Lock: Hidden, Help: Toggle Lock
++			90 row (selectable)
++				91 ô
++					92 nút Description: Toggle Visibility: Ellipse, Help: Toggle Visibility
++					93 hình ảnh
++					94 text Help: Ellipse, Value: Ellipse Shape
++					95 nút Description: Toggle Lock: Ellipse, Help: Toggle Lock
++			96 row (selectable)
++				97 ô
++					98 nút Description: Toggle Visibility: Chữ cũ, Help: Toggle Visibility
++					99 hình ảnh
++					100 text Help: Chữ cũ, Value: Chữ cũ Text
++					101 nút Description: Toggle Lock: Chữ cũ, Help: Toggle Lock
++			102 row (selectable)
++				103 ô
++					104 nút Description: Toggle Visibility: Second image, Help: Toggle Visibility
++					105 hình ảnh
++					106 text Help: Second image, Value: Second image Image
++					107 nút Description: Toggle Lock: Second image, Help: Toggle Lock
++			108 row (selectable)
++				109 ô
++					110 nút Description: Toggle Visibility: colors-srgb.png, Help: Toggle Visibility
++					111 hình ảnh
++					112 text Help: colors-srgb.png, Value: colors-srgb.png Image
++					113 nút Description: Toggle Lock: colors-srgb.png, Help: Toggle Lock
++		114 thanh cuộn (settable, float) 0
++			115 chỉ báo giá trị (settable, float) 0
++			116 nút mũi tên tăng dần
++			117 nút mũi tên giảm dần
++			118 nút trang tăng dần
++			119 nút trang giảm dần
++	120 nút bật lên (disabled) Description: Blend Mode, Value: Normal
++	121 text Opacity
++	122 trường văn bản (settable) Description: Opacity, Value: 100 %
++	123 thanh trượt (settable, float) Description: Opacity, Value: 100
++		124 chỉ báo giá trị (settable, float) 100
++	125 nút Add Layer
++	126 nút Rename Layer
++	127 nút Move Layer Up
++	128 nút Move Layer Down
++	129 nút Duplicate Layer
++	130 nút Delete Layer
++	131 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
++	132 nút đóng
++	133 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	134 nút thu nhỏ
++	135 text P07 Mixed — PhotoAxis
+The focused UI element is 14 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+
+The following is a diff from the previous accessibility tree for Window: "P07 Mixed — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 0-3
++14 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
++	15 text Bàn tay
++	16 nút Vừa màn hình
++	17 nút 100%
++	18 text Kéo hoặc cuộn để di chuyển canvas
++	19 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
++	20 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
++	21 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
++	22 nút Description: Di chuyển (V), ID: tool.move
++	23 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
++	24 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
++	25 nút Description: Văn bản (T), ID: tool.type
++	26 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
++	27 nút Description: Bàn tay (H), ID: tool.hand
++	28 nút Description: Thu phóng (Z), ID: tool.zoom
++	29 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	30 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	31 nút chuyển đổi P07 Mixed, Value: on
++	32 nút Đóng tab
++	33 trường văn bản (settable) Description: Thu phóng, Value: 510 %
++	34 text 320 × 240 px · 144,00 PPI · Đã lưu sRGB
++	35 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	36 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	37 trường văn bản (settable) Description: HEX, Value: #000000
++	38 trường văn bản (settable) Description: Alpha %, Value: 100
++	39 trường văn bản (settable) Description: Đỏ, Value: 0
++	40 trường văn bản (settable) Description: Xanh lá, Value: 0
++	41 trường văn bản (settable) Description: Xanh dương, Value: 0
++	42 text Màu tiền cảnh Màu nền HEX Alpha % R G B
++	43 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		44 text Họ phông
++		45 nút bật lên Description: Họ phông, Value: Academy Engraved LET, ID: type.family
++		46 text Kiểu phông
++		47 nút bật lên Description: Kiểu phông, ID: type.style
++		48 text Cỡ chữ…
++		49 trường văn bản (settable) Description: Cỡ chữ…, Value: 24, ID: type.size
++		50 text Màu chữ
++		51 bảng màu Description: Màu chữ, Value: rgb 1 1 1 1, ID: type.color, Secondary Actions: Hiển thị bảng màu
++		52 text Căn lề
++		53 nút bật lên Description: Căn lề, Value: Trái, ID: type.alignment
++		54 text Cách dòng (px)
++		55 trường văn bản (settable) Description: Cách dòng (px), Value: 0, ID: type.spacing
++		56 nút Sửa văn bản
++		57 text Thiếu phông: PhotoAxisMissingFont-Fixture. Xem tạm bằng phông dự phòng, hình thức có thể khác. Chọn họ/kiểu để thay thế.
++		58 thanh cuộn (settable, float) 0
++			59 chỉ báo giá trị (settable, float) 0
++			60 nút mũi tên tăng dần
++			61 nút mũi tên giảm dần
++			62 nút trang tăng dần
++			63 nút trang giảm dần
++	64 text Màu
++	65 nút Description: Thu gọn các bảng, ID: sidebar.collapse
++	66 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
++		67 nút radio Description: Thuộc tính, Value: 1
++		68 nút radio Description: Lịch sử, Value: 0
++	69 text Lớp
++	70 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		71 bảng
++			72 row (selected)
++				73 ô (selected)
++					74 nút Description: Ẩn/hiện lớp: Chữ đã lưu khi đóng VI, Help: Ẩn/hiện lớp
++					75 hình ảnh
++					76 text Help: Chữ đã lưu khi đóng VI, Value: Chữ đã lưu khi đóng VI Chữ
++					77 nút Description: Khóa/mở khóa lớp: Chữ đã lưu khi đóng VI, Help: Khóa/mở khóa lớp
++			78 row (selectable)
++				79 ô
++					80 nút Description: Ẩn/hiện lớp: Locked, Help: Ẩn/hiện lớp
++					81 hình ảnh
++					82 text Help: Locked, Value: Locked Hình
++					83 nút Description: Khóa/mở khóa lớp: Locked, Help: Khóa/mở khóa lớp
++			84 row (selectable)
++				85 ô
++					86 nút Description: Ẩn/hiện lớp: Hidden, Help: Ẩn/hiện lớp
++					87 hình ảnh
++					88 text Help: Hidden, Value: Hidden Hình
++					89 nút Description: Khóa/mở khóa lớp: Hidden, Help: Khóa/mở khóa lớp
++			90 row (selectable)
++				91 ô
++					92 nút Description: Ẩn/hiện lớp: Ellipse, Help: Ẩn/hiện lớp
++					93 hình ảnh
++					94 text Help: Ellipse, Value: Ellipse Hình
++					95 nút Description: Khóa/mở khóa lớp: Ellipse, Help: Khóa/mở khóa lớp
++			96 row (selectable)
++				97 ô
++					98 nút Description: Ẩn/hiện lớp: Chữ cũ, Help: Ẩn/hiện lớp
++					99 hình ảnh
++					100 text Help: Chữ cũ, Value: Chữ cũ Chữ
++					101 nút Description: Khóa/mở khóa lớp: Chữ cũ, Help: Khóa/mở khóa lớp
++			102 row (selectable)
++				103 ô
++					104 nút Description: Ẩn/hiện lớp: Second image, Help: Ẩn/hiện lớp
++					105 hình ảnh
++					106 text Help: Second image, Value: Second image Ảnh
++					107 nút Description: Khóa/mở khóa lớp: Second image, Help: Khóa/mở khóa lớp
++			108 row (selectable)
++				109 ô
++					110 nút Description: Ẩn/hiện lớp: colors-srgb.png, Help: Ẩn/hiện lớp
++					111 hình ảnh
++					112 text Help: colors-srgb.png, Value: colors-srgb.png Ảnh
++					113 nút Description: Khóa/mở khóa lớp: colors-srgb.png, Help: Khóa/mở khóa lớp
++		114 thanh cuộn (settable, float) 0
++			115 chỉ báo giá trị (settable, float) 0
++			116 nút mũi tên tăng dần
++			117 nút mũi tên giảm dần
++			118 nút trang tăng dần
++			119 nút trang giảm dần
++	120 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
++	121 text Độ mờ
++	122 trường văn bản (settable) Description: Độ mờ, Value: 100 %
++	123 thanh trượt (settable, float) Description: Độ mờ, Value: 100
++		124 chỉ báo giá trị (settable, float) 100
++	125 nút Thêm lớp
++	126 nút Đổi tên lớp
++	127 nút Đưa lớp lên
++	128 nút Đưa lớp xuống
++	129 nút Nhân bản lớp
++	130 nút Xóa lớp
++	131 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
++	132 nút đóng
++	133 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	134 nút thu nhỏ
++	135 text P07 Mixed — PhotoAxis
+The focused UI element is 14 cửa sổ thông thường P07 Mixed — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
