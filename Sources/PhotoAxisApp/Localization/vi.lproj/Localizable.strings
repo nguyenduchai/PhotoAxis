@@ -324,7 +324,7 @@
 "investigation.editIntake" = "Tiếp nhận và chú thích…";
 "investigation.editImage" = "Sửa bản làm việc";
 "investigation.verify" = "Kiểm tra toàn vẹn";
-"investigation.compare" = "So sánh nguồn/kết quả";
+"investigation.compare" = "Đối chiếu trước/sau";
 "investigation.annotate" = "Thêm chú thích…";
 "investigation.redact" = "Xác nhận vùng che…";
 "investigation.exportPNG" = "Xuất PNG chia sẻ…";
@@ -395,7 +395,7 @@
 "investigation.confirmOCR" = "Xác nhận và lưu bản rà soát";
 "investigation.ocrReviewHelp" = "Đối chiếu chữ với vùng ảnh màu cam. Chỉ xác nhận nội dung thực sự nhìn thấy; để trống phần không đọc được. Độ tin cậy máy không thay thế xác nhận.";
 "investigation.ocrConfirmationSaved" = "Đã lưu bản xác nhận và nhật ký. Bản OCR ban đầu vẫn giữ nguyên.";
-"investigation.ocrHelp" = "Nhập vùng chữ theo pixel nguồn làm việc lúc tiếp nhận (góc trên trái). OCR chạy offline trên nguồn này, không đọc layer chữ hay ảnh đã chỉnh. Kết quả cần người dùng rà soát.";
+"investigation.ocrHelp" = "Chọn vùng chữ theo pixel nguồn hiển thị (góc trên trái). Tab thường nhận dạng canvas đã chốt, gồm layer nhìn thấy; tab hồ sơ nhận dạng nguồn lúc tiếp nhận. OCR chạy offline; cần rà soát kết quả.";
 "investigation.videoHelp" = "MOV/MP4, một track video, tối đa 512 MiB. Giữ byte nguồn; không nhận URL hay media tham chiếu bên ngoài.";
 "investigation.videoImported" = "Đã giữ video nguồn và thông tin tiếp nhận. Dùng Trích khung hình để chọn số khung.";
 "investigation.frameHelp" = "Số khung bắt đầu từ 0, theo thứ tự mẫu hình giải mã của track. PTS được lưu chính xác, không tính từ FPS. Độ lệch chỉ tạo thời điểm tương đối đã hiệu chỉnh; không sửa PTS gốc, không chứng nhận giờ quay.";
@@ -544,5 +544,16 @@
 "settings.resetSection" = "Đặt lại nhóm hiện tại";
 "workspace.editHelp" = "Layer, màu và lịch sử chỉnh sửa.";
 "workspace.sourcesHelp" = "Tạo hoặc mở hồ sơ để tiếp nhận ảnh/video.";
-"workspace.analysisHelp" = "Chọn ảnh ở Nguồn để chú thích, OCR và đo.";
+"workspace.analysisHelp" = "Chú thích, OCR và đo ngay ảnh ở tab đang mở.";
 "workspace.outputHelp" = "Rà soát vùng che cho từng ảnh trước khi xuất.";
+
+// Open canvas analysis
+"investigation.currentImageProvenance" = "Bản PNG dựng từ canvas đang mở, gồm các chỉnh sửa đã chốt; không phải file gốc được tiếp nhận. Hash nguồn nhúng và model được ghi trong nhật ký.";
+"investigation.currentCanvasImage" = "Đang dùng canvas của tab này. Phiên phân tích tạm; lưu thành hồ sơ để giữ kết quả.";
+"investigation.currentSavedCanvasImage" = "Đang dùng canvas của tab này. Bản phân tích đã lưu là ảnh chụp tại thời điểm lưu.";
+"investigation.currentCaseImage" = "Đang dùng bản làm việc của tab này trong hồ sơ. OCR kiểm nguồn tiếp nhận của ảnh này.";
+"investigation.noActiveImage" = "Mở hoặc chọn một tab ảnh để dùng Phân tích và Đầu ra.";
+"investigation.currentCompareHelp" = "Lúc mở tab (trái) / canvas hiện tại (phải). Đây là đối chiếu bản dựng, không phải xác nhận byte ảnh gốc tiếp nhận. Kéo/pinch di chuyển và zoom chung.";
+"investigation.saveCurrentAnalysis" = "Lưu phân tích thành hồ sơ…";
+"investigation.saveCurrentAnalysisHelp" = "Lưu bản chụp canvas và kết quả phân tích/nhật ký vào .paxcase. File gốc tiếp nhận cần nhập riêng ở Nguồn. Tab chỉnh sửa vẫn giữ nguyên. Sau khi sửa canvas, phân tích lại trước khi lưu một phiên mới.";
+"investigation.currentAnalysisSaved" = "Đã lưu phiên phân tích. Tab chỉnh sửa giữ nguyên; hồ sơ chứa bản dựng và thông tin nguồn tạo.";

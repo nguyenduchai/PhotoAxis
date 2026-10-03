@@ -65,6 +65,7 @@ final class InvestigationCaseStore {
     private(set) var value: InvestigationCase
     private var manifestSHA256: String
     private let lockFD: Int32
+    private let removeOnClose: Bool
     let appVersion: String
     var changed: (() -> Void)?
     var beforeManifestCommit: (() throws -> Void)?
@@ -79,7 +80,8 @@ final class InvestigationCaseStore {
     }
     func originalURL(_ item: EvidenceItem) -> URL { root.appendingPathComponent("originals/" + item.originalSHA256) }
     func item(_ id: UUID) throws -> EvidenceItem { guard let item = value.items.first(where: { $0.id == id }) else { throw InvestigationError.invalidCase }; return item }
-    init(root: URL, creating: InvestigationCase? = nil, appVersion: String = "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "unknown"))") throws {
+    init(root: URL, creating: InvestigationCase? = nil, removeOnClose: Bool = false, appVersion: String = "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "unknown"))") throws {
+        self.removeOnClose = removeOnClose
         self.root = root.standardizedFileURL; self.appVersion = appVersion
         if let creating {
             guard !FileManager.default.fileExists(atPath: root.path) else { throw InvestigationError.protectedDestination }
@@ -98,7 +100,7 @@ final class InvestigationCaseStore {
             value = try InvestigationCase.decode(data); manifestSHA256 = InvestigationDigest.hash(data); lockFD = fd
         } catch { flock(fd, LOCK_UN); close(fd); throw error }
     }
-    deinit { flock(lockFD, LOCK_UN); close(lockFD) }
+    deinit { flock(lockFD, LOCK_UN); close(lockFD); if removeOnClose { try? FileManager.default.removeItem(at: root) } }
     func verifyManifest() throws {
         try InvestigationFiles.directory(root)
         for name in ["originals", "projects"] { try InvestigationFiles.directory(root.appendingPathComponent(name)) }

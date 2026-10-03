@@ -21,6 +21,36 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     private var parameterTitle = ""
     private var requestID = UUID()
     private var activeContext: String?
+    private var openImageContexts: [UUID: OpenImageAnalysis] = [:]
+    private let analysisTarget = NSTextField(wrappingLabelWithString: "")
+    private let outputTarget = NSTextField(wrappingLabelWithString: "")
+    var analysisStore: InvestigationCaseStore? {
+        guard let document = coordinator.active else { return nil }
+        if let session = document.investigationSession { return session.store }
+        guard let context = openImageContexts[document.model.id], context.matches(document) else { return nil }
+        return context.store
+    }
+    var analysisItem: EvidenceItem? {
+        guard let document = coordinator.active, let store = analysisStore else { return nil }
+        let id = document.investigationSession?.itemID ?? openImageContexts[document.model.id]?.itemID
+        return store.value.items.first { $0.id == id }
+    }
+    private var canAnalyze: Bool {
+        guard let document = coordinator.active else { return false }
+        return !document.isInteractionLocked && !document.hasSession && !coordinator.isSaving && !coordinator.isClosing && !coordinator.isImporting
+    }
+    /// Freeze the committed active canvas; recheck after each async capture so
+    /// switching tabs or editing cannot silently target an older case selection.
+    func prepareActiveImage() async throws -> (InvestigationCaseStore, EvidenceItem) {
+        guard canAnalyze, let document = coordinator.active else { throw InvestigationError.missingCase }
+        if let store = analysisStore, let item = analysisItem { return (store, item) }
+        let context = try await OpenImageAnalysis.capture(document, coordinator: coordinator, localization: localization)
+        guard coordinator.active === document, context.matches(document), canAnalyze else { throw CancellationError() }
+        openImageContexts[document.model.id] = context
+        context.store.changed = { [weak self] in self?.updateButtons() }
+        updateButtons()
+        return (context.store, try context.store.item(context.itemID))
+    }
     private var capture: InvestigationCaptureView?
     private var annotationUsesSource = false
     var hasPendingParameters: Bool { pending != nil }
@@ -65,6 +95,11 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         for button in [create, open, caseInfo, intake, video] { sourcePanel.append(button) }
         sourcePanel.append(list)
         for button in [editImage, edit, verify] { sourcePanel.append(button) }; sourcePanel.append(info)
+        analysisTarget.setAccessibilityIdentifier("investigation.activeImage")
+        outputTarget.setAccessibilityIdentifier("investigation.outputImage")
+        analysisPanel.append(analysisTarget); outputPanel.append(outputTarget)
+        sourcePanel.append(button("investigation.saveCurrentAnalysis", #selector(saveCurrentAnalysis)))
+        analysisPanel.append(button("investigation.saveCurrentAnalysis", #selector(saveCurrentAnalysis)))
         for button in [compare, annotate, ocr, review, frame, calibrate, measure] { analysisPanel.append(button) }
         for button in [mask, png, pdf, catalog, log, analysis] { outputPanel.append(button) }
         outputPanel.append(NSTextField(wrappingLabelWithString: localization.text("investigation.notice")))
@@ -93,6 +128,9 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         let active = coordinator.active
         let context = active.map { $0.model.id.uuidString + InvestigationDigest.hash((try? ProjectSchema($0.model).encoded()) ?? Data()) }
         if activeContext != context { cancelParameters(); workspace?.dismissPresentation(); activeContext = context }
+        let liveIDs = Set(coordinator.documents.map { $0.model.id })
+        openImageContexts = openImageContexts.filter { liveIDs.contains($0.key) }
+        updateButtons()
         guard let session = active?.investigationSession else { return }
         if store !== session.store { use(session.store) }
         if let row = session.store.value.items.firstIndex(where: { $0.id == session.itemID }), table.selectedRow != row {
@@ -133,15 +171,30 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     }
     private func updateButtons() {
         caseSelector.isEnabled = !busy && pending == nil
-        for (index, button) in buttons.enumerated() {
-            let needsItem = [3, 4, 6, 7, 8, 9].contains(index)
-            button.isEnabled = !busy && pending == nil && (index < 2 || store != nil) && (!needsItem || selectedItem != nil)
-            if [10, 11].contains(index), store?.value.items.isEmpty != false { button.isEnabled = false }
-            if index == 14 { button.isEnabled = button.isEnabled && selectedItem != nil && ocrSupported; button.toolTip = ocrSupported ? nil : localization.text("investigation.error.ocrUnavailable") }
-            if index == 15 { button.isEnabled = button.isEnabled && store?.value.analysis?.ocr.contains(where: { $0.itemID == selectedItem?.id }) == true }
-            if index == 17 { button.isEnabled = button.isEnabled && store?.value.analysis?.videos.isEmpty == false }
-            if index == 18 { button.isEnabled = button.isEnabled && selectedItem != nil }
-            if index == 19 { button.isEnabled = button.isEnabled && store?.value.analysis?.calibrations.contains(where: { $0.itemID == selectedItem?.id && $0.modelSHA256 == selectedItem.map { InvestigationDigest.hash($0.currentModelJSON) } }) == true }
+        let item = analysisItem, targetStore = analysisStore
+        let description: String
+        if let document = coordinator.active {
+            let mode = document.investigationSession != nil ? localization.text("investigation.currentCaseImage") : localization.text(openImageContexts[document.model.id].map { $0.matches(document) && !$0.isTemporary } == true ? "investigation.currentSavedCanvasImage" : "investigation.currentCanvasImage")
+            description = document.model.name + "\n" + mode
+        } else { description = localization.text("investigation.noActiveImage") }
+        for label in [analysisTarget, outputTarget] { label.stringValue = description; label.font = .systemFont(ofSize: 11); label.textColor = .secondaryLabelColor }
+        for button in buttons {
+            let key = button.accessibilityIdentifier() ?? ""
+            var enabled = !busy && pending == nil
+            switch key {
+            case "investigation.create", "investigation.open": break
+            case "investigation.import", "investigation.importVideo", "investigation.editCase", "investigation.verify": enabled = enabled && store != nil
+            case "investigation.editIntake", "investigation.editImage": enabled = enabled && selectedItem != nil
+            case "investigation.extractFrame": enabled = enabled && store?.value.analysis?.videos.isEmpty == false
+            case "investigation.reviewOCR": enabled = enabled && canAnalyze && targetStore?.value.analysis?.ocr.contains(where: { $0.itemID == item?.id }) == true
+            case "investigation.measure": enabled = enabled && canAnalyze && targetStore?.value.analysis?.calibrations.contains(where: { $0.itemID == item?.id && $0.modelSHA256 == item.map { InvestigationDigest.hash($0.currentModelJSON) } }) == true
+            case "investigation.ocr":
+                enabled = enabled && canAnalyze && ocrSupported
+                button.toolTip = ocrSupported ? nil : localization.text("investigation.error.ocrUnavailable")
+            case "investigation.saveCurrentAnalysis": enabled = enabled && canAnalyze && coordinator.active?.model.investigation == nil
+            default: enabled = enabled && canAnalyze
+            }
+            button.isEnabled = enabled
         }
     }
     func numberOfRows(in tableView: NSTableView) -> Int { store?.value.items.count ?? 0 }
@@ -175,7 +228,7 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         detail.string = text
     }
     private func alert(_ message: String) { for panel in [sourcePanel, analysisPanel, outputPanel] { panel.status.stringValue = message }; workspace?.setImportProgress(message); workspace?.cancelImportButton.isHidden = true }
-    private func failure(_ error: Error) { alert(localization.text((error as? InvestigationError)?.localizationKey ?? (error as? ImageImportError)?.key ?? "investigation.error.auditUnavailable")) }
+    private func failure(_ error: Error) { if error is CancellationError { return }; alert(localization.text((error as? InvestigationError)?.localizationKey ?? (error as? ImageImportError)?.key ?? "investigation.error.auditUnavailable")) }
     @objc private func editCase() { Task { await editCaseFlow() } }
     private func editCaseFlow() async {
         guard let store, !busy, let values = await parameters("investigation.editCase", fields: [("investigation.code", store.value.code), ("investigation.caseTitle", store.value.title), ("investigation.examiner", store.value.examiner)]) else { return }
@@ -190,7 +243,7 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         cancelParameters()
         annotationUsesSource = false
         parameterTitle = title; parameterFields = [:]; parameterOutputs = []; requestID = UUID()
-        let page = ["investigation.redact", "investigation.exportPDF"].contains(title) ? 3 : ["investigation.create", "investigation.editCase", "investigation.intake", "investigation.editIntake"].contains(title) ? 1 : 2
+        let page = ["investigation.redact", "investigation.exportPDF"].contains(title) ? 3 : ["investigation.create", "investigation.editCase", "investigation.intake", "investigation.editIntake", "investigation.saveCurrentAnalysis"].contains(title) ? 1 : 2
         let panel = [sourcePanel, analysisPanel, outputPanel][page - 1]; pendingPanel = panel
         panel.clearEditor(); workspace?.revealPanel(page)
         let heading = NSTextField(wrappingLabelWithString: localization.text(title)); heading.font = .boldSystemFont(ofSize: 13)
@@ -244,11 +297,13 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     }
     @objc private func resetCapture() { capture?.resetSelection() }
     @objc private func pickCoordinates() {
-        guard let store, let item = selectedItem, pending != nil else { return }
+        guard let store = analysisStore, let item = analysisItem, pending != nil else { return }
         let request = requestID, title = parameterTitle, magnifier = annotationUsesSource
         Task { do {
             let source = title == "investigation.ocr"
-            let snapshot = try await (source ? store.intakeSnapshot(item.id, projects: coordinator.projectStore) : store.openSnapshot(item.id, projects: coordinator.projectStore))
+            let snapshot: ProjectSnapshot
+            if magnifier, coordinator.active?.investigationSession == nil, let document = coordinator.active { snapshot = document.snapshot() }
+            else { snapshot = try await (source ? store.intakeSnapshot(item.id, projects: coordinator.projectStore) : store.openSnapshot(item.id, projects: coordinator.projectStore)) }
             let image: CGImage, size: CanvasSize
             if magnifier {
                 guard let layer = snapshot.model.layers.first(where: { if case .image = $0.content { return true }; return false }),
@@ -274,6 +329,30 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
             view.setAccessibilityLabel(localization.text("workspace.regionPicker")); view.setAccessibilityHelp(localization.text("workspace.captureHelp"))
             capture = view; workspace?.showPresentation(view)
         } catch { failure(error) } }
+    }
+    @objc private func saveCurrentAnalysis() {
+        guard !busy, canAnalyze, coordinator.active?.model.investigation == nil else { return }; busy = true
+        Task { defer { busy = false }; do {
+            _ = try await prepareActiveImage()
+            guard let document = coordinator.active, let context = openImageContexts[document.model.id],
+                  let values = await parameters("investigation.saveCurrentAnalysis", fields: [("investigation.code", ""),
+                    ("investigation.caseTitle", document.model.name), ("investigation.examiner", "")],
+                    help: localization.text("investigation.saveCurrentAnalysisHelp")) else { return }
+            let panel = NSSavePanel(); panel.nameFieldStringValue = "Phan-tich-anh.paxcase"; panel.canCreateDirectories = true
+            guard panel.runModal() == .OK, let url = panel.url, context.matches(coordinator.active) else { return }
+            let destination = url.pathExtension.lowercased() == "paxcase" ? url : url.appendingPathExtension("paxcase")
+            try protectNewCaseDestination(destination)
+            let saved = try await context.save(to: destination, code: values[0], title: values[1], examiner: values[2])
+            openImageContexts[document.model.id] = saved; use(saved.store)
+            alert(localization.text("investigation.currentAnalysisSaved"))
+        } catch { failure(error) } }
+    }
+    func protectNewCaseDestination(_ destination: URL) throws {
+        guard destination.pathExtension.lowercased() == "paxcase",
+              !FileManager.default.fileExists(atPath: destination.path) else { throw InvestigationError.protectedDestination }
+        // Export protection rejects a .paxcase target itself. For a NEW case,
+        // protect its parent against nesting in any existing case package.
+        try coordinator.protectInvestigationDestination?(destination.deletingLastPathComponent())
     }
     @objc private func createCase() { Task { await createCaseFlow() } }
     private func createCaseFlow() async {
@@ -346,28 +425,33 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
             for video in store.value.analysis?.videos ?? [] { try await store.verifyVideo(video) }; try store.mutate("integrityChecked"); alert(localization.text("investigation.verified")) } catch { failure(error) } }
     }
     private var selectionAnchor: String {
-        (store?.value.id.uuidString ?? "") + (selectedItem?.id.uuidString ?? "") + (activeContext ?? "") + (selectedItem.map { InvestigationDigest.hash($0.currentModelJSON) } ?? "")
+        (analysisStore?.value.id.uuidString ?? "") + (analysisItem?.id.uuidString ?? "") + (activeContext ?? "") + (analysisItem.map { InvestigationDigest.hash($0.currentModelJSON) } ?? "")
     }
     @objc private func compareImages() {
-        guard let store, let item = selectedItem, !busy else { return }; busy = true
-        let anchor = selectionAnchor
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, item) = try await prepareActiveImage(), anchor = selectionAnchor
             let snapshot = try await store.openSnapshot(item.id, projects: coordinator.projectStore)
             let image = try await coordinator.pipeline.exportImage(snapshot: snapshot, options: ExportOptions(size: snapshot.model.canvas, ppi: snapshot.model.ppi), previewEdge: 2000)
             let originalURL = store.originalURL(item)
-            let original = try await Task.detached { () throws -> CGImage in
+            let original: CGImage
+            if let document = coordinator.active, document.investigationSession == nil,
+               let baseline = openImageContexts[document.model.id]?.baseline {
+                original = try await coordinator.pipeline.exportImage(snapshot: baseline, options: ExportOptions(size: baseline.model.canvas, ppi: baseline.model.ppi), previewEdge: 2000)
+            } else { original = try await Task.detached { () throws -> CGImage in
                 guard let source = CGImageSourceCreateWithURL(originalURL as CFURL, nil), let image = CGImageSourceCreateThumbnailAtIndex(source, 0,
                     [kCGImageSourceCreateThumbnailFromImageAlways: true, kCGImageSourceCreateThumbnailWithTransform: true, kCGImageSourceThumbnailMaxPixelSize: 2000,
                      kCGImageSourceDecodeRequest: kCGImageSourceDecodeToSDR] as CFDictionary) else { throw InvestigationError.integrity }; return image
-            }.value
-            let controller = InvestigationComparisonPanel(original: original, processed: image, localization: localization)
+            }.value }
+            let controller = InvestigationComparisonPanel(original: original, processed: image, localization: localization,
+                helpKey: coordinator.active?.investigationSession == nil ? "investigation.currentCompareHelp" : "investigation.compareHelp")
             guard anchor == selectionAnchor else { return }; workspace?.showPresentation(controller)
         } catch { failure(error) } }
     }
     @objc private func annotateImage() {
-        guard let item = selectedItem, !busy else { return }; busy = true
+        guard !busy, canAnalyze, let document = coordinator.active else { return }; busy = true
         Task { defer { busy = false }; do {
-            let document = try await openItem(item.id)
+            _ = try await prepareActiveImage()
             guard document.resolveSession(), let values = await parameters("investigation.annotate", fields: [("investigation.annotationKind", "arrow"), ("investigation.x", "10"), ("investigation.y", "10"),
                 ("investigation.width", "80"), ("investigation.height", "60"), ("investigation.label", "1")], help: localization.text("investigation.annotationHelp")) else { return }
             guard let kind = InvestigationAnnotation(rawValue: values[0]), let x = Int(values[1]), let y = Int(values[2]), let w = Int(values[3]), let h = Int(values[4]) else { throw InvestigationError.invalidCase }
@@ -380,9 +464,11 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     }
     @objc private func reviewRedactions() { Task { await reviewRedactionsFlow() } }
     private func reviewRedactionsFlow() async {
-        guard let store, let item = selectedItem, !busy,
-              let values = await parameters("investigation.redact", fields: [("investigation.regions", item.redactions.map { "\($0.x),\($0.y),\($0.width),\($0.height)" }.joined(separator: ";"))], help: localization.text("investigation.redactHelp")) else { return }
+        guard !busy, canAnalyze else { return }
+        busy = true; defer { busy = false }
         do {
+        let (store, item) = try await prepareActiveImage()
+        guard let values = await parameters("investigation.redact", fields: [("investigation.regions", item.redactions.map { "\($0.x),\($0.y),\($0.width),\($0.height)" }.joined(separator: ";"))], help: localization.text("investigation.redactHelp")) else { return }
             let regions = try values[0].split(separator: ";").map { part -> EvidenceRegion in
                 let numbers = part.split(separator: ",", omittingEmptySubsequences: false).map { Int($0.trimmingCharacters(in: .whitespaces)) }
                 guard numbers.count == 4, numbers.allSatisfy({ $0 != nil }) else { throw InvestigationError.invalidCase }
@@ -403,8 +489,10 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         return try InvestigationSharing.redacted(image, modelSize: snapshot.model.canvas, regions: item.redactions)
     }
     @objc private func exportPNG() {
-        guard let store, let item = selectedItem, !busy, let url = destination(item.code + "-chia-se.png", type: .png) else { return }; busy = true
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, item) = try await prepareActiveImage()
+            guard let url = destination(item.code + "-chia-se.png", type: .png) else { return }
             try store.protectDestination(url); try coordinator.protectInvestigationDestination?(url)
             try store.mutate("sharingStarted", itemID: item.id, details: ["format": "PNG", "fileName": url.lastPathComponent])
             let image = try await sharingImage(item, store: store, edge: nil), ppi = try item.model.ppi
@@ -417,10 +505,12 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
     }
     @objc private func exportPDF() { Task { await exportPDFFlow() } }
     private func exportPDFFlow() async {
-        guard let store, !busy, !store.value.items.isEmpty, let values = await parameters("investigation.exportPDF", fields: [("investigation.perPage", "2")], help: localization.text("investigation.pdfHelp")),
+        guard !busy, canAnalyze else { return }
+        busy = true; defer { busy = false }
+        do {
+        let (store, _) = try await prepareActiveImage()
+        guard let values = await parameters("investigation.exportPDF", fields: [("investigation.perPage", "2")], help: localization.text("investigation.pdfHelp")),
               let perPage = Int(values[0]), [1, 2, 4].contains(perPage), let url = destination("Ban-anh.pdf", type: .pdf) else { return }
-        busy = true
-        Task { defer { busy = false }; do {
             try store.protectDestination(url); try coordinator.protectInvestigationDestination?(url)
             let value = store.value
             try store.mutate("sharingStarted", details: ["format": "PDF", "perPage": String(perPage), "fileName": url.lastPathComponent])
@@ -438,12 +528,13 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
             try store.mutate("sharingCompleted", details: ["format": "PDF", "sha256": InvestigationDigest.hash(bytes), "fileName": url.lastPathComponent, "perPage": String(perPage),
                                                          "inputLedgerSHA256": value.events.last?.sha256 ?? ""])
             alert(localization.text("investigation.exported"))
-        } catch { failure(error) } }
+        } catch { failure(error) }
     }
     @objc private func exportCatalog() {
-        guard let store, !busy, let url = destination("Danh-muc-nguon.json", type: .json) else { return }
-        busy = true
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, _) = try await prepareActiveImage()
+            guard let url = destination("Danh-muc-nguon.json", type: .json) else { return }
             try store.protectDestination(url); try coordinator.protectInvestigationDestination?(url)
             struct Source: Encodable { let code, originalName, originalSHA256, caption: String; let originalByteCount: Int; let intake: EvidenceIntake }
             let sources = store.value.items.map { Source(code: $0.code, originalName: $0.originalName, originalSHA256: $0.originalSHA256, caption: $0.caption, originalByteCount: $0.originalByteCount, intake: $0.intake) }
@@ -456,9 +547,10 @@ final class InvestigationController: NSObject, NSTableViewDataSource, NSTableVie
         } catch { failure(error) } }
     }
     @objc private func exportLog() {
-        guard let store, !busy, let url = destination("Nhat-ky-xu-ly.json", type: .json) else { return }
-        busy = true
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, _) = try await prepareActiveImage()
+            guard let url = destination("Nhat-ky-xu-ly.json", type: .json) else { return }
             try store.protectDestination(url); try coordinator.protectInvestigationDestination?(url)
             try store.mutate("processingLogExportStarted", details: ["fileName": url.lastPathComponent])
             struct Log: Encodable { let formatIdentifier = "photoaxis.processing-log"; let formatVersion = 1; let caseID: UUID; let code, title: String; let events: [InvestigationEvent] }
@@ -479,19 +571,21 @@ extension InvestigationController {
         guard values.count <= 64 else { throw InvestigationError.limit }; return values
     }
     @objc private func recognizeText() {
-        guard let store, let item = selectedItem, !busy else { return }; busy = true
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, item) = try await prepareActiveImage(), anchor = selectionAnchor
             let snapshot = try await store.intakeSnapshot(item.id, projects: coordinator.projectStore), source = snapshot.assets[item.workingSourceSHA256]!
             let size = source.descriptor.size
             guard let values = await parameters("investigation.ocr", fields: [("investigation.x", "0"), ("investigation.y", "0"), ("investigation.width", String(size.width)), ("investigation.height", String(size.height))], help: localization.text("investigation.ocrHelp")) else { return }
             let numbers = values.compactMap(Int.init); guard numbers.count == 4 else { throw InvestigationError.invalidCase }
             let region = EvidenceRegion(x: numbers[0], y: numbers[1], width: numbers[2], height: numbers[3])
             let record = try await store.recognize(item.id, region: region, pipeline: coordinator.pipeline, projects: coordinator.projectStore)
+            guard anchor == selectionAnchor else { return }
             try await showOCR(record, store: store)
         } catch { failure(error) } }
     }
     @objc private func reviewOCR() {
-        guard let store, let item = selectedItem, !busy, let record = store.value.analysis?.ocr.last(where: { $0.itemID == item.id }) else { return }; busy = true
+        guard let store = analysisStore, let item = analysisItem, !busy, let record = store.value.analysis?.ocr.last(where: { $0.itemID == item.id }) else { return }; busy = true
         Task { defer { busy = false }; do { try await showOCR(record, store: store) } catch { failure(error) } }
     }
     private func showOCR(_ record: EvidenceOCR, store: InvestigationCaseStore) async throws {
@@ -530,19 +624,21 @@ extension InvestigationController {
     }
     @objc private func calibrate() { Task { await calibrateFlow() } }
     private func calibrateFlow() async {
-        guard let store, let item = selectedItem, !busy,
-              let fields = await parameters("investigation.calibrate", fields: [("investigation.referencePoints", ""), ("investigation.knownLength", ""), ("investigation.unit", "mm"), ("investigation.assumption", "")], help: localization.text("investigation.calibrationHelp")) else { return }
+        guard !busy, canAnalyze else { return }
+        busy = true; defer { busy = false }
         do {
+        let (store, item) = try await prepareActiveImage()
+        guard let fields = await parameters("investigation.calibrate", fields: [("investigation.referencePoints", ""), ("investigation.knownLength", ""), ("investigation.unit", "mm"), ("investigation.assumption", "")], help: localization.text("investigation.calibrationHelp")) else { return }
             guard let length = Double(fields[1]), let unit = EvidenceUnit(rawValue: fields[2]) else { throw InvestigationError.invalidCase }
             let calibration = try EvidenceCalibration(itemID: item.id, originalSHA256: item.originalSHA256, modelSHA256: InvestigationDigest.hash(item.currentModelJSON), canvas: item.model.canvas,
                                                       reference: points(fields[0]), knownLength: length, unit: unit, assumption: fields[3], operatorName: store.value.examiner)
-            try store.addCalibration(calibration); busy = true
-            Task { defer { busy = false }; do { try await showMeasurement(calibration, result: nil, store: store) } catch { failure(error) } }
+            try store.addCalibration(calibration)
+            try await showMeasurement(calibration, result: nil, store: store)
         } catch { failure(error) }
     }
     @objc private func measure() { Task { await measureFlow() } }
     private func measureFlow() async {
-        guard let store, let item = selectedItem, !busy, let calibration = store.value.analysis?.calibrations.last(where: { $0.itemID == item.id && $0.modelSHA256 == InvestigationDigest.hash(item.currentModelJSON) }),
+        guard let store = analysisStore, let item = analysisItem, !busy, let calibration = store.value.analysis?.calibrations.last(where: { $0.itemID == item.id && $0.modelSHA256 == InvestigationDigest.hash(item.currentModelJSON) }),
               let fields = await parameters("investigation.measure", fields: [("investigation.measureKind", "distance"), ("investigation.measurePoints", "")], help: localization.text("investigation.measureHelp")) else { return }
         do {
             guard let kind = EvidenceMeasurementKind(rawValue: fields[0]) else { throw InvestigationError.invalidCase }
@@ -563,10 +659,10 @@ extension InvestigationController {
         guard anchor == selectionAnchor else { return }; workspace?.showPresentation(preview)
     }
     @objc private func exportAnalysis() {
-        guard let store, !busy else { return }
-        guard let url = destination("Phan-tich-truy-vet.json", type: .json) else { return }
-        busy = true
+        guard !busy, canAnalyze else { return }; busy = true
         Task { defer { busy = false }; do {
+            let (store, _) = try await prepareActiveImage()
+            guard let url = destination("Phan-tich-truy-vet.json", type: .json) else { return }
             try store.protectDestination(url); try coordinator.protectInvestigationDestination?(url)
             for item in store.value.items { try await store.verifyOriginal(item) }
             for video in store.value.analysis?.videos ?? [] { try await store.verifyVideo(video) }

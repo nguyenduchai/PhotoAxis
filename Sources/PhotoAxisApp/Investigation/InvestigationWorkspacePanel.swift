@@ -62,6 +62,8 @@ final class InvestigationCaptureView: InvestigationOverlayView {
     }
     required init?(coder: NSCoder) { fatalError("Use capture initializer") }
     override var acceptsFirstResponder: Bool { true }
+    override func resetCursorRects() { addCursorRect(imageRect, cursor: .crosshair) }
+    override func layout() { super.layout(); window?.invalidateCursorRects(for: self) }
     var imageRect: CGRect {
         let scale = max(0, min((bounds.width - 24) / Double(sourceSize.width), (bounds.height - 24) / Double(sourceSize.height)))
         return CGRect(x: (bounds.width - Double(sourceSize.width) * scale) / 2,

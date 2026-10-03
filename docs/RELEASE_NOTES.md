@@ -1,3 +1,15 @@
+# Phân tích ảnh đang mở và con trỏ công cụ — build8, 04/10/2026
+
+PhotoAxis **1.0.0 (8)** dùng tab đang hoạt động cho Phân tích/Đầu ra. Ảnh thường dùng ngay OCR, chú thích, đối chiếu, đo có hiệu chuẩn, che vùng và xuất bản chia sẻ. Phiên tạm có thể lưu thành `.paxcase`, ghi rõ bản PNG dựng từ canvas và hash nguồn/model; giữ nguyên tài liệu `.paxis` và Undo. Tab hồ sơ tiếp nhận giữ immutable originals và audit như trước. Model/tab đổi ngăn dùng kết quả hoặc draft cũ.
+
+Con trỏ native theo từng công cụ, tay nắm resize/xoay, Hand mở/nắm, Zoom ± theo Option và Clone lấy mẫu theo Option. Space tạm pan rồi khôi phục. Có vòng cọ như trước; ROI/đo/che và đối chiếu dùng cursor phù hợp.
+
+[Hướng dẫn](HUONG_DAN_DIEU_TRA.md), [báo cáo](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md). Phiên dựng từ canvas không thay file gốc tiếp nhận; lưu hồ sơ phân tích để giữ kết quả. `releaseReady=false`; nghiệm thu đầy đủ, IME/máy đích/hiệu năng/DeveloperID/notary/cài sạch vẫn mở. Định dạng project/case giữ nguyên.
+
+Open-image analysis uses the active tab, including committed edits. Ordinary documents can use OCR, annotations, before/after review, calibrated measurement and reviewed sharing exports immediately. Save the derived canvas analysis as a case to retain its results; editable documents stay intact. Received-original cases retain their existing intake/audit semantics. Native tool cursors follow tools, handles, Option and Space. This development build is not a signed/notarized public installer.
+
+---
+
 # Thước, Cài đặt và công cụ hồ sơ — build7, 03/10/2026
 
 - Thiết kế lại thước ngang/dọc: số dọc nằm ngang, nhãn chỉ hiện khi đủ chỗ, tọa độ khớp canvas; thêm đơn vị px/mm/cm/in theo PPI.

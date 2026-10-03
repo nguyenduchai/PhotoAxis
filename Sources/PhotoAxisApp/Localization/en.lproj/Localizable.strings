@@ -324,7 +324,7 @@
 "investigation.editIntake" = "Intake and caption…";
 "investigation.editImage" = "Edit working image";
 "investigation.verify" = "Verify integrity";
-"investigation.compare" = "Compare source/result";
+"investigation.compare" = "Compare before/after";
 "investigation.annotate" = "Add annotation…";
 "investigation.redact" = "Review redactions…";
 "investigation.exportPNG" = "Share PNG…";
@@ -395,7 +395,7 @@
 "investigation.confirmOCR" = "Confirm and save review";
 "investigation.ocrReviewHelp" = "Compare the text with the orange image region. Confirm only visible content; leave unreadable parts blank. Machine confidence does not replace review.";
 "investigation.ocrConfirmationSaved" = "Confirmation and log saved. The initial OCR remains unchanged.";
-"investigation.ocrHelp" = "Enter the text region in intake working-source pixels (top-left origin). OCR runs offline on this source, without edited pixels or text layers. Human review is required.";
+"investigation.ocrHelp" = "Select a text region in displayed-source pixels (top-left origin). Ordinary tabs recognize the committed canvas including visible layers; case tabs recognize the intake source. OCR runs offline; human review is required.";
 "investigation.videoHelp" = "MOV/MP4, one video track, up to 512 MiB. Source bytes are retained; URLs and external media references are disallowed.";
 "investigation.videoImported" = "Video source and intake saved. Use Extract frame to select a frame index.";
 "investigation.frameHelp" = "Frame indices start at 0 in the track’s decoded presentation-sample order. Exact PTS is retained, without an FPS calculation. An offset produces a corrected relative time; it does not change the original PTS or certify capture time.";
@@ -544,5 +544,16 @@
 "settings.resetSection" = "Reset This Section";
 "workspace.editHelp" = "Layers, color and editing history.";
 "workspace.sourcesHelp" = "Create or open a case to receive images/video.";
-"workspace.analysisHelp" = "Select an image in Sources to annotate, OCR or measure.";
+"workspace.analysisHelp" = "Annotate, OCR or measure the image in the active tab.";
 "workspace.outputHelp" = "Review redactions for each image before exporting.";
+
+// Open canvas analysis
+"investigation.currentImageProvenance" = "PNG rendered from the open canvas, including committed edits; not a received original file. Embedded source and model hashes are recorded in the log.";
+"investigation.currentCanvasImage" = "Using this tab’s canvas. Temporary analysis; save as a case to retain results.";
+"investigation.currentSavedCanvasImage" = "Using this tab’s canvas. The saved analysis is a snapshot at the time of saving.";
+"investigation.currentCaseImage" = "Using this tab’s case working image. OCR checks this image’s intake source.";
+"investigation.noActiveImage" = "Open or select an image tab to use Analysis and Output.";
+"investigation.currentCompareHelp" = "Opening checkpoint (left) / current canvas (right). This compares rendered views, not received-original bytes. Drag or pinch to pan and zoom together.";
+"investigation.saveCurrentAnalysis" = "Save analysis as a case…";
+"investigation.saveCurrentAnalysisHelp" = "Save the canvas snapshot and analysis/log to .paxcase. Received originals must be imported separately under Sources. The editable tab is preserved. After changing the canvas, analyze again before saving a new session.";
+"investigation.currentAnalysisSaved" = "Analysis saved. The editable tab is preserved; the case contains a rendered snapshot and its derivation details.";

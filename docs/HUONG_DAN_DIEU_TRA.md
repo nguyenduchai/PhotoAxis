@@ -1,8 +1,29 @@
 # Sử dụng gói phục vụ điều tra
 
-PhotoAxis 1.0.0 (7). Các chức năng hồ sơ, OCR, video, đo và đầu ra dùng chung workspace native với trình chỉnh ảnh. Bảng bên phải có bốn nút luôn hiển thị **Chỉnh sửa / Nguồn / Phân tích / Đầu ra**; không có menu hay cửa sổ Điều tra riêng. Bản hiện tại là bản phát triển local; xem [kết quả tích hợp](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md) và [trạng thái public](READINESS_PUBLIC.json).
+## Dùng ngay ảnh đang mở — build8
 
-## Bắt đầu nhanh trong build 7
+Mở ảnh hoặc `.paxis` bằng **Tệp → Mở**, chọn đúng tab rồi bấm **Phân tích** ở bảng phải. Dòng đầu của Phân tích/Đầu ra luôn ghi tên tab và loại nguồn đang dùng. Với ảnh thông thường, không cần tạo hồ sơ hoặc nhập lại ảnh để dùng OCR, đối chiếu, chú thích, hiệu chuẩn/đo và che vùng/xuất PNG/PDF. Chốt phiên Crop/Scan/chữ đang mở bằng Áp dụng hoặc hủy trước khi phân tích.
+
+- **OCR tiếng Việt…** lấy bản PNG dựng từ canvas của tab, gồm các chỉnh sửa đã chốt và các layer nhìn thấy. Kéo ROI hoặc nhập tọa độ rồi Áp dụng; bản máy chỉ đọc, bản rà soát/xác nhận giữ riêng. **Rà soát OCR…** mở lại kết quả của đúng trạng thái ảnh.
+- **Đối chiếu…** với tab thường: bên trái là checkpoint lúc mở tab, bên phải là canvas hiện tại. Đây là hai bản dựng; không phải đối chiếu byte file gốc được tiếp nhận.
+- **Chú thích…** sửa trực tiếp tài liệu đang mở, một Undo; `.paxis`, layer và History của tab vẫn hoạt động bình thường. Ô phóng to chọn trên nguồn nhúng của layer ảnh đầu tiên như trước.
+- **Hiệu chuẩn đo… / Đo khoảng cách/diện tích…** dùng canvas hiện tại. Nhập độ dài thật và căn cứ; chọn hai điểm hoặc đa giác trên ảnh. Các đơn vị thước theo PPI không thay hiệu chuẩn.
+- Vào **Đầu ra → Rà soát vùng che…**, chọn các vùng hoặc xác nhận danh sách rỗng nếu không cần che. Sau đó **PNG chia sẻ…** hoặc **Lập bản ảnh A4…**. PNG/PDF chia sẻ là raster riêng, không sửa tài liệu. Xem lại file xuất trước khi dùng. JSON nhật ký/danh mục/phân tích chứa thông tin chưa che.
+
+Phiên cho tab thường là **phân tích tạm**. Muốn giữ OCR, đo, vùng che và nhật ký, chọn **Lưu phân tích thành hồ sơ…** ở Nguồn hoặc Phân tích; điền mã/tên/người lập và chọn file `.paxcase` mới. Tab chỉnh sửa không đổi, không bị thay thành ảnh phẳng. Hồ sơ đã lưu chứa **bản PNG dựng từ canvas**, caption/intake và event `openImageSnapshot` ghi rõ nguồn tạo, hash model và hash các nguồn nhúng; không coi đây là file gốc tiếp nhận hoặc nhật ký của mọi chỉnh sửa trước đó. Lưu `.paxis` riêng để giữ các layer chỉnh sửa được.
+
+Sửa model làm phiên phân tích cũ hết hiệu lực: cần OCR/hiệu chuẩn/rà soát vùng che lại trước khi xuất trạng thái mới. Hồ sơ đã lưu giữ snapshot tại thời điểm lưu; các chỉnh sửa tiếp theo ở tab thường không tự ghi vào hồ sơ đó. Đổi tab/model hủy vùng/điểm đang chọn; thao tác bất đồng bộ kiểm lại tab trước khi hiển thị kết quả. Đóng tab giải phóng phiên tạm. Chưa có khôi phục phiên phân tích tạm sau crash; hãy lưu hồ sơ khi cần giữ kết quả.
+
+Với **tab bản làm việc đã gắn hồ sơ tiếp nhận**, Phân tích/Đầu ra theo chính tab đó: so sánh với nguồn tiếp nhận, OCR vẫn kiểm nguồn tiếp nhận; đo/che dùng model hiện tại và audit bền vững giữ như trước. Khi cần bảo toàn byte ảnh gốc/metadata và khai báo bàn giao, dùng quy trình **Nguồn → Tạo/mở hồ sơ → Tiếp nhận ảnh…** bên dưới. Phiên dựng từ canvas và intake file gốc có ý nghĩa khác nhau, giao diện luôn ghi rõ.
+
+## Con trỏ công cụ — build8
+
+Con trỏ đổi trên canvas theo công cụ: Crop/phối cảnh, Move, cọ, Clone Stamp, Eyedropper, chữ, hình và Zoom. Cọ giữ vòng thể hiện đường kính. Chữ dùng I-beam; Hand dùng bàn tay mở, kéo thành bàn tay nắm. Crop/transform đổi con trỏ ở cạnh/góc để chỉ hướng resize, tay nắm xoay có biểu tượng xoay. Giữ **Option** với Zoom để thấy dấu trừ, với Clone để thấy trạng thái lấy mẫu. Giữ **Space** tạm chuyển sang bàn tay; thả trở về công cụ đang chọn. Vùng chọn OCR/đo/che dùng dấu cộng; đối chiếu dùng bàn tay. Con trỏ này là `NSCursor` native, không chỉ là hình vẽ phủ trên ảnh.
+
+
+PhotoAxis 1.0.0 (8). Các chức năng hồ sơ, OCR, video, đo và đầu ra dùng chung workspace native với trình chỉnh ảnh. Bảng bên phải có bốn nút luôn hiển thị **Chỉnh sửa / Nguồn / Phân tích / Đầu ra**; không có menu hay cửa sổ Điều tra riêng. Bản hiện tại là bản phát triển local; xem [kết quả tích hợp](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md) và [trạng thái public](READINESS_PUBLIC.json).
+
+## Tiếp nhận file gốc trong hồ sơ
 
 Các chức năng điều tra đã dùng chung cửa sổ và canvas từ build5. Build7 thay danh sách xổ xuống bằng bốn nút có biểu tượng ở đầu bảng bên phải để dễ tìm. Chọn **Nguồn** khi chưa mở ảnh cũng được; đây là điểm bắt đầu hồ sơ.
 
@@ -13,7 +34,7 @@ Các chức năng điều tra đã dùng chung cửa sổ và canvas từ build5
 | Phân tích | So sánh nguồn/kết quả, chú thích, OCR/rà soát, trích khung hình, hiệu chuẩn và đo |
 | Đầu ra | Xác nhận vùng che, PNG chia sẻ, bản ảnh A4, danh mục/nhật ký/phân tích JSON |
 
-Nếu bảng đang thu gọn, bấm nút mở bảng `«` ở mép phải hoặc **Cửa sổ → Hiện bảng bên phải**; nếu ẩn workspace bằng Tab, nhấn Tab khi canvas có focus để hiện lại. Kiểm phiên bản trong **PhotoAxis → Cài đặt… → Chung**; bản mới phải hiển thị1.0.0(7). Mở ảnh thông thường chưa tạo hồ sơ; để dùng các chức năng lưu nguồn/nhật ký, chọn Nguồn → Tạo hồ sơ → Tiếp nhận ảnh.
+Nếu bảng đang thu gọn, bấm nút mở bảng `«` ở mép phải hoặc **Cửa sổ → Hiện bảng bên phải**; nếu ẩn workspace bằng Tab, nhấn Tab khi canvas có focus để hiện lại. Kiểm phiên bản trong **PhotoAxis → Cài đặt… → Chung**; bản mới phải hiển thị1.0.0(8). Ảnh thường dùng Phân tích ngay như hướng dẫn trên; khi cần giữ byte file gốc và metadata tiếp nhận, chọn Nguồn → Tạo hồ sơ → Tiếp nhận ảnh.
 
 Luồng thử đầu tiên: **Nguồn → Tạo hồ sơ → Tiếp nhận ảnh → chọn ảnh trong Danh mục → Sửa bản làm việc → Chỉnh sửa**. Tiếp theo chọn **Phân tích → OCR tiếng Việt → chọn vùng → nhận dạng → rà soát/xác nhận**; hoặc **Hiệu chuẩn đo → chọn hai đầu thước thật → nhập chiều dài/đơn vị → Đo**. Cuối cùng **Đầu ra → Xác nhận vùng che → Xuất PNG chia sẻ**. Tham số ở cùng bảng bên phải; vùng chọn và kết quả hiển thị trên canvas của cửa sổ chính.
 

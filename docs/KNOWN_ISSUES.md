@@ -1,3 +1,11 @@
+# Phạm vi bản phát triển build8 — 04/10/2026
+
+Phân tích/Đầu ra dùng tab đang mở; với tab thường, nguồn phân tích là PNG dựng từ committed canvas. Chốt/cancel draft Crop/Scan/chữ trước khi phân tích. Lưu phiên thành hồ sơ để giữ OCR/đo/vùng che/log; chưa recovery phiên tạm sau crash. Sửa canvas phải phân tích/hiệu chuẩn/rà soát lại; hồ sơ snapshot đã lưu không tự cập nhật theo tab thường. OCR tab hồ sơ vẫn dùng nguồn tiếp nhận; tab thường dùng canvas hiện tại. Checkpoint so sánh tab thường giữ lúc mở tab, tăng lifetime nguồn COW cho tới khi đóng tab; maximum quota/performance vẫn cần qualification. Không nhận bản dựng là file gốc hay đầy đủ lịch sử trước tiếp nhận.
+
+Con trỏ tool/hover/modifier/drag dùng NSCursor native; pressure/tablet, custom brush/healing/masks không thuộc chặng này. Các gate Telex/VNI/macOS14/non-Retina/M1-16GB/hiệu năng/full quota/DeveloperID/notary/cài sạch tiếp tục mở; nghiệm thu19/43 thuộc build3 lịch sử. [Báo cáo](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md).
+
+---
+
 # Phạm vi bản phát triển build7 — 03/10/2026
 
 Thước/Cài đặt/trang workspace đã được cải tiến. Thước mm/cm/in theo PPI thể hiện kích thước in, không suy kích thước vật trong ảnh; dùng Hiệu chuẩn ở Phân tích. Cọ mặc định chỉ ảnh hưởng tài liệu thêm mới. Ngôn ngữ cần khởi động lại app. Các gate IME/macOS14/non-Retina/hiệu năng/DeveloperID/notary/cài sạch tiếp tục mở; nghiệm thu19/43 thuộc build3 lịch sử. [Báo cáo build7](bao-cao/WORKSPACE_UI_2026-10-03.md).

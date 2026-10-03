@@ -1,6 +1,6 @@
 import AppKit
 
-enum ToolKind: String, CaseIterable {
+enum ToolKind: String, CaseIterable, Hashable {
     case brush, cloneStamp, move, crop, perspectiveCrop, eyedropper, type, rectangle, ellipse, line, hand, zoom
     var key: String { "tool." + rawValue }
     var shortcut: String {

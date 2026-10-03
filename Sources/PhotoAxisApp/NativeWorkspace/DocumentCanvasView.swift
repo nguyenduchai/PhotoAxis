@@ -105,6 +105,9 @@ final class WelcomeCanvasView: SurfaceView {
     private var generation = UUID()
     private var panStart: NSPoint?
     private var lastPointer: NSPoint?
+    private var cursorPoint: NSPoint?
+    private var cursorModifiers: NSEvent.ModifierFlags = []
+    private var dragCursor: CanvasCursorKind?
     private(set) var spaceHeld = false
     private(set) var presentedViewport: ViewportState?
     private(set) var presentedModel: PhotoDocumentModel?
@@ -145,8 +148,8 @@ final class WelcomeCanvasView: SurfaceView {
         let switched = self.document !== document || self.pipeline !== pipeline
         self.document = document; self.pipeline = pipeline
         welcome.isHidden = document != nil
-        if switched { painting.reset(); livePerspectiveTask?.cancel(); livePerspectiveKey = nil; requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
-        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); updateLivePerspective(); paintCursor.isHidden = document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true; contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
+        if switched { painting.reset(); livePerspectiveTask?.cancel(); livePerspectiveKey = nil; requestedKey = nil; settleTask?.cancel(); contentEditing.reset(); perspectiveEditing.reset(); cropping.reset(); editing.resetPointer(); spaceHeld = false; panStart = nil; lastPointer = nil; dragCursor = nil; cursorPoint = nil; metal.image = nil; metal.isHidden = true; overlay.isHidden = true; presentedViewport = nil; presentedModel = nil; presentedIsInteractive = false }
+        resizeViewport(); updateCropOverlay(); updatePerspectiveOverlay(); updateLivePerspective(); paintCursor.isHidden = spaceHeld || (document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true); contentEditing.refresh(); requestRender(interactive:document?.hasSession == true)
         window?.invalidateCursorRects(for: self)
     }
     override func layout() {
@@ -218,13 +221,42 @@ final class WelcomeCanvasView: SurfaceView {
     override func updateTrackingAreas() {
         super.updateTrackingAreas()
         if let paintTracking { removeTrackingArea(paintTracking) }
-        let area = NSTrackingArea(rect:.zero,options:[.mouseMoved,.mouseEnteredAndExited,.activeInKeyWindow,.inVisibleRect],owner:self)
+        let area = NSTrackingArea(rect:.zero,options:[.mouseMoved,.mouseEnteredAndExited,.cursorUpdate,.activeInKeyWindow,.inVisibleRect],owner:self)
         paintTracking = area; addTrackingArea(area)
     }
     override func mouseMoved(with event: NSEvent) {
+        updateCursor(with: event)
         if document?.activeTool == .brush || document?.activeTool == .cloneStamp { painting.cursor(convert(event.locationInWindow,from:nil)) }
     }
-    override func mouseExited(with event: NSEvent) { paintCursor.point = nil; paintCursor.needsDisplay = true }
+    override func mouseEntered(with event: NSEvent) { updateCursor(with: event) }
+    override func cursorUpdate(with event: NSEvent) { updateCursor(with: event) }
+    override func mouseExited(with event: NSEvent) { cursorPoint = nil; paintCursor.point = nil; paintCursor.needsDisplay = true }
+    override func flagsChanged(with event: NSEvent) { cursorModifiers = event.modifierFlags; refreshCursor(); super.flagsChanged(with: event) }
+    private func updateCursor(with event: NSEvent) {
+        cursorPoint = convert(event.locationInWindow, from: nil); cursorModifiers = event.modifierFlags; refreshCursor()
+    }
+    private func refreshCursor() {
+        guard let cursorPoint, bounds.contains(cursorPoint) else { return }
+        CanvasCursors.cursor(cursorKind(at: cursorPoint, modifiers: cursorModifiers)).set()
+    }
+    func cursorKind(at point: NSPoint?, modifiers: NSEvent.ModifierFlags = []) -> CanvasCursorKind {
+        guard let document, point.map({ bounds.contains($0) }) ?? true else { return .arrow }
+        if spaceHeld || document.activeTool == .hand { return panStart == nil ? .openHand : .closedHand }
+        if let dragCursor { return dragCursor }
+        if document.activeTool == .zoom { return modifiers.contains(.option) ? .zoomOut : .zoomIn }
+        if document.activeTool == .cloneStamp, modifiers.contains(.option) { return .cloneSample }
+        if document.activeTool == .type { return .text }
+        if let point {
+            if document.activeTool == .crop, document.cropSession != nil {
+                if let handle = cropOverlay.handles.firstIndex(where: { hypot(point.x-$0.x,point.y-$0.y) <= 8 }) { return .handle(handle) }
+                if cropOverlay.cropRect.contains(point) { return .openHand }
+            }
+            if document.activeTool == .perspectiveCrop, document.perspectiveSession?.showsPreview == false,
+               let handle = perspectiveOverlay.corners.firstIndex(where: { hypot(point.x-$0.x,point.y-$0.y) <= 8 }) { return .handle(handle * 2) }
+            if document.activeTool == .move, document.canEditSelection, let handle = overlay.hitHandle(point) { return .handle(handle) }
+        }
+        return .tool(document.activeTool)
+    }
     func requestRender(interactive:Bool = false) {
         guard let document, let pipeline, bounds.width > 0, bounds.height > 0 else { renderTask?.cancel(); settleTask?.cancel(); requestedKey = nil; return }
         let id = document.model.id, revision = document.model.revision
@@ -264,6 +296,7 @@ final class WelcomeCanvasView: SurfaceView {
                     overlay.selectionBounds = NSRect(x:start.x,y:start.y,width:box.width*viewport.zoom/viewport.backingScale,height:box.height*viewport.zoom/viewport.backingScale)
                 }
                 updateCropOverlay(); updatePerspectiveOverlay()
+                window?.invalidateCursorRects(for: self)
                 setAccessibilityValue(String(format: localization.text("document.canvasStatus"), model.canvas.width, model.canvas.height, viewport.zoom * 100))
             } catch is CancellationError {} catch {
                 guard let self, generation == token else { return }; requestedKey = nil
@@ -286,12 +319,28 @@ final class WelcomeCanvasView: SurfaceView {
         document.activeTool = kind; toolChanged?(kind); document.changed?(); requestRender(); window?.invalidateCursorRects(for: self)
     }
     override func resetCursorRects() {
-        if document != nil { addCursorRect(bounds, cursor: spaceHeld || document?.activeTool == .hand ? .openHand : .crosshair) }
+        addCursorRect(bounds, cursor: CanvasCursors.cursor(cursorKind(at: nil, modifiers: cursorModifiers)))
+        // AppKit rects also handle a stationary pointer when overlays/tool state
+        // change; mouseMoved/cursorUpdate refine the same resolver while hovering.
+        if document?.activeTool == .crop, document?.cropSession != nil, !spaceHeld, dragCursor == nil {
+            addVisibleCursorRect(cropOverlay.cropRect, cursor: .openHand)
+            for (index, point) in cropOverlay.handles.enumerated() { addVisibleCursorRect(NSRect(x:point.x-8,y:point.y-8,width:16,height:16), cursor: CanvasCursors.cursor(.handle(index))) }
+        } else if document?.activeTool == .move, document?.canEditSelection == true, !spaceHeld, dragCursor == nil {
+            for (index, point) in overlay.handlePoints.enumerated() { addVisibleCursorRect(NSRect(x:point.x-7,y:point.y-7,width:14,height:14), cursor: CanvasCursors.cursor(.handle(index))) }
+        }
+    }
+    private func addVisibleCursorRect(_ rectangle: NSRect, cursor: NSCursor) {
+        let visible = rectangle.intersection(bounds)
+        guard !visible.isEmpty, visible.origin.x.isFinite, visible.origin.y.isFinite else { return }
+        addCursorRect(visible, cursor: cursor)
     }
     override func mouseDown(with event: NSEvent) {
         window?.makeFirstResponder(self)
         guard let document else { return }
         let point = convert(event.locationInWindow, from: nil)
+        let kind = cursorKind(at: point, modifiers: event.modifierFlags)
+        dragCursor = kind == .openHand ? .closedHand : kind
+        updateCursor(with: event)
         lastPointer = point
         if spaceHeld || document.activeTool == .hand { panStart = point; NSCursor.closedHand.set() }
         else if document.activeTool == .zoom { zoom(to: document.viewport.zoom * (event.modifierFlags.contains(.option) ? 0.5 : 2), anchor: point) }
@@ -308,6 +357,7 @@ final class WelcomeCanvasView: SurfaceView {
             if let start = panStart ?? lastPointer { pan(x:point.x-start.x,y:point.y-start.y) }; panStart=point
         } else if document?.activeTool == .brush || document?.activeTool == .cloneStamp { painting.drag(point) } else if document?.activeTool == .crop {cropping.drag(point)} else if document?.activeTool == .perspectiveCrop {perspectiveEditing.drag(point)} else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){contentEditing.drag(point,shift:event.modifierFlags.contains(.shift))} else { editing.dragged(point,shift:event.modifierFlags.contains(.shift)) }
         lastPointer=point
+        updateCursor(with: event)
     }
     override func mouseUp(with event: NSEvent) {
         if document?.activeTool == .brush || document?.activeTool == .cloneStamp { if !spaceHeld { painting.up(convert(event.locationInWindow,from:nil)) } else { painting.cancel() } }
@@ -316,7 +366,7 @@ final class WelcomeCanvasView: SurfaceView {
         else if let tool=document?.activeTool,[.rectangle,.ellipse,.line,.type,.eyedropper].contains(tool){if !spaceHeld{contentEditing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift))}}
         else if !spaceHeld && document?.activeTool != .hand { editing.up(convert(event.locationInWindow,from:nil),shift:event.modifierFlags.contains(.shift)) }
         else { editing.finishPointer() }
-        panStart = nil; lastPointer = nil; window?.invalidateCursorRects(for: self)
+        panStart = nil; lastPointer = nil; dragCursor = nil; updateCursor(with: event); window?.invalidateCursorRects(for: self)
     }
     override func scrollWheel(with event: NSEvent) {
         guard document != nil else { super.scrollWheel(with: event); return }
@@ -340,7 +390,7 @@ final class WelcomeCanvasView: SurfaceView {
         if document?.activeTool != .crop && document?.activeTool != .perspectiveCrop && editing.keyDown(event) { return }
         switch event.keyCode {
         case 48: toggleChrome?()
-        case 49: spaceHeld = true; window?.invalidateCursorRects(for: self)
+        case 49: spaceHeld = true; paintCursor.isHidden = true; refreshCursor(); window?.invalidateCursorRects(for: self)
         default:
             if event.charactersIgnoringModifiers?.lowercased() == "c" {selectTool(event.modifierFlags.contains(.shift) ? .perspectiveCrop:.crop)}
             else if event.charactersIgnoringModifiers?.lowercased() == "b" { selectTool(.brush) }
@@ -361,10 +411,10 @@ final class WelcomeCanvasView: SurfaceView {
         }
     }
     override func keyUp(with event: NSEvent) {
-        if event.keyCode == 49 { spaceHeld = false; panStart = nil; window?.invalidateCursorRects(for: self) }
+        if event.keyCode == 49 { spaceHeld = false; panStart = nil; dragCursor = nil; paintCursor.isHidden = document.map { $0.activeTool != .brush && $0.activeTool != .cloneStamp } ?? true; refreshCursor(); window?.invalidateCursorRects(for: self) }
         else { editing.keyUp(event); super.keyUp(with: event) }
     }
-    override func resignFirstResponder() -> Bool { painting.cancel(); editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; return super.resignFirstResponder() }
+    override func resignFirstResponder() -> Bool { painting.cancel(); editing.finishKeyboardMove(); spaceHeld = false; panStart = nil; dragCursor = nil; window?.invalidateCursorRects(for: self); return super.resignFirstResponder() }
     @objc func paste(_ sender: Any?) {
         paste(from: .general)
     }

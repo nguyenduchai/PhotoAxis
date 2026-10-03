@@ -35,13 +35,14 @@ final class InvestigationComparisonView: NSView {
             draw(processed, area: CGRect(x: bounds.width / 2 + 2, y: 0, width: bounds.width / 2 - 2, height: bounds.height))
         }
     }
-    override func mouseDown(with event: NSEvent) { window?.makeFirstResponder(self); dragPoint = convert(event.locationInWindow, from: nil) }
+    override func resetCursorRects() { addCursorRect(bounds, cursor: dragPoint == nil ? .openHand : .closedHand) }
+    override func mouseDown(with event: NSEvent) { window?.makeFirstResponder(self); dragPoint = convert(event.locationInWindow, from: nil); NSCursor.closedHand.set() }
     override func mouseDragged(with event: NSEvent) {
         let point = convert(event.locationInWindow, from: nil)
         if let previous = dragPoint { offset.x += point.x - previous.x; offset.y += point.y - previous.y; needsDisplay = true }
         dragPoint = point
     }
-    override func mouseUp(with event: NSEvent) { dragPoint = nil }
+    override func mouseUp(with event: NSEvent) { dragPoint = nil; window?.invalidateCursorRects(for: self) }
     override func scrollWheel(with event: NSEvent) { offset.x -= event.scrollingDeltaX; offset.y += event.scrollingDeltaY; needsDisplay = true }
     override func magnify(with event: NSEvent) { setZoom(zoom * (1 + event.magnification)) }
     func setZoom(_ value: Double) { guard value.isFinite else { return }; zoom = min(16, max(0.1, value)); needsDisplay = true; navigationChanged?() }
@@ -52,10 +53,10 @@ final class InvestigationComparisonView: NSView {
 final class InvestigationComparisonPanel: NSView {
     let comparison: InvestigationComparisonView
     private let zoomLabel = NSTextField(labelWithString: "100 %")
-    init(original: CGImage, processed: CGImage, localization: L10n) {
+    init(original: CGImage, processed: CGImage, localization: L10n, helpKey: String = "investigation.compareHelp") {
         comparison = InvestigationComparisonView(original: original, processed: processed)
         super.init(frame: CGRect(x: 0, y: 0, width: 850, height: 650))
-        let label = NSTextField(wrappingLabelWithString: localization.text("investigation.compareHelp"))
+        let label = NSTextField(wrappingLabelWithString: localization.text(helpKey))
         let mode = NSButton(checkboxWithTitle: localization.text("investigation.swipe"), target: self, action: #selector(toggleMode(_:)))
         let slider = NSSlider(value: 0.5, minValue: 0, maxValue: 1, target: self, action: #selector(moveSplit(_:)))
         slider.setAccessibilityIdentifier("investigation.comparison.split")

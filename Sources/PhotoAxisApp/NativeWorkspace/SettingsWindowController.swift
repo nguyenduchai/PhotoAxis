@@ -100,7 +100,7 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
         languagePopup.widthAnchor.constraint(equalToConstant:240).isActive = true
         restartNotice.font = .systemFont(ofSize:11); restartNotice.textColor = .systemOrange
         let info = label("settings.aboutHelp",secondary:true)
-        let version = NSTextField(labelWithString:"PhotoAxis \(Bundle.main.object(forInfoDictionaryKey:"CFBundleShortVersionString") as? String ?? "1.0.0") (\(Bundle.main.object(forInfoDictionaryKey:"CFBundleVersion") as? String ?? "7")) · macOS 14+ · Apple Silicon")
+        let version = NSTextField(labelWithString:"PhotoAxis \(Bundle.main.object(forInfoDictionaryKey:"CFBundleShortVersionString") as? String ?? "1.0.0") (\(Bundle.main.object(forInfoDictionaryKey:"CFBundleVersion") as? String ?? "8")) · macOS 14+ · Apple Silicon")
         version.font = .monospacedDigitSystemFont(ofSize:11,weight:.medium)
         _ = page([card("settings.interface",[row("settings.language",languagePopup),restartNotice]),card("settings.about",[version,info,label("settings.shortcuts",secondary:true)])])
 

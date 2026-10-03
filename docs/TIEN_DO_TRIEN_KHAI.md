@@ -1,5 +1,10 @@
 # PhotoAxis — Tiến độ thực hiện
 
+## Phân tích ảnh đang mở và con trỏ native — build8, 04/10/2026
+
+**IN_PROGRESS kiểm native cuối:** đã triển khai Phân tích/Đầu ra theo tab đang mở, snapshot canvas cho tab thường và lưu phân tích thành hồ sơ có ghi rõ nguồn dựng; giữ nguyên tab `.paxis`, History và nguồn. Con trỏ NSCursor theo tool/handle/Option/Space/drag; vòng cọ giữ nguyên. 201testtotal197PASS/1knownTelexFAIL/3benchmarkSKIP,10ca mớiPASS;Release/16policy/inventory/536VIEN/435references/12websitepagesPASS. Native/outputaudit/CI/Pages/DMG được cập nhật khi chốt. [Báo cáo](bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md), [thao tác](HUONG_DAN_DIEU_TRA.md). `releaseReady=false`;không nâng các gate chưa qualification.
+
+
 
 ## Thước, Cài đặt và công cụ hồ sơ dễ tìm — build7, 03/10/2026
 

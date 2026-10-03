@@ -44,6 +44,7 @@ final class DocumentCoordinator {
 
     func add(_ document: PhotoDocument) throws {
         guard documents.count < DocumentLimits.maximumDocuments else { throw CocoaError(.validationMultipleErrors) }
+        document.retainAnalysisBaseline()
         if let preferences { document.brushSettings = preferences.brushDefaults }
         document.changed = { [weak self] in self?.changed?() }
         document.auditFailed = { [weak self] in self?.report?($0) }

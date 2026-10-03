@@ -15,6 +15,10 @@ final class PhotoDocument: NSDocument {
     var importInProgress = false
     var lifecycleLocked = false
     var investigationSession: InvestigationSession?
+    /// Opening checkpoint for direct before/after review. COW data stays separate
+    /// from History pruning and is released with the tab.
+    private(set) var analysisBaseline: ProjectSnapshot?
+    func retainAnalysisBaseline() { if analysisBaseline == nil { analysisBaseline = snapshot() } }
     var auditFailed: ((String) -> Void)?
     var investigationUnavailable: Bool { model.investigation != nil && investigationSession == nil }
     var isInteractionLocked: Bool { importInProgress || lifecycleLocked || investigationUnavailable }

@@ -55,3 +55,5 @@ Brush/Clone Stamp và live preview build6 (184ca:180PASS/1FAILTelexđãbiết/3S
 
 
 Thước và Cài đặt build7: số thước không bị cắt, chọn px/mm/cm/in theo PPI; Cài đặt bốn nhóm có nền canvas, ô trong suốt và cọ mặc định. Công cụ hồ sơ hiện trực tiếp qua bốn nút Chỉnh sửa/Nguồn/Phân tích/Đầu ra ở bảng phải. [Cài đặt](docs/HUONG_DAN_CAI_DAT.md), [cách dùng điều tra](docs/HUONG_DAN_DIEU_TRA.md), [báo cáo build7](docs/bao-cao/WORKSPACE_UI_2026-10-03.md).
+
+Phân tích ảnh đang mở và con trỏ build8: vào Phân tích/Đầu ra dùng ngay canvas của tab, không cần nhập lại ảnh. Lưu phiên thành hồ sơ khi cần giữ kết quả; hồ sơ ghi rõ bản dựng và nguồn tiếp nhận riêng. Con trỏ đổi theo công cụ/handle/Option/Space. [Hướng dẫn](docs/HUONG_DAN_DIEU_TRA.md), [báo cáo build8](docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md).
