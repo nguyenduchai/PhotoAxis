@@ -1,0 +1,69 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis Workspace Final en.
+0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi IMG-0001, Value: on
+	18 nút Close tab
+	19 trường văn bản (settable) Description: Zoom, Value: 107,88 %
+	20 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB, ID: workspace.taskStatus
+	21 nút bật lên Value: Analysis, ID: workspace.panelPage
+	22 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		23 nút Compare source/result, ID: investigation.compare
+		24 nút Add annotation…, ID: investigation.annotate
+		25 nút Vietnamese OCR…, ID: investigation.ocr
+		26 nút Review OCR…, ID: investigation.reviewOCR
+		27 nút (disabled) Extract frame…, ID: investigation.extractFrame
+		28 nút Calibrate measurement…, ID: investigation.calibrate
+		29 nút (disabled) Measure distance/area…, ID: investigation.measure
+		30 thanh cuộn (disabled, settable, float) 0
+	31 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	32 nút Return to editing, ID: workspace.returnEditor
+	33 text ID: investigation.analysisSummary, Value: SHA-256: b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24
+vi-VT / Vision revision 3
+ROI: 34,33,1489,420
+51,52,512,88: 1.0
+58,193,727,88: 1.0
+61,342,1041,75: 1.0 Automatic recognition — unconfirmed
+	34 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		35 vùng nhập văn bản ID: investigation.ocrRecognized, Value: HỒ SƠ ĐIỀU TRA
+Tài liệu kiểm thử tiếng Việt
+Không suy đoán phần không đọc được
+		36 thanh cuộn (disabled, settable, float) 0
+	37 text Reviewed / manually corrected text
+	38 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		39 vùng nhập văn bản (settable) ID: investigation.ocrConfirmed, Value: HỒ SƠ ĐIỀU TRA
+Tài liệu kiểm thử tiếng Việt
+Không suy đoán phần không đọc được
+		40 thanh cuộn (disabled, settable, float) 0
+	41 nút Confirm and save review, ID: investigation.confirmOCR
+	42 text Confirmation and log saved. The initial OCR remains unchanged.
+	43 nút đóng
+	44 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	45 nút thu nhỏ
+	46 text IMG-0001 — PhotoAxis
+47 menu bar
+	48 PhotoAxis
+	49 File
+	50 Edit
+	51 Image
+	52 Layer
+	53 Type
+	54 View
+	55 Window
+	56 Help
+
+The focused UI element is 0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

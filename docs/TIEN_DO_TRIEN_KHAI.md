@@ -1,5 +1,15 @@
 # PhotoAxis — Tiến độ thực hiện
 
+## Hợp nhất workspace — build 5, 03/10/2026
+
+**DONE local:** đã bỏ menu/cửa sổ Điều tra riêng, hợp nhất vào bảng **Chỉnh sửa / Nguồn / Phân tích / Đầu ra** của workspace PhotoAxis. Tham số nằm trong bảng bên phải; OCR/đo/vùng che/chú thích chọn trực tiếp trên canvas. Đối chiếu và rà soát hiển thị ngay trong cửa sổ chính. Tệp → Mở nhận `.paxcase`; danh mục và hồ sơ đồng bộ với tab. Draft đổi tab/model được hủy; không thay mất tab orphan chưa lưu; nguồn và durable audit giữ nguyên.
+
+- Full suite cuối **168 ca: 164 PASS / 1 FAIL Telex đã biết / 3 SKIP benchmark**; **9 ca mới PASS**. Release/ad-hoc PASS, UUID **E9797D10-3807-344C-AE33-A172F11B04A5**. 466 khóa VI/EN/392 references, inventory/12 trang website/16 policy PASS; không còn constraint xung đột trong log cuối.
+- Native binary cuối VI/EN: mở case/ảnh, kéo ROI OCR34,33,1489,420→đúng3dòng→xác nhận giữ bản máy; đo100mm→50mm; swipe/zoom chung; chọn vùng che→PNG148.200pixel đen đục. Đối chiếu độc lập19event/source/archive/output hashes PASS. OCR cold vẫn chờ đáng kể, chưa đóng qualification.
+- [Báo cáo đầy đủ](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md), [provenance](bao-cao/bang-chung/WORKSPACE-20261003/build-manifest.json), [hướng dẫn](HUONG_DAN_DIEU_TRA.md). Website VI/EN đã cập nhật thao tác build5; receipts CI/Pages/DMG local được bổ sung cùng bàn giao.
+- `releaseReady=false`. Source/website public đã được duyệt; stable installer còn thiếu nghiệm thu IME/native/máy đích/quota/hiệu năng/ảnh-video-đo thực và DeveloperID/notary/cài sạch. **19/43 là acceptance build3 lịch sử, không nhận là full build5.** Trạng thái9DONE/7BLOCKED_EXTERNAL/P16khi cần của baseline chưa đổi. Các tiện ích timeline/batchOCR/search/PDFbảngOCR/nắn sách3D chưa triển khai.
+
+
 ## Scan1 — build4, 03/10/2026
 
 **Đã bổ sung cả bốn nhóm chức năng bản scan theo yêu cầu, S01–S09 DONE local.** Phát hiện góc trang/căn chữ; làm trắng nền/giảm bóng–ám màu/nhiễu/làm rõ chữ/đen trắng thích nghi; nắn cong hai trục thủ công; chuẩn hóa A4/Letter/custom/PPI và batch1–50ảnh. Preview trước/sau/Apply một Undo/Cancel, metadata editable và source giữ nguyên; Scan schema3, đọc lại1/2; audit hồ sơ làm review/chuẩn đo cũ stale khi model đổi.

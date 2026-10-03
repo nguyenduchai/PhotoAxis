@@ -1,3 +1,11 @@
+# Workspace tích hợp — build5, 03/10/2026
+
+Đã hợp nhất Điều tra vào Sources/Analysis/Output của workspace, bỏ menu/window/form modal riêng. Native VI/EN scoped OCR/đo/đối chiếu/PNG và9testmới PASS; full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP. [Báo cáo](bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md).
+
+- OCR native cold vẫn chờ đáng kể trong Vision compute. CPU chỉ được đặt ở stage công bố hỗ trợ; chưa chứng minh hết độ trễ trên mọi stage/máy. Cần đo cold/warm độc lập trên hệ điều hành đích.
+- Không nhận full nghiệm thu A01–A43 trên build5;19/43 build3 giữ lịch sử. IME/macOS14/non-Retina/M1-16GB/Metal-QoS/quota/DeveloperID/notary/cài sạch vẫn mở.
+- PDF/video native không được rerun toàn bộ trong chặng hợp nhất; regression backend đã chạy trong fullsuite. Tính năng mới chọn điểm/vùng đã có, nên thông tin “clickpoints chưa triển khai” ở mốc lịch sử bên dưới không còn hiện hành.
+
 # Scan1 — build4, 03/10/2026
 
 Scan đã triển khai local: phát hiện trang/góc, làm sạch giấy, nắn bow thủ công và batch1–50ảnh với PNG/project/PDF/manifest. [Báo cáo](bao-cao/SCAN_2026-10-03.md), [hướng dẫn](HUONG_DAN_SCAN.md). Không còn ghi các chức năng này là chưa xây.

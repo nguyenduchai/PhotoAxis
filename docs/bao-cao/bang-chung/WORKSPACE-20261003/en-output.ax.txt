@@ -1,0 +1,50 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis Workspace Final en.
+0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Move
+	2 hộp kiểm Auto-Select, Value: 1
+	3 hộp kiểm Show Transform Controls, Value: 1
+	4 nút Center on Canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Eyedropper (I), ID: tool.eyedropper
+	11 nút Description: Type (T), ID: tool.type
+	12 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	13 nút Description: Hand (H), ID: tool.hand
+	14 nút Description: Zoom (Z), ID: tool.zoom
+	15 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi IMG-0001, Value: on
+	18 nút Close tab
+	19 trường văn bản (settable) Description: Zoom, Value: 107,88 %
+	20 text Help: Export completed and recorded in the case log. Inspect the resulting file before sharing., Value: Export completed and recorded in the case log. Inspect the resulting file before sharing. sRGB, ID: workspace.taskStatus
+	21 nút bật lên Value: Output, ID: workspace.panelPage
+	22 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		23 text Value: Export completed and recorded in the case log. Inspect the resulting file before sharing., ID: workspace.analysisStatus
+		24 nút Review redactions…, ID: investigation.redact
+		25 nút Share PNG…, ID: investigation.exportPNG
+		26 nút A4 photo report…, ID: investigation.exportPDF
+		27 nút Source catalog…, ID: investigation.exportCatalog
+		28 nút Export complete log…, ID: investigation.exportLog
+		29 nút Export analysis and trace…, ID: investigation.exportAnalysis
+		30 text This case contains original files and metadata. Share reviewed exports separately. SHA-256 checks integrity; it does not establish origin, time or a complete chain of custody. The processing log is separate from Undo. JSON includes initial OCR, confirmed text, video sources, timestamps, calibration and measurement points. It may contain private data, including content hidden in sharing images. This is not a redacted sharing copy. Export only after reviewing its recipient and contents.
+		31 thanh cuộn (disabled, settable, float) 0
+	32 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 260, Secondary Actions: Increment, Decrement
+	33 nút đóng
+	34 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	35 nút thu nhỏ
+	36 text IMG-0001 — PhotoAxis
+37 menu bar
+	38 PhotoAxis
+	39 File
+	40 Edit
+	41 Image
+	42 Layer
+	43 Type
+	44 View
+	45 Window
+	46 Help
+
+The focused UI element is 0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

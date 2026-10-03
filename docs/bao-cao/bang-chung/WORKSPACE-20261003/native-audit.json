@@ -1,0 +1,131 @@
+{
+  "scope": "Synthetic data only; prototype intake retained, final VI OCR/measurement and EN review/export; final QA binary UUID/Core checked separately",
+  "cases": [
+    {
+      "language": "vi",
+      "caseSchema": 2,
+      "eventsVerified": 9,
+      "auditHeadSHA256": "1b1e6f2fa6e6cf52266abaa0651a386f2d4c856d2aff3707fa1596e9bfedd70c",
+      "originals": [
+        {
+          "sha256": "b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24",
+          "bytes": 70012,
+          "workingArchiveSHA256": "04e91f68adad0df8fd41b92427c794b3ac9776263ea0777f500589bd8e4bcfc9"
+        }
+      ],
+      "ocrRegion": {
+        "height": 420,
+        "width": 1489,
+        "x": 34,
+        "y": 33
+      },
+      "ocrLines": [
+        "HỒ SƠ ĐIỀU TRA",
+        "Tài liệu kiểm thử tiếng Việt",
+        "Không suy đoán phần không đọc được"
+      ],
+      "confirmationPreservesMachineText": true,
+      "operations": [
+        "caseCreated",
+        "intake",
+        "workingOpened",
+        "ocrRecognized",
+        "workingOpened",
+        "ocrRecognized",
+        "ocrConfirmed",
+        "measurementCalibrated",
+        "measurementRecorded"
+      ],
+      "measurement": {
+        "reference": [
+          {
+            "x": 61.330326944757516,
+            "y": 601.3979706877114
+          },
+          {
+            "x": 1060.65388951522,
+            "y": 601.3979706877114
+          }
+        ],
+        "knownLength": 100,
+        "unit": "mm",
+        "points": [
+          {
+            "x": 61.330326944757516,
+            "y": 601.3979706877114
+          },
+          {
+            "x": 560.9921082299887,
+            "y": 601.3979706877114
+          }
+        ],
+        "independentResult": 49.99999999999999,
+        "storedResult": 50
+      }
+    },
+    {
+      "language": "en",
+      "caseSchema": 2,
+      "eventsVerified": 10,
+      "auditHeadSHA256": "2709ec43dcedffe1a8b2f76c355e6e21494243968edbf529dcf4fad5dc597cd0",
+      "originals": [
+        {
+          "sha256": "b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24",
+          "bytes": 70012,
+          "workingArchiveSHA256": "04e91f68adad0df8fd41b92427c794b3ac9776263ea0777f500589bd8e4bcfc9"
+        }
+      ],
+      "ocrRegion": {
+        "height": 420,
+        "width": 1489,
+        "x": 34,
+        "y": 33
+      },
+      "ocrLines": [
+        "HỒ SƠ ĐIỀU TRA",
+        "Tài liệu kiểm thử tiếng Việt",
+        "Không suy đoán phần không đọc được"
+      ],
+      "confirmationPreservesMachineText": true,
+      "operations": [
+        "caseCreated",
+        "intake",
+        "workingOpened",
+        "ocrRecognized",
+        "workingOpened",
+        "workingOpened",
+        "ocrConfirmed",
+        "redactionsReviewed",
+        "sharingStarted",
+        "sharingCompleted"
+      ],
+      "sharingPNG": {
+        "sha256": "81595182904bcba3f4b20cdb6b3d8531990a060853f4aa7bfec67a488bb37b86",
+        "size": [
+          1600,
+          640
+        ],
+        "region": {
+          "height": 104,
+          "width": 1425,
+          "x": 32,
+          "y": 468
+        },
+        "opaqueBlackPixels": 148200,
+        "metadataChunks": [
+          "IHDR",
+          "iCCP",
+          "eXIf",
+          "pHYs",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "receiptMatches": true,
+        "metadataScope": "ICC, PPI, dimensions and color space only; no GPS, camera identifiers or text metadata"
+      }
+    }
+  ]
+}

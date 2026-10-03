@@ -1,0 +1,58 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis Workspace Final vi.
+0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	11 nút Description: Văn bản (T), ID: tool.type
+	12 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	13 nút Description: Bàn tay (H), ID: tool.hand
+	14 nút Description: Thu phóng (Z), ID: tool.zoom
+	15 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	16 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	17 nút chuyển đổi IMG-0001, Value: on
+	18 nút Đóng tab
+	19 trường văn bản (settable) Description: Thu phóng, Value: 107,88 %
+	20 text Value: 1.600 × 640 px · 72,00 PPI · Đã lưu sRGB, ID: workspace.taskStatus
+	21 nút bật lên Value: Phân tích, ID: workspace.panelPage
+	22 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		23 nút So sánh nguồn/kết quả, ID: investigation.compare
+		24 nút Thêm chú thích…, ID: investigation.annotate
+		25 nút OCR tiếng Việt…, ID: investigation.ocr
+		26 nút Rà soát OCR…, ID: investigation.reviewOCR
+		27 nút (disabled) Trích khung hình…, ID: investigation.extractFrame
+		28 nút Hiệu chuẩn đo…, ID: investigation.calibrate
+		29 nút Đo khoảng cách/diện tích…, ID: investigation.measure
+		30 thanh cuộn (disabled, settable, float) 0
+	31 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	32 nút Quay lại chỉnh sửa, ID: workspace.returnEditor
+	33 text ID: investigation.analysisSummary, Value: Thước chuẩn màu xanh; điểm đo màu đỏ
+100.0 mm / (61.3303, 601.398); (1060.65, 601.398)
+0.1000676895306859 mm/px
+Ảnh fixture tổng hợp phẳng, hai điểm chuẩn cùng mặt phẳng; chỉ dùng kiểm thử.
+SHA-256(model): 9e00f16967a757a1d59cbe17d52d7833714afc3c038883a1aaf849d69f2a0502
+
+Khoảng cách: 50 mm
+(61.3303, 601.398); (560.992, 601.398)
+	34 nút đóng
+	35 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	36 nút thu nhỏ
+	37 text IMG-0001 — PhotoAxis
+38 menu bar
+	39 PhotoAxis
+	40 Tệp
+	41 Chỉnh sửa
+	42 Ảnh
+	43 Lớp
+	44 Văn bản
+	45 Xem
+	46 Cửa sổ
+	47 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
