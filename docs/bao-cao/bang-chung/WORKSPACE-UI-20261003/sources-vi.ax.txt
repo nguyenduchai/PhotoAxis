@@ -1,0 +1,115 @@
+Window: "paint-fixture.png — PhotoAxis", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Cọ vẽ (B), ID: tool.brush
+	11 nút Description: Đóng dấu sao chép (S), ID: tool.cloneStamp
+	12 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	13 nút Description: Văn bản (T), ID: tool.type
+	14 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	15 nút Description: Bàn tay (H), ID: tool.hand
+	16 nút Description: Thu phóng (Z), ID: tool.zoom
+	17 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	18 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 nút chuyển đổi paint-fixture.png, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi paint-fixture.png •, Value: on
+	22 nút Đóng tab
+	23 trường văn bản (settable) Description: Thu phóng, Value: 100 %
+	24 text Value: 1.200 × 900 px · 72,00 PPI · Chưa lưu sRGB cm, ID: workspace.taskStatus
+	25 nút chuyển đổi Chỉnh sửa, Value: off, ID: workspace.page.edit
+	26 nút chuyển đổi Nguồn, Value: on, ID: workspace.page.sources
+	27 nút chuyển đổi Phân tích, Value: off, ID: workspace.page.analysis
+	28 nút chuyển đổi Đầu ra, Value: off, ID: workspace.page.output
+	29 text Value: Tạo hoặc mở hồ sơ để tiếp nhận ảnh/video., ID: workspace.pageHelp
+	30 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		31 text Value: QA-WS5 — Kiểm tra workspace tích hợp, ID: workspace.analysisStatus
+		32 nút bật lên Value: QA-WS5 — Kiểm tra workspace tích hợp, ID: workspace.caseSelector
+		33 nút Tạo hồ sơ…, ID: investigation.create
+		34 nút Mở hồ sơ…, ID: investigation.open
+		35 nút Thông tin hồ sơ…, ID: investigation.editCase
+		36 nút Tiếp nhận ảnh…, ID: investigation.import
+		37 nút Tiếp nhận video…, ID: investigation.importVideo
+		38 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+			39 bảng investigation.photos
+				40 row (selected)
+					41 trường văn bản (settable) IMG-0001  ocr-tieng-viet.png
+				42 nút sắp xếp Danh mục ảnh
+			43 thanh cuộn (disabled, settable, float) 0
+		44 nút Sửa bản làm việc, ID: investigation.editImage
+		45 nút Tiếp nhận và chú thích…, ID: investigation.editIntake
+		46 nút Kiểm tra toàn vẹn, ID: investigation.verify
+		47 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+			48 vùng nhập văn bản ID: investigation.details, Value: Hồ sơ
+Kiểm tra workspace tích hợp
+Người thử dữ liệu tổng hợp
+
+IMG-0001 — ocr-tieng-viet.png
+
+
+SHA-256 (original): b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24
+SHA-256 (working source): b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24
+Bytes: 70012
+
+Thông tin tiếp nhận
+Nguồn tiếp nhận: Fixture tổng hợp của PhotoAxis
+Người cung cấp: 
+Người tiếp nhận: Người thử dữ liệu tổng hợp
+Thời điểm tiếp nhận (kèm múi giờ nếu biết): 
+Biên bản bàn giao / ghi chú: 
+
+Metadata Image I/O của bản gốc (tách khỏi thông tin bổ sung)
+{"{Exif}":{"ColorSpace":1,"PixelXDimension":1600,"PixelYDimension":640},"{PNG}":{"Chromaticities":[0.31270000000000003,0.32900000000000001,0.64000000000000001,0.33000000000000002,0.30000000000000004,0.60000000000000009,0.15000000000000002,0.060000000000000005],"Gamma":0.45455000000000001,"InterlaceType":0,"sRGBIntent":0},"ColorModel":"RGB","Depth":8,"HasAlpha":true,"PixelHeight":640,"PixelWidth":1600,"ProfileName":"sRGB IEC61966-2.1"}
+
+Các vùng che
+1
+OCR, video và phép đo: OCR 1, Đo khoảng cách/diện tích… 0
+
+Nhật ký xử lý gần nhất (tối đa 15; nhật ký đầy đủ giữ trong case.json)
+#1 2026-10-03T06:51:15Z | caseCreated | Người thử dữ liệu tổng hợp
+#2 2026-10-03T06:52:00Z | intake | Người thử dữ liệu tổng hợp
+#3 2026-10-03T06:52:14Z | workingOpened | Người thử dữ liệu tổng hợp
+#4 2026-10-03T06:54:44Z | ocrRecognized | Người thử dữ liệu tổng hợp
+#5 2026-10-03T07:00:37Z | workingOpened | Người thử dữ liệu tổng hợp
+#6 2026-10-03T07:03:06Z | workingOpened | Người thử dữ liệu tổng hợp
+#7 2026-10-03T07:04:09Z | ocrConfirmed | Người thử dữ liệu tổng hợp
+#8 2026-10-03T07:09:56Z | redactionsReviewed | Người thử dữ liệu tổng hợp
+#9 2026-10-03T07:10:13Z | sharingStarted | Người thử dữ liệu tổng hợp
+#10 2026-10-03T07:10:13Z | sharingCompleted | Người thử dữ liệu tổng hợp
+
+			49 thanh cuộn (settable, float) 0
+				50 chỉ báo giá trị (settable, float) 0
+				51 nút mũi tên tăng dần
+				52 nút mũi tên giảm dần
+				53 nút trang tăng dần
+				54 nút trang giảm dần
+		55 thanh cuộn (settable, float) 0
+			56 chỉ báo giá trị (settable, float) 0
+			57 nút mũi tên tăng dần
+			58 nút mũi tên giảm dần
+			59 nút trang tăng dần
+			60 nút trang giảm dần
+	61 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	62 nút đóng
+	63 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	64 nút thu nhỏ
+	65 text paint-fixture.png — PhotoAxis
+66 menu bar
+	67 PhotoAxis UI7 Verified vi
+	68 Tệp
+	69 Chỉnh sửa
+	70 Ảnh
+	71 Lớp
+	72 Văn bản
+	73 Xem
+	74 Cửa sổ
+	75 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

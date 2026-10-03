@@ -1,0 +1,42 @@
+Window: "Settings…", App: PhotoAxis UI7 Verified en.
+0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text PhotoAxis Settings Customize your workspace and editing preferences.
+	3 settings.categories
+		4 nút radio Description: General, Value: 0
+		5 nút radio Description: Workspace, Value: 0
+		6 nút radio Description: Canvas, Value: 0
+		7 nút radio Description: Brush Defaults, Value: 1
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Brush Defaults Applies to documents created or opened next. Change the current tab on the options bar; existing strokes remain unchanged. Default Brush Size
+		10 trường văn bản (settable) Description: Default Brush Size, Value: 40, ID: settings.brushSize
+		11 thanh trượt (settable, float) Value: 40, ID: settings.brushSize.slider
+			12 chỉ báo giá trị (settable, float) 40
+		13 text px Default Hardness
+		14 trường văn bản (settable) Description: Default Hardness, Value: 80, ID: settings.brushHardness
+		15 thanh trượt (settable, float) Value: 80, ID: settings.brushHardness.slider
+			16 chỉ báo giá trị (settable, float) 80
+		17 text % Default Opacity
+		18 trường văn bản (settable) Description: Default Opacity, Value: 100, ID: settings.brushOpacity
+		19 thanh trượt (settable, float) Value: 100, ID: settings.brushOpacity.slider
+			20 chỉ báo giá trị (settable, float) 100
+		21 text %
+		22 hộp kiểm Default Clone Stamp to Aligned, Value: 1, ID: settings.brushAligned
+		23 thanh cuộn (disabled, settable, float) 0
+	24 nút Reset This Section, ID: settings.resetSection
+	25 text Valid preferences are saved automatically.
+	26 nút đóng
+	27 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	28 text Settings…
+29 menu bar
+	30 PhotoAxis UI7 Verified en
+	31 File
+	32 Edit
+	33 Image
+	34 Layer
+	35 Type
+	36 View
+	37 Window
+	38 Help
+
+The focused UI element is 0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise

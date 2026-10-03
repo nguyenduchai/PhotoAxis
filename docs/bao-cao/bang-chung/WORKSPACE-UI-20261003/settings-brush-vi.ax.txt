@@ -1,0 +1,46 @@
+Window: "Cài đặt…", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text Cài đặt PhotoAxis Tùy chỉnh workspace và cách làm việc của anh/chị.
+	3 settings.categories
+		4 nút radio Description: Chung, Value: 0
+		5 nút radio Description: Workspace, Value: 0
+		6 nút radio Description: Canvas, Value: 0
+		7 nút radio Description: Cọ mặc định, Value: 1
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Cọ mặc định Áp dụng khi tạo hoặc mở tài liệu tiếp theo. Cọ của tab hiện tại chỉnh trực tiếp trên thanh tùy chọn; các nét đã vẽ giữ nguyên. Cỡ cọ mặc định
+		10 trường văn bản (settable) Description: Cỡ cọ mặc định, Value: 90, ID: settings.brushSize
+		11 thanh trượt (settable, float) Value: 90, ID: settings.brushSize.slider
+			12 chỉ báo giá trị (settable, float) 90
+		13 text px Độ cứng mặc định
+		14 trường văn bản (settable) Description: Độ cứng mặc định, Value: 80, ID: settings.brushHardness
+		15 thanh trượt (settable, float) Value: 80, ID: settings.brushHardness.slider
+			16 chỉ báo giá trị (settable, float) 80
+		17 text % Độ đậm mặc định
+		18 trường văn bản (settable) Description: Độ đậm mặc định, Value: 100, ID: settings.brushOpacity
+		19 thanh trượt (settable, float) Value: 100, ID: settings.brushOpacity.slider
+			20 chỉ báo giá trị (settable, float) 100
+		21 text %
+		22 hộp kiểm Clone Stamp mặc định giữ độ lệch, Value: 1, ID: settings.brushAligned
+		23 thanh cuộn (disabled, settable, float) 0
+	24 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	25 text Tự lưu các lựa chọn hợp lệ.
+	26 nút đóng
+	27 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	28 text Cài đặt…
+29 menu bar
+	30 PhotoAxis UI7 Verified vi
+	31 Tệp
+	32 Chỉnh sửa
+	33 Ảnh
+	34 Lớp
+	35 Văn bản
+	36 Xem
+	37 Cửa sổ
+	38 Trợ giúp
+
+Selected text: ```
+80
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

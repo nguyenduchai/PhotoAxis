@@ -1,0 +1,108 @@
+Window: "paint-fixture.png — PhotoAxis", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Cọ vẽ (B), ID: tool.brush
+	11 nút Description: Đóng dấu sao chép (S), ID: tool.cloneStamp
+	12 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	13 nút Description: Văn bản (T), ID: tool.type
+	14 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	15 nút Description: Bàn tay (H), ID: tool.hand
+	16 nút Description: Thu phóng (Z), ID: tool.zoom
+	17 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	18 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 nút chuyển đổi paint-fixture.png, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi paint-fixture.png •, Value: on
+	22 nút Đóng tab
+	23 trường văn bản (settable) Description: Thu phóng, Value: 100 %
+	24 text Value: 1.200 × 900 px · 72,00 PPI · Chưa lưu sRGB cm, ID: workspace.taskStatus
+	25 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	26 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	27 trường văn bản (settable) Description: HEX, Value: #000000
+	28 trường văn bản (settable) Description: Alpha %, Value: 100
+	29 trường văn bản (settable) Description: Đỏ, Value: 0
+	30 trường văn bản (settable) Description: Xanh lá, Value: 0
+	31 trường văn bản (settable) Description: Xanh dương, Value: 0
+	32 text Màu tiền cảnh Màu nền HEX Alpha % R G B
+	33 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		34 hộp kiểm Điều chỉnh ảnh, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., Value: 1, ID: adjustment.enabled
+		35 nút Đặt lại, Description: Đặt lại điều chỉnh ảnh, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., ID: adjustment.reset
+		36 text Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh. Phơi sáng
+		37 trường văn bản (settable) Description: Phơi sáng, Value: 0, ID: adjustment.exposure
+		38 thanh trượt (settable, float) Description: Phơi sáng, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., Value: 0, ID: adjustment.exposure.slider
+			39 chỉ báo giá trị (settable, float) 0
+		40 text EV Độ sáng
+		41 trường văn bản (settable) Description: Độ sáng, Value: 0, ID: adjustment.brightness
+		42 thanh trượt (settable, float) Description: Độ sáng, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., Value: 0, ID: adjustment.brightness.slider
+			43 chỉ báo giá trị (settable, float) 0
+		44 text % Độ tương phản
+		45 trường văn bản (settable) Description: Độ tương phản, Value: 0, ID: adjustment.contrast
+		46 thanh trượt (settable, float) Description: Độ tương phản, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., Value: 0, ID: adjustment.contrast.slider
+			47 chỉ báo giá trị (settable, float) 0
+		48 text % Độ bão hòa
+		49 trường văn bản (settable) Description: Độ bão hòa, Value: 0, ID: adjustment.saturation
+		50 thanh trượt (settable, float) Description: Độ bão hòa, Help: Phơi sáng −4…+4 EV; các giá trị khác −100…+100%. Return chốt số, Escape hủy; bật/tắt để so sánh., Value: 0, ID: adjustment.saturation.slider
+			51 chỉ báo giá trị (settable, float) 0
+		52 text %
+		53 thanh cuộn (settable, float) 0
+			54 chỉ báo giá trị (settable, float) 0
+			55 nút mũi tên tăng dần
+			56 nút mũi tên giảm dần
+			57 nút trang tăng dần
+			58 nút trang giảm dần
+	59 text Màu
+	60 nút Description: Thu gọn các bảng, ID: sidebar.collapse
+	61 Description: Thuộc tính và Lịch sử, ID: sidebar.inspectorTabs
+		62 nút radio Description: Thuộc tính, Value: 1
+		63 nút radio Description: Lịch sử, Value: 0
+	64 text Lớp
+	65 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		66 bảng
+			67 row (selected)
+				68 ô (selected)
+					69 nút Description: Ẩn/hiện lớp: paint-fixture.png, Help: Ẩn/hiện lớp
+					70 hình ảnh
+					71 text Help: paint-fixture.png, Value: paint-fixture.png Ảnh
+					72 nút Description: Khóa/mở khóa lớp: paint-fixture.png, Help: Khóa/mở khóa lớp
+		73 thanh cuộn (disabled, settable, float) 0
+	74 nút bật lên (disabled) Description: Chế độ hòa trộn, Value: Bình thường
+	75 text Độ mờ
+	76 trường văn bản (settable) Description: Độ mờ, Value: 100 %
+	77 thanh trượt (settable, float) Description: Độ mờ, Value: 100
+		78 chỉ báo giá trị (settable, float) 100
+	79 nút Thêm lớp
+	80 nút Đổi tên lớp
+	81 nút Đưa lớp lên
+	82 nút Đưa lớp xuống
+	83 nút Nhân bản lớp
+	84 nút Xóa lớp
+	85 nút chuyển đổi Chỉnh sửa, Value: on, ID: workspace.page.edit
+	86 nút chuyển đổi Nguồn, Value: off, ID: workspace.page.sources
+	87 nút chuyển đổi Phân tích, Value: off, ID: workspace.page.analysis
+	88 nút chuyển đổi Đầu ra, Value: off, ID: workspace.page.output
+	89 text Value: Layer, màu và lịch sử chỉnh sửa., ID: workspace.pageHelp
+	90 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	91 nút đóng
+	92 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	93 nút thu nhỏ
+	94 text paint-fixture.png — PhotoAxis
+95 menu bar
+	96 PhotoAxis UI7 Verified vi
+	97 Tệp
+	98 Chỉnh sửa
+	99 Ảnh
+	100 Lớp
+	101 Văn bản
+	102 Xem
+	103 Cửa sổ
+	104 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường paint-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

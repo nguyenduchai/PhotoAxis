@@ -1,0 +1,34 @@
+Window: "Cài đặt…", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text Cài đặt PhotoAxis Tùy chỉnh workspace và cách làm việc của anh/chị.
+	3 settings.categories
+		4 nút radio Description: Chung, Value: 0
+		5 nút radio Description: Workspace, Value: 0
+		6 nút radio Description: Canvas, Value: 1
+		7 nút radio Description: Cọ mặc định, Value: 0
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Canvas Nền vùng làm việc
+		10 nút bật lên Description: Nền vùng làm việc, Value: Xám vừa, ID: settings.background
+		11 hộp kiểm Hiện ô nền trong suốt, Value: 1, ID: settings.transparency
+		12 text Cỡ ô trong suốt
+		13 nút bật lên Description: Cỡ ô trong suốt, Value: Vừa (8 pt), ID: settings.gridSize
+		14 text Áp dụng ngay cho vùng hiển thị. Nền và ô trong suốt không được ghi vào ảnh xuất, project hoặc nguồn gốc.
+		15 thanh cuộn (disabled, settable, float) 0
+	16 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	17 text Tự lưu các lựa chọn hợp lệ.
+	18 nút đóng
+	19 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	20 text Cài đặt…
+21 menu bar
+	22 PhotoAxis UI7 Verified vi
+	23 Tệp
+	24 Chỉnh sửa
+	25 Ảnh
+	26 Lớp
+	27 Văn bản
+	28 Xem
+	29 Cửa sổ
+	30 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

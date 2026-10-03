@@ -1,0 +1,59 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Bàn tay
+	2 nút Vừa màn hình
+	3 nút 100%
+	4 text Kéo hoặc cuộn để di chuyển canvas
+	5 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
+	6 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
+	7 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
+	8 nút Description: Di chuyển (V), ID: tool.move
+	9 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
+	10 nút Description: Cọ vẽ (B), ID: tool.brush
+	11 nút Description: Đóng dấu sao chép (S), ID: tool.cloneStamp
+	12 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
+	13 nút Description: Văn bản (T), ID: tool.type
+	14 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
+	15 nút Description: Bàn tay (H), ID: tool.hand
+	16 nút Description: Thu phóng (Z), ID: tool.zoom
+	17 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	18 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 nút chuyển đổi paint-fixture.png, Value: off
+	20 nút Đóng tab
+	21 nút chuyển đổi paint-fixture.png •, Value: off
+	22 nút Đóng tab
+	23 nút chuyển đổi IMG-0001, Value: on
+	24 nút Đóng tab
+	25 trường văn bản (settable) Description: Thu phóng, Value: 104,38 %
+	26 text Value: 1.600 × 640 px · 72,00 PPI · Đã lưu sRGB cm, ID: workspace.taskStatus
+	27 nút chuyển đổi Chỉnh sửa, Value: off, ID: workspace.page.edit
+	28 nút chuyển đổi Nguồn, Value: off, ID: workspace.page.sources
+	29 nút chuyển đổi Phân tích, Value: on, ID: workspace.page.analysis
+	30 nút chuyển đổi Đầu ra, Value: off, ID: workspace.page.output
+	31 text Value: Chọn ảnh ở Nguồn để chú thích, OCR và đo., ID: workspace.pageHelp
+	32 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		33 nút So sánh nguồn/kết quả, ID: investigation.compare
+		34 nút Thêm chú thích…, ID: investigation.annotate
+		35 nút OCR tiếng Việt…, ID: investigation.ocr
+		36 nút Rà soát OCR…, ID: investigation.reviewOCR
+		37 nút (disabled) Trích khung hình…, ID: investigation.extractFrame
+		38 nút Hiệu chuẩn đo…, ID: investigation.calibrate
+		39 nút (disabled) Đo khoảng cách/diện tích…, ID: investigation.measure
+		40 thanh cuộn (disabled, settable, float) 0
+	41 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
+	42 nút đóng
+	43 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	44 nút thu nhỏ
+	45 text IMG-0001 — PhotoAxis
+46 menu bar
+	47 PhotoAxis UI7 Verified vi
+	48 Tệp
+	49 Chỉnh sửa
+	50 Ảnh
+	51 Lớp
+	52 Văn bản
+	53 Xem
+	54 Cửa sổ
+	55 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

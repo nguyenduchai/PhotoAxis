@@ -1,0 +1,50 @@
+{
+  "stage": "WORKSPACE-UI-20261003",
+  "build": "7",
+  "data": "synthetic fixtures only",
+  "status": "PASS",
+  "eventsValidated": 14,
+  "newEvents": [
+    "workingOpened",
+    "sharingStarted",
+    "sharingCompleted",
+    "workingOpened"
+  ],
+  "eventHashChain": "PASS",
+  "currentCaseStateDigest": "PASS",
+  "originalByteCount": 70012,
+  "originalSHA256": "b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24",
+  "originalAndWorkingModelUnchangedFromFixture": true,
+  "workingArchiveSHA256": "04e91f68adad0df8fd41b92427c794b3ac9776263ea0777f500589bd8e4bcfc9",
+  "sharingSHA256": "81595182904bcba3f4b20cdb6b3d8531990a060853f4aa7bfec67a488bb37b86",
+  "sharingSize": [
+    1600,
+    640
+  ],
+  "opaqueBlackRegionPixels": 148200,
+  "outsideRegionPixelsEqualToOriginal": 875800,
+  "nativeLanguages": [
+    "vi",
+    "en"
+  ],
+  "viPreferencesPersistedAfterRestart": {
+    "rulerUnit": "cm",
+    "background": "medium",
+    "brushDiameter": 90
+  },
+  "enPanelWidth": 260,
+  "nativeScope": [
+    "rulers px/cm at fit,100%,panned viewport",
+    "four Settings sections in VI and EN",
+    "brush defaults for newly opened document and restart",
+    "Sources/open existing synthetic case/edit working image/Analysis/compare/Output/share PNG"
+  ],
+  "hostedOnlyScope": [
+    "ruler mm/in and all unit zoom/backing combinations",
+    "settings minimum geometry680x560",
+    "canvas transparency alpha/export isolation/section reset/legacy corrupt preferences",
+    "native pointer resize attempt did not change size; not claimed as successful resize"
+  ],
+  "previousOCRVideoMeasurementResultsNotRerunNative": true,
+  "baselineAcceptanceUnchanged": true
+}

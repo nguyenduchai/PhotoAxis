@@ -1,0 +1,34 @@
+Window: "Settings…", App: PhotoAxis UI7 Verified en.
+0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text PhotoAxis Settings Customize your workspace and editing preferences.
+	3 settings.categories
+		4 nút radio Description: General, Value: 0
+		5 nút radio Description: Workspace, Value: 0
+		6 nút radio Description: Canvas, Value: 1
+		7 nút radio Description: Brush Defaults, Value: 0
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Canvas Workspace Background
+		10 nút bật lên Description: Workspace Background, Value: Dark Gray, ID: settings.background
+		11 hộp kiểm Show Transparency Grid, Value: 1, ID: settings.transparency
+		12 text Transparency Grid Size
+		13 nút bật lên Description: Transparency Grid Size, Value: Medium (8 pt), ID: settings.gridSize
+		14 text Applies immediately to the display. Workspace backgrounds and transparency grids are not written into exports, projects or originals.
+		15 thanh cuộn (disabled, settable, float) 0
+	16 nút Reset This Section, ID: settings.resetSection
+	17 text Valid preferences are saved automatically.
+	18 nút đóng
+	19 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	20 text Settings…
+21 menu bar
+	22 PhotoAxis UI7 Verified en
+	23 File
+	24 Edit
+	25 Image
+	26 Layer
+	27 Type
+	28 View
+	29 Window
+	30 Help
+
+The focused UI element is 0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise

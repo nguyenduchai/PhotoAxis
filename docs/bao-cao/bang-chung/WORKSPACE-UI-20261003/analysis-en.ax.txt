@@ -1,0 +1,57 @@
+Window: "IMG-0001 — PhotoAxis", App: PhotoAxis UI7 Verified en.
+0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 nút Fit on Screen
+	3 nút 100%
+	4 text Drag or scroll to pan the canvas
+	5 nút (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 nút (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 nút Description: Switch Tools between one and two columns, ID: tools.columns
+	8 nút Description: Move (V), ID: tool.move
+	9 nút Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 nút Description: Brush (B), ID: tool.brush
+	11 nút Description: Clone Stamp (S), ID: tool.cloneStamp
+	12 nút Description: Eyedropper (I), ID: tool.eyedropper
+	13 nút Description: Type (T), ID: tool.type
+	14 nút Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	15 nút Description: Hand (H), ID: tool.hand
+	16 nút Description: Zoom (Z), ID: tool.zoom
+	17 bảng màu Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	18 bảng màu Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
+	19 nút chuyển đổi paint-fixture.png, Value: off
+	20 nút Close tab
+	21 nút chuyển đổi IMG-0001, Value: on
+	22 nút Close tab
+	23 trường văn bản (settable) Description: Zoom, Value: 109,38 %
+	24 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB px, ID: workspace.taskStatus
+	25 nút chuyển đổi Edit, Value: off, ID: workspace.page.edit
+	26 nút chuyển đổi Sources, Value: off, ID: workspace.page.sources
+	27 nút chuyển đổi Analysis, Value: on, ID: workspace.page.analysis
+	28 nút chuyển đổi Output, Value: off, ID: workspace.page.output
+	29 text Value: Select an image in Sources to annotate, OCR or measure., ID: workspace.pageHelp
+	30 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		31 nút Compare source/result, ID: investigation.compare
+		32 nút Add annotation…, ID: investigation.annotate
+		33 nút Vietnamese OCR…, ID: investigation.ocr
+		34 nút Review OCR…, ID: investigation.reviewOCR
+		35 nút (disabled) Extract frame…, ID: investigation.extractFrame
+		36 nút Calibrate measurement…, ID: investigation.calibrate
+		37 nút (disabled) Measure distance/area…, ID: investigation.measure
+		38 thanh cuộn (disabled, settable, float) 0
+	39 bộ chia tách Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 260, Secondary Actions: Increment, Decrement
+	40 nút đóng
+	41 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	42 nút thu nhỏ
+	43 text IMG-0001 — PhotoAxis
+44 menu bar
+	45 PhotoAxis UI7 Verified en
+	46 File
+	47 Edit
+	48 Image
+	49 Layer
+	50 Type
+	51 View
+	52 Window
+	53 Help
+
+The focused UI element is 0 cửa sổ thông thường IMG-0001 — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

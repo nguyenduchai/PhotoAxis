@@ -1,0 +1,43 @@
+Window: "Cài đặt…", App: PhotoAxis UI7 Verified vi.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text Cài đặt PhotoAxis Tùy chỉnh workspace và cách làm việc của anh/chị.
+	3 settings.categories
+		4 nút radio Description: Chung, Value: 0
+		5 nút radio Description: Workspace, Value: 1
+		6 nút radio Description: Canvas, Value: 0
+		7 nút radio Description: Cọ mặc định, Value: 0
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Bảng và công cụ Độ rộng bảng
+		10 trường văn bản (settable) Description: Độ rộng bảng, Value: 300, ID: settings.panelWidth
+		11 máy tập đi bộ Description: Độ rộng bảng, Value: 300, ID: settings.panelWidth, Secondary Actions: Increment, Decrement
+			12 nút mũi tên tăng dần
+			13 nút mũi tên giảm dần
+		14 text pt (260–420) Bố trí công cụ
+		15 Description: Bố trí công cụ, ID: settings.toolColumns
+			16 nút radio Description: Một cột, Value: 1
+			17 nút radio Description: Hai cột, Value: 0
+		18 hộp kiểm Hiện bảng bên phải, Value: 1, ID: settings.panelVisible
+		19 text Thước kẻ
+		20 hộp kiểm Thước kẻ, Value: 1, ID: settings.rulers
+		21 text Đơn vị thước
+		22 nút bật lên Description: Đơn vị thước, Value: Centimét (cm), ID: settings.rulerUnit
+		23 text mm/cm/in quy đổi theo PPI của tài liệu, biểu thị kích thước in. Để đo vật trong ảnh, dùng hiệu chuẩn ở Phân tích.
+		24 thanh cuộn (disabled, settable, float) 0
+	25 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	26 text Tự lưu các lựa chọn hợp lệ.
+	27 nút đóng
+	28 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	29 text Cài đặt…
+30 menu bar
+	31 PhotoAxis UI7 Verified vi
+	32 Tệp
+	33 Chỉnh sửa
+	34 Ảnh
+	35 Lớp
+	36 Văn bản
+	37 Xem
+	38 Cửa sổ
+	39 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

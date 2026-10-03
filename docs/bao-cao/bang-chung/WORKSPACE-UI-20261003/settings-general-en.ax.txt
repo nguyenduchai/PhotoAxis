@@ -1,0 +1,31 @@
+Window: "Settings…", App: PhotoAxis UI7 Verified en.
+0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text PhotoAxis Settings Customize your workspace and editing preferences.
+	3 settings.categories
+		4 nút radio Description: General, Value: 1
+		5 nút radio Description: Workspace, Value: 0
+		6 nút radio Description: Canvas, Value: 0
+		7 nút radio Description: Brush Defaults, Value: 0
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Interface Interface Language
+		10 nút bật lên Description: Interface Language, Value: English, ID: settings.language
+		11 text About PhotoAxis PhotoAxis 1.0.0 (7) · macOS 14+ · Apple Silicon Native and offline. Open source under GPLv3. Interface preferences do not modify documents or source images. Shortcuts: Cmd+, Settings · Cmd+R rulers · B Brush · S Clone Stamp · Space pan · [ and ] brush size.
+		12 thanh cuộn (disabled, settable, float) 0
+	13 nút Reset This Section, ID: settings.resetSection
+	14 text Valid preferences are saved automatically.
+	15 nút đóng
+	16 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	17 text Settings…
+18 menu bar
+	19 PhotoAxis UI7 Verified en
+	20 File
+	21 Edit
+	22 Image
+	23 Layer
+	24 Type
+	25 View
+	26 Window
+	27 Help
+
+The focused UI element is 0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise

@@ -1,0 +1,47 @@
+Window: "Settings…", App: PhotoAxis UI7 Verified en.
+0 cửa sổ thông thường Settings…, ID: settings.window, Secondary Actions: Raise
+	1 hình ảnh sửa
+	2 text PhotoAxis Settings Customize your workspace and editing preferences.
+	3 settings.categories
+		4 nút radio Description: General, Value: 0
+		5 nút radio Description: Workspace, Value: 1
+		6 nút radio Description: Canvas, Value: 0
+		7 nút radio Description: Brush Defaults, Value: 0
+	8 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		9 text Panels and Tools Panel Width
+		10 trường văn bản (settable) Description: Panel Width, Value: 260, ID: settings.panelWidth
+		11 máy tập đi bộ Description: Panel Width, Value: 260, ID: settings.panelWidth, Secondary Actions: Increment, Decrement
+			12 nút mũi tên tăng dần
+			13 nút mũi tên giảm dần
+		14 text pt (260–420) Tools Layout
+		15 Description: Tools Layout, ID: settings.toolColumns
+			16 nút radio Description: One Column, Value: 1
+			17 nút radio Description: Two Columns, Value: 0
+		18 hộp kiểm Show right panel, Value: 1, ID: settings.panelVisible
+		19 text Rulers
+		20 hộp kiểm Rulers, Value: 1, ID: settings.rulers
+		21 text Ruler Units
+		22 nút bật lên Description: Ruler Units, Value: Pixels (px), ID: settings.rulerUnit
+		23 text mm/cm/in use the document PPI and represent print size. Use calibration in Analysis to measure objects in an image.
+		24 thanh cuộn (disabled, settable, float) 0
+	25 nút Reset This Section, ID: settings.resetSection
+	26 text Valid preferences are saved automatically.
+	27 nút đóng
+	28 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	29 text Settings…
+30 menu bar
+	31 PhotoAxis UI7 Verified en
+	32 File
+	33 Edit
+	34 Image
+	35 Layer
+	36 Type
+	37 View
+	38 Window
+	39 Help
+
+Selected text: ```
+260
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).
