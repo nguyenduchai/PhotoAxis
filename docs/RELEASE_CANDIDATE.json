@@ -49,5 +49,26 @@
   "scanSpecification": "Scan 1",
   "scanProjectSchemaVersion": 3,
   "scanEvidence": "docs/bao-cao/SCAN_2026-10-03.md",
-  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build4"
+  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build4",
+  "latestNativeCI": {
+    "status": "PASS",
+    "sourceCommit": "d8cb1d047dfc8164522f96f8db9447f028f16780",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37101167404",
+    "counts": {
+      "passed": 154,
+      "failed": 0,
+      "skipped": 5
+    },
+    "total": 159,
+    "os": "15.7.9",
+    "xcode": "16.4",
+    "debugTest": "PASS",
+    "releaseBuild": "PASS",
+    "skipScope": [
+      "3opt-inbenchmarks",
+      "realVietnameseinputcontext",
+      "largeworkspacefixture"
+    ],
+    "qualificationGatesUnchanged": true
+  }
 }

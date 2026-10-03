@@ -1,0 +1,29 @@
+{
+  "createdAt": "2026-10-03T12:52:05.952985+07:00",
+  "sourceCommit": "d8cb1d047dfc8164522f96f8db9447f028f16780",
+  "sourceDirty": false,
+  "build": "4",
+  "releaseBinaryUUID": "8A2E6A7C-4058-391B-A8F6-24F1BB32D380",
+  "binarySHA256": "015a7ecc25f8e7d80f4c43cf45079a4eb440a1467eec6934c7e21db3c3734c1a",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "artifactSHA256": "0079c4b29cffa37cf68446f8df59cb01fb4a2fd00021bf1d5115eb8f053a05f8",
+  "copiedSHA256Matches": true,
+  "packagingInspected": true,
+  "installerPublicReady": false,
+  "nativeCIURL": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37101167404",
+  "pagesURL": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37101167463",
+  "websitePostcheck": "PASS",
+  "websiteFilesChecked": 27,
+  "websiteCommit": "d8cb1d047dfc8164522f96f8db9447f028f16780",
+  "nativeVIEN": "PASS",
+  "nativeBatchPages": 2,
+  "nativeBatchOrder": [
+    "02.png",
+    "01.png"
+  ],
+  "nativeBatchPDFMediaBoxPoints": [
+    144,
+    192
+  ],
+  "sourceFingerprintMatches": true
+}

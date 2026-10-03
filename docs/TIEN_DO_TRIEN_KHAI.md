@@ -6,6 +6,7 @@
 
 - Fullsuite mã cuối **155PASS/1FAILTelex/3SKIP**,159total;11caScan mới đềuPASS. NativeVI/EN và batchEN2trang đổi thứ tự→PNG/project/PDF/manifest→byte/hash/schema độc lậpPASS. Release/ad-hocPASS,16policyPASS,452khóaVI/EN/381referencesPASS,12websitepagesPASS.
 - Fixture đường cong biết trước: độ trải baseline60px→0px. Đây là oracle nhỏ cho mô hình bow, không phải nghiệm thu mọi trang sách thực. Nắn sách3D tự động/PDF–TIFFimport/batchOCR chưa triển khai. Datasetcamera/sách/chữký/nétmảnh,50trangfullquota/macOS14/M1-16GB/performance chưa qualification.
+- GitHubCI Xcode16.4/macOS15.7.9: **154PASS/0FAIL/5SKIP**, Debug/test/ReleasePASS. DMGbuild4 source sạchd8cb1d0 đượcmount/tree/codesign/GPL/hashPASS; SHA256 `0079c4b29cffa37cf68446f8df59cb01fb4a2fd00021bf1d5115eb8f053a05f8`. [CI](bao-cao/bang-chung/SCAN-20261003/ci-summary.json), [receipt](bao-cao/bang-chung/SCAN-20261003/delivery-receipt.json).
 - Source/website public tiếp tục cùng GPLv3repo; DMGbuild4local và receipts được giao riêng. `releaseReady=false`, nút tải stable vẫn tắt. 19/43nghiệm thu baseline là phạm vi build3 lịch sử; chưa nhận đủ nghiệm thu build4.
 
 [Đặc tả](DAC_TA_SCAN.md), [hướng dẫn](HUONG_DAN_SCAN.md), [báo cáo kết quả](bao-cao/SCAN_2026-10-03.md), [manifest cuối](bao-cao/bang-chung/SCAN-20261003/build-manifest.json), [readiness](READINESS_PUBLIC.json).
