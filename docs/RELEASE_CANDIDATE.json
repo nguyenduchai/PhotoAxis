@@ -59,8 +59,27 @@
   },
   "workspaceIntegrationEvidence": "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
   "latestNativeCI": {
-    "status": "PENDING",
-    "scope": "build6; skip scopes do not close qualification gates"
+    "status": "PASS",
+    "sourceCommit": "7312eb1e7101c63bcc1d554d6c8416baa2f68bdd",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37123347410",
+    "counts": {
+      "passed": 179,
+      "failed": 0,
+      "skipped": 5
+    },
+    "total": 184,
+    "os": "15.7.9",
+    "xcode": "16.4",
+    "debugTest": "PASS",
+    "releaseBuild": "PASS",
+    "skipScope": [
+      "3opt-inbenchmarks",
+      "realVietnameseinputcontext",
+      "largeworkspacefixture"
+    ],
+    "qualificationGatesUnchanged": true,
+    "newPaintLiveTestsPassed": 16,
+    "countDerivation": "23CoreXCTest+33SwiftTesting+128AppXCTest;5AppSKIP,0FAIL"
   },
   "previousCandidateBuild5": {
     "sourceCommit": "218b788d04fb0bb6abd8bf3516e49409265eb435",

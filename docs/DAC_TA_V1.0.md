@@ -6,6 +6,8 @@ Người dùng đã xác nhận: “Tôi chốt đặc tả sản phẩm 1.0-dra
 
 Yêu cầu tiếp theo “xây dựng sản phẩm đến khi public” được bổ sung bằng [kế hoạch phát hành trực tiếp](PHAT_HANH_PUBLIC.md), không âm thầm thêm chức năng vào bản đặc tả đã duyệt. Kênh đã chọn: website/GitHub Releases.
 
+Phần mở rộng người dùng yêu cầu sau baseline được ghi riêng: [Scan1](DAC_TA_SCAN.md), [Paint1/Brush/Clone và preview tự động](DAC_TA_PAINT.md), [gói điều tra](DAC_TA_GOI_DIEU_TRA.md). Các mục ngoài phạm vi dưới đây mô tả baseline đã duyệt; không phủ nhận các phần mở rộng đã được yêu cầu và triển khai. Xem [tiến độ thực tế](TIEN_DO_TRIEN_KHAI.md).
+
 ## 1. Mục đích và yêu cầu bắt buộc
 
 Xây dựng một ứng dụng chỉnh sửa ảnh rút gọn, hoàn toàn native trên macOS, clone giao diện và cách bố trí công cụ Photoshop trong phạm vi tính năng V1.0. Perspective Crop là tính năng bắt buộc của bản phát hành đầu tiên.

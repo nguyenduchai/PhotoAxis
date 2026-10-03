@@ -1,0 +1,407 @@
+Filtered original GitHub run log: toolchain, test cases/suites/counts/skip reasons and build conclusion. Full raw log available at CI URL.
+build-test	Record and validate toolchain	﻿2026-10-03T12:35:22.2210170Z ##[group]Run test "$(uname -m)" = arm64
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2211630Z ^[[36;1mtest "$(uname -m)" = arm64^[[0m
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2212810Z ^[[36;1mxcodebuild -version^[[0m
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2213160Z ^[[36;1mxcrun --sdk macosx --show-sdk-version^[[0m
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2213420Z ^[[36;1msw_vers^[[0m
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2378970Z shell: /bin/bash -e {0}
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2379570Z env:
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2379870Z   DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+build-test	Record and validate toolchain	2026-10-03T12:35:22.2380510Z ##[endgroup]
+build-test	Record and validate toolchain	2026-10-03T12:35:22.6604300Z Xcode 16.4
+build-test	Record and validate toolchain	2026-10-03T12:35:22.6620830Z Build version 16F6
+build-test	Record and validate toolchain	2026-10-03T12:35:25.0986780Z 15.5
+build-test	Record and validate toolchain	2026-10-03T12:35:25.1133370Z ProductName:		macOS
+build-test	Record and validate toolchain	2026-10-03T12:35:25.1137130Z ProductVersion:		15.7.9
+build-test	Record and validate toolchain	2026-10-03T12:35:25.1138130Z BuildVersion:		24G830
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.3772670Z Test Suite 'All tests' started at 2026-10-03 12:37:09.323.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.3900860Z Test Suite 'PhotoAxisCoreTests.xctest' started at 2026-10-03 12:37:09.324.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4011460Z Test Suite 'ExportOptionsTests' started at 2026-10-03 12:37:09.324.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4017560Z Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4133640Z Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' passed (0.013 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4246030Z Test Suite 'ExportOptionsTests' passed at 2026-10-03 12:37:09.338.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4349110Z 	 Executed 1 test, with 0 failures (0 unexpected) in 0.013 (0.014) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4450560Z Test Suite 'InvestigationTests' started at 2026-10-03 12:37:09.338.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4571230Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4680900Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' passed (0.021 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4807360Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.4939660Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' passed (0.005 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5087430Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5194940Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5348710Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5473300Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' passed (0.007 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5474370Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5649270Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' passed (0.020 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5792080Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5893710Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' passed (0.005 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.5997430Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6100480Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' passed (0.004 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6204730Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMagnifierUsesSourceCoordinatesAfterCanvasCrop]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6380700Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMagnifierUsesSourceCoordinatesAfterCanvasCrop]' passed (0.029 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6498490Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6617900Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' passed (0.006 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.6719690Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7045370Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' passed (0.006 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7151030Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7252850Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' passed (0.005 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7354820Z Test Suite 'InvestigationTests' passed at 2026-10-03 12:37:09.461.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7457390Z 	 Executed 11 tests, with 0 failures (0 unexpected) in 0.112 (0.123) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7558540Z Test Suite 'PaintTests' started at 2026-10-03 12:37:09.461.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7681240Z Test Case '-[PhotoAxisCoreTests.PaintTests testCloneReferenceSurvivesSharedSourceAndPaintFollowsGeometry]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7854710Z Test Case '-[PhotoAxisCoreTests.PaintTests testCloneReferenceSurvivesSharedSourceAndPaintFollowsGeometry]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.7991260Z Test Case '-[PhotoAxisCoreTests.PaintTests testHistoryAccountsForStrokeMetadataAndSourceRetention]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8144030Z Test Case '-[PhotoAxisCoreTests.PaintTests testHistoryAccountsForStrokeMetadataAndSourceRetention]' passed (0.001 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8247120Z Test Case '-[PhotoAxisCoreTests.PaintTests testInterpolatedSpacingDotAndInvalidNumbers]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8357160Z Test Case '-[PhotoAxisCoreTests.PaintTests testInterpolatedSpacingDotAndInvalidNumbers]' passed (0.012 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8492710Z Test Case '-[PhotoAxisCoreTests.PaintTests testQuotaFailureIsAtomicAndLockedPaintCannotBeChanged]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8596600Z Test Case '-[PhotoAxisCoreTests.PaintTests testQuotaFailureIsAtomicAndLockedPaintCannotBeChanged]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8598730Z Test Case '-[PhotoAxisCoreTests.PaintTests testSchemaFourRoundTripAndOldVersionsRejectPaint]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8700970Z Test Case '-[PhotoAxisCoreTests.PaintTests testSchemaFourRoundTripAndOldVersionsRejectPaint]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.8803140Z Test Suite 'PaintTests' passed at 2026-10-03 12:37:09.481.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9008100Z 	 Executed 5 tests, with 0 failures (0 unexpected) in 0.019 (0.020) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9111720Z Test Suite 'ProjectFormatTests' started at 2026-10-03 12:37:09.481.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9213930Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9317370Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' passed (0.008 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9423500Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9528110Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' passed (0.018 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9630810Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9759420Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9763880Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9867670Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' passed (0.012 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:09.9972970Z Test Suite 'ProjectFormatTests' passed at 2026-10-03 12:37:09.522.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0075240Z 	 Executed 4 tests, with 0 failures (0 unexpected) in 0.040 (0.041) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0176080Z Test Suite 'ScanModelTests' started at 2026-10-03 12:37:09.522.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0278400Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0379440Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0481930Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0585240Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' passed (0.003 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0686540Z Test Suite 'ScanModelTests' passed at 2026-10-03 12:37:09.528.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0788910Z 	 Executed 2 tests, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0890230Z Test Suite 'PhotoAxisCoreTests.xctest' passed at 2026-10-03 12:37:09.529.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.0994940Z 	 Executed 23 tests, with 0 failures (0 unexpected) in 0.187 (0.205) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.1097560Z Test Suite 'All tests' passed at 2026-10-03 12:37:09.531.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:10.1199180Z 	 Executed 23 tests, with 0 failures (0 unexpected) in 0.187 (0.209) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:12.0037640Z ✔ Test run with 33 tests passed after 0.057 seconds.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:14.3746440Z Test Suite 'All tests' started at 2026-10-03 12:37:14.354.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:14.4006070Z Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-03 12:37:14.354.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:14.4236660Z Test Suite 'AcceptanceWorkflowTests' started at 2026-10-03 12:37:14.354.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:14.4338950Z Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3442680Z Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' passed (0.982 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3540990Z Test Suite 'AcceptanceWorkflowTests' passed at 2026-10-03 12:37:15.337.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3642790Z 	 Executed 1 test, with 0 failures (0 unexpected) in 0.982 (0.983) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3752460Z Test Suite 'BenchmarkTests' started at 2026-10-03 12:37:15.337.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3856290Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.3965510Z ${CI_REPO}/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.4069720Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' skipped (0.056 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.4169600Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.5087530Z ${CI_REPO}/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.5190660Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' skipped (0.106 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.5294290Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6102620Z ${CI_REPO}/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6205640Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' skipped (0.104 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6306710Z Test Suite 'BenchmarkTests' passed at 2026-10-03 12:37:15.605.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6410070Z 	 Executed 3 tests, with 3 tests skipped and 0 failures (0 unexpected) in 0.266 (0.267) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6512890Z Test Suite 'ContentEditingTests' started at 2026-10-03 12:37:15.605.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.6613280Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.8336450Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' passed (0.218 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:15.8448820Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:16.5428620Z ${CI_REPO}/Tests/PhotoAxisAppTests/ContentEditingTests.swift:173: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : Test skipped - The native context cannot activate Telex; manual IME acceptance remains required
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:16.5559400Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' skipped (0.680 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:16.5665770Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.1114560Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' passed (0.604 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.1234050Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.4856100Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' passed (0.376 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.4958690Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.6862590Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' passed (0.194 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.6964710Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.7929650Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' passed (0.113 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.8036740Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.9006050Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' passed (0.106 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.9069870Z Test Suite 'ContentEditingTests' passed at 2026-10-03 12:37:17.899.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.9070780Z 	 Executed 7 tests, with 1 test skipped and 0 failures (0 unexpected) in 2.291 (2.294) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.9071800Z Test Suite 'CropEditingTests' started at 2026-10-03 12:37:17.901.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:17.9072640Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.1105870Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' passed (1.200 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.1207960Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.2413160Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' passed (0.130 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.2519340Z Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.3530480Z Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' passed (0.081 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.3650170Z Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.3987060Z Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' passed (0.077 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4089490Z Test Suite 'CropEditingTests' passed at 2026-10-03 12:37:19.391.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4207280Z 	 Executed 4 tests, with 0 failures (0 unexpected) in 1.488 (1.490) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4310470Z Test Suite 'DocumentAppTests' started at 2026-10-03 12:37:19.391.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4414400Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4838050Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' passed (0.052 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.4942190Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.8117550Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' passed (0.359 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.8220480Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.9119100Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' passed (0.076 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:19.9474210Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.0171660Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' passed (0.133 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.0273420Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.0476870Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' passed (0.027 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.0584640Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6033930Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' passed (0.552 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6144860Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6247690Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' passed (0.011 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6351710Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6756660Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' passed (0.063 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.6858710Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.7788490Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' passed (0.106 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.7888320Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.7992080Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' passed (0.005 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.8091600Z Test Suite 'DocumentAppTests' passed at 2026-10-03 12:37:20.778.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.8195820Z 	 Executed 10 tests, with 0 failures (0 unexpected) in 1.383 (1.387) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.8343310Z Test Suite 'ExportTests' started at 2026-10-03 12:37:20.779.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:20.8465370Z Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.2512250Z Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' passed (0.449 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.2777610Z Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.3122950Z Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' passed (0.078 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.3223470Z Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.6213660Z Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' passed (0.306 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:21.6311220Z Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.2988710Z Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' passed (0.679 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.3091130Z Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.5289210Z Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' passed (0.225 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.5401130Z Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.7406570Z Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' passed (0.201 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:22.7512340Z Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:23.4456700Z Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' passed (0.686 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:23.4558360Z Test Suite 'ExportTests' passed at 2026-10-03 12:37:23.406.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:23.4659630Z 	 Executed 7 tests, with 0 failures (0 unexpected) in 2.624 (2.627) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:23.4762040Z Test Suite 'ImageAdjustmentTests' started at 2026-10-03 12:37:23.406.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:23.4870370Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:24.2689460Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' passed (0.847 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:24.2800860Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:25.1175620Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' passed (0.849 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:25.1674690Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:25.4653320Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' passed (0.336 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:25.4759010Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0486500Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' passed (0.598 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0588580Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0691810Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' passed (0.025 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0793180Z Test Suite 'ImageAdjustmentTests' passed at 2026-10-03 12:37:26.064.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0896190Z 	 Executed 5 tests, with 0 failures (0 unexpected) in 2.656 (2.658) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.0996200Z Test Suite 'InvestigationAnalysisTests' started at 2026-10-03 12:37:26.065.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:26.1097760Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:27.7976810Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' passed (1.718 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:27.8080520Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:27.9379730Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' passed (0.148 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:27.9491770Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.0542000Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' passed (1.104 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.0574900Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRComputeUsesOnlyRequestSupportedCPUDevices]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.0678850Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRComputeUsesOnlyRequestSupportedCPUDevices]' passed (0.001 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.0781510Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.9699350Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' passed (0.921 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:29.9826910Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.6830650Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' passed (0.547 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.6937790Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.7040130Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' passed (0.003 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.7155450Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.7260900Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' passed (0.071 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.7639560Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.8016350Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' passed (0.205 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:30.8116920Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:32.4690460Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' passed (1.664 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:32.4718680Z Test Suite 'InvestigationAnalysisTests' passed at 2026-10-03 12:37:32.452.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:32.4830600Z 	 Executed 10 tests, with 0 failures (0 unexpected) in 6.382 (6.387) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:32.4932800Z Test Suite 'InvestigationWorkflowTests' started at 2026-10-03 12:37:32.452.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:32.5071990Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.3851100Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' passed (0.918 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.3954670Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPickingUsesSourcePixelsWithMarginsReverseDragAndClamping]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.4699820Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPickingUsesSourcePixelsWithMarginsReverseDragAndClamping]' passed (0.083 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.4701090Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPointsPersistAcrossMouseUpAndEscapeDiscardsPresentation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.8388720Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPointsPersistAcrossMouseUpAndEscapeDiscardsPresentation]' passed (0.364 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.8497610Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.9414280Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' passed (0.115 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:33.9517720Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseSelectionFollowsActiveTabAcrossTwoCases]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.2568580Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseSelectionFollowsActiveTabAcrossTwoCases]' passed (0.300 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.2667400Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testChangingTabOrModelCancelsDraftWithoutWritingAudit]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.7638040Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testChangingTabOrModelCancelsDraftWithoutWritingAudit]' passed (0.499 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.7749270Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.9736370Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' passed (0.223 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:34.9845190Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:35.1052850Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' passed (0.129 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:35.1274260Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:35.2833540Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' passed (0.179 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:35.2936530Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:36.6248220Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' passed (0.147 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:36.6550090Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineAnnotationMakesOneUndoAndNeverChangesOriginalBytes]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:36.7640360Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineAnnotationMakesOneUndoAndNeverChangesOriginalBytes]' passed (0.837 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:36.7788480Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineCaseEditApplyAndCancelAreTransactionalWithoutAuxiliaryWindow]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:37.1253680Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineCaseEditApplyAndCancelAreTransactionalWithoutAuxiliaryWindow]' passed (0.825 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:37.1359560Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:37.1917090Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' passed (0.100 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:37.2027160Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.0208030Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' passed (0.794 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.0318520Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testOrphanUnsavedDocumentCannotBeDiscardedWhenOpeningCaseItem]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.1828010Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testOrphanUnsavedDocumentCannotBeDiscardedWhenOpeningCaseItem]' passed (0.181 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.1939010Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.4015420Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' passed (0.165 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.4163210Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.5503230Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' passed (0.203 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:38.5610070Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.0720400Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' passed (0.533 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.0831040Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.3472090Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' passed (0.282 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.3577100Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.5467540Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' passed (0.192 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.5581150Z Test Suite 'InvestigationWorkflowTests' passed at 2026-10-03 12:37:39.528.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.5583760Z 	 Executed 20 tests, with 0 failures (0 unexpected) in 7.068 (7.076) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.5686860Z Test Suite 'LayerEditingTests' started at 2026-10-03 12:37:39.529.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:39.5801190Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:40.8335490Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' passed (1.299 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:40.8438760Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.1603630Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' passed (0.322 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.1710050Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.4520390Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' passed (0.297 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.4626910Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.5421280Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' passed (0.080 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.5523590Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.5990620Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' passed (0.044 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6095750Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6414610Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' passed (0.056 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6517360Z Test Suite 'LayerEditingTests' passed at 2026-10-03 12:37:41.630.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6621780Z 	 Executed 6 tests, with 0 failures (0 unexpected) in 2.098 (2.101) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6732760Z Test Suite 'MultiLayerPerspectiveTests' started at 2026-10-03 12:37:41.630.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.6845320Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.7921860Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' passed (0.135 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:41.8024740Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:42.0934820Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' passed (0.309 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:42.1043230Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:49.0647080Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' passed (6.966 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:49.0743060Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:49.3070500Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' passed (0.252 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:49.3178690Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.1930050Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' passed (0.888 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.2032830Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.8676990Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' passed (0.668 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.8783520Z Test Suite 'MultiLayerPerspectiveTests' passed at 2026-10-03 12:37:50.858.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.8884430Z 	 Executed 6 tests, with 0 failures (0 unexpected) in 9.220 (9.228) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.8987790Z Test Suite 'PaintLiveTests' started at 2026-10-03 12:37:50.859.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.9109410Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBilingualContinuousPaintControlsAndNarrowOverflow]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.9278970Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBilingualContinuousPaintControlsAndNarrowOverflow]' passed (0.063 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:50.9382770Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBrushUnionOpacityInterpolationSoftEdgeAndOrientation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.0309080Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBrushUnionOpacityInterpolationSoftEdgeAndOrientation]' passed (0.102 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.0417080Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testCaseCloneUnsavedRestartAuditRollbackAndTamper]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.2406690Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testCaseCloneUnsavedRestartAuditRollbackAndTamper]' passed (0.197 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.2509780Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testFrozenCompositeCloneIncludesAdjustmentsAndHasNoFeedback]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.4268090Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testFrozenCompositeCloneIncludesAdjustmentsAndHasNoFeedback]' passed (0.197 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.4384040Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testImageAndCanvasSizePreviewIsAutomaticAtomicAndCancelable]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.5365000Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testImageAndCanvasSizePreviewIsAutomaticAtomicAndCancelable]' passed (0.100 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.5478460Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testLiveStrokeOneUndoRedoCancelAndImmutableSource]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.6104150Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testLiveStrokeOneUndoRedoCancelAndImmutableSource]' passed (0.086 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:51.6206900Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testNativeOptionClickAlignedAndUnalignedCloneAndBrushEscape]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:52.6798090Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testNativeOptionClickAlignedAndUnalignedCloneAndBrushEscape]' passed (1.065 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:52.6916630Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintMaskStaysTransparentOutsideStrokeAfterDeskewAndPerspective]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.0077440Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintMaskStaysTransparentOutsideStrokeAfterDeskewAndPerspective]' passed (2.327 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.0158250Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintProjectExportRecoveryRoundTripAndDraftExclusion]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.2918020Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintProjectExportRecoveryRoundTripAndDraftExclusion]' passed (0.287 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.3021160Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPerspectiveInsetAutomaticallyRefreshesAndCancelsWithoutHistory]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.6674130Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPerspectiveInsetAutomaticallyRefreshesAndCancelsWithoutHistory]' passed (0.367 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:55.6779630Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testScanAutoPreviewLatestValueInvalidInputAndCancelWithoutButton]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:56.9341300Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testScanAutoPreviewLatestValueInvalidInputAndCancelWithoutButton]' passed (1.174 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:56.9648520Z Test Suite 'PaintLiveTests' passed at 2026-10-03 12:37:56.830.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:56.9751850Z 	 Executed 11 tests, with 0 failures (0 unexpected) in 5.965 (5.971) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:56.9918240Z Test Suite 'PerspectiveEditingTests' started at 2026-10-03 12:37:56.830.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:57.0022710Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:57.0129450Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' passed (0.126 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:57.0236530Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:57.9114610Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' passed (0.946 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:57.9220560Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.2234790Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' passed (1.313 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.2335240Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.2739530Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' passed (0.050 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.2840060Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.4649390Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' passed (0.192 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.4749680Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.5656760Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' passed (0.107 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.5760000Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.7790740Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' passed (0.207 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.7893290Z Test Suite 'PerspectiveEditingTests' passed at 2026-10-03 12:37:59.772.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.7993650Z 	 Executed 7 tests, with 0 failures (0 unexpected) in 2.940 (2.942) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8094300Z Test Suite 'ProjectDocumentTests' started at 2026-10-03 12:37:59.773.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8176100Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8280170Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' passed (0.019 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8391290Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8599540Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' passed (0.062 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8701360Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8803160Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' passed (0.005 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.8904340Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.9005970Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' passed (0.017 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:37:59.9108280Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.0378480Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' passed (0.144 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.0480020Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.0984060Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' passed (0.074 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.1088110Z Test Suite 'ProjectDocumentTests' passed at 2026-10-03 12:38:00.094.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.1206900Z 	 Executed 6 tests, with 0 failures (0 unexpected) in 0.320 (0.322) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.1306400Z Test Suite 'RecoveryTests' started at 2026-10-03 12:38:00.095.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.1407980Z Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.1914230Z Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' passed (0.088 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.2014290Z Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.4051340Z Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' passed (0.215 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.4154170Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.6263280Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' passed (0.146 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.6271100Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.6522380Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' passed (0.055 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:00.6625010Z Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:10.8135950Z Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' passed (10.198 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:10.8234530Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.6534960Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' passed (0.850 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.6568030Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.6818930Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' passed (0.019 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.6922870Z Test Suite 'RecoveryTests' passed at 2026-10-03 12:38:11.668.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.6962790Z 	 Executed 7 tests, with 0 failures (0 unexpected) in 11.572 (11.574) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.7066720Z Test Suite 'ScanTests' started at 2026-10-03 12:38:11.669.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:11.7068920Z Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:12.2146720Z Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' passed (0.541 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:12.2155750Z Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:12.4828730Z Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' passed (0.259 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:12.4950170Z Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:17.3605770Z Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' passed (4.862 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:17.3727160Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:17.9793590Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' passed (0.634 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:17.9857730Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:18.3975010Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' passed (0.415 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:18.4034140Z Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:20.0984060Z Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' passed (1.705 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:20.1046050Z Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.3429660Z Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' passed (1.235 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.3554100Z Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.5437140Z Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' passed (0.202 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.5531700Z Test Suite 'ScanTests' passed at 2026-10-03 12:38:21.533.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.5532970Z 	 Executed 8 tests, with 0 failures (0 unexpected) in 9.854 (9.864) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.5534140Z Test Suite 'ViewportSamplingTests' started at 2026-10-03 12:38:21.535.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:21.5534880Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.1394290Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' passed (0.585 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.1496860Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.5170320Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' passed (0.396 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.5204460Z Test Suite 'ViewportSamplingTests' passed at 2026-10-03 12:38:22.517.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.5218620Z 	 Executed 2 tests, with 0 failures (0 unexpected) in 0.980 (0.982) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.5266210Z Test Suite 'WorkspaceTests' started at 2026-10-03 12:38:22.517.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.5269050Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.6730910Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' passed (0.154 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.6748600Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.7370090Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' passed (0.057 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:22.7473080Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.1810520Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' passed (0.449 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.1827760Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.3664300Z ${CI_REPO}/Tests/PhotoAxisAppTests/WorkspaceTests.swift:225: -[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages] : Test skipped - Window server constrained 1440x900 to (1440.0, 700.0); full native layout acceptance requires a sufficiently large desktop
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.3744940Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' skipped (0.186 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.3760860Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.9131170Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' passed (0.545 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:23.9158420Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.2537800Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' passed (0.337 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.2647280Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.2691430Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' passed (0.002 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.2692580Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' started.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5059120Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' passed (0.250 seconds).
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5169440Z Test Suite 'WorkspaceTests' passed at 2026-10-03 12:38:24.502.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5170650Z 	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 1.981 (1.985) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5171340Z Test Suite 'PhotoAxisAppTests.xctest' passed at 2026-10-03 12:38:24.502.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5172020Z 	 Executed 128 tests, with 5 tests skipped and 0 failures (0 unexpected) in 70.070 (70.148) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5172570Z Test Suite 'All tests' passed at 2026-10-03 12:38:24.502.
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:24.5173190Z 	 Executed 128 tests, with 5 tests skipped and 0 failures (0 unexpected) in 70.070 (70.149) seconds
+build-test	Model and geometry tests; Debug build	2026-10-03T12:38:25.2963190Z ** TEST SUCCEEDED **
+build-test	Release build with local ad-hoc signing	2026-10-03T12:40:07.0374720Z ** BUILD SUCCEEDED **

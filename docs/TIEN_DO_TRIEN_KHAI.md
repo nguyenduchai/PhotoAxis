@@ -7,7 +7,7 @@
 
 - Scan tự cập nhật khi kéo/nhập, bỏ nút Xem trước. Crop/Perspective có inset tự cập nhật; Image Size/Canvas Size có candidate trực tiếp. Apply/Return chỉ chốt Undo, Cancel phục hồi model/viewport. Lỗi dải đen ngoài vùng nét khi xoay Scan đã sửa và có hồi quy alpha.
 - Full suite **184 ca: 180 PASS / 1 FAIL Telex đã biết / 3 SKIP benchmark**; **16 ca mới đều PASS**. Release/ad-hoc PASS; 486 khóa VI/EN/400 references, inventory/12 trang website/16 policy PASS. Native VI/EN lưu/mở schema4, vẽ/lấy mẫu, Undo/Redo và PNG1200×900; đối chiếu asset hash/original bytes/pixel màu độc lập PASS. Native Scan3°/Image Size/Perspective auto đã kiểm trong phạm vi ghi ở báo cáo.
-- [Báo cáo](bao-cao/PAINT_LIVE_2026-10-03.md), [hướng dẫn](HUONG_DAN_BRUSH_CLONE.md), [đặc tả mở rộng](DAC_TA_PAINT.md). CI/Pages và DMG build6 đang hoàn tất; sẽ ghi receipts khi hậu kiểm xong.
+- [Báo cáo](bao-cao/PAINT_LIVE_2026-10-03.md), [hướng dẫn](HUONG_DAN_BRUSH_CLONE.md), [đặc tả mở rộng](DAC_TA_PAINT.md). GitHubCI Xcode16.4/macOS15.7.9: **179PASS/0FAIL/5SKIP**,184total,16ca mớiPASS, Debug/test/ReleasePASS. Pages build6 hậu kiểm27fileHTTPS/hash/commitPASS. DMG source sạch7312eb1 mount/tree/codesign/GPL/hashPASS, SHA256`5caf36bf04225f134a176163d3b2ea4304f4b75a3ac95a932170ab4ddbe1b4a2`. [CI](bao-cao/bang-chung/PAINT-LIVE-20261003/ci-summary.json), [receipt](bao-cao/bang-chung/PAINT-LIVE-20261003/delivery-receipt.json).
 - `releaseReady=false`; không nâng các gate IME/máy đích/hiệu năng/full quota/Developer ID/notary/cài sạch thành PASS. **19/43 là nghiệm thu build3 lịch sử**, chưa full A01–A43 build6. Pressure/tablet/eraser/healing/custom brush/masks và các tiện ích điều tra ngoài phạm vi hiện có chưa triển khai.
 
 

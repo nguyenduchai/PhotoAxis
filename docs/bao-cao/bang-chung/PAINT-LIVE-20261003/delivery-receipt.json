@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-10-03T19:36:39.490516+07:00",
+  "sourceCommit": "7312eb1e7101c63bcc1d554d6c8416baa2f68bdd",
+  "sourceDirty": false,
+  "build": "6",
+  "releaseBinaryUUID": "0EF4C93F-3295-351D-B159-6863C6DE200E",
+  "binarySHA256": "51656e55f862e2329967974c4106e60546f5235d18ae0648860a43a1bb960885",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "artifactSHA256": "5caf36bf04225f134a176163d3b2ea4304f4b75a3ac95a932170ab4ddbe1b4a2",
+  "artifactBytes": 2526701,
+  "copiedSHA256Matches": true,
+  "packagingInspected": true,
+  "installerPublicReady": false,
+  "nativeVIEN": "PASS scoped",
+  "nativeCI": "PASS",
+  "websitePostcheck": "PASS",
+  "sourceFingerprintMatches": true,
+  "deliveryDirectory": "$BUILD_ROOT/Deliverables/2026-10-03-build6-paint-live",
+  "pagesURL": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37123347374",
+  "websiteFilesChecked": 27,
+  "websiteCommit": "7312eb1e7101c63bcc1d554d6c8416baa2f68bdd",
+  "nativeCIURL": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37123347410",
+  "nativeCICounts": {
+    "passed": 179,
+    "failed": 0,
+    "skipped": 5
+  }
+}

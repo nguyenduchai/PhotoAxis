@@ -16,7 +16,7 @@ Repo public bắt đầu từ snapshot source build 3; lịch sử triển khai 
 
 **Phân phối build3 trước Scan (lịch sử):** website và mã nguồn công khai; bản DMG build 3 đã xuất để kiểm thử local, chưa Developer ID/notarized. Nút tải bộ cài public còn tắt. [Báo cáo Pages và DMG](docs/bao-cao/GITHUB_PAGES_DMG_2026-10-03.md).
 
-**Trạng thái:** ứng dụng native đã triển khai luồng chỉnh ảnh, Perspective Crop nhiều layer giữ editable, Type/Shape, điều chỉnh ảnh, Save/Open `.paxis`, Export PNG/JPEG và recovery. Version/build local **1.0.0 (5)**; baseline **1.0-draft.3**. P12–P15 đã có nghiệm thu/benchmark local, icon/archive/DMG local, website và công cụ phát hành; các chặng phát hành vẫn chưa đóng đầy đủ ở nghiệm thu native tổng thể/IME/thiết bị/ký/cài sạch. Target mã nguồn và website đã chốt GitHub/GitHub Pages. Xem [tiến độ thực tế](docs/TIEN_DO_TRIEN_KHAI.md), [ma trận 43 ca](docs/MA_TRAN_NGHIEM_THU.md) và [báo cáo P12](docs/bao-cao/P12.md).
+**Trạng thái:** ứng dụng native đã triển khai luồng chỉnh ảnh, Perspective Crop nhiều layer giữ editable, Type/Shape, điều chỉnh ảnh, Save/Open `.paxis`, Export PNG/JPEG và recovery. Version/build local **1.0.0 (6)**; baseline **1.0-draft.3**. P12–P15 đã có nghiệm thu/benchmark local, icon/archive/DMG local, website và công cụ phát hành; các chặng phát hành vẫn chưa đóng đầy đủ ở nghiệm thu native tổng thể/IME/thiết bị/ký/cài sạch. Target mã nguồn và website đã chốt GitHub/GitHub Pages. Xem [tiến độ thực tế](docs/TIEN_DO_TRIEN_KHAI.md), [ma trận 43 ca](docs/MA_TRAN_NGHIEM_THU.md) và [báo cáo P12](docs/bao-cao/P12.md).
 
 Nghiệm thu bổ sung03/10: **19/43 PASS**, chốt A04/A07/A26 bằng nativeVI/EN build3; benchmark mới3PASS. Telex VI có nhập/lưu/hủy thực, nhưng A22 chưa hoàn tấtEN/VNI. [Báo cáo và bằng chứng mới](docs/bao-cao/P12-native2.md).
 
@@ -51,4 +51,4 @@ open PhotoAxis.xcodeproj
 
 Đầu ra chuẩn bị phát hành: [P13 ký/DMG](docs/bao-cao/P13.md), [P14 website/docs](docs/bao-cao/P14.md), [P15 preflight](docs/bao-cao/P15.md), [website preview](website/README.md), [kế hoạch public](docs/KE_HOACH_PUBLIC.md). Không có bản public signed/notarized; localDMG không thay bản tải công khai.
 
-Brush/Clone Stamp và live preview build6: [hướng dẫn](docs/HUONG_DAN_BRUSH_CLONE.md), [phạm vi](docs/DAC_TA_PAINT.md). Project paint dùng schema4; bản cũ từ chối. Bộ cài stable vẫn đang nghiệm thu/ký/notarize.
+Brush/Clone Stamp và live preview build6 (184ca:180PASS/1FAILTelexđãbiết/3SKIPbenchmark;16ca mới PASS): [hướng dẫn](docs/HUONG_DAN_BRUSH_CLONE.md), [phạm vi](docs/DAC_TA_PAINT.md). Project paint dùng schema4; bản cũ từ chối. Bộ cài stable vẫn đang nghiệm thu/ký/notarize.

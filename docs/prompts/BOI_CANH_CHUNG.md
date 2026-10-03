@@ -8,6 +8,8 @@ Mỗi lần thực hiện một prompt: đọc hướng dẫn repository nếu c
 
 **Bản sản phẩm:** PhotoAxis 1.0; **bản public đầu tiên:** 1.0.0; **mã đặc tả:** 1.0-draft.3; **schema `.paxis`:** version 1. Không dùng mã đặc tả làm số phiên bản ứng dụng.
 
+Các phần mở rộng sau baseline đã được người dùng yêu cầu riêng: [Investigation](../DAC_TA_GOI_DIEU_TRA.md), [mở rộng điều tra](../DAC_TA_MO_RONG_DIEU_TRA.md), [Scan1](../DAC_TA_SCAN.md) và [Paint1/preview tự động](../DAC_TA_PAINT.md). Ngày03/10/2026, yêu cầu thêm Brush/Clone Stamp ghi đè ngoại lệ “không tự thêm brush” bên dưới trong đúng phạm vi Paint1. Build6 dùng schema4 khi có paint,3 khi Scan,2 khi working điều tra và1 cho baseline; reader1–4. Luôn đọc tiến độ/binary/checkout hiện tại, không suy schema/build hiện tại chỉ từ baseline lịch sử.
+
 ## Các ràng buộc đã duyệt
 
 - macOS 14+, Apple Silicon; Swift/AppKit, MetalKit/Core Image; SwiftUI chỉ bổ trợ khi phù hợp. Không thay ứng dụng native bằng Electron, webview hay mockup chạy trong trình duyệt.

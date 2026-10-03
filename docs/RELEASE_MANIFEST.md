@@ -1,4 +1,23 @@
-# DMG local hiện hành — build5 workspace tích hợp, 03/10/2026
+# DMG local hiện hành — build 6 Brush/Clone/live preview, 03/10/2026
+
+PhotoAxis **1.0.0 (6)**, GPL-3.0-only. Đóng gói từ checkout sạch `7312eb1e7101c63bcc1d554d6c8416baa2f68bdd`; mã sản phẩm đã kiểm `bf0f303dce34502aef3cc98634076d1be8bc3ee3`. UUID **0EF4C93F-3295-351D-B159-6863C6DE200E**, executable SHA256 `51656e55f862e2329967974c4106e60546f5235d18ae0648860a43a1bb960885`, Core SHA256 `745d9e4cfdc8ca41c0bf78b4d0b391dfbc5b4643adbdd1413c7636c5463215d2`.
+
+| Trường | Giá trị |
+| --- | --- |
+| Artifact | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA256 | `5caf36bf04225f134a176163d3b2ea4304f4b75a3ac95a932170ab4ddbe1b4a2` |
+| App tree SHA256 | `f15bd4abb8551bac7501f57623008d4c5bacd27ec7cd40d0dbc0e8ae43874db0` |
+| Source fingerprint | `8e172e87d2877baa46f9a9c494ff45cf810b91b738a890c15b8726642d68a88e` |
+| Bản giao | `$BUILD_ROOT/Deliverables/2026-10-03-build6-paint-live` ngoài Git |
+| Source dirty khi đóng gói | false |
+| Kiểm payload | mount read-only/tree/codesign/version/build/arm64/minOS14/LICENSE/SOURCE/detach/copyhash PASS |
+| Ký và public | local ad-hoc, chưa Developer ID/notary/cài sạch; publicReady=false |
+
+[Build manifest](bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json), [distribution manifest](bao-cao/bang-chung/PAINT-LIVE-20261003/distribution-manifest.json), [packaging log](bao-cao/bang-chung/PAINT-LIVE-20261003/packaging.log), [checksum](bao-cao/bang-chung/PAINT-LIVE-20261003/SHA256SUMS.txt), [receipt](bao-cao/bang-chung/PAINT-LIVE-20261003/delivery-receipt.json), [báo cáo](bao-cao/PAINT_LIVE_2026-10-03.md). Đây là bộ cài dùng thử local; stable sau ký/staple phải có manifest/checksum riêng. Các artifact dưới đây giữ làm lịch sử.
+
+---
+
+# DMG local build5 workspace tích hợp — lịch sử, 03/10/2026
 
 PhotoAxis **1.0.0 (5)**, GPL-3.0-only. Đóng gói từ checkout sạch `9333cfff5f1e928a596ec9e1066aa972a6915a52`; mã sản phẩm đã test `218b788d04fb0bb6abd8bf3516e49409265eb435`. UUID **E9797D10-3807-344C-AE33-A172F11B04A5**, executableSHA256 `ca49db43d0a772cdcb92e80c0e0518d95137cf35ec02ca78fba89f983bfcd7d5`, CoreSHA256 `32913d110b15836d8da1343b8eface1aaefde1bd44950fb6a4c9361317525f51`.
 

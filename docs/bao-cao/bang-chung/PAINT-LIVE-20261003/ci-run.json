@@ -1,0 +1,75 @@
+{
+  "conclusion": "success",
+  "headSha": "7312eb1e7101c63bcc1d554d6c8416baa2f68bdd",
+  "jobs": [
+    {
+      "completedAt": "2026-10-03T12:40:15Z",
+      "conclusion": "success",
+      "databaseId": 111203636391,
+      "name": "build-test",
+      "startedAt": "2026-10-03T12:35:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-03T12:35:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-03T12:35:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:35:22Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-03T12:35:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:35:25Z",
+          "conclusion": "success",
+          "name": "Record and validate toolchain",
+          "number": 3,
+          "startedAt": "2026-10-03T12:35:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:38:25Z",
+          "conclusion": "success",
+          "name": "Model and geometry tests; Debug build",
+          "number": 4,
+          "startedAt": "2026-10-03T12:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:40:07Z",
+          "conclusion": "success",
+          "name": "Release build with local ad-hoc signing",
+          "number": 5,
+          "startedAt": "2026-10-03T12:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:40:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 10,
+          "startedAt": "2026-10-03T12:40:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-03T12:40:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-03T12:40:09Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37123347410/job/111203636391"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37123347410"
+}
