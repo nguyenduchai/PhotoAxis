@@ -197,7 +197,7 @@ import PhotoAxisCore
         let pdf = try XCTUnwrap(PDFDocument(url:result.appendingPathComponent("pages.pdf")))
         XCTAssertEqual(pdf.pageCount,2); XCTAssertEqual(pdf.page(at:0)!.bounds(for:.mediaBox).width,216,accuracy:0.01)
         let receipt = try XCTUnwrap(JSONSerialization.jsonObject(with:Data(contentsOf:result.appendingPathComponent("manifest.json"))) as? [String:Any])
-        XCTAssertEqual(receipt["applicationBuild"] as? String,"4")
+        XCTAssertEqual(receipt["applicationBuild"] as? String,Bundle.main.infoDictionary?["CFBundleVersion"] as? String)
         XCTAssertNotNil(receipt["operatingSystem"] as? String)
         XCTAssertEqual((receipt["targetCanvas"] as? [String:Int])?["width"],300)
         let pages = try XCTUnwrap(receipt["pages"] as? [[String:Any]]); XCTAssertEqual(pages.count,2)

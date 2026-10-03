@@ -337,7 +337,7 @@
 "investigation.intake" = "Thông tin tiếp nhận";
 "investigation.metadata" = "Metadata Image I/O của bản gốc (tách khỏi thông tin bổ sung)";
 "investigation.regions" = "Các vùng che";
-"investigation.log" = "Nhật ký xử lý gần nhất (tối đa 100; nhật ký đầy đủ giữ trong case.json)";
+"investigation.log" = "Nhật ký xử lý gần nhất (tối đa 15; nhật ký đầy đủ giữ trong case.json)";
 "investigation.code" = "Mã hồ sơ";
 "investigation.caseTitle" = "Tên hồ sơ";
 "investigation.examiner" = "Người lập / người đang xử lý";
@@ -370,8 +370,8 @@
 "investigation.swipe" = "Thanh trước/sau";
 "investigation.compareHelp" = "Bản gốc (trái) / kết quả (phải). Kéo để di chuyển, pinch để zoom; hai khung di chuyển cùng nhau. Đồng bộ theo khung ảnh, không tự căn chỉnh hình học. Preview dùng SDR; byte bản gốc giữ nguyên.";
 "investigation.managedSave" = "Dùng Lưu để lưu bản làm việc. Lưu thành không áp dụng cho ảnh thuộc hồ sơ; giữ đầy đủ gói .paxcase khi bàn giao hồ sơ.";
-"investigation.useSharing" = "Dùng Xuất PNG chia sẻ hoặc Lập bản ảnh A4 trong cửa sổ Điều tra. Xác nhận vùng che trước khi xuất.";
-"investigation.useIntake" = "Tiếp nhận từng bản gốc qua cửa sổ hồ sơ. Place/Clipboard không thêm nguồn chưa ghi nhận vào bản làm việc thuộc hồ sơ.";
+"investigation.useSharing" = "Dùng Xuất PNG chia sẻ hoặc Lập bản ảnh A4 trong bảng Đầu ra. Xác nhận vùng che trước khi xuất.";
+"investigation.useIntake" = "Tiếp nhận từng bản gốc qua bảng Nguồn. Place/Clipboard không thêm nguồn chưa ghi nhận vào bản làm việc thuộc hồ sơ.";
 "investigation.error.invalidCase" = "Hồ sơ hoặc giá trị nhập không hợp lệ.";
 "investigation.error.limit" = "Vượt giới hạn hồ sơ (100 ảnh, 512 MiB mỗi bản gốc, 32 MiB hồ sơ dữ liệu).";
 "investigation.error.integrity" = "Kiểm tra toàn vẹn thất bại. Dữ liệu hồ sơ hoặc file nguồn/bản làm việc đã thay đổi. Đã dừng xử lý; kiểm tra hồ sơ và bản sao lưu.";
@@ -469,3 +469,17 @@
 "scan.pageOrder" = "Thứ tự trang xuất · chọn trang để di chuyển";
 "scan.pageUp" = "Đưa trang lên";
 "scan.pageDown" = "Đưa trang xuống";
+"workspace.edit" = "Chỉnh sửa";
+"workspace.sources" = "Nguồn";
+"workspace.analysis" = "Phân tích";
+"workspace.output" = "Đầu ra";
+"workspace.returnEditor" = "Quay lại chỉnh sửa";
+"workspace.pickCanvas" = "Chọn trực tiếp trên ảnh";
+"workspace.captureHelp" = "Kéo để chọn vùng; nhấp các điểm theo thứ tự để đo. Đặt lại để chọn lại. Áp dụng để ghi nhận, Hủy để bỏ lựa chọn.";
+"workspace.analysisStatus" = "Trạng thái xử lý";
+"workspace.cancelParameters" = "Hủy lựa chọn";
+"workspace.applyParameters" = "Áp dụng lựa chọn";
+"workspace.caseSelector" = "Hồ sơ đang mở";
+"workspace.analysisReview" = "Đối chiếu kết quả trên ảnh";
+"workspace.panelPage" = "Bảng workspace";
+"workspace.regionPicker" = "Chọn vùng hoặc điểm trên ảnh";

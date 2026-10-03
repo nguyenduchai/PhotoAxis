@@ -45,6 +45,21 @@ final class InvestigationTests: XCTestCase {
         XCTAssertTrue(model.layers.contains { if case .text = $0.content { return true }; return false })
         _ = try ProjectSchema.decode(ProjectSchema(model).encoded()).model()
     }
+    func testMagnifierUsesSourceCoordinatesAfterCanvasCrop() throws {
+        var model = try PhotoDocumentModel(name: "Source ROI", canvas: CanvasSize(width: 320,height: 240), ppi: 72)
+        let source = SourceDescriptor(id: String(repeating: "c",count:64),size:try CanvasSize(width:320,height:240))
+        let id = try model.place(source,name:"Source",above:nil)
+        try model.crop(to:.init(x:150,y:20,width:100,height:100),output:CanvasSize(width:100,height:100))
+        let original = try XCTUnwrap(model.layer(id)), text = TextContent(text:"",fontName:"Helvetica",fontSize:20,color:.black)
+        let roi = EvidenceRegion(x:170,y:30,width:20,height:20)
+        let added = try model.addInvestigationAnnotation(.magnifier,region:roi,text:text,name:"Detail",sourceLayerID:id)
+        let inset = try XCTUnwrap(model.layer(added[0]))
+        XCTAssertEqual(Array(inset.clip.dropLast()),original.clip); XCTAssertEqual(inset.content,original.content)
+        XCTAssertEqual(model.layer(id),original); XCTAssertEqual(model.sources.count,1)
+        XCTAssertThrowsError(try model.addInvestigationAnnotation(.ellipse,region:roi,text:text,name:"Canvas"))
+        XCTAssertThrowsError(try model.addInvestigationAnnotation(.magnifier,region:.init(x:310,y:0,width:20,height:20),text:text,name:"Outside",sourceLayerID:id))
+        _ = try ProjectSchema.decode(ProjectSchema(model).encoded()).model()
+    }
     func testRegionBoundsRejectOverflowAndOffCanvas() throws {
         let canvas = try CanvasSize(width: 100, height: 80)
         for r in [EvidenceRegion(x: Int.max, y: 0, width: 1, height: 1), .init(x: 90, y: 0, width: 11, height: 1), .init(x: 0, y: -1, width: 1, height: 1), .init(x: 0, y: 0, width: 0, height: 1)] {

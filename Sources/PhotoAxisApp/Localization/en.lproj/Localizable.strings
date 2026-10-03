@@ -337,7 +337,7 @@
 "investigation.intake" = "Intake record";
 "investigation.metadata" = "Original Image I/O metadata (not user-supplied fields)";
 "investigation.regions" = "Redaction regions";
-"investigation.log" = "Recent processing events (up to 100; complete log retained in case.json)";
+"investigation.log" = "Recent processing events (up to 15; complete log retained in case.json)";
 "investigation.code" = "Case code";
 "investigation.caseTitle" = "Case title";
 "investigation.examiner" = "Prepared by / current operator";
@@ -370,8 +370,8 @@
 "investigation.swipe" = "Before/after slider";
 "investigation.compareHelp" = "Original (left) / processed (right). Drag to pan, pinch to zoom; both views move together. Fit coordinates are synchronized; geometric registration is not automatic. Preview is SDR; original bytes remain unchanged.";
 "investigation.managedSave" = "Save this working image with Save. Save As is unavailable for case-bound images; preserve the complete .paxcase when transferring the case.";
-"investigation.useSharing" = "Use PNG sharing or A4 photo report in the Investigation window. Review redactions before exporting.";
-"investigation.useIntake" = "Receive each original through the case window. Place/Clipboard cannot add unrecorded sources to a case-bound working image.";
+"investigation.useSharing" = "Use PNG sharing or A4 photo report in the Output panel. Review redactions before exporting.";
+"investigation.useIntake" = "Receive each original through the Sources panel. Place/Clipboard cannot add unrecorded sources to a case-bound working image.";
 "investigation.error.invalidCase" = "The case or entered values are invalid.";
 "investigation.error.limit" = "Case limits exceeded (100 photographs, 512 MiB per original, 32 MiB case record).";
 "investigation.error.integrity" = "Integrity check failed. Case data or a source/working file changed. Processing stopped; inspect the case and its backups.";
@@ -469,3 +469,17 @@
 "scan.pageOrder" = "Output page order · select a page to move";
 "scan.pageUp" = "Move page up";
 "scan.pageDown" = "Move page down";
+"workspace.edit" = "Edit";
+"workspace.sources" = "Sources";
+"workspace.analysis" = "Analysis";
+"workspace.output" = "Output";
+"workspace.returnEditor" = "Return to editing";
+"workspace.pickCanvas" = "Select directly on image";
+"workspace.captureHelp" = "Drag to select a region; click ordered points to measure. Reset to start again. Apply to record, Cancel to discard the selection.";
+"workspace.analysisStatus" = "Processing status";
+"workspace.cancelParameters" = "Cancel selection";
+"workspace.applyParameters" = "Apply selection";
+"workspace.caseSelector" = "Open case";
+"workspace.analysisReview" = "Review results on image";
+"workspace.panelPage" = "Workspace panel";
+"workspace.regionPicker" = "Select regions or points on image";

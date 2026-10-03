@@ -1,6 +1,8 @@
 import XCTest
 import AppKit
 import ImageIO
+import Vision
+import CoreML
 import PhotoAxisCore
 @testable import PhotoAxis
 
@@ -15,6 +17,15 @@ import PhotoAxisCore
     }
     func image(_ store: InvestigationCaseStore, _ coordinator: DocumentCoordinator) async throws -> EvidenceItem {
         try await store.importFile(fixture("ocr-tieng-viet.png"), intake: EvidenceIntake(source: "Synthetic fixture", receiver: "Test"), pipeline: coordinator.pipeline, projects: coordinator.projectStore)
+    }
+    func testOCRComputeUsesOnlyRequestSupportedCPUDevices() throws {
+        let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
+        let supported = try request.supportedComputeStageDevices
+        let count = try InvestigationAnalysisEngine.configureTextCompute(request)
+        XCTAssertGreaterThan(count,0)
+        for (stage, devices) in supported where devices.contains(where: { if case .cpu = $0 { return true }; return false }) {
+            guard case .cpu? = request.computeDevice(for:stage) else { XCTFail("Expected supported CPU compute device"); continue }
+        }
     }
     func testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions() async throws {
         let (store, coordinator) = try context(), item = try await image(store, coordinator)
@@ -116,12 +127,12 @@ import PhotoAxisCore
         let record = try await store.recognize(item.id, region: .init(x: 40,y: 20,width: 1520,height: 180), pipeline: coordinator.pipeline, projects: coordinator.projectStore)
         let snapshot = try await store.intakeSnapshot(item.id, projects: coordinator.projectStore), cg = try await coordinator.pipeline.normalizedImage(snapshot.assets[item.workingSourceSHA256]!)
         for choice in [InterfaceLanguage.vietnamese, .english] {
-            let review = InvestigationReviewController(localization: L10n(choice: choice), title: "Review", image: cg, sourceSize: record.sourceSize, summary: "ROI", regions: [record.region], recognized: record.recognizedText, confirmedText: record.recognizedText, onConfirm: { try store.confirmOCR(record.id, text: $0) })
+            let review = InvestigationReviewPanel(localization: L10n(choice: choice), title: "Review", image: cg, sourceSize: record.sourceSize, summary: "ROI", regions: [record.region], recognized: record.recognizedText, confirmedText: record.recognizedText, onConfirm: { try store.confirmOCR(record.id, text: $0) })
             review.confirmed.string = "Human review \(choice)"; review.confirmText()
             XCTAssertEqual(store.value.analysis?.ocr[0].confirmations.last?.text, review.confirmed.string)
             XCTAssertEqual(store.value.analysis?.ocr[0].recognizedText, record.recognizedText)
             XCTAssertTrue(review.status.stringValue.contains(choice == .vietnamese ? "Đã lưu" : "saved"))
-            review.close()
+            XCTAssertNil(review.window)
         }
     }
 }

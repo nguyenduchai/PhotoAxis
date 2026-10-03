@@ -1,5 +1,6 @@
 import Foundation
 import Vision
+import CoreML
 import AVFoundation
 import CoreImage
 import ImageIO
@@ -16,12 +17,24 @@ enum InvestigationAnalysisEngine {
         let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
         return try vietnameseLanguage(supported: request.supportedRecognitionLanguages())
     }
+    /// Keep text recognition independent of a stalled Neural Engine model loader.
+    /// Only assign devices reported as valid by this request (macOS 14+).
+    @discardableResult static func configureTextCompute(_ request: VNRecognizeTextRequest) throws -> Int {
+        var count = 0
+        for (stage, devices) in try request.supportedComputeStageDevices {
+            if let cpu = devices.first(where: { if case .cpu = $0 { return true }; return false }) {
+                request.setComputeDevice(cpu, for: stage); count += 1
+            }
+        }
+        return count
+    }
     static func recognize(image: CGImage, item: EvidenceItem, region: EvidenceRegion) throws -> EvidenceOCR {
         let size = try CanvasSize(width: image.width, height: image.height); try region.validate(in: size)
         guard let crop = image.cropping(to: CGRect(x: region.x, y: region.y, width: region.width, height: region.height)) else { throw InvestigationError.invalidCase }
         let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
         let language = try vietnameseLanguage(supported: request.supportedRecognitionLanguages())
         request.recognitionLanguages = [language]; request.usesLanguageCorrection = false; request.automaticallyDetectsLanguage = false
+        try configureTextCompute(request)
         try Task.checkCancellation(); try VNImageRequestHandler(cgImage: crop, options: [:]).perform([request]); try Task.checkCancellation()
         let lines = (request.results ?? []).compactMap { observation -> EvidenceOCRLine? in
             guard let candidate = observation.topCandidates(1).first, !candidate.string.isEmpty else { return nil }

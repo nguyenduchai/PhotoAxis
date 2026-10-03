@@ -7,7 +7,7 @@ public extension PhotoDocumentModel {
     /// one history transaction and one durable processing event.
     mutating func addInvestigationAnnotation(_ kind: InvestigationAnnotation, region: EvidenceRegion, text: TextContent,
                                             name: String, sourceLayerID: UUID? = nil) throws -> [UUID] {
-        try region.validate(in: canvas)
+        if kind != .magnifier { try region.validate(in: canvas) }
         let red = RGBAColor(red: 1, green: 0.1, blue: 0.1)
         var ids: [UUID] = []
         func translation(_ x: Double, _ y: Double) throws -> ProjectiveTransform { try ProjectiveTransform([1, 0, x, 0, 1, y, 0, 0, 1]) }

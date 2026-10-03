@@ -70,9 +70,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         guard let workspace else { return }
         workspace.window?.delegate = self
         let root = workspace.workspaceView
+        investigation?.attach(to: root)
         documents.changed = { [weak self] in
             guard let self else { return }
             root.refreshDocuments(documents)
+            investigation?.synchronizeActiveDocument()
             workspace.window?.title = documents.active.map { $0.model.name + " — PhotoAxis" } ?? "PhotoAxis"
             workspace.window?.isDocumentEdited = documents.active?.isDocumentEdited ?? false
         }
@@ -122,7 +124,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         Task { if await documents.requestCloseAll() { sender.orderOut(nil) } }; return false
     }
     @objc private func saveProject() { guard let document = documents.active else { return }; Task { _ = await documents.save(document,saveAs:false) } }
-    @objc private func showInvestigation() { investigation?.showWindow(nil); investigation?.window?.makeKeyAndOrderFront(nil) }
     @objc private func saveProjectAs() { guard let document = documents.active else { return }; Task { _ = await documents.save(document,saveAs:true) } }
     @objc private func exportImage() {
         guard let document = documents.active, !documents.isSaving, !documents.isImporting,
@@ -156,10 +157,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         showWorkspace(); guard let window = workspace?.window else { return }
         let targetID = place ? documents.activeID : nil
         let panel = NSOpenPanel(); panel.canChooseDirectories = false; panel.allowsMultipleSelection = true
+        panel.treatsFilePackagesAsDirectories = false
         panel.message = localization.text(place ? "import.openHelp" : "project.openHelp")
         panel.beginSheetModal(for: window) { [weak self] response in
             guard response == .OK, let self else { return }
-            documents.startImport(panel.urls.map { .file($0) }, into: targetID)
+            if place { documents.startImport(panel.urls.map { .file($0) }, into: targetID) } else { openURLs(panel.urls) }
         }
     }
     private func showImportReport(_ message: String) {
@@ -362,8 +364,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         window.addItem(.separator())
         item(window, "menu.minimize", #selector(NSWindow.performMiniaturize(_:)), "m")
         NSApp.windowsMenu = window
-        let investigationMenu = submenu("investigation.menu")
-        item(investigationMenu, "investigation.title", #selector(showInvestigation), owned: true)
         let help = submenu("menu.help")
         item(help, "help.title", #selector(showHelp), owned: true)
         NSApp.helpMenu = help

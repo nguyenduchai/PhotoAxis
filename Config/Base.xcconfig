@@ -7,7 +7,7 @@ SWIFT_STRICT_CONCURRENCY = complete
 CLANG_ENABLE_MODULES = YES
 CLANG_ENABLE_OBJC_ARC = YES
 MARKETING_VERSION = 1.0.0
-CURRENT_PROJECT_VERSION = 4
+CURRENT_PROJECT_VERSION = 5
 // Local development only; P13 supplies the real identity and signing configuration.
 CODE_SIGN_IDENTITY = -
 CODE_SIGN_STYLE = Manual

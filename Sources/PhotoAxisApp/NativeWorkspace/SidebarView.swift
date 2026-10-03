@@ -11,6 +11,11 @@ final class ColorPreviewView: NSView {
 
 @MainActor
 final class SidebarView: SurfaceView {
+    let pageSelector = NSPopUpButton()
+    private let editingBody = SurfaceView()
+    private var pages: [NSView] = []
+    var pageChanged: ((Int) -> Void)?
+    var selectedPage: Int { pageSelector.indexOfSelectedItem }
     let collapseButton: WorkspaceButton
     let inspectorTabs: NSSegmentedControl
     let inspectorMessage: NSTextField
@@ -62,7 +67,12 @@ final class SidebarView: SurfaceView {
         identifier = .init("workspace.sidebar")
         contentControls.editContent={ [weak self] id in self?.editContent?(id) }
         layerList.editContent={ [weak self] id in self?.editContent?(id) }
-        addSubview(colorControls);addSubview(contentControls);addSubview(adjustmentControls)
+        addSubview(editingBody)
+        pageSelector.addItems(withTitles: ["workspace.edit", "workspace.sources", "workspace.analysis", "workspace.output"].map { localization.text($0) })
+        pageSelector.target = self; pageSelector.action = #selector(selectPage)
+        pageSelector.setAccessibilityIdentifier("workspace.panelPage")
+        addSubview(pageSelector)
+        editingBody.addSubview(colorControls);editingBody.addSubview(contentControls);editingBody.addSubview(adjustmentControls)
         layerList.isHidden = true; historyList.isHidden = true
         for (index, button) in layerActions.enumerated() { button.tag = index; button.target = self; button.action = #selector(layerAction(_:)) }
         opacity.target = self; opacity.action = #selector(changeOpacity)
@@ -96,9 +106,20 @@ final class SidebarView: SurfaceView {
         opacity.isEnabled = false; opacity.font = .systemFont(ofSize: 11)
         opacity.setAccessibilityLabel(localization.text("layer.opacity"))
         for child in [colorTitle, collapseButton, colorPreview, inspectorTabs, inspectorMessage,
-                      layersTitle, layersMessage, layerList, historyList, blend, opacityTitle, opacity, opacitySlider] + colorFields + layerActions { addSubview(child) }
+                      layersTitle, layersMessage, layerList, historyList, blend, opacityTitle, opacity, opacitySlider] + colorFields + layerActions { editingBody.addSubview(child) }
     }
     required init?(coder: NSCoder) { fatalError("Use init(localization:)") }
+    func installPages(_ views: [NSView]) {
+        pages.forEach { $0.removeFromSuperview() }; pages = views
+        for page in pages { addSubview(page) }; showPage(selectedPage)
+    }
+    func showPage(_ index: Int) {
+        guard (0...pages.count).contains(index) else { return }
+        pageSelector.selectItem(at: index); editingBody.isHidden = index != 0
+        for (i, page) in pages.enumerated() { page.isHidden = index != i + 1 }
+        needsLayout = true
+    }
+    @objc private func selectPage() { showPage(selectedPage); pageChanged?(selectedPage) }
     @objc private func collapsePanels() { collapse?() }
     @objc func changeInspector() {
         historyList.isHidden = document == nil || inspectorTabs.selectedSegment != 1
@@ -167,11 +188,14 @@ final class SidebarView: SurfaceView {
     override func layout() {
         super.layout()
         guard bounds.width >= 100, bounds.height >= 100 else { return }
-        let width = bounds.width
+        pageSelector.frame = NSRect(x: 8, y: 3, width: bounds.width - 16, height: 27)
+        editingBody.frame = NSRect(x: 0, y: 34, width: bounds.width, height: bounds.height - 34)
+        for page in pages { page.frame = editingBody.frame }
+        let width = editingBody.bounds.width, height = editingBody.bounds.height
         let colorHeight: CGFloat = 184
-        let inspectorHeight = max(170, (bounds.height - colorHeight) * 0.46)
+        let inspectorHeight = max(170, (height - colorHeight) * 0.46)
         let layerY = colorHeight + inspectorHeight
-        dividerY = [28, colorHeight, layerY, layerY + 28, bounds.height - 30]
+        dividerY = [28, colorHeight, layerY, layerY + 28, height - 30]
         colorTitle.frame = NSRect(x: 12, y: 6, width: width - 52, height: 18)
         collapseButton.frame = NSRect(x: width - 30, y: 1, width: 26, height: 25)
         colorControls.frame=NSRect(x:12,y:36,width:width-24,height:126)
@@ -192,16 +216,16 @@ final class SidebarView: SurfaceView {
         opacityTitle.frame = NSRect(x: blend.frame.maxX + 4, y: layerY + 40, width: opacityWidth, height: 18)
         opacity.frame = NSRect(x: width - 62, y: layerY + 36, width: 54, height: 22)
         opacitySlider.frame = NSRect(x: 12,y: layerY + 62,width: width-24,height: 18)
-        layerList.frame = NSRect(x: 8, y: layerY + 84, width: width - 16, height: max(0, bounds.height - layerY - 118))
+        layerList.frame = NSRect(x: 8, y: layerY + 84, width: width - 16, height: max(0, height - layerY - 118))
         layersMessage.frame = NSRect(x: 20, y: layerY + 90, width: width - 40, height: 58)
         for (index, button) in layerActions.enumerated() {
-            button.frame = NSRect(x: width - CGFloat(layerActions.count - index) * 32 - 8, y: bounds.height - 28, width: 28, height: 26)
+            button.frame = NSRect(x: width - CGFloat(layerActions.count - index) * 32 - 8, y: height - 28, width: 28, height: 26)
         }
         needsDisplay = true
     }
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         WorkspaceStyle.divider.setFill()
-        for y in dividerY { NSRect(x: 0, y: y, width: bounds.width, height: 1).fill() }
+        for y in (selectedPage == 0 ? dividerY : []) { NSRect(x: 0, y: y + 34, width: bounds.width, height: 1).fill() }
     }
 }

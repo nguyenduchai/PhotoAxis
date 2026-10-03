@@ -45,6 +45,11 @@ final class WorkspaceWindowController: NSWindowController {
 
 @MainActor
 final class WorkspaceView: SurfaceView {
+    private(set) var presentation: NSView?
+    let presentationHost = SurfaceView()
+    let returnToEditor: NSButton
+    private var presentationContext: String?
+    var presentationDismissed: (() -> Void)?
     let optionsBar: OptionsBarView
     let tools: ToolsRailView
     let sidebar: SidebarView
@@ -71,6 +76,7 @@ final class WorkspaceView: SurfaceView {
     init(preferences: WorkspacePreferences, localization: L10n) {
         self.preferences = preferences
         self.localization = localization
+        returnToEditor = NSButton(title: localization.text("workspace.returnEditor"), target: nil, action: nil)
         cancelImportButton = NSButton(title: localization.text("import.cancel"), target: nil, action: nil)
         optionsBar = OptionsBarView(localization: localization)
         tools = ToolsRailView(localization: localization)
@@ -104,6 +110,10 @@ final class WorkspaceView: SurfaceView {
             needsLayout = true; layoutChanged?()
         }
         for child in [optionsBar, tools, canvas, tabBar, statusBar, horizontalRuler, verticalRuler, sidebar, divider, collapsedRail] { addSubview(child) }
+        presentationHost.isHidden = true; addSubview(presentationHost)
+        returnToEditor.target = self; returnToEditor.action = #selector(dismissPresentation)
+        returnToEditor.setAccessibilityIdentifier("workspace.returnEditor")
+        presentationHost.addSubview(returnToEditor)
         tabBar.addSubview(tabLabel)
         zoomLabel.target = self; zoomLabel.action = #selector(changeZoom)
         cancelImportButton.target = self; cancelImportButton.action = #selector(cancelImport)
@@ -113,7 +123,7 @@ final class WorkspaceView: SurfaceView {
         optionsBar.actualPixels = { [weak canvas] in canvas?.zoom(to: 1) }
         sidebar.editContent={ [weak self] id in self?.canvas.contentEditing.edit(id) }
         canvas.contentEditing.focusProperties={ [weak self] in
-            guard let self else{return};sidebar.inspectorTabs.selectedSegment=0;sidebar.changeInspector()
+            guard let self else{return};sidebar.showPage(0);sidebar.inspectorTabs.selectedSegment=0;sidebar.changeInspector()
             if preferences.layout.panelCollapsed{setCollapsed(false);layoutSubtreeIfNeeded()}
             layoutSubtreeIfNeeded()
             sidebar.contentControls.focusContentEditor()
@@ -126,6 +136,7 @@ final class WorkspaceView: SurfaceView {
     required init?(coder: NSCoder) { fatalError("Use init(preferences:localization:)") }
     func refreshDocuments(_ coordinator: DocumentCoordinator) {
         self.coordinator = coordinator
+        if let presentationContext, presentationContext != contextKey { dismissPresentation() }
         tabBar.update(coordinator.documents, activeID: coordinator.activeID, localization: localization)
         tabLabel.isHidden = !coordinator.documents.isEmpty
         canvas.display(coordinator.active, pipeline: coordinator.pipeline)
@@ -133,6 +144,24 @@ final class WorkspaceView: SurfaceView {
         tools.updateNavigationTools(coordinator.active?.activeTool);tools.displayColors(coordinator.active)
         optionsBar.display(coordinator.active)
         updateNavigation()
+    }
+    private var contextKey: String {
+        guard let document = coordinator?.active else { return "none" }
+        return document.model.id.uuidString + InvestigationDigest.hash((try? ProjectSchema(document.model).encoded()) ?? Data())
+    }
+    func showPresentation(_ view: NSView) {
+        presentation?.removeFromSuperview(); presentation = view; presentationContext = contextKey
+        view.frame = NSRect(x: 0, y: 36, width: canvas.frame.width, height: max(0, canvas.frame.height - 36))
+        presentationHost.addSubview(view); presentationHost.isHidden = false; canvas.isHidden = true
+        needsLayout = true; layoutSubtreeIfNeeded(); window?.makeFirstResponder(view)
+    }
+    @objc func dismissPresentation() {
+        presentation?.removeFromSuperview(); presentation = nil; presentationContext = nil
+        presentationHost.isHidden = true; canvas.isHidden = false; presentationDismissed?()
+        window?.makeFirstResponder(canvas)
+    }
+    func revealPanel(_ page: Int) {
+        chromeHidden = false; setCollapsed(false); sidebar.showPage(page); layoutSubtreeIfNeeded()
     }
     func updateNavigation() {
         let document = coordinator?.active
@@ -193,6 +222,9 @@ final class WorkspaceView: SurfaceView {
         horizontalRuler.frame = NSRect(x: toolWidth + ruler, y: 64, width: max(0, centerWidth - ruler), height: ruler)
         verticalRuler.frame = NSRect(x: toolWidth, y: 64, width: ruler, height: bottom - 64)
         canvas.frame = NSRect(x: toolWidth + ruler, y: 64 + ruler, width: max(0, centerWidth - ruler), height: max(0, bottom - 64 - ruler))
+        presentationHost.frame = canvas.frame
+        returnToEditor.frame = NSRect(x: 8, y: 4, width: max(180, returnToEditor.intrinsicContentSize.width), height: 28)
+        presentation?.frame = NSRect(x: 0, y: 36, width: canvas.frame.width, height: max(0, canvas.frame.height - 36))
         statusBar.frame = NSRect(x: 0, y: bottom, width: bounds.width, height: 24)
         zoomLabel.frame = NSRect(x: toolWidth + 8, y: 2, width: 75, height: 21)
         statusLabel.frame = NSRect(x: toolWidth + 95, y: 4, width: max(0, bounds.width - toolWidth - 310), height: 17)

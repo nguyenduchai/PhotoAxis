@@ -1,5 +1,7 @@
 # PhotoAxis — Gói phục vụ điều tra, Investigation 1
 
+> Cập nhật UI theo yêu cầu 03/10/2026: từ build5, toàn bộ luồng điều tra được hợp nhất vào workspace qua Nguồn / Phân tích / Đầu ra và canvas dùng chung. Mô tả menu/cửa sổ riêng bên dưới là thiết kế lịch sử, được thay bằng [hướng dẫn hiện tại](HUONG_DAN_DIEU_TRA.md) và ADR-023. Contract dữ liệu/toàn vẹn giữ nguyên.
+
 Ngày 02/10/2026. Người dùng đã yêu cầu triển khai các nhóm chức năng ưu tiên đã thống nhất: giữ file tiếp nhận, bản làm việc, thông tin tiếp nhận/hash/nhật ký; chú thích/so sánh/metadata; bản ảnh A4 và che thông tin khi chia sẻ. Đây là phần mở rộng của baseline **1.0-draft.3**, không sửa lại các yêu cầu A01–A43 hoặc tự đóng các gate public R01–R12. App local: **1.0.0 (2)**, native AppKit/Core Image/Metal/Core Graphics/Core Text/Image I/O, offline.
 
 ## Yêu cầu và hành vi

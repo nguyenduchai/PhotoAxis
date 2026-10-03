@@ -49,14 +49,12 @@ final class InvestigationComparisonView: NSView {
 }
 
 @MainActor
-final class InvestigationComparisonController: NSWindowController {
+final class InvestigationComparisonPanel: NSView {
     let comparison: InvestigationComparisonView
     private let zoomLabel = NSTextField(labelWithString: "100 %")
     init(original: CGImage, processed: CGImage, localization: L10n) {
         comparison = InvestigationComparisonView(original: original, processed: processed)
-        let window = NSWindow(contentRect: CGRect(x: 0, y: 0, width: 940, height: 680), styleMask: [.titled, .closable, .resizable], backing: .buffered, defer: false)
-        super.init(window: window); window.title = localization.text("investigation.compare")
-        window.minSize = CGSize(width: 660, height: 540); window.center()
+        super.init(frame: CGRect(x: 0, y: 0, width: 850, height: 650))
         let label = NSTextField(wrappingLabelWithString: localization.text("investigation.compareHelp"))
         let mode = NSButton(checkboxWithTitle: localization.text("investigation.swipe"), target: self, action: #selector(toggleMode(_:)))
         let slider = NSSlider(value: 0.5, minValue: 0, maxValue: 1, target: self, action: #selector(moveSplit(_:)))
@@ -68,10 +66,10 @@ final class InvestigationComparisonController: NSWindowController {
         let zoomControls = NSStackView(views: [less, zoomLabel, more]); zoomControls.spacing = 12
         comparison.navigationChanged = { [weak self] in guard let self else { return }; zoomLabel.stringValue = String(format: "%.0f %%", comparison.zoom * 100) }
         let stack = NSStackView(views: [label, controls, zoomControls, comparison]); stack.orientation = .vertical; stack.alignment = .leading; stack.spacing = 12
-        stack.translatesAutoresizingMaskIntoConstraints = false; window.contentView!.addSubview(stack)
-        NSLayoutConstraint.activate([stack.leadingAnchor.constraint(equalTo: window.contentView!.leadingAnchor, constant: 20), stack.trailingAnchor.constraint(equalTo: window.contentView!.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: window.contentView!.topAnchor, constant: 20), stack.bottomAnchor.constraint(equalTo: window.contentView!.bottomAnchor, constant: -20),
-            comparison.widthAnchor.constraint(equalTo: stack.widthAnchor), comparison.heightAnchor.constraint(greaterThanOrEqualToConstant: 280), slider.widthAnchor.constraint(equalToConstant: 300)])
+        stack.translatesAutoresizingMaskIntoConstraints = false; addSubview(stack)
+        NSLayoutConstraint.activate([stack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20), stack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            stack.topAnchor.constraint(equalTo: self.topAnchor, constant: 20), stack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            comparison.widthAnchor.constraint(equalTo: stack.widthAnchor), comparison.heightAnchor.constraint(greaterThanOrEqualToConstant: 280), slider.widthAnchor.constraint(equalToConstant: 200)])
     }
     required init?(coder: NSCoder) { fatalError("Use init(original:processed:localization:)") }
     @objc private func toggleMode(_ sender: NSButton) { comparison.swipe = sender.state == .on }

@@ -2,7 +2,7 @@ import AppKit
 import PhotoAxisCore
 
 @MainActor
-final class InvestigationOverlayView: NSView {
+class InvestigationOverlayView: NSView {
     override var isFlipped: Bool { true }
     let image: NSImage
     let sourceSize: CanvasSize
@@ -13,7 +13,7 @@ final class InvestigationOverlayView: NSView {
     init(image: CGImage, sourceSize: CanvasSize, regions: [EvidenceRegion] = [], reference: [Point2D] = [], points: [Point2D] = [], closed: Bool = false) {
         self.image = NSImage(cgImage: image, size: NSSize(width: image.width, height: image.height)); self.sourceSize = sourceSize
         self.regions = regions; self.reference = reference; self.points = points; self.closed = closed
-        super.init(frame: .zero); setAccessibilityIdentifier("investigation.analysisPreview"); setAccessibilityRole(.image)
+        super.init(frame: CGRect(x: 0, y: 0, width: 850, height: 650)); setAccessibilityIdentifier("investigation.analysisPreview"); setAccessibilityRole(.image)
     }
     required init?(coder: NSCoder) { fatalError("Use image initializer") }
     override func draw(_ dirtyRect: NSRect) {
@@ -42,7 +42,7 @@ final class InvestigationOverlayView: NSView {
 /// The source remains visible while a human reviews transcription. Engine text
 /// is read-only, and confirmation never overwrites recognition or image pixels.
 @MainActor
-final class InvestigationReviewController: NSWindowController {
+final class InvestigationReviewPanel: NSView {
     let confirmed = NSTextView(), status = NSTextField(wrappingLabelWithString: "")
     private let localization: L10n
     private var confirm: (() throws -> Void)?
@@ -50,8 +50,8 @@ final class InvestigationReviewController: NSWindowController {
          regions: [EvidenceRegion] = [], reference: [Point2D] = [], points: [Point2D] = [], closed: Bool = false,
          recognized: String? = nil, confirmedText: String = "", onConfirm: ((String) throws -> Void)? = nil) {
         self.localization = localization
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1100, height: 800), styleMask: [.titled, .closable, .resizable], backing: .buffered, defer: false)
-        super.init(window: window); window.title = title; window.minSize = NSSize(width: 960, height: 700); window.center(); window.setAccessibilityIdentifier("investigation.reviewWindow")
+        super.init(frame: .zero)
+        setAccessibilityIdentifier("workspace.analysisReview")
         let preview = InvestigationOverlayView(image: image, sourceSize: sourceSize, regions: regions, reference: reference, points: points, closed: closed)
         let caption = NSTextField(wrappingLabelWithString: summary); caption.setAccessibilityIdentifier("investigation.analysisSummary")
         caption.font = .monospacedSystemFont(ofSize: 11, weight: .regular)
@@ -68,14 +68,14 @@ final class InvestigationReviewController: NSWindowController {
             let button = NSButton(title: localization.text("investigation.confirmOCR"), target: self, action: #selector(confirmText)); button.setAccessibilityIdentifier("investigation.confirmOCR")
             right.addArrangedSubview(button)
             self.confirm = { [weak self] in guard let self else { return }; try onConfirm?(self.confirmed.string) }
-            for scroll in [rawScroll, reviewScroll] { scroll.widthAnchor.constraint(equalTo: right.widthAnchor).isActive = true; scroll.heightAnchor.constraint(greaterThanOrEqualToConstant: 140).isActive = true }
+            for scroll in [rawScroll, reviewScroll] { scroll.widthAnchor.constraint(equalTo: right.widthAnchor).isActive = true; scroll.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true }
             status.stringValue = localization.text("investigation.ocrReviewHelp")
         }
         right.addArrangedSubview(status)
         let body = NSStackView(views: [preview, right]); body.spacing = 16; body.translatesAutoresizingMaskIntoConstraints = false
-        window.contentView!.addSubview(body)
-        NSLayoutConstraint.activate([body.leadingAnchor.constraint(equalTo: window.contentView!.leadingAnchor, constant: 16), body.trailingAnchor.constraint(equalTo: window.contentView!.trailingAnchor, constant: -16),
-                                     body.topAnchor.constraint(equalTo: window.contentView!.topAnchor, constant: 16), body.bottomAnchor.constraint(equalTo: window.contentView!.bottomAnchor, constant: -16),
+        addSubview(body)
+        NSLayoutConstraint.activate([body.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16), body.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+                                     body.topAnchor.constraint(equalTo: self.topAnchor, constant: 16), body.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
                                      preview.widthAnchor.constraint(equalTo: body.widthAnchor, multiplier: 0.52), preview.heightAnchor.constraint(equalTo: body.heightAnchor), right.heightAnchor.constraint(equalTo: body.heightAnchor), caption.widthAnchor.constraint(equalTo: right.widthAnchor), status.widthAnchor.constraint(equalTo: right.widthAnchor)])
     }
     required init?(coder: NSCoder) { fatalError("Use analysis initializer") }

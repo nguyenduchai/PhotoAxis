@@ -227,10 +227,16 @@ import PhotoAxisCore
         let image = try await coordinator.pipeline.renderDocument(model: document.model, assets: document.assets)
         for language in [InterfaceLanguage.vietnamese, .english] {
             let loc = L10n(choice: language), controller = InvestigationController(coordinator: coordinator, localization: loc)
-            controller.use(store); controller.window?.layoutIfNeeded()
-            XCTAssertEqual(controller.window?.title, loc.text("investigation.title"))
+            let workspace = WorkspaceWindowController(preferences: WorkspacePreferences(defaults: UserDefaults(suiteName: UUID().uuidString)!), localization: loc, restoreFrame: false)
+            controller.attach(to: workspace.workspaceView); controller.use(store); workspace.workspaceView.refreshDocuments(coordinator)
+            controller.synchronizeActiveDocument(); workspace.window?.layoutIfNeeded()
+            XCTAssertTrue(controller.sourcePanel.window === workspace.window)
+            XCTAssertTrue(controller.analysisPanel.window === workspace.window)
+            XCTAssertTrue(controller.outputPanel.window === workspace.window)
             XCTAssertEqual(controller.selectedItem?.id, item.id)
-            let compare = InvestigationComparisonController(original: image, processed: image, localization: loc)
+            let compare = InvestigationComparisonPanel(original: image, processed: image, localization: loc)
+            workspace.workspaceView.showPresentation(compare)
+            XCTAssertTrue(compare.window === workspace.window)
             compare.comparison.zoom = 2; compare.comparison.offset = CGPoint(x: 8, y: 10); compare.comparison.swipe = true; compare.comparison.split = 0.25
             XCTAssertEqual(compare.comparison.split, 0.25); compare.comparison.reset(); XCTAssertEqual(compare.comparison.zoom, 1); XCTAssertEqual(compare.comparison.offset, .zero)
             compare.comparison.setZoom(100); XCTAssertEqual(compare.comparison.zoom, 16)
@@ -242,4 +248,116 @@ import PhotoAxisCore
             XCTAssertEqual(compare.comparison.offset, CGPoint(x: 35, y: 20))
         }
     }
+    private func descendants(_ view: NSView) -> [NSView] { [view] + view.subviews.flatMap(descendants) }
+    private func control<T: NSView>(_ key: String, in view: NSView, as type: T.Type = T.self) throws -> T {
+        try XCTUnwrap(descendants(view).first { $0.accessibilityIdentifier() == key } as? T)
+    }
+    private func waitFor(_ condition: () -> Bool) async throws {
+        for _ in 0..<200 { if condition() { return }; try await Task.sleep(for: .milliseconds(10)) }
+        XCTFail("Workspace operation did not settle")
+    }
+    private func workspace(_ coordinator: DocumentCoordinator, _ controller: InvestigationController) -> WorkspaceWindowController {
+        let window = WorkspaceWindowController(preferences: WorkspacePreferences(defaults: UserDefaults(suiteName: UUID().uuidString)!), localization: L10n(choice: .vietnamese), restoreFrame: false)
+        controller.attach(to: window.workspaceView)
+        coordinator.changed = { [weak controller, weak window] in window?.workspaceView.refreshDocuments(coordinator); controller?.synchronizeActiveDocument() }
+        window.workspaceView.refreshDocuments(coordinator); controller.synchronizeActiveDocument(); window.window?.layoutIfNeeded()
+        return window
+    }
+    func testInlineCaseEditApplyAndCancelAreTransactionalWithoutAuxiliaryWindow() async throws {
+        let (store, coordinator) = try context(); _ = try await add(store, coordinator)
+        let controller = InvestigationController(coordinator: coordinator, localization: L10n(choice: .vietnamese)); controller.use(store)
+        let window = workspace(coordinator, controller)
+        let button: NSButton = try control("investigation.editCase", in: controller.sourcePanel)
+        button.performClick(nil); try await waitFor { controller.hasPendingParameters }
+        XCTAssertEqual(window.workspaceView.sidebar.selectedPage, 1); XCTAssertTrue(controller.sourcePanel.editor.window === window.window)
+        let field: NSTextField = try control("investigation.caseTitle", in: controller.sourcePanel); field.stringValue = "Hồ sơ đã sửa"
+        controller.applyParameters(); try await waitFor { store.value.title == "Hồ sơ đã sửa" }
+        XCTAssertEqual(store.value.events.last?.payload.operation, "caseInformationAmended")
+        let before = try Data(contentsOf: store.manifestURL)
+        button.performClick(nil); try await waitFor { controller.hasPendingParameters }
+        let next: NSTextField = try control("investigation.caseTitle", in: controller.sourcePanel); next.stringValue = "Không được lưu"
+        controller.cancelParameters(); await Task.yield()
+        XCTAssertEqual(try Data(contentsOf: store.manifestURL), before); XCTAssertTrue(controller.sourcePanel.editor.isHidden)
+    }
+    func testChangingTabOrModelCancelsDraftWithoutWritingAudit() async throws {
+        let (store, coordinator) = try context(), (_, document) = try await add(store, coordinator)
+        let controller = InvestigationController(coordinator: coordinator, localization: L10n(choice: .vietnamese)); controller.use(store)
+        let window = workspace(coordinator, controller)
+        let button: NSButton = try control("investigation.redact", in: controller.outputPanel)
+        button.performClick(nil); try await waitFor { controller.hasPendingParameters }
+        let before = try Data(contentsOf: store.manifestURL)
+        try coordinator.create(name: "Other", size: CanvasSize(width: 100,height: 100), ppi: 72, background: .transparent)
+        XCTAssertFalse(controller.hasPendingParameters); controller.applyParameters(); await Task.yield()
+        XCTAssertEqual(try Data(contentsOf: store.manifestURL), before)
+        coordinator.select(document.model.id); button.performClick(nil); try await waitFor { controller.hasPendingParameters }
+        let id = try XCTUnwrap(document.selectedLayerID); try document.perform(.opacity) { try $0.setOpacity(id, 0.6) }
+        XCTAssertFalse(controller.hasPendingParameters); XCTAssertNil(window.workspaceView.presentation)
+        XCTAssertNil(try store.item(document.model.id).redactionModelSHA256)
+    }
+    func testOrphanUnsavedDocumentCannotBeDiscardedWhenOpeningCaseItem() async throws {
+        let (store, coordinator) = try context(), (item, document) = try await add(store, coordinator)
+        let id = try XCTUnwrap(document.selectedLayerID); try document.perform(.opacity) { try $0.setOpacity(id, 0.4) }
+        document.investigationSession = nil
+        let before = document.model
+        let controller = InvestigationController(coordinator: coordinator, localization: L10n(choice: .vietnamese)); controller.use(store)
+        do { _ = try await controller.openItem(item.id); XCTFail("Must preserve orphan tab") }
+        catch { XCTAssertEqual(error as? InvestigationError, .locked) }
+        XCTAssertTrue(coordinator.active === document); XCTAssertEqual(document.model, before); XCTAssertTrue(document.isDocumentEdited)
+    }
+    func testCaseSelectionFollowsActiveTabAcrossTwoCases() async throws {
+        let (first, coordinator) = try context(), (item1, _) = try await add(first, coordinator)
+        let second = try InvestigationCaseStore(root: first.root.deletingLastPathComponent().appendingPathComponent("Second.paxcase"), creating: InvestigationCase(code: "HS-02",title: "Second",examiner: "Test"))
+        let (item2, _) = try await add(second, coordinator)
+        let controller = InvestigationController(coordinator: coordinator, localization: L10n(choice: .vietnamese)); controller.use(first); controller.use(second)
+        let window = workspace(coordinator, controller)
+        coordinator.select(item1.id); XCTAssertTrue(controller.store === first); XCTAssertEqual(controller.selectedItem?.id,item1.id)
+        coordinator.select(item2.id); XCTAssertTrue(controller.store === second); XCTAssertEqual(controller.selectedItem?.id,item2.id)
+        XCTAssertTrue(controller.sourcePanel.window === window.window)
+    }
+    func testCanvasPickingUsesSourcePixelsWithMarginsReverseDragAndClamping() async throws {
+        let (store, coordinator) = try context(), (_, document) = try await add(store, coordinator)
+        let image = try await coordinator.pipeline.renderDocument(model: document.model, assets: document.assets)
+        let size = try CanvasSize(width: 400,height: 200), capture = InvestigationCaptureView(image:image,sourceSize:size,mode:.rectangles)
+        capture.frame = CGRect(x:0,y:0,width:500,height:500)
+        XCTAssertNil(capture.sourcePoint(CGPoint(x:10,y:10)))
+        let rect = capture.imageRect
+        XCTAssertEqual(try XCTUnwrap(capture.sourcePoint(CGPoint(x:rect.midX,y:rect.midY))).x,200,accuracy:0.001)
+        let clamped = try XCTUnwrap(capture.sourcePoint(CGPoint(x:1000,y:1000),clamp:true)); XCTAssertEqual(clamped,Point2D(x:400,y:200))
+        XCTAssertEqual(InvestigationCaptureView.region(from:Point2D(x:90.7,y:50.9),to:Point2D(x:10.2,y:20.1)),EvidenceRegion(x:10,y:20,width:81,height:31))
+        XCTAssertNil(InvestigationCaptureView.region(from:Point2D(x:10,y:20),to:Point2D(x:10,y:20)))
+        XCTAssertNil(InvestigationCaptureView.region(from:Point2D(x:.nan,y:20),to:Point2D(x:10,y:20)))
+    }
+    func testCanvasPointsPersistAcrossMouseUpAndEscapeDiscardsPresentation() async throws {
+        let (store, coordinator) = try context(), (_, document) = try await add(store, coordinator)
+        let controller = InvestigationController(coordinator: coordinator, localization: L10n(choice: .vietnamese)); controller.use(store)
+        let window = workspace(coordinator, controller), image = try await coordinator.pipeline.renderDocument(model: document.model, assets: document.assets)
+        let capture = InvestigationCaptureView(image:image,sourceSize:document.model.canvas,mode:.points)
+        window.workspaceView.showPresentation(capture); window.window?.layoutIfNeeded()
+        let rect = capture.imageRect
+        for point in [CGPoint(x:rect.minX + rect.width * 0.2,y:rect.midY),CGPoint(x:rect.minX + rect.width * 0.8,y:rect.midY)] {
+            let location = capture.convert(point,to:nil)
+            for type in [NSEvent.EventType.leftMouseDown,.leftMouseUp] {
+                let event = try XCTUnwrap(NSEvent.mouseEvent(with:type,location:location,modifierFlags:[],timestamp:1,windowNumber:window.window!.windowNumber,context:nil,eventNumber:1,clickCount:1,pressure:1))
+                if type == .leftMouseDown { capture.mouseDown(with:event) } else { capture.mouseUp(with:event) }
+            }
+        }
+        XCTAssertEqual(capture.points.count,2)
+        capture.resetSelection(); XCTAssertTrue(capture.points.isEmpty)
+        capture.cancel = { window.workspaceView.dismissPresentation() }
+        let escape = try XCTUnwrap(NSEvent.keyEvent(with:.keyDown,location:.zero,modifierFlags:[],timestamp:2,windowNumber:window.window!.windowNumber,context:nil,characters:"",charactersIgnoringModifiers:"",isARepeat:false,keyCode:53))
+        capture.keyDown(with:escape); XCTAssertNil(window.workspaceView.presentation); XCTAssertFalse(window.workspaceView.canvas.isHidden)
+    }
+    func testInlineAnnotationMakesOneUndoAndNeverChangesOriginalBytes() async throws {
+        let (store, coordinator) = try context(), (item, document) = try await add(store, coordinator)
+        let controller = InvestigationController(coordinator:coordinator,localization:L10n(choice:.vietnamese)); controller.use(store)
+        let window = workspace(coordinator,controller), before = document.model, bytes = try Data(contentsOf:store.originalURL(item))
+        let button: NSButton = try control("investigation.annotate",in:controller.analysisPanel)
+        button.performClick(nil); try await waitFor { controller.hasPendingParameters }
+        XCTAssertEqual(window.workspaceView.sidebar.selectedPage,2)
+        controller.applyParameters(); try await waitFor { document.model.layers.count > before.layers.count }
+        XCTAssertEqual(store.value.events.last?.payload.operation,"annotation")
+        document.undoManager?.undo(); XCTAssertEqual(document.model,before)
+        XCTAssertEqual(try Data(contentsOf:store.originalURL(item)),bytes)
+    }
+
 }

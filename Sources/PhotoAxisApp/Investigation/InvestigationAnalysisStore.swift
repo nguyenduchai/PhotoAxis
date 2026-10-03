@@ -46,7 +46,7 @@ extension InvestigationCaseStore {
         let image = try await pipeline.normalizedImage(source)
         let record = try await Task.detached { try InvestigationAnalysisEngine.recognize(image: image, item: item, region: region) }.value
         try mutateAnalysis("ocrRecognized", itemID: id, details: ["ocrID": record.id.uuidString, "sourceSHA256": record.sourceSHA256,
-                                                                  "language": record.language, "region": String(decoding: try InvestigationDigest.encode(region), as: UTF8.self)]) { $0.ocr.append(record) }
+                                                                  "language": record.language, "computePolicy": "CPU where supported", "region": String(decoding: try InvestigationDigest.encode(region), as: UTF8.self)]) { $0.ocr.append(record) }
         return record
     }
     func confirmOCR(_ recordID: UUID, text: String) throws {
