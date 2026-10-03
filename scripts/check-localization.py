@@ -20,7 +20,7 @@ for path in (root / "Sources/PhotoAxisApp").rglob("*.swift"):
     source = source.replace('"document.json"', '')  # ZIP entry name, not a UI key.
     used.update(re.findall(r'\.text\("([^"]+)"\)', source))
     # Keys passed through menu/label helpers and option arrays are literals too.
-    used.update(re.findall(r'"((?:recovery|export|project|content|shape|perspective|crop|command|history|transform|document|import|action|color|feature|help|image|language|layer|menu|options|panel|settings|tool|tools|type|view|welcome|workspace)\.[A-Za-z][A-Za-z0-9]*)"', source))
+    used.update(re.findall(r'"((?:scan|recovery|export|project|content|shape|perspective|crop|command|history|transform|document|import|action|color|feature|help|image|language|layer|menu|options|panel|settings|tool|tools|type|view|welcome|workspace)\.[A-Za-z][A-Za-z0-9]*)"', source))
 # Channel accessibility names are composed in the Color panel.
 used.update("color." + channel for channel in ["R", "G", "B"])
 # Tool names are deliberately composed from language-independent enum cases.

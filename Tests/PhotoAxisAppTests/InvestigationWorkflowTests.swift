@@ -24,6 +24,24 @@ import PhotoAxisCore
         document.investigationSession = InvestigationSession(store: store, itemID: item.id); try coordinator.add(document)
         return (item, document)
     }
+    func testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal() async throws {
+        let (store, coordinator) = try context(), (item, document) = try await add(store, coordinator)
+        let original = document.model, id = try XCTUnwrap(document.selectedLayerID)
+        try store.setRedactions(item.id,regions:[EvidenceRegion(x:0,y:0,width:10,height:10)])
+        let reviewed = try store.item(item.id).redactionModelSHA256
+        var settings = ScanSettings(); settings.mode = .gray; settings.paper = 0.7
+        try document.perform(.scan) { try $0.setScan(id,settings) }
+        let edited = document.model
+        XCTAssertEqual(store.value.events.last?.payload.operation,"scan")
+        XCTAssertNotEqual(reviewed,InvestigationDigest.hash(try store.item(item.id).currentModelJSON))
+        document.undoManager?.undo(); XCTAssertEqual(document.model,original)
+        document.undoManager?.redo(); XCTAssertEqual(document.model,edited)
+        let saved = await coordinator.save(document,saveAs:false); XCTAssertTrue(saved)
+        let reopened = try await store.openSnapshot(item.id,projects:coordinator.projectStore)
+        XCTAssertEqual(reopened.model,edited); XCTAssertEqual(reopened.model.layers[0].scan,settings)
+        XCTAssertEqual(try InvestigationFiles.hashFile(store.originalURL(item)),item.originalSHA256)
+        _ = try InvestigationCase.decode(Data(contentsOf:store.manifestURL))
+    }
     func testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation() async throws {
         let (store, coordinator) = try context(), (item, document) = try await add(store, coordinator)
         let bytes = try Data(contentsOf: fixture())

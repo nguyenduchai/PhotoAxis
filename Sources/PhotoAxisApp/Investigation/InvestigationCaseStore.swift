@@ -79,7 +79,7 @@ final class InvestigationCaseStore {
     }
     func originalURL(_ item: EvidenceItem) -> URL { root.appendingPathComponent("originals/" + item.originalSHA256) }
     func item(_ id: UUID) throws -> EvidenceItem { guard let item = value.items.first(where: { $0.id == id }) else { throw InvestigationError.invalidCase }; return item }
-    init(root: URL, creating: InvestigationCase? = nil, appVersion: String = "1.0.0 (3) Investigation 2") throws {
+    init(root: URL, creating: InvestigationCase? = nil, appVersion: String = "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "unknown"))") throws {
         self.root = root.standardizedFileURL; self.appVersion = appVersion
         if let creating {
             guard !FileManager.default.fileExists(atPath: root.path) else { throw InvestigationError.protectedDestination }

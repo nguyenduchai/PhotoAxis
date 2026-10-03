@@ -69,6 +69,7 @@ public struct PhotoLayer: Equatable, Identifiable, Sendable {
     public var isLocked = false
     public var opacity = 1.0
     public var adjustments = ImageAdjustments()
+    public var scan: ScanSettings?
     public init(id: UUID = UUID(), name: String, content: LayerContent, transform: ProjectiveTransform = .identity) {
         self.id = id; self.name = name; self.content = content; self.transform = transform
     }

@@ -40,9 +40,9 @@ final class ProjectFormatTests: XCTestCase {
         XCTAssertEqual(try ProjectSchema.decode(ProjectSchema(pole).encoded()).model(),pole)
     }
     func testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas() throws {
-        var schema = try empty(); schema.formatVersion = 3
-        XCTAssertThrowsError(try schema.model()) { XCTAssertEqual($0 as? ProjectError,.newerVersion(3)) }
-        XCTAssertThrowsError(try ProjectSchema.decode(Data("{\"formatIdentifier\":\"photoaxis.document\",\"formatVersion\":3,\"futureLayout\":{}}".utf8))) { XCTAssertEqual($0 as? ProjectError,.newerVersion(3)) }
+        var schema = try empty(); schema.formatVersion = 4
+        XCTAssertThrowsError(try schema.model()) { XCTAssertEqual($0 as? ProjectError,.newerVersion(4)) }
+        XCTAssertThrowsError(try ProjectSchema.decode(Data("{\"formatIdentifier\":\"photoaxis.document\",\"formatVersion\":4,\"futureLayout\":{}}".utf8))) { XCTAssertEqual($0 as? ProjectError,.newerVersion(4)) }
         schema.formatVersion = 1; schema.formatIdentifier = "other"; XCTAssertThrowsError(try schema.model())
         schema = try empty(); schema.ppi = .nan; XCTAssertThrowsError(try schema.model())
         var model = try empty().model(); _ = try model.insertContent(.shape(.init(kind:.rectangle,size:CanvasSize(width:10,height:10),fill:.white)),name:"Shape",transform:.identity,above:nil)

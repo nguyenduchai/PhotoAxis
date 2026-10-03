@@ -49,6 +49,7 @@ struct ImportBudget: Sendable {
 actor ImagePipeline {
     private let context: CIContext
     private var perspectiveKernel:CIWarpKernel?
+    private var scanFilters: ScanFilters?
     private let srgb = CGColorSpace(name: CGColorSpace.sRGB)!
     private var cache: [String: CGImage] = [:]
     private var lru: [String] = []
@@ -296,6 +297,7 @@ actor ImagePipeline {
                 }else{local=CIImage(cgImage:try ContentRasterizer.shapeImage(shape))}
             case .text(let text): local=CIImage(cgImage:try ContentRasterizer.textImage(text))
             }
+            var retainedMask: CIImage?
             if !layer.clip.isEmpty {
                 let width=Int(local.extent.width),height=Int(local.extent.height)
                 _=try CanvasSize(width:width,height:height)
@@ -310,7 +312,15 @@ actor ImagePipeline {
                 mask.setFillColor(gray:1,alpha:1);mask.fill(CGRect(x:0,y:0,width:width,height:height))
                 guard let image=mask.makeImage() else{throw ImageImportError.unreadable}
                 let clipMask = CIImage(cgImage:image).transformed(by:.init(scaleX:Double(width)/Double(maskWidth),y:Double(height)/Double(maskHeight)))
+                retainedMask = clipMask
                 local=local.applyingFilter("CIBlendWithMask",parameters:["inputBackgroundImage":CIImage.empty(),"inputMaskImage":clipMask])
+            }
+            if let settings = layer.scan, settings.enabled {
+                if scanFilters == nil { scanFilters = try ScanFilters() }
+                local = try scanFilters!.apply(settings, to: local)
+                // Mask before sampling and afterwards: bow correction cannot
+                // resurrect source pixels excluded by a previous crop.
+                if let mask = retainedMask { local = local.applyingFilter("CIBlendWithMask", parameters: ["inputBackgroundImage": CIImage.empty(), "inputMaskImage": mask]) }
             }
             let size=try model.localSize(of:layer)
             let mapped:CIImage
@@ -342,12 +352,16 @@ actor ImagePipeline {
     }
 
     func thumbnail(layer: PhotoLayer, assets: [String: EmbeddedImage]) throws -> CGImage? {
-        let ci: CIImage
+        var ci: CIImage
         switch layer.content {
         case .image(let id):
             guard let asset = assets[id] else { return nil }; ci = try AdjustmentFilters.apply(layer.adjustments,to:CIImage(cgImage:try normalizedImage(asset)))
         case .shape(let shape): ci=CIImage(cgImage:try ContentRasterizer.shapeImage(shape))
         case .text(let text): ci=CIImage(cgImage:try ContentRasterizer.textImage(text))
+        }
+        if let settings = layer.scan, settings.enabled {
+            if scanFilters == nil { scanFilters = try ScanFilters() }
+            ci = try scanFilters!.apply(settings, to: ci)
         }
         let factor = min(1, 64 / max(ci.extent.width, ci.extent.height))
         let small = ci.transformed(by: .init(scaleX: factor, y: factor))
@@ -361,13 +375,21 @@ actor ImagePipeline {
             guard let local = try? layer.transform.inverted().applying(to: point) else { continue }
             guard LayerGeometry.contains(local: local, size: try model.localSize(of: layer), clips: layer.clip) else { continue }
             let image:CGImage
+            var samplePoint = local
             switch layer.content {
-            case .image(let id):guard let asset=assets[id] else{continue};image=try normalizedImage(asset)
+            case .image(let id):
+                guard let asset=assets[id] else{continue};image=try normalizedImage(asset)
+                if let scan = layer.scan, scan.enabled, scan.curveX != 0 || scan.curveY != 0 {
+                    let w = Double(image.width), h = Double(image.height), u = local.x/w, v = (h-local.y)/h
+                    samplePoint = Point2D(x: local.x+scan.curveX*w*0.12*4*v*(1-v)*sin(.pi*u),
+                                          y: local.y-scan.curveY*h*0.12*4*u*(1-u)*sin(.pi*v))
+                    guard LayerGeometry.contains(local:samplePoint,size:try model.localSize(of:layer),clips:layer.clip) else { continue }
+                }
             case .shape(let shape):image=try ContentRasterizer.shapeImage(shape)
             case .text(let text):image=try ContentRasterizer.textImage(text)
             }
             do {
-                guard let pixel = image.cropping(to: CGRect(x: floor(local.x),y: floor(local.y),width: 1,height: 1)) else { continue }
+                guard let pixel = image.cropping(to: CGRect(x: floor(samplePoint.x),y: floor(samplePoint.y),width: 1,height: 1)) else { continue }
                 var rgba = [UInt8](repeating: 0, count: 4)
                 rgba.withUnsafeMutableBytes { bytes in
                     let context = CGContext(data: bytes.baseAddress, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4,

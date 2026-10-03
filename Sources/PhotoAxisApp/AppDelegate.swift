@@ -1,4 +1,5 @@
 import AppKit
+import UniformTypeIdentifiers
 import PhotoAxisCore
 
 @MainActor
@@ -9,6 +10,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
     private var localization: L10n!
     private var documents: DocumentCoordinator!
     private var sizeSheet:DocumentSizeController?
+    private var scanSheet: ScanController?
     private var exportSheet:ExportController?
     private var newSheet: NewDocumentController?
     private var recoverySheet: RecoveryController?
@@ -165,6 +167,36 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         alert.addButton(withTitle: localization.text("action.close")); alert.runModal()
     }
     @objc private func imageSize(){showSize(canvas:false)}
+    @objc private func scanDocument() {
+        guard let document = documents.active, let window = workspace?.window, window.attachedSheet == nil, scanSheet == nil else { return }
+        do {
+            let sheet = try ScanController(document: document, pipeline: documents.pipeline, localization: localization)
+            scanSheet = sheet
+            window.beginSheet(sheet.window!) { [weak self] _ in self?.scanSheet = nil; self?.workspace?.window?.makeFirstResponder(self?.workspace?.workspaceView.canvas) }
+        } catch { showImportReport(localization.text("scan.selectImage")) }
+    }
+    @objc private func scanBatch() {
+        showWorkspace()
+        guard let window = workspace?.window, window.attachedSheet == nil, scanSheet == nil else { return }
+        let panel = NSOpenPanel(); panel.canChooseDirectories = false; panel.allowsMultipleSelection = true
+        panel.allowedContentTypes = [.png,.jpeg,.heic,.heif]; panel.message = localization.text("scan.chooseBatch")
+        panel.beginSheetModal(for: window) { [weak self] response in
+            guard let self, response == .OK, !panel.urls.isEmpty, panel.urls.count <= 50 else { return }
+            let files = panel.urls
+            Task { [weak self] in
+                guard let self else { return }
+                do {
+                    let pipeline = ImagePipeline(), asset = try await pipeline.prepare(.file(files[0]), budget: ImportBudget())
+                    let document = PhotoDocument(model: try PhotoDocumentModel(name: asset.name, canvas: asset.descriptor.size, ppi: asset.ppi), localization: localization)
+                    try document.place(asset, recordHistory: false)
+                    guard window.attachedSheet == nil, scanSheet == nil else { return }
+                    let sheet = try ScanController(document: document, pipeline: pipeline, localization: localization, batchFiles: files)
+                    scanSheet = sheet
+                    window.beginSheet(sheet.window!) { [weak self] _ in self?.scanSheet = nil }
+                } catch { showImportReport(localization.text("scan.error")) }
+            }
+        }
+    }
     @objc private func canvasSize(){showSize(canvas:true)}
     private func showSize(canvas:Bool) {
         guard let document=documents.active,!documents.isImporting,document.resolveSession(),let window=workspace?.window,sizeSheet==nil else{return}
@@ -231,6 +263,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
 
     @objc private func editType(){guard let id=documents.active?.selectedLayerID else{return};workspace?.workspaceView.canvas.contentEditing.edit(id)}
     func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+        if menuItem.action == #selector(scanDocument) {
+            guard let document = documents.active, let layer = document.selectedLayer, case .image = layer.content else { return false }
+            return !layer.isLocked && !document.isInteractionLocked && workspace?.window?.attachedSheet == nil
+        }
+        if menuItem.action == #selector(scanBatch) { return !documents.isImporting && workspace?.window?.attachedSheet == nil }
         if documents.isClosing || workspace?.window?.attachedSheet != nil { return false }
         switch menuItem.action {
         case #selector(saveProject), #selector(saveProjectAs), #selector(exportImage): return documents.active != nil && !documents.isImporting && !documents.isSaving && !documents.isClosing && exportSheet == nil
@@ -303,6 +340,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         item(edit, "action.selectAll", #selector(NSText.selectAll(_:)), "a")
         let image = submenu("menu.image")
         item(image,"image.size",#selector(imageSize),owned:true);item(image,"image.canvasSize",#selector(canvasSize),owned:true)
+        item(image,"scan.title",#selector(scanDocument),owned:true);item(image,"scan.batch",#selector(scanBatch),owned:true)
         for (tag,key) in ["image.rotate90","image.rotate180","image.rotate270","image.flipH","image.flipV"].enumerated() {
             item(image,key,#selector(geometryAction(_:)),owned:true);image.items.last?.tag=tag
         }

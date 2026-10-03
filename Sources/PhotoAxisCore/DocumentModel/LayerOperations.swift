@@ -36,7 +36,7 @@ public extension PhotoDocumentModel {
         // Duplication does not mutate the protected original. Its lock is preserved.
         var copy = PhotoLayer(name: name, content: original.content, transform: original.transform)
         copy.clip = original.clip; copy.isVisible = original.isVisible; copy.isLocked = original.isLocked; copy.opacity = original.opacity
-        copy.adjustments = original.adjustments
+        copy.adjustments = original.adjustments; copy.scan = original.scan
         layers.insert(copy, at: index + 1); revision &+= 1; return copy.id
     }
     mutating func delete(_ id: UUID) throws {

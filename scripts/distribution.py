@@ -84,7 +84,8 @@ def distribution_documents(local, source_commit=None):
     if b'GNU GENERAL PUBLIC LICENSE' not in license_bytes or b'Version 3, 29 June 2007' not in license_bytes:
         raise GateError('GNU GPLv3 license text is required in the installer')
     commit=source_commit or run(['git','rev-parse','HEAD']).strip()
-    source=('PhotoAxis 1.0.0 (3)\nGNU GPL version 3 (GPL-3.0-only)\n'
+    version, build = version_build()
+    source=(f'PhotoAxis {version} ({build})\nGNU GPL version 3 (GPL-3.0-only)\n'
             'Copyright (C) 2026 PhotoAxis contributors. No warranty.\n\n'
             'Corresponding source: https://github.com/nguyenduchai/PhotoAxis\n'
             'Packaging checkout: '+commit+'\n'

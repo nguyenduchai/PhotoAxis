@@ -46,6 +46,7 @@ public struct ProjectSchema: Codable, Sendable {
         public var text: TextContent?
         public var shape: ShapeContent?
         public var imageAdjustments: ImageAdjustments?
+        public var scan: ScanSettings?
         public var transform: [Double]
         public var clip: [[Point2D]]
         public var isVisible: Bool
@@ -55,7 +56,7 @@ public struct ProjectSchema: Codable, Sendable {
             id = layer.id; name = layer.name; transform = layer.transform.coefficients; clip = layer.clip
             isVisible = layer.isVisible; isLocked = layer.isLocked; opacity = layer.opacity
             switch layer.content {
-            case .image(let source): type = "image"; sourceID = source; imageAdjustments = layer.adjustments
+            case .image(let source): type = "image"; sourceID = source; imageAdjustments = layer.adjustments; scan = layer.scan
             case .text(let content): type = "text"; text = content
             case .shape(let content): type = "shape"; shape = content
             }
@@ -81,31 +82,32 @@ public struct ProjectSchema: Codable, Sendable {
             switch type {
             case "image":
                 guard let sourceID, let imageAdjustments, text == nil, shape == nil else { throw ProjectError.invalidDocument }
-                try imageAdjustments.validate(); content = .image(sourceID: sourceID)
+                try imageAdjustments.validate(); try scan?.validate(); content = .image(sourceID: sourceID)
             case "text":
-                guard let text, sourceID == nil, shape == nil, imageAdjustments == nil else { throw ProjectError.invalidDocument }
+                guard let text, sourceID == nil, shape == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
                 try text.validate(); content = .text(text)
             case "shape":
-                guard let shape, sourceID == nil, text == nil, imageAdjustments == nil else { throw ProjectError.invalidDocument }
+                guard let shape, sourceID == nil, text == nil, imageAdjustments == nil, scan == nil else { throw ProjectError.invalidDocument }
                 try shape.validate(); content = .shape(shape)
             default: throw ProjectError.invalidDocument
             }
             var result = PhotoLayer(id: id, name: name, content: content, transform: try ProjectiveTransform(transform))
             result.clip = clip; result.isVisible = isVisible; result.isLocked = isLocked; result.opacity = opacity
-            result.adjustments = imageAdjustments ?? ImageAdjustments(); return result
+            result.adjustments = imageAdjustments ?? ImageAdjustments(); result.scan = scan; return result
         }
     }
 
     public init(_ model: PhotoDocumentModel) {
         id = model.id; name = model.name; canvas = model.canvas; ppi = model.ppi; revision = model.revision
-        formatVersion = model.investigation == nil ? 1 : 2
+        formatVersion = model.layers.contains(where: { $0.scan != nil }) ? 3 : (model.investigation == nil ? 1 : 2)
         sources = model.sources.values.sorted { $0.id < $1.id }; layers = model.layers.map(Layer.init); investigation = model.investigation
     }
     public func model() throws -> PhotoDocumentModel {
         guard formatIdentifier == "photoaxis.document" else { throw ProjectError.invalidDocument }
-        guard formatVersion <= 2 else { throw ProjectError.newerVersion(formatVersion) }
-        guard formatVersion == 1 || formatVersion == 2 else { throw ProjectError.unsupportedVersion(formatVersion) }
-        guard (formatVersion == 2) == (investigation != nil) else { throw ProjectError.invalidDocument }
+        guard formatVersion <= 3 else { throw ProjectError.newerVersion(formatVersion) }
+        guard (1...3).contains(formatVersion) else { throw ProjectError.unsupportedVersion(formatVersion) }
+        guard formatVersion == 3 || ((formatVersion == 2) == (investigation != nil)),
+              formatVersion == 3 || layers.allSatisfy({ $0.scan == nil }) else { throw ProjectError.invalidDocument }
         if let investigation { guard investigation.itemID == id else { throw ProjectError.invalidDocument } }
         guard name.utf8.count <= 4096, layers.count <= DocumentLimits.maximumLayers,
               sources.count <= DocumentLimits.maximumLayers, Set(layers.map(\.id)).count == layers.count,
@@ -168,8 +170,8 @@ public struct ProjectSchema: Codable, Sendable {
         struct Header: Decodable { let formatIdentifier: String; let formatVersion: Int }
         let header = try JSONDecoder().decode(Header.self,from:data)
         guard header.formatIdentifier == "photoaxis.document" else { throw ProjectError.invalidDocument }
-        guard header.formatVersion <= 2 else { throw ProjectError.newerVersion(header.formatVersion) }
-        guard header.formatVersion == 1 || header.formatVersion == 2 else { throw ProjectError.unsupportedVersion(header.formatVersion) }
+        guard header.formatVersion <= 3 else { throw ProjectError.newerVersion(header.formatVersion) }
+        guard (1...3).contains(header.formatVersion) else { throw ProjectError.unsupportedVersion(header.formatVersion) }
         let result = try JSONDecoder().decode(Self.self, from: data); _ = try result.model(); return result
     }
 }
