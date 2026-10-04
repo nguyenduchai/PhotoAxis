@@ -1,0 +1,33 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: on, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: off, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: off, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: off, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: off, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: off, ID: settings.files
+	8 text Chung
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Giao diện Ngôn ngữ giao diện
+		11 nút bật lên Description: Ngôn ngữ giao diện, Value: Tiếng Việt, ID: settings.language
+		12 text Về PhotoAxis PhotoAxis 1.0.0 (9) · macOS 14+ · Apple Silicon Ứng dụng native, hoạt động offline. Mã nguồn mở GPLv3. Thiết lập giao diện không thay đổi nội dung hay ảnh nguồn. Phím nhanh: Cmd+, mở Cài đặt · Cmd+R bật/tắt thước · B cọ · S sao chép · Space di chuyển · [ và ] đổi cỡ cọ.
+		13 thanh cuộn (disabled, settable, float) 0
+	14 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	15 text Tự lưu các lựa chọn hợp lệ.
+	16 nút Đóng, ID: settings.done
+	17 nút đóng
+	18 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	19 text Cài đặt…
+20 menu bar
+	21 PhotoAxis Preferences9-Final vi
+	22 Tệp
+	23 Chỉnh sửa
+	24 Ảnh
+	25 Lớp
+	26 Văn bản
+	27 Xem
+	28 Cửa sổ
+	29 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

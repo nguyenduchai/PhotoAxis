@@ -1,0 +1,36 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: off, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: on, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: off, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: off, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: off, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: off, ID: settings.files
+	8 text Giao diện
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Màu giao diện
+		11 Description: Màu giao diện, ID: settings.theme
+			12 nút radio Description: Theo hệ thống, Value: 1
+			13 nút radio Description: Tối, Value: 0
+			14 nút radio Description: Sáng, Value: 0
+		15 text Áp dụng ngay cho cửa sổ, panel, thanh công cụ và hộp thoại. Theo hệ thống tự thay đổi cùng giao diện macOS. Hiển thị và màu ảnh Màu giao diện độc lập với nền vùng làm việc và lưới trong suốt. Các tùy chọn hiển thị không thay đổi pixel ảnh, lịch sử chỉnh sửa hay màu của tệp xuất.
+		16 thanh cuộn (disabled, settable, float) 0
+	17 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	18 text Tự lưu các lựa chọn hợp lệ.
+	19 nút Đóng, ID: settings.done
+	20 nút đóng
+	21 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	22 text Cài đặt…
+23 menu bar
+	24 PhotoAxis Preferences9-Final vi
+	25 Tệp
+	26 Chỉnh sửa
+	27 Ảnh
+	28 Lớp
+	29 Văn bản
+	30 Xem
+	31 Cửa sổ
+	32 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

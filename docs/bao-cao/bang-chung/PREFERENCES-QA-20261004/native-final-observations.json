@@ -1,0 +1,29 @@
+{
+  "build": 9,
+  "binaryUUID": "7071B413-36F3-3955-B896-7BA783D2A75F",
+  "categoryPagesViEn": 12,
+  "appearance": [
+    "system",
+    "dark",
+    "light"
+  ],
+  "darkPreferenceSurvivedRelaunch": true,
+  "invalidJPEGQualityDidNotBlockValidRecoveryInterval": true,
+  "nativeExportDefaults": {
+    "format": "JPEG",
+    "quality": 74,
+    "linked": false
+  },
+  "reopenedProjectLayers": 2,
+  "ocrCancelObserved": true,
+  "cuaClickAndObservationRoundtripMs": 554,
+  "cancellationIsNotLatencyBenchmark": true,
+  "nativeOCRCompletionVerified": false,
+  "comparisonAfterCancel": true,
+  "nativeWindowContentPoints": [
+    940,
+    660
+  ],
+  "minimumLayoutVerifiedByHostedTestsOnly": true,
+  "scope": "final- prefix captures are final Release; other native captures are earlier prototype before independent file setting validation fix"
+}

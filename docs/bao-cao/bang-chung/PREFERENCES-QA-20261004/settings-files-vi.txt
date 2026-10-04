@@ -1,0 +1,3 @@
+The following is a diff from the previous accessibility tree for Window: "Cài đặt…" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~		95 hộp kiểm Giữ tỉ lệ kích thước khi mở Xuất ảnh, Value: 0, ID: settings.exportLinked
+The focused UI element is 94 trường văn bản (settable) Description: Chất lượng JPEG (1–100), Value: 74, ID: settings.jpegQuality

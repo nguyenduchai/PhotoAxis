@@ -1,3 +1,15 @@
+# Cài đặt và khả năng hủy OCR — build9, 04/10/2026
+
+PhotoAxis **1.0.0(9)** thiết kế lại Cài đặt native theo danh mục bên trái và nhóm điều khiển bên phải: Chung/Giao diện/Workspace/Canvas/Cọ mặc định/Lưu và xuất tệp. Có **Tối/Sáng/Theo hệ thống**, áp dụng ngay và giữ qua mở lại. Thêm bật/tắt vòng cọ, recovery10/30/60giây, định dạngPNG/JPEG mặc định, chất lượngJPEG1–100 và giữ tỉ lệ xuất. Tự lưu lựa chọn hợp lệ/reset riêng nhóm; ngôn ngữ áp sau khởi động lại.
+
+Phân tích trên ảnh đang mở có **Hủy nhận dạng chữ** khi Vision chạy, trả lại workspace và bỏ kết quả muộn/không ghi OCRchưa hoàn tất. macOSworker chưa dừng sẽ chặn OCRmới, vẫn cho chỉnh sửa. Sửa lỗi qualityJPEGsai chặn lưu tùy chọn độc lập. Schema project/case giữ4/2; readerproject1–4.
+
+Preferences now has six native category pages, Dark/Light/Use System with immediate appearance changes and persistence, brush outline visibility, recovery interval and export defaults. Cancel text recognition restores the workspace and discards unfinished or late OCR results. Valid independent file preferences still save when JPEG quality is invalid. This is a local ad-hoc development build; full target, IME, performance and signed installer acceptance remains open.
+
+[Hướng dẫn Cài đặt](HUONG_DAN_CAI_DAT.md), [báo cáo kiểm](bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md). Fullsuite206PASS/1knownTelexFAIL/3SKIP; CI205PASS/0FAIL/5SKIP; benchmark3PASS riêng, Perspectiveperformance vẫn mở. `releaseReady=false`, chưa installerpublicnotarized.
+
+---
+
 # Phân tích ảnh đang mở và con trỏ công cụ — build8, 04/10/2026
 
 PhotoAxis **1.0.0 (8)** dùng tab đang hoạt động cho Phân tích/Đầu ra. Ảnh thường dùng ngay OCR, chú thích, đối chiếu, đo có hiệu chuẩn, che vùng và xuất bản chia sẻ. Phiên tạm có thể lưu thành `.paxcase`, ghi rõ bản PNG dựng từ canvas và hash nguồn/model; giữ nguyên tài liệu `.paxis` và Undo. Tab hồ sơ tiếp nhận giữ immutable originals và audit như trước. Model/tab đổi ngăn dùng kết quả hoặc draft cũ.

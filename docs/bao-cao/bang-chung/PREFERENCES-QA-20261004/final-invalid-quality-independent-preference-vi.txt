@@ -1,0 +1,38 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: off, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: off, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: off, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: off, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: off, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: on, ID: settings.files
+	8 text Lưu và xuất tệp
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Khôi phục tài liệu Lưu bản khôi phục mỗi
+		11 nút bật lên Description: Lưu bản khôi phục mỗi, Value: 30 giây, ID: settings.recoveryInterval
+		12 text Luôn bật bảo vệ tài liệu chưa lưu. Chu kỳ mới áp dụng từ lượt chờ tiếp theo. Bản khôi phục chỉ chứa chỉnh sửa đã xác nhận, không ghi đè tệp gốc; hãy dùng Lưu để lưu tài liệu chính thức. Mặc định khi xuất ảnh Định dạng mặc định
+		13 nút bật lên Description: Định dạng mặc định, Value: PNG — hỗ trợ trong suốt, ID: settings.exportFormat
+		14 text Chất lượng JPEG (1–100)
+		15 trường văn bản (settable) Description: Chất lượng JPEG (1–100), Value: NaN, ID: settings.jpegQuality
+		16 hộp kiểm Giữ tỉ lệ kích thước khi mở Xuất ảnh, Value: 1, ID: settings.exportLinked
+		17 text Chất lượng JPEG phải là số nguyên từ 1 đến 100. Giá trị chưa hợp lệ sẽ không được lưu. Áp dụng cho hộp thoại Xuất ảnh được mở tiếp theo. Bạn vẫn có thể thay đổi định dạng và chất lượng trong từng lần xuất. Xuất bản chia sẻ điều tra dùng quy tắc riêng để rà soát dữ liệu nhạy cảm.
+		18 thanh cuộn (disabled, settable, float) 0
+	19 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	20 text Tự lưu các lựa chọn hợp lệ.
+	21 nút Đóng, ID: settings.done
+	22 nút đóng
+	23 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	24 text Cài đặt…
+25 menu bar
+	26 PhotoAxis Preferences9-Final vi
+	27 Tệp
+	28 Chỉnh sửa
+	29 Ảnh
+	30 Lớp
+	31 Văn bản
+	32 Xem
+	33 Cửa sổ
+	34 Trợ giúp
+
+The focused UI element is 15 trường văn bản (settable) Description: Chất lượng JPEG (1–100), Value: NaN, ID: settings.jpegQuality

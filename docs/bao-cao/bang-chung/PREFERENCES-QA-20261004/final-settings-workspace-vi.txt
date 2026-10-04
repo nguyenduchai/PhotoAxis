@@ -1,0 +1,45 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: off, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: off, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: on, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: off, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: off, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: off, ID: settings.files
+	8 text Workspace
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Bảng và công cụ Độ rộng bảng
+		11 trường văn bản (settable) Description: Độ rộng bảng, Value: 300, ID: settings.panelWidth
+		12 máy tập đi bộ Description: Độ rộng bảng, Value: 300, ID: settings.panelWidth, Secondary Actions: Increment, Decrement
+			13 nút mũi tên tăng dần
+			14 nút mũi tên giảm dần
+		15 text pt (260–420) Bố trí công cụ
+		16 Description: Bố trí công cụ, ID: settings.toolColumns
+			17 nút radio Description: Một cột, Value: 1
+			18 nút radio Description: Hai cột, Value: 0
+		19 hộp kiểm Hiện bảng bên phải, Value: 1, ID: settings.panelVisible
+		20 text Thước kẻ
+		21 hộp kiểm Thước kẻ, Value: 1, ID: settings.rulers
+		22 text Đơn vị thước
+		23 nút bật lên Description: Đơn vị thước, Value: Pixel (px), ID: settings.rulerUnit
+		24 text mm/cm/in quy đổi theo PPI của tài liệu, biểu thị kích thước in. Để đo vật trong ảnh, dùng hiệu chuẩn ở Phân tích.
+		25 thanh cuộn (disabled, settable, float) 0
+	26 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	27 text Tự lưu các lựa chọn hợp lệ.
+	28 nút Đóng, ID: settings.done
+	29 nút đóng
+	30 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	31 text Cài đặt…
+32 menu bar
+	33 PhotoAxis Preferences9-Final vi
+	34 Tệp
+	35 Chỉnh sửa
+	36 Ảnh
+	37 Lớp
+	38 Văn bản
+	39 Xem
+	40 Cửa sổ
+	41 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

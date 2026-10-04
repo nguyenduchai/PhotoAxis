@@ -1,0 +1,36 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: off, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: off, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: off, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: on, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: off, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: off, ID: settings.files
+	8 text Canvas
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Canvas Nền vùng làm việc
+		11 nút bật lên Description: Nền vùng làm việc, Value: Xám tối, ID: settings.background
+		12 hộp kiểm Hiện ô nền trong suốt, Value: 1, ID: settings.transparency
+		13 text Cỡ ô trong suốt
+		14 nút bật lên Description: Cỡ ô trong suốt, Value: Vừa (8 pt), ID: settings.gridSize
+		15 text Áp dụng ngay cho vùng hiển thị. Nền và ô trong suốt không được ghi vào ảnh xuất, project hoặc nguồn gốc.
+		16 thanh cuộn (disabled, settable, float) 0
+	17 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	18 text Tự lưu các lựa chọn hợp lệ.
+	19 nút Đóng, ID: settings.done
+	20 nút đóng
+	21 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	22 text Cài đặt…
+23 menu bar
+	24 PhotoAxis Preferences9-Final vi
+	25 Tệp
+	26 Chỉnh sửa
+	27 Ảnh
+	28 Lớp
+	29 Văn bản
+	30 Xem
+	31 Cửa sổ
+	32 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

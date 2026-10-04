@@ -1,0 +1,4 @@
+The following is a diff from the previous accessibility tree for Window: "Cài đặt…" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~			91 nút radio Description: Theo hệ thống, Value: 0
+~			92 nút radio Description: Tối, Value: 1
+The focused UI element is 68 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

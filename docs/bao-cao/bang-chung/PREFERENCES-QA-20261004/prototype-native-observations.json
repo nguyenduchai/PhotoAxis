@@ -1,0 +1,43 @@
+{
+  "build": 9,
+  "languages": [
+    "vi",
+    "en"
+  ],
+  "settingsPagesEach": 6,
+  "appearanceNative": [
+    "system",
+    "dark",
+    "light"
+  ],
+  "appearancePersistedAcrossRelaunch": true,
+  "exportDefaults": {
+    "format": "JPEG",
+    "quality": 74,
+    "linkedDimensions": false,
+    "actualExport": "settings-default-export.jpg"
+  },
+  "recoverySeconds": 30,
+  "brushOutline": false,
+  "brushStroke": true,
+  "undoRedo": true,
+  "projectReopenedInEnglish": true,
+  "cropCancel": true,
+  "ocr": {
+    "cancelButtonObserved": true,
+    "cancelUIRoundtripMs": 548,
+    "returnedButtonsAndComparison": true,
+    "completedNativeRecognition": false
+  },
+  "ime": {
+    "syntheticNativeKeySequence": "tieengs vieetj ",
+    "actual": "tieengs vieetj ",
+    "inputSourceForCUA": "unverified",
+    "qualification": "open"
+  },
+  "minimumSettingsSize": {
+    "hosted": "880x538 in vi/en dark/light PASS",
+    "nativeResize": "attempt did not change window; screenshot is default940x660"
+  },
+  "scope": "Owned Release QA copies and synthetic fixtures; no full native A01-A43 acceptance claim"
+}

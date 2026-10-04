@@ -1,0 +1,87 @@
+Window: "open-image-fixture.png — PhotoAxis", App: PhotoAxis.
+0 standard window open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
+	1 text Hand
+	2 button Fit on Screen
+	3 button 100%
+	4 text Drag or scroll to pan the canvas
+	5 button (disabled) Cancel, Help: No editing session to apply or cancel., ID: options.cancel
+	6 button (disabled) Apply, Help: No editing session to apply or cancel., ID: options.apply
+	7 button Description: Switch Tools between one and two columns, ID: tools.columns
+	8 button Description: Move (V), ID: tool.move
+	9 button Description: Crop Tools, Help: Crop (C). Drag corners/edges or move the crop; Return applies, Escape cancels., ID: tool.crop
+	10 button Description: Brush (B), ID: tool.brush
+	11 button Description: Clone Stamp (S), ID: tool.cloneStamp
+	12 button Description: Eyedropper (I), ID: tool.eyedropper
+	13 button Description: Type (T), ID: tool.type
+	14 button Description: Shape Tools, Help: Drag to draw; Shift constrains. Edit Fill/Stroke in Properties. Return applies., ID: tool.rectangle
+	15 button Description: Hand (H), ID: tool.hand
+	16 button Description: Zoom (Z), ID: tool.zoom
+	17 color well Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	18 color well Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	19 toggle button open-image-fixture.png, Value: on
+	20 button Close tab
+	21 text field (settable) Description: Zoom, Value: 104,38 %
+	22 text Value: 1.600 × 640 px · 72,00 PPI · Saved sRGB px, ID: workspace.taskStatus
+	23 color well Description: Foreground Color, Value: rgb 0 0 0 1, Secondary Actions: Show color panel
+	24 color well Description: Background Color, Value: rgb 1 1 1 1, Secondary Actions: Show color panel
+	25 text field (settable) Description: HEX, Value: #000000
+	26 text field (settable) Description: Alpha %, Value: 100
+	27 text field (settable) Description: Red, Value: 0
+	28 text field (settable) Description: Green, Value: 0
+	29 text field (settable) Description: Blue, Value: 0
+	30 text Foreground Color Background Color HEX Alpha % R G B Color
+	31 button Description: Collapse Panels, ID: sidebar.collapse
+	32 Description: Properties and History, ID: sidebar.inspectorTabs
+		33 radio button Description: Properties, Value: 1
+		34 radio button Description: History, Value: 0
+	35 text 1.600 × 640 px
+72,00 PPI · sRGB
+Layers: 2 Layers
+	36 scroll area Secondary Actions: Scroll Up, Scroll Down
+		37 table
+			38 row (selected)
+				39 cell (selected)
+					40 button Description: Toggle Visibility: Nét vẽ / sao chép, Help: Toggle Visibility
+					41 image
+					42 text Help: Nét vẽ / sao chép, Value: Nét vẽ / sao chép Paint
+					43 button Description: Toggle Lock: Nét vẽ / sao chép, Help: Toggle Lock
+			44 row (selectable)
+				45 cell
+					46 button Description: Toggle Visibility: open-image-fixture.png, Help: Toggle Visibility
+					47 image
+					48 text Help: open-image-fixture.png, Value: open-image-fixture.png Image
+					49 button Description: Toggle Lock: open-image-fixture.png, Help: Toggle Lock
+		50 scroll bar (disabled, settable, float) 0
+	51 pop up button (disabled) Description: Blend Mode, Value: Normal
+	52 text Opacity
+	53 text field (settable) Description: Opacity, Value: 100 %
+	54 slider (settable, float) Description: Opacity, Value: 100
+		55 value indicator (settable, float) 100
+	56 button Add Layer
+	57 button Rename Layer
+	58 button Move Layer Up
+	59 button Move Layer Down
+	60 button Duplicate Layer
+	61 button Delete Layer
+	62 toggle button Edit, Value: on, ID: workspace.page.edit
+	63 toggle button Sources, Value: off, ID: workspace.page.sources
+	64 toggle button Analysis, Value: off, ID: workspace.page.analysis
+	65 toggle button Output, Value: off, ID: workspace.page.output
+	66 text Value: Layers, color and editing history., ID: workspace.pageHelp
+	67 splitter Description: Panel Width, Help: Drag to resize panels. Use arrow keys when focused., Value: 300, Secondary Actions: Increment, Decrement
+	68 close button
+	69 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	70 minimize button
+	71 text open-image-fixture.png — PhotoAxis
+72 menu bar
+	73 PhotoAxis Preferences9 en
+	74 File
+	75 Edit
+	76 Image
+	77 Layer
+	78 Type
+	79 View
+	80 Window
+	81 Help
+
+The focused UI element is 0 standard window open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

@@ -1,0 +1,57 @@
+The following is a diff from the previous accessibility tree for Window: "open-image-fixture.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 0-8, 27-32, 43-50
++43 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
++	44 text Cọ vẽ Cỡ
++	45 trường văn bản (settable) Description: Cỡ, Value: 40, ID: paint.size
++	46 thanh trượt (settable, float) Description: Cỡ, Value: 40, ID: paint.size.slider
++		47 chỉ báo giá trị (settable, float) 40
++	48 text px Cứng
++	49 trường văn bản (settable) Description: Cứng, Value: 80, ID: paint.hardness
++	50 thanh trượt (settable, float) Description: Cứng, Value: 80, ID: paint.hardness.slider
++		51 chỉ báo giá trị (settable, float) 80
++	52 text % Đậm
++	53 trường văn bản (settable) Description: Đậm, Value: 100, ID: paint.opacity
++	54 thanh trượt (settable, float) Description: Đậm, Value: 100, ID: paint.opacity.slider
++		55 chỉ báo giá trị (settable, float) 100
++	56 text % Kéo để vẽ trên layer nét riêng; thả chuột chốt một Undo. Escape hủy nét đang kéo. [ và ] đổi cỡ cọ.
++	57 nút (disabled) Hủy, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.cancel
++	58 nút (disabled) Áp dụng, Help: Chưa có phiên chỉnh sửa để áp dụng hoặc hủy., ID: options.apply
++	59 nút Description: Đổi công cụ giữa một và hai cột, ID: tools.columns
++	60 nút Description: Di chuyển (V), ID: tool.move
++	61 nút Description: Nhóm cắt xén, Help: Cắt xén (C). Kéo góc/cạnh hoặc di chuyển khung; Return áp dụng, Escape hủy., ID: tool.crop
++	62 nút Description: Cọ vẽ (B), ID: tool.brush
++	63 nút Description: Đóng dấu sao chép (S), ID: tool.cloneStamp
++	64 nút Description: Lấy mẫu màu (I), ID: tool.eyedropper
++	65 nút Description: Văn bản (T), ID: tool.type
++	66 nút Description: Nhóm hình dạng, Help: Kéo để vẽ; Shift ràng buộc. Sửa màu/viền trong Thuộc tính. Return áp dụng., ID: tool.rectangle
++	67 nút Description: Bàn tay (H), ID: tool.hand
++	68 nút Description: Thu phóng (Z), ID: tool.zoom
++	69 bảng màu Description: Màu nền, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
++	70 bảng màu Description: Màu tiền cảnh, Value: rgb 0 0 0 1, Secondary Actions: Hiển thị bảng màu
++	71 nút chuyển đổi open-image-fixture.png, Value: on
++	72 nút Đóng tab
++	73 trường văn bản (settable) Description: Thu phóng, Value: 104,38 %
++	74 text Help: Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký., Value: Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký. sRGB px, ID: workspace.taskStatus
++	75 nút chuyển đổi Chỉnh sửa, Value: off, ID: workspace.page.edit
++	76 nút chuyển đổi Nguồn, Value: off, ID: workspace.page.sources
++	77 nút chuyển đổi Phân tích, Value: on, ID: workspace.page.analysis
++	78 nút chuyển đổi Đầu ra, Value: off, ID: workspace.page.output
++	79 text Value: Chú thích, OCR và đo ngay ảnh ở tab đang mở., ID: workspace.pageHelp
++	80 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
++		81 text ID: workspace.analysisStatus, Value: open-image-fixture.png
+Đang dùng canvas của tab này. Phiên phân tích tạm; lưu thành hồ sơ để giữ kết quả.
++		82 nút Lưu phân tích thành hồ sơ…, ID: investigation.saveCurrentAnalysis
++		83 nút Đối chiếu trước/sau, ID: investigation.compare
++		84 nút Thêm chú thích…, ID: investigation.annotate
++		85 nút OCR tiếng Việt…, ID: investigation.ocr
++		86 nút (disabled) Rà soát OCR…, ID: investigation.reviewOCR
++		87 nút (disabled) Trích khung hình…, ID: investigation.extractFrame
++		88 nút Hiệu chuẩn đo…, ID: investigation.calibrate
++		89 nút (disabled) Đo khoảng cách/diện tích…, ID: investigation.measure
++		90 thanh cuộn (disabled, settable, float) 0
++	91 bộ chia tách Description: Độ rộng bảng, Help: Kéo để đổi độ rộng bảng. Dùng phím mũi tên khi có focus., Value: 300, Secondary Actions: Increment, Decrement
++	92 nút đóng
++	93 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
++	94 nút thu nhỏ
++	95 text open-image-fixture.png — PhotoAxis
+The focused UI element is 43 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

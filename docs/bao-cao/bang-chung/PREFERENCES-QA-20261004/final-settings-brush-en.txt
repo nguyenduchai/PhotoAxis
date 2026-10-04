@@ -1,0 +1,46 @@
+Window: "Settings…", App: PhotoAxis.
+0 standard window Settings…, ID: settings.window, Secondary Actions: Raise
+	1 text PhotoAxis Settings
+	2 toggle button General, Value: off, ID: settings.general
+	3 toggle button Interface, Value: off, ID: settings.interface
+	4 toggle button Workspace, Value: off, ID: settings.workspace
+	5 toggle button Canvas, Value: off, ID: settings.canvas
+	6 toggle button Brush Defaults, Value: on, ID: settings.brush
+	7 toggle button File Handling, Value: off, ID: settings.files
+	8 text Brush Defaults
+	9 scroll area Secondary Actions: Scroll Up, Scroll Down
+		10 text Brush Defaults Applies to documents created or opened next. Change the current tab on the options bar; existing strokes remain unchanged. Default Brush Size
+		11 text field (settable) Description: Default Brush Size, Value: 40, ID: settings.brushSize
+		12 slider (settable, float) Value: 40, ID: settings.brushSize.slider
+			13 value indicator (settable, float) 40
+		14 text px Default Hardness
+		15 text field (settable) Description: Default Hardness, Value: 80, ID: settings.brushHardness
+		16 slider (settable, float) Value: 80, ID: settings.brushHardness.slider
+			17 value indicator (settable, float) 80
+		18 text % Default Opacity
+		19 text field (settable) Description: Default Opacity, Value: 100, ID: settings.brushOpacity
+		20 slider (settable, float) Value: 100, ID: settings.brushOpacity.slider
+			21 value indicator (settable, float) 100
+		22 text %
+		23 checkbox Default Clone Stamp to Aligned, Value: 1, ID: settings.brushAligned
+		24 checkbox Show brush size outline on canvas, Value: 1, ID: settings.brushOutline
+		25 text Each tool keeps its pointer icon. Hide the brush outline to inspect details; Option with Clone Stamp still samples the source.
+		26 scroll bar (disabled, settable, float) 0
+	27 button Reset This Section, ID: settings.resetSection
+	28 text Valid preferences are saved automatically.
+	29 button Close, ID: settings.done
+	30 close button
+	31 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	32 text Settings…
+33 menu bar
+	34 PhotoAxis Preferences9-Final en
+	35 File
+	36 Edit
+	37 Image
+	38 Layer
+	39 Type
+	40 View
+	41 Window
+	42 Help
+
+The focused UI element is 0 standard window Settings…, ID: settings.window, Secondary Actions: Raise

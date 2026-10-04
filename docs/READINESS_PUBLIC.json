@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": "8",
+  "build": "9",
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
@@ -32,9 +32,10 @@
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/ci-summary.json",
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
-    "reason": "19/43 baseline acceptance belongs to build3;24 remain open, not full build8 acceptance. Build8 local201total197PASS/1knownTelexFAIL/3benchmarkSKIP;10new active-canvas/cursor testsPASS. GitHubCI831ef1a macOS15.7.9/Xcode16.4:201total196PASS/0FAIL/5SKIP,10newPASS,Debug/test/ReleasePASS. Scoped final nativeVIEN active-tab routing/derived savecase/reopen/verify,calibration50mm,PNG redaction/Crop cancel checked;independent10event/source/archive/model/pixel auditPASS. Final native OCR cold did not complete;pre-save-guard3lineOCR is separate scope. Exact NSCursor image/current/hotspots/modifiers/Space/allhandles checked hosted;CUA screenshot is not OS cursor bitmap evidence. Remaining IME/VNI/native/input-to-present/macOS14/non-Retina/M1-16GB/fullquota/Metal-QoS/OCRcold/realdata/Scan/Paint qualification remains open."
+    "reason": "19/43 belongs to build3; full build9 acceptance not repeated. Local210:206PASS/1known syntheticTelexFAIL/3benchmarkSKIP;9newPASS. CI d9aad0c macOS15.7.9/Xcode16.4:210total205PASS/0FAIL/5SKIP,9newPASS;Debug/test/ReleasePASS. Final Release VIEN6pages/theme/relaunch/independentinvalidquality/exportJPEG/OCRcancel/compare/reopen + independent source/ZIP/pixel/profile audit PASS scoped. Separate3benchPASS before final Settings-only validation:5tabfullquota lifecycle/recovery checked,Perspectiveworker23% within33.333ms,notnativeFPS. Remaining target/IME/physicalinput-to-present/Metal-QoS/coldOCR/realdata/Scan/Paint/fullacceptance/signing/install qualification remains open."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -51,9 +52,10 @@
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/build-manifest.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
-    "reason": "Local build8 Release UUID43209510-3056-3E94-AF2B-25E5AAB23E0D,ad-hoc arm64/minOS14 verified;QA copies match Release UUID/Core. Final DeveloperID/full acceptance missing."
+    "reason": "Build9 local Release UUID7071B413-36F3-3955-B896-7BA783D2A75F arm64/minOS14/ad-hoc verified; QA UUID/Core matches. Final DeveloperID/full acceptance missing."
   },
   "R04": {
     "status": "BLOCKED_EXTERNAL",
@@ -87,7 +89,8 @@
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/distribution-manifest.json",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
     "reason": "Build8 localDMG source-clean a4e44de SHAa2525c73714e63629e075afd08dcc979b09b66a5d5fdd380be62f6875aaa2080;mount/tree/codesign/GPL/source notice/detach/copyhashPASS;binary/Core/UUID match tested Release. DeveloperID/notarization/cleanGatekeeper installation missing."
   },
@@ -101,7 +104,8 @@
   "R08": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
-      "docs/bao-cao/P12.md"
+      "docs/bao-cao/P12.md",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
     "reason": "Scoped baseline/Investigation1 history and current Investigation2 synthetic native workflow are checked; signed clean/offline/upgrade installation on supported target systems remains unverified."
   },
@@ -118,7 +122,8 @@
       "docs/bao-cao/PAINT_LIVE_2026-10-03.md",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
     "reason": "Public VIEN source/GPLv3/Issues and build8 active-canvas investigation/native-cursor guides deployed at831ef1a;27HTTPS files/hash/commitPASS. Signed installer/legal publisher gate remains open;stable download disabled."
   },
@@ -131,7 +136,8 @@
       "docs/bao-cao/bang-chung/PAINT-LIVE-20261003/pages-https.json",
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/pages-https.json",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
     "reason": "Build8 anonymousHTTPS27files/hash/commit831ef1a PASS on GitHub runner. Signed installer HTTP download/clean installation missing."
   },
@@ -143,7 +149,8 @@
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
-      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json"
+      "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json",
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
     ],
     "reason": "Build8 cleanDMG a4e44de matches tested binary/Core/UUID/source fingerprint831ef1a;nativeCI201total196PASS/0FAIL/5SKIP,10newPASS;scoped native/output auditPASS with final OCRcold uncompleted;Pages27files/hash/commit831ef1aPASS. Final signed artifact/tag/full acceptance missing."
   },

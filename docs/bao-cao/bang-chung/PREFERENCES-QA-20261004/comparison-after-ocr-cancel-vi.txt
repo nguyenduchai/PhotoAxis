@@ -1,0 +1,14 @@
+The following is a diff from the previous accessibility tree for Window: "open-image-fixture.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~		176 text ID: workspace.analysisStatus, Value: open-image-fixture.png
+Đang dùng canvas của tab này. Phiên phân tích tạm; lưu thành hồ sơ để giữ kết quả.
++	186 nút Quay lại chỉnh sửa, ID: workspace.returnEditor
++	187 text Lúc mở tab (trái) / canvas hiện tại (phải). Đây là đối chiếu bản dựng, không phải xác nhận byte ảnh gốc tiếp nhận. Kéo/pinch di chuyển và zoom chung.
++	188 hộp kiểm Thanh trước/sau, Value: 0
++	189 thanh trượt (settable, float) Value: 0.5, ID: investigation.comparison.split
++		190 chỉ báo giá trị (settable, float) 0.5
++	191 nút Đặt lại
++	192 nút −, Description: Thu nhỏ ảnh so sánh
++	193 text 100 %
++	194 nút +, Description: Phóng to ảnh so sánh
++	195 text open-image-fixture.png — PhotoAxis
+The focused UI element is 68 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

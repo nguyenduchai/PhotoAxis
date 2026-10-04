@@ -1,0 +1,46 @@
+Window: "Cài đặt…", App: PhotoAxis.
+0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise
+	1 text Cài đặt PhotoAxis
+	2 nút chuyển đổi Chung, Value: off, ID: settings.general
+	3 nút chuyển đổi Giao diện, Value: off, ID: settings.interface
+	4 nút chuyển đổi Workspace, Value: off, ID: settings.workspace
+	5 nút chuyển đổi Canvas, Value: off, ID: settings.canvas
+	6 nút chuyển đổi Cọ mặc định, Value: on, ID: settings.brush
+	7 nút chuyển đổi Lưu và xuất tệp, Value: off, ID: settings.files
+	8 text Cọ mặc định
+	9 vùng cuộn Secondary Actions: Scroll Up, Scroll Down
+		10 text Cọ mặc định Áp dụng khi tạo hoặc mở tài liệu tiếp theo. Cọ của tab hiện tại chỉnh trực tiếp trên thanh tùy chọn; các nét đã vẽ giữ nguyên. Cỡ cọ mặc định
+		11 trường văn bản (settable) Description: Cỡ cọ mặc định, Value: 40, ID: settings.brushSize
+		12 thanh trượt (settable, float) Value: 40, ID: settings.brushSize.slider
+			13 chỉ báo giá trị (settable, float) 40
+		14 text px Độ cứng mặc định
+		15 trường văn bản (settable) Description: Độ cứng mặc định, Value: 80, ID: settings.brushHardness
+		16 thanh trượt (settable, float) Value: 80, ID: settings.brushHardness.slider
+			17 chỉ báo giá trị (settable, float) 80
+		18 text % Độ đậm mặc định
+		19 trường văn bản (settable) Description: Độ đậm mặc định, Value: 100, ID: settings.brushOpacity
+		20 thanh trượt (settable, float) Value: 100, ID: settings.brushOpacity.slider
+			21 chỉ báo giá trị (settable, float) 100
+		22 text %
+		23 hộp kiểm Clone Stamp mặc định giữ độ lệch, Value: 1, ID: settings.brushAligned
+		24 hộp kiểm Hiện vòng tròn kích thước cọ trên canvas, Value: 1, ID: settings.brushOutline
+		25 text Biểu tượng của từng công cụ luôn được giữ. Vòng tròn cọ có thể ẩn để dễ quan sát chi tiết; Option với Clone Stamp vẫn chọn nguồn mẫu.
+		26 thanh cuộn (disabled, settable, float) 0
+	27 nút Đặt lại nhóm hiện tại, ID: settings.resetSection
+	28 text Tự lưu các lựa chọn hợp lệ.
+	29 nút Đóng, ID: settings.done
+	30 nút đóng
+	31 nút toàn màn hình Help: nút này cũng có tác vụ thu phóng cửa sổ, Secondary Actions: thu phóng cửa sổ
+	32 text Cài đặt…
+33 menu bar
+	34 PhotoAxis Preferences9-Final vi
+	35 Tệp
+	36 Chỉnh sửa
+	37 Ảnh
+	38 Lớp
+	39 Văn bản
+	40 Xem
+	41 Cửa sổ
+	42 Trợ giúp
+
+The focused UI element is 0 cửa sổ thông thường Cài đặt…, ID: settings.window, Secondary Actions: Raise

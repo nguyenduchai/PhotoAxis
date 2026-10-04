@@ -1,0 +1,36 @@
+Window: "Xuất ảnh…", App: PhotoAxis.
+0 tờ Secondary Actions: Raise
+	1 hình ảnh Xem trước ảnh xuất
+	2 text Định dạng
+	3 nút bật lên Description: Định dạng, Value: JPEG
+	4 text Chiều rộng (px)
+	5 trường văn bản (settable) Description: Chiều rộng (px), Value: 1600
+	6 text Chiều cao (px)
+	7 trường văn bản (settable) Description: Chiều cao (px), Value: 640
+	8 text Mật độ (PPI)
+	9 trường văn bản (settable) Description: Mật độ (PPI), Value: 72
+	10 text Chất lượng JPEG (1–100)
+	11 trường văn bản (settable) Description: Chất lượng JPEG (1–100), Value: 74
+	12 text Màu nền đặc
+	13 bảng màu Description: Màu nền đặc, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+	14 hộp kiểm Giữ tỷ lệ, Value: 0
+	15 hộp kiểm (disabled) PNG: giữ vùng trong suốt, Value: 1
+	16 text Xuất sRGB 8 bit, ICC và PPI; chỉ gồm layer hiển thị. Không thay đổi canvas, nguồn ảnh hoặc trạng thái lưu dự án.
+	17 nút Hủy
+	18 nút Chọn nơi lưu…
+19 menu bar
+	20 PhotoAxis Preferences9-Final vi
+	21 Tệp
+	22 Chỉnh sửa
+	23 Ảnh
+	24 Lớp
+	25 Văn bản
+	26 Xem
+	27 Cửa sổ
+	28 Trợ giúp
+
+Selected text: ```
+1600
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

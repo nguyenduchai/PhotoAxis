@@ -1,0 +1,61 @@
+{
+  "configuration" : "Release arm64; 6000x4000 synthetic JPEG on internal SSD; worker prepare through completed usable viewport bitmap, excludes SavePanel and desktop presentation",
+  "export" : {
+    "count" : 5,
+    "maximumSeconds" : 0.49079275000258349,
+    "medianSeconds" : 0.38405512500321493,
+    "p95Seconds" : 0.49079275000258349,
+    "samplesSeconds" : [
+      0.36820433332468383,
+      0.37893104166141711,
+      0.41496866666420829,
+      0.49079275000258349,
+      0.38405512500321493
+    ]
+  },
+  "exportGoalMet" : true,
+  "exportGoalSeconds" : 10,
+  "fixtureSHA256" : "a72af49f16aae3ca478d926ccbf4b61bd99dc3e13f33fedde11b80410a7a8611",
+  "memorySnapshots" : [
+    {
+      "metalCurrentAllocatedBytes" : 156909568,
+      "processHighWaterRSSBytes" : 470401024,
+      "residentBytes" : 438550528
+    },
+    {
+      "metalCurrentAllocatedBytes" : 156909568,
+      "processHighWaterRSSBytes" : 534511616,
+      "residentBytes" : 454443008
+    },
+    {
+      "metalCurrentAllocatedBytes" : 156909568,
+      "processHighWaterRSSBytes" : 550404096,
+      "residentBytes" : 471138304
+    },
+    {
+      "metalCurrentAllocatedBytes" : 156909568,
+      "processHighWaterRSSBytes" : 567115776,
+      "residentBytes" : 486064128
+    },
+    {
+      "metalCurrentAllocatedBytes" : 156909568,
+      "processHighWaterRSSBytes" : 582041600,
+      "residentBytes" : 500924416
+    }
+  ],
+  "open" : {
+    "count" : 5,
+    "maximumSeconds" : 0.15238870833127294,
+    "medianSeconds" : 0.10375808333628811,
+    "p95Seconds" : 0.15238870833127294,
+    "samplesSeconds" : [
+      0.0976609166682465,
+      0.093386041669873521,
+      0.15238870833127294,
+      0.10375808333628811,
+      0.13148666667984799
+    ]
+  },
+  "openGoalSeconds" : 3,
+  "openWorkerGoalMet" : true
+}

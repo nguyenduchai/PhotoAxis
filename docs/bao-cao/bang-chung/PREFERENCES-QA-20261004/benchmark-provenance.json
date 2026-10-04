@@ -1,0 +1,8 @@
+{
+  "compiledProductCodeCommit": "fd3643294555745bc31aece12e26b9b4bdbcff06",
+  "benchmarkReleaseUUID": "039B3474-A971-35B0-9D45-5771C6D220B2",
+  "testability": true,
+  "scope": "3 Release worker/lifecycle benchmark cases; run before final Settings-only validation fix, renderer/model/lifecycle unchanged; not physical input-to-present or target hardware acceptance",
+  "host": "Apple M1 Pro / 32GB / macOS27.0.1 / Xcode27",
+  "newSettingsValidationChangeExcluded": true
+}

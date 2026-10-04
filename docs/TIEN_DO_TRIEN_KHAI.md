@@ -1,5 +1,15 @@
 # PhotoAxis — Tiến độ thực hiện
 
+## Cài đặt và kiểm thử toàn ứng dụng — build9, 04/10/2026
+
+**DONE triển khai local:** thiết kế lại Cài đặt native theo danh mục trái/nhóm nội dung phải với6nhóm; **Tối/Sáng/Theo hệ thống** áp dụng ngay/lưu qua mở lại. Thêm vòng cọ, recovery10/30/60giây, PNG/JPEG/quality/linkdefaults; reset riêng nhóm. Sửa màu surface/border cố định, hủyOCR/late results/oneworker và qualitysai không chặn lưu các tùy chọn khác.
+
+- Fullsuite **210tổng:206PASS/1FAILTelex đã biết/3SKIPbenchmark**,9ca mớiPASS. Release/inventory/localization564khóa453refs/16policy/12websitepagesPASS. CI Xcode16.4/macOS15.7.9: **205PASS/0FAIL/5SKIP**,210tổng,9ca mớiPASS; Debug/test/ReleasePASS.
+- Benchmark riêng3PASS:24MPopenmedian0,104s/PNGexport0,384s;5tabfullquota recovery14,69s/40MPexport1,463s. Perspectivecornerworkerchỉ23%≤33,333ms; PERF-03/máyđích/nativeFPS không đóng. Benchmark trước sửaSettings-onlyvalidation,provenanceUUID riêng.
+- Releasecuối VIEN12categorycaptures/theme/relaunch/NaNquality→recovery30/nativeJPEG74linkoff/OCRApply→Cancel→Compare/reopenproject kiểm xong. AuditZIPschema4/twolayers/sourcebytes/CRC/JPEGsRGB72PPI/noGPSPASS. OCRcompletioncold chưa xác minh; minimumlayout chỉhosted, native940×660pt.
+- [Báo cáo đầy đủ](bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md), [Cài đặt](HUONG_DAN_CAI_DAT.md), [bằng chứng](bao-cao/bang-chung/PREFERENCES-QA-20261004/README.md), [CI](bao-cao/bang-chung/PREFERENCES-QA-20261004/ci-summary.json). DMG/Pages receipt được chốt riêng sau đóng gói.
+- `releaseReady=false`;19/43thuộcbuild3lịch sử; IME/máyđích/performance/Metal-QoS/OCRcold/realdata/fullacceptance/DeveloperID/notary/cài sạch vẫn mở. Baseline9DONE/7BLOCKED_EXTERNAL/P16khi cần không đổi.
+
 ## Phân tích ảnh đang mở và con trỏ native — build8, 04/10/2026
 
 **DONE triển khai local:** Phân tích/Đầu ra theo tab đang mở, snapshot committed canvas cho tab thường; lưu phân tích thành `.paxcase` ghi rõ nguồn dựng, giữ nguyên `.paxis`, History và nguồn. Con trỏ NSCursor theo tool/handle/Option/Space/drag, giữ vòng cọ. Đã sửa lỗi guard chặn đích hồ sơ mới; Save/Open native cuối PASS.

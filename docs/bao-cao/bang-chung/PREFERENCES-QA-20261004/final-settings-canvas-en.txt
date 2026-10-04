@@ -1,0 +1,36 @@
+Window: "Settings…", App: PhotoAxis.
+0 standard window Settings…, ID: settings.window, Secondary Actions: Raise
+	1 text PhotoAxis Settings
+	2 toggle button General, Value: off, ID: settings.general
+	3 toggle button Interface, Value: off, ID: settings.interface
+	4 toggle button Workspace, Value: off, ID: settings.workspace
+	5 toggle button Canvas, Value: on, ID: settings.canvas
+	6 toggle button Brush Defaults, Value: off, ID: settings.brush
+	7 toggle button File Handling, Value: off, ID: settings.files
+	8 text Canvas
+	9 scroll area Secondary Actions: Scroll Up, Scroll Down
+		10 text Canvas Workspace Background
+		11 pop up button Description: Workspace Background, Value: Dark Gray, ID: settings.background
+		12 checkbox Show Transparency Grid, Value: 1, ID: settings.transparency
+		13 text Transparency Grid Size
+		14 pop up button Description: Transparency Grid Size, Value: Medium (8 pt), ID: settings.gridSize
+		15 text Applies immediately to the display. Workspace backgrounds and transparency grids are not written into exports, projects or originals.
+		16 scroll bar (disabled, settable, float) 0
+	17 button Reset This Section, ID: settings.resetSection
+	18 text Valid preferences are saved automatically.
+	19 button Close, ID: settings.done
+	20 close button
+	21 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	22 text Settings…
+23 menu bar
+	24 PhotoAxis Preferences9-Final en
+	25 File
+	26 Edit
+	27 Image
+	28 Layer
+	29 Type
+	30 View
+	31 Window
+	32 Help
+
+The focused UI element is 0 standard window Settings…, ID: settings.window, Secondary Actions: Raise

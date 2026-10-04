@@ -1,0 +1,11 @@
+The following is a diff from the previous accessibility tree for Window: "open-image-fixture.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 199-200
+~	99 text Help: Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký., Value: Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký. sRGB px, ID: workspace.taskStatus
+~		176 text ID: workspace.analysisStatus, Value: Đã hủy OCR. Không ghi kết quả chưa hoàn tất vào nhật ký. open-image-fixture.png
+Đang dùng canvas của tab này. Phiên phân tích tạm; lưu thành hồ sơ để giữ kết quả.
+~		177 nút Lưu phân tích thành hồ sơ…, ID: investigation.saveCurrentAnalysis
+~		178 nút Đối chiếu trước/sau, ID: investigation.compare
+~		179 nút Thêm chú thích…, ID: investigation.annotate
+~		180 nút OCR tiếng Việt…, ID: investigation.ocr
+~		183 nút Hiệu chuẩn đo…, ID: investigation.calibrate
+The focused UI element is 68 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise

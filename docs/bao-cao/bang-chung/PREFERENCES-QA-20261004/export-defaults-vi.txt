@@ -1,0 +1,26 @@
+The following is a diff from the previous accessibility tree for Window: "Xuất ảnh…" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 87-132
+~68 tờ Secondary Actions: Raise
+~	69 hình ảnh Xem trước ảnh xuất
+~	70 text Định dạng
+~	71 nút bật lên Description: Định dạng, Value: JPEG
+~	72 text Chiều rộng (px)
+~	73 trường văn bản (settable) Description: Chiều rộng (px), Value: 1600
+~	74 text Chiều cao (px)
+~	75 trường văn bản (settable) Description: Chiều cao (px), Value: 640
+~	76 text Mật độ (PPI)
+~	77 trường văn bản (settable) Description: Mật độ (PPI), Value: 72
+~	78 text Chất lượng JPEG (1–100)
+~	79 trường văn bản (settable) Description: Chất lượng JPEG (1–100), Value: 74
+~	80 text Màu nền đặc
+~	81 bảng màu Description: Màu nền đặc, Value: rgb 1 1 1 1, Secondary Actions: Hiển thị bảng màu
+~	82 hộp kiểm Giữ tỷ lệ, Value: 0
+~	83 hộp kiểm (disabled) PNG: giữ vùng trong suốt, Value: 1
+~	84 text Xuất sRGB 8 bit, ICC và PPI; chỉ gồm layer hiển thị. Không thay đổi canvas, nguồn ảnh hoặc trạng thái lưu dự án.
+~	85 nút Hủy
+~	86 nút Chọn nơi lưu…
+Selected text: ```
+1600
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

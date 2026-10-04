@@ -1,3 +1,15 @@
+# Phạm vi bản phát triển build9 — 04/10/2026
+
+Cài đặt native sáu nhóm có Tối/Sáng/Theo hệ thống; theme/liveworkspace không sửa pixel hoặc History. Recovery luôn bật10/30/60giây, đổi từ chu kỳ chờ tiếp theo. Exportdefaults chỉ ảnh hưởng hộp thoại mở mới. Ngôn ngữ cần khởi động lại; cọ mặc định chỉ áp tài liệu thêm mới. Reset chỉ nhóm hiện tại.
+
+OCR đã có **Hủy nhận dạng chữ**, bỏ kết quả muộn và không ghi audit chưa hoàn tất. macOS có thể chưa dừng worker ngay; OCR mới báo bận cho đến worker thoát, chỉnh sửa vẫn hoạt động. Cold/warmruntime/mọiOS/máyđích vẫn chưa đạt qualification; không dùng nút hủy làm bằng chứng OCRcoldhoàn tất. Lịch sử build8 bên dưới mô tả tình trạng trước sửa.
+
+Fullsuite210ca206PASS/1FAILTelexmôphỏng/3SKIPbenchmark; CI205PASS/0FAIL/5SKIP do không cóTelexcontext và desktopgiới hạn. Không bỏ FAILlocal. Benchmarkriêng3PASS nhưng Perspectiveworker23%≤33,333ms chưa đạt mục tiêu và không là nativeFPS. MDB_MAP_FULL/Metal-QoS tiếp tục đánh giá. Minlayout chỉ kiểm hosted; resizeattempt native chưa thành công. A01–A43/máyđích macOS14/non-Retina/M1-16GB/IMEVNI/realdata/Scan/Paint/fullquota/cài sạch/DeveloperID/notary tiếp tục mở.19/43làbuild3lịch sử.
+
+[Báo cáo build9](bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md), [Cài đặt](HUONG_DAN_CAI_DAT.md).
+
+---
+
 # Phạm vi bản phát triển build8 — 04/10/2026
 
 Phân tích/Đầu ra dùng tab đang mở; với tab thường, nguồn phân tích là PNG dựng từ committed canvas. Chốt/cancel draft Crop/Scan/chữ trước khi phân tích. Lưu phiên thành hồ sơ để giữ OCR/đo/vùng che/log; chưa recovery phiên tạm sau crash. Sửa canvas phải phân tích/hiệu chuẩn/rà soát lại; hồ sơ snapshot đã lưu không tự cập nhật theo tab thường. OCR tab hồ sơ vẫn dùng nguồn tiếp nhận; tab thường dùng canvas hiện tại. Checkpoint so sánh tab thường giữ lúc mở tab, tăng lifetime nguồn COW cho tới khi đóng tab; maximum quota/performance vẫn cần qualification. Không nhận bản dựng là file gốc hay đầy đủ lịch sử trước tiếp nhận.

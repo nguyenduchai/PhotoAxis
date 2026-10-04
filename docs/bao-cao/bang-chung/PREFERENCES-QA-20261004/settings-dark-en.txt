@@ -1,0 +1,36 @@
+Window: "Settings…", App: PhotoAxis.
+0 standard window Settings…, ID: settings.window, Secondary Actions: Raise
+	1 text PhotoAxis Settings
+	2 toggle button General, Value: off, ID: settings.general
+	3 toggle button Interface, Value: on, ID: settings.interface
+	4 toggle button Workspace, Value: off, ID: settings.workspace
+	5 toggle button Canvas, Value: off, ID: settings.canvas
+	6 toggle button Brush Defaults, Value: off, ID: settings.brush
+	7 toggle button File Handling, Value: off, ID: settings.files
+	8 text Interface
+	9 scroll area Secondary Actions: Scroll Up, Scroll Down
+		10 text Color Theme
+		11 Description: Color Theme, ID: settings.theme
+			12 radio button Description: Use System, Value: 0
+			13 radio button Description: Dark, Value: 1
+			14 radio button Description: Light, Value: 0
+		15 text Applies immediately to windows, panels, toolbars and dialogs. Use System follows macOS appearance changes. Display and Image Color The interface theme is independent of the canvas surround and transparency grid. Display preferences do not change image pixels, edit history or exported colors.
+		16 scroll bar (disabled, settable, float) 0
+	17 button Reset This Section, ID: settings.resetSection
+	18 text Valid preferences are saved automatically.
+	19 button Close, ID: settings.done
+	20 close button
+	21 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	22 text Settings…
+23 menu bar
+	24 PhotoAxis Preferences9 en
+	25 File
+	26 Edit
+	27 Image
+	28 Layer
+	29 Type
+	30 View
+	31 Window
+	32 Help
+
+The focused UI element is 0 standard window Settings…, ID: settings.window, Secondary Actions: Raise

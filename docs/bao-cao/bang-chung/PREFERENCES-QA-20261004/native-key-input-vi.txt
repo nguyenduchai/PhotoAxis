@@ -1,0 +1,18 @@
+The following is a diff from the previous accessibility tree for Window: "open-image-fixture.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 136-137, 174-185
+~		133 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: tieengs vieetj 
++	199 nút chuyển đổi open-image-fixture.png •, Value: on
++	200 nút Đóng tab
++			201 row (selected)
++				202 ô (selected)
++					203 nút Description: Ẩn/hiện lớp: Chữ, Help: Ẩn/hiện lớp
++					204 hình ảnh
++					205 text Help: Chữ, Value: Chữ Chữ
++					206 nút Description: Khóa/mở khóa lớp: Chữ, Help: Khóa/mở khóa lớp
++			207 row (selectable)
++				208 ô
++					209 nút Description: Ẩn/hiện lớp: open-image-fixture.png, Help: Ẩn/hiện lớp
++					210 hình ảnh
++					211 text Help: open-image-fixture.png, Value: open-image-fixture.png Ảnh
++					212 nút Description: Khóa/mở khóa lớp: open-image-fixture.png, Help: Khóa/mở khóa lớp
+The focused UI element is 133 vùng nhập văn bản (settable) Description: Nội dung chữ, Value: tieengs vieetj 

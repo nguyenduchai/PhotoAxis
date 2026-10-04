@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "build": "8",
+  "build": "9",
   "specification": "1.0-draft.3",
   "schemaVersion": 1,
-  "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
-  "sourceFingerprintSHA256": "98ef8ee6522f2a0f29c81945a310536a2ed50c59e7950ab4ab218f2728897bc0",
-  "releaseBinaryUUID": "43209510-3056-3E94-AF2B-25E5AAB23E0D",
-  "binarySHA256": "67c4067068eb20df7beb93e12cf89da523b6bfc59c50f085aa2a01d9f282c76b",
-  "coreFrameworkSHA256": "17cb7225890bff1a800526efcd1ded903850143b818f408b4e920b120920f593",
+  "sourceCommit": "d9aad0cb8bec16394a56bd4fbdc734c55b98920a",
+  "sourceFingerprintSHA256": "6e37e03155d82dea9b682a5cbe42592140b0889ae455c14311c14a79a205c46d",
+  "releaseBinaryUUID": "7071B413-36F3-3955-B896-7BA783D2A75F",
+  "binarySHA256": "9aaa89a3cf6f17f6bf8b11bda33a435b4d81903231f406e2a42408175e7639d7",
+  "coreFrameworkSHA256": "92e1657577e1ab58ce1d28aca824cd7218dfad73aeb3b3894f39cc88fa5aa6a6",
   "architecture": "arm64",
   "minimumOS": "14.0",
   "signing": "local-ad-hoc",
@@ -19,7 +19,7 @@
     "A22 incomplete: VNI, EN target input context and full composition/shortcut qualification; partial real VI Telex conversion evidence available",
     "macOS14/non-Retina target runtime",
     "M1/16GB benchmark or explicitly approved scope change",
-    "PERF-03: build3 perspective corner worker31% samples within33.333ms; native FPS not measured",
+    "PERF-03: build9 perspective corner worker23% samples within33.333ms; native FPS not measured",
     "Metal/QoS warnings evaluation",
     "investigation full-quota and supported-target runtime/performance qualification",
     "runtime Vietnamese OCR availability and cold/warm behavior on supported macOS targets",
@@ -28,7 +28,7 @@
     "Scan real camera/book/thin-stroke and maximum50page batch/supported-target qualification",
     "Paint full-quota and input-to-present performance on supported target systems"
   ],
-  "evidence": "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
+  "evidence": "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/build-manifest.json",
   "investigationSpecification": "Investigation 2 (includes Investigation 1)",
   "investigationProjectSchemaVersion": 2,
   "caseSchemaVersion": 2,
@@ -38,8 +38,8 @@
   "acceptanceOpen": 24,
   "benchmarkEvidence": "docs/bao-cao/bang-chung/P12-native2/manifest.json",
   "latestLocalFullSuite": {
-    "total": 201,
-    "passed": 197,
+    "total": 210,
+    "passed": 206,
     "failed": 1,
     "skipped": 3
   },
@@ -51,7 +51,7 @@
   "scanSpecification": "Scan 1",
   "scanProjectSchemaVersion": 3,
   "scanEvidence": "docs/bao-cao/SCAN_2026-10-03.md",
-  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build8",
+  "baselineAcceptanceScope": "19/43 from build3; full acceptance has not been repeated on build9",
   "previousCandidateBuild4": {
     "sourceCommit": "4947ff7f821929a4982085a5611442f3ccfe20e8",
     "releaseBinaryUUID": "8A2E6A7C-4058-391B-A8F6-24F1BB32D380",
@@ -60,26 +60,26 @@
   "workspaceIntegrationEvidence": "docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md",
   "latestNativeCI": {
     "status": "PASS",
-    "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
-    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37142191499",
+    "sourceCommit": "d9aad0cb8bec16394a56bd4fbdc734c55b98920a",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37162821992",
     "counts": {
-      "passed": 196,
+      "passed": 205,
       "failed": 0,
       "skipped": 5
     },
-    "total": 201,
+    "total": 210,
     "os": "15.7.9",
     "xcode": "16.4",
     "debugTest": "PASS",
     "releaseBuild": "PASS",
     "skipScope": [
-      "3opt-inbenchmarks",
-      "realVietnameseinputcontext",
-      "largeworkspacefixture"
+      "3 opt-in benchmarks",
+      "Vietnamese Telex input context unavailable on runner",
+      "large workspace fixture constrained by runner desktop"
     ],
     "qualificationGatesUnchanged": true,
-    "newOpenImageCursorTestsPassed": 10,
-    "countDerivation": "23CoreXCTest+33SwiftTesting+145AppXCTest;5AppSKIP,0FAIL"
+    "newPreferencesAndOCRTestsPassed": 9,
+    "countDerivation": "23 Core XCTest + 33 Swift Testing + 154 App XCTest; 5 App skipped, 0 failed"
   },
   "previousCandidateBuild5": {
     "sourceCommit": "218b788d04fb0bb6abd8bf3516e49409265eb435",
@@ -188,5 +188,45 @@
     "newWorkspaceRefinementTestsPassed": 7,
     "countDerivation": "23CoreXCTest+33SwiftTesting+135AppXCTest;5AppSKIP,0FAIL"
   },
-  "openImageCursorEvidence": "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md"
+  "openImageCursorEvidence": "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
+  "previousCandidateBuild8": {
+    "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
+    "releaseBinaryUUID": "43209510-3056-3E94-AF2B-25E5AAB23E0D",
+    "evidence": "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json"
+  },
+  "previousNativeCIBuild8": {
+    "status": "PASS",
+    "sourceCommit": "831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8",
+    "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37142191499",
+    "counts": {
+      "passed": 196,
+      "failed": 0,
+      "skipped": 5
+    },
+    "total": 201,
+    "os": "15.7.9",
+    "xcode": "16.4",
+    "debugTest": "PASS",
+    "releaseBuild": "PASS",
+    "skipScope": [
+      "3opt-inbenchmarks",
+      "realVietnameseinputcontext",
+      "largeworkspacefixture"
+    ],
+    "qualificationGatesUnchanged": true,
+    "newOpenImageCursorTestsPassed": 10,
+    "countDerivation": "23CoreXCTest+33SwiftTesting+145AppXCTest;5AppSKIP,0FAIL"
+  },
+  "preferencesEvidence": "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+  "latestBenchmarkBuild9": {
+    "evidence": "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/benchmark-summary.json",
+    "provenance": "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/benchmark-provenance.json",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "perspectiveWorkerSamplesWithin33msPercent": 23,
+    "nativeInputToPresentVerified": false,
+    "targetHardwareQualified": false,
+    "beforeFinalSettingsOnlyValidationFix": true
+  }
 }

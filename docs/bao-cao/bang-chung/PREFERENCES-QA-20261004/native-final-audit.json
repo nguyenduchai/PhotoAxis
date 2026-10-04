@@ -1,0 +1,44 @@
+{
+  "build": 9,
+  "binaryUUID": "7071B413-36F3-3955-B896-7BA783D2A75F",
+  "scope": "Final Release reopened the previously saved Brush project and performed new JPEG export; original Brush/Undo/Redo creation was prototype before final independent file preference validation fix",
+  "project": {
+    "schemaVersion": 4,
+    "layers": 2,
+    "brushStrokes": 1,
+    "CRC": "PASS",
+    "originalBytesUnchanged": true,
+    "sourceSHA256": "b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24",
+    "projectSHA256": "f801bb22c75de6b55b34a59683dffe2f4903dfbb646d5a2cae9359608ef23911"
+  },
+  "export": {
+    "size": [
+      1600,
+      640
+    ],
+    "mode": "RGB",
+    "icc": "sRGB",
+    "dpi": [
+      72.0,
+      72.0
+    ],
+    "noGPS": true,
+    "blackBrushVisible": true,
+    "sha256": "1b19ac67fd1096e58f441efd99f8d81c6eb674e11c18097806e945f975c4f126"
+  },
+  "savedPreferences": {
+    "interfaceAppearance": "dark",
+    "files": {
+      "recoverySeconds": 30,
+      "exportJPEG": true,
+      "jpegQuality": 74,
+      "linkExportDimensions": false
+    }
+  },
+  "ocrCancel": {
+    "observed": true,
+    "roundtripMs": 554,
+    "nativeRecognitionCompletionVerified": false
+  },
+  "result": "PASS_SCOPED"
+}

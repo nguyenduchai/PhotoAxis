@@ -1,0 +1,6 @@
+The following is a diff from the previous accessibility tree for Window: "open-image-fixture.png — PhotoAxis" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 187-198, 200-204
+~		176 text Value: Đang xử lý hồ sơ…, ID: workspace.analysisStatus
++		200 nút Hủy nhận dạng chữ, ID: investigation.cancelOCR
+~		185 thanh cuộn (disabled, settable, float) 0
+The focused UI element is 68 cửa sổ thông thường open-image-fixture.png — PhotoAxis, ID: workspace.window, Secondary Actions: Raise
