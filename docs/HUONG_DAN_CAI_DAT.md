@@ -5,7 +5,7 @@ Mở **PhotoAxis → Cài đặt…** bằng **Cmd+,**. Danh mục nằm bên tr
 | Danh mục | Tùy chọn và tác dụng |
 |---|---|
 | Chung | Ngôn ngữ Theo hệ thống / Tiếng Việt / English; cần khởi động lại. Hiện version/build và phím tắt. |
-| Giao diện | **Theo hệ thống / Tối / Sáng**, áp dụng ngay cho cửa sổ, bảng, thanh công cụ và hộp thoại. Theo hệ thống bỏ appearance override để AppKit tự theo macOS. |
+| Giao diện | **Theo hệ thống / Tối / Sáng**, áp dụng ngay cho cửa sổ, bảng, thanh công cụ và hộp thoại. Theo hệ thống tự theo chế độ giao diện của macOS. |
 | Workspace | Độ rộng bảng 260–420 pt, thanh công cụ một/hai cột, hiện bảng phải, bật thước, đơn vị px/mm/cm/in theo PPI của tài liệu. |
 | Canvas | Nền vùng làm việc tối/vừa/sáng, hiện lưới trong suốt, cỡ ô nhỏ/vừa/lớn. Nền này độc lập với màu giao diện. |
 | Cọ mặc định | Cỡ 1–1000 px, độ cứng/đậm 0–100%, Clone Stamp giữ độ lệch; áp dụng khi tạo/mở tài liệu tiếp theo. Vòng kích thước cọ có thể ẩn/hiện ngay trên tab hiện tại; icon từng công cụ được giữ. |

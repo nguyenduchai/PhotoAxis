@@ -3,7 +3,7 @@
   "build": "9",
   "specification": "1.0-draft.3",
   "schemaVersion": 1,
-  "sourceCommit": "d9aad0cb8bec16394a56bd4fbdc734c55b98920a",
+  "sourceCommit": "b1828300ed9eaf54119bf7e01ec256364867cfff",
   "sourceFingerprintSHA256": "6e37e03155d82dea9b682a5cbe42592140b0889ae455c14311c14a79a205c46d",
   "releaseBinaryUUID": "7071B413-36F3-3955-B896-7BA783D2A75F",
   "binarySHA256": "9aaa89a3cf6f17f6bf8b11bda33a435b4d81903231f406e2a42408175e7639d7",
@@ -228,5 +228,7 @@
     "nativeInputToPresentVerified": false,
     "targetHardwareQualified": false,
     "beforeFinalSettingsOnlyValidationFix": true
-  }
+  },
+  "compiledProductCodeCommit": "d9aad0cb8bec16394a56bd4fbdc734c55b98920a",
+  "compiledSourceFingerprintSHA256": "d14b3484305d81d3f1ce055cddd90263c2b4bba26ba993ba63d894704ca7d8f3"
 }

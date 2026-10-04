@@ -6,4 +6,4 @@
 
 `build-manifest.json` ghi compiledProductCodeCommit và inventory fingerprint sau cập nhật số liệu website; chỉ scripts/build-website.py đổi sau compile, byte Sources/Tests/Config/Fixtures/project không đổi. QA bundleID/name/signature riêng nên executableSHA khác, UUID/Core bằng Release.
 
-Chỉ fixture tổng hợp được dùng trong ảnh. Paths được thay bằng $BUILD_ROOT/$REPO. DMG local ad-hoc và Pages có receipt riêng khi hoàn tất giao.
+Chỉ fixture tổng hợp được dùng trong ảnh. Paths được thay bằng $BUILD_ROOT/$REPO. DMG local ad-hoc và Pages có receipt riêng. pages-https.json kiểm75d446e; commitdocsreceipt cuối deploy/kiểm lại, proofHEAD cuối lưu ngoàiGit ở deliverydirectory tránh vòng lặp commitreceipt. Compiledsourcefingerprint trước thay website d14b... và inventory sau website6e37... được ghi riêng.

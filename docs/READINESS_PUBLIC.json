@@ -132,9 +132,10 @@
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json"
     ],
-    "reason": "Public VIEN source/GPLv3/Issues and build8 active-canvas investigation/native-cursor guides deployed at831ef1a;27HTTPS files/hash/commitPASS. Signed installer/legal publisher gate remains open;stable download disabled."
+    "reason": "Build9 VIEN website/preferences/themes/OCRcancel/verification report/source/GPLv3/Issues public deployed at75d446e;27anonymousHTTPS resources with file hashes/deployedcommit PASS. Signed installer/legal publisher gate remains open;stable download disabled."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
@@ -146,9 +147,10 @@
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/pages-https.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json"
     ],
-    "reason": "Build8 anonymousHTTPS27files/hash/commit831ef1a PASS on GitHub runner. Signed installer HTTP download/clean installation missing."
+    "reason": "Build9 anonymousHTTPS27resources/hash/commit75d446e PASS on GitHub runner. Final docs-only receipt commit receives another Pages verification in external delivery directory. Signed installer HTTP download/clean install missing."
   },
   "R11": {
     "status": "CHUA_KIEM_CHUNG",
@@ -162,9 +164,10 @@
       "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
-      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json"
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json"
     ],
-    "reason": "Build9 localDMG from clean checkout matches tested Release binary/Core/UUID; local206PASS/1knownTelexFAIL/3SKIP,CI205PASS/0FAIL/5SKIP,9newPASS;separate3benchPASS scoped;final nativeVIEN/preferences/appearance/export/cancel/reopen auditPASS. Fullacceptance/target/performance/IME/coldOCR/signing/install/tag remains open;source/website public,stable download disabled."
+    "reason": "Build9 localDMG from clean checkout matches tested Release binary/Core/UUID; local206PASS/1knownTelexFAIL/3SKIP,CI205PASS/0FAIL/5SKIP,9newPASS;separate3benchPASS scoped;final nativeVIEN/preferences/appearance/export/cancel/reopen auditPASS. Fullacceptance/target/performance/IME/coldOCR/signing/install/tag remains open;source/website public,stable download disabled. Pages27anonymousHTTPSresources/hash/commit75d446e PASS;finaldocs-onlyHEAD delivery proof saved externally after deploy."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

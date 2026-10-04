@@ -20,5 +20,6 @@
   "nativeScopeEvidence": "native-final-audit.json",
   "nativeCI": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37162821992",
   "cleanInstallVerified": false,
-  "notarized": false
+  "notarized": false,
+  "compiledSourceFingerprintSHA256": "d14b3484305d81d3f1ce055cddd90263c2b4bba26ba993ba63d894704ca7d8f3"
 }
