@@ -53,7 +53,10 @@
       "docs/bao-cao/WORKSPACE_UI_2026-10-03.md",
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/build-manifest.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json"
     ],
     "reason": "Build9 local Release UUID7071B413-36F3-3955-B896-7BA783D2A75F arm64/minOS14/ad-hoc verified; QA UUID/Core matches. Final DeveloperID/full acceptance missing."
   },
@@ -90,9 +93,12 @@
       "docs/bao-cao/bang-chung/WORKSPACE-UI-20261003/delivery-receipt.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json"
     ],
-    "reason": "Build8 localDMG source-clean a4e44de SHAa2525c73714e63629e075afd08dcc979b09b66a5d5fdd380be62f6875aaa2080;mount/tree/codesign/GPL/source notice/detach/copyhashPASS;binary/Core/UUID match tested Release. DeveloperID/notarization/cleanGatekeeper installation missing."
+    "reason": "Build9 localDMG source-clean 434af6b SHA5954347044c83397ea0183ed2cc9a058598668a9cad6acf3a48d1da1cc8bc5aa;mount/tree/codesign/GPL/source/detach/copyhashPASS;binary/Core/UUID match tested Release. DeveloperID/notary/Gatekeeper clean install missing."
   },
   "R07": {
     "status": "BLOCKED_EXTERNAL",
@@ -105,7 +111,10 @@
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
       "docs/bao-cao/P12.md",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json"
     ],
     "reason": "Scoped baseline/Investigation1 history and current Investigation2 synthetic native workflow are checked; signed clean/offline/upgrade installation on supported target systems remains unverified."
   },
@@ -150,9 +159,12 @@
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/delivery-receipt.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/native-audit.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json"
     ],
-    "reason": "Build8 cleanDMG a4e44de matches tested binary/Core/UUID/source fingerprint831ef1a;nativeCI201total196PASS/0FAIL/5SKIP,10newPASS;scoped native/output auditPASS with final OCRcold uncompleted;Pages27files/hash/commit831ef1aPASS. Final signed artifact/tag/full acceptance missing."
+    "reason": "Build9 localDMG from clean checkout matches tested Release binary/Core/UUID; local206PASS/1knownTelexFAIL/3SKIP,CI205PASS/0FAIL/5SKIP,9newPASS;separate3benchPASS scoped;final nativeVIEN/preferences/appearance/export/cancel/reopen auditPASS. Fullacceptance/target/performance/IME/coldOCR/signing/install/tag remains open;source/website public,stable download disabled."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

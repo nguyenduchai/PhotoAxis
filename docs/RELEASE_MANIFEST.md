@@ -1,4 +1,27 @@
-# DMG local hiện hành — build8 ảnh đang mở/con trỏ, 04/10/2026
+# DMG local hiện hành — build9 Cài đặt và QA, 04/10/2026
+
+PhotoAxis **1.0.0(9)**, GPL-3.0-only, app arm64/minOS14. Checkout đóng gói sạch `434af6bc4db54ca69c8fa3b642d475bbef33f0e0`; compiled product/test/CI code`d9aad0cb8bec16394a56bd4fbdc734c55b98920a`. Sau compile chỉ website số liệu và tài liệu/bằng chứng đổi. Binary/Core/UUID payload **khớp đúng Release đã kiểm**, không giao benchmark instrumented app.
+
+| Trường | Giá trị |
+| --- | --- |
+| Artifact | `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg` |
+| SHA256 | `5954347044c83397ea0183ed2cc9a058598668a9cad6acf3a48d1da1cc8bc5aa` |
+| Byte | 2632676 |
+| UUID | `7071B413-36F3-3955-B896-7BA783D2A75F` |
+| Executable SHA256 | `9aaa89a3cf6f17f6bf8b11bda33a435b4d81903231f406e2a42408175e7639d7` |
+| Core SHA256 | `92e1657577e1ab58ce1d28aca824cd7218dfad73aeb3b3894f39cc88fa5aa6a6` |
+| App tree SHA256 | `36baa9923b044e158cb288780ba089b6aef55acd44cb4938d01e1548cb9a3cd1` |
+| Inventory fingerprint | `6e37e03155d82dea9b682a5cbe42592140b0889ae455c14311c14a79a205c46d` |
+| Bản giao | `$BUILD_ROOT/Deliverables/2026-10-04-build9-preferences-qa` |
+| Source dirty | false |
+| Kiểm payload | mount read-only/tree/codesign/GPL/SOURCE/version/arm64/minOS/detach/copyhashPASS |
+| Ký và public | local ad-hoc, chưa DeveloperID/notary/cài sạch;publicReady=false |
+
+[Buildmanifest](bao-cao/bang-chung/PREFERENCES-QA-20261004/build-manifest.json), [distribution](bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json), [packaging](bao-cao/bang-chung/PREFERENCES-QA-20261004/packaging.log), [checksum](bao-cao/bang-chung/PREFERENCES-QA-20261004/SHA256SUMS.txt), [receipt](bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json), [báo cáo](bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md). Bộ cài stable sau ký/staple cần manifest/hash riêng. Các artifact bên dưới là lịch sử.
+
+---
+
+# DMG local build8 — lịch sử ảnh đang mở/con trỏ, 04/10/2026
 
 PhotoAxis **1.0.0 (8)**, GPL-3.0-only. Checkout sạch `a4e44de60bbb12898e8ac1fd6b817252d07f0754`; mã sản phẩm đã kiểm `831ef1a58b86b6b9a64344a7bf2d8e05d53c1fd8`. UUID **43209510-3056-3E94-AF2B-25E5AAB23E0D**, executable SHA256 `67c4067068eb20df7beb93e12cf89da523b6bfc59c50f085aa2a01d9f282c76b`, Core SHA256 `17cb7225890bff1a800526efcd1ded903850143b818f408b4e920b120920f593`.
 
