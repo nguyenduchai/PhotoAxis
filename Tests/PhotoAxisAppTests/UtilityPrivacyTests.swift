@@ -222,4 +222,49 @@ import PhotoAxisCore
         XCTAssertFalse(FileManager.default.fileExists(atPath: archive.appendingPathComponent("overwrite.paxis").path))
         let saved = await coordinator.save(copy, saveAs: true, destination: root.appendingPathComponent("Copy.paxis")); XCTAssertTrue(saved)
     }
+    func testCommittedPrivacyExportAndPhotoSheetExcludeOriginalsAndMetadata() async throws {
+        let coordinator = DocumentCoordinator(localization: loc), document = try await fixture(coordinator)
+        try document.applyPrivacy([.init(region: .init(x: 7, y: 11, width: 31, height: 17), asset: nil)], style: .cover)
+        var snapshot = document.snapshot()
+        if let path = ProcessInfo.processInfo.environment["PHOTOAXIS_NATIVE_PRIVACY_PROJECT"] {
+            snapshot = try await coordinator.projectStore.open(URL(fileURLWithPath: path))
+        }
+        let image = try await coordinator.pipeline.renderDocument(model: snapshot.model, assets: snapshot.assets)
+        let png = try InvestigationSharing.pngBytes(image, ppi: snapshot.model.ppi)
+        let source = try XCTUnwrap(CGImageSourceCreateWithData(png as CFData, nil))
+        let properties = try XCTUnwrap(CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any])
+        XCTAssertNil(properties[kCGImagePropertyGPSDictionary])
+        let exif = properties[kCGImagePropertyExifDictionary] as? [CFString: Any] ?? [:]
+        // Image I/O creates technical ColorSpace/PixelDimension EXIF fields for a
+        // new bitmap. Source metadata such as dates, IDs or comments must be absent.
+        XCTAssertNil(exif[kCGImagePropertyExifDateTimeOriginal]); XCTAssertNil(exif[kCGImagePropertyExifUserComment])
+        let tiff = properties[kCGImagePropertyTIFFDictionary] as? [CFString: Any] ?? [:]
+        XCTAssertNil(tiff[kCGImagePropertyTIFFMake]); XCTAssertNil(tiff[kCGImagePropertyTIFFModel])
+        let covered = snapshot.model.layers.filter { $0.name == loc.text("privacy.layer.cover") }
+        XCTAssertFalse(covered.isEmpty)
+        let pixels = try rgba(image), width = image.width
+        var black = 0
+        for layer in covered {
+            guard case .shape(let shape) = layer.content else { return XCTFail("Expected a cover shape") }
+            let x = Int(layer.transform.coefficients[2]), y = Int(layer.transform.coefficients[5])
+            for row in y..<y+shape.size.height { for column in x..<x+shape.size.width {
+                let i = (row * width + column) * 4
+                if pixels[i] == 0 && pixels[i+1] == 0 && pixels[i+2] == 0 && pixels[i+3] == 255 { black += 1 }
+                else { return XCTFail("Exported privacy region leaked a pixel") }
+            } }
+        }
+        XCTAssertGreaterThan(black, 0)
+        let entry = PhotoSheetEntry(name: "PRIVATE-ORIGINAL.png", pixels: snapshot.model.canvas, data: png, caption: "Ảnh đã che")
+        let settings = PhotoSheetSettings(title: "BẢNG ẢNH KIỂM THỬ", perPage: 1)
+        let sheet = try PhotoSheetEngine.page(entries: [entry], settings: settings, index: 0, dpi: 300, language: "vi")
+        let sheetPNG = try InvestigationSharing.pngBytes(sheet, ppi: 300)
+        let pdf = try PhotoSheetEngine.pdf(entries: [entry], settings: settings, language: "vi")
+        let parsed = try XCTUnwrap(PDFDocument(data: pdf)); XCTAssertEqual(parsed.pageCount, 1); XCTAssertTrue((parsed.page(at: 0)?.string ?? "").isEmpty)
+        for original in snapshot.assets.values { XCTAssertNil(pdf.range(of: original.data)); XCTAssertNil(sheetPNG.range(of: original.data)) }
+        if let path = ProcessInfo.processInfo.environment["PHOTOAXIS_UTILITY_EVIDENCE"] {
+            let root = URL(fileURLWithPath: path); try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
+            try png.write(to: root.appendingPathComponent("committed-privacy.png")); try sheetPNG.write(to: root.appendingPathComponent("sheet-current.png")); try pdf.write(to: root.appendingPathComponent("sheet-all.pdf"))
+        }
+    }
+
 }
