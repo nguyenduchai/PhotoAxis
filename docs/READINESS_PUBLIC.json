@@ -169,9 +169,10 @@
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json",
-      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md"
+      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md",
+      "docs/bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/delivery-receipt.json"
     ],
-    "reason": "Build10 Release/tests/independent export verification scoped in utilities report; final local DMG and Pages delivery pending. Full native/supported-target/clean install acceptance not complete."
+    "reason": "Build10 localDMG from clean ccef7e9 matches final Release binary/Core/UUID; mount/tree/codesign/GPL/source/detach/copy hash PASS. Native privacy scoped + hosted export reading native project with independent pixel/PDF audit PASS. Native OCR/Sheet/export/ENreopen incomplete after Mac lock; target/fullacceptance/clean Gatekeeper/offlineinstall/signing qualification remains open."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

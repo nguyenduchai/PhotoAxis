@@ -1,0 +1,21 @@
+{
+  "build": "10",
+  "sourceCommit": "ccef7e9c43b0c7e1a55b840438b18af5ee85ef99",
+  "sourceDirty": false,
+  "compiledProductSourcesCommit": "3dc0fe34ad4b27cabfa701ba8596afd6ff0adc5c",
+  "finalSourceAndTestsCommit": "5d89d7af247094551d2821a328880d70c286dcc3",
+  "artifact": "PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg",
+  "sha256": "b5a142d01802224f9c0ada1b21a5a5c94bedc64aa34a07dba22b2be2633d6434",
+  "bytes": 2721645,
+  "releaseBinaryUUID": "F06440F4-1139-3943-ABB3-CB217C673086",
+  "binarySHA256": "ab2aa2d22ad73fe803c321969058e84c9633eae6eb3b10350c04f29e927e40fb",
+  "coreFrameworkSHA256": "702dbdbc314f3cb85401d3f0426d0049b117b84dbdad15d604dc69536a8639df",
+  "matchesTestedRelease": true,
+  "mountTreeCodesignLicenseSourceDetachVerification": "PASS",
+  "deliveryCopyHash": "PASS",
+  "nativeGUIRemaining": "OCR/Sheet/multifile/export/ENreopen pending Mac unlock; no automatic bypass",
+  "publicReady": false,
+  "cleanGatekeeperVerified": false,
+  "notarized": false,
+  "deliveryDirectory": "/Users/admin/Library/Developer/PhotoAxisBuilds/83990cd22abb/Deliverables/2026-10-05-build10-utilities-privacy"
+}

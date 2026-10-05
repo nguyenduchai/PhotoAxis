@@ -1,3 +1,13 @@
+# Bản giao local build10 — 05/10/2026
+
+PhotoAxis1.0.0(10),arm64/macOS14+,localad-hoc,khôngDeveloperID/notarized,`publicReady=false`. Từ checkout sạch `ccef7e9c43b0c7e1a55b840438b18af5ee85ef99`; source/test cuối5d89d7a. ReleaseUUID `F06440F4-1139-3943-ABB3-CB217C673086`, executableSHA `ab2aa2d22ad73fe803c321969058e84c9633eae6eb3b10350c04f29e927e40fb`, CoreSHA `702dbdbc314f3cb85401d3f0426d0049b117b84dbdad15d604dc69536a8639df`. Các thay đổi sau CI source5d89d7a là tài liệu/bằng chứng, không đổi mã sản phẩm.
+
+DMG `PhotoAxis-1.0.0-arm64-LOCAL-UNSIGNED.dmg`, 2721645byte, SHA256 `b5a142d01802224f9c0ada1b21a5a5c94bedc64aa34a07dba22b2be2633d6434`. Đãmountread-only, đối chiếu tree/app/version/build/architecture/Core/UUID/executable,LICENSEGPLv3/SOURCEcommit,symlinkApplications,codesign vàdetach; bản sao giao khớp hash. [Receipt](bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/delivery-receipt.json), [manifest](bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/distribution-manifest.json), [checksum](bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/SHA256SUMS.txt), [báo cáo](bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md).
+
+Local227:223PASS/1knownTelexFAIL/3SKIP;CI227:222PASS/0FAIL/5SKIP;17newPASS. NativeVIprivacy/Apply/Undo/Redo/Save kiểm; exportpipelineđọcprojectnative/independentpixelsPDFPASS. NativeOCR/Sheet/Export/ENreopen chưa kiểm đủ sauMaclock. Đường dẫn giao: `/Users/admin/Library/Developer/PhotoAxisBuilds/83990cd22abb/Deliverables/2026-10-05-build10-utilities-privacy`. Installerstable vẫn chờ nghiệmthu/ký/notarize/cài sạch; bản local không thay bằng chứng các gate đó.
+
+---
+
 # DMG local hiện hành — build9 Cài đặt và QA, 04/10/2026
 
 PhotoAxis **1.0.0(9)**, GPL-3.0-only, app arm64/minOS14. Checkout đóng gói sạch `434af6bc4db54ca69c8fa3b642d475bbef33f0e0`; compiled product/test/CI code`d9aad0cb8bec16394a56bd4fbdc734c55b98920a`. Sau compile chỉ website số liệu và tài liệu/bằng chứng đổi. Binary/Core/UUID payload **khớp đúng Release đã kiểm**, không giao benchmark instrumented app.
