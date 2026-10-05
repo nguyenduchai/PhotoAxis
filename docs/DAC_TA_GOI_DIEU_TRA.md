@@ -1,3 +1,5 @@
+> **Lịch sử, đã thay đổi phạm vi ở build10:** theo yêu cầu chủ dự án, sản phẩm chỉ giữ OCR tiếng Việt và bảng ảnh, thêm làm mờ/che. Các luồng hồ sơ/đo/video/audit/so sánh dưới đây đã bỏ khỏi giao diện. Xem [hướng dẫn hiện hành](HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md). Tệp hồ sơ cũ được giữ nguyên.
+
 # PhotoAxis — Gói phục vụ điều tra, Investigation 1
 
 > Cập nhật UI theo yêu cầu 03/10/2026: từ build5, toàn bộ luồng điều tra được hợp nhất vào workspace qua Nguồn / Phân tích / Đầu ra và canvas dùng chung. Mô tả menu/cửa sổ riêng bên dưới là thiết kế lịch sử, được thay bằng [hướng dẫn hiện tại](HUONG_DAN_DIEU_TRA.md) và ADR-023. Contract dữ liệu/toàn vẹn giữ nguyên.

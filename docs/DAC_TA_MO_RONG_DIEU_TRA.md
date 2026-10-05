@@ -1,3 +1,5 @@
+> **Lịch sử, đã thay đổi phạm vi ở build10:** theo yêu cầu chủ dự án, sản phẩm chỉ giữ OCR tiếng Việt và bảng ảnh, thêm làm mờ/che. Các luồng hồ sơ/đo/video/audit/so sánh dưới đây đã bỏ khỏi giao diện. Xem [hướng dẫn hiện hành](HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md). Tệp hồ sơ cũ được giữ nguyên.
+
 # PhotoAxis — Investigation 2: OCR, video và đo có hiệu chuẩn
 
 Ngày 02/10/2026. Người dùng yêu cầu triển khai ngay cả ba nhóm đã ghi nhận trước đó và đánh giá toàn bộ tiến độ/public. Mở rộng riêng của baseline 1.0-draft.3 và Investigation 1; app 1.0.0 (3). Không tự đóng A01–A43/R01–R12. Chạy offline/native, không dịch vụ nhận dạng bên ngoài hoặc AI tái tạo chi tiết.

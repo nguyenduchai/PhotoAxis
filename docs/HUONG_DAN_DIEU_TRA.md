@@ -1,3 +1,5 @@
+> **Lịch sử, đã thay đổi phạm vi ở build10:** theo yêu cầu chủ dự án, sản phẩm chỉ giữ OCR tiếng Việt và bảng ảnh, thêm làm mờ/che. Các luồng hồ sơ/đo/video/audit/so sánh dưới đây đã bỏ khỏi giao diện. Xem [hướng dẫn hiện hành](HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md). Tệp hồ sơ cũ được giữ nguyên.
+
 # Sử dụng gói phục vụ điều tra
 
 ## Dùng ngay ảnh đang mở — build8

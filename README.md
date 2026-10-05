@@ -1,3 +1,5 @@
+> **Build10:** các tiện ích hiện tại là OCR tiếng Việt, bảng ảnh A4 và làm mờ/che trên ảnh đang mở. Đã bỏ các chức năng điều tra khác khỏi giao diện. [Hướng dẫn hiện hành](docs/HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md). Các ghi nhận build3–9 bên dưới là lịch sử.
+
 # PhotoAxis
 
 **Build5 — workspace tích hợp:** chức năng điều tra đã hợp nhất vào Nguồn/Phân tích/Đầu ra bên cạnh bảng Chỉnh sửa. Không còn menu/cửa sổ/form modal Điều tra riêng. Chọn ROI/điểm trên canvas, đối chiếu và OCR review cùng cửa sổ. Full168ca164PASS/1knownTelexFAIL/3benchmarkSKIP;9ca mớiPASS, Release/nativeVIEN scopedPASS. [Báo cáo và giới hạn](docs/bao-cao/HOP_NHAT_WORKSPACE_2026-10-03.md), [hướng dẫn](docs/HUONG_DAN_DIEU_TRA.md).

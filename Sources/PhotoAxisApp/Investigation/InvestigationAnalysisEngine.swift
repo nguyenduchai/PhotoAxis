@@ -35,7 +35,15 @@ enum InvestigationAnalysisEngine {
         }
         return count
     }
-    static func recognize(image: CGImage, item: EvidenceItem, region: EvidenceRegion, cancellation: OCRCancellation? = nil) throws -> EvidenceOCR {
+    struct RecognizedText: Sendable {
+        let language: String
+        let revision: Int
+        let sourceSize: CanvasSize
+        let region: EvidenceRegion
+        let lines: [EvidenceOCRLine]
+        var text: String { lines.map(\.text).joined(separator: "\n") }
+    }
+    static func recognizeText(image: CGImage, region: EvidenceRegion, cancellation: OCRCancellation? = nil) throws -> RecognizedText {
         let size = try CanvasSize(width: image.width, height: image.height); try region.validate(in: size)
         guard let crop = image.cropping(to: CGRect(x: region.x, y: region.y, width: region.width, height: region.height)) else { throw InvestigationError.invalidCase }
         let request = VNRecognizeTextRequest(); request.revision = VNRecognizeTextRequestRevision3; request.recognitionLevel = .accurate
@@ -57,8 +65,12 @@ enum InvestigationAnalysisEngine {
             let bottom = max(y + 1, min(region.height, Int(ceil((1 - box.minY) * Double(region.height)))))
             return EvidenceOCRLine(text: candidate.string, confidence: Double(candidate.confidence), region: EvidenceRegion(x: region.x + x, y: region.y + y, width: right - x, height: bottom - y))
         }.sorted { $0.region.y == $1.region.y ? $0.region.x < $1.region.x : $0.region.y < $1.region.y }
+        return RecognizedText(language: language, revision: request.revision, sourceSize: size, region: region, lines: lines)
+    }
+    static func recognize(image: CGImage, item: EvidenceItem, region: EvidenceRegion, cancellation: OCRCancellation? = nil) throws -> EvidenceOCR {
+        let result = try recognizeText(image: image, region: region, cancellation: cancellation)
         let record = EvidenceOCR(itemID: item.id, originalSHA256: item.originalSHA256, sourceSHA256: item.workingSourceSHA256,
-                                 language: language, revision: request.revision, sourceSize: size, region: region, lines: lines,
+                                 language: result.language, revision: result.revision, sourceSize: result.sourceSize, region: result.region, lines: result.lines,
                                  operatingSystem: ProcessInfo.processInfo.operatingSystemVersionString)
         try record.validate(); return record
     }

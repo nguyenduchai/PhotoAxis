@@ -20,7 +20,7 @@ for path in (root / "Sources/PhotoAxisApp").rglob("*.swift"):
     source = source.replace('"document.json"', '')  # ZIP entry name, not a UI key.
     used.update(re.findall(r'\.text\("([^"]+)"\)', source))
     # Keys passed through menu/label helpers and option arrays are literals too.
-    used.update(re.findall(r'"((?:scan|recovery|export|project|content|shape|perspective|crop|command|history|transform|document|import|action|color|feature|help|image|language|layer|menu|options|panel|settings|tool|tools|type|view|welcome|workspace)\.[A-Za-z][A-Za-z0-9]*)"', source))
+    used.update(re.findall(r'"((?:utility|ocr|sheet|privacy|scan|recovery|export|project|content|shape|perspective|crop|command|history|transform|document|import|action|color|feature|help|image|language|layer|menu|options|panel|settings|tool|tools|type|view|welcome|workspace)\.[A-Za-z][A-Za-z0-9]*)"', source))
 # Channel accessibility names are composed in the Color panel.
 used.update("color." + channel for channel in ["R", "G", "B"])
 # Tool names are deliberately composed from language-independent enum cases.
@@ -37,6 +37,8 @@ for declaration in re.findall(r'case ([^\n]+)', command_cases.group(1)):
 used.update("perspective." + case for case in ["missingQuad", "invalidQuad", "tooSmall", "invalidOutput", "unstableMapping"])
 used.update("transform." + field for field in ["x", "y", "width", "height", "angle"])
 used.update("project." + error for error in ["newerVersion", "unsupportedVersion", "resourceLimit", "assetMismatch", "invalid"])
+used.difference_update({"utility.ocr", "utility.sheet", "utility.privacy", "utility.canvas", "ocr.text", "ocr.regionInfo", "ocr.canvas", "privacy.canvas"})
+used.update("privacy." + group + "." + style for group in ["mode", "layer"] for style in ["cover", "blur", "pixelate"])
 assert used <= keys["en"], f"Missing strings: {used - keys['en']}"
 assert len(used) >= 80, "Unexpectedly few localization references; check scanner"
 print(f"PASS: {len(keys['en'])} matching vi/en keys; {len(used)} static/dynamic references resolved")

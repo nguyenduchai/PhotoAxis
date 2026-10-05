@@ -15,7 +15,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
     private var newSheet: NewDocumentController?
     private var recoverySheet: RecoveryController?
     private var reviewingRecovery = false
-    private var investigation: InvestigationController?
+    private var utilities: DocumentUtilitiesController?
     private var pendingURLs: [URL] = []
     private var launchLanguage: InterfaceLanguage = .system
 
@@ -24,9 +24,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         launchLanguage = preferences.language
         localization = L10n(choice: launchLanguage)
         preferences.interfaceAppearance.apply()
-        documents = DocumentCoordinator(localization: localization, preferences: preferences)
-        investigation = InvestigationController(coordinator: documents, localization: localization)
-        investigation?.workingOpened = { [weak self] in self?.showWorkspace() }
+        documents = DocumentCoordinator(localization: localization, preferences: preferences, opensLegacyProjectsAsCopies: true)
+        utilities = DocumentUtilitiesController(coordinator: documents, localization: localization)
         showWorkspace()
         connectDocuments()
         NSApp.mainMenu = makeMenu()
@@ -70,11 +69,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
         guard let workspace else { return }
         workspace.window?.delegate = self
         let root = workspace.workspaceView
-        investigation?.attach(to: root)
+        utilities?.attach(to: root)
         documents.changed = { [weak self] in
             guard let self else { return }
             root.refreshDocuments(documents)
-            investigation?.synchronizeActiveDocument()
+            utilities?.synchronizeActiveDocument()
             workspace.window?.title = documents.active.map { $0.model.name + " — PhotoAxis" } ?? "PhotoAxis"
             workspace.window?.isDocumentEdited = documents.active?.isDocumentEdited ?? false
         }
@@ -108,7 +107,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation, 
     }
     private func openURLs(_ urls: [URL]) {
         for url in urls where url.pathExtension.lowercased() == "paxcase" {
-            do { try investigation?.open(url: url) } catch { showImportReport(localization.text((error as? InvestigationError)?.localizationKey ?? "investigation.error.invalidCase")) }
+            showImportReport(localization.text("utility.legacyCase"))
         }
         let images = urls.filter { $0.pathExtension.lowercased() != "paxcase" }
         if !images.isEmpty { documents.startImport(images.map { .file($0) }, into: nil) }

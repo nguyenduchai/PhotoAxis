@@ -1,7 +1,7 @@
 import Foundation
 
 public enum DocumentCommand: String, Sendable {
-    case brush, cloneStamp, scan, annotation, adjustments, createText, editText, createShape, editShape, importImage, rename, duplicate, delete, reorder, visibility, lock, opacity, move, transform, align, crop, perspectiveCrop, imageSize, canvasSize, rotateCanvas, flipCanvas
+    case privacy, brush, cloneStamp, scan, annotation, adjustments, createText, editText, createShape, editShape, importImage, rename, duplicate, delete, reorder, visibility, lock, opacity, move, transform, align, crop, perspectiveCrop, imageSize, canvasSize, rotateCanvas, flipCanvas
     public var localizationKey: String { "command." + rawValue }
 }
 

@@ -71,17 +71,17 @@ final class SidebarView: SurfaceView {
         contentControls.editContent={ [weak self] id in self?.editContent?(id) }
         layerList.editContent={ [weak self] id in self?.editContent?(id) }
         addSubview(editingBody)
-        pageSelector.addItems(withTitles: ["workspace.edit", "workspace.sources", "workspace.analysis", "workspace.output"].map { localization.text($0) })
+        pageSelector.addItems(withTitles: ["workspace.edit", "utility.ocrTitle", "utility.sheetTitle", "utility.privacyTitle"].map { localization.text($0) })
         pageSelector.target = self; pageSelector.action = #selector(selectPage)
         pageSelector.setAccessibilityIdentifier("workspace.panelPage")
         pageSelector.isHidden = true
-        for (i,key) in ["workspace.edit","workspace.sources","workspace.analysis","workspace.output"].enumerated() {
+        for (i,key) in ["workspace.edit","utility.ocrTitle","utility.sheetTitle","utility.privacyTitle"].enumerated() {
             let button = NSButton(title:localization.text(key),target:self,action:#selector(selectPageButton(_:)))
             button.tag = i; button.bezelStyle = .regularSquare; button.setButtonType(.pushOnPushOff)
             button.font = .systemFont(ofSize:11,weight:.medium)
-            button.image = NSImage(systemSymbolName:["slider.horizontal.3","tray.full","viewfinder","square.and.arrow.up"][i],accessibilityDescription:nil)
+            button.image = NSImage(systemSymbolName:["slider.horizontal.3","text.viewfinder","rectangle.grid.2x2","eye.slash"][i],accessibilityDescription:nil)
             button.imagePosition = .imageLeading; button.imageScaling = .scaleProportionallyDown
-            button.identifier = .init("workspace.page."+["edit","sources","analysis","output"][i])
+            button.identifier = .init("workspace.page."+["edit","ocr","sheet","privacy"][i])
             button.setAccessibilityLabel(localization.text(key)); pageButtons.append(button); addSubview(button)
         }
         pageHelp.font = .systemFont(ofSize:10); pageHelp.textColor = .secondaryLabelColor
@@ -132,7 +132,7 @@ final class SidebarView: SurfaceView {
         guard (0...pages.count).contains(index) else { return }
         pageSelector.selectItem(at: index); editingBody.isHidden = index != 0
         for (i,button) in pageButtons.enumerated() { button.state = i == index ? .on:.off }
-        pageHelp.stringValue = localization.text(["workspace.editHelp","workspace.sourcesHelp","workspace.analysisHelp","workspace.outputHelp"][index])
+        pageHelp.stringValue = localization.text(["workspace.editHelp","ocr.pageHelp","sheet.pageHelp","privacy.pageHelp"][index])
         for (i, page) in pages.enumerated() { page.isHidden = index != i + 1 }
         needsLayout = true
     }

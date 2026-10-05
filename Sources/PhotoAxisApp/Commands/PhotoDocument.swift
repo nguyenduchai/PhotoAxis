@@ -181,6 +181,7 @@ final class PhotoDocument: NSDocument {
         if selectedLayerID.flatMap({ model.layer($0) }) == nil { selectedLayerID = model.layers.last?.id }
     }
     func retainPaintAsset(_ asset: EmbeddedImage) { assets[asset.descriptor.id] = asset }
+    func assetsRestoreAfterFailedPrivacy(_ previous: [String: EmbeddedImage], selected: UUID?) { assets = previous; selectedLayerID = selected }
     private func reclaimAssets() { let ids = history.retainedSourceIDs.union(model.sources.keys); assets = assets.filter { ids.contains($0.key) } }
     private func registerRestore(to index: Int, from: Int, command: DocumentCommand) {
         undoManager?.registerUndo(withTarget: self) { document in

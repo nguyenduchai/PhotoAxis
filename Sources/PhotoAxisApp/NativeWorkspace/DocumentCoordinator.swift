@@ -17,6 +17,7 @@ final class DocumentCoordinator {
     var investigationSessionFor: ((InvestigationReference) -> InvestigationSession?)?
     var protectInvestigationDestination: ((URL) throws -> Void)?
     private let preferences: WorkspacePreferences?
+    private let opensLegacyProjectsAsCopies: Bool
     let pipeline: ImagePipeline
     let projectStore: ProjectStore
     let exportStore: ExportStore
@@ -35,16 +36,45 @@ final class DocumentCoordinator {
     private(set) var importTask: Task<Void, Never>?
     private var importID: UUID?
     var isImporting: Bool { importTask != nil }
-    init(localization: L10n, pipeline: ImagePipeline = ImagePipeline(), recoveryRoot: URL? = nil, preferences: WorkspacePreferences? = nil) {
+    init(localization: L10n, pipeline: ImagePipeline = ImagePipeline(), recoveryRoot: URL? = nil, preferences: WorkspacePreferences? = nil, opensLegacyProjectsAsCopies: Bool = false) {
+        self.opensLegacyProjectsAsCopies = opensLegacyProjectsAsCopies
         self.preferences = preferences
         self.localization = localization; self.pipeline = pipeline; projectStore = ProjectStore(pipeline:pipeline)
         exportStore = ExportStore(pipeline:pipeline)
         recoveryStore = RecoveryStore(root:recoveryRoot ?? RecoveryStore.defaultRoot,pipeline:pipeline)
+        if opensLegacyProjectsAsCopies { protectInvestigationDestination = Self.protectLegacyDestination }
+    }
+    /// Production no longer manages cases. Never write into an old case archive,
+    /// including a destination reached through a symlink.
+    static func protectLegacyDestination(_ destination: URL) throws {
+        func inspect(_ value: URL) throws {
+            var path = value
+            while path.path != "/" {
+                guard path.pathExtension.lowercased() != "paxcase" else { throw InvestigationError.protectedDestination }
+                path.deleteLastPathComponent()
+            }
+        }
+        try inspect(destination.standardizedFileURL)
+        // Foundation may not resolve a parent symlink if the final file does not
+        // exist yet. Resolve the nearest existing ancestor before adding the tail.
+        var ancestor = destination.standardizedFileURL, tail: [String] = []
+        while ancestor.path != "/", !FileManager.default.fileExists(atPath: ancestor.path) {
+            tail.append(ancestor.lastPathComponent); ancestor.deleteLastPathComponent()
+        }
+        var resolved = ancestor.resolvingSymlinksInPath().standardizedFileURL
+        for component in tail.reversed() { resolved.appendPathComponent(component) }
+        try inspect(resolved)
+    }
+
+    private func ordinaryCopy(_ snapshot: ProjectSnapshot) -> ProjectSnapshot {
+        guard opensLegacyProjectsAsCopies, snapshot.model.investigation != nil else { return snapshot }
+        var model = snapshot.model; model.investigation = nil
+        return ProjectSnapshot(model: model, assets: snapshot.assets, stateID: snapshot.stateID)
     }
 
     func add(_ document: PhotoDocument) throws {
         guard documents.count < DocumentLimits.maximumDocuments else { throw CocoaError(.validationMultipleErrors) }
-        document.retainAnalysisBaseline()
+        if !opensLegacyProjectsAsCopies { document.retainAnalysisBaseline() }
         if let preferences { document.brushSettings = preferences.brushDefaults }
         document.changed = { [weak self] in self?.changed?() }
         document.auditFailed = { [weak self] in self?.report?($0) }
@@ -109,7 +139,7 @@ final class DocumentCoordinator {
     func openRecovered(_ entry:RecoveryEntry) async -> Bool {
         guard documents.count < DocumentLimits.maximumDocuments, !documents.contains(where:{$0.model.id == entry.id}) else { report?(localization.text("recovery.alreadyOpen")); return false }
         do {
-            var snapshot = try await recoveryStore.open(entry)
+            var snapshot = ordinaryCopy(try await recoveryStore.open(entry))
             let session = snapshot.model.investigation.flatMap { investigationSessionFor?($0) }
             if let session { snapshot = try await session.store.openSnapshot(session.itemID, projects: projectStore) }
             let document = PhotoDocument(loaded:snapshot,url:nil,localization:localization); document.investigationSession = session
@@ -278,15 +308,17 @@ final class DocumentCoordinator {
                 progressChanged?(String(format: localization.text("import.progress"), index + 1, inputs.count, input.name))
                 do {
                     if case .file(let url) = input, url.pathExtension.lowercased() == "paxis", targetID == nil {
-                        var snapshot = try await projectStore.open(url)
+                        let original = try await projectStore.open(url)
+                        let detached = opensLegacyProjectsAsCopies && original.model.investigation != nil
+                        var snapshot = ordinaryCopy(original)
                         let session = snapshot.model.investigation.flatMap { investigationSessionFor?($0) }
                         if let session { snapshot = try await session.store.openSnapshot(session.itemID, projects: projectStore) }
                         guard !Task.isCancelled, importID == job else { break }
                         if let existing = documents.first(where: { $0.model.id == snapshot.model.id }) {
-                            if existing.fileURL?.standardizedFileURL == url.standardizedFileURL { select(existing.model.id) }
+                            if detached || existing.fileURL?.standardizedFileURL == url.standardizedFileURL { select(existing.model.id) }
                             else { throw ProjectError.invalidDocument }
                         } else {
-                            let document = PhotoDocument(loaded:snapshot,url:url,localization:localization); document.investigationSession = session
+                            let document = PhotoDocument(loaded:snapshot,url:detached ? nil : url,localization:localization); document.investigationSession = session
                             try add(document)
                             if document.investigationUnavailable { report?(localization.text("investigation.error.missingCase")) }
                         }
