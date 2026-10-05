@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-05T01:19:48.882697+00:00",
+  "websiteURL": "https://nguyenduchai.github.io/PhotoAxis/",
+  "sourceCommit": "b9f5956d85e5e3f47dc9f01d18019a8a35a0464e",
+  "anonymousHTTPS": true,
+  "tlsVerification": "platform curl normal trust verification; ssl_verify_result=0 for every URL",
+  "installerPublicReady": false,
+  "artifactControlFilesNotHTTPResources": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "files": [
+    {
+      "file": "assets/measurement-native-vi.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "6af36c022fcb055ded570a4d4644b4286900de03fe0a536a3b252e6be82fbb78",
+      "bytes": 179978
+    },
+    {
+      "file": "assets/mixed-after-render.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "77e7f043ead39128feedcc4d8127d7636657b6408c70f5ba2c5ad2691f1c739d",
+      "bytes": 64015
+    },
+    {
+      "file": "assets/mixed-before-render.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "5be6c17054ea9d6c307516cb4b8e068a0bb6064a72bb6cf9cfddc17353709052",
+      "bytes": 24335
+    },
+    {
+      "file": "assets/ocr-native-en.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "9f238214f8cb24f7da12621764ec20ec8911a23166013b9ab45f6ac196b58640",
+      "bytes": 260461
+    },
+    {
+      "file": "assets/ocr-native.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "3f13597dff5718cfd88eb2b41e3189f150d11065db67fb10211dd3e904c6e246",
+      "bytes": 279045
+    },
+    {
+      "file": "assets/perspective-after-native-en.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "5f3658f5d68a3c8af7074a0815b053a3f2accb9128b3d0410be939cb4876e25b",
+      "bytes": 300603
+    },
+    {
+      "file": "assets/perspective-after-native.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "1a2018c4c7dd44bacff27e094f50182afb10764b63b1df8143b14578325be628",
+      "bytes": 302050
+    },
+    {
+      "file": "assets/perspective-before-native-en.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "beac0b1c53cf1f8c3e638cb0287c9c2bbab9879747236827bb3981efc55d4697",
+      "bytes": 334411
+    },
+    {
+      "file": "assets/perspective-before-native.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "d777a3ecd28797982e9c20173b2045b4ff6e23a1841aafb11d1e43ea9acbd610",
+      "bytes": 335507
+    },
+    {
+      "file": "assets/photoaxis-icon.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "44687988f72b71738eaa591b727891bdea8abf2886489289e7ef7bf41ef78dd0",
+      "bytes": 43914
+    },
+    {
+      "file": "assets/recovery-native-en.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "fa97676107e9173c91f37684707c374434fde415ac0580a389024053da1da2bb",
+      "bytes": 55065
+    },
+    {
+      "file": "assets/recovery-native.png",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "e40eb7dd9597e38838719a907a9dfdbff7f6f8b14574de22961e46a7a3b73f93",
+      "bytes": 55099
+    },
+    {
+      "file": "en/guide.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "8c29dffb8b8e9f91629678e9da42023e3f3b081804a08e4256cf3b0df4634e90",
+      "bytes": 10276
+    },
+    {
+      "file": "en/index.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "36e7f6da3253b4897bd06e7cb5e1c98a78c1052c9ded6194a86af439c9a89863",
+      "bytes": 9752
+    },
+    {
+      "file": "en/notices.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "302ba835078d6bc8845e4def90072e44406ecbf9c9c5d85a9005171705269b44",
+      "bytes": 2734
+    },
+    {
+      "file": "en/privacy.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "1fb69417d246733c051427a6b90ebfc6fb7a27a9f0f6dd927b296e3074ac840b",
+      "bytes": 3073
+    },
+    {
+      "file": "en/release-notes.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "3b5358c40b80358178ac7fa40d28b16d5c45fa5b72229bc2538e4e6e9baa2404",
+      "bytes": 7116
+    },
+    {
+      "file": "en/support.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "873ce4086994d0d9bd9811a6bf46e8a2b470ff977b3950598283c29f171dafcb",
+      "bytes": 2511
+    },
+    {
+      "file": "guide.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "97ff2f123911403d3a5d41723fd1622bf79adba3031f1368c787576a9e0f1888",
+      "bytes": 11458
+    },
+    {
+      "file": "index.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "23608799b3d626b51da2b8d18577cf22c3c5bd3b481f6d34cbec54d693b7eed9",
+      "bytes": 10605
+    },
+    {
+      "file": "notices.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "1cc5120bfdc53d53019f757fdd425d126056ff0eeb5d9dcdcc9e28932ae21702",
+      "bytes": 2906
+    },
+    {
+      "file": "privacy.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "85b463ddf86cbdb2a85629980cbde59ba243a866e61c2597956ded926986cefb",
+      "bytes": 3441
+    },
+    {
+      "file": "release-notes.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "0779bb32e54ef5abbc2c8f7ddc11966d3bb221492e4f662a0b5efab0dee8f7c8",
+      "bytes": 7750
+    },
+    {
+      "file": "release-status.json",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "6ca38c72fef85877b88d354c01af1781aa65aa355040a3a842a2a20981a105bc",
+      "bytes": 511
+    },
+    {
+      "file": "robots.txt",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "bytes": 26
+    },
+    {
+      "file": "styles.css",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "9681276bbad6bd1654d4b14eab341d17a5892dcc7bee4fac937f3ca3083cda6f",
+      "bytes": 4290
+    },
+    {
+      "file": "support.html",
+      "status": "PASS",
+      "httpStatus": 200,
+      "sha256": "6505afe978e56d13ca408f96c7819ab17532c8330da02997224732a76465e070",
+      "bytes": 2767
+    }
+  ]
+}

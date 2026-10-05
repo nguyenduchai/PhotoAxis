@@ -136,9 +136,10 @@
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
       "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json",
-      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md"
+      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md",
+      "docs/bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/pages-https.json"
     ],
-    "reason": "Build10 source/GPLv3/Issues and local12 VIEN pages updated to OCR/photo sheets/privacy; historical investigation marketing removed. Final deployedcommit/hash verification pending. Stable signed installer remains unavailable."
+    "reason": "Build10 source/GPLv3/Issues and12VIEN Pages updated to OCR/photo sheets/privacy; historical investigation marketing removed. Pages proof b9f5956:27anonymousHTTPS resources/filehash/deployedcommit PASS. Final docs/website copy update is re-deployed and proof stored beside local deliverable to avoid receipt-commit loop. Stable signed installer remains unavailable."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
