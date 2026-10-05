@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "canvas": {
+    "height": 640,
+    "width": 1600
+  },
+  "layers": 3,
+  "privacyLayersLocked": true,
+  "regions": [
+    {
+      "x": 39,
+      "y": 48,
+      "height": 104,
+      "width": 559
+    },
+    {
+      "x": 923,
+      "y": 468,
+      "height": 89,
+      "width": 402
+    }
+  ],
+  "embeddedSourceSHA256": "b9ddf1340f1c09d8d7079d660e1cd186fb851ba7b771c922bcfcb8ae8b8abf24",
+  "matchesInputBytes": true,
+  "noInvestigationReference": true,
+  "archiveSHA256": "b256aca2b5d27572e6fd610ec65e9beb4a95556682598560e3cbf3e67cbf6d7e",
+  "exportNativeStatus": "PENDING_MAC_UNLOCK"
+}

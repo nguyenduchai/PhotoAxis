@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "sourceCommit": "5d89d7af247094551d2821a328880d70c286dcc3",
+  "url": "https://github.com/nguyenduchai/PhotoAxis/actions/runs/37250216398",
+  "counts": {
+    "passed": 222,
+    "failed": 0,
+    "skipped": 5
+  },
+  "total": 227,
+  "os": "15.7.9",
+  "xcode": "16.4",
+  "debugTest": "PASS",
+  "releaseBuild": "PASS",
+  "newUtilityPrivacyTestsPassed": 17,
+  "skipScope": [
+    "3 opt-in benchmarks",
+    "Vietnamese Telex input context unavailable on runner",
+    "large workspace fixture constrained by runner desktop"
+  ],
+  "countDerivation": "23 Core XCTest + 33 Swift Testing + 171 App XCTest; 5 App skipped, 0 failed",
+  "nativeQualificationGatesStillOpen": true
+}

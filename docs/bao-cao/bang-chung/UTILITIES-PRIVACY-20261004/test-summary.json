@@ -1,0 +1,62 @@
+{
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceName": "My Mac",
+        "modelName": "MacBook Pro",
+        "osBuildNumber": "26A434",
+        "osVersion": "27.0.1",
+        "platform": "macOS"
+      },
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "passedTests": 223,
+      "skippedTests": 3,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription": "PhotoAxis · Built with macOS 27.0.1",
+  "expectedFailures": 0,
+  "failedTests": 1,
+  "finishTime": 1791162496.989,
+  "passedTests": 223,
+  "result": "Failed",
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "[Internal] Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions",
+      "sourceURL": "file://$REPO/Tests/PhotoAxisAppTests/ExportTests.swift"
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "[Internal] Thread running at User-interactive quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions",
+      "sourceURL": "file://$REPO/Tests/PhotoAxisAppTests/MultiLayerPerspectiveTests.swift"
+    }
+  ],
+  "skippedTests": 3,
+  "startTime": 1791162438.695,
+  "statistics": [],
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"tieengs vieetj \") is not equal to (\"tiếng việt \")",
+      "targetName": "PhotoAxisAppTests",
+      "testIdentifier": 62,
+      "testIdentifierString": "ContentEditingTests/testInstalledVietnameseInputContext()",
+      "testIdentifierURL": "test://com.apple.xcode/PhotoAxis/PhotoAxisAppTests/ContentEditingTests/testInstalledVietnameseInputContext",
+      "testName": "testInstalledVietnameseInputContext()"
+    }
+  ],
+  "title": "Test - PhotoAxis",
+  "topInsights": [
+    {
+      "category": "Longest Test Runs",
+      "impact": "36% of duration",
+      "text": "3 longest test runs with outlier durations exceeding 2.92s (three standard deviations)"
+    }
+  ],
+  "totalTestCount": 227
+}

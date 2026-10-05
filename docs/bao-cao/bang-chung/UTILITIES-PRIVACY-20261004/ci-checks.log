@@ -1,0 +1,501 @@
+2026-10-05T01:08:27.8092080Z Xcode 16.4
+	15.7.9
+2026-10-05T01:09:27.8048630Z 2026-10-05 01:09:21.477 appintentsmetadataprocessor[3732:15318] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:09:33.6197580Z 2026-10-05 01:09:30.808 appintentsmetadataprocessor[3951:15902] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:09:35.8895590Z     export INSTALLAPI_IGNORE_SKIP_INSTALL\=YES
+2026-10-05T01:09:37.8948680Z     export SKIP_INSTALL\=NO
+2026-10-05T01:09:39.9136640Z 2026-10-05 01:09:37.425 appintentsmetadataprocessor[3984:16097] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:09:40.2171750Z 2026-10-05 01:09:37.917 appintentsmetadataprocessor[4010:16163] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:09:48.7299510Z Test Suite 'All tests' started at 2026-10-05 01:09:48.696.
+2026-10-05T01:09:48.7402690Z Test Suite 'PhotoAxisCoreTests.xctest' started at 2026-10-05 01:09:48.702.
+2026-10-05T01:09:48.7505830Z Test Suite 'ExportOptionsTests' started at 2026-10-05 01:09:48.702.
+2026-10-05T01:09:48.7607520Z Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' started.
+2026-10-05T01:09:48.7710950Z Test Case '-[PhotoAxisCoreTests.ExportOptionsTests testExportBoundsQualityPPIAndOpaqueMatte]' passed (0.003 seconds).
+2026-10-05T01:09:48.7815540Z Test Suite 'ExportOptionsTests' passed at 2026-10-05 01:09:48.706.
+ Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.005) seconds
+2026-10-05T01:09:48.8033670Z Test Suite 'InvestigationTests' started at 2026-10-05 01:09:48.707.
+2026-10-05T01:09:48.8162020Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' started.
+2026-10-05T01:09:48.8225480Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testAnnotationPiecesRemainTypedSourcesAndClipsArePreserved]' passed (0.018 seconds).
+2026-10-05T01:09:48.8449610Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' started.
+2026-10-05T01:09:48.8699850Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibratedDistanceAndConcaveAreaWithReversedWinding]' passed (0.009 seconds).
+2026-10-05T01:09:48.8813290Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' started.
+2026-10-05T01:09:48.8921420Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCalibrationRequiresKnownScaleAndExplicitGeometryBasis]' passed (0.002 seconds).
+2026-10-05T01:09:48.9036460Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' started.
+2026-10-05T01:09:48.9140320Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseJSONRejectsDeepNestingAndDuplicateKeysBeforeDecode]' passed (0.001 seconds).
+2026-10-05T01:09:48.9244990Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' started.
+2026-10-05T01:09:48.9346550Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testCaseLedgerChecksMetadataSequenceAndHashLinks]' passed (0.003 seconds).
+2026-10-05T01:09:48.9456660Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' started.
+2026-10-05T01:09:48.9566290Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testExactMediaTimeAndOffsetNeverReplaceOriginalPTS]' passed (0.001 seconds).
+2026-10-05T01:09:48.9703430Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' started.
+2026-10-05T01:09:48.9805110Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testLegacySchemaAndCaseBoundSchemaAreDistinctAndRoundTrip]' passed (0.002 seconds).
+2026-10-05T01:09:48.9915270Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMagnifierUsesSourceCoordinatesAfterCanvasCrop]' started.
+2026-10-05T01:09:49.0021600Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMagnifierUsesSourceCoordinatesAfterCanvasCrop]' passed (0.005 seconds).
+2026-10-05T01:09:49.0137440Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' started.
+2026-10-05T01:09:49.0241370Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testMeasurementRejectsSelfIntersectionDegenerateAndNonfinitePoints]' passed (0.001 seconds).
+2026-10-05T01:09:49.0349050Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' started.
+2026-10-05T01:09:49.0455460Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testRegionBoundsRejectOverflowAndOffCanvas]' passed (0.001 seconds).
+2026-10-05T01:09:49.0566500Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' started.
+2026-10-05T01:09:49.0736860Z Test Case '-[PhotoAxisCoreTests.InvestigationTests testVersionOneDigestSurvivesAndVersionTwoAnalysisIsIntegrityBound]' passed (0.004 seconds).
+2026-10-05T01:09:49.0740410Z Test Suite 'InvestigationTests' passed at 2026-10-05 01:09:48.800.
+ Executed 11 tests, with 0 failures (0 unexpected) in 0.045 (0.093) seconds
+2026-10-05T01:09:49.0959350Z Test Suite 'PaintTests' started at 2026-10-05 01:09:48.801.
+2026-10-05T01:09:49.1166690Z Test Case '-[PhotoAxisCoreTests.PaintTests testCloneReferenceSurvivesSharedSourceAndPaintFollowsGeometry]' started.
+2026-10-05T01:09:49.1291770Z Test Case '-[PhotoAxisCoreTests.PaintTests testCloneReferenceSurvivesSharedSourceAndPaintFollowsGeometry]' passed (0.003 seconds).
+2026-10-05T01:09:49.1463400Z Test Case '-[PhotoAxisCoreTests.PaintTests testHistoryAccountsForStrokeMetadataAndSourceRetention]' started.
+2026-10-05T01:09:49.1567170Z Test Case '-[PhotoAxisCoreTests.PaintTests testHistoryAccountsForStrokeMetadataAndSourceRetention]' passed (0.001 seconds).
+2026-10-05T01:09:49.1670090Z Test Case '-[PhotoAxisCoreTests.PaintTests testInterpolatedSpacingDotAndInvalidNumbers]' started.
+2026-10-05T01:09:49.1775460Z Test Case '-[PhotoAxisCoreTests.PaintTests testInterpolatedSpacingDotAndInvalidNumbers]' passed (0.007 seconds).
+2026-10-05T01:09:49.1885520Z Test Case '-[PhotoAxisCoreTests.PaintTests testQuotaFailureIsAtomicAndLockedPaintCannotBeChanged]' started.
+2026-10-05T01:09:49.1996340Z Test Case '-[PhotoAxisCoreTests.PaintTests testQuotaFailureIsAtomicAndLockedPaintCannotBeChanged]' passed (0.001 seconds).
+2026-10-05T01:09:49.2143930Z Test Case '-[PhotoAxisCoreTests.PaintTests testSchemaFourRoundTripAndOldVersionsRejectPaint]' started.
+2026-10-05T01:09:49.2247660Z Test Case '-[PhotoAxisCoreTests.PaintTests testSchemaFourRoundTripAndOldVersionsRejectPaint]' passed (0.002 seconds).
+2026-10-05T01:09:49.2436810Z Test Suite 'PaintTests' passed at 2026-10-05 01:09:48.816.
+ Executed 5 tests, with 0 failures (0 unexpected) in 0.014 (0.015) seconds
+2026-10-05T01:09:49.2623210Z Test Suite 'ProjectFormatTests' started at 2026-10-05 01:09:48.816.
+2026-10-05T01:09:49.2728950Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' started.
+2026-10-05T01:09:49.2837620Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaRejectsInvalidVersionPayloadMatrixReferenceAndQuotas]' passed (0.007 seconds).
+2026-10-05T01:09:49.2936680Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' started.
+2026-10-05T01:09:49.3038740Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testSchemaTypedRoundTripClipsPrecisionAndImageParameters]' passed (0.048 seconds).
+2026-10-05T01:09:49.3140780Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' started.
+2026-10-05T01:09:49.3244310Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPDeclaredAssetsAndSparseArchiveSizeAreBounded]' passed (0.008 seconds).
+2026-10-05T01:09:49.3349480Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' started.
+2026-10-05T01:09:49.3454760Z Test Case '-[PhotoAxisCoreTests.ProjectFormatTests testZIPRejectsCRCTruncationTraversalSymlinkEncryptionOverlapAndBombBeforeInflate]' passed (0.025 seconds).
+2026-10-05T01:09:49.3558980Z Test Suite 'ProjectFormatTests' passed at 2026-10-05 01:09:48.912.
+ Executed 4 tests, with 0 failures (0 unexpected) in 0.089 (0.096) seconds
+2026-10-05T01:09:49.3774960Z Test Suite 'ScanModelTests' started at 2026-10-05 01:09:48.912.
+2026-10-05T01:09:49.3880380Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' started.
+2026-10-05T01:09:49.3991360Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testDeskewGeometryKeepsSourcesClipsAndNormalizesWithoutStretch]' passed (0.003 seconds).
+2026-10-05T01:09:49.4104740Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' started.
+2026-10-05T01:09:49.4208100Z Test Case '-[PhotoAxisCoreTests.ScanModelTests testSettingsValidationAtomicLockAndSchemaCompatibility]' passed (0.002 seconds).
+2026-10-05T01:09:49.4312230Z Test Suite 'ScanModelTests' passed at 2026-10-05 01:09:48.918.
+ Executed 2 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+2026-10-05T01:09:49.4517730Z Test Suite 'PhotoAxisCoreTests.xctest' passed at 2026-10-05 01:09:48.918.
+ Executed 23 tests, with 0 failures (0 unexpected) in 0.156 (0.216) seconds
+2026-10-05T01:09:49.4723990Z Test Suite 'All tests' passed at 2026-10-05 01:09:48.924.
+ Executed 23 tests, with 0 failures (0 unexpected) in 0.156 (0.228) seconds
+2026-10-05T01:09:50.9512950Z ✔ Test run with 33 tests passed after 0.071 seconds.
+2026-10-05T01:09:53.4191310Z Test Suite 'All tests' started at 2026-10-05 01:09:53.405.
+2026-10-05T01:09:53.4296490Z Test Suite 'PhotoAxisAppTests.xctest' started at 2026-10-05 01:09:53.406.
+2026-10-05T01:09:53.4395210Z Test Suite 'AcceptanceWorkflowTests' started at 2026-10-05 01:09:53.406.
+2026-10-05T01:09:53.4495350Z Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' started.
+2026-10-05T01:09:54.4254080Z Test Case '-[PhotoAxisAppTests.AcceptanceWorkflowTests testFullMixedWorkflowSaveCloseReopenContinueAndExportBothLanguages]' passed (1.001 seconds).
+2026-10-05T01:09:54.4357670Z Test Suite 'AcceptanceWorkflowTests' passed at 2026-10-05 01:09:54.408.
+ Executed 1 test, with 0 failures (0 unexpected) in 1.001 (1.002) seconds
+2026-10-05T01:09:54.4358960Z Test Suite 'BenchmarkTests' started at 2026-10-05 01:09:54.408.
+2026-10-05T01:09:54.4359590Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' started.
+2026-10-05T01:09:54.5172350Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+2026-10-05T01:09:54.5280890Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunMixedTenLayerInteractionWorkerLatency]' skipped (0.106 seconds).
+2026-10-05T01:09:54.5381810Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' started.
+2026-10-05T01:09:54.6301070Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+2026-10-05T01:09:54.6409290Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFiveRunOpenAndFullPNGExport24MP]' skipped (0.105 seconds).
+2026-10-05T01:09:54.6511220Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' started.
+2026-10-05T01:09:54.7845890Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/BenchmarkTests.swift:16: -[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery] : Test skipped - Run scripts/benchmark.sh for the opt-in Release benchmark
+2026-10-05T01:09:54.7954150Z Test Case '-[PhotoAxisAppTests.BenchmarkTests testFullQuotaFiveTabsRepeatedLifecycleAndRecovery]' skipped (0.105 seconds).
+2026-10-05T01:09:54.8055840Z Test Suite 'BenchmarkTests' passed at 2026-10-05 01:09:54.724.
+ Executed 3 tests, with 3 tests skipped and 0 failures (0 unexpected) in 0.315 (0.316) seconds
+2026-10-05T01:09:54.8259290Z Test Suite 'ContentEditingTests' started at 2026-10-05 01:09:54.725.
+2026-10-05T01:09:54.8387090Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' started.
+2026-10-05T01:09:55.0075520Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInspectorLayoutColorActionsAndMissingFontNotice]' passed (0.241 seconds).
+2026-10-05T01:09:55.0184080Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' started.
+2026-10-05T01:09:55.6873390Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/ContentEditingTests.swift:173: -[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext] : Test skipped - The native context cannot activate Telex; manual IME acceptance remains required
+2026-10-05T01:09:55.7041840Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testInstalledVietnameseInputContext]' skipped (0.712 seconds).
+2026-10-05T01:09:55.7397710Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' started.
+2026-10-05T01:09:56.3399130Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeCompositionTypingKeysCancelAndApply]' passed (0.651 seconds).
+2026-10-05T01:09:56.3505790Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' started.
+2026-10-05T01:09:56.6875470Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testNativeShapeGesturesAndPropertiesRouting]' passed (0.341 seconds).
+2026-10-05T01:09:56.7499230Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' started.
+2026-10-05T01:09:56.8654600Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testShapeAlphaHitTestingAndCompositeEyedropper]' passed (0.177 seconds).
+2026-10-05T01:09:56.8759630Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' started.
+2026-10-05T01:09:56.8858860Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextRenderingAlignmentBoundsAndQuota]' passed (0.013 seconds).
+2026-10-05T01:09:56.8961850Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' started.
+2026-10-05T01:09:56.9164620Z Test Case '-[PhotoAxisAppTests.ContentEditingTests testTextSessionsUnicodeFontFallbackAndUndo]' passed (0.046 seconds).
+2026-10-05T01:09:56.9266350Z Test Suite 'ContentEditingTests' passed at 2026-10-05 01:09:56.909.
+ Executed 7 tests, with 1 test skipped and 0 failures (0 unexpected) in 2.181 (2.184) seconds
+2026-10-05T01:09:56.9471990Z Test Suite 'CropEditingTests' started at 2026-10-05 01:09:56.910.
+2026-10-05T01:09:56.9578490Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' started.
+2026-10-05T01:09:57.6581860Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropHandlesPanCancelAndApplyInNativeWindow]' passed (0.742 seconds).
+2026-10-05T01:09:57.6685900Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' started.
+2026-10-05T01:09:57.7965060Z Test Case '-[PhotoAxisAppTests.CropEditingTests testCropRenderUndoAndNoResurrectionAfterCanvasMoveRotate]' passed (0.138 seconds).
+2026-10-05T01:09:57.8067370Z Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' started.
+2026-10-05T01:09:57.8574250Z Test Case '-[PhotoAxisAppTests.CropEditingTests testRatioPixelsCancelAndIndependentTabs]' passed (0.066 seconds).
+2026-10-05T01:09:57.8676740Z Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' started.
+2026-10-05T01:09:57.9179790Z Test Case '-[PhotoAxisAppTests.CropEditingTests testSizeDialogValidationPPIAndLockedBackground]' passed (0.055 seconds).
+2026-10-05T01:09:57.9280980Z Test Suite 'CropEditingTests' passed at 2026-10-05 01:09:57.912.
+ Executed 4 tests, with 0 failures (0 unexpected) in 1.000 (1.002) seconds
+2026-10-05T01:09:57.9483590Z Test Suite 'DocumentAppTests' started at 2026-10-05 01:09:57.912.
+2026-10-05T01:09:57.9586530Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' started.
+2026-10-05T01:09:58.0492220Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testBatchPartialFailureAndClosedTargetDiscard]' passed (0.032 seconds).
+2026-10-05T01:09:58.0595350Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' started.
+2026-10-05T01:09:58.3757750Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testClipboardRoutingAndNativeNavigationWithoutDirtyOrUndo]' passed (0.412 seconds).
+2026-10-05T01:09:58.3859040Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' started.
+2026-10-05T01:09:58.4561850Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testHighDepthGrayscaleUnprofiledAndOversizedMetadata]' passed (0.098 seconds).
+2026-10-05T01:09:58.4665720Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' started.
+2026-10-05T01:09:58.5910530Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testImportUnicodeEXIFAlphaAndImmutableSources]' passed (0.129 seconds).
+2026-10-05T01:09:58.6014210Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' started.
+2026-10-05T01:09:58.6346760Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testNewPresetsValidationAndRegionalNumbers]' passed (0.043 seconds).
+2026-10-05T01:09:58.6456130Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' started.
+2026-10-05T01:09:59.2135010Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testP3AndHEICConversion]' passed (0.574 seconds).
+2026-10-05T01:09:59.2330320Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' started.
+2026-10-05T01:09:59.2331780Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testQuotaPreflightResizeConsentAndCacheReclamation]' passed (0.009 seconds).
+2026-10-05T01:09:59.2543030Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' started.
+2026-10-05T01:09:59.3044170Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRejectsCorruptUnsupportedAndMultipleImages]' passed (0.079 seconds).
+2026-10-05T01:09:59.3146600Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' started.
+2026-10-05T01:09:59.3867500Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testRendererCornersAndOverlayCoordinatesAtBothBackingScales]' passed (0.091 seconds).
+2026-10-05T01:09:59.3995770Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' started.
+2026-10-05T01:09:59.4099890Z Test Case '-[PhotoAxisAppTests.DocumentAppTests testTabsKeepNavigationSelectionUndoAndRejectSixth]' passed (0.004 seconds).
+2026-10-05T01:09:59.4198880Z Test Suite 'DocumentAppTests' passed at 2026-10-05 01:09:59.386.
+ Executed 10 tests, with 0 failures (0 unexpected) in 1.470 (1.474) seconds
+2026-10-05T01:09:59.4400850Z Test Suite 'ExportTests' started at 2026-10-05 01:09:59.387.
+2026-10-05T01:09:59.4503580Z Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' started.
+2026-10-05T01:09:59.7094720Z Test Case '-[PhotoAxisAppTests.ExportTests testActualISOGainMapIsImportedAsSDRAndExportedWithoutHDRMetadata]' passed (0.321 seconds).
+2026-10-05T01:09:59.7198980Z Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' started.
+2026-10-05T01:09:59.7906320Z Test Case '-[PhotoAxisAppTests.ExportTests testAtomicExportFailureCancellationAndConcurrentEditKeepDestinationAndDirtyState]' passed (0.078 seconds).
+2026-10-05T01:09:59.8006770Z Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' started.
+2026-10-05T01:10:00.1214700Z Test Case '-[PhotoAxisAppTests.ExportTests testFreshMetadataDropsGPSKeepsEXIFOrientationAndConvertsP3GrayDepth]' passed (0.327 seconds).
+2026-10-05T01:10:00.1319910Z Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' started.
+2026-10-05T01:10:00.7486330Z Test Case '-[PhotoAxisAppTests.ExportTests testJPEGWhiteAndColoredMattePNGFlattenQualityAndLinearAlphaEdges]' passed (0.631 seconds).
+2026-10-05T01:10:00.7590740Z Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' started.
+2026-10-05T01:10:00.9321340Z Test Case '-[PhotoAxisAppTests.ExportTests testMixedCropSaveCloseOpenEditExportCrossLanguageHiddenLayersAndSnapshot]' passed (0.162 seconds).
+2026-10-05T01:10:00.9450890Z Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' started.
+2026-10-05T01:10:01.0490120Z Test Case '-[PhotoAxisAppTests.ExportTests testNativeExportFieldsLinkedDimensionsLocaleValidationAndPreviewForBothLanguages]' passed (0.134 seconds).
+2026-10-05T01:10:01.0590700Z Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' started.
+2026-10-05T01:10:01.4845430Z Test Case '-[PhotoAxisAppTests.ExportTests testPNGAlphaICCResizePPIAndNoDocumentMutation]' passed (0.420 seconds).
+2026-10-05T01:10:01.4947250Z Test Suite 'ExportTests' passed at 2026-10-05 01:10:01.461.
+ Executed 7 tests, with 0 failures (0 unexpected) in 2.072 (2.075) seconds
+2026-10-05T01:10:01.5149660Z Test Suite 'ImageAdjustmentTests' started at 2026-10-05 01:10:01.461.
+2026-10-05T01:10:01.5251110Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' started.
+2026-10-05T01:10:01.9342550Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testAlphaOtherLayerAndPerspectivePreserveLocalAdjustment]' passed (0.454 seconds).
+2026-10-05T01:10:01.9448650Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' started.
+2026-10-05T01:10:02.4965840Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNativeControlsCommitCancelInvalidLockAndLanguageLayout]' passed (0.572 seconds).
+2026-10-05T01:10:02.5215990Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' started.
+2026-10-05T01:10:02.7555500Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testNeutralExtremesOrderAndBypassPixelOracle]' passed (0.260 seconds).
+2026-10-05T01:10:02.7657890Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' started.
+2026-10-05T01:10:03.2351790Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testRapidPreviewTabSwitchAndShortResponseMeasurement]' passed (0.484 seconds).
+2026-10-05T01:10:03.2454370Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' started.
+2026-10-05T01:10:03.2555240Z Test Case '-[PhotoAxisAppTests.ImageAdjustmentTests testTransactionCancelUndoBranchEnableResetLockAndNoSourceMutation]' passed (0.022 seconds).
+2026-10-05T01:10:03.2657100Z Test Suite 'ImageAdjustmentTests' passed at 2026-10-05 01:10:03.254.
+ Executed 5 tests, with 0 failures (0 unexpected) in 1.791 (1.792) seconds
+2026-10-05T01:10:03.2865320Z Test Suite 'InvestigationAnalysisTests' started at 2026-10-05 01:10:03.254.
+2026-10-05T01:10:03.2982210Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' started.
+2026-10-05T01:10:04.2559230Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testAnalysisTamperingIsRejectedAndExportContainsSeparateRawAndConfirmedText]' passed (0.985 seconds).
+2026-10-05T01:10:04.2662120Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' started.
+2026-10-05T01:10:04.3425670Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCalibrationMeasureStalenessAndReceiptRollbackWithoutChangingPixels]' passed (0.093 seconds).
+2026-10-05T01:10:04.3529930Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCancelledRecognitionNeverMutatesCaseOrAuditLog]' started.
+2026-10-05T01:10:04.4357450Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCancelledRecognitionNeverMutatesCaseOrAuditLog]' passed (0.067 seconds).
+2026-10-05T01:10:04.4459180Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCancellingStalledOCRReturnsImmediatelyRejectsOverlapAndDiscardsLateResult]' started.
+2026-10-05T01:10:04.4681780Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testCancellingStalledOCRReturnsImmediatelyRejectsOverlapAndDiscardsLateResult]' passed (0.057 seconds).
+2026-10-05T01:10:04.4785420Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' started.
+2026-10-05T01:10:05.0585270Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testNativeOCRReviewKeepsRawReadOnlyAndSavesExplicitUserEdit]' passed (0.590 seconds).
+2026-10-05T01:10:05.0686730Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRComputeUsesOnlyRequestSupportedCPUDevices]' started.
+2026-10-05T01:10:05.0786680Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRComputeUsesOnlyRequestSupportedCPUDevices]' passed (0.001 seconds).
+2026-10-05T01:10:05.0886980Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' started.
+2026-10-05T01:10:05.5945200Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOCRReceiptFailureKeepsPreviousConfirmationAndManifest]' passed (0.526 seconds).
+2026-10-05T01:10:05.6058590Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' started.
+2026-10-05T01:10:05.8809800Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testOriginalVideoBytesAndVariableRateFrameOrdinalExactPTSAndTrackRotation]' passed (0.288 seconds).
+2026-10-05T01:10:05.8917570Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' started.
+2026-10-05T01:10:05.9021420Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testUnsupportedVietnameseOCRHasExplicitFailureAndNeverSubstitutesEnglish]' passed (0.001 seconds).
+2026-10-05T01:10:05.9124300Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' started.
+2026-10-05T01:10:05.9226320Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoFailedIntakeCommitRollsBackNewOriginalAndAnalysis]' passed (0.008 seconds).
+2026-10-05T01:10:05.9337850Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' started.
+2026-10-05T01:10:05.9440320Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVideoOutOfRangeMissingOffsetReasonAndOriginalMutationRefuseExtraction]' passed (0.056 seconds).
+2026-10-05T01:10:05.9543530Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' started.
+2026-10-05T01:10:06.8197170Z Test Case '-[PhotoAxisAppTests.InvestigationAnalysisTests testVietnameseOCRSourceROIRecognitionConfirmationAndPersistentRevisions]' passed (0.843 seconds).
+2026-10-05T01:10:06.8299560Z Test Suite 'InvestigationAnalysisTests' passed at 2026-10-05 01:10:06.776.
+ Executed 12 tests, with 0 failures (0 unexpected) in 3.517 (3.522) seconds
+2026-10-05T01:10:06.8676630Z Test Suite 'InvestigationWorkflowTests' started at 2026-10-05 01:10:06.777.
+2026-10-05T01:10:06.8811360Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' started.
+2026-10-05T01:10:07.6026860Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testA4PDFLayoutsAreRasterOnlyAndPaginateOneTwoFour]' passed (0.706 seconds).
+2026-10-05T01:10:07.6378330Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPickingUsesSourcePixelsWithMarginsReverseDragAndClamping]' started.
+2026-10-05T01:10:07.6452640Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPickingUsesSourcePixelsWithMarginsReverseDragAndClamping]' passed (0.076 seconds).
+2026-10-05T01:10:07.7061470Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPointsPersistAcrossMouseUpAndEscapeDiscardsPresentation]' started.
+2026-10-05T01:10:07.9794890Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCanvasPointsPersistAcrossMouseUpAndEscapeDiscardsPresentation]' passed (0.391 seconds).
+2026-10-05T01:10:07.9905720Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' started.
+2026-10-05T01:10:08.1520670Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseBoundWorkingFileIsLockedWithoutCaseAndCannotBypassSharing]' passed (0.171 seconds).
+2026-10-05T01:10:08.1661360Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseSelectionFollowsActiveTabAcrossTwoCases]' started.
+2026-10-05T01:10:08.5298700Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testCaseSelectionFollowsActiveTabAcrossTwoCases]' passed (0.378 seconds).
+2026-10-05T01:10:08.5407130Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testChangingTabOrModelCancelsDraftWithoutWritingAudit]' started.
+2026-10-05T01:10:08.9848750Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testChangingTabOrModelCancelsDraftWithoutWritingAudit]' passed (0.462 seconds).
+2026-10-05T01:10:08.9954890Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' started.
+2026-10-05T01:10:09.1396580Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testDeleteSaveUndoThenRestartRestoresIntakeWorkingSource]' passed (0.160 seconds).
+2026-10-05T01:10:09.1496020Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' started.
+2026-10-05T01:10:09.2738090Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedAuditRefusesEditAndUndoAndPreservesPreviousManifest]' passed (0.140 seconds).
+2026-10-05T01:10:09.2849610Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' started.
+2026-10-05T01:10:09.4227440Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFailedSaveReceiptKeepsPreviousArchiveAndRestartableUnsavedEdits]' passed (0.157 seconds).
+2026-10-05T01:10:09.4334360Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' started.
+2026-10-05T01:10:09.5358630Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testFlattenedPNGRedactionsRemovePixelsAndMetadataWhileOriginalIsUnchanged]' passed (0.109 seconds).
+2026-10-05T01:10:09.5495380Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineAnnotationMakesOneUndoAndNeverChangesOriginalBytes]' started.
+2026-10-05T01:10:09.9790070Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineAnnotationMakesOneUndoAndNeverChangesOriginalBytes]' passed (0.432 seconds).
+2026-10-05T01:10:09.9891330Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineCaseEditApplyAndCancelAreTransactionalWithoutAuxiliaryWindow]' started.
+2026-10-05T01:10:10.3836530Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInlineCaseEditApplyAndCancelAreTransactionalWithoutAuxiliaryWindow]' passed (0.408 seconds).
+2026-10-05T01:10:10.3901100Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' started.
+2026-10-05T01:10:10.4852390Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testIntakePreservesExactOriginalSeparatesWorkingAndDetectsExternalMutation]' passed (0.100 seconds).
+2026-10-05T01:10:10.4954540Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' started.
+2026-10-05T01:10:10.8764760Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testInvestigationNativeControlsAndComparisonInBothLanguages]' passed (0.402 seconds).
+2026-10-05T01:10:10.8868810Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testOrphanUnsavedDocumentCannotBeDiscardedWhenOpeningCaseItem]' started.
+2026-10-05T01:10:11.0503290Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testOrphanUnsavedDocumentCannotBeDiscardedWhenOpeningCaseItem]' passed (0.109 seconds).
+2026-10-05T01:10:11.0611910Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' started.
+2026-10-05T01:10:11.0818260Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testProcessingUndoRedoSaveAndRestartRetainLogWithoutSessionHistory]' passed (0.086 seconds).
+2026-10-05T01:10:11.1032010Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' started.
+2026-10-05T01:10:11.1638270Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testResizedWorkingImageAndPrivateMetadataKeepReceivedBytesUnchanged]' passed (0.089 seconds).
+2026-10-05T01:10:11.1740510Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' started.
+2026-10-05T01:10:11.5377220Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testScanAuditSaveUndoAndReviewInvalidationPreserveOriginal]' passed (0.375 seconds).
+2026-10-05T01:10:11.5480170Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' started.
+2026-10-05T01:10:11.7331150Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testStreamedPDFEnglishAndLongCaptionRefusesSilentTruncation]' passed (0.193 seconds).
+2026-10-05T01:10:11.7433180Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' started.
+2026-10-05T01:10:11.8360780Z Test Case '-[PhotoAxisAppTests.InvestigationWorkflowTests testTwoTabQuitCancellationPreservesCaseEditsAndFinalDiscardIsRecorded]' passed (0.104 seconds).
+2026-10-05T01:10:11.8462840Z Test Suite 'InvestigationWorkflowTests' passed at 2026-10-05 01:10:11.831.
+ Executed 20 tests, with 0 failures (0 unexpected) in 5.046 (5.054) seconds
+2026-10-05T01:10:11.8666470Z Test Suite 'LayerEditingTests' started at 2026-10-05 01:10:11.831.
+2026-10-05T01:10:11.8772170Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' started.
+2026-10-05T01:10:12.7424140Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeHandlesScaleModifiersKeyboardAndOverlay]' passed (0.910 seconds).
+2026-10-05T01:10:12.7527430Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' started.
+2026-10-05T01:10:12.8911940Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNativeOpacityActionAndTransformFieldsAcrossTabs]' passed (0.147 seconds).
+2026-10-05T01:10:12.9013610Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' started.
+2026-10-05T01:10:13.0562800Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testNormalLinearCompositeOpacityOrderAndAlphaHitTest]' passed (0.151 seconds).
+2026-10-05T01:10:13.0664750Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' started.
+2026-10-05T01:10:13.0875390Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTabSessionsAndUndoRemainIndependent]' passed (0.045 seconds).
+2026-10-05T01:10:13.0977440Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' started.
+2026-10-05T01:10:13.1183390Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testTransformPreviewRollbackNumbersFlipAndSingleCommit]' passed (0.028 seconds).
+2026-10-05T01:10:13.1353000Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' started.
+2026-10-05T01:10:13.1574330Z Test Case '-[PhotoAxisAppTests.LayerEditingTests testUndoBridgeTransactionsBranchSavedMarkerAndSourceSharing]' passed (0.021 seconds).
+2026-10-05T01:10:13.1836740Z Test Suite 'LayerEditingTests' passed at 2026-10-05 01:10:13.135.
+ Executed 6 tests, with 0 failures (0 unexpected) in 1.303 (1.305) seconds
+2026-10-05T01:10:13.2052030Z Test Suite 'MultiLayerPerspectiveTests' started at 2026-10-05 01:10:13.136.
+2026-10-05T01:10:13.2153850Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' started.
+2026-10-05T01:10:13.2255780Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testFullyDiscardedTypedLayersStayEmptyAfterExpansionAndMove]' passed (0.064 seconds).
+2026-10-05T01:10:13.2372510Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' started.
+2026-10-05T01:10:13.3446250Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testHiddenLockedAndDiscardedContentNeverReappears]' passed (0.139 seconds).
+2026-10-05T01:10:13.3548190Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' started.
+2026-10-05T01:10:17.7792460Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testMixedPreviewCommonMappingPixelOracleAndHistory]' passed (4.431 seconds).
+2026-10-05T01:10:17.7837670Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' started.
+2026-10-05T01:10:17.9160960Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testOldTextShapeEditsNewLayersAndProjectiveHitMoveTransform]' passed (0.142 seconds).
+2026-10-05T01:10:17.9263020Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' started.
+2026-10-05T01:10:18.5841280Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testPropertiesEditorVisibleAndFocusForBothLanguages]' passed (0.664 seconds).
+2026-10-05T01:10:18.5950030Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' started.
+2026-10-05T01:10:19.0891450Z Test Case '-[PhotoAxisAppTests.MultiLayerPerspectiveTests testRepeatedCropTransformKeepsResourcesAndTypedSources]' passed (0.506 seconds).
+2026-10-05T01:10:19.0988230Z Test Suite 'MultiLayerPerspectiveTests' passed at 2026-10-05 01:10:19.083.
+ Executed 6 tests, with 0 failures (0 unexpected) in 5.945 (5.947) seconds
+2026-10-05T01:10:19.1192660Z Test Suite 'OpenImageCursorTests' started at 2026-10-05 01:10:19.083.
+2026-10-05T01:10:19.1295080Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testAnalysisTracksActiveTabAndNeverFallsBackToSelectedCaseOrClosedTab]' started.
+2026-10-05T01:10:19.2918590Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testAnalysisTracksActiveTabAndNeverFallsBackToSelectedCaseOrClosedTab]' passed (0.203 seconds).
+2026-10-05T01:10:19.3021830Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testAsyncCaptureCannotSelectAnOlderTabAfterSwitch]' started.
+2026-10-05T01:10:19.4933490Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testAsyncCaptureCannotSelectAnOlderTabAfterSwitch]' passed (0.203 seconds).
+2026-10-05T01:10:19.5054290Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testCropTransformResizeHandDragAndSpaceReleaseRestoreCorrectCursor]' started.
+2026-10-05T01:10:19.5200850Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testCropTransformResizeHandDragAndSpaceReleaseRestoreCorrectCursor]' passed (0.010 seconds).
+2026-10-05T01:10:19.5302930Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testDirectCaptureUsesCommittedEditedCanvasAndPreservesTabHistoryAssetsAndCheckpoint]' started.
+2026-10-05T01:10:19.6509270Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testDirectCaptureUsesCommittedEditedCanvasAndPreservesTabHistoryAssetsAndCheckpoint]' passed (0.146 seconds).
+2026-10-05T01:10:19.6611550Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testDirectInlineAnnotationMakesOneUndoAndChangingTabCancelsRedactionDraft]' started.
+2026-10-05T01:10:19.8122220Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testDirectInlineAnnotationMakesOneUndoAndChangingTabCancelsRedactionDraft]' passed (0.159 seconds).
+2026-10-05T01:10:19.8226770Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testEditingInvalidatesDirectCalibrationAndRedactionsAndCapturesNewCanvas]' started.
+2026-10-05T01:10:19.9954290Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testEditingInvalidatesDirectCalibrationAndRedactionsAndCapturesNewCanvas]' passed (0.186 seconds).
+2026-10-05T01:10:20.0056430Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testEditingSavedSnapshotCannotReplaceAnalysisOfTheOriginalEditableTab]' started.
+2026-10-05T01:10:20.1693360Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testEditingSavedSnapshotCannotReplaceAnalysisOfTheOriginalEditableTab]' passed (0.170 seconds).
+2026-10-05T01:10:20.1804730Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testSavingDerivedAnalysisRetainsLedgerAndSnapshotWithoutAttachingOriginalTab]' started.
+2026-10-05T01:10:20.3020010Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testSavingDerivedAnalysisRetainsLedgerAndSnapshotWithoutAttachingOriginalTab]' passed (0.133 seconds).
+2026-10-05T01:10:20.3122910Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testTemporaryCaptureCleanupAndFailedSaveLeaveNoPartialCase]' started.
+2026-10-05T01:10:20.4228910Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testTemporaryCaptureCleanupAndFailedSaveLeaveNoPartialCase]' passed (0.122 seconds).
+2026-10-05T01:10:20.4331360Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testToolCursorImagesAreDistinctCachedAndSetActualAppKitHotspots]' started.
+2026-10-05T01:10:20.4736750Z Test Case '-[PhotoAxisAppTests.OpenImageCursorTests testToolCursorImagesAreDistinctCachedAndSetActualAppKitHotspots]' passed (0.053 seconds).
+2026-10-05T01:10:20.4939680Z Test Suite 'OpenImageCursorTests' passed at 2026-10-05 01:10:20.471.
+ Executed 10 tests, with 0 failures (0 unexpected) in 1.384 (1.388) seconds
+2026-10-05T01:10:20.5044520Z Test Suite 'PaintLiveTests' started at 2026-10-05 01:10:20.471.
+2026-10-05T01:10:20.5146000Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBilingualContinuousPaintControlsAndNarrowOverflow]' started.
+2026-10-05T01:10:20.5348380Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBilingualContinuousPaintControlsAndNarrowOverflow]' passed (0.059 seconds).
+2026-10-05T01:10:20.5450650Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBrushUnionOpacityInterpolationSoftEdgeAndOrientation]' started.
+2026-10-05T01:10:20.6253390Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testBrushUnionOpacityInterpolationSoftEdgeAndOrientation]' passed (0.093 seconds).
+2026-10-05T01:10:20.6355330Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testCaseCloneUnsavedRestartAuditRollbackAndTamper]' started.
+2026-10-05T01:10:20.8042180Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testCaseCloneUnsavedRestartAuditRollbackAndTamper]' passed (0.161 seconds).
+2026-10-05T01:10:20.8046310Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testFrozenCompositeCloneIncludesAdjustmentsAndHasNoFeedback]' started.
+2026-10-05T01:10:20.9427850Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testFrozenCompositeCloneIncludesAdjustmentsAndHasNoFeedback]' passed (0.148 seconds).
+2026-10-05T01:10:20.9540940Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testImageAndCanvasSizePreviewIsAutomaticAtomicAndCancelable]' started.
+2026-10-05T01:10:21.0271590Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testImageAndCanvasSizePreviewIsAutomaticAtomicAndCancelable]' passed (0.066 seconds).
+2026-10-05T01:10:21.0573950Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testLiveStrokeOneUndoRedoCancelAndImmutableSource]' started.
+2026-10-05T01:10:21.1152180Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testLiveStrokeOneUndoRedoCancelAndImmutableSource]' passed (0.099 seconds).
+2026-10-05T01:10:21.1252080Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testNativeOptionClickAlignedAndUnalignedCloneAndBrushEscape]' started.
+2026-10-05T01:10:22.0480480Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testNativeOptionClickAlignedAndUnalignedCloneAndBrushEscape]' passed (0.937 seconds).
+2026-10-05T01:10:22.0582680Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintMaskStaysTransparentOutsideStrokeAfterDeskewAndPerspective]' started.
+2026-10-05T01:10:24.2529760Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintMaskStaysTransparentOutsideStrokeAfterDeskewAndPerspective]' passed (2.208 seconds).
+2026-10-05T01:10:24.2632830Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintProjectExportRecoveryRoundTripAndDraftExclusion]' started.
+2026-10-05T01:10:24.4862600Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPaintProjectExportRecoveryRoundTripAndDraftExclusion]' passed (0.232 seconds).
+2026-10-05T01:10:24.4966330Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPerspectiveInsetAutomaticallyRefreshesAndCancelsWithoutHistory]' started.
+2026-10-05T01:10:24.8268150Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testPerspectiveInsetAutomaticallyRefreshesAndCancelsWithoutHistory]' passed (0.346 seconds).
+2026-10-05T01:10:24.8367850Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testScanAutoPreviewLatestValueInvalidInputAndCancelWithoutButton]' started.
+2026-10-05T01:10:25.9266600Z Test Case '-[PhotoAxisAppTests.PaintLiveTests testScanAutoPreviewLatestValueInvalidInputAndCancelWithoutButton]' passed (1.086 seconds).
+2026-10-05T01:10:25.9370240Z Test Suite 'PaintLiveTests' passed at 2026-10-05 01:10:25.911.
+ Executed 11 tests, with 0 failures (0 unexpected) in 5.436 (5.440) seconds
+2026-10-05T01:10:25.9572200Z Test Suite 'PerspectiveEditingTests' started at 2026-10-05 01:10:25.912.
+2026-10-05T01:10:25.9678810Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' started.
+2026-10-05T01:10:26.0187060Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testEXIFRotatedCornersKeepNamedOrder]' passed (0.097 seconds).
+2026-10-05T01:10:26.0311610Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' started.
+2026-10-05T01:10:26.9352620Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeInitialDragAllHandlesZoomPanPreviewAndReturn]' passed (0.924 seconds).
+2026-10-05T01:10:26.9486390Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' started.
+2026-10-05T01:10:28.1060290Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testNativeOptionsCallbacksAndLayoutInBothLanguages]' passed (1.161 seconds).
+2026-10-05T01:10:28.1061800Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' started.
+2026-10-05T01:10:28.1562700Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testOutputModesInvalidInputCancelAndIndependentTabs]' passed (0.056 seconds).
+2026-10-05T01:10:28.1665490Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' started.
+2026-10-05T01:10:28.4237280Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPoleOutsideRetainedRegionUsesBoundedMetalRender]' passed (0.267 seconds).
+2026-10-05T01:10:28.4356310Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' started.
+2026-10-05T01:10:28.5382900Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testPreviewApplyCornerOrientationUndoRedoAndSourceBytes]' passed (0.116 seconds).
+2026-10-05T01:10:28.5484150Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' started.
+2026-10-05T01:10:28.7205380Z Test Case '-[PhotoAxisAppTests.PerspectiveEditingTests testReferenceGradientAndAlphaAgainstIndependentMapping]' passed (0.182 seconds).
+2026-10-05T01:10:28.7311340Z Test Suite 'PerspectiveEditingTests' passed at 2026-10-05 01:10:28.716.
+ Executed 7 tests, with 0 failures (0 unexpected) in 2.803 (2.805) seconds
+2026-10-05T01:10:28.7519160Z Test Suite 'PreferencesAppearanceTests' started at 2026-10-05 01:10:28.717.
+2026-10-05T01:10:28.7627900Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testAllSettingsPagesFitAtMinimumSizeInBothAppearancesAndLanguages]' started.
+2026-10-05T01:10:29.3256580Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testAllSettingsPagesFitAtMinimumSizeInBothAppearancesAndLanguages]' passed (0.592 seconds).
+2026-10-05T01:10:29.3366730Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testAppearancePersistenceImmediateApplicationAndSystemInheritance]' started.
+2026-10-05T01:10:29.4531010Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testAppearancePersistenceImmediateApplicationAndSystemInheritance]' passed (0.127 seconds).
+2026-10-05T01:10:29.4633080Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testBrushOutlineChangesLiveWithoutChangingDocumentOrToolCursor]' started.
+2026-10-05T01:10:29.6173340Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testBrushOutlineChangesLiveWithoutChangingDocumentOrToolCursor]' passed (0.173 seconds).
+2026-10-05T01:10:29.6278510Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testCorruptPreferenceFallbackAndResetsAreScoped]' started.
+2026-10-05T01:10:29.6885550Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testCorruptPreferenceFallbackAndResetsAreScoped]' passed (0.068 seconds).
+2026-10-05T01:10:29.7134510Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testDynamicSurfacesResolveTextBorderAndSelectionWithSufficientContrast]' started.
+2026-10-05T01:10:29.7238310Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testDynamicSurfacesResolveTextBorderAndSelectionWithSufficientContrast]' passed (0.001 seconds).
+2026-10-05T01:10:29.7342850Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testFilesDefaultsPersistValidateAndOnlyAffectNewExportDialogs]' started.
+2026-10-05T01:10:29.7788120Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testFilesDefaultsPersistValidateAndOnlyAffectNewExportDialogs]' passed (0.083 seconds).
+2026-10-05T01:10:29.7895420Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testInvalidJPEGQualityDoesNotBlockIndependentValidFilePreferences]' started.
+2026-10-05T01:10:29.8443570Z Test Case '-[PhotoAxisAppTests.PreferencesAppearanceTests testInvalidJPEGQualityDoesNotBlockIndependentValidFilePreferences]' passed (0.064 seconds).
+2026-10-05T01:10:29.8546690Z Test Suite 'PreferencesAppearanceTests' passed at 2026-10-05 01:10:29.829.
+ Executed 7 tests, with 0 failures (0 unexpected) in 1.110 (1.112) seconds
+2026-10-05T01:10:29.8750360Z Test Suite 'ProjectDocumentTests' started at 2026-10-05 01:10:29.830.
+2026-10-05T01:10:29.8863890Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' started.
+2026-10-05T01:10:29.9729410Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testAtomicNoSpaceDeniedCancellationAndRenameFailurePreservePreviousGoodFile]' passed (0.129 seconds).
+2026-10-05T01:10:29.9830000Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' started.
+2026-10-05T01:10:30.0437960Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testCoordinatorSaveAndOpenRouteOwnsDirtyStateWithoutUndoOrSourceURL]' passed (0.080 seconds).
+2026-10-05T01:10:30.0538490Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' started.
+2026-10-05T01:10:30.1042880Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testEmbeddedHashAndDimensionsAreCheckedWithoutDecodingUnboundedPixels]' passed (0.057 seconds).
+2026-10-05T01:10:30.1147090Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' started.
+2026-10-05T01:10:30.1351670Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testIndependentDeflateZIPAndRealPermissionDeniedSave]' passed (0.029 seconds).
+2026-10-05T01:10:30.1454770Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' started.
+2026-10-05T01:10:30.2773680Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testMixedTwiceCroppedRoundTripImmutableAssetsRenderCrossLanguageAndEditability]' passed (0.147 seconds).
+2026-10-05T01:10:30.2877010Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' started.
+2026-10-05T01:10:30.3596530Z Test Case '-[PhotoAxisAppTests.ProjectDocumentTests testSavedSnapshotDoesNotClearLaterEditsAndUndoReturnsToWrittenState]' passed (0.077 seconds).
+2026-10-05T01:10:30.3701980Z Test Suite 'ProjectDocumentTests' passed at 2026-10-05 01:10:30.350.
+ Executed 6 tests, with 0 failures (0 unexpected) in 0.519 (0.521) seconds
+2026-10-05T01:10:30.3910400Z Test Suite 'RecoveryTests' started at 2026-10-05 01:10:30.351.
+2026-10-05T01:10:30.4013180Z Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' started.
+2026-10-05T01:10:30.4443350Z Test Case '-[PhotoAxisAppTests.RecoveryTests testCommittedSnapshotExcludesDraftReopensUnsavedAndPreservesNewerRecoveryOnSave]' passed (0.087 seconds).
+2026-10-05T01:10:30.4546150Z Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' started.
+2026-10-05T01:10:30.6591080Z Test Case '-[PhotoAxisAppTests.RecoveryTests testDiscardDuringSuspendedWriteCannotResurrectRecoveryAndOldArchiveIsAtomic]' passed (0.217 seconds).
+2026-10-05T01:10:30.6699170Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' started.
+2026-10-05T01:10:30.8189710Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMissingFontControlsAndRecoveryListInBothLanguagesPreserveOriginalFont]' passed (0.148 seconds).
+2026-10-05T01:10:30.8292470Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' started.
+2026-10-05T01:10:30.8699500Z Test Case '-[PhotoAxisAppTests.RecoveryTests testMultiDocumentCancelKeepsEveryTabAndRecoveryUntilFinalDontSave]' passed (0.062 seconds).
+2026-10-05T01:10:30.8802650Z Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' started.
+2026-10-05T01:10:40.9504280Z Test Case '-[PhotoAxisAppTests.RecoveryTests testPeriodicRecoveryCompletesWithinThirtySecondsAndSkipsUnchangedState]' passed (10.082 seconds).
+2026-10-05T01:10:40.9574950Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' started.
+2026-10-05T01:10:41.6568360Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRealControlledAbnormalChildExitAndRestartReadsLastCommittedRecovery]' passed (0.706 seconds).
+2026-10-05T01:10:41.6572780Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' started.
+2026-10-05T01:10:41.6859870Z Test Case '-[PhotoAxisAppTests.RecoveryTests testRecoveryPermissionFailureReportsOnceCorruptRecordIsExplicitAndNoSavedMarkerChanges]' passed (0.026 seconds).
+2026-10-05T01:10:41.6867390Z Test Suite 'RecoveryTests' passed at 2026-10-05 01:10:41.680.
+ Executed 7 tests, with 0 failures (0 unexpected) in 11.327 (11.329) seconds
+2026-10-05T01:10:41.6868900Z Test Suite 'ScanTests' started at 2026-10-05 01:10:41.680.
+2026-10-05T01:10:41.6870460Z Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' started.
+2026-10-05T01:10:42.1828290Z Test Case '-[PhotoAxisAppTests.ScanTests testBatchOutputsPageOrderHashesPDFAndRollback]' passed (0.500 seconds).
+2026-10-05T01:10:42.1930980Z Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' started.
+2026-10-05T01:10:42.3380220Z Test Case '-[PhotoAxisAppTests.ScanTests testBowChangesPixelsWithoutExposingClippedSource]' passed (0.153 seconds).
+2026-10-05T01:10:42.3387970Z Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' started.
+2026-10-05T01:10:46.1383540Z Test Case '-[PhotoAxisAppTests.ScanTests testBowCorrectionStraightensKnownCurvedBaseline]' passed (3.802 seconds).
+2026-10-05T01:10:46.1386010Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' started.
+2026-10-05T01:10:46.5859140Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupPreservesAlphaAndDisabledIsExact]' passed (0.445 seconds).
+2026-10-05T01:10:46.5885790Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' started.
+2026-10-05T01:10:46.9238680Z Test Case '-[PhotoAxisAppTests.ScanTests testCleanupWhiteningAdaptiveTextAndSourceRoundTrip]' passed (0.337 seconds).
+2026-10-05T01:10:46.9243630Z Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' started.
+2026-10-05T01:10:48.1458220Z Test Case '-[PhotoAxisAppTests.ScanTests testNativeBatchOrderAndInvalidSizeCannotApply]' passed (1.226 seconds).
+2026-10-05T01:10:48.1501440Z Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' started.
+2026-10-05T01:10:49.0522970Z Test Case '-[PhotoAxisAppTests.ScanTests testNativePreviewCancelSingleUndoAndBilingualControls]' passed (0.895 seconds).
+2026-10-05T01:10:49.0712290Z Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' started.
+2026-10-05T01:10:49.1226820Z Test Case '-[PhotoAxisAppTests.ScanTests testPageDetectionAndTextDeskewRefuseBlank]' passed (0.077 seconds).
+2026-10-05T01:10:49.1329060Z Test Suite 'ScanTests' passed at 2026-10-05 01:10:49.117.
+ Executed 8 tests, with 0 failures (0 unexpected) in 7.435 (7.437) seconds
+2026-10-05T01:10:49.1531950Z Test Suite 'UtilityPrivacyTests' started at 2026-10-05 01:10:49.117.
+2026-10-05T01:10:49.1634030Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlackCoverUsesTopLeftRegionAndDoesNotChangeAnyOutsidePixel]' started.
+2026-10-05T01:10:49.1740410Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlackCoverUsesTopLeftRegionAndDoesNotChangeAnyOutsidePixel]' passed (0.051 seconds).
+2026-10-05T01:10:49.1842190Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlurAndPixelationAreOpaqueAndChangeHighFrequencyContent]' started.
+2026-10-05T01:10:49.3600450Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlurAndPixelationAreOpaqueAndChangeHighFrequencyContent]' passed (0.188 seconds).
+2026-10-05T01:10:49.3669990Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlurProjectRoundTripAndCropRetainImmutableOriginalAndOpaqueExport]' started.
+2026-10-05T01:10:49.5361130Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testBlurProjectRoundTripAndCropRetainImmutableOriginalAndOpaqueExport]' passed (0.177 seconds).
+2026-10-05T01:10:49.5370870Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testCancellingOCRAndChangingTabDiscardsLateResults]' started.
+2026-10-05T01:10:49.7140670Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testCancellingOCRAndChangingTabDiscardsLateResults]' passed (0.178 seconds).
+2026-10-05T01:10:49.7153990Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testCommittedPrivacyExportAndPhotoSheetExcludeOriginalsAndMetadata]' started.
+2026-10-05T01:10:50.2209230Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testCommittedPrivacyExportAndPhotoSheetExcludeOriginalsAndMetadata]' passed (0.506 seconds).
+2026-10-05T01:10:50.2216550Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testFaceRectanglesConvertOriginExpandAndClampWithoutIdentification]' started.
+2026-10-05T01:10:50.2255220Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testFaceRectanglesConvertOriginExpandAndClampWithoutIdentification]' passed (0.002 seconds).
+2026-10-05T01:10:50.2259530Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testLayerQuotaFailureIsAtomicAndDoesNotRetainPartialAssets]' started.
+2026-10-05T01:10:50.2864720Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testLayerQuotaFailureIsAtomicAndDoesNotRetainPartialAssets]' passed (0.060 seconds).
+2026-10-05T01:10:50.2871590Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testLegacyProjectOpensAsDetachedEditableCopyAndCannotOverwriteArchive]' started.
+2026-10-05T01:10:50.3683560Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testLegacyProjectOpensAsDetachedEditableCopyAndCannotOverwriteArchive]' passed (0.085 seconds).
+2026-10-05T01:10:50.3693450Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testMultipleCoversCommitOneUndoAndPreserveSourceBytes]' started.
+2026-10-05T01:10:50.4347270Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testMultipleCoversCommitOneUndoAndPreserveSourceBytes]' passed (0.066 seconds).
+2026-10-05T01:10:50.4372020Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testNoFaceSyntheticImageHasNoSuggestedRegion]' started.
+2026-10-05T01:10:50.6578420Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testNoFaceSyntheticImageHasNoSuggestedRegion]' passed (0.223 seconds).
+2026-10-05T01:10:50.6583780Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testOCRReadsCurrentCanvasAndPublishesEditableVietnameseWithoutChangingDocument]' started.
+2026-10-05T01:10:50.7304310Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testOCRReadsCurrentCanvasAndPublishesEditableVietnameseWithoutChangingDocument]' passed (0.072 seconds).
+2026-10-05T01:10:50.7309490Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetAspectRatioAndPaginationForEveryLayout]' started.
+2026-10-05T01:10:50.7797350Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetAspectRatioAndPaginationForEveryLayout]' passed (0.046 seconds).
+2026-10-05T01:10:50.7800520Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetPDFHasA4PagesAndNoSelectableTextOrHiddenOriginal]' started.
+2026-10-05T01:10:51.4310410Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetPDFHasA4PagesAndNoSelectableTextOrHiddenOriginal]' passed (0.654 seconds).
+2026-10-05T01:10:51.4313810Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetRejectsLongCaptionHeaderMismatchAndOversizedDecodeBeforeRendering]' started.
+2026-10-05T01:10:51.4361860Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetRejectsLongCaptionHeaderMismatchAndOversizedDecodeBeforeRendering]' passed (0.005 seconds).
+2026-10-05T01:10:51.4363600Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetReorderingAndCaptionRemainAttachedToTheirPhoto]' started.
+2026-10-05T01:10:51.6229120Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPhotoSheetReorderingAndCaptionRemainAttachedToTheirPhoto]' passed (0.024 seconds).
+2026-10-05T01:10:51.6331640Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPrivacyInvalidCoordinatesStrengthAndTooManyRegionsReject]' started.
+2026-10-05T01:10:51.6585860Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testPrivacyInvalidCoordinatesStrengthAndTooManyRegionsReject]' passed (0.005 seconds).
+2026-10-05T01:10:51.6810710Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testProductionSidebarOnlyContainsEditOCRSheetAndPrivacyAndScrollControlsFit]' started.
+2026-10-05T01:10:52.2279720Z Test Case '-[PhotoAxisAppTests.UtilityPrivacyTests testProductionSidebarOnlyContainsEditOCRSheetAndPrivacyAndScrollControlsFit]' passed (0.755 seconds).
+2026-10-05T01:10:52.2390520Z Test Suite 'UtilityPrivacyTests' passed at 2026-10-05 01:10:52.220.
+ Executed 17 tests, with 0 failures (0 unexpected) in 3.097 (3.103) seconds
+2026-10-05T01:10:52.2603010Z Test Suite 'ViewportSamplingTests' started at 2026-10-05 01:10:52.220.
+2026-10-05T01:10:52.2706440Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' started.
+2026-10-05T01:10:52.6805560Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testInteractiveSamplingKeepsColorOrientationViewportAndFullQualitySettle]' passed (0.457 seconds).
+2026-10-05T01:10:52.6907730Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' started.
+2026-10-05T01:10:53.0386120Z Test Case '-[PhotoAxisAppTests.ViewportSamplingTests testOneXSamplingSettlesFullClipAndNeverChangesFinalPixels]' passed (0.358 seconds).
+2026-10-05T01:10:53.0490650Z Test Suite 'ViewportSamplingTests' passed at 2026-10-05 01:10:53.036.
+ Executed 2 tests, with 0 failures (0 unexpected) in 0.815 (0.816) seconds
+2026-10-05T01:10:53.0511290Z Test Suite 'WorkspaceRefinementTests' started at 2026-10-05 01:10:53.036.
+2026-10-05T01:10:53.0512100Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testCanvasAppearanceChangesDisplayAndPreservesExportPixels]' started.
+2026-10-05T01:10:53.1175100Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testCanvasAppearanceChangesDisplayAndPreservesExportPixels]' passed (0.077 seconds).
+2026-10-05T01:10:53.1283850Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testLegacyAndNewPreferencePersistenceAndSectionResetIsolation]' started.
+2026-10-05T01:10:53.1934260Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testLegacyAndNewPreferencePersistenceAndSectionResetIsolation]' passed (0.075 seconds).
+2026-10-05T01:10:53.2038860Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testRulerCornerAlignmentAndHideRestoreDoNotTouchDocument]' started.
+2026-10-05T01:10:53.4029340Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testRulerCornerAlignmentAndHideRestoreDoNotTouchDocument]' passed (0.203 seconds).
+2026-10-05T01:10:53.4032630Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testRulerLabelsStayInsideAndTicksMatchViewportAtEveryScale]' started.
+2026-10-05T01:10:53.4133170Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testRulerLabelsStayInsideAndTicksMatchViewportAtEveryScale]' passed (0.018 seconds).
+2026-10-05T01:10:53.4192500Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testSettingsBrushValidationAndDefaultsApplyOnlyToNextDocument]' started.
+2026-10-05T01:10:53.4766930Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testSettingsBrushValidationAndDefaultsApplyOnlyToNextDocument]' passed (0.064 seconds).
+2026-10-05T01:10:53.4808350Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testSettingsCategoriesBilingualMinimumLayoutAndLiveWorkspaceControls]' started.
+2026-10-05T01:10:53.8083520Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testSettingsCategoriesBilingualMinimumLayoutAndLiveWorkspaceControls]' passed (0.330 seconds).
+2026-10-05T01:10:53.8123180Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testVisibleWorkspacePagesInBothLanguagesAtMinimumPanelWidth]' started.
+2026-10-05T01:10:53.9248860Z Test Case '-[PhotoAxisAppTests.WorkspaceRefinementTests testVisibleWorkspacePagesInBothLanguagesAtMinimumPanelWidth]' passed (0.118 seconds).
+2026-10-05T01:10:53.9249770Z Test Suite 'WorkspaceRefinementTests' passed at 2026-10-05 01:10:53.924.
+ Executed 7 tests, with 0 failures (0 unexpected) in 0.885 (0.888) seconds
+2026-10-05T01:10:53.9252130Z Test Suite 'WorkspaceTests' started at 2026-10-05 01:10:53.924.
+2026-10-05T01:10:53.9287230Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' started.
+2026-10-05T01:10:54.0829830Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testDisabledToolsAndInspectorSwitch]' passed (0.158 seconds).
+2026-10-05T01:10:54.0887210Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' started.
+2026-10-05T01:10:54.2439220Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLanguageChangeWaitsForNextLaunchAndResetPreservesIt]' passed (0.160 seconds).
+2026-10-05T01:10:54.2442000Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' started.
+2026-10-05T01:10:54.6324890Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testLayoutPersistenceAndCorruptPreferencesRecovery]' passed (0.390 seconds).
+2026-10-05T01:10:54.6330870Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' started.
+2026-10-05T01:10:54.7828410Z /Users/runner/work/PhotoAxis/PhotoAxis/Tests/PhotoAxisAppTests/WorkspaceTests.swift:225: -[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages] : Test skipped - Window server constrained 1440x900 to (1440.0, 700.0); full native layout acceptance requires a sufficiently large desktop
+2026-10-05T01:10:54.7849680Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testNativeLayoutsAndSnapshotsInBothLanguages]' skipped (0.151 seconds).
+2026-10-05T01:10:54.7854020Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' started.
+2026-10-05T01:10:55.1049070Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSaveAndExportProgressSurviveRefreshTabSwitchAndViewportChanges]' passed (0.320 seconds).
+2026-10-05T01:10:55.1051560Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' started.
+2026-10-05T01:10:55.5277580Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSidebarResizeAndNumericValidation]' passed (0.422 seconds).
+2026-10-05T01:10:55.5283020Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' started.
+2026-10-05T01:10:55.5285650Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testSystemLanguageOrderAndEnglishFallback]' passed (0.001 seconds).
+2026-10-05T01:10:55.5292030Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' started.
+2026-10-05T01:10:55.8179910Z Test Case '-[PhotoAxisAppTests.WorkspaceTests testTabIsScopedToCanvasAndDoesNotStealTextEditing]' passed (0.287 seconds).
+2026-10-05T01:10:55.8182000Z Test Suite 'WorkspaceTests' passed at 2026-10-05 01:10:55.814.
+ Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 1.888 (1.890) seconds
+2026-10-05T01:10:55.8183740Z Test Suite 'PhotoAxisAppTests.xctest' passed at 2026-10-05 01:10:55.814.
+ Executed 171 tests, with 5 tests skipped and 0 failures (0 unexpected) in 62.342 (62.408) seconds
+2026-10-05T01:10:55.8185130Z Test Suite 'All tests' passed at 2026-10-05 01:10:55.815.
+ Executed 171 tests, with 5 tests skipped and 0 failures (0 unexpected) in 62.342 (62.409) seconds
+2026-10-05T01:10:56.4251930Z ** TEST SUCCEEDED **
+2026-10-05T01:12:11.6278430Z 2026-10-05 01:11:19.108 appintentsmetadataprocessor[7559:27005] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:12:12.4843350Z     export INSTALLAPI_IGNORE_SKIP_INSTALL\=YES
+2026-10-05T01:12:12.4969340Z     export SKIP_INSTALL\=NO
+2026-10-05T01:12:13.7101480Z 2026-10-05 01:12:13.276 appintentsmetadataprocessor[8993:30743] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-05T01:12:13.9868020Z ** BUILD SUCCEEDED **

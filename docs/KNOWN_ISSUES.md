@@ -1,3 +1,13 @@
+# Phạm vi build10 — 05/10/2026
+
+OCR/Bảng ảnh/Privacy hiện hành thay thế các trang hồsơ/đo/video/audit/so sánh cũ. Dự ánmanagedlegacy mởbản sao unsaved, tệp hồsơgiữnguyên. `.paxis`giữnguồn, chia sẻ bằngflattenedPNG/JPEG/PDF. Bảngảnhsnapshotlúcthêm, khôngđồngbộtheotab; draft/OCRchỉRAM, chưalưu/recovery. RasterPDFkhôngcopychữ. Captionquádàibáolỗi;4MPeach/100photos/128MiBbound. BlurpatchsauApplyfixed; underlyingcontentmove phải kiểm vùngche; facegợiýmanualreview, chưapositivefixturequalification.
+
+Fullsuite227:223PASS/1knownTelexFAIL/3SKIP,17newPASS. Nativeprivacy/modes/Apply/Undo/Redo/SaveVIđãkiểm; nativeOCR/Bảngảnh/export/ENreopen bị giánđoạn khiMaclock, chưaPASS. Hostedexportđọcprojectnativevàindependentpixel/PDFauditPASS; khôngthaychohộpthoạiexportnative. Các gatecũIME/target/MetalQoS/performance/fullacceptance/Scan/Paint/signing/install vẫn mở; gatecase/video/measurementđượcretiredoownerremove, khôngđổiPASS.
+
+[Báo cáo hiện hành](bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md), [hướng dẫn](HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md). Các phần build3–9 dưới là lịch sử.
+
+---
+
 # Phạm vi bản phát triển build9 — 04/10/2026
 
 Cài đặt native sáu nhóm có Tối/Sáng/Theo hệ thống; theme/liveworkspace không sửa pixel hoặc History. Recovery luôn bật10/30/60giây, đổi từ chu kỳ chờ tiếp theo. Exportdefaults chỉ ảnh hưởng hộp thoại mở mới. Ngôn ngữ cần khởi động lại; cọ mặc định chỉ áp tài liệu thêm mới. Reset chỉ nhóm hiện tại.

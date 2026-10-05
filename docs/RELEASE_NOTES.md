@@ -1,3 +1,13 @@
+# PhotoAxis1.0.0(10) — tiện ích tài liệu và bảo mật, 05/10/2026
+
+Theo yêu cầu chủdựán đã bỏ mọi chức năng điều tra ngoài OCRtiếngViệt và Bảngảnh khỏigiao diện. OCRdùngcanvasđãchốthoặcROI,cóeditabletext/copy/TXT/cancel. Bảngảnhthiếtkếlạivớiaddcurrent/multifile/reorder/caption/title/note/1-2-4-6A4/orientation/livepreview/PDFallpages/PNGcurrent300PPI. Thêmcoverblack/blur/pixelation vớiROI/strengthlivepreview/optionalofflinefacegợiý;Applythànhlockedordinarylayers,mộtUndo. `.paxis`giữnguồn;shareflattenedimages/PDF. Legacycasearchivegiữnguyên,managedprojectopensordinaryunsavedcopy;writeintoarchiveblocked.
+
+Local227total223PASS/1knownTelexFAIL/3SKIP;17newPASS,Releasead-hocPASS. NativeVIprivacy/modes/Apply/Undo/Redo/Save scoped; exportpipelineđọcprojectnativevàindependentpixel/PDFauditPASS. NativeOCR/Sheet/Export/ENreopenincompleteafterMaclock. Stableinstaller/signing/target/fullacceptancequalificationremainopen. [Guide](HUONG_DAN_OCR_BANG_ANH_BAO_MAT.md), [evidence](bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md).
+
+The current UI retains Vietnamese OCR and photo sheets, removing the former case, video, measurement, audit and comparison workflows. Privacy regions preview black cover, Gaussian blur or pixelation, then commit ordinary locked layers in one Undo step. Photo sheets add the open canvas or files, reorder and caption photos, preview A4 layouts and export all-page raster PDF or current-page PNG at300PPI. Editable projects retain original source bytes. Old archives remain intact; bound projects open as unsaved ordinary copies. Scoped local verification is recorded above; no public notarized stable installer is claimed.
+
+---
+
 # Cài đặt và khả năng hủy OCR — build9, 04/10/2026
 
 PhotoAxis **1.0.0(9)** thiết kế lại Cài đặt native theo danh mục bên trái và nhóm điều khiển bên phải: Chung/Giao diện/Workspace/Canvas/Cọ mặc định/Lưu và xuất tệp. Có **Tối/Sáng/Theo hệ thống**, áp dụng ngay và giữ qua mở lại. Thêm bật/tắt vòng cọ, recovery10/30/60giây, định dạngPNG/JPEG mặc định, chất lượngJPEG1–100 và giữ tỉ lệ xuất. Tự lưu lựa chọn hợp lệ/reset riêng nhóm; ngôn ngữ áp sau khởi động lại.

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": "9",
+  "build": "10",
   "R01": {
     "status": "BLOCKED_EXTERNAL",
     "evidence": [
@@ -33,9 +33,11 @@
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/build-manifest.json",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/ci-summary.json",
-      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md"
+      "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
+      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md",
+      "docs/bao-cao/bang-chung/UTILITIES-PRIVACY-20261004/ci-summary.json"
     ],
-    "reason": "19/43 belongs to build3; full build9 acceptance not repeated. Local210:206PASS/1known syntheticTelexFAIL/3benchmarkSKIP;9newPASS. CI d9aad0c macOS15.7.9/Xcode16.4:210total205PASS/0FAIL/5SKIP,9newPASS;Debug/test/ReleasePASS. Final Release VIEN6pages/theme/relaunch/independentinvalidquality/exportJPEG/OCRcancel/compare/reopen + independent source/ZIP/pixel/profile audit PASS scoped. Separate3benchPASS before final Settings-only validation:5tabfullquota lifecycle/recovery checked,Perspectiveworker23% within33.333ms,notnativeFPS. Remaining target/IME/physicalinput-to-present/Metal-QoS/coldOCR/realdata/Scan/Paint/fullacceptance/signing/install qualification remains open."
+    "reason": "Build10 removes case/video/measurement/audit/comparison from production UI by owner scope change, retaining current-canvas Vietnamese OCR and redesigned photo sheets; adds cover/blur/pixelate layers. Local227:223PASS/1knownTelexFAIL/3SKIP;17newPASS,ReleasePASS. Native VI preview/live modes/Apply/Undo/Redo/Save scoped; hosted export reads native project with independent93914opaque/930086outsideequal/PDFbitmap audit PASS. Remaining OCR/Sheet/native EN/export/reopen check interrupted by Mac lock. Baseline19/43 belongs to build3; target/IME/performance/fullquota/signing/install qualifications remain open. Final CI5d89d7a macOS15.7.9/Xcode16.4:227total222PASS/0FAIL/5SKIP,17newPASS,Debug/test/ReleasePASS; does not override localTelexFAIL or native/target qualification."
   },
   "R03": {
     "status": "CHUA_KIEM_CHUNG",
@@ -133,9 +135,10 @@
       "docs/bao-cao/OPEN_IMAGE_CURSOR_2026-10-04.md",
       "docs/bao-cao/bang-chung/OPEN-IMAGE-CURSOR-20261004/pages-https.json",
       "docs/bao-cao/CAI_DAT_KIEM_THU_2026-10-04.md",
-      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json"
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json",
+      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md"
     ],
-    "reason": "Build9 VIEN website/preferences/themes/OCRcancel/verification report/source/GPLv3/Issues public deployed at75d446e;27anonymousHTTPS resources with file hashes/deployedcommit PASS. Signed installer/legal publisher gate remains open;stable download disabled."
+    "reason": "Build10 source/GPLv3/Issues and local12 VIEN pages updated to OCR/photo sheets/privacy; historical investigation marketing removed. Final deployedcommit/hash verification pending. Stable signed installer remains unavailable."
   },
   "R10": {
     "status": "CHUA_KIEM_CHUNG",
@@ -165,9 +168,10 @@
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/delivery-receipt.json",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/distribution-manifest.json",
       "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/native-final-audit.json",
-      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json"
+      "docs/bao-cao/bang-chung/PREFERENCES-QA-20261004/pages-https.json",
+      "docs/bao-cao/TIEN_ICH_BAO_MAT_2026-10-05.md"
     ],
-    "reason": "Build9 localDMG from clean checkout matches tested Release binary/Core/UUID; local206PASS/1knownTelexFAIL/3SKIP,CI205PASS/0FAIL/5SKIP,9newPASS;separate3benchPASS scoped;final nativeVIEN/preferences/appearance/export/cancel/reopen auditPASS. Fullacceptance/target/performance/IME/coldOCR/signing/install/tag remains open;source/website public,stable download disabled. Pages27anonymousHTTPSresources/hash/commit75d446e PASS;finaldocs-onlyHEAD delivery proof saved externally after deploy."
+    "reason": "Build10 Release/tests/independent export verification scoped in utilities report; final local DMG and Pages delivery pending. Full native/supported-target/clean install acceptance not complete."
   },
   "R12": {
     "status": "CHUA_KIEM_CHUNG",

@@ -1,0 +1,37 @@
+{
+  "method": "Independent Pillow/numpy pixel audit; pypdf PDF structure and Poppler rasterization",
+  "input": "synthetic OCR image",
+  "nativeSavedProjectSHA256": "b256aca2b5d27572e6fd610ec65e9beb4a95556682598560e3cbf3e67cbf6d7e",
+  "renderer": "hosted Debug export pipeline reading native Release-saved project",
+  "nativeExportDialog": "NOT_VERIFIED_MAC_LOCKED",
+  "blackOpaquePixels": 93914,
+  "outsideUnchangedPixels": 930086,
+  "allOutsidePixelsExactlyMatchInput": true,
+  "pdfPages": 1,
+  "pdfTextEmpty": true,
+  "pdfEmbeddedPageImages": 1,
+  "pdfBitmapSize": [
+    2480,
+    3508
+  ],
+  "a4Points": [
+    595.276,
+    841.89
+  ],
+  "pdfAttachments": false,
+  "pdfAnnotations": false,
+  "pngSize": [
+    2480,
+    3508
+  ],
+  "sourceMetadata": {
+    "GPS": false,
+    "EXIF": "Image I/O generated ColorSpace/PixelDimensions only"
+  },
+  "sha256": {
+    "committed-privacy.png": "94ca12eefb08d74afd2ebbbebe45eb0fea4eb2f2b9d880ba2aa3548c1e1534e6",
+    "sheet-all.pdf": "b6b78442df08529ec77dcb09022e278d8d170c8ba8f276d43afa11b8f95e8e11",
+    "sheet-current.png": "6b25169379b2e375a665687c1035e644641388f78c8a4c188ff1d3d1848c44ab",
+    "sheet-pdf-render.png": "52a2d7537524f3419244cc56bb4c66598e5a31ae18dbcb78ac50206feda16116"
+  }
+}
